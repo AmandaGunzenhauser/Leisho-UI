@@ -1,0 +1,10 @@
+
+HandyNotes_TimelessTreasuresDB = {
+	["profileKeys"] = {
+		["Leisho - Thrall"] = "Default",
+	},
+	["profiles"] = {
+		["Default"] = {
+		},
+	},
+}

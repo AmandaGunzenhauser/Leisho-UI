@@ -1,0 +1,33 @@
+
+DataStore_CharactersDB = {
+	["profileKeys"] = {
+		["Alyserys - Thrall"] = "Alyserys - Thrall",
+	},
+	["global"] = {
+		["Characters"] = {
+			["Default.Thrall.Alyserys"] = {
+				["XPMax"] = 774800,
+				["played"] = 50675,
+				["guildRankName"] = "Guild Master",
+				["isResting"] = true,
+				["lastUpdate"] = 1456681001,
+				["class"] = "Rogue",
+				["race"] = "Blood Elf",
+				["level"] = 90,
+				["XP"] = 0,
+				["RestXP"] = 1162200,
+				["money"] = 5336482,
+				["gender"] = 3,
+				["subZone"] = "Valley of Strength",
+				["zone"] = "Orgrimmar",
+				["guildRankIndex"] = 0,
+				["name"] = "Alyserys",
+				["faction"] = "Horde",
+				["englishRace"] = "BloodElf",
+				["guildName"] = "muddskunks",
+				["lastLogoutTimestamp"] = 1456681001,
+				["englishClass"] = "ROGUE",
+			},
+		},
+	},
+}

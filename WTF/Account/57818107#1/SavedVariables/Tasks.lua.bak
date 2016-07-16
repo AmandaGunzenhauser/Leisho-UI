@@ -1,0 +1,159 @@
+
+TasksDB = {
+	["profileKeys"] = {
+		["Leisho - Thrall"] = "Default",
+	},
+	["global"] = {
+		["characters"] = {
+			["Leisho - Thrall"] = {
+				["race"] = "Pandaren",
+				["name"] = "Leisho",
+				["faction"] = "Horde",
+				["level"] = 100,
+				["class"] = "MONK",
+				["realm"] = "Thrall",
+			},
+		},
+		["id"] = 15,
+		["nextDailyReset"] = 1453374006,
+		["lists"] = {
+			["list4"] = {
+				["order"] = 1,
+				["taskCount"] = 1,
+				["name"] = "Daily",
+				["id"] = "list4",
+				["tasks"] = {
+					["task5"] = {
+						["listId"] = "list4",
+						["name"] = "Heroic Dungeon",
+						["order"] = 0,
+						["id"] = "task5",
+						["completedChars"] = {
+							["Leisho - Thrall"] = {
+								["completed"] = true,
+								["timestamp"] = 1453336777,
+							},
+						},
+					},
+				},
+				["displayOptions"] = {
+					["expanded"] = false,
+				},
+			},
+			["list0"] = {
+				["order"] = 0,
+				["taskCount"] = 3,
+				["name"] = "Weekly",
+				["id"] = "list0",
+				["tasks"] = {
+					["task1"] = {
+						["listId"] = "list0",
+						["name"] = "Bonus Tokens",
+						["order"] = 0,
+						["id"] = "task1",
+						["completedChars"] = {
+							["Leisho - Thrall"] = {
+								["completed"] = true,
+								["timestamp"] = 1453336583,
+							},
+						},
+					},
+					["task2"] = {
+						["listId"] = "list0",
+						["name"] = "Recruit Follower",
+						["order"] = 1,
+						["id"] = "task2",
+						["completedChars"] = {
+							["Leisho - Thrall"] = {
+								["completed"] = true,
+								["timestamp"] = 1453336582,
+							},
+						},
+					},
+					["task3"] = {
+						["listId"] = "list0",
+						["name"] = "Kazzak",
+						["order"] = 2,
+						["id"] = "task3",
+						["completedChars"] = {
+							["Leisho - Thrall"] = {
+								["completed"] = true,
+								["timestamp"] = 1453336581,
+							},
+						},
+					},
+				},
+				["displayOptions"] = {
+					["expanded"] = false,
+				},
+				["resetFrequency"] = 2,
+			},
+			["list6"] = {
+				["order"] = 2,
+				["taskCount"] = 8,
+				["name"] = "Mythics",
+				["id"] = "list6",
+				["tasks"] = {
+					["task14"] = {
+						["listId"] = "list6",
+						["name"] = "Upper Blackrock Spire",
+						["order"] = 7,
+						["id"] = "task14",
+					},
+					["task11"] = {
+						["listId"] = "list6",
+						["name"] = "Shadowmoon Burial Grounds",
+						["order"] = 4,
+						["id"] = "task11",
+					},
+					["task7"] = {
+						["listId"] = "list6",
+						["name"] = "Auchindoun",
+						["order"] = 0,
+						["id"] = "task7",
+					},
+					["task9"] = {
+						["listId"] = "list6",
+						["name"] = "Grimrail Depot",
+						["order"] = 2,
+						["id"] = "task9",
+					},
+					["task10"] = {
+						["listId"] = "list6",
+						["name"] = "Iron Docks",
+						["order"] = 3,
+						["id"] = "task10",
+					},
+					["task13"] = {
+						["listId"] = "list6",
+						["name"] = "The Everbloom",
+						["order"] = 6,
+						["id"] = "task13",
+					},
+					["task8"] = {
+						["listId"] = "list6",
+						["name"] = "Bloodmaul Slag Mines",
+						["order"] = 1,
+						["id"] = "task8",
+					},
+					["task12"] = {
+						["listId"] = "list6",
+						["name"] = "Skyreach",
+						["order"] = 5,
+						["id"] = "task12",
+					},
+				},
+				["resetFrequency"] = 2,
+			},
+		},
+		["listCount"] = 3,
+		["nextWeeklyReset"] = 1453806006,
+		["realms"] = {
+			["Thrall"] = {
+				"Leisho - Thrall", -- [1]
+			},
+		},
+		["dbVersion"] = 7,
+		["editListId"] = "list6",
+	},
+}

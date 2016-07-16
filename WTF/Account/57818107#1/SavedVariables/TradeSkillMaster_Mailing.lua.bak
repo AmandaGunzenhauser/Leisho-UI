@@ -1,0 +1,44 @@
+
+TradeSkillMaster_MailingDB = {
+	["g@ @sendDelay"] = 0.5,
+	["g@ @sendItemsIndividually"] = false,
+	["c@Leisho - Thrall@goldMailTarget"] = "",
+	["g@ @helpPlatesShown"] = {
+		["inbox"] = true,
+		["groups"] = true,
+		["quickSend"] = true,
+	},
+	["c@Leisho - Thrall@goldKeepAmount"] = 1000000,
+	["_hash"] = 3711258,
+	["g@ @inboxMessages"] = true,
+	["g@ @defaultMailTab"] = true,
+	["_currentProfile"] = {
+		["Leisho - Thrall"] = "Default",
+	},
+	["g@ @resendDelay"] = 1,
+	["f@Horde - Thrall@deMailTarget"] = "",
+	["g@ @defaultPage"] = 1,
+	["g@ @deleteEmptyNPCMail"] = false,
+	["g@ @openMailSound"] = "TSM_NO_SOUND",
+	["g@ @displayMoneyCollected"] = true,
+	["g@ @keepMailSpace"] = 0,
+	["g@ @sendMessages"] = true,
+	["_scopeKeys"] = {
+		["char"] = {
+			"Leisho - Thrall", -- [1]
+		},
+		["realm"] = {
+			"Thrall", -- [1]
+		},
+		["profile"] = {
+			"Default", -- [1]
+		},
+		["factionrealm"] = {
+			"Horde - Thrall", -- [1]
+		},
+	},
+	["g@ @showReloadBtn"] = true,
+	["g@ @deMaxQuality"] = 2,
+	["_version"] = 1,
+	["g@ @autoCheck"] = true,
+}

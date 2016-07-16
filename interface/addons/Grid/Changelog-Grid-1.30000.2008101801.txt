@@ -1,0 +1,13 @@
+tag 1.30000.2008101801
+900d230e30be06568da1b4ca793358b71b7a0a62
+Phanx <addons@phanx.net>
+2008-10-18 04:48:26 +0000
+
+Tagging as 1.30000.2008101801
+
+
+--------------------
+
+Pastamancer:
+	- Update toc for 1.30000.2008101801 release.
+	- untested but possible fix to icon border size.

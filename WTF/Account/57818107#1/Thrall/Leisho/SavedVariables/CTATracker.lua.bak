@@ -1,0 +1,5 @@
+
+CTATracker_HeroicWatch = true
+CTATracker_HeroicTankWatch = false
+CTATracker_HeroicHealerWatch = false
+CTATracker_HeroicDPSWatch = false

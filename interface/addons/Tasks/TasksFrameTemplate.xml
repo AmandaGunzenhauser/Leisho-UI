@@ -1,0 +1,169 @@
+<Ui xmlns="http://www.blizzard.com/wow/ui/"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="http://www.blizzard.com/wow/ui/
+http://wowprogramming.com/FrameXML/UI.xsd">
+ <!--   <Frame name="TasksTemplate" virtual="true" movable="true" clampedToScreen="true" registerForDrag="LeftButton">
+        <Size x="150" y="15" />
+        <Scripts>
+            <OnDragStart> 
+            self:StartMoving() 
+            </OnDragStart>
+            <OnDragStop>
+            self:StopMovingOrSizing()
+            </OnDragStop>
+        </Scripts>
+        <Frames>-->
+            <Button name="TasksTemplate" virtual="true"  text="|cff2FE7EBTasks|r" movable="true"  clampedToScreen="true">
+                <Size x="35" y="15" />
+                <ButtonText name="$parentText"/>
+                <NormalFont style="GameFontNormalLarge"/>
+                <Scripts>
+                    <OnClick>
+                      InterfaceOptionsFrame_OpenToCategory(Tasks.L["tasks"])
+                    </OnClick>
+                    <OnDragStart>
+                      self:StartMoving(); 
+                    </OnDragStart>
+                    <OnDragStop> 
+                      self:StopMovingOrSizing()
+                    </OnDragStop>
+                </Scripts>
+            </Button>
+  <!--        </Frames>
+    </Frame>-->
+    <Frame name="TasksItemTemplate" virtual="true" hidden="true">
+        <Size x="150" y="15" />
+        <Frames>
+            <CheckButton name="$parent_CheckButton" parentkey="checkbox">
+                <Size>
+                    <AbsDimension x="20" y="20"/>
+                </Size>
+                <Anchors> 
+                    <Anchor point="TOPLEFT">
+                        <Offset>
+                            <AbsDimension x="18" />
+                        </Offset>
+                    </Anchor>
+                </Anchors>
+                <Layers>
+                    <Layer level="ARTWORK">
+                        <FontString name="$parentText" inherits="ChatFontNormal" parentKey="text">
+                            <Anchors>
+                                <Anchor point="LEFT" relativePoint="RIGHT">
+                                    <Offset>
+                                        <AbsDimension x="-2" y="0"/>
+                                    </Offset>
+                                </Anchor>
+                            </Anchors>
+                        </FontString>
+                    </Layer>
+                </Layers>
+                <NormalTexture file="Interface\Buttons\UI-CheckBox-Up"/>
+                <PushedTexture file="Interface\Buttons\UI-CheckBox-Down"/>
+                <HighlightTexture file="Interface\Buttons\UI-CheckBox-Highlight" alphaMode="ADD"/>
+                <CheckedTexture file="Interface\Buttons\UI-CheckBox-Check"/>
+                <DisabledCheckedTexture file="Interface\Buttons\UI-CheckBox-Check-Disabled"/>
+                <Scripts>
+                    <OnShow>
+                      Tasks:UpdateTaskText(self:GetParent().task)
+                      self:SetChecked(self:GetParent().task.completedChars and self:GetParent().task.completedChars[Tasks.currentChar].completed or false)
+                    </OnShow>
+                    <OnClick>
+                     if self:GetChecked() then
+                       Tasks:Fire("Tasks-TaskCompleted", self:GetParent().task)
+                     else
+                       Tasks:Fire("Tasks-TaskReset", self:GetParent().task)
+                     end
+                    </OnClick>
+
+                </Scripts>
+            </CheckButton>
+        </Frames>
+    </Frame>
+    <Frame name="TasksHeaderTemplate" virtual="true"  hidden="true">
+        <Size x="150" y="15" />
+        <Frames>
+            <Button name= "$parent_Expander">
+                <Size x="125" y="15" />
+                <Anchors> 
+                    <Anchor point="TOPLEFT">
+                        <Offset>
+                            <AbsDimension x="25" />
+                        </Offset>
+                    </Anchor>
+                </Anchors>
+                <Scripts>
+                    <OnClick>
+                      Tasks:TaskHeaderClicked(self)
+                    </OnClick>
+                </Scripts>
+            </Button>
+            <CheckButton name="$parent_CheckButton" parentkey="checkbox">
+                <Size>
+                    <AbsDimension x="19" y="19"/>
+                </Size>
+                <Anchors> 
+                    <Anchor point="TOPLEFT">
+                        <Offset>
+                            <AbsDimension x="10" />
+                        </Offset>
+                    </Anchor>
+                </Anchors>
+                <Layers>
+                    <Layer level="ARTWORK">
+                        <FontString name="$parentExpanderText" inherits="GameFontNormal" parentKey="expanderText">
+                            <Anchors>
+                                <Anchor point="LEFT" relativePoint="RIGHT">
+                                    <Offset>
+                                        <AbsDimension x="0" y="0"/>
+                                    </Offset>
+                                </Anchor>
+                            </Anchors>
+                        </FontString>
+                        <FontString name="$parentText" inherits="GameFontNormal" parentKey="text">
+                            <Anchors>
+                                <Anchor point="LEFT" relativePoint="RIGHT">
+                                    <Offset>
+                                        <AbsDimension x="10" y="0"/>
+                                    </Offset>
+                                </Anchor>
+                            </Anchors>
+                        </FontString>
+                    </Layer>
+                </Layers>
+                <NormalTexture file="Interface\Buttons\UI-CheckBox-Up"/>
+                <PushedTexture file="Interface\Buttons\UI-CheckBox-Down"/>
+                <HighlightTexture file="Interface\Buttons\UI-CheckBox-Highlight" alphaMode="ADD"/>
+                <CheckedTexture file="Interface\Buttons\UI-CheckBox-Check"/>
+                <DisabledCheckedTexture file="Interface\Buttons\UI-CheckBox-Check-Disabled"/>
+                <Scripts>
+                    <OnShow>
+                      Tasks:UpdateHeaderText(self:GetParent().list)
+                      --local expandedText = (self:GetParent().list.displayOptions.expanded and " - " or " + ")
+                      --_G[self:GetName() .. "Text"]:SetText("|c"..self:GetParent().list.displayOptions.color..expandedText..self:GetParent().list.name.."|r")
+                      self:GetParent().checkbox:SetChecked(Tasks:IsTaskListComplete(self:GetParent().list))
+                    </OnShow>
+                    <OnClick>
+                     if self:GetChecked() then
+                       Tasks:Fire("Tasks-TaskListCompleted", self:GetParent().list)
+                     else
+                       Tasks:Fire("Tasks-TaskListReset", self:GetParent().list)
+                     end
+                    </OnClick>
+                </Scripts>
+            </CheckButton>
+            <Frame name="$parent_Children" parentkey="childrenFrame">
+                <Size>
+                    <AbsDimension x="150" y="0"/>
+                </Size>
+                <Anchors>
+                    <Anchor point="TOPLEFT">
+                        <Offset>
+                            <AbsDimension y="-15" />
+                        </Offset>
+                    </Anchor> 
+                </Anchors>
+            </Frame>
+        </Frames>
+    </Frame>
+</Ui>

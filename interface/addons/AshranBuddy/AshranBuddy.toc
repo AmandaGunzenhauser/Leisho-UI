@@ -1,0 +1,11 @@
+## Interface: 60200
+## Title: AshranBuddy
+## Author: GalaxyPup
+## Version: 7.1.2
+## Notes: Tracks Ashran event timers, other players on your Nemesis quest and much more!|n|n|cffffbb00"Stop at 18!!!"|r
+## URL: http://www.galaxypup.com/
+## SavedVariables: AshranBuddyDB
+
+## X-SavedVariables: AshranBuddyDB
+
+AddOn.xml

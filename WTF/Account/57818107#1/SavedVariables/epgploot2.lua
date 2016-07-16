@@ -1,0 +1,2 @@
+
+EPGPLoot2DB = nil

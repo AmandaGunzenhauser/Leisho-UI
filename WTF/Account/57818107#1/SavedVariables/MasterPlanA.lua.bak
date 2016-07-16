@@ -1,0 +1,9 @@
+
+MasterPlanAG = {
+	["Thrall"] = {
+		["Leisho"] = {
+			["class"] = "MONK",
+			["faction"] = "Horde",
+		},
+	},
+}

@@ -1,0 +1,31 @@
+
+RecountDB = {
+	["profileKeys"] = {
+		["Leisho - Thrall"] = "Leisho - Thrall",
+	},
+	["profiles"] = {
+		["Leisho - Thrall"] = {
+			["MainWindow"] = {
+				["Position"] = {
+					["y"] = -325.556030273438,
+					["x"] = 820.832885742188,
+					["w"] = 354.999908447266,
+					["h"] = 125.555618286133,
+				},
+			},
+			["Colors"] = {
+				["Bar"] = {
+					["Bar Text"] = {
+						["a"] = 1,
+					},
+					["Total Bar"] = {
+						["a"] = 1,
+					},
+				},
+			},
+			["MainWindowWidth"] = 355,
+			["MainWindowHeight"] = 125.555618286133,
+			["CurDataSet"] = "OverallData",
+		},
+	},
+}

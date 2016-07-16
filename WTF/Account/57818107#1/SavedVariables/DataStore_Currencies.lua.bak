@@ -1,0 +1,51 @@
+
+DataStore_CurrenciesDB = {
+	["profileKeys"] = {
+		["Alyserys - Thrall"] = "Alyserys - Thrall",
+	},
+	["global"] = {
+		["Reference"] = {
+			["Currencies"] = {
+				"Mists of Pandaria|", -- [1]
+				"Lesser Charm of Good Fortune|Interface\\Icons\\inv_misc_coin_18", -- [2]
+				"Timeless Coin|Interface\\Icons\\timelesscoin", -- [3]
+				"Warforged Seal|Interface\\Icons\\inv_arcane_orb", -- [4]
+				"Player vs. Player|", -- [5]
+				"Conquest Points|Interface\\Icons\\PVPCurrency-Conquest-Horde", -- [6]
+				"Honor Points|Interface\\Icons\\PVPCurrency-Honor-Horde", -- [7]
+			},
+			["CurrencyTextRev"] = {
+				["Timeless Coin"] = 3,
+				["Conquest Points"] = 6,
+				["Warforged Seal"] = 4,
+				["Mists of Pandaria"] = 1,
+				["Honor Points"] = 7,
+				["Player vs. Player"] = 5,
+				["Lesser Charm of Good Fortune"] = 2,
+			},
+		},
+		["Characters"] = {
+			["Default.Thrall.Alyserys"] = {
+				["Currencies"] = {
+					3, -- [1]
+					4740, -- [2]
+					308998, -- [3]
+					8, -- [4]
+					11, -- [5]
+					12, -- [6]
+					128782, -- [7]
+				},
+				["lastUpdate"] = 1456680982,
+				["CurrencyInfo"] = {
+					[395] = "0-0-0-0",
+					[396] = "0-0-10-3000",
+					[390] = "0-0-22700-0",
+					[823] = "0-0-0-0",
+					[392] = "1006-0-0-4000",
+					[994] = "0-0-0-0",
+					[824] = "0-0-0-0",
+				},
+			},
+		},
+	},
+}

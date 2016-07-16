@@ -1,0 +1,23 @@
+------------------------------------------------------------------------
+r33 | nekizalb | 2015-07-11 17:15:53 +0000 (Sat, 11 Jul 2015) | 1 line
+Changed paths:
+   A /tags/v0.3.3-beta (from /trunk:32)
+
+update for 6.2
+------------------------------------------------------------------------
+r32 | nekizalb | 2015-07-11 17:14:07 +0000 (Sat, 11 Jul 2015) | 1 line
+Changed paths:
+   M /trunk/Tasks.toc
+
+update for 6.2
+------------------------------------------------------------------------
+r31 | nekizalb | 2015-05-30 07:52:47 +0000 (Sat, 30 May 2015) | 1 line
+Changed paths:
+   M /trunk/.pkgmeta
+   M /trunk/TasksConfig.lua
+   M /trunk/TasksTemplates.lua
+   M /trunk/embeds.xml
+   M /trunk/locales/locale-enUS.lua
+
+Added Criteria config sections for Level, Race, and Class
+------------------------------------------------------------------------

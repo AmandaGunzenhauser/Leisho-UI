@@ -1,0 +1,12 @@
+tag 6.2.3.1
+5ecf3048ae39aea2ac98e0200a60e958c64d9597
+James D. Callahan III <jcallahan@curse.com>
+2015-11-20 21:14:23 -0600
+
+
+
+--------------------
+
+James D. Callahan III:
+	- Whitespace.
+	- Comment out cursor hiding code on camera move (will be an option)

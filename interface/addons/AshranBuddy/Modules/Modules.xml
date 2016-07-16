@@ -1,0 +1,9 @@
+<Ui xmlns="http://www.blizzard.com/wow/ui/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.blizzard.com/wow/ui/
+..\FrameXML\UI.xsd">
+  <Include file="Api\Api.xml"/>
+  <Include file="Configuration\Configuration.xml"/>
+  <Include file="General\General.xml"/>
+	<Include file="BattleFlow\BattleFlow.xml"/>
+  <Include file="EventTimer\EventTimer.xml"/>
+  <Include file="NemesisFinder\NemesisFinder.xml"/>
+</Ui>

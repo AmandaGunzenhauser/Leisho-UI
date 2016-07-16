@@ -1,0 +1,10 @@
+
+EPGPLootMaster = {
+	["profileKeys"] = {
+		["Leisho - Thrall"] = "Leisho - Thrall",
+	},
+	["profiles"] = {
+		["Leisho - Thrall"] = {
+		},
+	},
+}

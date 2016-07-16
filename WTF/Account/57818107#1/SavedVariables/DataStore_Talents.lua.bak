@@ -1,0 +1,108 @@
+
+DataStore_TalentsDB = {
+	["profileKeys"] = {
+		["Alyserys - Thrall"] = "Alyserys - Thrall",
+	},
+	["global"] = {
+		["Characters"] = {
+			["Default.Thrall.Alyserys"] = {
+				["Class"] = "ROGUE",
+				["lastUpdate"] = 1456680982,
+				["GlyphList"] = {
+					11, -- [1]
+					6282, -- [2]
+					6506, -- [3]
+					11754, -- [4]
+					11706, -- [5]
+					6346, -- [6]
+					11466, -- [7]
+					11434, -- [8]
+					6306, -- [9]
+					14866, -- [10]
+					18594, -- [11]
+					18562, -- [12]
+					18546, -- [13]
+					18578, -- [14]
+					6354, -- [15]
+					6402, -- [16]
+					6418, -- [17]
+					6450, -- [18]
+					6514, -- [19]
+					14818, -- [20]
+					6370, -- [21]
+					6562, -- [22]
+					6482, -- [23]
+					6578, -- [24]
+					14786, -- [25]
+					13, -- [26]
+					6300, -- [27]
+					7516, -- [28]
+					7484, -- [29]
+					7492, -- [30]
+					6436, -- [31]
+					11732, -- [32]
+					7428, -- [33]
+					17412, -- [34]
+					6468, -- [35]
+					17428, -- [36]
+					11444, -- [37]
+					7444, -- [38]
+					7460, -- [39]
+				},
+				["ActiveTalents"] = 1,
+			},
+		},
+		["Reference"] = {
+			["GlyphNames"] = {
+				[1089] = "Improved Distraction",
+				[1160] = "Elusiveness",
+				[716] = "Stealth",
+				[734] = "Cloak of Shadows",
+				[929] = "Blind",
+				[1161] = "Energy Flows",
+				[466] = "Pick Pocket",
+				[465] = "Pick Lock",
+				[715] = "Killing Spree",
+				[404] = "Hemorrhage",
+				[926] = "Kick",
+				[464] = "Distract",
+				[392] = "Ambush",
+				[393] = "Decoy",
+				[394] = "Blade Flurry",
+				[402] = "Detection",
+				[396] = "Recuperate",
+				[397] = "Evasion",
+				[398] = "Recovery",
+				[714] = "Vendetta",
+				[400] = "Feint",
+				[401] = "Garrote",
+				[733] = "Disguise",
+				[924] = "Vanish",
+				[467] = "Safe Fall",
+				[405] = "Smoke Bomb",
+				[406] = "Cheap Shot",
+				[407] = "Hemorrhaging Veins",
+				[1159] = "Energy",
+				[403] = "Gouge",
+				[410] = "Shiv",
+				[411] = "Sprint",
+				[468] = "Blurred Speed",
+				[1088] = "Headhunting",
+				[731] = "Deadly Momentum",
+				[469] = "Poisons",
+				[1162] = "Disappearance",
+			},
+		},
+	},
+}
+DataStore_TalentsRefDB = {
+	["profileKeys"] = {
+		["Alyserys - Thrall"] = "Alyserys - Thrall",
+	},
+	["global"] = {
+		["ROGUE"] = {
+			["Locale"] = "enUS",
+			["Version"] = 20886,
+		},
+	},
+}

@@ -1,0 +1,24 @@
+## Interface: 50400
+## Title: DirectionArrow
+## Name: DirectionArrow
+## Version: 5.4.0.002
+## Author: Barfolomeu (aka Kaká, Huntgen) - Gorgonnash US, Ihavenoidea (aka Funkycat, Llamalover) - Frostmourne Oceanic
+## Notes: Displays an arrow over unit frames that points to a raid/party member
+## Description: Displays an arrow over unit frames that points to a raid/party member
+## X-Author-Faction: Alliance
+## X-Category: Unit Frames
+## X-License: GPL 2
+## X-Email: daniel@ceregatti.org
+## X-Website: http://www.wowace.com/projects/direction-arrow/
+## X-Localizations:  enUS
+## OptionalDeps: Ace3, LibAboutPanel, LibMapData-1.0
+## SavedVariables: DirectionArrowDB
+## X-Curse-Packaged-Version: v5.4.0.002
+## X-Curse-Project-Name: DirectionArrow
+## X-Curse-Project-ID: direction-arrow
+## X-Curse-Repository-ID: wow/direction-arrow/mainline
+
+embeds.xml
+Locale-enUS.lua
+DirectionArrowConfig.lua
+DirectionArrow.lua

@@ -1,0 +1,9 @@
+## Interface: 60200
+## Title: |cff0080ffStagger|r
+## Author: Siweia
+## Notes: Monk Tanking Tool
+## Version: 3.8
+## SavedVariables: MoverDB
+
+Config.lua
+Core.lua

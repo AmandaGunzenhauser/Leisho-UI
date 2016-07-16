@@ -1,0 +1,23 @@
+## Interface: 60200
+## Version: 6.2.0.1
+## X-Curse-Packaged-Version: 6.2.0.1
+## X-Curse-Project-Name: HandyNotes: Field Photographer
+## X-Curse-Project-ID: handynotes-field-photographer
+## X-Curse-Repository-ID: wow/handynotes-field-photographer/mainline
+
+## Title: HandyNotes: Field Photographer
+## Notes: Shows you where to take selfies for the achievement.
+## Notes-deDE: Zeigt, wo Selfies für den Erfolg zu schießen.
+## Notes-esES: Mostrar donde para sacar fotos para el logro.
+## Notes-esMX: Mostrar donde para sacar fotos para el logro.
+
+## Author: Phanx
+## X-Email: addons@phanx.net
+## X-Copyright: Copyright (c) 2015 Phanx. All rights reserved.
+## X-Website: https://github.com/Phanx/HandyNotes_FieldPhotographer
+
+## Dependencies: HandyNotes
+## OptionalDependencies: TomTom
+## SavedVariables: HNFieldPhotographerDB
+
+Addon.lua

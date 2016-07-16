@@ -1,0 +1,902 @@
+
+ZygorGuidesViewerSettings = {
+	["char"] = {
+		["Leisho - Thrall"] = {
+			["RecipeWipe20150310"] = true,
+			["RecipeWipe01142013"] = true,
+			["stephistory"] = {
+				1, -- [1]
+				2, -- [2]
+				3, -- [3]
+				4, -- [4]
+				5, -- [5]
+				6, -- [6]
+			},
+			["guides_history_ZGV4clear"] = true,
+			["initialFlightPathsLoaded"] = true,
+			["guidename"] = "EVENTS\\Love is in the Air (February 2nd - 16th)\\Love is in the Air Achievements",
+			["debuglog"] = {
+				"14:44:32.631.653> [|cff00ff00pointer|cffff88dd] -> PathFoundHandler! state=progress (Pointer.lua:4137:PathFoundHandler)", -- [1]
+				"14:44:32.631.653> [|cff00ff00pointer|cffff88dd] <- PathFoundHandler done. (Pointer.lua:4250:PathFoundHandler)", -- [2]
+				"14:44:32.667.687> [|cff00ff00pointer|cffff88dd] -> PathFoundHandler! state=progress (Pointer.lua:4137:PathFoundHandler)", -- [3]
+				"14:44:32.667.687> [|cff00ff00pointer|cffff88dd] <- PathFoundHandler done. (Pointer.lua:4250:PathFoundHandler)", -- [4]
+				"14:44:32.702.724> [|cff00ff00pointer|cffff88dd] -> PathFoundHandler! state=progress (Pointer.lua:4137:PathFoundHandler)", -- [5]
+				"14:44:32.702.724> [|cff00ff00pointer|cffff88dd] <- PathFoundHandler done. (Pointer.lua:4250:PathFoundHandler)", -- [6]
+				"14:44:32.740.759> [|cff00ff00pointer|cffff88dd] -> PathFoundHandler! state=progress (Pointer.lua:4137:PathFoundHandler)", -- [7]
+				"14:44:32.740.759> [|cff00ff00pointer|cffff88dd] <- PathFoundHandler done. (Pointer.lua:4250:PathFoundHandler)", -- [8]
+				"14:44:32.773.794> [|cff00ff00pointer|cffff88dd] -> PathFoundHandler! state=progress (Pointer.lua:4137:PathFoundHandler)", -- [9]
+				"14:44:32.773.794> [|cff00ff00pointer|cffff88dd] <- PathFoundHandler done. (Pointer.lua:4250:PathFoundHandler)", -- [10]
+				"14:44:32.809.831> [|cff00ff00pointer|cffff88dd] -> PathFoundHandler! state=progress (Pointer.lua:4137:PathFoundHandler)", -- [11]
+				"14:44:32.809.831> [|cff00ff00pointer|cffff88dd] <- PathFoundHandler done. (Pointer.lua:4250:PathFoundHandler)", -- [12]
+				"14:44:32.846.867> [|cffffbb00LibRover|cffff88dd] [lr_calc] Calc pending, frame 11 (calcs: 190) in 15.10ms. (LibRover-1.0.lua:2950:OnUpdate)", -- [13]
+				"14:44:32.846.867> [|cff00ff00pointer|cffff88dd] -> PathFoundHandler! state=progress (Pointer.lua:4137:PathFoundHandler)", -- [14]
+				"14:44:32.846.867> [|cff00ff00pointer|cffff88dd] <- PathFoundHandler done. (Pointer.lua:4250:PathFoundHandler)", -- [15]
+				"14:44:32.885.909> [|cff00ff00pointer|cffff88dd] -> PathFoundHandler! state=progress (Pointer.lua:4137:PathFoundHandler)", -- [16]
+				"14:44:32.885.909> [|cff00ff00pointer|cffff88dd] <- PathFoundHandler done. (Pointer.lua:4250:PathFoundHandler)", -- [17]
+				"14:44:32.925.943> [|cffffbb00LibRover|cffff88dd] [lr_calc] This pass: [SUCCESS] = |cffffffff12.34|cffff88ddms. Done |cffffff88210|cffff88dd calculations over |cff88ffff13|cffff88dd frames:\n compared |cff88ff880|cffff88dd nodes in |cffffffff2.51|cffff88dd ms, opened |cff88ff881263|cffff88dd, closed |cff88ff88210|cffff88dd \n cheapest |cffffffff2.51|cffff88dd, initial |cffffffff0.90|cffff88dd, overhead |cffffffff28.43|cffff88dd, blah |cffffffff24.22|cffff88dd, scoring |cffffffff45.34|cffff88dd, adding |cffffffff17.73|cffff88dd ms    \n calc total |cffffffff218.01|cffff88dd ms, total time |cffffffff218.84|cffff88dd ms   \n(found: YES) (LibRover-1.0.lua:2954:OnUpdate)", -- [18]
+				"14:44:32.925.944> [|cffffbb00LibRover|cffff88dd] Path found in 13 frames, 210 calcs, 12.34 ms. (LibRover-1.0.lua:2982:OnUpdate)", -- [19]
+				"14:44:32.925.944> [|cffffbb00LibRover|cffff88dd] 0. |cff88ff88START|cffff88dd -- |cff88ccddFrostwall 45,50|cffff88dd  (dist 0) |cff8888dd{walk_start__walk_portal}|cffff88dd (LibRover-1.0.lua:2786:ReportPath)", -- [20]
+				"14:44:32.925.944> [|cffffbb00LibRover|cffff88dd] 1. |cff88ff88Click portal to Warspear|cffff88dd -- |cff88ccddPortal to Warspear|cffff88dd  (dist 206) |cff8888dd{walk_portal__portal_portal}|cffff88dd (LibRover-1.0.lua:2786:ReportPath)", -- [21]
+				"14:44:32.925.944> [|cffffbb00LibRover|cffff88dd] |cff8888882. |cff88ff88Arrive at Warspear|cffff88dd -- |cff88ccddPortal from Frostwall|cffff88dd  (dist 0) |cff8888dd{portal_portal__walk_portal}|cffff88dd (LibRover-1.0.lua:2786:ReportPath)", -- [22]
+				"14:44:32.925.945> [|cffffbb00LibRover|cffff88dd] 3. |cff88ff88Click portal to Orgrimmar|cffff88dd -- |cff88ccddPortal to Cleft of Shadow|cffff88dd  (dist 156) |cff8888dd{walk_portal__portal_portal}|cffff88dd (LibRover-1.0.lua:2786:ReportPath)", -- [23]
+				"14:44:32.925.945> [|cffffbb00LibRover|cffff88dd] |cff8888884. |cff88ff88Arrive at Cleft of Shadow|cffff88dd -- |cff88ccddPortal from Warspear|cffff88dd  (dist 0) |cff8888dd{portal_portal__walk_misc}|cffff88dd (LibRover-1.0.lua:2786:ReportPath)", -- [24]
+				"14:44:32.925.945> [|cffffbb00LibRover|cffff88dd] 5. |cff88ff88Go to Cleft of Shadow 41,66|cffff88dd -- |cff88ccddCleft of Shadow 41,66|cffff88dd  (dist 23) |cff8888dd{walk_misc__walk_misc}|cffff88dd (LibRover-1.0.lua:2786:ReportPath)", -- [25]
+				"14:44:32.925.945> [|cffffbb00LibRover|cffff88dd] 6. |cff88ff88Cleft of Shadow tunnel|cffff88dd -- |cff88ccddCleft of Shadow tunnel|cffff88dd  (dist 46) |cff8888dd{walk_misc__walk_misc}|cffff88dd (LibRover-1.0.lua:2786:ReportPath)", -- [26]
+				"14:44:32.925.945> [|cffffbb00LibRover|cffff88dd] 7. |cff88ff88Cleft of Shadow exit|cffff88dd -- |cff88ccddCleft of Shadow exit|cffff88dd  (dist 24) |cff8888dd{walk_misc__walk_misc}|cffff88dd (LibRover-1.0.lua:2786:ReportPath)", -- [27]
+				"14:44:32.925.945> [|cffffbb00LibRover|cffff88dd] 8. |cff88ff88Cleft of Shadow entrance|cffff88dd -- |cff88ccddCleft of Shadow entrance|cffff88dd  (dist 18) |cff8888dd{walk_misc__fly_end}|cffff88dd (LibRover-1.0.lua:2786:ReportPath)", -- [28]
+				"14:44:32.925.945> [|cffffbb00LibRover|cffff88dd] 9. |cff88ff88Talk to |cffaaffaaLovely Merchant|cffff88dd|cffff88dd -- |cff88ccddLovely Merchant|cffff88dd  (dist 167) |cff8888dd{fly_end}|cffff88dd (LibRover-1.0.lua:2786:ReportPath)", -- [29]
+				"14:44:32.925.945> [|cff00ff00pointer|cffff88dd] -> PathFoundHandler! state=success (Pointer.lua:4137:PathFoundHandler)", -- [30]
+				"14:44:32.925.946> [|cff00ff00pointer|cffff88dd] - set_waypoints: 10 points, type=route (Pointer.lua:3842:<local>)", -- [31]
+				"14:44:32.925.948> [|cff00ff00pointer|cffff88dd] - set_waypoints: arrowpoint=Frostwall #976 /0 75.1,48.7, farmpoint=Frostwall #976 /0 75.1,48.7 (Pointer.lua:3916:<local>)", -- [32]
+				"14:44:32.925.950> [|cff00ff00pointer|cffff88dd] - ShowSet route ends [3.13 ms] + ants [1.27 ms] (Pointer.lua:4125:ShowSet)", -- [33]
+				"14:44:32.925.950> [|cff00ff00pointer|cffff88dd] <- PathFoundHandler done. (Pointer.lua:4250:PathFoundHandler)", -- [34]
+				"14:44:32.925.952> [|cff00ff00pointer|cffff88dd] ClearSet route + ants [0.38 ms] (Pointer.lua:4068:ClearSet)", -- [35]
+				"14:44:44.202.211> CacheQuestLog cached 13 quests (QuestTracking.lua:212:QuestTracking_CacheQuestLog)", -- [36]
+				"14:44:44.266.274> CacheQuestLog cached 13 quests (QuestTracking.lua:212:QuestTracking_CacheQuestLog)", -- [37]
+				"14:44:55.742.746> [|cffffbb00LibRover|cffff88dd] Got event NEW_WMO_CHUNK, updating (LibRover-1.0.lua:3208:<local>)", -- [38]
+				"14:44:55.742.747> [|cffffbb00LibRover|cffff88dd] Player moved in the last 30 seconds, updating route. (LibRover-1.0.lua:3032:OnUpdate)", -- [39]
+				"14:44:55.742.750> [|cffffbb00LibRover|cffff88dd] -> |cff00ff88FindPath|cffff88dd:  |cffaaff88Frostwall|cffff88dd/0 |cffffffff43.5|cffff88dd,|cffffffff49.5|cffff88dd --> |cffaaff88Orgrimmar|cffff88dd/1 |cffffffff53.1|cffff88dd,|cffffffff77.0|cffff88dd (LibRover-1.0.lua:1449:FindPath)", -- [40]
+				"14:44:55.742.750> [|cffffbb00LibRover|cffff88dd] - IsDestinationImpossible? false,nil, (LibRover-1.0.lua:1454:FindPath)", -- [41]
+				"14:44:55.742.750> [|cffffbb00LibRover|cffff88dd] <- |cff00ff88FindPath|cffff88dd ends. (LibRover-1.0.lua:1523:FindPath)", -- [42]
+				"14:44:55.759.763> [|cffffbb00LibRover|cffff88dd] -> |cff00dd77InitializePath|cffff88dd towards |cffddddee321/1 53.10,77.00 (LibRover-1.0.lua:1535:InitializePath)", -- [43]
+				"14:44:55.759.764> [|cffffbb00LibRover|cffff88dd] [lr_initpath_v] - cleared old nodes, 2265 left (LibRover-1.0.lua:1551:InitializePath)", -- [44]
+				"14:44:55.759.779> [|cffffbb00LibRover|cffff88dd] [lr_initpath_v] - cleared linkage (LibRover-1.0.lua:1558:InitializePath)", -- [45]
+				"14:44:55.759.787> [|cffffbb00LibRover|cffff88dd] - Initialized end node #2266 with copy #2267 table: 0000000074354CA0 (LibRover-1.0.lua:1576:InitializePath)", -- [46]
+				"14:44:55.759.788> [|cffffbb00LibRover|cffff88dd] - |cff88ff44 Found hearth node: \"|cffffffffSummer's Rest|cffff88dd\" = |cffffee00[311] \"Summer's Rest\" = Hall of the Crescent Moon 903 /1 69.0,49.2 [inn] [closed] |cff8899aa(mode:|cffffffffhearth|cff8899aa from [|cffffffff2268|cff8899aa]) |cff888888[my t=|cff55aa0055.0|cff888888/|cff77ee0055.0|cff888888] |cff888888(t=|cff00aa5555.0|cff888888/|cff00ee7755.0|cff888888) (LibRover-1.0.lua:1269:FindBindLocation)", -- [47]
+				"14:44:55.759.792> [|cffffbb00LibRover|cffff88dd] - Initialized start node #2268 (LibRover-1.0.lua:1617:InitializePath)", -- [48]
+				"14:44:55.759.798> [|cffffbb00LibRover|cffff88dd] [lr_initpath_v] - InitializePath: cleared temp fields (LibRover-1.0.lua:1658:InitializePath)", -- [49]
+				"14:44:55.759.798> [|cffffbb00LibRover|cffff88dd] <- |cff00dd77InitializePath|cffff88dd done. (LibRover-1.0.lua:1692:InitializePath)", -- [50]
+				"14:44:55.815.819> [|cffffbb00LibRover|cffff88dd] [lr_calc] StepForever: initialized, proceeding (LibRover-1.0.lua:1785:<local>)", -- [51]
+				"14:44:55.029.037> [|cffffbb00LibRover|cffff88dd] [lr_calc] This pass: [SUCCESS] = |cffffffff4.30|cffff88ddms. Done |cffffff88145|cffff88dd calculations over |cff88ffff9|cffff88dd frames:\n compared |cff88ff880|cffff88dd nodes in |cffffffff1.48|cffff88dd ms, opened |cff88ff88971|cffff88dd, closed |cff88ff88145|cffff88dd \n cheapest |cffffffff1.48|cffff88dd, initial |cffffffff0.55|cffff88dd, overhead |cffffffff17.83|cffff88dd, blah |cffffffff14.72|cffff88dd, scoring |cffffffff28.73|cffff88dd, adding |cffffffff11.84|cffff88dd ms    \n calc total |cffffffff150.83|cffff88dd ms, total time |cffffffff151.38|cffff88dd ms   \n(found: YES) (LibRover-1.0.lua:2954:OnUpdate)", -- [52]
+				"14:44:55.029.037> [|cffffbb00LibRover|cffff88dd] Path found in 9 frames, 145 calcs, 4.30 ms. (LibRover-1.0.lua:2982:OnUpdate)", -- [53]
+				"14:44:55.029.038> [|cffffbb00LibRover|cffff88dd] 0. |cff88ff88START|cffff88dd -- |cff88ccddFrostwall 43,49|cffff88dd  (dist 0) |cff8888dd{walk_start__walk_portal}|cffff88dd (LibRover-1.0.lua:2786:ReportPath)", -- [54]
+				"14:44:55.029.038> [|cffffbb00LibRover|cffff88dd] 1. |cff88ff88Click portal to Warspear|cffff88dd -- |cff88ccddPortal to Warspear|cffff88dd  (dist 221) |cff8888dd{walk_portal__portal_portal}|cffff88dd (LibRover-1.0.lua:2786:ReportPath)", -- [55]
+				"14:44:55.029.038> [|cffffbb00LibRover|cffff88dd] |cff8888882. |cff88ff88Arrive at Warspear|cffff88dd -- |cff88ccddPortal from Frostwall|cffff88dd  (dist 0) |cff8888dd{portal_portal__walk_portal}|cffff88dd (LibRover-1.0.lua:2786:ReportPath)", -- [56]
+				"14:44:55.029.038> [|cffffbb00LibRover|cffff88dd] 3. |cff88ff88Click portal to Orgrimmar|cffff88dd -- |cff88ccddPortal to Cleft of Shadow|cffff88dd  (dist 156) |cff8888dd{walk_portal__portal_portal}|cffff88dd (LibRover-1.0.lua:2786:ReportPath)", -- [57]
+				"14:44:55.029.038> [|cffffbb00LibRover|cffff88dd] |cff8888884. |cff88ff88Arrive at Cleft of Shadow|cffff88dd -- |cff88ccddPortal from Warspear|cffff88dd  (dist 0) |cff8888dd{portal_portal__walk_misc}|cffff88dd (LibRover-1.0.lua:2786:ReportPath)", -- [58]
+				"14:44:55.029.038> [|cffffbb00LibRover|cffff88dd] 5. |cff88ff88Go to Cleft of Shadow 41,66|cffff88dd -- |cff88ccddCleft of Shadow 41,66|cffff88dd  (dist 23) |cff8888dd{walk_misc__walk_misc}|cffff88dd (LibRover-1.0.lua:2786:ReportPath)", -- [59]
+				"14:44:55.029.038> [|cffffbb00LibRover|cffff88dd] 6. |cff88ff88Cleft of Shadow tunnel|cffff88dd -- |cff88ccddCleft of Shadow tunnel|cffff88dd  (dist 46) |cff8888dd{walk_misc__walk_misc}|cffff88dd (LibRover-1.0.lua:2786:ReportPath)", -- [60]
+				"14:44:55.029.038> [|cffffbb00LibRover|cffff88dd] 7. |cff88ff88Cleft of Shadow exit|cffff88dd -- |cff88ccddCleft of Shadow exit|cffff88dd  (dist 24) |cff8888dd{walk_misc__walk_misc}|cffff88dd (LibRover-1.0.lua:2786:ReportPath)", -- [61]
+				"14:44:55.029.039> [|cffffbb00LibRover|cffff88dd] 8. |cff88ff88Cleft of Shadow entrance|cffff88dd -- |cff88ccddCleft of Shadow entrance|cffff88dd  (dist 18) |cff8888dd{walk_misc__fly_end}|cffff88dd (LibRover-1.0.lua:2786:ReportPath)", -- [62]
+				"14:44:55.029.039> [|cffffbb00LibRover|cffff88dd] 9. |cff88ff88Talk to |cffaaffaaLovely Merchant|cffff88dd|cffff88dd -- |cff88ccddLovely Merchant|cffff88dd  (dist 167) |cff8888dd{fly_end}|cffff88dd (LibRover-1.0.lua:2786:ReportPath)", -- [63]
+				"14:44:55.029.039> [|cff00ff00pointer|cffff88dd] -> PathFoundHandler! state=success (Pointer.lua:4137:PathFoundHandler)", -- [64]
+				"14:44:55.029.040> [|cff00ff00pointer|cffff88dd] - set_waypoints: 10 points, type=route (Pointer.lua:3842:<local>)", -- [65]
+				"14:44:55.029.042> [|cff00ff00pointer|cffff88dd] - set_waypoints: arrowpoint=Frostwall #976 /0 75.1,48.7, farmpoint=Frostwall #976 /0 75.1,48.7 (Pointer.lua:3916:<local>)", -- [66]
+				"14:44:55.029.044> [|cff00ff00pointer|cffff88dd] - ShowSet route ends [3.42 ms] + ants [1.22 ms] (Pointer.lua:4125:ShowSet)", -- [67]
+				"14:44:55.029.044> [|cff00ff00pointer|cffff88dd] <- PathFoundHandler done. (Pointer.lua:4250:PathFoundHandler)", -- [68]
+				"14:44:55.029.046> [|cff00ff00pointer|cffff88dd] ClearSet route + ants [0.33 ms] (Pointer.lua:4068:ClearSet)", -- [69]
+				"14:45:02.911.916> CacheQuestLog cached 13 quests (QuestTracking.lua:212:QuestTracking_CacheQuestLog)", -- [70]
+				"14:45:03.338.339> [itemscore] [itemevents] ITEM_PUSH (Item-Events.lua:156:Debug)", -- [71]
+				"14:45:03.365.377> [itemscore] [itemevents] BAG_UPDATE_DELAYED (Item-Events.lua:156:Debug)", -- [72]
+				"14:45:03.515.520> CacheQuestLog cached 13 quests (QuestTracking.lua:212:QuestTracking_CacheQuestLog)", -- [73]
+				"14:45:19.320.326> [itemscore] [itemevents] PLAYER_SPECIALIZATION_CHANGED (Item-Events.lua:156:Debug)", -- [74]
+				"14:45:19.354.357> [itemscore] [itemevents] PLAYER_SPECIALIZATION_CHANGED (Item-Events.lua:156:Debug)", -- [75]
+				"14:45:19.354.359> [itemscore] [itemevents] PLAYER_SPECIALIZATION_CHANGED (Item-Events.lua:156:Debug)", -- [76]
+				"14:45:19.354.361> [itemscore] [itemevents] PLAYER_SPECIALIZATION_CHANGED (Item-Events.lua:156:Debug)", -- [77]
+				"14:45:19.354.363> [itemscore] [itemevents] PLAYER_SPECIALIZATION_CHANGED (Item-Events.lua:156:Debug)", -- [78]
+				"14:45:19.354.365> [itemscore] [itemevents] PLAYER_SPECIALIZATION_CHANGED (Item-Events.lua:156:Debug)", -- [79]
+				"14:45:19.354.367> [itemscore] [itemevents] PLAYER_SPECIALIZATION_CHANGED (Item-Events.lua:156:Debug)", -- [80]
+				"14:45:19.354.367> [itemscore] [itemevents] PLAYER_SPECIALIZATION_CHANGED (Item-Events.lua:156:Debug)", -- [81]
+				"14:45:19.354.369> [itemscore] [itemevents] PLAYER_SPECIALIZATION_CHANGED (Item-Events.lua:156:Debug)", -- [82]
+				"14:45:19.354.371> [itemscore] [itemevents] PLAYER_SPECIALIZATION_CHANGED (Item-Events.lua:156:Debug)", -- [83]
+				"14:45:19.354.373> [itemscore] [itemevents] PLAYER_SPECIALIZATION_CHANGED (Item-Events.lua:156:Debug)", -- [84]
+				"14:45:19.354.374> [itemscore] [itemevents] PLAYER_SPECIALIZATION_CHANGED (Item-Events.lua:156:Debug)", -- [85]
+				"14:45:23.555.173> DoCorpseCheck (PLAYER_ENTERING_WORLD) (not dead) (Pointer.lua:2985:DoCorpseCheck)", -- [86]
+				"14:45:23.555.174> [|cff00ff00pointer|cffff88dd] ClearWaypoints corpse (Pointer.lua:588:ClearWaypoints)", -- [87]
+				"14:45:23.555.174> DoCorpseCheck (PLAYER_ALIVE) (not dead) (Pointer.lua:2985:DoCorpseCheck)", -- [88]
+				"14:45:23.555.174> [|cff00ff00pointer|cffff88dd] ClearWaypoints corpse (Pointer.lua:588:ClearWaypoints)", -- [89]
+				"14:45:24.555.678> [|cffff3300startup|cffff88dd] LOADING_SCREEN_DISABLED! Let's go! (ZygorGuidesViewer.lua:798:func)", -- [90]
+				"14:45:24.555.678> [itemscore] [itemevents] LOADING_SCREEN_DISABLED (Item-Events.lua:156:Debug)", -- [91]
+				"14:45:24.555.679> [|cffffbb00LibRover|cffff88dd] Got event LOADING_SCREEN_DISABLED, updating (LibRover-1.0.lua:3208:<local>)", -- [92]
+				"14:45:24.555.736> [itemscore] [itemevents] BAG_UPDATE_DELAYED (Item-Events.lua:156:Debug)", -- [93]
+				"14:45:24.555.738> CacheQuestLog cached 13 quests (QuestTracking.lua:212:QuestTracking_CacheQuestLog)", -- [94]
+				"14:45:24.555.795> [|cffffbb00LibRover|cffff88dd] Player moved in the last 30 seconds, updating route. (LibRover-1.0.lua:3032:OnUpdate)", -- [95]
+				"14:45:24.555.797> [|cffffbb00LibRover|cffff88dd] -> |cff00ff88FindPath|cffff88dd:  |cffaaff88Frostwall|cffff88dd/0 |cffffffff39.2|cffff88dd,|cffffffff55.0|cffff88dd --> |cffaaff88Orgrimmar|cffff88dd/1 |cffffffff53.1|cffff88dd,|cffffffff77.0|cffff88dd (LibRover-1.0.lua:1449:FindPath)", -- [96]
+				"14:45:24.555.797> [|cffffbb00LibRover|cffff88dd] - IsDestinationImpossible? false,nil, (LibRover-1.0.lua:1454:FindPath)", -- [97]
+				"14:45:24.555.797> [|cffffbb00LibRover|cffff88dd] <- |cff00ff88FindPath|cffff88dd ends. (LibRover-1.0.lua:1523:FindPath)", -- [98]
+				"14:45:24.842.068> [itemscore] [itemevents] PLAYER_SPECIALIZATION_CHANGED (Item-Events.lua:156:Debug)", -- [99]
+				"14:45:24.842.068> [itemscore] [itemevents] PLAYER_SPECIALIZATION_CHANGED (Item-Events.lua:156:Debug)", -- [100]
+				"14:45:25.842.227> [itemscore] [itemevents] PLAYER_SPECIALIZATION_CHANGED (Item-Events.lua:156:Debug)", -- [101]
+				"14:45:25.842.244> [itemscore] [itemevents] PLAYER_SPECIALIZATION_CHANGED (Item-Events.lua:156:Debug)", -- [102]
+				"14:45:25.842.244> [itemscore] [itemevents] PLAYER_SPECIALIZATION_CHANGED (Item-Events.lua:156:Debug)", -- [103]
+				"14:45:25.842.246> [itemscore] [itemevents] PLAYER_SPECIALIZATION_CHANGED (Item-Events.lua:156:Debug)", -- [104]
+				"14:45:25.842.247> [itemscore] [itemevents] PLAYER_SPECIALIZATION_CHANGED (Item-Events.lua:156:Debug)", -- [105]
+				"14:45:25.842.252> [itemscore] [itemevents] PLAYER_SPECIALIZATION_CHANGED (Item-Events.lua:156:Debug)", -- [106]
+				"14:45:25.842.385> [|cff66ff00waypoints|cffff88dd] Zone changed, no farm path here (Waypoints.lua:765:<local>)", -- [107]
+				"14:45:25.842.386> DoCorpseCheck (ZONE_CHANGED_NEW_AREA) (not dead) (Pointer.lua:2985:DoCorpseCheck)", -- [108]
+				"14:45:25.842.386> [|cff00ff00pointer|cffff88dd] ClearWaypoints corpse (Pointer.lua:588:ClearWaypoints)", -- [109]
+				"14:45:25.842.387> [|cffffbb00LibRover|cffff88dd] Got event ZONE_CHANGED_NEW_AREA, updating (LibRover-1.0.lua:3208:<local>)", -- [110]
+				"14:45:25.842.397> CacheQuestLog cached 13 quests (QuestTracking.lua:212:QuestTracking_CacheQuestLog)", -- [111]
+				"14:45:25.842.401> [petguides] Showing icon for pet 1303 Squawkybird (PetBattle.lua:1103:UpdateIcons)", -- [112]
+				"14:45:25.842.401> [petguides] Showing icon for pet 792 Jade Crane Chick (PetBattle.lua:1103:UpdateIcons)", -- [113]
+				"14:45:25.842.401> [petguides] Showing icon for pet 1387 Iron Starlette (PetBattle.lua:1103:UpdateIcons)", -- [114]
+				"14:45:25.842.401> [petguides] Showing icon for pet 1333 Jademist Dancer (PetBattle.lua:1103:UpdateIcons)", -- [115]
+				"14:45:25.842.402> [petguides] Showing icon for pet 311 Caleb (PetBattle.lua:1103:UpdateIcons)", -- [116]
+				"14:45:25.842.402> [petguides] Showing icon for pet 1332 Squiggles (PetBattle.lua:1103:UpdateIcons)", -- [117]
+				"14:45:25.842.402> [petguides] Showing icon for pet 1544 Hatespark the Tiny (PetBattle.lua:1103:UpdateIcons)", -- [118]
+				"14:45:25.842.402> [petguides] Showing icon for pet 307 Aka (PetBattle.lua:1103:UpdateIcons)", -- [119]
+				"14:45:25.842.402> [petguides] Showing icon for pet 1156 Mini Mindslayer (PetBattle.lua:1103:UpdateIcons)", -- [120]
+				"14:45:25.842.402> [petguides] Showing icon for pet 87 Sprite Darter Hatchling (PetBattle.lua:1103:UpdateIcons)", -- [121]
+				"14:45:25.842.402> [petguides] Showing icon for pet 724 Alpine Foxling (PetBattle.lua:1103:UpdateIcons)", -- [122]
+				"14:45:25.842.402> [petguides] Showing icon for pet 1303 Squawkybird (PetBattle.lua:1103:UpdateIcons)", -- [123]
+				"14:45:25.842.402> [petguides] Showing icon for pet 792 Jade Crane Chick (PetBattle.lua:1103:UpdateIcons)", -- [124]
+				"14:45:25.842.402> [petguides] Showing icon for pet 1387 Iron Starlette (PetBattle.lua:1103:UpdateIcons)", -- [125]
+				"14:45:25.842.403> [petguides] Showing icon for pet 1333 Jademist Dancer (PetBattle.lua:1103:UpdateIcons)", -- [126]
+				"14:45:25.842.403> [petguides] Showing icon for pet 311 Caleb (PetBattle.lua:1103:UpdateIcons)", -- [127]
+				"14:45:25.842.403> [petguides] Showing icon for pet 1332 Squiggles (PetBattle.lua:1103:UpdateIcons)", -- [128]
+				"14:45:25.842.403> [petguides] Showing icon for pet 1544 Hatespark the Tiny (PetBattle.lua:1103:UpdateIcons)", -- [129]
+				"14:45:25.842.403> [petguides] Showing icon for pet 307 Aka (PetBattle.lua:1103:UpdateIcons)", -- [130]
+				"14:45:25.842.403> [petguides] Showing icon for pet 1156 Mini Mindslayer (PetBattle.lua:1103:UpdateIcons)", -- [131]
+				"14:45:25.842.403> [petguides] Showing icon for pet 87 Sprite Darter Hatchling (PetBattle.lua:1103:UpdateIcons)", -- [132]
+				"14:45:25.842.403> [petguides] Showing icon for pet 724 Alpine Foxling (PetBattle.lua:1103:UpdateIcons)", -- [133]
+				"14:45:25.842.417> [|cffffbb00LibRover|cffff88dd] Player moved in the last 30 seconds, updating route. (LibRover-1.0.lua:3032:OnUpdate)", -- [134]
+				"14:45:25.842.419> [|cffffbb00LibRover|cffff88dd] -> |cff00ff88FindPath|cffff88dd:  |cffaaff88Highmaul|cffff88dd/2 |cffffffff36.5|cffff88dd,|cffffffff35.5|cffff88dd --> |cffaaff88Orgrimmar|cffff88dd/1 |cffffffff53.1|cffff88dd,|cffffffff77.0|cffff88dd (LibRover-1.0.lua:1449:FindPath)", -- [135]
+				"14:45:25.842.419> [|cffffbb00LibRover|cffff88dd] - IsDestinationImpossible? false,nil, (LibRover-1.0.lua:1454:FindPath)", -- [136]
+				"14:45:25.842.419> [|cffffbb00LibRover|cffff88dd] <- |cff00ff88FindPath|cffff88dd ends. (LibRover-1.0.lua:1523:FindPath)", -- [137]
+				"14:45:25.452.460> [itemscore] [itemevents] PLAYER_SPECIALIZATION_CHANGED (Item-Events.lua:156:Debug)", -- [138]
+				"14:45:25.452.475> [|cffffbb00LibRover|cffff88dd] -> |cff00dd77InitializePath|cffff88dd towards |cffddddee321/1 53.10,77.00 (LibRover-1.0.lua:1535:InitializePath)", -- [139]
+				"14:45:25.452.476> [|cffffbb00LibRover|cffff88dd] [lr_initpath_v] - cleared old nodes, 2265 left (LibRover-1.0.lua:1551:InitializePath)", -- [140]
+				"14:45:25.452.491> [|cffffbb00LibRover|cffff88dd] [lr_initpath_v] - cleared linkage (LibRover-1.0.lua:1558:InitializePath)", -- [141]
+				"14:45:25.452.500> [|cffffbb00LibRover|cffff88dd] - Initialized end node #2266 with copy #2267 table: 000000011D501560 (LibRover-1.0.lua:1576:InitializePath)", -- [142]
+				"14:45:25.452.500> [|cffffbb00LibRover|cffff88dd] - |cff88ff44 Found hearth node: \"|cffffffffSummer's Rest|cffff88dd\" = |cffffee00[311] \"Summer's Rest\" = Hall of the Crescent Moon 903 /1 69.0,49.2 [inn] [?]) (LibRover-1.0.lua:1269:FindBindLocation)", -- [143]
+				"14:45:25.452.501> [|cffffbb00LibRover|cffff88dd] - |cff88ff44 Found garrison hearth node: |cffffee00[348] \"Town Hall\" = Frostwall 976 /0 42.5,53.5 [inn] [closed] |cff8899aa(mode:|cffffffffwalk|cff8899aa from [|cffffffff2268|cff8899aa]) |cff888888[my t=|cff55aa001.8|cff888888/|cff77ee001.8|cff888888] |cff888888(t=|cff00aa551.8|cff888888/|cff00ee771.8|cff888888) (LibRover-1.0.lua:1283:FindGarrisonBindLocation)", -- [144]
+				"14:45:25.452.504> [|cffffbb00LibRover|cffff88dd] - Initialized start node #2268 (LibRover-1.0.lua:1617:InitializePath)", -- [145]
+				"14:45:25.452.510> [|cffffbb00LibRover|cffff88dd] [lr_initpath_v] - InitializePath: cleared temp fields (LibRover-1.0.lua:1658:InitializePath)", -- [146]
+				"14:45:25.452.510> [|cffffbb00LibRover|cffff88dd] <- |cff00dd77InitializePath|cffff88dd done. (LibRover-1.0.lua:1692:InitializePath)", -- [147]
+				"14:45:25.452.510> [|cffffbb00LibRover|cffff88dd] [lr_calc] Calc pending, frame 1 (calcs: 0) in 35.83ms. (LibRover-1.0.lua:2950:OnUpdate)", -- [148]
+				"14:45:25.520.529> [|cffffbb00LibRover|cffff88dd] [lr_calc] StepForever: initialized, proceeding (LibRover-1.0.lua:1785:<local>)", -- [149]
+				"14:45:25.853.872> [|cffffbb00LibRover|cffff88dd] [lr_calc] This pass: [SUCCESS] = |cffffffff10.83|cffff88ddms. Done |cffffff88237|cffff88dd calculations over |cff88ffff7|cffff88dd frames:\n compared |cff88ff880|cffff88dd nodes in |cffffffff2.91|cffff88dd ms, opened |cff88ff881181|cffff88dd, closed |cff88ff88237|cffff88dd \n cheapest |cffffffff2.91|cffff88dd, initial |cffffffff1.01|cffff88dd, overhead |cffffffff41.17|cffff88dd, blah |cffffffff34.87|cffff88dd, scoring |cffffffff61.01|cffff88dd, adding |cffffffff21.38|cffff88dd ms    \n calc total |cffffffff288.02|cffff88dd ms, total time |cffffffff288.99|cffff88dd ms   \n(found: YES) (LibRover-1.0.lua:2954:OnUpdate)", -- [150]
+				"14:45:25.853.872> [|cffffbb00LibRover|cffff88dd] Path found in 7 frames, 237 calcs, 10.83 ms. (LibRover-1.0.lua:2982:OnUpdate)", -- [151]
+				"14:45:25.853.873> [|cffffbb00LibRover|cffff88dd] 0. |cff88ff88START|cffff88dd -- |cff88ccddGladiator's Rest 36,35|cffff88dd  (dist 0) |cff8888dd{walk_start__hearth_inn}|cffff88dd (LibRover-1.0.lua:2786:ReportPath)", -- [152]
+				"14:45:25.853.873> [|cffffbb00LibRover|cffff88dd] 1. |cff88ff88Hearth to Summer's Rest|cffff88dd -- |cff88ccddSummer's Rest|cffff88dd  (dist 0) |cff8888dd{hearth_inn__walk_misc}|cffff88dd (LibRover-1.0.lua:2786:ReportPath)", -- [153]
+				"14:45:25.853.874> [|cffffbb00LibRover|cffff88dd] 2. |cff88ff88Go to Hall of the Crescent Moon 77,42|cffff88dd -- |cff88ccddHall of the Crescent Moon 77,42|cffff88dd  (dist 20) |cff8888dd{walk_misc__walk_misc}|cffff88dd (LibRover-1.0.lua:2786:ReportPath)", -- [154]
+				"14:45:25.853.874> [|cffffbb00LibRover|cffff88dd] 3. |cff88ff88Go to The Imperial Mercantile 74,70|cffff88dd -- |cff88ccddThe Imperial Mercantile 74,70|cffff88dd  (dist 21) |cff8888dd{walk_misc__walk_portal}|cffff88dd (LibRover-1.0.lua:2786:ReportPath)", -- [155]
+				"14:45:25.853.874> [|cffffbb00LibRover|cffff88dd] 4. |cff88ff88Click portal to Orgrimmar|cffff88dd -- |cff88ccddPortal to Cleft of Shadow|cffff88dd  (dist 47) |cff8888dd{walk_portal__portal_portal}|cffff88dd (LibRover-1.0.lua:2786:ReportPath)", -- [156]
+				"14:45:25.853.874> [|cffffbb00LibRover|cffff88dd] |cff8888885. |cff88ff88Arrive at Cleft of Shadow|cffff88dd -- |cff88ccddPortal from The Imperial Mercantile|cffff88dd  (dist 0) |cff8888dd{portal_portal__walk_misc}|cffff88dd (LibRover-1.0.lua:2786:ReportPath)", -- [157]
+				"14:45:25.853.874> [|cffffbb00LibRover|cffff88dd] 6. |cff88ff88Go to Cleft of Shadow 41,66|cffff88dd -- |cff88ccddCleft of Shadow 41,66|cffff88dd  (dist 23) |cff8888dd{walk_misc__walk_misc}|cffff88dd (LibRover-1.0.lua:2786:ReportPath)", -- [158]
+				"14:45:25.853.874> [|cffffbb00LibRover|cffff88dd] 7. |cff88ff88Cleft of Shadow tunnel|cffff88dd -- |cff88ccddCleft of Shadow tunnel|cffff88dd  (dist 46) |cff8888dd{walk_misc__walk_misc}|cffff88dd (LibRover-1.0.lua:2786:ReportPath)", -- [159]
+				"14:45:25.853.874> [|cffffbb00LibRover|cffff88dd] 8. |cff88ff88Cleft of Shadow exit|cffff88dd -- |cff88ccddCleft of Shadow exit|cffff88dd  (dist 24) |cff8888dd{walk_misc__walk_misc}|cffff88dd (LibRover-1.0.lua:2786:ReportPath)", -- [160]
+				"14:45:25.853.874> [|cffffbb00LibRover|cffff88dd] 9. |cff88ff88Cleft of Shadow entrance|cffff88dd -- |cff88ccddCleft of Shadow entrance|cffff88dd  (dist 18) |cff8888dd{walk_misc__fly_end}|cffff88dd (LibRover-1.0.lua:2786:ReportPath)", -- [161]
+				"14:45:25.853.874> [|cffffbb00LibRover|cffff88dd] 10. |cff88ff88Talk to |cffaaffaaLovely Merchant|cffff88dd|cffff88dd -- |cff88ccddLovely Merchant|cffff88dd  (dist 167) |cff8888dd{fly_end}|cffff88dd (LibRover-1.0.lua:2786:ReportPath)", -- [162]
+				"14:45:25.853.875> [|cff00ff00pointer|cffff88dd] -> PathFoundHandler! state=success (Pointer.lua:4137:PathFoundHandler)", -- [163]
+				"14:45:25.853.876> [|cff00ff00pointer|cffff88dd] - set_waypoints: 11 points, type=route (Pointer.lua:3842:<local>)", -- [164]
+				"14:45:25.853.878> [|cff00ff00pointer|cffff88dd] - set_waypoints: arrowpoint=Shrine of Two Moons #903 /1 69.0,49.2, farmpoint=Shrine of Two Moons #903 /1 69.0,49.2 (Pointer.lua:3916:<local>)", -- [165]
+				"14:45:25.853.879> [|cff00ff00pointer|cffff88dd] - ShowSet route ends [3.33 ms] + ants [0.92 ms] (Pointer.lua:4125:ShowSet)", -- [166]
+				"14:45:25.853.879> [|cff00ff00pointer|cffff88dd] <- PathFoundHandler done. (Pointer.lua:4250:PathFoundHandler)", -- [167]
+				"14:45:25.853.881> [|cff00ff00pointer|cffff88dd] ClearSet route + ants [0.52 ms] (Pointer.lua:4068:ClearSet)", -- [168]
+				"14:45:26.263.268> [itemscore] [itemevents] PLAYER_SPECIALIZATION_CHANGED (Item-Events.lua:156:Debug)", -- [169]
+				"14:45:26.545.548> [itemscore] [itemevents] PLAYER_SPECIALIZATION_CHANGED (Item-Events.lua:156:Debug)", -- [170]
+				"14:45:26.145.148> [itemscore] [itemevents] PLAYER_SPECIALIZATION_CHANGED (Item-Events.lua:156:Debug)", -- [171]
+				"14:45:31.986.989> [itemscore] [itemevents] PLAYER_SPECIALIZATION_CHANGED (Item-Events.lua:156:Debug)", -- [172]
+				"14:45:32.582.584> [itemscore] [itemevents] PLAYER_SPECIALIZATION_CHANGED (Item-Events.lua:156:Debug)", -- [173]
+				"14:45:34.512.514> [itemscore] [itemevents] PLAYER_SPECIALIZATION_CHANGED (Item-Events.lua:156:Debug)", -- [174]
+				"14:45:36.625.627> [itemscore] [itemevents] PLAYER_SPECIALIZATION_CHANGED (Item-Events.lua:156:Debug)", -- [175]
+				"14:45:42.550.553> [itemscore] [itemevents] PLAYER_SPECIALIZATION_CHANGED (Item-Events.lua:156:Debug)", -- [176]
+				"14:45:43.309.313> [itemscore] [itemevents] PLAYER_SPECIALIZATION_CHANGED (Item-Events.lua:156:Debug)", -- [177]
+				"14:45:43.309.313> [itemscore] [itemevents] PLAYER_SPECIALIZATION_CHANGED (Item-Events.lua:156:Debug)", -- [178]
+				"14:45:48.550.553> [itemscore] [itemevents] PLAYER_SPECIALIZATION_CHANGED (Item-Events.lua:156:Debug)", -- [179]
+				"14:45:55.862.864> [|cffffbb00LibRover|cffff88dd] Player moved in the last 30 seconds, updating route. (LibRover-1.0.lua:3032:OnUpdate)", -- [180]
+				"14:45:55.862.867> [|cffffbb00LibRover|cffff88dd] -> |cff00ff88FindPath|cffff88dd:  |cffaaff88Highmaul|cffff88dd/2 |cffffffff45.7|cffff88dd,|cffffffff49.7|cffff88dd --> |cffaaff88Orgrimmar|cffff88dd/1 |cffffffff53.1|cffff88dd,|cffffffff77.0|cffff88dd (LibRover-1.0.lua:1449:FindPath)", -- [181]
+				"14:45:55.862.867> [|cffffbb00LibRover|cffff88dd] - IsDestinationImpossible? false,nil, (LibRover-1.0.lua:1454:FindPath)", -- [182]
+				"14:45:55.862.867> [|cffffbb00LibRover|cffff88dd] <- |cff00ff88FindPath|cffff88dd ends. (LibRover-1.0.lua:1523:FindPath)", -- [183]
+				"14:45:55.882.886> [|cffffbb00LibRover|cffff88dd] -> |cff00dd77InitializePath|cffff88dd towards |cffddddee321/1 53.10,77.00 (LibRover-1.0.lua:1535:InitializePath)", -- [184]
+				"14:45:55.882.887> [|cffffbb00LibRover|cffff88dd] [lr_initpath_v] - cleared old nodes, 2265 left (LibRover-1.0.lua:1551:InitializePath)", -- [185]
+				"14:45:55.882.903> [|cffffbb00LibRover|cffff88dd] [lr_initpath_v] - cleared linkage (LibRover-1.0.lua:1558:InitializePath)", -- [186]
+				"14:45:55.882.912> [|cffffbb00LibRover|cffff88dd] - Initialized end node #2266 with copy #2267 table: 00000000750ABF00 (LibRover-1.0.lua:1576:InitializePath)", -- [187]
+				"14:45:55.882.912> [|cffffbb00LibRover|cffff88dd] - |cff88ff44 Found hearth node: \"|cffffffffSummer's Rest|cffff88dd\" = |cffffee00[311] \"Summer's Rest\" = Hall of the Crescent Moon 903 /1 69.0,49.2 [inn] [closed] |cff8899aa(mode:|cffffffffhearth|cff8899aa from [|cffffffff2268|cff8899aa]) |cff888888[my t=|cff55aa0055.0|cff888888/|cff77ee0055.0|cff888888] |cff888888(t=|cff00aa5555.0|cff888888/|cff00ee7755.0|cff888888) (LibRover-1.0.lua:1269:FindBindLocation)", -- [188]
+				"14:45:55.882.913> [|cffffbb00LibRover|cffff88dd] - |cff88ff44 Found garrison hearth node: |cffffee00[348] \"Town Hall\" = Frostwall 976 /0 42.5,53.5 [inn] [?] |cff8899aa(mode:|cffffffffghearth|cff8899aa from [|cffffffff2268|cff8899aa]) |cff888888[my t=|cff55aa00169.0|cff888888/|cff77ee00169.0|cff888888] |cff888888(t=|cff00aa55169.0|cff888888/|cff00ee77169.0|cff888888) (LibRover-1.0.lua:1283:FindGarrisonBindLocation)", -- [189]
+				"14:45:55.882.915> [|cffffbb00LibRover|cffff88dd] - Initialized start node #2268 (LibRover-1.0.lua:1617:InitializePath)", -- [190]
+				"14:45:55.882.922> [|cffffbb00LibRover|cffff88dd] [lr_initpath_v] - InitializePath: cleared temp fields (LibRover-1.0.lua:1658:InitializePath)", -- [191]
+				"14:45:55.882.922> [|cffffbb00LibRover|cffff88dd] <- |cff00dd77InitializePath|cffff88dd done. (LibRover-1.0.lua:1692:InitializePath)", -- [192]
+				"14:45:55.938.942> [|cffffbb00LibRover|cffff88dd] [lr_calc] StepForever: initialized, proceeding (LibRover-1.0.lua:1785:<local>)", -- [193]
+				"14:45:55.050.070> [|cffffbb00LibRover|cffff88dd] [lr_calc] Calc pending, frame 5 (calcs: 78) in 15.12ms. (LibRover-1.0.lua:2950:OnUpdate)", -- [194]
+				"14:45:56.457.479> [|cffffbb00LibRover|cffff88dd] [lr_calc] Calc pending, frame 15 (calcs: 220) in 16.12ms. (LibRover-1.0.lua:2950:OnUpdate)", -- [195]
+				"14:45:56.543.548> [|cffffbb00LibRover|cffff88dd] [lr_calc] This pass: [SUCCESS] = |cffffffff0.04|cffff88ddms. Done |cffffff88237|cffff88dd calculations over |cff88ffff17|cffff88dd frames:\n compared |cff88ff880|cffff88dd nodes in |cffffffff3.10|cffff88dd ms, opened |cff88ff881181|cffff88dd, closed |cff88ff88237|cffff88dd \n cheapest |cffffffff3.10|cffff88dd, initial |cffffffff1.02|cffff88dd, overhead |cffffffff38.05|cffff88dd, blah |cffffffff34.23|cffff88dd, scoring |cffffffff58.28|cffff88dd, adding |cffffffff21.40|cffff88dd ms    \n calc total |cffffffff276.14|cffff88dd ms, total time |cffffffff277.11|cffff88dd ms   \n(found: YES) (LibRover-1.0.lua:2954:OnUpdate)", -- [196]
+				"14:45:56.543.548> [|cffffbb00LibRover|cffff88dd] Path found in 17 frames, 237 calcs, 0.04 ms. (LibRover-1.0.lua:2982:OnUpdate)", -- [197]
+				"14:45:56.543.549> [|cffffbb00LibRover|cffff88dd] 0. |cff88ff88START|cffff88dd -- |cff88ccddGladiator's Rest 45,49|cffff88dd  (dist 0) |cff8888dd{walk_start__hearth_inn}|cffff88dd (LibRover-1.0.lua:2786:ReportPath)", -- [198]
+				"14:45:56.543.549> [|cffffbb00LibRover|cffff88dd] 1. |cff88ff88Hearth to Summer's Rest|cffff88dd -- |cff88ccddSummer's Rest|cffff88dd  (dist 0) |cff8888dd{hearth_inn__walk_misc}|cffff88dd (LibRover-1.0.lua:2786:ReportPath)", -- [199]
+				"14:45:56.543.549> [|cffffbb00LibRover|cffff88dd] 2. |cff88ff88Go to Hall of the Crescent Moon 77,42|cffff88dd -- |cff88ccddHall of the Crescent Moon 77,42|cffff88dd  (dist 20) |cff8888dd{walk_misc__walk_misc}|cffff88dd (LibRover-1.0.lua:2786:ReportPath)", -- [200]
+				"14:45:56.543.550> [|cffffbb00LibRover|cffff88dd] 3. |cff88ff88Go to The Imperial Mercantile 74,70|cffff88dd -- |cff88ccddThe Imperial Mercantile 74,70|cffff88dd  (dist 21) |cff8888dd{walk_misc__walk_portal}|cffff88dd (LibRover-1.0.lua:2786:ReportPath)", -- [201]
+				"14:45:56.543.550> [|cffffbb00LibRover|cffff88dd] 4. |cff88ff88Click portal to Orgrimmar|cffff88dd -- |cff88ccddPortal to Cleft of Shadow|cffff88dd  (dist 47) |cff8888dd{walk_portal__portal_portal}|cffff88dd (LibRover-1.0.lua:2786:ReportPath)", -- [202]
+				"14:45:56.543.550> [|cffffbb00LibRover|cffff88dd] |cff8888885. |cff88ff88Arrive at Cleft of Shadow|cffff88dd -- |cff88ccddPortal from The Imperial Mercantile|cffff88dd  (dist 0) |cff8888dd{portal_portal__walk_misc}|cffff88dd (LibRover-1.0.lua:2786:ReportPath)", -- [203]
+				"14:45:56.543.550> [|cffffbb00LibRover|cffff88dd] 6. |cff88ff88Go to Cleft of Shadow 41,66|cffff88dd -- |cff88ccddCleft of Shadow 41,66|cffff88dd  (dist 23) |cff8888dd{walk_misc__walk_misc}|cffff88dd (LibRover-1.0.lua:2786:ReportPath)", -- [204]
+				"14:45:56.543.550> [|cffffbb00LibRover|cffff88dd] 7. |cff88ff88Cleft of Shadow tunnel|cffff88dd -- |cff88ccddCleft of Shadow tunnel|cffff88dd  (dist 46) |cff8888dd{walk_misc__walk_misc}|cffff88dd (LibRover-1.0.lua:2786:ReportPath)", -- [205]
+				"14:45:56.543.550> [|cffffbb00LibRover|cffff88dd] 8. |cff88ff88Cleft of Shadow exit|cffff88dd -- |cff88ccddCleft of Shadow exit|cffff88dd  (dist 24) |cff8888dd{walk_misc__walk_misc}|cffff88dd (LibRover-1.0.lua:2786:ReportPath)", -- [206]
+				"14:45:56.543.550> [|cffffbb00LibRover|cffff88dd] 9. |cff88ff88Cleft of Shadow entrance|cffff88dd -- |cff88ccddCleft of Shadow entrance|cffff88dd  (dist 18) |cff8888dd{walk_misc__fly_end}|cffff88dd (LibRover-1.0.lua:2786:ReportPath)", -- [207]
+				"14:45:56.543.550> [|cffffbb00LibRover|cffff88dd] 10. |cff88ff88Talk to |cffaaffaaLovely Merchant|cffff88dd|cffff88dd -- |cff88ccddLovely Merchant|cffff88dd  (dist 167) |cff8888dd{fly_end}|cffff88dd (LibRover-1.0.lua:2786:ReportPath)", -- [208]
+				"14:45:56.543.550> [|cff00ff00pointer|cffff88dd] -> PathFoundHandler! state=success (Pointer.lua:4137:PathFoundHandler)", -- [209]
+				"14:45:56.543.551> [|cff00ff00pointer|cffff88dd] - set_waypoints: 11 points, type=route (Pointer.lua:3842:<local>)", -- [210]
+				"14:45:56.543.553> [|cff00ff00pointer|cffff88dd] - set_waypoints: arrowpoint=Shrine of Two Moons #903 /1 69.0,49.2, farmpoint=Shrine of Two Moons #903 /1 69.0,49.2 (Pointer.lua:3916:<local>)", -- [211]
+				"14:45:56.543.555> [|cff00ff00pointer|cffff88dd] - ShowSet route ends [3.09 ms] + ants [0.77 ms] (Pointer.lua:4125:ShowSet)", -- [212]
+				"14:45:56.543.555> [|cff00ff00pointer|cffff88dd] <- PathFoundHandler done. (Pointer.lua:4250:PathFoundHandler)", -- [213]
+				"14:45:56.543.556> [|cff00ff00pointer|cffff88dd] ClearSet route + ants [0.37 ms] (Pointer.lua:4068:ClearSet)", -- [214]
+				"14:45:56.649.654> [itemscore] [itemevents] ZONE_CHANGED (Item-Events.lua:156:Debug)", -- [215]
+				"14:45:56.649.655> [|cffffbb00LibRover|cffff88dd] Got event ZONE_CHANGED, updating (LibRover-1.0.lua:3208:<local>)", -- [216]
+				"14:45:56.649.661> [|cffffbb00LibRover|cffff88dd] Player moved in the last 30 seconds, updating route. (LibRover-1.0.lua:3032:OnUpdate)", -- [217]
+				"14:45:56.649.661> [|cffffbb00LibRover|cffff88dd] -> |cff00ff88FindPath|cffff88dd:  |cffaaff88Highmaul|cffff88dd/2 |cffffffff47.3|cffff88dd,|cffffffff44.2|cffff88dd --> |cffaaff88Orgrimmar|cffff88dd/1 |cffffffff53.1|cffff88dd,|cffffffff77.0|cffff88dd (LibRover-1.0.lua:1449:FindPath)", -- [218]
+				"14:45:56.649.661> [|cffffbb00LibRover|cffff88dd] - IsDestinationImpossible? false,nil, (LibRover-1.0.lua:1454:FindPath)", -- [219]
+				"14:45:56.649.661> [|cffffbb00LibRover|cffff88dd] <- |cff00ff88FindPath|cffff88dd ends. (LibRover-1.0.lua:1523:FindPath)", -- [220]
+				"14:45:56.679.686> [|cffffbb00LibRover|cffff88dd] -> |cff00dd77InitializePath|cffff88dd towards |cffddddee321/1 53.10,77.00 (LibRover-1.0.lua:1535:InitializePath)", -- [221]
+				"14:45:56.679.688> [|cffffbb00LibRover|cffff88dd] [lr_initpath_v] - cleared old nodes, 2265 left (LibRover-1.0.lua:1551:InitializePath)", -- [222]
+				"14:45:56.679.703> [|cffffbb00LibRover|cffff88dd] [lr_initpath_v] - cleared linkage (LibRover-1.0.lua:1558:InitializePath)", -- [223]
+				"14:45:56.679.712> [|cffffbb00LibRover|cffff88dd] - Initialized end node #2266 with copy #2267 table: 000000011936D310 (LibRover-1.0.lua:1576:InitializePath)", -- [224]
+				"14:45:56.679.712> [|cffffbb00LibRover|cffff88dd] - |cff88ff44 Found hearth node: \"|cffffffffSummer's Rest|cffff88dd\" = |cffffee00[311] \"Summer's Rest\" = Hall of the Crescent Moon 903 /1 69.0,49.2 [inn] [closed] |cff8899aa(mode:|cffffffffhearth|cff8899aa from [|cffffffff2268|cff8899aa]) |cff888888[my t=|cff55aa0055.0|cff888888/|cff77ee0055.0|cff888888] |cff888888(t=|cff00aa5555.0|cff888888/|cff00ee7755.0|cff888888) (LibRover-1.0.lua:1269:FindBindLocation)", -- [225]
+				"14:45:56.679.713> [|cffffbb00LibRover|cffff88dd] - |cff88ff44 Found garrison hearth node: |cffffee00[348] \"Town Hall\" = Frostwall 976 /0 42.5,53.5 [inn] [?] |cff8899aa(mode:|cffffffffghearth|cff8899aa from [|cffffffff2268|cff8899aa]) |cff888888[my t=|cff55aa00138.6|cff888888/|cff77ee00138.6|cff888888] |cff888888(t=|cff00aa55138.6|cff888888/|cff00ee77138.6|cff888888) (LibRover-1.0.lua:1283:FindGarrisonBindLocation)", -- [226]
+				"14:45:56.679.715> [|cffffbb00LibRover|cffff88dd] - Initialized start node #2268 (LibRover-1.0.lua:1617:InitializePath)", -- [227]
+				"14:45:56.679.722> [|cffffbb00LibRover|cffff88dd] [lr_initpath_v] - InitializePath: cleared temp fields (LibRover-1.0.lua:1658:InitializePath)", -- [228]
+				"14:45:56.679.722> [|cffffbb00LibRover|cffff88dd] <- |cff00dd77InitializePath|cffff88dd done. (LibRover-1.0.lua:1692:InitializePath)", -- [229]
+				"14:45:56.738.744> [|cffffbb00LibRover|cffff88dd] [lr_calc] StepForever: initialized, proceeding (LibRover-1.0.lua:1785:<local>)", -- [230]
+				"14:45:56.016.046> [|cffffbb00LibRover|cffff88dd] [lr_calc] Calc pending, frame 9 (calcs: 137) in 15.34ms. (LibRover-1.0.lua:2950:OnUpdate)", -- [231]
+				"14:45:57.316.326> [|cffffbb00LibRover|cffff88dd] [lr_calc] This pass: [SUCCESS] = |cffffffff3.63|cffff88ddms. Done |cffffff88237|cffff88dd calculations over |cff88ffff17|cffff88dd frames:\n compared |cff88ff880|cffff88dd nodes in |cffffffff2.86|cffff88dd ms, opened |cff88ff881181|cffff88dd, closed |cff88ff88237|cffff88dd \n cheapest |cffffffff2.86|cffff88dd, initial |cffffffff0.95|cffff88dd, overhead |cffffffff38.14|cffff88dd, blah |cffffffff34.17|cffff88dd, scoring |cffffffff57.49|cffff88dd, adding |cffffffff21.22|cffff88dd ms    \n calc total |cffffffff273.42|cffff88dd ms, total time |cffffffff274.36|cffff88dd ms   \n(found: YES) (LibRover-1.0.lua:2954:OnUpdate)", -- [232]
+				"14:45:57.316.326> [|cffffbb00LibRover|cffff88dd] Path found in 17 frames, 237 calcs, 3.63 ms. (LibRover-1.0.lua:2982:OnUpdate)", -- [233]
+				"14:45:57.316.327> [|cffffbb00LibRover|cffff88dd] 0. |cff88ff88START|cffff88dd -- |cff88ccddGladiator's Rest 47,44|cffff88dd  (dist 0) |cff8888dd{walk_start__hearth_inn}|cffff88dd (LibRover-1.0.lua:2786:ReportPath)", -- [234]
+				"14:45:57.316.327> [|cffffbb00LibRover|cffff88dd] 1. |cff88ff88Hearth to Summer's Rest|cffff88dd -- |cff88ccddSummer's Rest|cffff88dd  (dist 0) |cff8888dd{hearth_inn__walk_misc}|cffff88dd (LibRover-1.0.lua:2786:ReportPath)", -- [235]
+				"14:45:57.316.327> [|cffffbb00LibRover|cffff88dd] 2. |cff88ff88Go to Hall of the Crescent Moon 77,42|cffff88dd -- |cff88ccddHall of the Crescent Moon 77,42|cffff88dd  (dist 20) |cff8888dd{walk_misc__walk_misc}|cffff88dd (LibRover-1.0.lua:2786:ReportPath)", -- [236]
+				"14:45:57.316.327> [|cffffbb00LibRover|cffff88dd] 3. |cff88ff88Go to The Imperial Mercantile 74,70|cffff88dd -- |cff88ccddThe Imperial Mercantile 74,70|cffff88dd  (dist 21) |cff8888dd{walk_misc__walk_portal}|cffff88dd (LibRover-1.0.lua:2786:ReportPath)", -- [237]
+				"14:45:57.316.327> [|cffffbb00LibRover|cffff88dd] 4. |cff88ff88Click portal to Orgrimmar|cffff88dd -- |cff88ccddPortal to Cleft of Shadow|cffff88dd  (dist 47) |cff8888dd{walk_portal__portal_portal}|cffff88dd (LibRover-1.0.lua:2786:ReportPath)", -- [238]
+				"14:45:57.316.327> [|cffffbb00LibRover|cffff88dd] |cff8888885. |cff88ff88Arrive at Cleft of Shadow|cffff88dd -- |cff88ccddPortal from The Imperial Mercantile|cffff88dd  (dist 0) |cff8888dd{portal_portal__walk_misc}|cffff88dd (LibRover-1.0.lua:2786:ReportPath)", -- [239]
+				"14:45:57.316.327> [|cffffbb00LibRover|cffff88dd] 6. |cff88ff88Go to Cleft of Shadow 41,66|cffff88dd -- |cff88ccddCleft of Shadow 41,66|cffff88dd  (dist 23) |cff8888dd{walk_misc__walk_misc}|cffff88dd (LibRover-1.0.lua:2786:ReportPath)", -- [240]
+				"14:45:57.316.327> [|cffffbb00LibRover|cffff88dd] 7. |cff88ff88Cleft of Shadow tunnel|cffff88dd -- |cff88ccddCleft of Shadow tunnel|cffff88dd  (dist 46) |cff8888dd{walk_misc__walk_misc}|cffff88dd (LibRover-1.0.lua:2786:ReportPath)", -- [241]
+				"14:45:57.316.327> [|cffffbb00LibRover|cffff88dd] 8. |cff88ff88Cleft of Shadow exit|cffff88dd -- |cff88ccddCleft of Shadow exit|cffff88dd  (dist 24) |cff8888dd{walk_misc__walk_misc}|cffff88dd (LibRover-1.0.lua:2786:ReportPath)", -- [242]
+				"14:45:57.316.327> [|cffffbb00LibRover|cffff88dd] 9. |cff88ff88Cleft of Shadow entrance|cffff88dd -- |cff88ccddCleft of Shadow entrance|cffff88dd  (dist 18) |cff8888dd{walk_misc__fly_end}|cffff88dd (LibRover-1.0.lua:2786:ReportPath)", -- [243]
+				"14:45:57.316.328> [|cffffbb00LibRover|cffff88dd] 10. |cff88ff88Talk to |cffaaffaaLovely Merchant|cffff88dd|cffff88dd -- |cff88ccddLovely Merchant|cffff88dd  (dist 167) |cff8888dd{fly_end}|cffff88dd (LibRover-1.0.lua:2786:ReportPath)", -- [244]
+				"14:45:57.316.328> [|cff00ff00pointer|cffff88dd] -> PathFoundHandler! state=success (Pointer.lua:4137:PathFoundHandler)", -- [245]
+				"14:45:57.316.328> [|cff00ff00pointer|cffff88dd] - set_waypoints: 11 points, type=route (Pointer.lua:3842:<local>)", -- [246]
+				"14:45:57.316.330> [|cff00ff00pointer|cffff88dd] - set_waypoints: arrowpoint=Shrine of Two Moons #903 /1 69.0,49.2, farmpoint=Shrine of Two Moons #903 /1 69.0,49.2 (Pointer.lua:3916:<local>)", -- [247]
+				"14:45:57.316.332> [|cff00ff00pointer|cffff88dd] - ShowSet route ends [2.86 ms] + ants [0.81 ms] (Pointer.lua:4125:ShowSet)", -- [248]
+				"14:45:57.316.332> [|cff00ff00pointer|cffff88dd] <- PathFoundHandler done. (Pointer.lua:4250:PathFoundHandler)", -- [249]
+				"14:45:57.316.333> [|cff00ff00pointer|cffff88dd] ClearSet route + ants [0.38 ms] (Pointer.lua:4068:ClearSet)", -- [250]
+				"14:46:19.537.542> [|cffffbb00LibRover|cffff88dd] Got off taxi. (LibRover-1.0.lua:3185:<local>)", -- [251]
+				"14:46:19.557.559> [|cffffbb00LibRover|cffff88dd] Player moved in the last 30 seconds, updating route. (LibRover-1.0.lua:3032:OnUpdate)", -- [252]
+				"14:46:19.557.561> [|cffffbb00LibRover|cffff88dd] -> |cff00ff88FindPath|cffff88dd:  |cffaaff88Highmaul|cffff88dd/3 |cffffffff46.1|cffff88dd,|cffffffff48.6|cffff88dd --> |cffaaff88Orgrimmar|cffff88dd/1 |cffffffff53.1|cffff88dd,|cffffffff77.0|cffff88dd (LibRover-1.0.lua:1449:FindPath)", -- [253]
+				"14:46:19.557.562> [|cffffbb00LibRover|cffff88dd] - IsDestinationImpossible? false,nil, (LibRover-1.0.lua:1454:FindPath)", -- [254]
+				"14:46:19.557.562> [|cffffbb00LibRover|cffff88dd] <- |cff00ff88FindPath|cffff88dd ends. (LibRover-1.0.lua:1523:FindPath)", -- [255]
+				"14:46:19.577.583> [|cffffbb00LibRover|cffff88dd] -> |cff00dd77InitializePath|cffff88dd towards |cffddddee321/1 53.10,77.00 (LibRover-1.0.lua:1535:InitializePath)", -- [256]
+				"14:46:19.577.584> [|cffffbb00LibRover|cffff88dd] [lr_initpath_v] - cleared old nodes, 2265 left (LibRover-1.0.lua:1551:InitializePath)", -- [257]
+				"14:46:19.577.599> [|cffffbb00LibRover|cffff88dd] [lr_initpath_v] - cleared linkage (LibRover-1.0.lua:1558:InitializePath)", -- [258]
+				"14:46:19.577.608> [|cffffbb00LibRover|cffff88dd] - Initialized end node #2266 with copy #2267 table: 000000012A4A7430 (LibRover-1.0.lua:1576:InitializePath)", -- [259]
+				"14:46:19.577.608> [|cffffbb00LibRover|cffff88dd] - |cff88ff44 Found hearth node: \"|cffffffffSummer's Rest|cffff88dd\" = |cffffee00[311] \"Summer's Rest\" = Hall of the Crescent Moon 903 /1 69.0,49.2 [inn] [closed] |cff8899aa(mode:|cffffffffhearth|cff8899aa from [|cffffffff2268|cff8899aa]) |cff888888[my t=|cff55aa0055.0|cff888888/|cff77ee0055.0|cff888888] |cff888888(t=|cff00aa5555.0|cff888888/|cff00ee7755.0|cff888888) (LibRover-1.0.lua:1269:FindBindLocation)", -- [260]
+				"14:46:19.577.609> [|cffffbb00LibRover|cffff88dd] - |cff88ff44 Found garrison hearth node: |cffffee00[348] \"Town Hall\" = Frostwall 976 /0 42.5,53.5 [inn] [?] |cff8899aa(mode:|cffffffffghearth|cff8899aa from [|cffffffff2268|cff8899aa]) |cff888888[my t=|cff55aa00137.8|cff888888/|cff77ee00137.8|cff888888] |cff888888(t=|cff00aa55137.8|cff888888/|cff00ee77137.8|cff888888) (LibRover-1.0.lua:1283:FindGarrisonBindLocation)", -- [261]
+				"14:46:19.577.611> [|cffffbb00LibRover|cffff88dd] - Initialized start node #2268 (LibRover-1.0.lua:1617:InitializePath)", -- [262]
+				"14:46:19.577.617> [|cffffbb00LibRover|cffff88dd] [lr_initpath_v] - InitializePath: cleared temp fields (LibRover-1.0.lua:1658:InitializePath)", -- [263]
+				"14:46:19.577.617> [|cffffbb00LibRover|cffff88dd] <- |cff00dd77InitializePath|cffff88dd done. (LibRover-1.0.lua:1692:InitializePath)", -- [264]
+				"14:46:19.577.617> [|cff00ff00pointer|cffff88dd] -> PathFoundHandler! state=progress (Pointer.lua:4137:PathFoundHandler)", -- [265]
+				"14:46:19.577.617> [|cff00ff00pointer|cffff88dd] <- PathFoundHandler done. (Pointer.lua:4250:PathFoundHandler)", -- [266]
+				"14:46:19.634.636> [|cffffbb00LibRover|cffff88dd] [lr_calc] StepForever: initialized, proceeding (LibRover-1.0.lua:1785:<local>)", -- [267]
+				"14:46:19.634.652> [|cff00ff00pointer|cffff88dd] -> PathFoundHandler! state=progress (Pointer.lua:4137:PathFoundHandler)", -- [268]
+				"14:46:19.634.652> [|cff00ff00pointer|cffff88dd] <- PathFoundHandler done. (Pointer.lua:4250:PathFoundHandler)", -- [269]
+				"14:46:19.675.693> [|cffffbb00LibRover|cffff88dd] [lr_calc] Calc pending, frame 3 (calcs: 56) in 16.13ms. (LibRover-1.0.lua:2950:OnUpdate)", -- [270]
+				"14:46:19.675.693> [|cff00ff00pointer|cffff88dd] -> PathFoundHandler! state=progress (Pointer.lua:4137:PathFoundHandler)", -- [271]
+				"14:46:19.675.693> [|cff00ff00pointer|cffff88dd] <- PathFoundHandler done. (Pointer.lua:4250:PathFoundHandler)", -- [272]
+				"14:46:19.710.726> [|cff00ff00pointer|cffff88dd] -> PathFoundHandler! state=progress (Pointer.lua:4137:PathFoundHandler)", -- [273]
+				"14:46:19.710.726> [|cff00ff00pointer|cffff88dd] <- PathFoundHandler done. (Pointer.lua:4250:PathFoundHandler)", -- [274]
+				"14:46:19.740.759> [|cff00ff00pointer|cffff88dd] -> PathFoundHandler! state=progress (Pointer.lua:4137:PathFoundHandler)", -- [275]
+				"14:46:19.740.759> [|cff00ff00pointer|cffff88dd] <- PathFoundHandler done. (Pointer.lua:4250:PathFoundHandler)", -- [276]
+				"14:46:19.773.792> [|cff00ff00pointer|cffff88dd] -> PathFoundHandler! state=progress (Pointer.lua:4137:PathFoundHandler)", -- [277]
+				"14:46:19.773.792> [|cff00ff00pointer|cffff88dd] <- PathFoundHandler done. (Pointer.lua:4250:PathFoundHandler)", -- [278]
+				"14:46:19.808.830> [|cff00ff00pointer|cffff88dd] -> PathFoundHandler! state=progress (Pointer.lua:4137:PathFoundHandler)", -- [279]
+				"14:46:19.808.830> [|cff00ff00pointer|cffff88dd] <- PathFoundHandler done. (Pointer.lua:4250:PathFoundHandler)", -- [280]
+				"14:46:19.846.864> [|cff00ff00pointer|cffff88dd] -> PathFoundHandler! state=progress (Pointer.lua:4137:PathFoundHandler)", -- [281]
+				"14:46:19.846.864> [|cff00ff00pointer|cffff88dd] <- PathFoundHandler done. (Pointer.lua:4250:PathFoundHandler)", -- [282]
+				"14:46:19.880.897> [|cff00ff00pointer|cffff88dd] -> PathFoundHandler! state=progress (Pointer.lua:4137:PathFoundHandler)", -- [283]
+				"14:46:19.880.897> [|cff00ff00pointer|cffff88dd] <- PathFoundHandler done. (Pointer.lua:4250:PathFoundHandler)", -- [284]
+				"14:46:19.913.933> [|cff00ff00pointer|cffff88dd] -> PathFoundHandler! state=progress (Pointer.lua:4137:PathFoundHandler)", -- [285]
+				"14:46:19.913.933> [|cff00ff00pointer|cffff88dd] <- PathFoundHandler done. (Pointer.lua:4250:PathFoundHandler)", -- [286]
+				"14:46:19.948.977> [|cff00ff00pointer|cffff88dd] -> PathFoundHandler! state=progress (Pointer.lua:4137:PathFoundHandler)", -- [287]
+				"14:46:19.948.977> [|cff00ff00pointer|cffff88dd] <- PathFoundHandler done. (Pointer.lua:4250:PathFoundHandler)", -- [288]
+				"14:46:19.993.022> [|cff00ff00pointer|cffff88dd] -> PathFoundHandler! state=progress (Pointer.lua:4137:PathFoundHandler)", -- [289]
+				"14:46:19.993.022> [|cff00ff00pointer|cffff88dd] <- PathFoundHandler done. (Pointer.lua:4250:PathFoundHandler)", -- [290]
+				"14:46:19.040.049> [|cffffbb00LibRover|cffff88dd] [lr_calc] This pass: [SUCCESS] = |cffffffff4.64|cffff88ddms. Done |cffffff88170|cffff88dd calculations over |cff88ffff13|cffff88dd frames:\n compared |cff88ff880|cffff88dd nodes in |cffffffff2.09|cffff88dd ms, opened |cff88ff881076|cffff88dd, closed |cff88ff88170|cffff88dd \n cheapest |cffffffff2.09|cffff88dd, initial |cffffffff0.68|cffff88dd, overhead |cffffffff27.03|cffff88dd, blah |cffffffff25.14|cffff88dd, scoring |cffffffff45.09|cffff88dd, adding |cffffffff16.70|cffff88dd ms    \n calc total |cffffffff211.02|cffff88dd ms, total time |cffffffff211.78|cffff88dd ms   \n(found: YES) (LibRover-1.0.lua:2954:OnUpdate)", -- [291]
+				"14:46:19.040.049> [|cffffbb00LibRover|cffff88dd] Path found in 13 frames, 170 calcs, 4.64 ms. (LibRover-1.0.lua:2982:OnUpdate)", -- [292]
+				"14:46:19.040.050> [|cffffbb00LibRover|cffff88dd] 0. |cff88ff88START|cffff88dd -- |cff88ccddThe Coliseum 46,48|cffff88dd  (dist 0) |cff8888dd{walk_start__hearth_inn}|cffff88dd (LibRover-1.0.lua:2786:ReportPath)", -- [293]
+				"14:46:19.040.050> [|cffffbb00LibRover|cffff88dd] 1. |cff88ff88Hearth to Summer's Rest|cffff88dd -- |cff88ccddSummer's Rest|cffff88dd  (dist 0) |cff8888dd{hearth_inn__walk_misc}|cffff88dd (LibRover-1.0.lua:2786:ReportPath)", -- [294]
+				"14:46:19.040.050> [|cffffbb00LibRover|cffff88dd] 2. |cff88ff88Go to Hall of the Crescent Moon 77,42|cffff88dd -- |cff88ccddHall of the Crescent Moon 77,42|cffff88dd  (dist 20) |cff8888dd{walk_misc__walk_misc}|cffff88dd (LibRover-1.0.lua:2786:ReportPath)", -- [295]
+				"14:46:19.040.051> [|cffffbb00LibRover|cffff88dd] 3. |cff88ff88Go to The Imperial Mercantile 74,70|cffff88dd -- |cff88ccddThe Imperial Mercantile 74,70|cffff88dd  (dist 21) |cff8888dd{walk_misc__walk_portal}|cffff88dd (LibRover-1.0.lua:2786:ReportPath)", -- [296]
+				"14:46:19.040.051> [|cffffbb00LibRover|cffff88dd] 4. |cff88ff88Click portal to Orgrimmar|cffff88dd -- |cff88ccddPortal to Cleft of Shadow|cffff88dd  (dist 47) |cff8888dd{walk_portal__portal_portal}|cffff88dd (LibRover-1.0.lua:2786:ReportPath)", -- [297]
+				"14:46:19.040.051> [|cffffbb00LibRover|cffff88dd] |cff8888885. |cff88ff88Arrive at Cleft of Shadow|cffff88dd -- |cff88ccddPortal from The Imperial Mercantile|cffff88dd  (dist 0) |cff8888dd{portal_portal__walk_misc}|cffff88dd (LibRover-1.0.lua:2786:ReportPath)", -- [298]
+				"14:46:19.040.051> [|cffffbb00LibRover|cffff88dd] 6. |cff88ff88Go to Cleft of Shadow 41,66|cffff88dd -- |cff88ccddCleft of Shadow 41,66|cffff88dd  (dist 23) |cff8888dd{walk_misc__walk_misc}|cffff88dd (LibRover-1.0.lua:2786:ReportPath)", -- [299]
+				"14:46:19.040.051> [|cffffbb00LibRover|cffff88dd] 7. |cff88ff88Cleft of Shadow tunnel|cffff88dd -- |cff88ccddCleft of Shadow tunnel|cffff88dd  (dist 46) |cff8888dd{walk_misc__walk_misc}|cffff88dd (LibRover-1.0.lua:2786:ReportPath)", -- [300]
+				"14:46:19.040.051> [|cffffbb00LibRover|cffff88dd] 8. |cff88ff88Cleft of Shadow exit|cffff88dd -- |cff88ccddCleft of Shadow exit|cffff88dd  (dist 24) |cff8888dd{walk_misc__walk_misc}|cffff88dd (LibRover-1.0.lua:2786:ReportPath)", -- [301]
+				"14:46:19.040.051> [|cffffbb00LibRover|cffff88dd] 9. |cff88ff88Cleft of Shadow entrance|cffff88dd -- |cff88ccddCleft of Shadow entrance|cffff88dd  (dist 18) |cff8888dd{walk_misc__fly_end}|cffff88dd (LibRover-1.0.lua:2786:ReportPath)", -- [302]
+				"14:46:19.040.051> [|cffffbb00LibRover|cffff88dd] 10. |cff88ff88Talk to |cffaaffaaLovely Merchant|cffff88dd|cffff88dd -- |cff88ccddLovely Merchant|cffff88dd  (dist 167) |cff8888dd{fly_end}|cffff88dd (LibRover-1.0.lua:2786:ReportPath)", -- [303]
+				"14:46:19.040.051> [|cff00ff00pointer|cffff88dd] -> PathFoundHandler! state=success (Pointer.lua:4137:PathFoundHandler)", -- [304]
+				"14:46:19.040.052> [|cff00ff00pointer|cffff88dd] - set_waypoints: 11 points, type=route (Pointer.lua:3842:<local>)", -- [305]
+				"14:46:19.040.054> [|cff00ff00pointer|cffff88dd] - set_waypoints: arrowpoint=Shrine of Two Moons #903 /1 69.0,49.2, farmpoint=Shrine of Two Moons #903 /1 69.0,49.2 (Pointer.lua:3916:<local>)", -- [306]
+				"14:46:19.040.055> [|cff00ff00pointer|cffff88dd] - ShowSet route ends [2.80 ms] + ants [0.70 ms] (Pointer.lua:4125:ShowSet)", -- [307]
+				"14:46:19.040.055> [|cff00ff00pointer|cffff88dd] <- PathFoundHandler done. (Pointer.lua:4250:PathFoundHandler)", -- [308]
+				"14:46:19.040.057> [|cff00ff00pointer|cffff88dd] ClearSet route + ants [0.45 ms] (Pointer.lua:4068:ClearSet)", -- [309]
+				"14:46:26.268.271> [|cffffbb00LibRover|cffff88dd] Got event NEW_WMO_CHUNK, updating (LibRover-1.0.lua:3208:<local>)", -- [310]
+				"14:46:26.268.278> [|cffffbb00LibRover|cffff88dd] Player moved in the last 30 seconds, updating route. (LibRover-1.0.lua:3032:OnUpdate)", -- [311]
+				"14:46:26.268.280> [|cffffbb00LibRover|cffff88dd] -> |cff00ff88FindPath|cffff88dd:  |cffaaff88Highmaul|cffff88dd/3 |cffffffff46.1|cffff88dd,|cffffffff48.6|cffff88dd --> |cffaaff88Orgrimmar|cffff88dd/1 |cffffffff53.1|cffff88dd,|cffffffff77.0|cffff88dd (LibRover-1.0.lua:1449:FindPath)", -- [312]
+				"14:46:26.268.281> [|cffffbb00LibRover|cffff88dd] - IsDestinationImpossible? false,nil, (LibRover-1.0.lua:1454:FindPath)", -- [313]
+				"14:46:26.268.281> [|cffffbb00LibRover|cffff88dd] <- |cff00ff88FindPath|cffff88dd ends. (LibRover-1.0.lua:1523:FindPath)", -- [314]
+				"14:46:26.298.303> [|cffffbb00LibRover|cffff88dd] -> |cff00dd77InitializePath|cffff88dd towards |cffddddee321/1 53.10,77.00 (LibRover-1.0.lua:1535:InitializePath)", -- [315]
+				"14:46:26.298.304> [|cffffbb00LibRover|cffff88dd] [lr_initpath_v] - cleared old nodes, 2265 left (LibRover-1.0.lua:1551:InitializePath)", -- [316]
+				"14:46:26.298.318> [|cffffbb00LibRover|cffff88dd] [lr_initpath_v] - cleared linkage (LibRover-1.0.lua:1558:InitializePath)", -- [317]
+				"14:46:26.298.326> [|cffffbb00LibRover|cffff88dd] - Initialized end node #2266 with copy #2267 table: 00000000754C0AE0 (LibRover-1.0.lua:1576:InitializePath)", -- [318]
+				"14:46:26.298.327> [|cffffbb00LibRover|cffff88dd] - |cff88ff44 Found hearth node: \"|cffffffffSummer's Rest|cffff88dd\" = |cffffee00[311] \"Summer's Rest\" = Hall of the Crescent Moon 903 /1 69.0,49.2 [inn] [closed] |cff8899aa(mode:|cffffffffhearth|cff8899aa from [|cffffffff2268|cff8899aa]) |cff888888[my t=|cff55aa0055.3|cff888888/|cff77ee0055.3|cff888888] |cff888888(t=|cff00aa5555.3|cff888888/|cff00ee7755.3|cff888888) (LibRover-1.0.lua:1269:FindBindLocation)", -- [319]
+				"14:46:26.298.327> [|cffffbb00LibRover|cffff88dd] - |cff88ff44 Found garrison hearth node: |cffffee00[348] \"Town Hall\" = Frostwall 976 /0 42.5,53.5 [inn] [?] |cff8899aa(mode:|cffffffffghearth|cff8899aa from [|cffffffff2268|cff8899aa]) |cff888888[my t=|cff55aa00114.9|cff888888/|cff77ee00114.9|cff888888] |cff888888(t=|cff00aa55114.9|cff888888/|cff00ee77114.9|cff888888) (LibRover-1.0.lua:1283:FindGarrisonBindLocation)", -- [320]
+				"14:46:26.298.330> [|cffffbb00LibRover|cffff88dd] - Initialized start node #2268 (LibRover-1.0.lua:1617:InitializePath)", -- [321]
+				"14:46:26.298.336> [|cffffbb00LibRover|cffff88dd] [lr_initpath_v] - InitializePath: cleared temp fields (LibRover-1.0.lua:1658:InitializePath)", -- [322]
+				"14:46:26.298.336> [|cffffbb00LibRover|cffff88dd] <- |cff00dd77InitializePath|cffff88dd done. (LibRover-1.0.lua:1692:InitializePath)", -- [323]
+				"14:46:26.298.337> [|cffffbb00LibRover|cffff88dd] [lr_calc] Calc pending, frame 1 (calcs: 0) in 33.96ms. (LibRover-1.0.lua:2950:OnUpdate)", -- [324]
+				"14:46:26.354.358> [|cffffbb00LibRover|cffff88dd] [lr_calc] StepForever: initialized, proceeding (LibRover-1.0.lua:1785:<local>)", -- [325]
+				"14:46:26.718.738> [|cffffbb00LibRover|cffff88dd] [lr_calc] Calc pending, frame 11 (calcs: 151) in 16.77ms. (LibRover-1.0.lua:2950:OnUpdate)", -- [326]
+				"14:46:26.800.818> [|cffffbb00LibRover|cffff88dd] [lr_calc] This pass: [SUCCESS] = |cffffffff8.01|cffff88ddms. Done |cffffff88170|cffff88dd calculations over |cff88ffff13|cffff88dd frames:\n compared |cff88ff880|cffff88dd nodes in |cffffffff2.06|cffff88dd ms, opened |cff88ff881076|cffff88dd, closed |cff88ff88170|cffff88dd \n cheapest |cffffffff2.06|cffff88dd, initial |cffffffff0.79|cffff88dd, overhead |cffffffff30.11|cffff88dd, blah |cffffffff26.51|cffff88dd, scoring |cffffffff45.38|cffff88dd, adding |cffffffff16.73|cffff88dd ms    \n calc total |cffffffff217.56|cffff88dd ms, total time |cffffffff218.59|cffff88dd ms   \n(found: YES) (LibRover-1.0.lua:2954:OnUpdate)", -- [327]
+				"14:46:26.800.819> [|cffffbb00LibRover|cffff88dd] Path found in 13 frames, 170 calcs, 8.01 ms. (LibRover-1.0.lua:2982:OnUpdate)", -- [328]
+				"14:46:26.800.820> [|cffffbb00LibRover|cffff88dd] 0. |cff88ff88START|cffff88dd -- |cff88ccddThe Coliseum 46,48|cffff88dd  (dist 0) |cff8888dd{walk_start__hearth_inn}|cffff88dd (LibRover-1.0.lua:2786:ReportPath)", -- [329]
+				"14:46:26.800.820> [|cffffbb00LibRover|cffff88dd] 1. |cff88ff88Hearth to Summer's Rest|cffff88dd -- |cff88ccddSummer's Rest|cffff88dd  (dist 0) |cff8888dd{hearth_inn__walk_misc}|cffff88dd (LibRover-1.0.lua:2786:ReportPath)", -- [330]
+				"14:46:26.800.820> [|cffffbb00LibRover|cffff88dd] 2. |cff88ff88Go to Hall of the Crescent Moon 77,42|cffff88dd -- |cff88ccddHall of the Crescent Moon 77,42|cffff88dd  (dist 20) |cff8888dd{walk_misc__walk_misc}|cffff88dd (LibRover-1.0.lua:2786:ReportPath)", -- [331]
+				"14:46:26.800.820> [|cffffbb00LibRover|cffff88dd] 3. |cff88ff88Go to The Imperial Mercantile 74,70|cffff88dd -- |cff88ccddThe Imperial Mercantile 74,70|cffff88dd  (dist 21) |cff8888dd{walk_misc__walk_portal}|cffff88dd (LibRover-1.0.lua:2786:ReportPath)", -- [332]
+				"14:46:26.800.820> [|cffffbb00LibRover|cffff88dd] 4. |cff88ff88Click portal to Orgrimmar|cffff88dd -- |cff88ccddPortal to Cleft of Shadow|cffff88dd  (dist 47) |cff8888dd{walk_portal__portal_portal}|cffff88dd (LibRover-1.0.lua:2786:ReportPath)", -- [333]
+				"14:46:26.800.820> [|cffffbb00LibRover|cffff88dd] |cff8888885. |cff88ff88Arrive at Cleft of Shadow|cffff88dd -- |cff88ccddPortal from The Imperial Mercantile|cffff88dd  (dist 0) |cff8888dd{portal_portal__walk_misc}|cffff88dd (LibRover-1.0.lua:2786:ReportPath)", -- [334]
+				"14:46:26.800.820> [|cffffbb00LibRover|cffff88dd] 6. |cff88ff88Go to Cleft of Shadow 41,66|cffff88dd -- |cff88ccddCleft of Shadow 41,66|cffff88dd  (dist 23) |cff8888dd{walk_misc__walk_misc}|cffff88dd (LibRover-1.0.lua:2786:ReportPath)", -- [335]
+				"14:46:26.800.820> [|cffffbb00LibRover|cffff88dd] 7. |cff88ff88Cleft of Shadow tunnel|cffff88dd -- |cff88ccddCleft of Shadow tunnel|cffff88dd  (dist 46) |cff8888dd{walk_misc__walk_misc}|cffff88dd (LibRover-1.0.lua:2786:ReportPath)", -- [336]
+				"14:46:26.800.820> [|cffffbb00LibRover|cffff88dd] 8. |cff88ff88Cleft of Shadow exit|cffff88dd -- |cff88ccddCleft of Shadow exit|cffff88dd  (dist 24) |cff8888dd{walk_misc__walk_misc}|cffff88dd (LibRover-1.0.lua:2786:ReportPath)", -- [337]
+				"14:46:26.800.821> [|cffffbb00LibRover|cffff88dd] 9. |cff88ff88Cleft of Shadow entrance|cffff88dd -- |cff88ccddCleft of Shadow entrance|cffff88dd  (dist 18) |cff8888dd{walk_misc__fly_end}|cffff88dd (LibRover-1.0.lua:2786:ReportPath)", -- [338]
+				"14:46:26.800.821> [|cffffbb00LibRover|cffff88dd] 10. |cff88ff88Talk to |cffaaffaaLovely Merchant|cffff88dd|cffff88dd -- |cff88ccddLovely Merchant|cffff88dd  (dist 167) |cff8888dd{fly_end}|cffff88dd (LibRover-1.0.lua:2786:ReportPath)", -- [339]
+				"14:46:26.800.821> [|cff00ff00pointer|cffff88dd] -> PathFoundHandler! state=success (Pointer.lua:4137:PathFoundHandler)", -- [340]
+				"14:46:26.800.822> [|cff00ff00pointer|cffff88dd] - set_waypoints: 11 points, type=route (Pointer.lua:3842:<local>)", -- [341]
+				"14:46:26.800.824> [|cff00ff00pointer|cffff88dd] - set_waypoints: arrowpoint=Shrine of Two Moons #903 /1 69.0,49.2, farmpoint=Shrine of Two Moons #903 /1 69.0,49.2 (Pointer.lua:3916:<local>)", -- [342]
+				"14:46:26.800.825> [|cff00ff00pointer|cffff88dd] - ShowSet route ends [2.96 ms] + ants [0.81 ms] (Pointer.lua:4125:ShowSet)", -- [343]
+				"14:46:26.800.825> [|cff00ff00pointer|cffff88dd] <- PathFoundHandler done. (Pointer.lua:4250:PathFoundHandler)", -- [344]
+				"14:46:26.800.826> [|cff00ff00pointer|cffff88dd] ClearSet route + ants [0.47 ms] (Pointer.lua:4068:ClearSet)", -- [345]
+				"14:46:28.164.195> Trying to find items to buy (Loot.lua:212:FindItemsToBuy)", -- [346]
+				"14:46:30.926.928> [itemscore] [itemevents] ITEM_PUSH (Item-Events.lua:156:Debug)", -- [347]
+				"14:46:30.110.112> [itemscore] [itemevents] ITEM_PUSH (Item-Events.lua:156:Debug)", -- [348]
+				"14:46:31.219.232> [itemscore] [itemevents] BAG_UPDATE_DELAYED (Item-Events.lua:156:Debug)", -- [349]
+				"14:47:29.769.784> [|cffffbb00LibRover|cffff88dd] Player moved in the last 30 seconds, updating route. (LibRover-1.0.lua:3032:OnUpdate)", -- [350]
+				"14:47:29.769.786> [|cffffbb00LibRover|cffff88dd] -> |cff00ff88FindPath|cffff88dd:  |cffaaff88Highmaul|cffff88dd/3 |cffffffff47.2|cffff88dd,|cffffffff54.0|cffff88dd --> |cffaaff88Orgrimmar|cffff88dd/1 |cffffffff53.1|cffff88dd,|cffffffff77.0|cffff88dd (LibRover-1.0.lua:1449:FindPath)", -- [351]
+				"14:47:29.769.786> [|cffffbb00LibRover|cffff88dd] - IsDestinationImpossible? false,nil, (LibRover-1.0.lua:1454:FindPath)", -- [352]
+				"14:47:29.769.786> [|cffffbb00LibRover|cffff88dd] <- |cff00ff88FindPath|cffff88dd ends. (LibRover-1.0.lua:1523:FindPath)", -- [353]
+				"14:47:30.826.315> [|cffffbb00LibRover|cffff88dd] -> |cff00dd77InitializePath|cffff88dd towards |cffddddee321/1 53.10,77.00 (LibRover-1.0.lua:1535:InitializePath)", -- [354]
+				"14:47:30.826.316> [|cffffbb00LibRover|cffff88dd] [lr_initpath_v] - cleared old nodes, 2265 left (LibRover-1.0.lua:1551:InitializePath)", -- [355]
+				"14:47:30.826.332> [|cffffbb00LibRover|cffff88dd] [lr_initpath_v] - cleared linkage (LibRover-1.0.lua:1558:InitializePath)", -- [356]
+				"14:47:30.826.341> [|cffffbb00LibRover|cffff88dd] - Initialized end node #2266 with copy #2267 table: 0000000124EB9220 (LibRover-1.0.lua:1576:InitializePath)", -- [357]
+				"14:47:30.826.342> [|cffffbb00LibRover|cffff88dd] - |cff88ff44 Found hearth node: \"|cffffffffSummer's Rest|cffff88dd\" = |cffffee00[311] \"Summer's Rest\" = Hall of the Crescent Moon 903 /1 69.0,49.2 [inn] [closed] |cff8899aa(mode:|cffffffffhearth|cff8899aa from [|cffffffff2268|cff8899aa]) |cff888888[my t=|cff55aa0055.2|cff888888/|cff77ee0055.2|cff888888] |cff888888(t=|cff00aa5555.2|cff888888/|cff00ee7755.2|cff888888) (LibRover-1.0.lua:1269:FindBindLocation)", -- [358]
+				"14:47:30.826.343> [|cffffbb00LibRover|cffff88dd] - |cff88ff44 Found garrison hearth node: |cffffee00[348] \"Town Hall\" = Frostwall 976 /0 42.5,53.5 [inn] [?] |cff8899aa(mode:|cffffffffghearth|cff8899aa from [|cffffffff2268|cff8899aa]) |cff888888[my t=|cff55aa00108.2|cff888888/|cff77ee00108.2|cff888888] |cff888888(t=|cff00aa55108.2|cff888888/|cff00ee77108.2|cff888888) (LibRover-1.0.lua:1283:FindGarrisonBindLocation)", -- [359]
+				"14:47:30.826.345> [|cffffbb00LibRover|cffff88dd] - Initialized start node #2268 (LibRover-1.0.lua:1617:InitializePath)", -- [360]
+				"14:47:30.826.351> [|cffffbb00LibRover|cffff88dd] [lr_initpath_v] - InitializePath: cleared temp fields (LibRover-1.0.lua:1658:InitializePath)", -- [361]
+				"14:47:30.826.351> [|cffffbb00LibRover|cffff88dd] <- |cff00dd77InitializePath|cffff88dd done. (LibRover-1.0.lua:1692:InitializePath)", -- [362]
+				"14:47:30.388.409> [|cffffbb00LibRover|cffff88dd] [lr_calc] StepForever: initialized, proceeding (LibRover-1.0.lua:1785:<local>)", -- [363]
+				"14:47:30.719.740> [|cffffbb00LibRover|cffff88dd] [lr_calc] Calc pending, frame 9 (calcs: 152) in 16.30ms. (LibRover-1.0.lua:2950:OnUpdate)", -- [364]
+				"14:47:30.060.068> [|cffffbb00LibRover|cffff88dd] [lr_calc] This pass: [SUCCESS] = |cffffffff0.21|cffff88ddms. Done |cffffff88258|cffff88dd calculations over |cff88ffff17|cffff88dd frames:\n compared |cff88ff880|cffff88dd nodes in |cffffffff3.05|cffff88dd ms, opened |cff88ff881269|cffff88dd, closed |cff88ff88258|cffff88dd \n cheapest |cffffffff3.05|cffff88dd, initial |cffffffff1.06|cffff88dd, overhead |cffffffff38.28|cffff88dd, blah |cffffffff33.78|cffff88dd, scoring |cffffffff58.29|cffff88dd, adding |cffffffff21.58|cffff88dd ms    \n calc total |cffffffff276.53|cffff88dd ms, total time |cffffffff277.54|cffff88dd ms   \n(found: YES) (LibRover-1.0.lua:2954:OnUpdate)", -- [365]
+				"14:47:30.060.068> [|cffffbb00LibRover|cffff88dd] Path found in 17 frames, 258 calcs, 0.21 ms. (LibRover-1.0.lua:2982:OnUpdate)", -- [366]
+				"14:47:30.060.069> [|cffffbb00LibRover|cffff88dd] 0. |cff88ff88START|cffff88dd -- |cff88ccddThe Coliseum 47,53|cffff88dd  (dist 0) |cff8888dd{walk_start__hearth_inn}|cffff88dd (LibRover-1.0.lua:2786:ReportPath)", -- [367]
+				"14:47:30.060.069> [|cffffbb00LibRover|cffff88dd] 1. |cff88ff88Hearth to Summer's Rest|cffff88dd -- |cff88ccddSummer's Rest|cffff88dd  (dist 0) |cff8888dd{hearth_inn__walk_misc}|cffff88dd (LibRover-1.0.lua:2786:ReportPath)", -- [368]
+				"14:47:30.060.069> [|cffffbb00LibRover|cffff88dd] 2. |cff88ff88Go to Hall of the Crescent Moon 77,42|cffff88dd -- |cff88ccddHall of the Crescent Moon 77,42|cffff88dd  (dist 20) |cff8888dd{walk_misc__walk_misc}|cffff88dd (LibRover-1.0.lua:2786:ReportPath)", -- [369]
+				"14:47:30.060.069> [|cffffbb00LibRover|cffff88dd] 3. |cff88ff88Go to The Imperial Mercantile 74,70|cffff88dd -- |cff88ccddThe Imperial Mercantile 74,70|cffff88dd  (dist 21) |cff8888dd{walk_misc__walk_portal}|cffff88dd (LibRover-1.0.lua:2786:ReportPath)", -- [370]
+				"14:47:30.060.069> [|cffffbb00LibRover|cffff88dd] 4. |cff88ff88Click portal to Orgrimmar|cffff88dd -- |cff88ccddPortal to Cleft of Shadow|cffff88dd  (dist 47) |cff8888dd{walk_portal__portal_portal}|cffff88dd (LibRover-1.0.lua:2786:ReportPath)", -- [371]
+				"14:47:30.060.069> [|cffffbb00LibRover|cffff88dd] |cff8888885. |cff88ff88Arrive at Cleft of Shadow|cffff88dd -- |cff88ccddPortal from The Imperial Mercantile|cffff88dd  (dist 0) |cff8888dd{portal_portal__walk_misc}|cffff88dd (LibRover-1.0.lua:2786:ReportPath)", -- [372]
+				"14:47:30.060.069> [|cffffbb00LibRover|cffff88dd] 6. |cff88ff88Go to Cleft of Shadow 41,66|cffff88dd -- |cff88ccddCleft of Shadow 41,66|cffff88dd  (dist 23) |cff8888dd{walk_misc__walk_misc}|cffff88dd (LibRover-1.0.lua:2786:ReportPath)", -- [373]
+				"14:47:30.060.069> [|cffffbb00LibRover|cffff88dd] 7. |cff88ff88Cleft of Shadow tunnel|cffff88dd -- |cff88ccddCleft of Shadow tunnel|cffff88dd  (dist 46) |cff8888dd{walk_misc__walk_misc}|cffff88dd (LibRover-1.0.lua:2786:ReportPath)", -- [374]
+				"14:47:30.060.069> [|cffffbb00LibRover|cffff88dd] 8. |cff88ff88Cleft of Shadow exit|cffff88dd -- |cff88ccddCleft of Shadow exit|cffff88dd  (dist 24) |cff8888dd{walk_misc__walk_misc}|cffff88dd (LibRover-1.0.lua:2786:ReportPath)", -- [375]
+				"14:47:30.060.069> [|cffffbb00LibRover|cffff88dd] 9. |cff88ff88Cleft of Shadow entrance|cffff88dd -- |cff88ccddCleft of Shadow entrance|cffff88dd  (dist 18) |cff8888dd{walk_misc__fly_end}|cffff88dd (LibRover-1.0.lua:2786:ReportPath)", -- [376]
+				"14:47:30.060.070> [|cffffbb00LibRover|cffff88dd] 10. |cff88ff88Talk to |cffaaffaaLovely Merchant|cffff88dd|cffff88dd -- |cff88ccddLovely Merchant|cffff88dd  (dist 167) |cff8888dd{fly_end}|cffff88dd (LibRover-1.0.lua:2786:ReportPath)", -- [377]
+				"14:47:30.060.070> [|cff00ff00pointer|cffff88dd] -> PathFoundHandler! state=success (Pointer.lua:4137:PathFoundHandler)", -- [378]
+				"14:47:30.060.070> [|cff00ff00pointer|cffff88dd] - set_waypoints: 11 points, type=route (Pointer.lua:3842:<local>)", -- [379]
+				"14:47:30.060.072> [|cff00ff00pointer|cffff88dd] - set_waypoints: arrowpoint=Shrine of Two Moons #903 /1 69.0,49.2, farmpoint=Shrine of Two Moons #903 /1 69.0,49.2 (Pointer.lua:3916:<local>)", -- [380]
+				"14:47:30.060.074> [|cff00ff00pointer|cffff88dd] - ShowSet route ends [2.85 ms] + ants [0.75 ms] (Pointer.lua:4125:ShowSet)", -- [381]
+				"14:47:30.060.074> [|cff00ff00pointer|cffff88dd] <- PathFoundHandler done. (Pointer.lua:4250:PathFoundHandler)", -- [382]
+				"14:47:30.060.075> [|cff00ff00pointer|cffff88dd] ClearSet route + ants [0.33 ms] (Pointer.lua:4068:ClearSet)", -- [383]
+				"14:47:38.593.628> [itemscore] [itemevents] PLAYER_REGEN_DISABLED (Item-Events.lua:156:Debug)", -- [384]
+				"14:47:57.998.005> [step_setup] Preparing goals... (Step.lua:146:PrepareCompletion)", -- [385]
+				"14:47:57.998.005> [step_setup] Goals prepared. (Step.lua:150:PrepareCompletion)", -- [386]
+				"14:47:57.998.005> [step_setup] Step 7 prepared. (Step.lua:189:PrepareCompletion)", -- [387]
+				"14:47:57.998.029> [itemscore] [itemevents] PLAYER_REGEN_ENABLED (Item-Events.lua:156:Debug)", -- [388]
+				"14:48:01.668.672> [|cffffbb00LibRover|cffff88dd] Got event NEW_WMO_CHUNK, updating (LibRover-1.0.lua:3208:<local>)", -- [389]
+				"14:48:01.668.677> [|cffffbb00LibRover|cffff88dd] Player moved in the last 30 seconds, updating route. (LibRover-1.0.lua:3032:OnUpdate)", -- [390]
+				"14:48:01.668.679> [|cffffbb00LibRover|cffff88dd] -> |cff00ff88FindPath|cffff88dd:  |cffaaff88Highmaul|cffff88dd/3 |cffffffff49.2|cffff88dd,|cffffffff57.9|cffff88dd --> |cffaaff88Orgrimmar|cffff88dd/1 |cffffffff53.1|cffff88dd,|cffffffff77.0|cffff88dd (LibRover-1.0.lua:1449:FindPath)", -- [391]
+				"14:48:01.668.679> [|cffffbb00LibRover|cffff88dd] - IsDestinationImpossible? false,nil, (LibRover-1.0.lua:1454:FindPath)", -- [392]
+				"14:48:01.668.679> [|cffffbb00LibRover|cffff88dd] <- |cff00ff88FindPath|cffff88dd ends. (LibRover-1.0.lua:1523:FindPath)", -- [393]
+				"14:48:01.707.719> [|cffffbb00LibRover|cffff88dd] -> |cff00dd77InitializePath|cffff88dd towards |cffddddee321/1 53.10,77.00 (LibRover-1.0.lua:1535:InitializePath)", -- [394]
+				"14:48:01.707.720> [|cffffbb00LibRover|cffff88dd] [lr_initpath_v] - cleared old nodes, 2265 left (LibRover-1.0.lua:1551:InitializePath)", -- [395]
+				"14:48:01.707.735> [|cffffbb00LibRover|cffff88dd] [lr_initpath_v] - cleared linkage (LibRover-1.0.lua:1558:InitializePath)", -- [396]
+				"14:48:01.707.744> [|cffffbb00LibRover|cffff88dd] - Initialized end node #2266 with copy #2267 table: 000000006275C250 (LibRover-1.0.lua:1576:InitializePath)", -- [397]
+				"14:48:01.707.744> [|cffffbb00LibRover|cffff88dd] - |cff88ff44 Found hearth node: \"|cffffffffSummer's Rest|cffff88dd\" = |cffffee00[311] \"Summer's Rest\" = Hall of the Crescent Moon 903 /1 69.0,49.2 [inn] [closed] |cff8899aa(mode:|cffffffffhearth|cff8899aa from [|cffffffff2268|cff8899aa]) |cff888888[my t=|cff55aa0055.0|cff888888/|cff77ee0055.0|cff888888] |cff888888(t=|cff00aa5555.0|cff888888/|cff00ee7755.0|cff888888) (LibRover-1.0.lua:1269:FindBindLocation)", -- [398]
+				"14:48:01.707.745> [|cffffbb00LibRover|cffff88dd] - |cff88ff44 Found garrison hearth node: |cffffee00[348] \"Town Hall\" = Frostwall 976 /0 42.5,53.5 [inn] [closed] |cff8899aa(mode:|cffffffffghearth|cff8899aa from [|cffffffff2268|cff8899aa]) |cff888888[my t=|cff55aa0055.0|cff888888/|cff77ee0055.0|cff888888] |cff888888(t=|cff00aa5555.0|cff888888/|cff00ee7755.0|cff888888) (LibRover-1.0.lua:1283:FindGarrisonBindLocation)", -- [399]
+				"14:48:01.707.748> [|cffffbb00LibRover|cffff88dd] - Initialized start node #2268 (LibRover-1.0.lua:1617:InitializePath)", -- [400]
+				"14:48:01.707.754> [|cffffbb00LibRover|cffff88dd] [lr_initpath_v] - InitializePath: cleared temp fields (LibRover-1.0.lua:1658:InitializePath)", -- [401]
+				"14:48:01.707.754> [|cffffbb00LibRover|cffff88dd] <- |cff00dd77InitializePath|cffff88dd done. (LibRover-1.0.lua:1692:InitializePath)", -- [402]
+				"14:48:01.773.780> [|cffffbb00LibRover|cffff88dd] [lr_calc] StepForever: initialized, proceeding (LibRover-1.0.lua:1785:<local>)", -- [403]
+				"14:48:01.815.840> [|cffffbb00LibRover|cffff88dd] [lr_calc] Calc pending, frame 3 (calcs: 39) in 15.31ms. (LibRover-1.0.lua:2950:OnUpdate)", -- [404]
+				"14:48:02.246.268> [|cffffbb00LibRover|cffff88dd] [lr_calc] Calc pending, frame 13 (calcs: 211) in 15.64ms. (LibRover-1.0.lua:2950:OnUpdate)", -- [405]
+				"14:48:02.407.424> [|cffffbb00LibRover|cffff88dd] [lr_calc] This pass: [SUCCESS] = |cffffffff6.14|cffff88ddms. Done |cffffff88258|cffff88dd calculations over |cff88ffff17|cffff88dd frames:\n compared |cff88ff880|cffff88dd nodes in |cffffffff3.09|cffff88dd ms, opened |cff88ff881269|cffff88dd, closed |cff88ff88258|cffff88dd \n cheapest |cffffffff3.09|cffff88dd, initial |cffffffff1.02|cffff88dd, overhead |cffffffff38.12|cffff88dd, blah |cffffffff34.37|cffff88dd, scoring |cffffffff58.50|cffff88dd, adding |cffffffff21.93|cffff88dd ms    \n calc total |cffffffff277.80|cffff88dd ms, total time |cffffffff278.80|cffff88dd ms   \n(found: YES) (LibRover-1.0.lua:2954:OnUpdate)", -- [406]
+				"14:48:02.407.424> [|cffffbb00LibRover|cffff88dd] Path found in 17 frames, 258 calcs, 6.14 ms. (LibRover-1.0.lua:2982:OnUpdate)", -- [407]
+				"14:48:02.407.425> [|cffffbb00LibRover|cffff88dd] 0. |cff88ff88START|cffff88dd -- |cff88ccddThe Coliseum 49,57|cffff88dd  (dist 0) |cff8888dd{walk_start__hearth_inn}|cffff88dd (LibRover-1.0.lua:2786:ReportPath)", -- [408]
+				"14:48:02.407.425> [|cffffbb00LibRover|cffff88dd] 1. |cff88ff88Hearth to Summer's Rest|cffff88dd -- |cff88ccddSummer's Rest|cffff88dd  (dist 0) |cff8888dd{hearth_inn__walk_misc}|cffff88dd (LibRover-1.0.lua:2786:ReportPath)", -- [409]
+				"14:48:02.407.425> [|cffffbb00LibRover|cffff88dd] 2. |cff88ff88Go to Hall of the Crescent Moon 77,42|cffff88dd -- |cff88ccddHall of the Crescent Moon 77,42|cffff88dd  (dist 20) |cff8888dd{walk_misc__walk_misc}|cffff88dd (LibRover-1.0.lua:2786:ReportPath)", -- [410]
+				"14:48:02.407.425> [|cffffbb00LibRover|cffff88dd] 3. |cff88ff88Go to The Imperial Mercantile 74,70|cffff88dd -- |cff88ccddThe Imperial Mercantile 74,70|cffff88dd  (dist 21) |cff8888dd{walk_misc__walk_portal}|cffff88dd (LibRover-1.0.lua:2786:ReportPath)", -- [411]
+				"14:48:02.407.425> [|cffffbb00LibRover|cffff88dd] 4. |cff88ff88Click portal to Orgrimmar|cffff88dd -- |cff88ccddPortal to Cleft of Shadow|cffff88dd  (dist 47) |cff8888dd{walk_portal__portal_portal}|cffff88dd (LibRover-1.0.lua:2786:ReportPath)", -- [412]
+				"14:48:02.407.425> [|cffffbb00LibRover|cffff88dd] |cff8888885. |cff88ff88Arrive at Cleft of Shadow|cffff88dd -- |cff88ccddPortal from The Imperial Mercantile|cffff88dd  (dist 0) |cff8888dd{portal_portal__walk_misc}|cffff88dd (LibRover-1.0.lua:2786:ReportPath)", -- [413]
+				"14:48:02.407.426> [|cffffbb00LibRover|cffff88dd] 6. |cff88ff88Go to Cleft of Shadow 41,66|cffff88dd -- |cff88ccddCleft of Shadow 41,66|cffff88dd  (dist 23) |cff8888dd{walk_misc__walk_misc}|cffff88dd (LibRover-1.0.lua:2786:ReportPath)", -- [414]
+				"14:48:02.407.426> [|cffffbb00LibRover|cffff88dd] 7. |cff88ff88Cleft of Shadow tunnel|cffff88dd -- |cff88ccddCleft of Shadow tunnel|cffff88dd  (dist 46) |cff8888dd{walk_misc__walk_misc}|cffff88dd (LibRover-1.0.lua:2786:ReportPath)", -- [415]
+				"14:48:02.407.426> [|cffffbb00LibRover|cffff88dd] 8. |cff88ff88Cleft of Shadow exit|cffff88dd -- |cff88ccddCleft of Shadow exit|cffff88dd  (dist 24) |cff8888dd{walk_misc__walk_misc}|cffff88dd (LibRover-1.0.lua:2786:ReportPath)", -- [416]
+				"14:48:02.407.426> [|cffffbb00LibRover|cffff88dd] 9. |cff88ff88Cleft of Shadow entrance|cffff88dd -- |cff88ccddCleft of Shadow entrance|cffff88dd  (dist 18) |cff8888dd{walk_misc__fly_end}|cffff88dd (LibRover-1.0.lua:2786:ReportPath)", -- [417]
+				"14:48:02.407.426> [|cffffbb00LibRover|cffff88dd] 10. |cff88ff88Talk to |cffaaffaaLovely Merchant|cffff88dd|cffff88dd -- |cff88ccddLovely Merchant|cffff88dd  (dist 167) |cff8888dd{fly_end}|cffff88dd (LibRover-1.0.lua:2786:ReportPath)", -- [418]
+				"14:48:02.407.426> [|cff00ff00pointer|cffff88dd] -> PathFoundHandler! state=success (Pointer.lua:4137:PathFoundHandler)", -- [419]
+				"14:48:02.407.427> [|cff00ff00pointer|cffff88dd] - set_waypoints: 11 points, type=route (Pointer.lua:3842:<local>)", -- [420]
+				"14:48:02.407.429> [|cff00ff00pointer|cffff88dd] - set_waypoints: arrowpoint=Shrine of Two Moons #903 /1 69.0,49.2, farmpoint=Shrine of Two Moons #903 /1 69.0,49.2 (Pointer.lua:3916:<local>)", -- [421]
+				"14:48:02.407.430> [|cff00ff00pointer|cffff88dd] - ShowSet route ends [2.82 ms] + ants [0.76 ms] (Pointer.lua:4125:ShowSet)", -- [422]
+				"14:48:02.407.430> [|cff00ff00pointer|cffff88dd] <- PathFoundHandler done. (Pointer.lua:4250:PathFoundHandler)", -- [423]
+				"14:48:02.407.431> [|cff00ff00pointer|cffff88dd] ClearSet route + ants [0.36 ms] (Pointer.lua:4068:ClearSet)", -- [424]
+				"14:48:25.753.755> [|cffffbb00LibRover|cffff88dd] Got event NEW_WMO_CHUNK, updating (LibRover-1.0.lua:3208:<local>)", -- [425]
+				"14:48:25.753.760> [|cffffbb00LibRover|cffff88dd] Player moved in the last 30 seconds, updating route. (LibRover-1.0.lua:3032:OnUpdate)", -- [426]
+				"14:48:25.753.762> [|cffffbb00LibRover|cffff88dd] -> |cff00ff88FindPath|cffff88dd:  |cffaaff88Highmaul|cffff88dd/3 |cffffffff49.7|cffff88dd,|cffffffff46.9|cffff88dd --> |cffaaff88Orgrimmar|cffff88dd/1 |cffffffff53.1|cffff88dd,|cffffffff77.0|cffff88dd (LibRover-1.0.lua:1449:FindPath)", -- [427]
+				"14:48:25.753.762> [|cffffbb00LibRover|cffff88dd] - IsDestinationImpossible? false,nil, (LibRover-1.0.lua:1454:FindPath)", -- [428]
+				"14:48:25.753.762> [|cffffbb00LibRover|cffff88dd] <- |cff00ff88FindPath|cffff88dd ends. (LibRover-1.0.lua:1523:FindPath)", -- [429]
+				"14:48:25.787.790> [|cffffbb00LibRover|cffff88dd] -> |cff00dd77InitializePath|cffff88dd towards |cffddddee321/1 53.10,77.00 (LibRover-1.0.lua:1535:InitializePath)", -- [430]
+				"14:48:25.787.791> [|cffffbb00LibRover|cffff88dd] [lr_initpath_v] - cleared old nodes, 2265 left (LibRover-1.0.lua:1551:InitializePath)", -- [431]
+				"14:48:25.787.805> [|cffffbb00LibRover|cffff88dd] [lr_initpath_v] - cleared linkage (LibRover-1.0.lua:1558:InitializePath)", -- [432]
+				"14:48:25.787.814> [|cffffbb00LibRover|cffff88dd] - Initialized end node #2266 with copy #2267 table: 0000000115FAC150 (LibRover-1.0.lua:1576:InitializePath)", -- [433]
+				"14:48:25.787.815> [|cffffbb00LibRover|cffff88dd] - |cff88ff44 Found hearth node: \"|cffffffffSummer's Rest|cffff88dd\" = |cffffee00[311] \"Summer's Rest\" = Hall of the Crescent Moon 903 /1 69.0,49.2 [inn] [closed] |cff8899aa(mode:|cffffffffhearth|cff8899aa from [|cffffffff2268|cff8899aa]) |cff888888[my t=|cff55aa0055.0|cff888888/|cff77ee0055.0|cff888888] |cff888888(t=|cff00aa5555.0|cff888888/|cff00ee7755.0|cff888888) (LibRover-1.0.lua:1269:FindBindLocation)", -- [434]
+				"14:48:25.787.815> [|cffffbb00LibRover|cffff88dd] - |cff88ff44 Found garrison hearth node: |cffffee00[348] \"Town Hall\" = Frostwall 976 /0 42.5,53.5 [inn] [closed] |cff8899aa(mode:|cffffffffghearth|cff8899aa from [|cffffffff2268|cff8899aa]) |cff888888[my t=|cff55aa0055.0|cff888888/|cff77ee0055.0|cff888888] |cff888888(t=|cff00aa5555.0|cff888888/|cff00ee7755.0|cff888888) (LibRover-1.0.lua:1283:FindGarrisonBindLocation)", -- [435]
+				"14:48:25.787.818> [|cffffbb00LibRover|cffff88dd] - Initialized start node #2268 (LibRover-1.0.lua:1617:InitializePath)", -- [436]
+				"14:48:25.787.824> [|cffffbb00LibRover|cffff88dd] [lr_initpath_v] - InitializePath: cleared temp fields (LibRover-1.0.lua:1658:InitializePath)", -- [437]
+				"14:48:25.787.824> [|cffffbb00LibRover|cffff88dd] <- |cff00dd77InitializePath|cffff88dd done. (LibRover-1.0.lua:1692:InitializePath)", -- [438]
+				"14:48:25.840.848> [|cffffbb00LibRover|cffff88dd] [lr_calc] StepForever: initialized, proceeding (LibRover-1.0.lua:1785:<local>)", -- [439]
+				"14:48:25.019.037> [|cffffbb00LibRover|cffff88dd] [lr_calc] Calc pending, frame 7 (calcs: 126) in 16.22ms. (LibRover-1.0.lua:2950:OnUpdate)", -- [440]
+				"14:48:26.389.399> [|cffffbb00LibRover|cffff88dd] [lr_calc] This pass: [SUCCESS] = |cffffffff6.08|cffff88ddms. Done |cffffff88258|cffff88dd calculations over |cff88ffff17|cffff88dd frames:\n compared |cff88ff880|cffff88dd nodes in |cffffffff3.07|cffff88dd ms, opened |cff88ff881269|cffff88dd, closed |cff88ff88258|cffff88dd \n cheapest |cffffffff3.07|cffff88dd, initial |cffffffff1.07|cffff88dd, overhead |cffffffff38.62|cffff88dd, blah |cffffffff34.11|cffff88dd, scoring |cffffffff58.46|cffff88dd, adding |cffffffff21.73|cffff88dd ms    \n calc total |cffffffff276.13|cffff88dd ms, total time |cffffffff277.12|cffff88dd ms   \n(found: YES) (LibRover-1.0.lua:2954:OnUpdate)", -- [441]
+				"14:48:26.389.400> [|cffffbb00LibRover|cffff88dd] Path found in 17 frames, 258 calcs, 6.08 ms. (LibRover-1.0.lua:2982:OnUpdate)", -- [442]
+				"14:48:26.389.400> [|cffffbb00LibRover|cffff88dd] 0. |cff88ff88START|cffff88dd -- |cff88ccddThe Coliseum 49,46|cffff88dd  (dist 0) |cff8888dd{walk_start__hearth_inn}|cffff88dd (LibRover-1.0.lua:2786:ReportPath)", -- [443]
+				"14:48:26.389.401> [|cffffbb00LibRover|cffff88dd] 1. |cff88ff88Hearth to Summer's Rest|cffff88dd -- |cff88ccddSummer's Rest|cffff88dd  (dist 0) |cff8888dd{hearth_inn__walk_misc}|cffff88dd (LibRover-1.0.lua:2786:ReportPath)", -- [444]
+				"14:48:26.389.401> [|cffffbb00LibRover|cffff88dd] 2. |cff88ff88Go to Hall of the Crescent Moon 77,42|cffff88dd -- |cff88ccddHall of the Crescent Moon 77,42|cffff88dd  (dist 20) |cff8888dd{walk_misc__walk_misc}|cffff88dd (LibRover-1.0.lua:2786:ReportPath)", -- [445]
+				"14:48:26.389.401> [|cffffbb00LibRover|cffff88dd] 3. |cff88ff88Go to The Imperial Mercantile 74,70|cffff88dd -- |cff88ccddThe Imperial Mercantile 74,70|cffff88dd  (dist 21) |cff8888dd{walk_misc__walk_portal}|cffff88dd (LibRover-1.0.lua:2786:ReportPath)", -- [446]
+				"14:48:26.389.401> [|cffffbb00LibRover|cffff88dd] 4. |cff88ff88Click portal to Orgrimmar|cffff88dd -- |cff88ccddPortal to Cleft of Shadow|cffff88dd  (dist 47) |cff8888dd{walk_portal__portal_portal}|cffff88dd (LibRover-1.0.lua:2786:ReportPath)", -- [447]
+				"14:48:26.389.401> [|cffffbb00LibRover|cffff88dd] |cff8888885. |cff88ff88Arrive at Cleft of Shadow|cffff88dd -- |cff88ccddPortal from The Imperial Mercantile|cffff88dd  (dist 0) |cff8888dd{portal_portal__walk_misc}|cffff88dd (LibRover-1.0.lua:2786:ReportPath)", -- [448]
+				"14:48:26.389.401> [|cffffbb00LibRover|cffff88dd] 6. |cff88ff88Go to Cleft of Shadow 41,66|cffff88dd -- |cff88ccddCleft of Shadow 41,66|cffff88dd  (dist 23) |cff8888dd{walk_misc__walk_misc}|cffff88dd (LibRover-1.0.lua:2786:ReportPath)", -- [449]
+				"14:48:26.389.401> [|cffffbb00LibRover|cffff88dd] 7. |cff88ff88Cleft of Shadow tunnel|cffff88dd -- |cff88ccddCleft of Shadow tunnel|cffff88dd  (dist 46) |cff8888dd{walk_misc__walk_misc}|cffff88dd (LibRover-1.0.lua:2786:ReportPath)", -- [450]
+				"14:48:26.389.401> [|cffffbb00LibRover|cffff88dd] 8. |cff88ff88Cleft of Shadow exit|cffff88dd -- |cff88ccddCleft of Shadow exit|cffff88dd  (dist 24) |cff8888dd{walk_misc__walk_misc}|cffff88dd (LibRover-1.0.lua:2786:ReportPath)", -- [451]
+				"14:48:26.389.401> [|cffffbb00LibRover|cffff88dd] 9. |cff88ff88Cleft of Shadow entrance|cffff88dd -- |cff88ccddCleft of Shadow entrance|cffff88dd  (dist 18) |cff8888dd{walk_misc__fly_end}|cffff88dd (LibRover-1.0.lua:2786:ReportPath)", -- [452]
+				"14:48:26.389.401> [|cffffbb00LibRover|cffff88dd] 10. |cff88ff88Talk to |cffaaffaaLovely Merchant|cffff88dd|cffff88dd -- |cff88ccddLovely Merchant|cffff88dd  (dist 167) |cff8888dd{fly_end}|cffff88dd (LibRover-1.0.lua:2786:ReportPath)", -- [453]
+				"14:48:26.389.402> [|cff00ff00pointer|cffff88dd] -> PathFoundHandler! state=success (Pointer.lua:4137:PathFoundHandler)", -- [454]
+				"14:48:26.389.402> [|cff00ff00pointer|cffff88dd] - set_waypoints: 11 points, type=route (Pointer.lua:3842:<local>)", -- [455]
+				"14:48:26.389.404> [|cff00ff00pointer|cffff88dd] - set_waypoints: arrowpoint=Shrine of Two Moons #903 /1 69.0,49.2, farmpoint=Shrine of Two Moons #903 /1 69.0,49.2 (Pointer.lua:3916:<local>)", -- [456]
+				"14:48:26.389.405> [|cff00ff00pointer|cffff88dd] - ShowSet route ends [2.82 ms] + ants [0.76 ms] (Pointer.lua:4125:ShowSet)", -- [457]
+				"14:48:26.389.405> [|cff00ff00pointer|cffff88dd] <- PathFoundHandler done. (Pointer.lua:4250:PathFoundHandler)", -- [458]
+				"14:48:26.389.407> [|cff00ff00pointer|cffff88dd] ClearSet route + ants [0.34 ms] (Pointer.lua:4068:ClearSet)", -- [459]
+				"14:48:56.404.407> [|cffffbb00LibRover|cffff88dd] Player moved in the last 30 seconds, updating route. (LibRover-1.0.lua:3032:OnUpdate)", -- [460]
+				"14:48:56.404.410> [|cffffbb00LibRover|cffff88dd] -> |cff00ff88FindPath|cffff88dd:  |cffaaff88Highmaul|cffff88dd/3 |cffffffff45.3|cffff88dd,|cffffffff44.5|cffff88dd --> |cffaaff88Orgrimmar|cffff88dd/1 |cffffffff53.1|cffff88dd,|cffffffff77.0|cffff88dd (LibRover-1.0.lua:1449:FindPath)", -- [461]
+				"14:48:56.404.410> [|cffffbb00LibRover|cffff88dd] - IsDestinationImpossible? false,nil, (LibRover-1.0.lua:1454:FindPath)", -- [462]
+				"14:48:56.404.410> [|cffffbb00LibRover|cffff88dd] <- |cff00ff88FindPath|cffff88dd ends. (LibRover-1.0.lua:1523:FindPath)", -- [463]
+				"14:48:56.425.430> [|cffffbb00LibRover|cffff88dd] -> |cff00dd77InitializePath|cffff88dd towards |cffddddee321/1 53.10,77.00 (LibRover-1.0.lua:1535:InitializePath)", -- [464]
+				"14:48:56.425.432> [|cffffbb00LibRover|cffff88dd] [lr_initpath_v] - cleared old nodes, 2265 left (LibRover-1.0.lua:1551:InitializePath)", -- [465]
+				"14:48:56.425.446> [|cffffbb00LibRover|cffff88dd] [lr_initpath_v] - cleared linkage (LibRover-1.0.lua:1558:InitializePath)", -- [466]
+				"14:48:56.425.454> [|cffffbb00LibRover|cffff88dd] - Initialized end node #2266 with copy #2267 table: 0000000113284360 (LibRover-1.0.lua:1576:InitializePath)", -- [467]
+				"14:48:56.425.455> [|cffffbb00LibRover|cffff88dd] - |cff88ff44 Found hearth node: \"|cffffffffSummer's Rest|cffff88dd\" = |cffffee00[311] \"Summer's Rest\" = Hall of the Crescent Moon 903 /1 69.0,49.2 [inn] [closed] |cff8899aa(mode:|cffffffffhearth|cff8899aa from [|cffffffff2268|cff8899aa]) |cff888888[my t=|cff55aa0055.0|cff888888/|cff77ee0055.0|cff888888] |cff888888(t=|cff00aa5555.0|cff888888/|cff00ee7755.0|cff888888) (LibRover-1.0.lua:1269:FindBindLocation)", -- [468]
+				"14:48:56.425.455> [|cffffbb00LibRover|cffff88dd] - |cff88ff44 Found garrison hearth node: |cffffee00[348] \"Town Hall\" = Frostwall 976 /0 42.5,53.5 [inn] [closed] |cff8899aa(mode:|cffffffffghearth|cff8899aa from [|cffffffff2268|cff8899aa]) |cff888888[my t=|cff55aa0055.0|cff888888/|cff77ee0055.0|cff888888] |cff888888(t=|cff00aa5555.0|cff888888/|cff00ee7755.0|cff888888) (LibRover-1.0.lua:1283:FindGarrisonBindLocation)", -- [469]
+				"14:48:56.425.458> [|cffffbb00LibRover|cffff88dd] - Initialized start node #2268 (LibRover-1.0.lua:1617:InitializePath)", -- [470]
+				"14:48:56.425.464> [|cffffbb00LibRover|cffff88dd] [lr_initpath_v] - InitializePath: cleared temp fields (LibRover-1.0.lua:1658:InitializePath)", -- [471]
+				"14:48:56.425.464> [|cffffbb00LibRover|cffff88dd] <- |cff00dd77InitializePath|cffff88dd done. (LibRover-1.0.lua:1692:InitializePath)", -- [472]
+				"14:48:56.425.465> [|cffffbb00LibRover|cffff88dd] [lr_calc] Calc pending, frame 1 (calcs: 0) in 34.27ms. (LibRover-1.0.lua:2950:OnUpdate)", -- [473]
+				"14:48:56.480.485> [|cffffbb00LibRover|cffff88dd] [lr_calc] StepForever: initialized, proceeding (LibRover-1.0.lua:1785:<local>)", -- [474]
+				"14:48:56.818.839> [|cffffbb00LibRover|cffff88dd] [lr_calc] Calc pending, frame 11 (calcs: 179) in 17.65ms. (LibRover-1.0.lua:2950:OnUpdate)", -- [475]
+				"14:48:56.001.026> [|cffffbb00LibRover|cffff88dd] [lr_calc] This pass: [SUCCESS] = |cffffffff13.68|cffff88ddms. Done |cffffff88258|cffff88dd calculations over |cff88ffff16|cffff88dd frames:\n compared |cff88ff880|cffff88dd nodes in |cffffffff3.04|cffff88dd ms, opened |cff88ff881269|cffff88dd, closed |cff88ff88258|cffff88dd \n cheapest |cffffffff3.04|cffff88dd, initial |cffffffff1.25|cffff88dd, overhead |cffffffff37.81|cffff88dd, blah |cffffffff33.96|cffff88dd, scoring |cffffffff57.97|cffff88dd, adding |cffffffff21.47|cffff88dd ms    \n calc total |cffffffff273.51|cffff88dd ms, total time |cffffffff274.58|cffff88dd ms   \n(found: YES) (LibRover-1.0.lua:2954:OnUpdate)", -- [476]
+				"14:48:56.001.026> [|cffffbb00LibRover|cffff88dd] Path found in 16 frames, 258 calcs, 13.68 ms. (LibRover-1.0.lua:2982:OnUpdate)", -- [477]
+				"14:48:56.001.027> [|cffffbb00LibRover|cffff88dd] 0. |cff88ff88START|cffff88dd -- |cff88ccddThe Coliseum 45,44|cffff88dd  (dist 0) |cff8888dd{walk_start__hearth_inn}|cffff88dd (LibRover-1.0.lua:2786:ReportPath)", -- [478]
+				"14:48:56.001.027> [|cffffbb00LibRover|cffff88dd] 1. |cff88ff88Hearth to Summer's Rest|cffff88dd -- |cff88ccddSummer's Rest|cffff88dd  (dist 0) |cff8888dd{hearth_inn__walk_misc}|cffff88dd (LibRover-1.0.lua:2786:ReportPath)", -- [479]
+				"14:48:56.001.028> [|cffffbb00LibRover|cffff88dd] 2. |cff88ff88Go to Hall of the Crescent Moon 77,42|cffff88dd -- |cff88ccddHall of the Crescent Moon 77,42|cffff88dd  (dist 20) |cff8888dd{walk_misc__walk_misc}|cffff88dd (LibRover-1.0.lua:2786:ReportPath)", -- [480]
+				"14:48:56.001.028> [|cffffbb00LibRover|cffff88dd] 3. |cff88ff88Go to The Imperial Mercantile 74,70|cffff88dd -- |cff88ccddThe Imperial Mercantile 74,70|cffff88dd  (dist 21) |cff8888dd{walk_misc__walk_portal}|cffff88dd (LibRover-1.0.lua:2786:ReportPath)", -- [481]
+				"14:48:56.001.028> [|cffffbb00LibRover|cffff88dd] 4. |cff88ff88Click portal to Orgrimmar|cffff88dd -- |cff88ccddPortal to Cleft of Shadow|cffff88dd  (dist 47) |cff8888dd{walk_portal__portal_portal}|cffff88dd (LibRover-1.0.lua:2786:ReportPath)", -- [482]
+				"14:48:56.001.028> [|cffffbb00LibRover|cffff88dd] |cff8888885. |cff88ff88Arrive at Cleft of Shadow|cffff88dd -- |cff88ccddPortal from The Imperial Mercantile|cffff88dd  (dist 0) |cff8888dd{portal_portal__walk_misc}|cffff88dd (LibRover-1.0.lua:2786:ReportPath)", -- [483]
+				"14:48:56.001.028> [|cffffbb00LibRover|cffff88dd] 6. |cff88ff88Go to Cleft of Shadow 41,66|cffff88dd -- |cff88ccddCleft of Shadow 41,66|cffff88dd  (dist 23) |cff8888dd{walk_misc__walk_misc}|cffff88dd (LibRover-1.0.lua:2786:ReportPath)", -- [484]
+				"14:48:56.001.028> [|cffffbb00LibRover|cffff88dd] 7. |cff88ff88Cleft of Shadow tunnel|cffff88dd -- |cff88ccddCleft of Shadow tunnel|cffff88dd  (dist 46) |cff8888dd{walk_misc__walk_misc}|cffff88dd (LibRover-1.0.lua:2786:ReportPath)", -- [485]
+				"14:48:56.001.028> [|cffffbb00LibRover|cffff88dd] 8. |cff88ff88Cleft of Shadow exit|cffff88dd -- |cff88ccddCleft of Shadow exit|cffff88dd  (dist 24) |cff8888dd{walk_misc__walk_misc}|cffff88dd (LibRover-1.0.lua:2786:ReportPath)", -- [486]
+				"14:48:56.001.028> [|cffffbb00LibRover|cffff88dd] 9. |cff88ff88Cleft of Shadow entrance|cffff88dd -- |cff88ccddCleft of Shadow entrance|cffff88dd  (dist 18) |cff8888dd{walk_misc__fly_end}|cffff88dd (LibRover-1.0.lua:2786:ReportPath)", -- [487]
+				"14:48:56.001.028> [|cffffbb00LibRover|cffff88dd] 10. |cff88ff88Talk to |cffaaffaaLovely Merchant|cffff88dd|cffff88dd -- |cff88ccddLovely Merchant|cffff88dd  (dist 167) |cff8888dd{fly_end}|cffff88dd (LibRover-1.0.lua:2786:ReportPath)", -- [488]
+				"14:48:56.001.028> [|cff00ff00pointer|cffff88dd] -> PathFoundHandler! state=success (Pointer.lua:4137:PathFoundHandler)", -- [489]
+				"14:48:56.001.029> [|cff00ff00pointer|cffff88dd] - set_waypoints: 11 points, type=route (Pointer.lua:3842:<local>)", -- [490]
+				"14:48:56.001.031> [|cff00ff00pointer|cffff88dd] - set_waypoints: arrowpoint=Shrine of Two Moons #903 /1 69.0,49.2, farmpoint=Shrine of Two Moons #903 /1 69.0,49.2 (Pointer.lua:3916:<local>)", -- [491]
+				"14:48:56.001.032> [|cff00ff00pointer|cffff88dd] - ShowSet route ends [2.81 ms] + ants [0.97 ms] (Pointer.lua:4125:ShowSet)", -- [492]
+				"14:48:56.001.033> [|cff00ff00pointer|cffff88dd] <- PathFoundHandler done. (Pointer.lua:4250:PathFoundHandler)", -- [493]
+				"14:48:56.001.034> [|cff00ff00pointer|cffff88dd] ClearSet route + ants [0.40 ms] (Pointer.lua:4068:ClearSet)", -- [494]
+				"14:49:01.238.274> [itemscore] [itemevents] PLAYER_REGEN_DISABLED (Item-Events.lua:156:Debug)", -- [495]
+				"14:49:36.760.763> [|cffffbb00LibRover|cffff88dd] Got event NEW_WMO_CHUNK, updating (LibRover-1.0.lua:3208:<local>)", -- [496]
+				"14:49:41.496.509> [step_setup] Preparing goals... (Step.lua:146:PrepareCompletion)", -- [497]
+				"14:49:41.496.509> [step_setup] Goals prepared. (Step.lua:150:PrepareCompletion)", -- [498]
+				"14:49:41.496.509> [step_setup] Step 7 prepared. (Step.lua:189:PrepareCompletion)", -- [499]
+				"14:49:41.496.513> [itemscore] [itemevents] PLAYER_REGEN_ENABLED (Item-Events.lua:156:Debug)", -- [500]
+			},
+			["ActivatedPois"] = {
+			},
+			["guideTurnInsOnly"] = false,
+			["guides_history"] = {
+				{
+					"EVENTS\\Love is in the Air (February 2nd - 16th)\\Love is in the Air Achievements", -- [1]
+					18, -- [2]
+				}, -- [1]
+				{
+					"EVENTS\\Love is in the Air (February 2nd - 16th)\\Love is in the Air Dailies", -- [1]
+					25, -- [2]
+				}, -- [2]
+				{
+					"LEVELING\\Peak of Serenity\\Monk Daily", -- [1]
+					2, -- [2]
+				}, -- [3]
+			},
+			["notifications"] = {
+				["PETSMOUNTS\\Mounts\\Flying Mounts\\Raid Mounts\\Black Drake"] = {
+					"pet", -- [1]
+					"Creature Detector", -- [2]
+					"|cff00e9ffBlack Drake|r Detected.", -- [3]
+					1455650985, -- [4]
+					"Interface\\AddOns\\ZygorGuidesViewer\\Skins\\guideicons-big", -- [5]
+					{
+						0.5, -- [1]
+						0.75, -- [2]
+						0.25, -- [3]
+						0.5, -- [4]
+					}, -- [6]
+				},
+				["PETSMOUNTS\\Mounts\\Flying Mounts\\Unavailable Mounts\\Spectral Wind Rider"] = {
+					"pet", -- [1]
+					"Creature Detector", -- [2]
+					"|cff00e9ffSpectral Wind Rider|r Detected.", -- [3]
+					1455650958, -- [4]
+					"Interface\\AddOns\\ZygorGuidesViewer\\Skins\\guideicons-big", -- [5]
+					{
+						0.5, -- [1]
+						0.75, -- [2]
+						0.25, -- [3]
+						0.5, -- [4]
+					}, -- [6]
+				},
+				["PETSMOUNTS\\Mounts\\Ground Mounts\\Player vs. Player Mounts\\Red Skeletal Warhorse"] = {
+					"pet", -- [1]
+					"Creature Detector", -- [2]
+					"|cff00e9ffRed Skeletal Warhorse|r Detected.", -- [3]
+					1455650960, -- [4]
+					"Interface\\AddOns\\ZygorGuidesViewer\\Skins\\guideicons-big", -- [5]
+					{
+						0.5, -- [1]
+						0.75, -- [2]
+						0.25, -- [3]
+						0.5, -- [4]
+					}, -- [6]
+				},
+				["PETSMOUNTS\\Mounts\\Flying Mounts\\Reputation Mounts\\Corrupted Dreadwing"] = {
+					"pet", -- [1]
+					"Creature Detector", -- [2]
+					"|cff00e9ffCorrupted Dreadwing|r Detected.", -- [3]
+					1455646741, -- [4]
+					"Interface\\AddOns\\ZygorGuidesViewer\\Skins\\guideicons-big", -- [5]
+					{
+						0.5, -- [1]
+						0.75, -- [2]
+						0.25, -- [3]
+						0.5, -- [4]
+					}, -- [6]
+				},
+				["PETSMOUNTS\\Mounts\\Ground Mounts\\Unavailable Mounts\\Kor'kron War Wolf"] = {
+					"pet", -- [1]
+					"Creature Detector", -- [2]
+					"|cff00e9ffKor'kron War Wolf|r Detected.", -- [3]
+					1455650947, -- [4]
+					"Interface\\AddOns\\ZygorGuidesViewer\\Skins\\guideicons-big", -- [5]
+					{
+						0.5, -- [1]
+						0.75, -- [2]
+						0.25, -- [3]
+						0.5, -- [4]
+					}, -- [6]
+				},
+			},
+			["taxis"] = {
+				["Schnottz's Landing"] = true,
+				["Wildheart Point"] = true,
+				["Mudsprocket"] = true,
+				["Nordrassil"] = true,
+				["Ratchet"] = true,
+				["Aktar's Post"] = true,
+				["Irontree Clearing"] = true,
+				["Durotan's Grasp"] = true,
+				["Bastion Rise"] = true,
+				["Ramkahen"] = true,
+				["Orgrimmar"] = true,
+				["Talon Watch"] = true,
+				["The Crossroads"] = true,
+				["Brill"] = true,
+				["Throm'Var"] = true,
+				["Westreach Summit"] = true,
+				["Beastwatch"] = true,
+				["Frostwolf Overlook"] = true,
+				["Nivek's Overlook"] = true,
+				["Darkspear's Edge"] = true,
+				["Bloodmaul Slag Mines"] = true,
+				["Frostwall Garrison"] = true,
+				["Exarch's Refuge"] = true,
+				["Malaka'jin"] = true,
+				["Krom'gar Fortress"] = true,
+				["The Ring of Trials"] = true,
+				["Retribution Point"] = true,
+				["Sanctuary of Malorne"] = true,
+				["Valormok"] = true,
+				["Oasis of Vir'sar"] = true,
+				["Gates of Sothann"] = false,
+				["Throne of the Elements"] = true,
+				["Northern Rocketway"] = true,
+				["Desolation Hold"] = true,
+				["Stonemaul Hold"] = true,
+				["The Mor'Shan Ramparts"] = true,
+				["Pinchwhistle Gearworks"] = true,
+				["Camp Ataya"] = true,
+				["Grove of Aessina"] = true,
+				["Darktide Roost"] = true,
+				["Thunder Bluff"] = true,
+				["The Sludgewerks"] = true,
+				["Whisperwind Grove"] = true,
+				["Camp Mojache"] = true,
+				["Dawnrise Expedition"] = true,
+				["Fizzle & Pozzik's Speedbarge"] = true,
+				["Iron Docks"] = true,
+				["Rilzit's Holdfast"] = true,
+				["Vault of the Earth"] = true,
+				["Riverside Post"] = true,
+				["Vol'jin's Pride"] = true,
+				["Joz's Rylaks"] = true,
+				["Nozzlepot's Outpost"] = true,
+				["Southern Rocketway"] = true,
+				["Zangarra"] = true,
+				["Hellscream's Watch"] = true,
+				["Mossy Pile"] = true,
+				["Ethel Rethor"] = true,
+				["Axefall"] = true,
+				["Thunk's Abode"] = true,
+				["Karnum's Glade"] = true,
+				["Furien's Post"] = true,
+				["Gadgetzan"] = true,
+				["Cliffwalker Post"] = true,
+				["Everbloom Wilds"] = true,
+				["Hunter's Hill"] = true,
+				["Wor'var"] = true,
+				["Sen'jin Village"] = true,
+				["Silverwind Refuge"] = true,
+				["Marshal's Stand"] = true,
+				["Everlook"] = true,
+				["Shattrath City"] = true,
+				["Terokkar Refuge"] = true,
+				["Evermorn Springs"] = true,
+				["Splintertree Post"] = true,
+				["Serpent's Overlook"] = true,
+				["Thunder Pass"] = true,
+				["Moonglade"] = true,
+				["Zoram'gar Outpost"] = true,
+				["Sun Rock Retreat"] = true,
+				["Shadowprey Village"] = true,
+				["Skysea Point"] = true,
+				["Brackenwall Village"] = true,
+				["Vendetta Point"] = true,
+				["Wor'gol"] = true,
+				["Bilgewater Harbor"] = true,
+				["Breaker's Crown"] = true,
+				["Razor Hill"] = true,
+				["Apexis Excavation"] = true,
+				["Wolf's Stand"] = true,
+				["Veil Terokk"] = true,
+				["Akeeta's Hovel"] = true,
+				["Undercity"] = true,
+				["Malo's Lookout"] = true,
+				["The Bulwark"] = true,
+				["Bladespire Fortress"] = true,
+				["Warspear"] = true,
+				["Bloodhoof Village"] = true,
+				["Vol'mar"] = true,
+				["Socrethar's Rise"] = true,
+				["Emerald Sanctuary"] = true,
+				["Exile's Rise"] = true,
+				["Sha'naari Refuge"] = true,
+				["Shrine of Aviana"] = true,
+				["Crow's Crook"] = true,
+				["Cenarion Hold"] = true,
+				["Bootlegger Outpost"] = true,
+				["Stonefang Outpost"] = true,
+			},
+			["step"] = 7,
+		},
+	},
+	["profileKeys"] = {
+		["Leisho - Thrall"] = "Leisho - Thrall",
+	},
+	["factionrealm"] = {
+		["Horde - Thrall"] = {
+			["altNames"] = {
+				["Leisho"] = "Leisho",
+			},
+		},
+	},
+	["realm"] = {
+		["Thrall"] = {
+			["gold_scan_data"] = {
+			},
+		},
+	},
+	["global"] = {
+		["itemCache"] = {
+		},
+	},
+	["profiles"] = {
+		["Leisho - Thrall"] = {
+			["load_im"] = true,
+			["dispprimary"] = {
+				["showborder"] = true,
+			},
+			["highlight"] = true,
+			["magickey_bind"] = "",
+			["show_ui"] = true,
+			["frame_positions"] = {
+				["ZygorGuidesViewerViewer"] = {
+				},
+			},
+			["autogear"] = false,
+			["autoaccept"] = true,
+			["resizeup"] = false,
+			["load_gold"] = true,
+			["skipauxsteps"] = true,
+			["customcolorants"] = true,
+			["goldsort"] = {
+				["gathering"] = {
+					"dispgold", -- [1]
+					"desc", -- [2]
+				},
+				["farming"] = {
+					"dispgold", -- [1]
+					"desc", -- [2]
+				},
+				["goldrun"] = {
+					"time", -- [1]
+					"asc", -- [2]
+				},
+				["auctions"] = {
+					"profit", -- [1]
+					"desc", -- [2]
+				},
+				["crafting"] = {
+					"profit", -- [1]
+					"desc", -- [2]
+				},
+			},
+			["currentbuild"] = "Leveling Mistweaver",
+			["IsWidgetCollapsed"] = {
+				["Mailtools"] = false,
+			},
+			["fullness_search"] = 1,
+			["gold_crafting_mode"] = 0,
+			["guide_viewer_advanced"] = true,
+			["frame_anchor"] = {
+				"RIGHT", -- [1]
+				{
+					[0] = nil --[[ skipped userdata ]],
+					["mostRecentCollectedToyID"] = 50471,
+					["newToys"] = {
+					},
+					["firstTimeLoaded"] = 1,
+					["variablesLoaded"] = true,
+				}, -- [2]
+				"RIGHT", -- [3]
+				-400, -- [4]
+				-100, -- [5]
+			},
+			["im_town_alert"] = false,
+			["im_always_wait"] = false,
+			["Inventory Manager"] = {
+				["lastParentName"] = "Blizzard",
+				["showText"] = false,
+				["isSnapped"] = true,
+				["lastParent"] = {
+					[0] = nil --[[ skipped userdata ]],
+					["PortraitButton"] = {
+						[0] = nil --[[ skipped userdata ]],
+						["Highlight"] = {
+							[0] = nil --[[ skipped userdata ]],
+						},
+					},
+					["Portrait"] = {
+						[0] = nil --[[ skipped userdata ]],
+					},
+					["ClickableTitleFrame"] = {
+						[0] = nil --[[ skipped userdata ]],
+					},
+					["bags"] = {
+					},
+					["FilterDropDown"] = {
+						[0] = nil --[[ skipped userdata ]],
+						["displayMode"] = "MENU",
+						["initialize"] = nil --[[ skipped inline function ]],
+					},
+					["FilterIcon"] = {
+						[0] = nil --[[ skipped userdata ]],
+						["Icon"] = {
+							[0] = nil --[[ skipped userdata ]],
+						},
+					},
+					["allBags"] = false,
+					["MAParent"] = "BagsMover",
+					["Show"] = nil --[[ skipped inline function ]],
+					["bagsShown"] = 0,
+					["size"] = 16,
+					["Hide"] = nil --[[ skipped inline function ]],
+				},
+				["isSnappedSize"] = 169,
+				["im_lastWidth"] = 169,
+			},
+			["Mail"] = {
+				["altNames"] = {
+				},
+				["previousNames"] = {
+				},
+			},
+			["minicons"] = true,
+			["skinstyle"] = "stealth",
+			["tmp__was_sheened"] = true,
+			["stickycolored"] = false,
+			["autoturnin"] = true,
+			["enable_viewer"] = false,
+			["load_mail"] = true,
+			["debug_flags"] = {
+				["LibRover"] = {
+					["enabled"] = true,
+					["color"] = "ffffbb00",
+				},
+				["startup"] = {
+					["enabled"] = true,
+					["color"] = "ffff3300",
+				},
+				["waypoints"] = {
+					["enabled"] = true,
+					["color"] = "ff66ff00",
+				},
+				["display"] = {
+					["enabled"] = false,
+				},
+				["pointer"] = {
+					["enabled"] = true,
+					["color"] = "ff00ff00",
+				},
+				["sticky"] = {
+					["enabled"] = true,
+					["color"] = "ffff5500",
+				},
+			},
+			["ranconfig2"] = true,
+			["load_betaguides"] = true,
+			["badupgrade"] = {
+				nil, -- [1]
+				{
+					[116175] = "|cffa335ee|Hitem:116175:5313:0:0:0:0:0:0:100:270:4:13:3:86:535:617:531|h[Brilliant Burnished Cloak of the Savage]|h|r",
+				}, -- [2]
+			},
+			["skin"] = "default",
+			["pathfinding_mode"] = "1fastest",
+			["autotaxi"] = true,
+			["visible"] = false,
+			["multicolorants"] = true,
+			["suggestiondungeonnum"] = {
+				[764] = {
+					["lastdate"] = "02/16/16",
+					["lasttime"] = 14170.763,
+					["allow"] = true,
+				},
+			},
+		},
+	},
+}

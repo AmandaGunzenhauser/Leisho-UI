@@ -1,0 +1,3 @@
+<Bindings>
+	<Binding name="DIRECTIONARROW_TOGGLE" header="DIRECTIONARROW">DirectionArrow:ToggleSticky()</Binding>
+</Bindings>

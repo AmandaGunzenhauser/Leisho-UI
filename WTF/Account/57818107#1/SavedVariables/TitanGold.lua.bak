@@ -1,0 +1,8 @@
+
+GoldSave = {
+	["Leisho_Thrall::Horde"] = {
+		["show"] = true,
+		["name"] = "Leisho",
+		["gold"] = 1201142736,
+	},
+}

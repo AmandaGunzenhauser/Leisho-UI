@@ -1,0 +1,8 @@
+## Interface: 60200
+## Title: HaveWeMet
+## Author: Amanda Ferry
+## Version: 0.1
+## DefaultState: Enabled
+## SavedVariables: HaveWeMetCount
+## SavedVariablesPerCharacter: HaveWeMetBool
+HaveWeMet.lua

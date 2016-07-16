@@ -1,0 +1,18 @@
+
+DataStore_AgendaDB = {
+	["profileKeys"] = {
+		["Alyserys - Thrall"] = "Alyserys - Thrall",
+	},
+	["global"] = {
+		["Options"] = {
+			["WeeklyResetHour"] = 6,
+			["WeeklyResetDay"] = 2,
+			["NextWeeklyReset"] = "2016-03-01",
+		},
+		["Characters"] = {
+			["Default.Thrall.Alyserys"] = {
+				["lastUpdate"] = 1456680999,
+			},
+		},
+	},
+}

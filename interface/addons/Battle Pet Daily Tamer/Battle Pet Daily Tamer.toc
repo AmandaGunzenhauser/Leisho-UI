@@ -1,0 +1,8 @@
+## Interface: 70000
+## Title: Battle Pet Daily Tamer
+## Notes: Marks the world map with battle pet dailies you have not completed for the day.
+## Author: Gello
+## Version: 1.6.0
+## SavedVariables: BattlePetDailyTamerSettings
+Battle Pet Daily Tamer Coordinates.lua
+Battle Pet Daily Tamer.lua

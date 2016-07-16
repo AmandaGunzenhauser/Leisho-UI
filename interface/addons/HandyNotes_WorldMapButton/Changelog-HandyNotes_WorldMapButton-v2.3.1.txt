@@ -1,0 +1,21 @@
+------------------------------------------------------------------------
+r16 | q3fuba | 2015-06-23 13:15:17 +0000 (Tue, 23 Jun 2015) | 2 lines
+Changed paths:
+   A /tags/v2.3.1 (from /trunk:15)
+
+fixed logic error in map tooltip
+thanks to ArkasAest
+------------------------------------------------------------------------
+r15 | q3fuba | 2015-06-23 13:14:49 +0000 (Tue, 23 Jun 2015) | 2 lines
+Changed paths:
+   M /trunk/HandyNotes_WorldMapButton.lua
+
+fixed logic error in map tooltip
+thanks to ArkasAest
+------------------------------------------------------------------------
+r13 | q3fuba | 2015-06-23 13:08:18 +0000 (Tue, 23 Jun 2015) | 1 line
+Changed paths:
+   M /trunk/HandyNotes_WorldMapButton.toc
+
+Updated TOC to match 6.2
+------------------------------------------------------------------------

@@ -1,0 +1,19 @@
+## Interface: 60000
+## Title: GuildRosterDeluxe
+## Version: 6.0.4
+## Notes: A LibDataBroker plugin that displays the guild roster in multiple views.
+## Author: Zmukx
+## SavedVariables: GuildRosterDeluxeDB
+## OptionalDeps: Ace3, LibQTip-1.0, LibStub, CallbackHandler-1.0
+
+#@no-lib-strip@
+lib\LibStub\LibStub.lua
+lib\CallbackHandler-1.0\CallbackHandler-1.0.xml
+lib\AceGUI-3.0\AceGUI-3.0.xml
+lib\AceConfig-3.0\AceConfig-3.0.xml
+lib\LibQTip-1.0\lib.xml
+#@end-no-lib-strip@
+
+lib\LibDataBroker-1.1\LibDataBroker-1.1.lua
+
+GuildRosterDeluxe.lua

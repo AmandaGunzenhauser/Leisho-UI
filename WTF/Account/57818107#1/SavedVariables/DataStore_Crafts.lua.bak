@@ -1,0 +1,19 @@
+
+DataStore_CraftsDB = {
+	["profileKeys"] = {
+		["Alyserys - Thrall"] = "Alyserys - Thrall",
+	},
+	["global"] = {
+		["Characters"] = {
+			["Default.Thrall.Alyserys"] = {
+				["Professions"] = {
+					["Fishing"] = {
+						["MaxRank"] = 75,
+						["Rank"] = 27,
+					},
+				},
+				["lastUpdate"] = 1456680982,
+			},
+		},
+	},
+}

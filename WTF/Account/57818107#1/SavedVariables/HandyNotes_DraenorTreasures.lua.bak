@@ -1,0 +1,10 @@
+
+DraenorTreasuresDB = {
+	["profileKeys"] = {
+		["Leisho - Thrall"] = "Default",
+	},
+	["profiles"] = {
+		["Default"] = {
+		},
+	},
+}

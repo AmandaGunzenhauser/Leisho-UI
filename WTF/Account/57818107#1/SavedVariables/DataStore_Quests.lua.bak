@@ -1,0 +1,107 @@
+
+DataStore_QuestsDB = {
+	["profileKeys"] = {
+		["Alyserys - Thrall"] = "Alyserys - Thrall",
+	},
+	["global"] = {
+		["Characters"] = {
+			["Default.Thrall.Alyserys"] = {
+				["HistoryLastUpdate"] = 1456680984,
+				["QuestLinks"] = {
+					nil, -- [1]
+					"|cffffff00|Hquest:34398:90|h[The Dark Portal]|h|r", -- [2]
+					nil, -- [3]
+					"|cffffff00|Hquest:31966:-1|h[Battle Pet Tamers: Cataclysm]|h|r", -- [4]
+					"|cffffff00|Hquest:31919:-1|h[Battle Pet Tamers: Outland]|h|r", -- [5]
+					"|cffff2020|Hquest:40329:100|h[Battle Pet Tamers: Warlords]|h|r", -- [6]
+					nil, -- [7]
+					"|cffffff00|Hquest:36499:90|h[Iron Horde Invasion]|h|r", -- [8]
+					nil, -- [9]
+					"|cffffff00|Hquest:12191:-1|h[Chug and Chuck!]|h|r", -- [10]
+					nil, -- [11]
+					"|cff808080|Hquest:11665:70|h[Crocolisks in the City]|h|r", -- [12]
+					nil, -- [13]
+					"|cffffff00|Hquest:31281:90|h[So You Want to Be a Chef...]|h|r", -- [14]
+					nil, -- [15]
+					"|cffffff00|Hquest:33338:90|h[Empowering the Hourglass]|h|r", -- [16]
+					"|cffffff00|Hquest:33374:90|h[Path of the Mistwalker]|h|r", -- [17]
+					"|cffffff00|Hquest:33334:90|h[Strong Enough To Survive]|h|r", -- [18]
+					[22] = "|cffffff00|Hquest:30258:90|h[Mung-Mung's Vote I: A Hozen's Problem]|h|r",
+					[20] = "|cffffff00|Hquest:33133:90|h[Warforged Seals]|h|r",
+				},
+				["lastUpdate"] = 1456680982,
+				["History"] = {
+					[954] = 1048576,
+					[1019] = 134217728,
+					[294] = 196608,
+					[1038] = 130808799,
+					[1042] = 833617920,
+					[1243] = 64,
+					[304] = 768,
+					[982] = 12,
+					[986] = 4026531841,
+					[988] = 1022,
+					[994] = 2147484160,
+					[996] = 1073750016,
+					[998] = 126044160,
+					[1039] = 127038,
+					[1232] = 557056,
+					[1240] = 3072,
+					[1014] = 4096,
+					[261] = 234997472,
+					[958] = 8388608,
+					[1036] = 65536,
+					[1040] = 268439552,
+					[1170] = 2147483649,
+					[847] = 524288,
+					[975] = 8,
+					[955] = 140,
+					[979] = 1060864,
+					[1001] = 512,
+					[1037] = 4269540113,
+					[985] = 25165824,
+					[987] = 4294901787,
+					[926] = 6144,
+					[928] = 67108864,
+					[993] = 65011712,
+					[995] = 31449840,
+					[997] = 2181577728,
+					[1163] = 72,
+					[1041] = 1544,
+					[1171] = 14,
+					[999] = 2164376064,
+					[1242] = 14338,
+					[946] = 1298432,
+					[1000] = 311812,
+					[315] = 66060288,
+				},
+				["HistoryBuild"] = "20886",
+				["Quests"] = {
+					"0|Assault on the Dark Portal", -- [1]
+					"1|0|57000|0", -- [2]
+					"0|Battle Pets", -- [3]
+					"1|0|114000|0", -- [4]
+					"1|0|114000|0", -- [5]
+					"1|0|154000|0", -- [6]
+					"0|Blasted Lands", -- [7]
+					"1|0|114000|1", -- [8]
+					"0|Brewfest", -- [9]
+					"1|0|57000|0", -- [10]
+					"0|Fishing", -- [11]
+					"1|0|0|0", -- [12]
+					"0|The Halfhill Market", -- [13]
+					"1|0|11400|0", -- [14]
+					"0|Timeless Isle", -- [15]
+					"1|0|0|0", -- [16]
+					"1|0|228000|0", -- [17]
+					"1|0|228000|0", -- [18]
+					"0|Vale of Eternal Blossoms", -- [19]
+					"1|0|0|0", -- [20]
+					"0|Valley of the Four Winds", -- [21]
+					"1|0|57000|0", -- [22]
+				},
+				["HistorySize"] = 208,
+			},
+		},
+	},
+}

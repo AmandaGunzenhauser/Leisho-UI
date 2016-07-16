@@ -1,0 +1,107 @@
+------------------------------------------------------------------------
+r222 | zensunim | 2016-07-06 01:51:08 +0000 (Wed, 06 Jul 2016) | 12 lines
+Changed paths:
+   A /tags/4.38.2 (from /trunk:221)
+
+4.38.2
+* Added WoD spells for Draenor (world)		
+* Added Pandaria spells for Brawler's Guild
+* Fixed and added Legion spells for The Broken Isles (world)
+* Fixed Legion spells for Vault of the Wardens
+* Added Legion spells for Mardum
+* Added Legion spells for Darkheart Thicket
+* Added Legion spells for Halls of Valor
+* Added Legion spells for The Violet Hold
+* Added Legion spells for The Emerald Dream
+* Added Legion spells for the Demon Invasion (Legion Event)
+
+------------------------------------------------------------------------
+r221 | zensunim | 2016-07-06 01:50:24 +0000 (Wed, 06 Jul 2016) | 1 line
+Changed paths:
+   M /trunk/GTFO.lua
+   M /trunk/GTFO.toc
+
+Prepping for 4.38.2 release
+------------------------------------------------------------------------
+r220 | zensunim | 2016-07-05 07:25:40 +0000 (Tue, 05 Jul 2016) | 1 line
+Changed paths:
+   M /trunk/GTFO.lua
+   M /trunk/GTFO_Fail_MP.lua
+
+Added Pandaria spells for Brawler's Guild
+------------------------------------------------------------------------
+r219 | zensunim | 2016-06-26 19:54:51 +0000 (Sun, 26 Jun 2016) | 1 line
+Changed paths:
+   M /trunk/GTFO_FF_LGN.lua
+   M /trunk/GTFO_Fail_LGN.lua
+   M /trunk/GTFO_Spells_LGN.lua
+
+Added Legion spells for The Emerald Dream
+------------------------------------------------------------------------
+r218 | zensunim | 2016-06-26 17:42:26 +0000 (Sun, 26 Jun 2016) | 1 line
+Changed paths:
+   M /trunk/GTFO.lua
+   M /trunk/GTFO_FF_LGN.lua
+   M /trunk/GTFO_Fail_LGN.lua
+   M /trunk/GTFO_Fail_WOD.lua
+   M /trunk/GTFO_Spells_LGN.lua
+
+Added Legion spells for The Emerald Dream
+------------------------------------------------------------------------
+r217 | zensunim | 2016-06-22 18:46:00 +0000 (Wed, 22 Jun 2016) | 2 lines
+Changed paths:
+   M /trunk/GTFO.lua
+   M /trunk/GTFO_Fail_WOD.lua
+
+Added WoD spells for Draenor (world)		
+
+------------------------------------------------------------------------
+r216 | zensunim | 2016-06-17 05:52:18 +0000 (Fri, 17 Jun 2016) | 1 line
+Changed paths:
+   M /trunk/GTFO_Spells_Special.lua
+
+Added Legion Event spells
+------------------------------------------------------------------------
+r215 | zensunim | 2016-06-16 18:07:06 +0000 (Thu, 16 Jun 2016) | 1 line
+Changed paths:
+   M /trunk/GTFO_Fail_LGN.lua
+   M /trunk/GTFO_Spells_LGN.lua
+
+Added spells from Broken Isles (world)
+------------------------------------------------------------------------
+r214 | zensunim | 2016-06-12 20:24:03 +0000 (Sun, 12 Jun 2016) | 1 line
+Changed paths:
+   M /trunk/GTFO.lua
+   M /trunk/GTFO_Fail_LGN.lua
+   M /trunk/GTFO_Spells_LGN.lua
+
+Added spells for The Violet Hold
+------------------------------------------------------------------------
+r213 | zensunim | 2016-06-12 16:13:33 +0000 (Sun, 12 Jun 2016) | 1 line
+Changed paths:
+   M /trunk/GTFO_Fail_LGN.lua
+
+Fixed and added Broken Isle spells
+------------------------------------------------------------------------
+r212 | zensunim | 2016-06-11 22:49:49 +0000 (Sat, 11 Jun 2016) | 1 line
+Changed paths:
+   M /trunk/GTFO_Fail_LGN.lua
+   M /trunk/GTFO_Spells_LGN.lua
+   M /trunk/GTFO_Spells_Special.lua
+
+Added spells for the Legion event, Broken Isles
+------------------------------------------------------------------------
+r211 | zensunim | 2016-06-06 22:11:42 +0000 (Mon, 06 Jun 2016) | 1 line
+Changed paths:
+   M /trunk/GTFO_Fail_LGN.lua
+   M /trunk/GTFO_Spells_LGN.lua
+
+Added spells for The Broken Isles (world)
+------------------------------------------------------------------------
+r210 | zensunim | 2016-06-04 16:30:44 +0000 (Sat, 04 Jun 2016) | 1 line
+Changed paths:
+   M /trunk/GTFO_Fail_LGN.lua
+   M /trunk/GTFO_Spells_LGN.lua
+
+Added spells for The Broken Isles (world)
+------------------------------------------------------------------------

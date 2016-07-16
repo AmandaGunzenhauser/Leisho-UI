@@ -1,0 +1,13 @@
+
+Omen3DB = {
+	["profileKeys"] = {
+		["Leisho - Thrall"] = "Leisho - Thrall",
+	},
+	["profiles"] = {
+		["Leisho - Thrall"] = {
+			["PositionY"] = 675.000061035156,
+			["Shown"] = false,
+			["PositionX"] = 954.166687011719,
+		},
+	},
+}

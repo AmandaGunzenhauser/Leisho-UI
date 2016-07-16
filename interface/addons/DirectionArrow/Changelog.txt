@@ -1,0 +1,137 @@
+5.4.0.002
+
+* Bump to get updated Libmapdata.
+
+5.4.0.001
+
+* Bump TOC to 5.4.0.
+
+5.3.0.001
+
+* Bump TOC to 5.3.0.
+* Start a new versioning scheme. Use the TOC version and append an internal version.
+
+0.0.28-beta
+
+* Bump TOC to pull in new Libmapdata for new zones.
+
+0.0.27-beta
+
+* Bump TOC for patch 5.2.
+* Also for pulling in new Libmapdata for new zones.
+
+0.0.26-beta
+
+* Bump TOC for patch 5.1.
+* Also for pulling in new Libmapdata.
+* Update author info (Realm/Name change)
+
+0.0.25-beta
+
+* Bump TOC for patch 5.0.4 (Yes, I know, 5.0.5 is out, but, whatever...)
+* Fix calls to GetNum(Raid|Party)
+
+0.0.24-beta
+
+* Force a dependency rebuild, as LibMapData-1.0 has been updated. Fixes distance issues in Dragon Soul, hopefully.
+
+0.0.23-beta
+
+* Fucked up the commit for the previous version. Redoing it.
+
+0.0.22-beta
+
+* Force a dependency rebuild, as LibMapData-1.0 has been updated. Fixes distance issues in Dragon Soul.
+
+0.0.21-beta
+
+* Force a dependency rebuild, as LibMapData-1.0 has been updated. Fixes distance issues in Dragon Soul.
+
+0.0.20-beta
+
+* Force a dependency rebuild, as LibMapData-1.0 has been updated. Fixes distance issues in Dragon Soul.
+
+0.0.19-beta
+
+* Bump TOC for patch 4.3.
+
+0.0.18-beta
+
+* Fixed debug output being generated when debug wasn't enabled.
+
+0.0.17-beta
+
+* Add missing LibMapData-1.0 dep to the toc. Fixes no-lib version not finding LibMapData-1.0.
+* Remove Jarry from the list of alts, as I transfered that toon to my son's account after he nagged me to death to do so.
+
+0.0.16-beta
+
+* Bump version to pull in newer LibMapData-1.0, whose map data apparenlty had some issues with Firelands, again.
+
+0.0.15-beta
+
+* Bump version to pull in newer LibMapData-1.0, whose map data apparenlty had some issues with Firelands.
+
+0.0.14-beta
+
+* Bump TOC for patch 4.2.
+
+0.0.13-beta
+
+* Bump TOC for patch 4.1.
+
+0.0.12-beta
+
+* Moved to Astrolabe 1.0
+
+0.0.11-beta
+
+* Bump the version so it can pull in newer dependencies.
+
+0.0.10-beta
+
+* Update TOC for patch 4.0.1.
+
+0.0.9-beta
+
+* Add battleground map sizes. ([[http://www.wowace.com/addons/direction-arrow/tickets/4-lua-errow-with-new-patch/|Bug Ticket #4]])
+* Rename DirectionArrowInstanceSizes.lua to DirectionArrowZoneSizes.lua and move the function out and into DirectionArrow.lua.
+
+0.0.8-beta
+
+* Re-implemented the arrow moving configuration as X and Y axes instead of location.
+* Make the distance text movable within the arrow's frame in the same manner as the arrow.
+* Add a configuration option to set the drop shadow color for the distance text.
+
+0.0.7-beta
+
+* Fix mis-named config variable.
+
+0.0.6-beta
+
+* Add configuration option to set the size of the distance text.
+* Add configuration options for distance text color and drop shadow color.
+* Removed the word "yards" from the distance text.
+* Make debug code be wrapped in debug tags.
+
+0.0.5-beta
+
+* Fix erroneous use of a function from another addon. (Mine, where I had cut and pasted)
+
+0.0.4-beta
+
+* Fix Astrolabe dependency.
+* Add toggle for displaying distance.
+
+0.0.3-beta
+
+* Add distance support.
+* Make it layer over the parent by one.
+
+0.0.2-beta
+
+* Fix some config stuff.
+
+0.0.1-beta
+
+* Initial release.

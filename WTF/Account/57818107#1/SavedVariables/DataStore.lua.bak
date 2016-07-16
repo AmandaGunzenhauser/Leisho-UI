@@ -1,0 +1,20 @@
+
+DataStoreDB = {
+	["profileKeys"] = {
+		["Alyserys - Thrall"] = "Alyserys - Thrall",
+	},
+	["global"] = {
+		["Version"] = 1,
+		["Characters"] = {
+			["Default.Thrall.Alyserys"] = {
+				["guildName"] = "muddskunks",
+				["faction"] = "Horde",
+			},
+		},
+		["Guilds"] = {
+			["Default.Thrall.muddskunks"] = {
+				["faction"] = "Horde",
+			},
+		},
+	},
+}

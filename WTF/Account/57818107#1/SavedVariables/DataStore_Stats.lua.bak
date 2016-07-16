@@ -1,0 +1,23 @@
+
+DataStore_StatsDB = {
+	["profileKeys"] = {
+		["Alyserys - Thrall"] = "Alyserys - Thrall",
+	},
+	["global"] = {
+		["Characters"] = {
+			["Default.Thrall.Alyserys"] = {
+				["lastUpdate"] = 1456680983,
+				["Stats"] = {
+					["Ranged"] = "560-561|0|985|0|26.869565963745",
+					["HealthMax"] = 49931,
+					["Melee"] = "646-723|1.4700000286102|985|0|26.869565963745|0",
+					["MaxPower"] = "3|120",
+					["Defense"] = "240|1|14.708513259888|3|0|0",
+					["PVP"] = "22|0",
+					["Base"] = "336|985|1019|203|148|240",
+					["Spell"] = "203|203|0|26.869565963745|182|0",
+				},
+			},
+		},
+	},
+}

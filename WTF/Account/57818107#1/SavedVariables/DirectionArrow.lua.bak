@@ -1,0 +1,10 @@
+
+DirectionArrowDB = {
+	["profileKeys"] = {
+		["Leisho - Thrall"] = "Default",
+	},
+	["profiles"] = {
+		["Default"] = {
+		},
+	},
+}

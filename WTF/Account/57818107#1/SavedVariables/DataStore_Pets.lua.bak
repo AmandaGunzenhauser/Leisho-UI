@@ -1,0 +1,23 @@
+
+DataStore_PetsDB = {
+	["profileKeys"] = {
+		["Alyserys - Thrall"] = "Alyserys - Thrall",
+	},
+	["global"] = {
+		["Reference"] = {
+			["Spells"] = {
+				[42609] = 23909,
+				[26529] = 15706,
+			},
+		},
+		["Characters"] = {
+			["Default.Thrall.Alyserys"] = {
+				["lastUpdate"] = 1456680983,
+				["CRITTER"] = {
+					42609, -- [1]
+					26529, -- [2]
+				},
+			},
+		},
+	},
+}

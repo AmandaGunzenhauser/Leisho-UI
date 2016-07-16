@@ -1,0 +1,15 @@
+Version: 1
+Frame: FriendsFrame
+FrameLevel: 1
+Anchor: LEFT
+X: 109
+Y: 14
+W: 338
+H: 424
+Frame: ColorPickerFrame
+FrameLevel: 21
+Anchor: CENTER
+X: 0
+Y: 0
+W: 365
+H: 200

@@ -1,0 +1,33 @@
+
+MasqueDB = {
+	["namespaces"] = {
+		["LibDualSpec-1.0"] = {
+			["char"] = {
+				["Leisho - Thrall"] = {
+					["profile"] = "Mistweaver",
+					["enabled"] = true,
+					["specGroup"] = 1,
+				},
+			},
+		},
+	},
+	["profileKeys"] = {
+		["Leisho - Thrall"] = "Mistweaver",
+	},
+	["profiles"] = {
+		["Default"] = {
+			["Groups"] = {
+				["ElvUI_ActionBars"] = {
+					["SkinID"] = "Trinity: Diamond",
+				},
+			},
+		},
+		["Mistweaver"] = {
+			["Groups"] = {
+				["ElvUI_ActionBars"] = {
+					["SkinID"] = "Adorn: Dark Square",
+				},
+			},
+		},
+	},
+}

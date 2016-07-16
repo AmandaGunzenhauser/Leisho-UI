@@ -1,0 +1,27 @@
+
+MogItDB = {
+	["profileKeys"] = {
+		["Leisho - Thrall"] = "Default",
+	},
+	["global"] = {
+		["version"] = "3.5.6",
+	},
+	["profiles"] = {
+		["Default"] = {
+			["x"] = 0,
+			["y"] = 0,
+		},
+	},
+}
+MogItWishlist = {
+	["global"] = {
+		["version"] = 60200,
+	},
+	["profileKeys"] = {
+		["Leisho - Thrall"] = "Leisho - Thrall",
+	},
+	["profiles"] = {
+		["Leisho - Thrall"] = {
+		},
+	},
+}

@@ -1,0 +1,18 @@
+
+AshranBuddyDB = {
+	["profileKeys"] = {
+		["Leisho - Thrall"] = "Leisho - Thrall",
+	},
+	["profiles"] = {
+		["Leisho - Thrall"] = {
+			["firstRun"] = false,
+			["EventTimer"] = {
+				["point"] = "LEFT",
+				["y"] = 277.222137451172,
+				["relativePoint"] = "LEFT",
+				["locked"] = true,
+				["x"] = 423.888305664063,
+			},
+		},
+	},
+}

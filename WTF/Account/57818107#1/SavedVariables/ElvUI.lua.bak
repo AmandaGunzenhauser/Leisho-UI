@@ -1,0 +1,623 @@
+
+ElvDB = {
+	["global"] = {
+		["general"] = {
+			["smallerWorldMap"] = true,
+		},
+		["ignoreIncompatible"] = true,
+	},
+	["faction"] = {
+		["Thrall"] = {
+			["Horde"] = {
+				["Leisho"] = 102981945,
+				["Kitha"] = 54928082,
+			},
+			["Alliance"] = {
+			},
+		},
+	},
+	["profileKeys"] = {
+		["Leisho - Thrall"] = "Leisho - Thrall",
+		["Kargen - Thrall"] = "Kargen - Thrall",
+		["Nalyria - Thrall"] = "Nalyria - Thrall",
+		["Kitha - Thrall"] = "Kitha - Thrall",
+		["Raijah - Thrall"] = "Raijah - Thrall",
+	},
+	["gold"] = {
+		["Thrall"] = {
+			["Kargen"] = 50122337,
+			["Kitha"] = 59750640,
+			["Nalyria"] = 8994009,
+			["Leisho"] = 157673053,
+			["Raijah"] = 157800958,
+		},
+	},
+	["namespaces"] = {
+		["LibDualSpec-1.0"] = {
+		},
+	},
+	["class"] = {
+		["Thrall"] = {
+			["Leisho"] = "MONK",
+			["Kitha"] = "WARRIOR",
+		},
+	},
+	["sle"] = {
+		["TimePlayed"] = {
+			["Thrall"] = {
+				["Raijah"] = {
+					["LevelTime"] = 1209155,
+					["Class"] = "PALADIN",
+					["TotalTime"] = 3837215,
+					["Level"] = 100,
+				},
+			},
+		},
+	},
+	["profiles"] = {
+		["Leisho - Thrall"] = {
+			["nameplate"] = {
+				["castBar"] = {
+					["height"] = 7,
+				},
+				["threat"] = {
+					["goodScale"] = 1.1,
+				},
+				["healthBar"] = {
+					["text"] = {
+						["enable"] = true,
+						["format"] = "CURRENT_PERCENT",
+					},
+				},
+				["fontOutline"] = "OUTLINE",
+				["font"] = "Intro Black",
+				["targetIndicator"] = {
+					["color"] = {
+						["g"] = 0,
+						["b"] = 0,
+					},
+				},
+			},
+			["currentTutorial"] = 9,
+			["sle"] = {
+				["loot"] = {
+					["enable"] = true,
+					["autoroll"] = {
+						["enable"] = false,
+					},
+					["announcer"] = {
+						["enable"] = true,
+					},
+				},
+				["media"] = {
+					["fonts"] = {
+						["subzone"] = {
+							["font"] = "Durandal Light",
+						},
+						["zone"] = {
+							["font"] = "Durandal Light",
+						},
+						["pvp"] = {
+							["font"] = "Trafaret",
+							["size"] = 20,
+						},
+					},
+				},
+				["minimap"] = {
+					["mapicons"] = {
+						["skindungeon"] = true,
+					},
+				},
+				["tooltip"] = {
+					["showFaction"] = true,
+				},
+				["datatext"] = {
+					["top"] = {
+						["enabled"] = true,
+						["width"] = 202,
+					},
+					["dp6"] = {
+						["enabled"] = true,
+						["width"] = 406,
+					},
+					["bottom"] = {
+						["enabled"] = true,
+						["width"] = 202,
+					},
+				},
+				["uibuttons"] = {
+					["enable"] = true,
+				},
+			},
+			["movers"] = {
+				["DP_6_Mover"] = "BOTTOMLEFTElvUIParentBOTTOMLEFT2183",
+				["ElvUF_Raid40Mover"] = "TOPLEFTElvUIParentBOTTOMLEFT861416",
+				["RaidMarkerBarAnchor"] = "TOPLEFTElvUIParentTOPLEFT81-4",
+				["ElvUF_PlayerCastbarMover"] = "BOTTOMElvUIParentBOTTOM0128",
+				["ElvUF_RaidMover"] = "TOPLEFTElvUIParentBOTTOMLEFT863394",
+				["ElvAB_2"] = "BOTTOMElvUIParentBOTTOM04",
+				["ElvAB_3"] = "BOTTOMElvUIParentBOTTOM054",
+				["ElvAB_5"] = "BOTTOMElvUIParentBOTTOM-31223",
+				["ElvUF_TargetTargetMover"] = "TOPRIGHTElvUIParentTOPRIGHT-548-582",
+				["Bottom_Panel_Mover"] = "BOTTOMLEFTElvUIParentBOTTOMLEFT2183",
+				["ElvUF_RaidpetMover"] = "TOPLEFTElvUIParentBOTTOMLEFT4736",
+				["ShiftAB"] = "TOPLEFTElvUIParentBOTTOMLEFT782143",
+				["LeftChatMover"] = "BOTTOMLEFTElvUIParentBOTTOMLEFT22",
+				["ElvUF_FocusMover"] = "BOTTOMElvUIParentBOTTOM322484",
+				["ElvUF_PartyMover"] = "TOPLEFTElvUIParentBOTTOMLEFT991446",
+				["ElvUF_BodyGuardMover"] = "BOTTOMLEFTElvUIParentBOTTOMLEFT4219",
+				["Top_Center_Mover"] = "TOPRIGHTElvUIParentTOPRIGHT-4-183",
+				["ElvUF_PlayerMover"] = "TOPElvUIParentTOP-270-573",
+				["ElvUF_PetMover"] = "BOTTOMLEFTElvUIParentBOTTOMLEFT410240",
+				["SquareMinimapBar"] = "BOTTOMRIGHTElvUIParentBOTTOMRIGHT-4186",
+				["RightChatMover"] = "BOTTOMRIGHTElvUIParentBOTTOMRIGHT-22",
+				["BossButton"] = "TOPElvUIParentTOP0-456",
+				["ElvAB_1"] = "BOTTOMElvUIParentBOTTOM-264487",
+				["ElvUF_TargetMover"] = "TOPElvUIParentTOP268-573",
+			},
+			["tooltip"] = {
+				["healthBar"] = {
+					["font"] = "Rubino",
+					["fontSize"] = 11,
+				},
+			},
+			["auras"] = {
+				["consolidatedBuffs"] = {
+					["font"] = "Intro Black",
+					["fontOutline"] = "NONE",
+				},
+			},
+			["unitframe"] = {
+				["OORAlpha"] = 0.22,
+				["smoothbars"] = true,
+				["colors"] = {
+					["auraBarBuff"] = {
+						["b"] = 0.59,
+						["g"] = 1,
+						["r"] = 0,
+					},
+					["castClassColor"] = true,
+					["health"] = {
+						["b"] = 0.274509803921569,
+						["g"] = 0.733333333333333,
+						["r"] = 0.0588235294117647,
+					},
+					["castColor"] = {
+						["b"] = 0.1,
+						["g"] = 0.1,
+						["r"] = 0.1,
+					},
+					["health_backdrop"] = {
+						["b"] = 0.0156862745098039,
+						["g"] = 0.0156862745098039,
+						["r"] = 1,
+					},
+					["tapped"] = {
+						["b"] = 0.109803921568627,
+						["g"] = 0.101960784313725,
+						["r"] = 0.0980392156862745,
+					},
+					["healthclass"] = true,
+				},
+				["statusbar"] = "Minimalist",
+				["units"] = {
+					["party"] = {
+						["groupsPerRowCol"] = 2,
+						["width"] = 151,
+						["height"] = 41,
+						["verticalSpacing"] = 4,
+						["numGroups"] = 2,
+						["growthDirection"] = "DOWN_RIGHT",
+					},
+					["raid40"] = {
+						["colorOverride"] = "FORCE_OFF",
+					},
+					["target"] = {
+						["width"] = 202,
+						["castbar"] = {
+							["width"] = 202,
+						},
+					},
+					["raid"] = {
+						["health"] = {
+							["frequentUpdates"] = true,
+							["orientation"] = "VERTICAL",
+						},
+						["power"] = {
+							["enable"] = false,
+						},
+						["height"] = 35,
+						["groupBy"] = "ROLE",
+						["colorOverride"] = "FORCE_OFF",
+						["width"] = 79,
+					},
+					["player"] = {
+						["restIcon"] = false,
+						["castbar"] = {
+							["spark"] = false,
+							["ticks"] = false,
+							["displayTarget"] = true,
+							["width"] = 311,
+						},
+						["stagger"] = {
+							["enable"] = false,
+						},
+						["width"] = 202,
+					},
+				},
+			},
+			["datatexts"] = {
+				["minimapPanels"] = false,
+				["leftChatPanel"] = false,
+				["panels"] = {
+					["Top_Center"] = "Time",
+					["DP_6"] = {
+						["right"] = "Durability",
+						["left"] = "Talent/Loot Specialization",
+						["middle"] = "GuildRosterDeluxe",
+					},
+				},
+				["rightChatPanel"] = false,
+			},
+			["actionbar"] = {
+				["bar3"] = {
+					["point"] = "TOPLEFT",
+					["buttonsPerRow"] = 12,
+					["buttonsize"] = 45,
+					["buttons"] = 12,
+				},
+				["font"] = "Rubino",
+				["fontOutline"] = "OUTLINE",
+				["bar2"] = {
+					["enabled"] = true,
+					["buttonsize"] = 45,
+				},
+				["bar1"] = {
+					["point"] = "TOPLEFT",
+					["buttonsPerRow"] = 5,
+					["buttonsize"] = 40,
+					["buttons"] = 10,
+				},
+				["fontSize"] = 12,
+				["bar5"] = {
+					["enabled"] = false,
+					["point"] = "TOPLEFT",
+					["buttons"] = 12,
+				},
+				["bar4"] = {
+					["enabled"] = false,
+				},
+			},
+			["layoutSet"] = "healer",
+			["chat"] = {
+				["tabFont"] = "Rubino",
+				["font"] = "Univers",
+				["tabFontSize"] = 12,
+			},
+			["general"] = {
+				["tapped"] = {
+				},
+				["health_backdrop"] = {
+				},
+				["bottomPanel"] = false,
+				["vendorGrays"] = true,
+				["valuecolor"] = {
+					["b"] = 0.59,
+					["g"] = 1,
+					["r"] = 0,
+				},
+				["bordercolor"] = {
+					["b"] = 0.31,
+					["g"] = 0.31,
+					["r"] = 0.31,
+				},
+				["health"] = {
+				},
+				["font"] = "Rubino",
+			},
+		},
+		["Kargen - Thrall"] = {
+			["movers"] = {
+				["ElvUF_Raid40Mover"] = "TOPLEFTElvUIParentBOTTOMLEFT4424",
+				["ShiftAB"] = "TOPLEFTElvUIParentBOTTOMLEFT41196",
+				["ElvUF_PartyMover"] = "BOTTOMLEFTElvUIParentBOTTOMLEFT4195",
+				["ElvUF_RaidMover"] = "TOPLEFTElvUIParentBOTTOMLEFT4427",
+				["ElvUF_RaidpetMover"] = "TOPLEFTElvUIParentBOTTOMLEFT4736",
+			},
+		},
+		["Nalyria - Thrall"] = {
+			["movers"] = {
+				["ElvUF_Raid40Mover"] = "TOPLEFTElvUIParentBOTTOMLEFT4424",
+				["ShiftAB"] = "TOPLEFTElvUIParentBOTTOMLEFT41196",
+				["ElvUF_PartyMover"] = "BOTTOMLEFTElvUIParentBOTTOMLEFT4195",
+				["ElvUF_RaidMover"] = "TOPLEFTElvUIParentBOTTOMLEFT4427",
+				["ElvUF_RaidpetMover"] = "TOPLEFTElvUIParentBOTTOMLEFT4736",
+			},
+		},
+		["Kitha - Thrall"] = {
+			["currentTutorial"] = 8,
+			["general"] = {
+				["bottomPanel"] = false,
+				["autoAcceptInvite"] = true,
+				["bordercolor"] = {
+					["b"] = 0.31,
+					["g"] = 0.31,
+					["r"] = 0.31,
+				},
+				["autoRoll"] = true,
+				["valuecolor"] = {
+					["b"] = 0.819,
+					["g"] = 0.513,
+					["r"] = 0.09,
+				},
+			},
+			["movers"] = {
+				["ElvUF_Raid40Mover"] = "TOPLEFTElvUIParentBOTTOMLEFT4424",
+				["ElvUF_PlayerCastbarMover"] = "BOTTOMElvUIParentBOTTOM0127",
+				["ElvUF_RaidMover"] = "TOPLEFTElvUIParentBOTTOMLEFT4427",
+				["ElvAB_2"] = "BOTTOMElvUIParentBOTTOM04",
+				["ElvAB_3"] = "BOTTOMElvUIParentBOTTOM053",
+				["ElvAB_5"] = "BOTTOMLEFTElvUIParentBOTTOMLEFT5024",
+				["ObjectiveFrameMover"] = "TOPRIGHTElvUIParentTOPRIGHT-63-257",
+				["ElvUF_RaidpetMover"] = "TOPLEFTElvUIParentBOTTOMLEFT4736",
+				["ShiftAB"] = "TOPLEFTElvUIParentBOTTOMLEFT41196",
+				["ElvUF_FocusMover"] = "BOTTOMElvUIParentBOTTOM310332",
+				["ElvUF_TargetTargetMover"] = "BOTTOMElvUIParentBOTTOM10280",
+				["ElvUF_PetMover"] = "BOTTOMElvUIParentBOTTOM-10280",
+				["ElvUF_PlayerMover"] = "TOPElvUIParentTOP-241-575",
+				["ElvUF_PartyMover"] = "BOTTOMLEFTElvUIParentBOTTOMLEFT4195",
+				["BossButton"] = "TOPElvUIParentTOP0-138",
+				["ElvAB_1"] = "BOTTOMElvUIParentBOTTOM-240414",
+				["ElvUF_TargetMover"] = "TOPElvUIParentTOP272-573",
+			},
+			["auras"] = {
+				["wrapAfter"] = 10,
+			},
+			["unitframe"] = {
+				["units"] = {
+					["boss"] = {
+						["castbar"] = {
+							["width"] = 200,
+						},
+						["width"] = 200,
+					},
+					["player"] = {
+						["power"] = {
+							["height"] = 13,
+						},
+						["height"] = 50,
+						["castbar"] = {
+							["width"] = 200,
+						},
+						["classbar"] = {
+							["height"] = 12,
+						},
+						["width"] = 200,
+					},
+					["targettarget"] = {
+						["height"] = 26,
+						["debuffs"] = {
+							["enable"] = false,
+						},
+						["width"] = 200,
+						["power"] = {
+							["enable"] = false,
+						},
+					},
+					["arena"] = {
+						["castbar"] = {
+							["width"] = 200,
+						},
+						["width"] = 200,
+					},
+					["target"] = {
+						["castbar"] = {
+							["width"] = 200,
+						},
+						["width"] = 200,
+					},
+					["raid"] = {
+						["buffs"] = {
+							["sizeOverride"] = 22,
+						},
+						["debuffs"] = {
+							["sizeOverride"] = 16,
+						},
+					},
+					["pet"] = {
+						["height"] = 26,
+						["width"] = 200,
+						["power"] = {
+							["enable"] = false,
+						},
+					},
+					["party"] = {
+						["buffs"] = {
+							["sizeOverride"] = 22,
+						},
+					},
+				},
+			},
+			["actionbar"] = {
+				["bar3"] = {
+					["buttonsPerRow"] = 12,
+					["buttonsize"] = 45,
+					["buttons"] = 12,
+				},
+				["bar2"] = {
+					["enabled"] = true,
+					["buttonsize"] = 45,
+				},
+				["bar1"] = {
+					["heightMult"] = 2,
+					["point"] = "TOPLEFT",
+					["buttons"] = 10,
+					["buttonsPerRow"] = 5,
+					["buttonsize"] = 38,
+				},
+				["bar5"] = {
+					["enabled"] = false,
+				},
+				["bar4"] = {
+					["enabled"] = false,
+				},
+			},
+			["layoutSet"] = "tank",
+			["chat"] = {
+				["panelWidthRight"] = 400,
+				["panelWidth"] = 400,
+			},
+			["lowresolutionset"] = true,
+		},
+		["Raijah - Thrall"] = {
+			["currentTutorial"] = 14,
+			["sle"] = {
+				["quests"] = {
+					["visibility"] = {
+						["dungeon"] = "HIDE",
+						["scenario"] = "HIDE",
+						["arena"] = "HIDE",
+						["bg"] = "HIDE",
+						["raid"] = "HIDE",
+						["rested"] = "HIDE",
+						["garrison"] = "HIDE",
+					},
+				},
+				["chat"] = {
+					["guildmaster"] = true,
+					["dpsSpam"] = true,
+				},
+			},
+			["bags"] = {
+				["xOffset"] = -2456,
+				["xOffsetBank"] = 277,
+				["yOffset"] = 2300,
+				["bagWidth"] = 372,
+				["bankWidth"] = 150,
+			},
+			["hideTutorial"] = true,
+			["layoutSet"] = "tank",
+			["RightChatPanelFaded"] = true,
+			["movers"] = {
+				["ElvUF_Raid40Mover"] = "TOPLEFTElvUIParentBOTTOMLEFT4424",
+				["ShiftAB"] = "TOPLEFTElvUIParentBOTTOMLEFT41196",
+				["ElvUF_PartyMover"] = "BOTTOMLEFTElvUIParentBOTTOMLEFT4195",
+				["ElvUF_RaidMover"] = "TOPLEFTElvUIParentBOTTOMLEFT4427",
+				["ElvAB_2"] = "BOTTOMElvUIParentBOTTOM038",
+				["ElvUF_RaidpetMover"] = "TOPLEFTElvUIParentBOTTOMLEFT4736",
+			},
+			["unitframe"] = {
+				["colors"] = {
+					["auraBarBuff"] = {
+						["r"] = 0.96,
+						["g"] = 0.55,
+						["b"] = 0.73,
+					},
+					["healthclass"] = true,
+					["castClassColor"] = true,
+				},
+			},
+			["datatexts"] = {
+				["panels"] = {
+					["LeftMiniPanel"] = "Time",
+					["RightMiniPanel"] = "GuildRosterDeluxe",
+					["RightChatDataPanel"] = {
+						["right"] = "S&L Guild",
+						["middle"] = "Durability",
+					},
+					["LeftChatDataPanel"] = {
+						["right"] = "GuildRosterDeluxe",
+					},
+				},
+				["leftChatPanel"] = false,
+			},
+			["chat"] = {
+				["separateSizes"] = true,
+				["panelHeightRight"] = 60,
+				["panelWidthRight"] = 50,
+			},
+			["general"] = {
+				["bottomPanel"] = false,
+				["valuecolor"] = {
+					["r"] = 0.96,
+					["g"] = 0.55,
+					["b"] = 0.73,
+				},
+				["reputation"] = {
+					["enable"] = false,
+				},
+				["bordercolor"] = {
+					["r"] = 0.31,
+					["g"] = 0.31,
+					["b"] = 0.31,
+				},
+				["experience"] = {
+					["enable"] = false,
+				},
+			},
+		},
+	},
+}
+ElvPrivateDB = {
+	["profileKeys"] = {
+		["Leisho - Thrall"] = "Leisho - Thrall",
+		["Kargen - Thrall"] = "Kargen - Thrall",
+		["Nalyria - Thrall"] = "Nalyria - Thrall",
+		["Kitha - Thrall"] = "Kitha - Thrall",
+		["Raijah - Thrall"] = "Raijah - Thrall",
+	},
+	["profiles"] = {
+		["Leisho - Thrall"] = {
+			["sle"] = {
+				["backgrounds"] = true,
+				["exprep"] = {
+					["autotrack"] = true,
+				},
+				["minimap"] = {
+					["mapicons"] = {
+						["enable"] = true,
+						["barenable"] = true,
+					},
+				},
+				["equip"] = {
+					["setoverlay"] = true,
+				},
+				["install_complete"] = "2.25",
+			},
+			["addonskins"] = {
+				["Blizzard_WorldStateCaptureBar"] = true,
+				["EmbedSystemDual"] = true,
+				["EmbedIsHidden"] = true,
+				["DBMFont"] = "ElvUI Font",
+				["DBMSkinHalf"] = true,
+			},
+			["install_complete"] = "8.13",
+		},
+		["Kargen - Thrall"] = {
+		},
+		["Nalyria - Thrall"] = {
+		},
+		["Kitha - Thrall"] = {
+			["theme"] = "classic",
+			["install_complete"] = "8.27",
+		},
+		["Raijah - Thrall"] = {
+			["nameplate"] = {
+				["enable"] = false,
+			},
+			["general"] = {
+				["loot"] = false,
+			},
+			["skins"] = {
+				["blizzard"] = {
+					["bags"] = false,
+				},
+			},
+			["sle"] = {
+				["install_complete"] = "2.25",
+			},
+			["theme"] = "class",
+			["install_complete"] = "8.29",
+		},
+	},
+}

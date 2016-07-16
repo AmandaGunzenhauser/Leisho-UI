@@ -1,0 +1,17 @@
+﻿## Interface: 60700
+
+## Title: Masque: |cff267EFFTrinity|r
+
+## Author: Leisho
+
+## Version: 1.0.0
+## Notes: Masque Skins by Leisho
+## DefaultState: enabled
+
+## Dependencies: Masque
+
+## X-Copyright: Copyright© 2015-2016 Amanda L. Ferry, aka Leisho - All rights reserved.
+
+## X-Email: aferry.web@gmail.com
+
+Masque_Leisho.lua

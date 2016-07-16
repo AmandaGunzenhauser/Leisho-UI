@@ -1,0 +1,57 @@
+
+ElvCharacterDB = {
+	["ChatLog"] = {
+		["1452320243.702"] = {
+			"%s has earned the achievement |cffffff00|Hachievement:5115:Player-3678-08551292:1:1:8:16:4294967295:4294967295:4294967295:4294967295|h[Heroic: Chimaeron]|h|r!", -- [1]
+			"Hablaba", -- [2]
+			"", -- [3]
+			"", -- [4]
+			"Hablaba", -- [5]
+			"", -- [6]
+			0, -- [7]
+			0, -- [8]
+			"", -- [9]
+			0, -- [10]
+			144, -- [11]
+			"Player-3678-08551292", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			false, -- [17]
+			nil, -- [18]
+			nil, -- [19]
+			"CHAT_MSG_GUILD_ACHIEVEMENT", -- [20]
+		},
+		["1452320457.129"] = {
+			"%s has earned the achievement |cffffff00|Hachievement:5116:Player-3678-08551292:1:1:8:16:4294967295:4294967295:4294967295:4294967295|h[Heroic: Nefarian]|h|r!", -- [1]
+			"Hablaba-Thrall", -- [2]
+			"", -- [3]
+			"", -- [4]
+			"Hablaba", -- [5]
+			"", -- [6]
+			0, -- [7]
+			0, -- [8]
+			"", -- [9]
+			0, -- [10]
+			189, -- [11]
+			"Player-3678-08551292", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			false, -- [17]
+			nil, -- [18]
+			nil, -- [19]
+			"CHAT_MSG_GUILD_ACHIEVEMENT", -- [20]
+		},
+	},
+	["ChatEditHistory"] = {
+	},
+	["BodyGuard"] = {
+		["IsInValidZone"] = false,
+		["MaxHealth"] = 0,
+		["Health"] = 0,
+		["Active"] = false,
+	},
+}

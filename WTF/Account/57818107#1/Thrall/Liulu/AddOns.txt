@@ -1,0 +1,11 @@
+Bartender4: disabled
+Bartender4Arched: disabled
+Auctionator: disabled
+GatherMate2_Data: disabled
+GatherMate2: disabled
+GathererDB_Wowhead: disabled
+Gatherer_HUD: disabled
+Gatherer: disabled
+GarrisonMissionManager: disabled
+ExRT: disabled
+DirectionArrow: disabled

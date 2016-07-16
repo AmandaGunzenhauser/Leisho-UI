@@ -1,0 +1,11 @@
+
+PasteDB = {
+	["profileKeys"] = {
+		["Leisho - Thrall"] = "Leisho - Thrall",
+	},
+	["profiles"] = {
+		["Leisho - Thrall"] = {
+			["loaded"] = true,
+		},
+	},
+}

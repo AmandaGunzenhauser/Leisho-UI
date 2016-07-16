@@ -1,0 +1,739 @@
+
+TradeSkillMasterDB = {
+	["p@Default@inventoryTooltipFormat"] = "full",
+	["p@Default@tooltipPriceFormat"] = "text",
+	["g@ @customPriceSources"] = {
+	},
+	["p@Default@detailedDestroyTooltip"] = false,
+	["_hash"] = 9584882,
+	["p@Default@tooltipShowModifier"] = "none",
+	["p@Default@exportSubGroups"] = false,
+	["p@Default@operationTooltips"] = {
+	},
+	["p@Default@minimapIcon"] = {
+		["minimapPos"] = 220,
+		["radius"] = 80,
+		["hide"] = false,
+	},
+	["p@Default@vendorBuyTooltip"] = true,
+	["f@Horde - Thrall@ignoreGuilds"] = {
+	},
+	["f@Horde - Thrall@accountKey"] = "Thrall7521721",
+	["p@Default@exportOperations"] = false,
+	["g@ @infoMessagesShown"] = {
+		["resetDesign"] = true,
+	},
+	["p@Default@defaultGroupTab"] = 2,
+	["p@Default@protectAH"] = false,
+	["f@Horde - Thrall@syncMetadata"] = {
+		["TSM_INVENTORY"] = {
+			["Leisho"] = {
+				["lastUpdate"] = 1455503331,
+				["owner"] = "Thrall7521721",
+			},
+		},
+		["TSM_CHARACTERS"] = {
+			["Leisho"] = {
+				["lastUpdate"] = 1455502572,
+				["owner"] = "Thrall7521721",
+			},
+		},
+	},
+	["p@Default@cleanReagentBank"] = false,
+	["p@Default@groupTreeSelectedGroupStatus"] = {
+		["Mailing_Send"] = {
+			["Baleful Leather"] = true,
+			["Baleful Plate"] = true,
+			["Baleful Cloth"] = true,
+			["Baleful Mail"] = true,
+		},
+	},
+	["p@Default@auctionResultRows"] = 16,
+	["p@Default@design"] = {
+		["fonts"] = {
+			["content"] = "Fonts\\ARIALN.TTF",
+			["bold"] = "Interface\\Addons\\TradeSkillMaster\\Media\\DroidSans-Bold.ttf",
+		},
+		["edgeSize"] = 1.5,
+		["textColors"] = {
+			["iconRegion"] = {
+				["enabled"] = {
+					249, -- [1]
+					255, -- [2]
+					247, -- [3]
+					1, -- [4]
+				},
+			},
+			["title"] = {
+				["enabled"] = {
+					132, -- [1]
+					219, -- [2]
+					9, -- [3]
+					1, -- [4]
+				},
+			},
+			["label"] = {
+				["enabled"] = {
+					216, -- [1]
+					225, -- [2]
+					211, -- [3]
+					1, -- [4]
+				},
+				["disabled"] = {
+					150, -- [1]
+					148, -- [2]
+					140, -- [3]
+					1, -- [4]
+				},
+			},
+			["text"] = {
+				["enabled"] = {
+					255, -- [1]
+					254, -- [2]
+					250, -- [3]
+					1, -- [4]
+				},
+				["disabled"] = {
+					147, -- [1]
+					151, -- [2]
+					139, -- [3]
+					1, -- [4]
+				},
+			},
+			["link"] = {
+				["enabled"] = {
+					49, -- [1]
+					56, -- [2]
+					133, -- [3]
+					1, -- [4]
+				},
+			},
+		},
+		["fontSizes"] = {
+			["normal"] = 15,
+			["small"] = 12,
+			["medium"] = 13,
+		},
+		["frameColors"] = {
+			["frameBG"] = {
+				["backdrop"] = {
+					24, -- [1]
+					24, -- [2]
+					24, -- [3]
+					0.93, -- [4]
+				},
+				["border"] = {
+					50, -- [1]
+					50, -- [2]
+					50, -- [3]
+					1, -- [4]
+				},
+			},
+			["content"] = {
+				["backdrop"] = {
+					45, -- [1]
+					45, -- [2]
+					45, -- [3]
+					1, -- [4]
+				},
+				["border"] = {
+					0, -- [1]
+					0, -- [2]
+					0, -- [3]
+					0, -- [4]
+				},
+			},
+			["frame"] = {
+				["backdrop"] = {
+					24, -- [1]
+					24, -- [2]
+					24, -- [3]
+					1, -- [4]
+				},
+				["border"] = {
+					100, -- [1]
+					100, -- [2]
+					100, -- [3]
+					0.3, -- [4]
+				},
+			},
+		},
+		["inlineColors"] = {
+			["link"] = {
+				153, -- [1]
+				255, -- [2]
+				255, -- [3]
+				1, -- [4]
+			},
+			["link2"] = {
+				153, -- [1]
+				255, -- [2]
+				255, -- [3]
+				1, -- [4]
+			},
+			["tooltip"] = {
+				130, -- [1]
+				130, -- [2]
+				250, -- [3]
+				1, -- [4]
+			},
+			["category"] = {
+				36, -- [1]
+				106, -- [2]
+				36, -- [3]
+				1, -- [4]
+			},
+			["category2"] = {
+				85, -- [1]
+				180, -- [2]
+				8, -- [3]
+				1, -- [4]
+			},
+		},
+	},
+	["p@Default@customPriceSourceTreeStatus"] = {
+	},
+	["g@ @bankUITab"] = "Warehousing",
+	["f@Horde - Thrall@pendingMail"] = {
+		["Leisho"] = {
+		},
+	},
+	["p@Default@embeddedTooltip"] = true,
+	["p@Default@defaultAuctionTab"] = "Shopping",
+	["g@ @operations"] = {
+	},
+	["p@Default@importParentOnly"] = false,
+	["p@Default@cleanBags"] = false,
+	["p@Default@destroyValueSource"] = "dbmarket",
+	["p@Default@deTooltip"] = true,
+	["p@Default@keepInParent"] = true,
+	["p@Default@operations"] = {
+		["Mailing"] = {
+			["Send to Kitha (warrior)"] = {
+				["ignoreFactionrealm"] = {
+				},
+				["relationships"] = {
+				},
+				["keepQty"] = 0,
+				["maxQty"] = 10,
+				["ignorePlayer"] = {
+				},
+				["restockSources"] = {
+				},
+				["target"] = "Kitha",
+			},
+			["Send to Alinastra (priest)"] = {
+				["ignoreFactionrealm"] = {
+				},
+				["relationships"] = {
+				},
+				["keepQty"] = 0,
+				["maxQty"] = 10,
+				["ignorePlayer"] = {
+				},
+				["restockSources"] = {
+				},
+				["target"] = "Alinastra",
+			},
+			["Send to Nalyria (hunter)"] = {
+				["ignoreFactionrealm"] = {
+				},
+				["relationships"] = {
+				},
+				["keepQty"] = 0,
+				["maxQty"] = 10,
+				["ignorePlayer"] = {
+				},
+				["restockSources"] = {
+				},
+				["target"] = "Nalyria",
+			},
+			["Send to Alyserys (rogue)"] = {
+				["ignoreFactionrealm"] = {
+				},
+				["relationships"] = {
+				},
+				["keepQty"] = 0,
+				["maxQty"] = 10,
+				["ignorePlayer"] = {
+				},
+				["restockSources"] = {
+				},
+				["target"] = "Alyserys",
+			},
+		},
+		["Warehousing"] = {
+		},
+		["TradeSkillMaster"] = {
+		},
+	},
+	["f@Horde - Thrall@bankUIGBankFramePosition"] = {
+		100, -- [1]
+		300, -- [2]
+	},
+	["f@Horde - Thrall@inventory"] = {
+		["Leisho"] = {
+			["reagentBank"] = {
+				["i:109118"] = 180,
+				["i:17194"] = 3,
+				["i:6889"] = 36,
+				["i:113264"] = 70,
+				["i:102543"] = 28,
+				["i:72238"] = 106,
+				["i:113111"] = 31,
+				["i:39354"] = 11,
+				["i:82441"] = 19,
+				["i:111672"] = 2,
+				["i:120945"] = 13,
+				["i:111666"] = 3,
+				["i:109126"] = 290,
+				["i:109141"] = 9,
+				["i:109128"] = 463,
+				["i:72120"] = 230,
+				["i:128500"] = 1,
+				["i:109127"] = 184,
+				["i:72235"] = 2,
+				["i:113262"] = 106,
+				["i:71998"] = 5,
+				["i:111557"] = 108,
+				["i:72103"] = 3,
+				["i:111674"] = 3,
+				["i:109137"] = 456,
+				["i:109138"] = 20,
+				["i:102542"] = 51,
+				["i:21877"] = 24,
+				["i:109129"] = 113,
+				["i:109136"] = 11,
+				["i:114781"] = 6,
+				["i:111668"] = 7,
+				["i:102541"] = 26,
+				["i:72988"] = 847,
+				["i:21881"] = 1,
+				["i:79254"] = 9,
+				["i:72234"] = 3,
+				["i:109124"] = 253,
+				["i:89112"] = 13,
+				["i:109119"] = 104,
+				["i:116053"] = 2,
+				["i:72092"] = 80,
+				["i:111595"] = 2,
+				["i:111676"] = 2,
+				["i:111665"] = 4,
+				["i:111601"] = 4,
+				["i:113263"] = 291,
+				["i:109133"] = 2,
+				["i:111663"] = 4,
+				["i:109135"] = 12,
+				["i:111671"] = 3,
+				["i:112377"] = 1452,
+				["i:111664"] = 3,
+				["i:79011"] = 2,
+				["i:111667"] = 2,
+				["i:74839"] = 5,
+				["i:118472"] = 12,
+				["i:111669"] = 5,
+				["i:111670"] = 4,
+				["i:74837"] = 3,
+				["i:127759"] = 84,
+				["i:110611"] = 131,
+				["i:109134"] = 1,
+				["i:79010"] = 2,
+				["i:111673"] = 4,
+				["i:115508"] = 4,
+				["i:53010"] = 17,
+				["i:110609"] = 188,
+				["i:74249"] = 100,
+				["i:72237"] = 1,
+				["i:109125"] = 251,
+				["i:79251"] = 1,
+				["i:109144"] = 8,
+				["i:72094"] = 2,
+			},
+			["bag"] = {
+				["i:126361"] = 1,
+				["i:124572"] = 1,
+				["i:109076"] = 19,
+				["i:95270"] = 1,
+				["i:10502"] = 1,
+				["i:126548"] = 1,
+				["i:117492"] = 1,
+				["i:110040"] = 1,
+				["i:109777"] = 1,
+				["i:78491"] = 1,
+				["i:124275"] = 1,
+				["i:126277"] = 1,
+				["i:79249"] = 103,
+				["i:126347"] = 1,
+				["i:126388"] = 1,
+				["i:122298"] = 1,
+				["i:109221"] = 4,
+				["i:113681"] = 8,
+				["i:118632"] = 17,
+				["i:126484"] = 1,
+				["i:69111"] = 1,
+				["i:118006"] = 19,
+				["i:95903"] = 1,
+				["i:113901"] = 1,
+				["i:124258"] = 1,
+				["i:124253"] = 2,
+				["i:77989"] = 1,
+				["i:71436"] = 1,
+				["i:126387"] = 1,
+				["i:126487"] = 1,
+				["i:126524"] = 1,
+				["i:125273"] = 1,
+				["i:126634"] = 1,
+				["i:126631"] = 1,
+				["i:126528"] = 1,
+				["i:103678"] = 1,
+				["i:99553"] = 1,
+				["i:113986"] = 1,
+				["i:71411"] = 1,
+				["i:124220"] = 1,
+				["i:126641"] = 1,
+				["i:124268"] = 1,
+				["i:126630"] = 1,
+				["i:45133"] = 1,
+				["i:39505"] = 1,
+				["i:126357"] = 1,
+				["i:109781"] = 1,
+				["i:69149"] = 1,
+				["i:71448"] = 1,
+				["i:118631"] = 19,
+				["i:109222"] = 31,
+				["i:124243"] = 1,
+				["i:124637"] = 1,
+				["i:71424"] = 1,
+				["i:116175"] = 1,
+				["i:124240"] = 1,
+				["i:126386"] = 1,
+				["i:126490"] = 1,
+				["i:124266"] = 1,
+				["i:102959"] = 1,
+				["i:110560"] = 1,
+				["i:126491"] = 1,
+				["i:126532"] = 1,
+				["i:5512"] = 1,
+				["i:112319"] = 1,
+				["i:124146"] = 1,
+				["i:78434"] = 1,
+				["i:99147"] = 1,
+				["i:87170"] = 1,
+				["i:126349"] = 1,
+				["i:109217"] = 15,
+				["i:78420"] = 1,
+				["i:78490"] = 1,
+				["i:126625"] = 1,
+				["i:114844"] = 3,
+				["i:71463"] = 1,
+				["i:126390"] = 1,
+				["i:126343"] = 1,
+				["i:109155"] = 4,
+				["i:124241"] = 1,
+				["i:109153"] = 16,
+				["i:122343"] = 1,
+				["i:118922"] = 1,
+				["i:126537"] = 1,
+				["i:122344"] = 7,
+				["i:102247"] = 1,
+				["i:118630"] = 7,
+				["i:124609"] = 1,
+				["i:116182"] = 1,
+				["i:6948"] = 1,
+				["i:128475"] = 1,
+				["i:109958"] = 1,
+				["i:110045"] = 1,
+				["i:109223"] = 24,
+				["i:109160"] = 6,
+			},
+			["mail"] = {
+			},
+			["auction"] = {
+			},
+			["bank"] = {
+			},
+		},
+	},
+	["g@ @optionsTreeStatus"] = {
+		["groups"] = {
+			["module"] = true,
+			["tooltip"] = true,
+		},
+		["scrollvalue"] = 0,
+		["selected"] = "module",
+		["treesizable"] = true,
+		["treewidth"] = 175,
+		["fullwidth"] = 801,
+	},
+	["p@Default@gotoNewGroup"] = true,
+	["p@Default@items"] = {
+		["i:127799"] = "Baleful Mail",
+		["i:127782"] = "Baleful Cloth",
+		["i:127793"] = "Baleful Leather",
+		["i:127820"] = "Baleful Plate",
+	},
+	["p@Default@tooltipOptions"] = {
+	},
+	["p@Default@moveImportedItems"] = false,
+	["g@ @ignoreRandomEnchants"] = false,
+	["g@ @moveDelay"] = 0,
+	["g@ @auctionSaleEnabled"] = true,
+	["g@ @tsmItemTweetEnabled"] = true,
+	["g@ @chatFrame"] = "",
+	["p@Default@cleanBank"] = false,
+	["p@Default@inventoryViewerPriceSource"] = "dbmarket",
+	["_version"] = 3,
+	["g@ @customPriceTooltips"] = {
+	},
+	["f@Horde - Thrall@guildVaults"] = {
+		["Vicious Cuddling"] = {
+		},
+	},
+	["g@ @frameStatus"] = {
+		["TSMMainFrame1"] = {
+			["y"] = 199.444488525391,
+			["x"] = 500.000030517578,
+			["hasLoaded"] = true,
+			["height"] = 686,
+			["defaults"] = {
+				["y"] = 200,
+				["x"] = 500,
+				["height"] = 686,
+				["scale"] = 1,
+				["width"] = 823,
+			},
+			["scale"] = 1,
+			["width"] = 823,
+		},
+	},
+	["p@Default@isBankui"] = true,
+	["g@ @auctionSaleSound"] = "TSM_NO_SOUND",
+	["_scopeKeys"] = {
+		["char"] = {
+			"Leisho - Thrall", -- [1]
+		},
+		["realm"] = {
+			"Thrall", -- [1]
+		},
+		["profile"] = {
+			"Default", -- [1]
+		},
+		["factionrealm"] = {
+			"Horde - Thrall", -- [1]
+		},
+	},
+	["g@ @vendorItems"] = {
+		["i:17194"] = 10,
+		["i:44854"] = 25,
+		["i:49908"] = 1500000,
+		["i:159"] = 25,
+		["i:27860"] = 6400,
+		["i:8343"] = 2000,
+		["i:10647"] = 2000,
+		["i:90146"] = 20000,
+		["i:4291"] = 500,
+		["i:30183"] = 700000,
+		["i:39354"] = 15,
+		["i:83092"] = 200000000,
+		["i:4340"] = 350,
+		["i:74854"] = 7000,
+		["i:39684"] = 9000,
+		["i:79740"] = 23,
+		["i:2594"] = 1500,
+		["i:17202"] = 10,
+		["i:40533"] = 50000,
+		["i:30817"] = 25,
+		["i:11291"] = 4500,
+		["i:4342"] = 2500,
+		["i:74832"] = 12000,
+		["i:58278"] = 16000,
+		["i:102539"] = 5000,
+		["i:2325"] = 1000,
+		["i:2604"] = 50,
+		["i:47556"] = 1250000,
+		["i:4399"] = 200,
+		["i:6260"] = 50,
+		["i:85583"] = 12000,
+		["i:102540"] = 5000,
+		["i:4537"] = 125,
+		["i:80433"] = 2000000,
+		["i:44499"] = 30000000,
+		["i:35948"] = 16000,
+		["i:62323"] = 60000,
+		["i:74852"] = 16000,
+		["i:67335"] = 445561,
+		["i:58265"] = 20000,
+		["i:46784"] = 25,
+		["i:44855"] = 25,
+		["i:45087"] = 1000000,
+		["i:2596"] = 120,
+		["i:5956"] = 18,
+		["i:7005"] = 82,
+		["i:4470"] = 38,
+		["i:35949"] = 8500,
+		["i:44501"] = 10000000,
+		["i:44500"] = 15000000,
+		["i:65892"] = 50000000,
+		["i:34412"] = 1000,
+		["i:38426"] = 30000,
+		["i:44853"] = 25,
+		["i:2324"] = 25,
+		["i:67319"] = 328990,
+		["i:6530"] = 100,
+		["i:46797"] = 25,
+		["i:85584"] = 17000,
+		["i:65893"] = 30000000,
+		["i:52188"] = 15000,
+		["i:85585"] = 27000,
+		["i:74659"] = 30000,
+		["i:10290"] = 2500,
+		["i:4341"] = 500,
+		["i:74845"] = 35000,
+		["i:4400"] = 2000,
+		["i:74851"] = 14000,
+		["i:2321"] = 100,
+		["i:2593"] = 150,
+		["i:23572"] = 500000,
+		["i:17196"] = 50,
+		["i:6261"] = 1000,
+		["i:14341"] = 5000,
+		["i:4289"] = 50,
+		["i:1179"] = 125,
+		["i:18567"] = 30000,
+		["i:2901"] = 81,
+		["i:2320"] = 10,
+		["i:74660"] = 15000,
+		["i:2595"] = 2000,
+		["i:2678"] = 10,
+		["i:3466"] = 2000,
+		["i:2605"] = 100,
+		["i:3857"] = 500,
+		["i:3371"] = 100,
+		["i:46796"] = 25,
+		["i:6217"] = 124,
+		["i:2880"] = 100,
+		["i:34249"] = 1000000,
+		["i:46793"] = 25,
+		["i:44835"] = 10,
+		["i:43102"] = 750000,
+	},
+	["p@Default@pricePerUnit"] = true,
+	["g@ @moduleOperationTabs"] = {
+		["Warehousing"] = 1,
+		["Mailing"] = 1,
+	},
+	["g@ @globalOperations"] = false,
+	["c@Leisho - Thrall@auctionMessages"] = {
+	},
+	["p@Default@prospectTooltip"] = true,
+	["f@Horde - Thrall@characterGuilds"] = {
+		["Leisho"] = "Vicious Cuddling",
+	},
+	["g@ @moduleOperationsTreeStatus"] = {
+		["Warehousing"] = {
+			["groups"] = {
+				["1"] = true,
+			},
+			["scrollvalue"] = 0,
+			["selected"] = 1,
+			["treesizable"] = true,
+			["treewidth"] = 175,
+			["fullwidth"] = 783,
+		},
+		["Mailing"] = {
+			["groups"] = {
+				true, -- [1]
+				["1Send to Alinastra (priest)"] = true,
+				["1Send to Nalyria (hunter)"] = true,
+				["1Send to Kitha (warrior)"] = true,
+				["1Send to Alyserys (rogue)"] = true,
+				["1"] = true,
+			},
+			["scrollvalue"] = 0,
+			["selected"] = "1Send to Alyserys (rogue)",
+			["treesizable"] = true,
+			["treewidth"] = 175,
+			["fullwidth"] = 783,
+		},
+	},
+	["g@ @auctionBuyEnabled"] = true,
+	["p@Default@auctionFrameMovable"] = true,
+	["p@Default@groups"] = {
+		["Baleful Leather"] = {
+			["Warehousing"] = {
+				"", -- [1]
+			},
+			["Mailing"] = {
+				"Send to Alyserys (rogue)", -- [1]
+			},
+		},
+		["Baleful Plate"] = {
+			["Warehousing"] = {
+				"", -- [1]
+			},
+			["Mailing"] = {
+				"", -- [1]
+				"Send to Kitha (warrior)", -- [2]
+			},
+		},
+		["Baleful Cloth"] = {
+			["Warehousing"] = {
+				"", -- [1]
+			},
+			["Mailing"] = {
+				"Send to Alinastra (priest)", -- [1]
+			},
+		},
+		["Baleful Mail"] = {
+			["Warehousing"] = {
+				"", -- [1]
+			},
+			["Mailing"] = {
+				"Send to Nalyria (hunter)", -- [1]
+			},
+		},
+	},
+	["p@Default@groupFilterPrice"] = "dbmarket",
+	["p@Default@gotoNewCustomPriceSource"] = true,
+	["p@Default@auctionFrameScale"] = 1,
+	["p@Default@vendorSellTooltip"] = true,
+	["f@Horde - Thrall@syncAccounts"] = {
+	},
+	["c@Leisho - Thrall@auctionPrices"] = {
+	},
+	["p@Default@groupOperationTooltip"] = true,
+	["p@Default@openAllBags"] = true,
+	["p@Default@groupTreeCollapsedStatus"] = {
+		["Mailing_Send"] = {
+		},
+	},
+	["f@Horde - Thrall@characters"] = {
+		["Leisho"] = "MONK",
+	},
+	["p@Default@savedThemes"] = {
+	},
+	["_currentProfile"] = {
+		["Leisho - Thrall"] = "Default",
+	},
+	["p@Default@millTooltip"] = true,
+	["f@Horde - Thrall@bankUIBankFramePosition"] = {
+		100, -- [1]
+		300, -- [2]
+	},
+	["p@Default@groupTreeStatus"] = {
+		["groups"] = {
+			true, -- [1]
+			["1"] = true,
+			["1Baleful Cloth"] = true,
+			["1Baleful Leather"] = true,
+			["1Baleful Plate"] = true,
+			["1Baleful Mail"] = true,
+		},
+		["scrollvalue"] = 0,
+		["selected"] = "1Baleful Mail",
+		["treesizable"] = true,
+		["treewidth"] = 175,
+		["fullwidth"] = 801,
+	},
+	["p@Default@transformTooltip"] = true,
+}

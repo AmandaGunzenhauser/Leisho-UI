@@ -1,0 +1,13 @@
+## Interface: 60200
+## Title: |cff00ff00TradeSkillMaster_ItemTracker|r
+## Notes: Tracks inventory across multiple characters including bags, banks, guild banks, auctions, and mail.
+## Author: Sapu94, Bart39
+## Version: v2.2
+## SavedVariables: TradeSkillMaster_ItemTrackerDB
+## Dependency: TradeSkillMaster
+## X-Curse-Packaged-Version: v2.2
+## X-Curse-Project-Name: TradeSkillMaster_ItemTracker
+## X-Curse-Project-ID: tradeskillmaster_itemtracker
+## X-Curse-Repository-ID: wow/tradeskillmaster_itemtracker/mainline
+
+TradeSkillMaster_ItemTracker.lua

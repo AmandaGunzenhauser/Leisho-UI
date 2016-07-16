@@ -1,0 +1,75 @@
+
+DataStore_ContainersDB = {
+	["profileKeys"] = {
+		["Alyserys - Thrall"] = "Alyserys - Thrall",
+	},
+	["global"] = {
+		["Characters"] = {
+			["Default.Thrall.Alyserys"] = {
+				["lastUpdate"] = 1456680983,
+				["Containers"] = {
+					["Bag4"] = {
+						["rarity"] = 2,
+						["ids"] = {
+							6948, -- [1]
+							21254, -- [2]
+							128506, -- [3]
+							128505, -- [4]
+							6256, -- [5]
+							79249, -- [6]
+							128510, -- [7]
+							128507, -- [8]
+						},
+						["links"] = {
+							"|cffffffff|Hitem:6948:0:0:0:0:0:0:0:90:259:0:0:0|h[Hearthstone]|h|r", -- [1]
+							"|cffffffff|Hitem:21254:0:0:0:0:0:0:0:90:259:0:0:0|h[Winter Veil Cookie]|h|r", -- [2]
+							"|cffffffff|Hitem:128506:0:0:0:0:0:0:0:90:259:0:0:0|h[Celebration Wand - Gnoll]|h|r", -- [3]
+							"|cffffffff|Hitem:128505:0:0:0:0:0:0:0:90:259:0:0:0|h[Celebration Wand - Murloc]|h|r", -- [4]
+							"|cffffffff|Hitem:6256:0:0:0:0:0:0:0:90:259:0:0:0|h[Fishing Pole]|h|r", -- [5]
+							"|cffffffff|Hitem:79249:0:0:0:0:0:0:0:90:259:0:0:0|h[Tome of the Clear Mind]|h|r", -- [6]
+							"|cffa335ee|Hitem:128510:0:0:0:0:0:0:0:90:259:0:0:0|h[Exquisite Costume Set: \"Edwin VanCleef\"]|h|r", -- [7]
+							"|cff0070dd|Hitem:128507:0:0:0:0:0:0:0:90:259:0:0:0|h[Inflatable Thunderfury, Blessed Blade of the Windseeker]|h|r", -- [8]
+						},
+						["link"] = "|cff1eff00|Hitem:54443:0:0:0:0:0:0:0:90:259:0:0:0|h[Embersilk Bag]|h|r",
+						["icon"] = "Interface\\ICONS\\INV_Misc_Bag_32.blp",
+						["size"] = 22,
+						["counts"] = {
+							[2] = 5,
+							[6] = 17,
+						},
+						["freeslots"] = 14,
+					},
+					["Bag0"] = {
+						["icon"] = "Interface\\Buttons\\Button-Backpack-Up",
+						["size"] = 16,
+						["freeslots"] = 16,
+					},
+					["Bag1"] = {
+						["link"] = "|cffffffff|Hitem:54443:0:0:0:0:0:0:0:90:259:0:0:0|h[]|h|r",
+						["icon"] = "Interface\\ICONS\\INV_Misc_Bag_32.blp",
+						["size"] = 22,
+						["freeslots"] = 22,
+					},
+					["Bag2"] = {
+						["link"] = "|cffffffff|Hitem:54443:0:0:0:0:0:0:0:90:259:0:0:0|h[]|h|r",
+						["icon"] = "Interface\\ICONS\\INV_Misc_Bag_32.blp",
+						["size"] = 22,
+						["freeslots"] = 22,
+					},
+					["Bag3"] = {
+						["link"] = "|cffffffff|Hitem:54443:0:0:0:0:0:0:0:90:259:0:0:0|h[]|h|r",
+						["icon"] = "Interface\\ICONS\\INV_Misc_Bag_32.blp",
+						["size"] = 22,
+						["freeslots"] = 22,
+					},
+					["Bag-3"] = {
+						["size"] = 98,
+					},
+				},
+				["numFreeBagSlots"] = 96,
+				["numBagSlots"] = 104,
+			},
+		},
+		["Version"] = 1,
+	},
+}

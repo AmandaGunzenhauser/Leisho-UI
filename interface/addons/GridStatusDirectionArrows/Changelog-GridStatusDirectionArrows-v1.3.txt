@@ -1,0 +1,31 @@
+------------------------------------------------------------------------
+r30 | slaren | 2015-02-09 16:44:58 +0000 (Mon, 09 Feb 2015) | 1 line
+Changed paths:
+   A /tags/v1.3 (from /trunk:29)
+
+Tagging as v1.3
+------------------------------------------------------------------------
+r29 | slaren | 2015-02-09 16:42:28 +0000 (Mon, 09 Feb 2015) | 1 line
+Changed paths:
+   M /trunk/GridStatusDirectionArrows.lua
+
+- Added option for always showing the status on units out of range, bypassing the normal filters
+------------------------------------------------------------------------
+r28 | slaren | 2015-02-09 16:28:58 +0000 (Mon, 09 Feb 2015) | 1 line
+Changed paths:
+   M /trunk/GridStatusDirectionArrows.lua
+
+- Added an option for changing the status color, can be used for changing the opacity and the text color when assigned to a text indicator
+------------------------------------------------------------------------
+r27 | slaren | 2015-02-09 15:57:39 +0000 (Mon, 09 Feb 2015) | 1 line
+Changed paths:
+   M /trunk/GridStatusDirectionArrows.lua
+
+- Fixed problem when changing profiles
+------------------------------------------------------------------------
+r26 | slaren | 2014-12-31 13:28:47 +0000 (Wed, 31 Dec 2014) | 1 line
+Changed paths:
+   M /trunk/GridStatusDirectionArrows.lua
+
+Fixed lua errors when UnitPosition returns nil
+------------------------------------------------------------------------

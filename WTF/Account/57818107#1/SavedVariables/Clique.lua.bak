@@ -1,0 +1,1001 @@
+
+CliqueDB = nil
+CliqueDB3 = {
+	["char"] = {
+		["Leisho - Thrall"] = {
+			["alerthidden"] = true,
+			["sec_profileKey"] = "Brewmaster",
+			["pri_profileKey"] = "Leisho - Thrall",
+			["fastooc"] = false,
+			["downclick"] = false,
+			["specswap"] = true,
+		},
+		["Raijah - Thrall"] = {
+			["sec_profileKey"] = "Holy Pally",
+			["fastooc"] = false,
+			["specswap"] = true,
+			["downclick"] = false,
+			["pri_profileKey"] = "Raijah - Thrall",
+			["alerthidden"] = true,
+		},
+		["Kitha - Thrall"] = {
+			["alerthidden"] = true,
+		},
+	},
+	["profileKeys"] = {
+		["Leisho - Thrall"] = "Brewmaster",
+		["Kargen - Thrall"] = "Kargen - Thrall",
+		["Nalyria - Thrall"] = "Nalyria - Thrall",
+		["Kitha - Thrall"] = "Kitha - Thrall",
+		["Raijah - Thrall"] = "Raijah - Thrall",
+	},
+	["profiles"] = {
+		["Leisho - Thrall"] = {
+			["bindings"] = {
+				{
+					["type"] = "target",
+					["sets"] = {
+						["default"] = true,
+					},
+					["key"] = "BUTTON1",
+					["unit"] = "mouseover",
+				}, -- [1]
+				{
+					["spell"] = "Fortifying Brew",
+					["key"] = "ALT-CTRL-PAGEUP",
+					["sets"] = {
+						["default"] = true,
+					},
+					["icon"] = "Interface\\Icons\\ability_monk_fortifyingale_new",
+					["type"] = "spell",
+				}, -- [2]
+				{
+					["type"] = "menu",
+					["key"] = "SHIFT-BUTTON2",
+					["sets"] = {
+						["default"] = true,
+					},
+				}, -- [3]
+				{
+					["spell"] = "Renewing Mist",
+					["key"] = "BUTTON1",
+					["sets"] = {
+						["default"] = true,
+					},
+					["icon"] = "Interface\\Icons\\ability_monk_renewingmists",
+					["type"] = "spell",
+				}, -- [4]
+				{
+					["spell"] = "Soothing Mist",
+					["key"] = "BUTTON2",
+					["sets"] = {
+						["default"] = true,
+					},
+					["icon"] = "Interface\\Icons\\ability_monk_soothingmists",
+					["type"] = "spell",
+				}, -- [5]
+				{
+					["spell"] = "Uplift",
+					["key"] = "ALT-CTRL-PAGEDOWN",
+					["sets"] = {
+						["default"] = true,
+					},
+					["icon"] = "Interface\\Icons\\ability_monk_uplift",
+					["type"] = "spell",
+				}, -- [6]
+				{
+					["spell"] = "Life Cocoon",
+					["key"] = "ALT-SHIFT-F10",
+					["sets"] = {
+						["default"] = true,
+					},
+					["icon"] = "Interface\\Icons\\ability_monk_chicocoon",
+					["type"] = "spell",
+				}, -- [7]
+				{
+					["spell"] = "Enveloping Mist",
+					["key"] = "ALT-SHIFT-F9",
+					["sets"] = {
+						["default"] = true,
+					},
+					["icon"] = "Interface\\Icons\\spell_monk_envelopingmist",
+					["type"] = "spell",
+				}, -- [8]
+				{
+					["spell"] = "Chi Brew",
+					["key"] = "ALT-CTRL-1",
+					["sets"] = {
+						["global"] = true,
+						["default"] = true,
+					},
+					["icon"] = "Interface\\Icons\\ability_monk_chibrew",
+					["type"] = "spell",
+				}, -- [9]
+				{
+					["spell"] = "Nimble Brew",
+					["key"] = "CTRL-SHIFT-=",
+					["sets"] = {
+						["global"] = true,
+						["default"] = true,
+					},
+					["icon"] = "Interface\\Icons\\spell_monk_nimblebrew",
+					["type"] = "spell",
+				}, -- [10]
+				{
+					["spell"] = "Charging Ox Wave",
+					["key"] = "ALT-CTRL-SHIFT-DASH",
+					["sets"] = {
+						["global"] = true,
+						["default"] = true,
+					},
+					["icon"] = "Interface\\Icons\\ability_monk_chargingoxwave",
+					["type"] = "spell",
+				}, -- [11]
+				{
+					["macrotext"] = "/use Winged Guardian",
+					["type"] = "macro",
+					["key"] = "ALT-CTRL-2",
+					["sets"] = {
+						["global"] = true,
+						["default"] = true,
+					},
+				}, -- [12]
+				{
+					["spell"] = "Summon Jade Serpent Statue",
+					["key"] = "ALT-CTRL-INSERT",
+					["sets"] = {
+						["global"] = true,
+					},
+					["icon"] = "Interface\\Icons\\ability_monk_summonserpentstatue",
+					["type"] = "spell",
+				}, -- [13]
+				{
+					["spell"] = "Roll",
+					["key"] = "ALT-CTRL-3",
+					["sets"] = {
+						["global"] = true,
+					},
+					["icon"] = "Interface\\Icons\\ability_monk_roll",
+					["type"] = "spell",
+				}, -- [14]
+				{
+					["spell"] = "Thunder Focus Tea",
+					["key"] = "ALT-CTRL-UP",
+					["sets"] = {
+						["global"] = true,
+					},
+					["icon"] = "Interface\\Icons\\ability_monk_thunderfocustea",
+					["type"] = "spell",
+				}, -- [15]
+				{
+					["spell"] = "Transcendence",
+					["key"] = "SHIFT-BUTTON1",
+					["sets"] = {
+						["global"] = true,
+					},
+					["icon"] = "Interface\\Icons\\monk_ability_transcendence",
+					["type"] = "spell",
+				}, -- [16]
+				{
+					["spell"] = "Mana Tea",
+					["key"] = "ALT-CTRL-RIGHT",
+					["sets"] = {
+						["global"] = true,
+					},
+					["icon"] = "Interface\\Icons\\monk_ability_cherrymanatea",
+					["type"] = "spell",
+				}, -- [17]
+				{
+					["spell"] = "Roll",
+					["key"] = "CTRL-SHIFT-BACKSPACE",
+					["sets"] = {
+						["global"] = true,
+					},
+					["icon"] = "Interface\\Icons\\ability_monk_roll",
+					["type"] = "spell",
+				}, -- [18]
+				{
+					["spell"] = "Chi Burst",
+					["key"] = "ALT-CTRL-HOME",
+					["sets"] = {
+						["global"] = true,
+					},
+					["icon"] = "Interface\\Icons\\Spell_Arcane_ArcaneTorrent",
+					["type"] = "spell",
+				}, -- [19]
+				{
+					["spell"] = "Transcendence: Transfer",
+					["key"] = "SHIFT-BUTTON2",
+					["sets"] = {
+						["global"] = true,
+					},
+					["icon"] = "Interface\\Icons\\Spell_Shaman_SpectralTransformation",
+					["type"] = "spell",
+				}, -- [20]
+				{
+					["spell"] = "Surging Mist",
+					["key"] = "ALT-CTRL-END",
+					["sets"] = {
+						["global"] = true,
+					},
+					["icon"] = "Interface\\Icons\\ability_monk_surgingmist",
+					["type"] = "spell",
+				}, -- [21]
+				{
+					["spell"] = "Expel Harm",
+					["key"] = "ALT-CTRL-PAGEDOWN",
+					["sets"] = {
+						["global"] = true,
+					},
+					["icon"] = "Interface\\Icons\\ability_monk_expelharm",
+					["type"] = "spell",
+				}, -- [22]
+			},
+		},
+		["Raijah - Thrall"] = {
+			["bindings"] = {
+				{
+					["type"] = "menu",
+					["key"] = "BUTTON2",
+					["sets"] = {
+						["default"] = true,
+					},
+				}, -- [1]
+				{
+					["spell"] = "Hand of Sacrifice",
+					["key"] = "BUTTON2",
+					["sets"] = {
+						["default"] = true,
+					},
+					["icon"] = "Interface\\Icons\\Spell_Holy_SealOfSacrifice",
+					["type"] = "spell",
+				}, -- [2]
+				{
+					["spell"] = "Speed of Light",
+					["key"] = "ALT-CTRL-3",
+					["sets"] = {
+						["default"] = true,
+					},
+					["icon"] = "Interface\\Icons\\ability_paladin_speedoflight",
+					["type"] = "spell",
+				}, -- [3]
+				{
+					["type"] = "target",
+					["sets"] = {
+						["default"] = true,
+					},
+					["key"] = "BUTTON1",
+					["unit"] = "mouseover",
+				}, -- [4]
+				{
+					["spell"] = "Ardent Defender",
+					["key"] = "SHIFT-BUTTON2",
+					["sets"] = {
+						["global"] = true,
+						["default"] = true,
+					},
+					["icon"] = "Interface\\Icons\\Spell_Holy_ArdentDefender",
+					["type"] = "spell",
+				}, -- [5]
+				{
+					["spell"] = "Consecration",
+					["key"] = "ALT-CTRL-1",
+					["sets"] = {
+						["global"] = true,
+						["default"] = true,
+					},
+					["icon"] = "Interface\\Icons\\Spell_Holy_InnerFire",
+					["type"] = "spell",
+				}, -- [6]
+				{
+					["spell"] = "Sacred Shield",
+					["key"] = "ALT-CTRL-RIGHT",
+					["sets"] = {
+						["global"] = true,
+						["default"] = true,
+					},
+					["icon"] = "Interface\\Icons\\Ability_Paladin_BlessedMending",
+					["type"] = "spell",
+				}, -- [7]
+				{
+					["spell"] = "Guardian of Ancient Kings",
+					["key"] = "SHIFT-BUTTON1",
+					["sets"] = {
+						["global"] = true,
+						["default"] = true,
+					},
+					["icon"] = "Interface\\Icons\\Spell_Holy_Heroism",
+					["type"] = "spell",
+				}, -- [8]
+				{
+					["spell"] = "Divine Protection",
+					["key"] = "ALT-CTRL-UP",
+					["sets"] = {
+						["global"] = true,
+						["default"] = true,
+					},
+					["icon"] = "Interface\\Icons\\spell_holy_divineprotection",
+					["type"] = "spell",
+				}, -- [9]
+				{
+					["macrotext"] = "/use Shieldtronic Shield",
+					["type"] = "macro",
+					["key"] = "ALT-SHIFT-F9",
+					["sets"] = {
+						["global"] = true,
+						["default"] = true,
+					},
+				}, -- [10]
+				{
+					["spell"] = "Avenger's Shield",
+					["key"] = "ALT-CTRL-DOWN",
+					["sets"] = {
+						["global"] = true,
+						["default"] = true,
+					},
+					["icon"] = "Interface\\Icons\\Spell_Holy_AvengersShield",
+					["type"] = "spell",
+				}, -- [11]
+				{
+					["macrotext"] = "/use Healing Tonic",
+					["type"] = "macro",
+					["key"] = "ALT-SHIFT-F10",
+					["sets"] = {
+						["global"] = true,
+						["default"] = true,
+					},
+				}, -- [12]
+				{
+					["spell"] = "Lay on Hands",
+					["key"] = "ALT-SHIFT-F7",
+					["sets"] = {
+						["global"] = true,
+						["default"] = true,
+					},
+					["icon"] = "Interface\\Icons\\Spell_Holy_LayOnHands",
+					["type"] = "spell",
+				}, -- [13]
+				{
+					["spell"] = "Reckoning",
+					["key"] = "ALT-CTRL-PAGEDOWN",
+					["sets"] = {
+						["global"] = true,
+						["default"] = true,
+					},
+					["icon"] = "Interface\\Icons\\Spell_Holy_UnyieldingFaith",
+					["type"] = "spell",
+				}, -- [14]
+				{
+					["spell"] = "Rebuke",
+					["key"] = "ALT-CTRL-HOME",
+					["sets"] = {
+						["global"] = true,
+						["default"] = true,
+					},
+					["icon"] = "Interface\\Icons\\spell_holy_rebuke",
+					["type"] = "spell",
+				}, -- [15]
+				{
+					["macrotext"] = "/cast Sandstone Drake",
+					["type"] = "macro",
+					["key"] = "ALT-CTRL-SHIFT-2",
+					["sets"] = {
+						["global"] = true,
+						["default"] = true,
+					},
+				}, -- [16]
+				{
+					["spell"] = "Fist of Justice",
+					["key"] = "ALT-CTRL-SHIFT-HOME",
+					["sets"] = {
+						["global"] = true,
+					},
+					["icon"] = "Interface\\Icons\\Spell_Holy_FistOfJustice",
+					["type"] = "spell",
+				}, -- [17]
+				{
+					["spell"] = "Consecration",
+					["key"] = "CTRL-SHIFT-BACKSPACE",
+					["sets"] = {
+						["global"] = true,
+					},
+					["icon"] = "Interface\\Icons\\Spell_Holy_InnerFire",
+					["type"] = "spell",
+				}, -- [18]
+				{
+					["spell"] = "Word of Glory",
+					["key"] = "ALT-CTRL-INSERT",
+					["sets"] = {
+						["global"] = true,
+					},
+					["icon"] = "INTERFACE\\ICONS\\inv_helmet_96",
+					["type"] = "spell",
+				}, -- [19]
+				{
+					["spell"] = "Hand of Freedom",
+					["key"] = "ALT-CTRL-SHIFT-DASH",
+					["sets"] = {
+						["global"] = true,
+					},
+					["icon"] = "Interface\\Icons\\Spell_Holy_SealOfValor",
+					["type"] = "spell",
+				}, -- [20]
+				{
+					["spell"] = "Execution Sentence",
+					["key"] = "BUTTON1",
+					["sets"] = {
+						["friend"] = true,
+						["enemy"] = true,
+					},
+					["icon"] = "Interface\\Icons\\spell_paladin_executionsentence",
+					["type"] = "spell",
+				}, -- [21]
+				{
+					["spell"] = "Guardian of Ancient Kings",
+					["key"] = "RIGHT",
+					["sets"] = {
+						["global"] = true,
+					},
+					["icon"] = "Interface\\Icons\\Spell_Holy_Heroism",
+					["type"] = "spell",
+				}, -- [22]
+				{
+					["spell"] = "Holy Wrath",
+					["key"] = "CTRL-SHIFT-=",
+					["sets"] = {
+						["global"] = true,
+					},
+					["icon"] = "Interface\\Icons\\Spell_Holy_WeaponMastery",
+					["type"] = "spell",
+				}, -- [23]
+				{
+					["spell"] = "Word of Glory",
+					["key"] = "ALT-CTRL-END",
+					["sets"] = {
+						["global"] = true,
+					},
+					["icon"] = "INTERFACE\\ICONS\\inv_helmet_96",
+					["type"] = "spell",
+				}, -- [24]
+			},
+		},
+		["Holy Pally"] = {
+			["bindings"] = {
+				{
+					["sets"] = {
+						["default"] = true,
+					},
+					["type"] = "target",
+					["key"] = "CTRL-BUTTON1",
+					["unit"] = "mouseover",
+				}, -- [1]
+				{
+					["spell"] = "Holy Radiance",
+					["key"] = "ALT-CTRL-1",
+					["sets"] = {
+						["default"] = true,
+					},
+					["icon"] = "INTERFACE\\ICONS\\spell_paladin_divinecircle",
+					["type"] = "spell",
+				}, -- [2]
+				{
+					["spell"] = "Hand of Sacrifice",
+					["key"] = "ALT-CTRL-INSERT",
+					["sets"] = {
+						["default"] = true,
+					},
+					["icon"] = "Interface\\Icons\\Spell_Holy_SealOfSacrifice",
+					["type"] = "spell",
+				}, -- [3]
+				{
+					["spell"] = "Eternal Flame",
+					["key"] = "ALT-CTRL-END",
+					["sets"] = {
+						["default"] = true,
+					},
+					["icon"] = "Interface\\Icons\\INV_Torch_Thrown",
+					["type"] = "spell",
+				}, -- [4]
+				{
+					["spell"] = "Flash of Light",
+					["key"] = "BUTTON2",
+					["sets"] = {
+						["default"] = true,
+					},
+					["icon"] = "Interface\\Icons\\Spell_Holy_FlashHeal",
+					["type"] = "spell",
+				}, -- [5]
+				{
+					["spell"] = "Holy Shock",
+					["key"] = "BUTTON1",
+					["sets"] = {
+						["default"] = true,
+					},
+					["icon"] = "Interface\\Icons\\Spell_Holy_SearingLight",
+					["type"] = "spell",
+				}, -- [6]
+				{
+					["spell"] = "Beacon of Light",
+					["key"] = "ALT-CTRL-DOWN",
+					["sets"] = {
+						["default"] = true,
+					},
+					["icon"] = "Interface\\Icons\\Ability_Paladin_BeaconofLight",
+					["type"] = "spell",
+				}, -- [7]
+				{
+					["type"] = "menu",
+					["key"] = "CTRL-BUTTON2",
+					["sets"] = {
+						["default"] = true,
+					},
+				}, -- [8]
+				{
+					["macrotext"] = "/cast Spawn of Galakras",
+					["type"] = "macro",
+					["key"] = "ALT-CTRL-SHIFT-2",
+					["sets"] = {
+						["global"] = true,
+						["default"] = true,
+					},
+				}, -- [9]
+				{
+					["spell"] = "Holy Light",
+					["key"] = "ALT-SHIFT-F9",
+					["sets"] = {
+						["global"] = true,
+						["default"] = true,
+					},
+					["icon"] = "Interface\\Icons\\Spell_Holy_SurgeOfLight",
+					["type"] = "spell",
+				}, -- [10]
+				{
+					["spell"] = "Lay on Hands",
+					["key"] = "ALT-SHIFT-F7",
+					["sets"] = {
+						["global"] = true,
+						["default"] = true,
+					},
+					["icon"] = "Interface\\Icons\\Spell_Holy_LayOnHands",
+					["type"] = "spell",
+				}, -- [11]
+				{
+					["spell"] = "Hand of Freedom",
+					["key"] = "ALT-CTRL-SHIFT-DASH",
+					["sets"] = {
+						["global"] = true,
+						["default"] = true,
+					},
+					["icon"] = "Interface\\Icons\\Spell_Holy_SealOfValor",
+					["type"] = "spell",
+				}, -- [12]
+				{
+					["spell"] = "Blinding Light",
+					["key"] = "CTRL-SHIFT-=",
+					["sets"] = {
+						["global"] = true,
+						["default"] = true,
+					},
+					["icon"] = "Interface\\Icons\\ability_paladin_blindinglight",
+					["type"] = "spell",
+				}, -- [13]
+				{
+					["spell"] = "Light of Dawn",
+					["key"] = "ALT-CTRL-PAGEDOWN",
+					["sets"] = {
+						["global"] = true,
+						["default"] = true,
+					},
+					["icon"] = "INTERFACE\\ICONS\\spell_paladin_lightofdawn",
+					["type"] = "spell",
+				}, -- [14]
+				{
+					["spell"] = "Cleanse",
+					["key"] = "CTRL-SHIFT-BACKSPACE",
+					["sets"] = {
+						["global"] = true,
+						["default"] = true,
+					},
+					["icon"] = "Interface\\Icons\\Spell_Holy_Purify",
+					["type"] = "spell",
+				}, -- [15]
+				{
+					["spell"] = "Rebuke",
+					["key"] = "ALT-CTRL-HOME",
+					["sets"] = {
+						["default"] = true,
+						["global"] = true,
+						["enemy"] = true,
+					},
+					["icon"] = "Interface\\Icons\\spell_holy_rebuke",
+					["type"] = "spell",
+				}, -- [16]
+				{
+					["spell"] = "Divine Shield",
+					["key"] = "SHIFT-BUTTON1",
+					["sets"] = {
+						["global"] = true,
+					},
+					["icon"] = "Interface\\Icons\\spell_holy_divineshield",
+					["type"] = "spell",
+				}, -- [17]
+				{
+					["spell"] = "Divine Protection",
+					["key"] = "ALT-CTRL-RIGHT",
+					["sets"] = {
+						["global"] = true,
+					},
+					["icon"] = "Interface\\Icons\\spell_holy_divineprotection",
+					["type"] = "spell",
+				}, -- [18]
+				{
+					["spell"] = "Avenging Wrath",
+					["key"] = "ALT-CTRL-PAGEUP",
+					["sets"] = {
+						["global"] = true,
+					},
+					["icon"] = "Interface\\Icons\\Spell_Holy_AvengineWrath",
+					["type"] = "spell",
+				}, -- [19]
+			},
+		},
+		["Nalyria - Thrall"] = {
+			["bindings"] = {
+				{
+					["type"] = "target",
+					["sets"] = {
+						["default"] = true,
+					},
+					["key"] = "BUTTON1",
+					["unit"] = "mouseover",
+				}, -- [1]
+				{
+					["type"] = "menu",
+					["key"] = "BUTTON2",
+					["sets"] = {
+						["default"] = true,
+					},
+				}, -- [2]
+			},
+		},
+		["Kargen - Thrall"] = {
+			["bindings"] = {
+				{
+					["sets"] = {
+						["default"] = true,
+					},
+					["type"] = "target",
+					["key"] = "BUTTON1",
+					["unit"] = "mouseover",
+				}, -- [1]
+				{
+					["type"] = "menu",
+					["key"] = "BUTTON2",
+					["sets"] = {
+						["default"] = true,
+					},
+				}, -- [2]
+			},
+		},
+		["Kitha - Thrall"] = {
+			["bindings"] = {
+				{
+					["type"] = "target",
+					["sets"] = {
+						["default"] = true,
+					},
+					["key"] = "BUTTON1",
+					["unit"] = "mouseover",
+				}, -- [1]
+				{
+					["type"] = "menu",
+					["key"] = "BUTTON2",
+					["sets"] = {
+						["default"] = true,
+					},
+				}, -- [2]
+				{
+					["spell"] = "Taunt",
+					["key"] = "ALT-CTRL-PAGEDOWN",
+					["sets"] = {
+						["default"] = true,
+						["enemy"] = true,
+					},
+					["icon"] = "Interface\\Icons\\Spell_Nature_Reincarnation",
+					["type"] = "spell",
+				}, -- [3]
+				{
+					["spell"] = "Thunder Clap",
+					["key"] = "CTRL-SHIFT-=",
+					["sets"] = {
+						["global"] = true,
+						["default"] = true,
+					},
+					["icon"] = "Interface\\Icons\\Spell_Nature_ThunderClap",
+					["type"] = "spell",
+				}, -- [4]
+				{
+					["spell"] = "Heroic Leap",
+					["key"] = "ALT-CTRL-3",
+					["sets"] = {
+						["global"] = true,
+						["default"] = true,
+					},
+					["icon"] = "Interface\\Icons\\Ability_HeroicLeap",
+					["type"] = "spell",
+				}, -- [5]
+				{
+					["spell"] = "Enraged Regeneration",
+					["key"] = "SHIFT-BUTTON1",
+					["sets"] = {
+						["global"] = true,
+						["default"] = true,
+					},
+					["icon"] = "Interface\\Icons\\Ability_Warrior_FocusedRage",
+					["type"] = "spell",
+				}, -- [6]
+				{
+					["spell"] = "Hamstring",
+					["key"] = "ALT-CTRL-RIGHT",
+					["sets"] = {
+						["default"] = true,
+						["enemy"] = true,
+					},
+					["icon"] = "Interface\\Icons\\Ability_ShockWave",
+					["type"] = "spell",
+				}, -- [7]
+				{
+					["spell"] = "Intimidating Shout",
+					["key"] = "ALT-CTRL-UP",
+					["sets"] = {
+						["default"] = true,
+						["enemy"] = true,
+					},
+					["icon"] = "Interface\\Icons\\Ability_GolemThunderClap",
+					["type"] = "spell",
+				}, -- [8]
+				{
+					["spell"] = "Pummel",
+					["key"] = "ALT-CTRL-HOME",
+					["sets"] = {
+						["default"] = true,
+						["enemy"] = true,
+					},
+					["icon"] = "Interface\\Icons\\INV_Gauntlets_04",
+					["type"] = "spell",
+				}, -- [9]
+				{
+					["spell"] = "Thunder Clap",
+					["key"] = "ALT-CTRL-1",
+					["sets"] = {
+						["global"] = true,
+					},
+					["icon"] = "Interface\\Icons\\Spell_Nature_ThunderClap",
+					["type"] = "spell",
+				}, -- [10]
+				{
+					["spell"] = "Charge",
+					["key"] = "ALT-CTRL-END",
+					["sets"] = {
+						["global"] = true,
+					},
+					["icon"] = "Interface\\Icons\\Ability_Warrior_Charge",
+					["type"] = "spell",
+				}, -- [11]
+			},
+		},
+		["Brewmaster"] = {
+			["bindings"] = {
+				{
+					["sets"] = {
+						["default"] = true,
+					},
+					["type"] = "target",
+					["key"] = "SHIFT-BUTTON1",
+					["unit"] = "mouseover",
+				}, -- [1]
+				{
+					["type"] = "menu",
+					["key"] = "SHIFT-BUTTON2",
+					["sets"] = {
+						["default"] = true,
+					},
+				}, -- [2]
+				{
+					["spell"] = "Zen Sphere",
+					["key"] = "BUTTON1",
+					["sets"] = {
+						["default"] = true,
+					},
+					["icon"] = "Interface\\Icons\\ability_monk_forcesphere",
+					["type"] = "spell",
+				}, -- [3]
+				{
+					["spell"] = "Roll",
+					["key"] = "ALT-CTRL-3",
+					["sets"] = {
+						["global"] = true,
+						["default"] = true,
+					},
+					["icon"] = "Interface\\Icons\\ability_monk_roll",
+					["type"] = "spell",
+				}, -- [4]
+				{
+					["spell"] = "Nimble Brew",
+					["key"] = "ALT-CTRL-SHIFT-DASH",
+					["sets"] = {
+						["global"] = true,
+						["default"] = true,
+					},
+					["icon"] = "Interface\\Icons\\spell_monk_nimblebrew",
+					["type"] = "spell",
+				}, -- [5]
+				{
+					["spell"] = "Fortifying Brew",
+					["key"] = "ALT-CTRL-PAGEUP",
+					["sets"] = {
+						["global"] = true,
+						["default"] = true,
+					},
+					["icon"] = "Interface\\Icons\\ability_monk_fortifyingale_new",
+					["type"] = "spell",
+				}, -- [6]
+				{
+					["spell"] = "Chi Brew",
+					["key"] = "ALT-CTRL-RIGHT",
+					["sets"] = {
+						["global"] = true,
+						["default"] = true,
+					},
+					["icon"] = "Interface\\Icons\\ability_monk_chibrew",
+					["type"] = "spell",
+				}, -- [7]
+				{
+					["spell"] = "Purifying Brew",
+					["key"] = "ALT-CTRL-UP",
+					["sets"] = {
+						["global"] = true,
+						["default"] = true,
+					},
+					["icon"] = "INTERFACE\\ICONS\\inv_misc_beer_06",
+					["type"] = "spell",
+				}, -- [8]
+				{
+					["spell"] = "Spear Hand Strike",
+					["key"] = "ALT-CTRL-HOME",
+					["sets"] = {
+						["global"] = true,
+						["default"] = true,
+					},
+					["icon"] = "Interface\\Icons\\ability_monk_spearhand",
+					["type"] = "spell",
+				}, -- [9]
+				{
+					["spell"] = "Elusive Brew",
+					["key"] = "ALT-CTRL-1",
+					["sets"] = {
+						["global"] = true,
+						["default"] = true,
+					},
+					["icon"] = "Interface\\Icons\\ability_monk_elusiveale",
+					["type"] = "spell",
+				}, -- [10]
+				{
+					["spell"] = "Detox",
+					["key"] = "ALT-CTRL-END",
+					["sets"] = {
+						["default"] = true,
+						["enemy"] = true,
+					},
+					["icon"] = "Interface\\Icons\\ability_rogue_imrovedrecuperate",
+					["type"] = "spell",
+				}, -- [11]
+				{
+					["macrotext"] = "/use Winged Guardian",
+					["type"] = "macro",
+					["key"] = "ALT-CTRL-2",
+					["sets"] = {
+						["global"] = true,
+						["default"] = true,
+					},
+				}, -- [12]
+				{
+					["spell"] = "Transcendence: Transfer",
+					["key"] = "SHIFT-BUTTON2",
+					["sets"] = {
+						["global"] = true,
+						["default"] = true,
+					},
+					["icon"] = "Interface\\Icons\\Spell_Shaman_SpectralTransformation",
+					["type"] = "spell",
+				}, -- [13]
+				{
+					["spell"] = "Summon Black Ox Statue",
+					["key"] = "ALT-CTRL-INSERT",
+					["sets"] = {
+						["global"] = true,
+						["default"] = true,
+					},
+					["icon"] = "Interface\\Icons\\monk_ability_summonoxstatue",
+					["type"] = "spell",
+				}, -- [14]
+				{
+					["spell"] = "Transcendence",
+					["key"] = "SHIFT-BUTTON1",
+					["sets"] = {
+						["global"] = true,
+						["default"] = true,
+					},
+					["icon"] = "Interface\\Icons\\monk_ability_transcendence",
+					["type"] = "spell",
+				}, -- [15]
+				{
+					["spell"] = "Provoke",
+					["key"] = "ALT-CTRL-PAGEDOWN",
+					["sets"] = {
+						["global"] = true,
+						["default"] = true,
+					},
+					["icon"] = "Interface\\Icons\\ability_monk_provoke",
+					["type"] = "spell",
+				}, -- [16]
+				{
+					["spell"] = "Touch of Death",
+					["key"] = "ALT-CTRL-SHIFT-1",
+					["sets"] = {
+						["global"] = true,
+						["default"] = true,
+					},
+					["icon"] = "Interface\\Icons\\ability_monk_touchofdeath",
+					["type"] = "spell",
+				}, -- [17]
+				{
+					["spell"] = "Dizzying Haze",
+					["key"] = "ALT-CTRL-DOWN",
+					["sets"] = {
+						["global"] = true,
+						["default"] = true,
+					},
+					["icon"] = "Interface\\Icons\\ability_monk_drunkenhaze",
+					["type"] = "spell",
+				}, -- [18]
+				{
+					["spell"] = "Breath of Fire",
+					["key"] = "CTRL-SHIFT-=",
+					["sets"] = {
+						["global"] = true,
+					},
+					["icon"] = "Interface\\Icons\\ability_monk_breathoffire",
+					["type"] = "spell",
+				}, -- [19]
+				{
+					["spell"] = "Guard",
+					["key"] = "ALT-SHIFT-F7",
+					["sets"] = {
+						["global"] = true,
+					},
+					["icon"] = "Interface\\Icons\\ability_monk_guard",
+					["type"] = "spell",
+				}, -- [20]
+				{
+					["spell"] = "Surging Mist",
+					["key"] = "BUTTON2",
+					["sets"] = {
+						["friend"] = true,
+					},
+					["icon"] = "Interface\\Icons\\ability_monk_surgingmist",
+					["type"] = "spell",
+				}, -- [21]
+				{
+					["spell"] = "Rushing Jade Wind",
+					["key"] = "CTRL-SHIFT-BACKSPACE",
+					["sets"] = {
+						["global"] = true,
+					},
+					["icon"] = "Interface\\Icons\\ability_monk_rushingjadewind",
+					["type"] = "spell",
+				}, -- [22]
+			},
+		},
+	},
+}

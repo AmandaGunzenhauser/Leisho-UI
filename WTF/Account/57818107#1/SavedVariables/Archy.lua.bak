@@ -1,0 +1,192 @@
+
+ArchyDB = {
+	["char"] = {
+		["Leisho - Thrall"] = {
+			["digsites"] = {
+				["blacklist"] = {
+				},
+				["stats"] = {
+					[55414] = {
+						["fragments"] = 0,
+						["counter"] = 0,
+						["keystones"] = 0,
+						["looted"] = 0,
+						["surveys"] = 0,
+					},
+					[92166] = {
+						["fragments"] = 0,
+						["counter"] = 0,
+						["keystones"] = 0,
+						["looted"] = 0,
+						["surveys"] = 0,
+					},
+					[56439] = {
+						["fragments"] = 0,
+						["counter"] = 0,
+						["keystones"] = 0,
+						["looted"] = 0,
+						["surveys"] = 0,
+					},
+					[56347] = {
+						["fragments"] = 0,
+						["counter"] = 0,
+						["keystones"] = 0,
+						["looted"] = 0,
+						["surveys"] = 0,
+					},
+					[55480] = {
+						["fragments"] = 0,
+						["counter"] = 0,
+						["keystones"] = 0,
+						["looted"] = 0,
+						["surveys"] = 0,
+					},
+					[55450] = {
+						["fragments"] = 0,
+						["counter"] = 0,
+						["keystones"] = 0,
+						["looted"] = 0,
+						["surveys"] = 0,
+					},
+					[177497] = {
+						["fragments"] = 0,
+						["counter"] = 0,
+						["keystones"] = 0,
+						["looted"] = 0,
+						["surveys"] = 0,
+					},
+					[56537] = {
+						["fragments"] = 0,
+						["counter"] = 0,
+						["keystones"] = 0,
+						["looted"] = 0,
+						["surveys"] = 0,
+					},
+					[54864] = {
+						["fragments"] = 0,
+						["counter"] = 0,
+						["keystones"] = 0,
+						["looted"] = 0,
+						["surveys"] = 0,
+					},
+					[56420] = {
+						["fragments"] = 0,
+						["counter"] = 0,
+						["keystones"] = 0,
+						["looted"] = 0,
+						["surveys"] = 0,
+					},
+					[56516] = {
+						["fragments"] = 0,
+						["counter"] = 0,
+						["keystones"] = 0,
+						["looted"] = 0,
+						["surveys"] = 0,
+					},
+					[307958] = {
+						["fragments"] = 0,
+						["counter"] = 0,
+						["keystones"] = 0,
+						["looted"] = 0,
+						["surveys"] = 0,
+					},
+					[307964] = {
+						["fragments"] = 0,
+						["counter"] = 0,
+						["keystones"] = 0,
+						["looted"] = 0,
+						["surveys"] = 0,
+					},
+					[307981] = {
+						["fragments"] = 0,
+						["counter"] = 0,
+						["keystones"] = 0,
+						["looted"] = 0,
+						["surveys"] = 0,
+					},
+					[307950] = {
+						["fragments"] = 0,
+						["counter"] = 0,
+						["keystones"] = 0,
+						["looted"] = 0,
+						["surveys"] = 0,
+					},
+					[66961] = {
+						["fragments"] = 0,
+						["counter"] = 0,
+						["keystones"] = 0,
+						["looted"] = 0,
+						["surveys"] = 0,
+					},
+					[60369] = {
+						["fragments"] = 0,
+						["counter"] = 0,
+						["keystones"] = 0,
+						["looted"] = 0,
+						["surveys"] = 0,
+					},
+					[56339] = {
+						["fragments"] = 0,
+						["counter"] = 0,
+						["keystones"] = 0,
+						["looted"] = 0,
+						["surveys"] = 0,
+					},
+					[56587] = {
+						["fragments"] = 0,
+						["counter"] = 0,
+						["keystones"] = 0,
+						["looted"] = 0,
+						["surveys"] = 0,
+					},
+					[56402] = {
+						["fragments"] = 0,
+						["counter"] = 0,
+						["keystones"] = 0,
+						["looted"] = 0,
+						["surveys"] = 0,
+					},
+					[56535] = {
+						["fragments"] = 0,
+						["counter"] = 0,
+						["keystones"] = 0,
+						["looted"] = 0,
+						["surveys"] = 0,
+					},
+					[56410] = {
+						["fragments"] = 0,
+						["counter"] = 0,
+						["keystones"] = 0,
+						["looted"] = 0,
+						["surveys"] = 0,
+					},
+					[92162] = {
+						["fragments"] = 0,
+						["counter"] = 0,
+						["keystones"] = 0,
+						["looted"] = 0,
+						["surveys"] = 0,
+					},
+					[56349] = {
+						["fragments"] = 0,
+						["counter"] = 0,
+						["keystones"] = 0,
+						["looted"] = 0,
+						["surveys"] = 0,
+					},
+				},
+			},
+		},
+	},
+	["global"] = {
+		["surveyNodes"] = {
+		},
+	},
+	["profileKeys"] = {
+		["Leisho - Thrall"] = "Default",
+	},
+	["profiles"] = {
+		["Default"] = {
+		},
+	},
+}

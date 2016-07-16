@@ -1,0 +1,13 @@
+
+DataStore_GarrisonsDB = {
+	["profileKeys"] = {
+		["Alyserys - Thrall"] = "Alyserys - Thrall",
+	},
+	["global"] = {
+		["Characters"] = {
+			["Default.Thrall.Alyserys"] = {
+				["lastUpdate"] = 1456680983,
+			},
+		},
+	},
+}

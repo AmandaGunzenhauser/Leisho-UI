@@ -1,0 +1,19 @@
+############################
+# Warcraft Game Files
+############################
+Cache/*
+Data/*
+Logs/*
+Interface/Addons/Blizzard_*
+Updates/*
+Screenshots/*
+*.exe
+*.dll
+*.*fil
+*.db
+*cache*.*
+*.manifest
+*.mpq
+*CUFProfiles.txt
+*.psd
+*.afdesign

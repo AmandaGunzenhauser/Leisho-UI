@@ -1,0 +1,99 @@
+Version 1.05
+============
+
+ o Added the 'h4' tag.
+
+ o Added 'Little Tommy Newcomer' as an opponent.
+
+ o Added a workaround to handle occasions when the Blizzard function
+   'C_PetJournal.SetPetLoadOutInfo' doesn't actually load a pet.
+
+ o Added an 'Interface/AddOns' panel to allow settings to be modified.
+
+ o Added support for assigning a category to pet teams
+
+ o Added (experimental) support for displaying the breed of pets in pet teams.
+
+ o Added the ability to reset the tutorials.
+
+ o The icon for any pet team that matches the current load out will now
+   highlighted.
+
+Version 1.04
+============
+
+ o Added support for editing a pet team's strategy during a pet battle.
+
+ o Fixed a bug which meant an HTML strategy was displayed as plain text if the
+   pet team in the Pet Team Strategy frame was changed during a pet battle.
+
+ o Fixed a bug that meant the Opponent drop down in the Edit Pet Team panel
+   didn't contain any names.
+
+ o Fixed a bug that meant the HTML bold tag caused an error in the Pet Team
+   Strategy panel.
+
+ o Added support for the '<pre>' tag to the HTML frame.
+
+ o Changed list items in an '<ol>' tag in the HTML frame to use the web
+   standard default of '.', rather than ':'.
+
+ o Made the sort for the pet team list case-insensitive and UTF-8 aware.
+
+ o Made the 'Column:' and 'Left:' values in the Strategy edit box UTF-8 aware.
+
+ o Made the error messages in the HTML frame UTF=8 aware.
+
+ o Fixed a bug in the Import feature that could prevent a pet team from being
+   imported under certain circumstances.
+
+ o Added Erris the Collector/Kura Thunderhoof as opponents. Teams for either
+   will automatically change to the correct opponent for a character's faction
+   when they log in.
+
+ o The current selection in the Opponents drop down will now be visible when
+   it first appears.
+
+ o Ctrl-clicking on an existing pet team will now open the 'Create Pet Team'
+   panel. This saves scrolling all the way to the bottom to click 'New Team'.
+
+Version 1.03
+============
+
+ o Fixed a bug that caused an error if a pet team was imported from another
+   AddOn with a name longer than the maximum permitted by this AddOn.
+
+ o Fixed a bug that caused an error if an HTML attribute didn't have a closing
+   quote in a pet team's strategy.
+
+ o Added support for trailing space and newline characters when importing
+   pet teams.
+
+ o The date and patch a pet team was last edited are now displayed at the
+   bottom of the strategy.
+
+ o The pet teams can now be filtered on when they were last edited.
+
+Version 1.02
+============
+
+ o Added code to handle the Blizzard Pet Journal being loaded by other addons
+   while the player is logging in.
+
+ o Fixed a bug that prevented pet teams with empty slots from being imported.
+
+ o Added a feature that adds extra menu items to the right-click menu for pet
+   teams in 'Pet Battle Teams' addon. The extra menu items allow individual
+   or all pet teams to be exported to this addon.
+
+Version 1.01
+============
+
+ o Fixed a bug introduced while tidying up the code in preparation for
+   releasing the initial version.
+
+Version 1.00
+============
+
+ o Initial release.
+
