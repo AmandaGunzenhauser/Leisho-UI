@@ -1,10 +1,11 @@
 
 TradeSkillMaster_WarehousingDB = {
-	["g@ @ShowLogData"] = false,
-	["_hash"] = 185553,
 	["f@Alliance - Thrall@BagState"] = {
 	},
-	["_version"] = 1,
+	["_hash"] = 185553,
+	["g@ @ShowLogData"] = false,
+	["f@Horde - Thrall@BagState"] = {
+	},
 	["_scopeKeys"] = {
 		["char"] = {
 			"Leisho - Thrall", -- [1]
@@ -18,23 +19,22 @@ TradeSkillMaster_WarehousingDB = {
 			"Leisho - Durotan", -- [9]
 			"Kargen - Thrall", -- [10]
 		},
+		["realm"] = {
+			"Thrall", -- [1]
+			"Durotan", -- [2]
+		},
+		["profile"] = {
+			"Default", -- [1]
+		},
 		["factionrealm"] = {
 			"Horde - Thrall", -- [1]
 			"Neutral - Durotan", -- [2]
 			"Alliance - Thrall", -- [3]
 		},
-		["profile"] = {
-			"Default", -- [1]
-		},
-		["realm"] = {
-			"Thrall", -- [1]
-			"Durotan", -- [2]
-		},
 	},
 	["f@Neutral - Durotan@BagState"] = {
 	},
-	["f@Horde - Thrall@BagState"] = {
-	},
+	["_version"] = 1,
 	["_currentProfile"] = {
 		["Alyserys - Thrall"] = "Default",
 		["Leisho - Thrall"] = "Default",

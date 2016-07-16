@@ -51,34 +51,34 @@ DataStore_CurrenciesDB = {
 				["Mark of the World Tree"] = 29,
 				["Elder Charm of Good Fortune"] = 16,
 				["Bloody Coin"] = 15,
-				["Lesser Charm of Good Fortune"] = 2,
+				["Mogu Rune of Fate"] = 20,
 				["Valor"] = 19,
-				["Oil"] = 17,
-				["Illustrious Jewelcrafter's Token"] = 31,
 				["Garrison Resources"] = 9,
-				["Dungeon and Raid"] = 18,
+				["Lesser Charm of Good Fortune"] = 2,
+				["Oil"] = 17,
+				["Ironpaw Token"] = 11,
 				["Artifact Fragment"] = 21,
 				["Warforged Seal"] = 4,
 				["Mists of Pandaria"] = 1,
-				["Timewarped Badge"] = 26,
+				["Tol Barad Commendation"] = 12,
 				["Player vs. Player"] = 5,
-				["Mote of Darkness"] = 25,
+				["Timewarped Badge"] = 26,
 				["Seal of Tempered Fate"] = 23,
 				["Seal of Inevitable Fate"] = 22,
-				["Timeless Coin"] = 3,
 				["Miscellaneous"] = 10,
+				["Conquest Points"] = 6,
 				["Epicurean's Award"] = 28,
 				["Honor Points"] = 7,
-				["Conquest Points"] = 6,
 				["Warlords of Draenor"] = 8,
+				["Timeless Coin"] = 3,
 				["Essence of Corrupted Deathwing"] = 24,
 				["Apexis Crystal"] = 13,
 				["Darkmoon Prize Ticket"] = 14,
 				["Cataclysm"] = 30,
-				["Tol Barad Commendation"] = 12,
-				["Ironpaw Token"] = 11,
+				["Mote of Darkness"] = 25,
+				["Dungeon and Raid"] = 18,
 				["Champion's Seal"] = 27,
-				["Mogu Rune of Fate"] = 20,
+				["Illustrious Jewelcrafter's Token"] = 31,
 			},
 		},
 		["Characters"] = {
@@ -113,8 +113,8 @@ DataStore_CurrenciesDB = {
 					[390] = "0-0-22700-0",
 					[823] = "0-0-0-0",
 					[392] = "0-0-0-0",
-					[824] = "1772-0-0-10000",
 					[994] = "0-0-0-0",
+					[824] = "1772-0-0-10000",
 				},
 			},
 			["Default.Thrall.Ahka"] = {
@@ -159,8 +159,8 @@ DataStore_CurrenciesDB = {
 					[390] = "0-0-49700-0",
 					[823] = "345-0-0-0",
 					[392] = "1860-0-0-4000",
-					[824] = "10000-0-0-10000",
 					[994] = "0-0-0-0",
+					[824] = "10000-0-0-10000",
 				},
 			},
 			["Default.Thrall.Kargen"] = {
@@ -202,8 +202,8 @@ DataStore_CurrenciesDB = {
 					[390] = "0-0-49700-0",
 					[823] = "0-0-0-0",
 					[392] = "1390-0-0-4000",
-					[824] = "942-0-0-10000",
 					[994] = "0-0-0-0",
+					[824] = "942-0-0-10000",
 				},
 			},
 			["Default.Thrall.Leisho"] = {
@@ -251,15 +251,15 @@ DataStore_CurrenciesDB = {
 					214, -- [14]
 					250, -- [15]
 				},
-				["lastUpdate"] = 1468701174,
+				["lastUpdate"] = 1468702523,
 				["CurrencyInfo"] = {
 					[395] = "0-0-0-0",
 					[396] = "0-0-10-3000",
 					[390] = "4190-0-13509-0",
 					[823] = "86267-0-0-0",
 					[392] = "2597-0-0-4000",
-					[994] = "20-0-0-20",
 					[824] = "9835-0-0-10000",
+					[994] = "20-0-0-20",
 				},
 			},
 			["Default.Thrall.Raijah"] = {
@@ -317,8 +317,8 @@ DataStore_CurrenciesDB = {
 					[390] = "0-0-51200-0",
 					[823] = "39719-0-0-0",
 					[392] = "925-0-0-4000",
-					[994] = "14-0-0-20",
 					[824] = "3608-0-0-10000",
+					[994] = "14-0-0-20",
 				},
 			},
 			["Default.Thrall.Alyserys"] = {
@@ -338,6 +338,22 @@ DataStore_CurrenciesDB = {
 					[390] = "0-0-51200-0",
 					[823] = "0-0-0-0",
 					[392] = "1006-0-0-4000",
+					[824] = "0-0-0-0",
+					[994] = "0-0-0-0",
+				},
+			},
+			["Default.Durotan.Leisho"] = {
+				["Currencies"] = {
+					11, -- [1]
+					12, -- [2]
+				},
+				["lastUpdate"] = 1463324518,
+				["CurrencyInfo"] = {
+					[395] = "0-0-0-0",
+					[396] = "0-0-0-0",
+					[390] = "0-0-39200-0",
+					[823] = "0-0-0-0",
+					[392] = "0-0-0-0",
 					[994] = "0-0-0-0",
 					[824] = "0-0-0-0",
 				},
@@ -381,8 +397,43 @@ DataStore_CurrenciesDB = {
 					[390] = "0-0-49700-0",
 					[823] = "0-0-0-0",
 					[392] = "402-0-0-4000",
-					[994] = "0-0-0-0",
 					[824] = "1201-0-0-10000",
+					[994] = "0-0-0-0",
+				},
+			},
+			["Default.Thrall.Thilaira"] = {
+				["Currencies"] = {
+					17, -- [1]
+					108818, -- [2]
+					11, -- [3]
+					12, -- [4]
+				},
+				["Archeology"] = {
+					0, -- [1]
+					0, -- [2]
+					0, -- [3]
+					0, -- [4]
+					0, -- [5]
+					0, -- [6]
+					0, -- [7]
+					0, -- [8]
+					0, -- [9]
+					0, -- [10]
+					0, -- [11]
+					0, -- [12]
+					0, -- [13]
+					0, -- [14]
+					0, -- [15]
+				},
+				["lastUpdate"] = 1462676615,
+				["CurrencyInfo"] = {
+					[395] = "0-0-0-0",
+					[396] = "0-0-0-0",
+					[390] = "0-0-37700-0",
+					[823] = "0-0-0-0",
+					[392] = "0-0-0-0",
+					[824] = "850-0-0-10000",
+					[994] = "0-0-0-0",
 				},
 			},
 			["Default.Thrall.Nalyria"] = {
@@ -430,59 +481,8 @@ DataStore_CurrenciesDB = {
 					[390] = "0-0-49700-0",
 					[823] = "2180-0-0-0",
 					[392] = "461-0-0-4000",
+					[994] = "0-0-0-0",
 					[824] = "2198-0-0-10000",
-					[994] = "0-0-0-0",
-				},
-			},
-			["Default.Thrall.Thilaira"] = {
-				["Currencies"] = {
-					17, -- [1]
-					108818, -- [2]
-					11, -- [3]
-					12, -- [4]
-				},
-				["Archeology"] = {
-					0, -- [1]
-					0, -- [2]
-					0, -- [3]
-					0, -- [4]
-					0, -- [5]
-					0, -- [6]
-					0, -- [7]
-					0, -- [8]
-					0, -- [9]
-					0, -- [10]
-					0, -- [11]
-					0, -- [12]
-					0, -- [13]
-					0, -- [14]
-					0, -- [15]
-				},
-				["lastUpdate"] = 1462676615,
-				["CurrencyInfo"] = {
-					[395] = "0-0-0-0",
-					[396] = "0-0-0-0",
-					[390] = "0-0-37700-0",
-					[823] = "0-0-0-0",
-					[392] = "0-0-0-0",
-					[994] = "0-0-0-0",
-					[824] = "850-0-0-10000",
-				},
-			},
-			["Default.Durotan.Leisho"] = {
-				["Currencies"] = {
-					11, -- [1]
-					12, -- [2]
-				},
-				["lastUpdate"] = 1463324518,
-				["CurrencyInfo"] = {
-					[395] = "0-0-0-0",
-					[396] = "0-0-0-0",
-					[390] = "0-0-39200-0",
-					[823] = "0-0-0-0",
-					[392] = "0-0-0-0",
-					[824] = "0-0-0-0",
-					[994] = "0-0-0-0",
 				},
 			},
 		},

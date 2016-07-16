@@ -4,6 +4,7 @@
 Cache/*
 Data/*
 Logs/*
+Errors/*
 Interface/Addons/Blizzard_*
 Updates/*
 Screenshots/*

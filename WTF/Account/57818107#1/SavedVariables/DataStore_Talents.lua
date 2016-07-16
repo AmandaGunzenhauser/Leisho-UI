@@ -17,6 +17,7 @@ DataStore_TalentsDB = {
 			["Default.Thrall.Kitha"] = {
 				["ActiveTalents"] = 2,
 				["lastUpdate"] = 1456713351,
+				["Class"] = "WARRIOR",
 				["GlyphList"] = {
 					11, -- [1]
 					7914, -- [2]
@@ -66,11 +67,11 @@ DataStore_TalentsDB = {
 					17572, -- [46]
 					17588, -- [47]
 				},
-				["Class"] = "WARRIOR",
 			},
 			["Default.Thrall.Ahka"] = {
 				["ActiveTalents"] = 2,
 				["lastUpdate"] = 1467478742,
+				["Class"] = "SHAMAN",
 				["GlyphList"] = {
 					11, -- [1]
 					3450, -- [2]
@@ -131,11 +132,11 @@ DataStore_TalentsDB = {
 					9796, -- [57]
 					7620, -- [58]
 				},
-				["Class"] = "SHAMAN",
 			},
 			["Default.Thrall.Kargen"] = {
 				["ActiveTalents"] = 1,
 				["lastUpdate"] = 1467479185,
+				["Class"] = "DRUID",
 				["GlyphList"] = {
 					11, -- [1]
 					6954, -- [2]
@@ -189,12 +190,10 @@ DataStore_TalentsDB = {
 					19300, -- [50]
 					2628, -- [51]
 				},
-				["Class"] = "DRUID",
 			},
 			["Default.Thrall.Leisho"] = {
 				["ActiveTalents"] = 1,
-				["lastUpdate"] = 1468701174,
-				["Class"] = "MONK",
+				["lastUpdate"] = 1468702523,
 				["GlyphList"] = {
 					11, -- [1]
 					16250, -- [2]
@@ -239,11 +238,11 @@ DataStore_TalentsDB = {
 					16660, -- [41]
 					16628, -- [42]
 				},
+				["Class"] = "MONK",
 			},
 			["Default.Thrall.Raijah"] = {
 				["ActiveTalents"] = 1,
 				["lastUpdate"] = 1468171446,
-				["Class"] = "PALADIN",
 				["GlyphList"] = {
 					11, -- [1]
 					3018, -- [2]
@@ -295,11 +294,11 @@ DataStore_TalentsDB = {
 					15812, -- [48]
 					7300, -- [49]
 				},
+				["Class"] = "PALADIN",
 			},
 			["Default.Thrall.Alyserys"] = {
 				["ActiveTalents"] = 1,
 				["lastUpdate"] = 1467761888,
-				["Class"] = "ROGUE",
 				["GlyphList"] = {
 					11, -- [1]
 					6282, -- [2]
@@ -341,11 +340,57 @@ DataStore_TalentsDB = {
 					7444, -- [38]
 					7460, -- [39]
 				},
+				["Class"] = "ROGUE",
+			},
+			["Default.Durotan.Leisho"] = {
+				["GlyphList"] = {
+					11, -- [1]
+					16554, -- [2]
+					16242, -- [3]
+					16498, -- [4]
+					19346, -- [5]
+					18162, -- [6]
+					16562, -- [7]
+					18178, -- [8]
+					19394, -- [9]
+					18194, -- [10]
+					16482, -- [11]
+					16402, -- [12]
+					18258, -- [13]
+					15970, -- [14]
+					18210, -- [15]
+					16338, -- [16]
+					16418, -- [17]
+					16306, -- [18]
+					16514, -- [19]
+					16642, -- [20]
+					15954, -- [21]
+					18226, -- [22]
+					16210, -- [23]
+					18274, -- [24]
+					16018, -- [25]
+					16226, -- [26]
+					16610, -- [27]
+					16178, -- [28]
+					18242, -- [29]
+					18290, -- [30]
+					15986, -- [31]
+					13, -- [32]
+					16884, -- [33]
+					16724, -- [34]
+					16660, -- [35]
+					16276, -- [36]
+					16628, -- [37]
+					16532, -- [38]
+					16452, -- [39]
+					16468, -- [40]
+					16708, -- [41]
+					16676, -- [42]
+				},
 			},
 			["Default.Thrall.Alinastra"] = {
 				["ActiveTalents"] = 2,
 				["lastUpdate"] = 1467479027,
-				["Class"] = "PRIEST",
 				["GlyphList"] = {
 					11, -- [1]
 					4026, -- [2]
@@ -404,56 +449,11 @@ DataStore_TalentsDB = {
 					16836, -- [55]
 					16788, -- [56]
 				},
-			},
-			["Default.Thrall.Nalyria"] = {
-				["ActiveTalents"] = 1,
-				["lastUpdate"] = 1467478939,
-				["GlyphList"] = {
-					11, -- [1]
-					5818, -- [2]
-					16378, -- [3]
-					10842, -- [4]
-					5722, -- [5]
-					5738, -- [6]
-					5706, -- [7]
-					5658, -- [8]
-					5674, -- [9]
-					11130, -- [10]
-					5786, -- [11]
-					5850, -- [12]
-					5634, -- [13]
-					5682, -- [14]
-					17666, -- [15]
-					5794, -- [16]
-					5746, -- [17]
-					5762, -- [18]
-					17634, -- [19]
-					11090, -- [20]
-					5906, -- [21]
-					5826, -- [22]
-					18082, -- [23]
-					18098, -- [24]
-					5938, -- [25]
-					11058, -- [26]
-					13, -- [27]
-					11084, -- [28]
-					5628, -- [29]
-					16860, -- [30]
-					7052, -- [31]
-					7036, -- [32]
-					7084, -- [33]
-					5868, -- [34]
-					16356, -- [35]
-					7092, -- [36]
-					7060, -- [37]
-					18052, -- [38]
-				},
-				["Class"] = "HUNTER",
+				["Class"] = "PRIEST",
 			},
 			["Default.Thrall.Thilaira"] = {
 				["ActiveTalents"] = 1,
 				["lastUpdate"] = 1462676615,
-				["Class"] = "WARLOCK",
 				["GlyphList"] = {
 					11, -- [1]
 					4474, -- [2]
@@ -494,51 +494,51 @@ DataStore_TalentsDB = {
 					7636, -- [37]
 					4404, -- [38]
 				},
+				["Class"] = "WARLOCK",
 			},
-			["Default.Durotan.Leisho"] = {
+			["Default.Thrall.Nalyria"] = {
+				["ActiveTalents"] = 1,
+				["lastUpdate"] = 1467478939,
+				["Class"] = "HUNTER",
 				["GlyphList"] = {
 					11, -- [1]
-					16554, -- [2]
-					16242, -- [3]
-					16498, -- [4]
-					19346, -- [5]
-					18162, -- [6]
-					16562, -- [7]
-					18178, -- [8]
-					19394, -- [9]
-					18194, -- [10]
-					16482, -- [11]
-					16402, -- [12]
-					18258, -- [13]
-					15970, -- [14]
-					18210, -- [15]
-					16338, -- [16]
-					16418, -- [17]
-					16306, -- [18]
-					16514, -- [19]
-					16642, -- [20]
-					15954, -- [21]
-					18226, -- [22]
-					16210, -- [23]
-					18274, -- [24]
-					16018, -- [25]
-					16226, -- [26]
-					16610, -- [27]
-					16178, -- [28]
-					18242, -- [29]
-					18290, -- [30]
-					15986, -- [31]
-					13, -- [32]
-					16884, -- [33]
-					16724, -- [34]
-					16660, -- [35]
-					16276, -- [36]
-					16628, -- [37]
-					16532, -- [38]
-					16452, -- [39]
-					16468, -- [40]
-					16708, -- [41]
-					16676, -- [42]
+					5818, -- [2]
+					16378, -- [3]
+					10842, -- [4]
+					5722, -- [5]
+					5738, -- [6]
+					5706, -- [7]
+					5658, -- [8]
+					5674, -- [9]
+					11130, -- [10]
+					5786, -- [11]
+					5850, -- [12]
+					5634, -- [13]
+					5682, -- [14]
+					17666, -- [15]
+					5794, -- [16]
+					5746, -- [17]
+					5762, -- [18]
+					17634, -- [19]
+					11090, -- [20]
+					5906, -- [21]
+					5826, -- [22]
+					18082, -- [23]
+					18098, -- [24]
+					5938, -- [25]
+					11058, -- [26]
+					13, -- [27]
+					11084, -- [28]
+					5628, -- [29]
+					16860, -- [30]
+					7052, -- [31]
+					7036, -- [32]
+					7084, -- [33]
+					5868, -- [34]
+					16356, -- [35]
+					7092, -- [36]
+					7060, -- [37]
+					18052, -- [38]
 				},
 			},
 		},
@@ -739,7 +739,7 @@ DataStore_TalentsDB = {
 				[1154] = "Miraculous Dispelling",
 				[706] = "Holy Shock",
 				[1155] = "Inquisitor",
-				[456] = "Seal of Blood",
+				[1068] = "Hand of Sacrifice",
 				[1156] = "Silence",
 				[354] = "Mending",
 				[1157] = "Redeemer",
@@ -763,7 +763,7 @@ DataStore_TalentsDB = {
 				[1166] = "Lava Spread",
 				[712] = "Mind Spike",
 				[1167] = "Reactive Shielding",
-				[561] = "Immediate Truth",
+				[508] = "Victory Rush",
 				[1168] = "Shamanistic Resolve",
 				[357] = "Deterrence",
 				[1169] = "Shocks",
@@ -771,15 +771,15 @@ DataStore_TalentsDB = {
 				[1170] = "Spiritwalker's Focus",
 				[714] = "Vendetta",
 				[1171] = "Spiritwalker's Aegis",
-				[190] = "Luminous Charger",
-				[703] = "Divine Storm",
+				[937] = "The Treant",
+				[392] = "Ambush",
 				[358] = "Disengage",
 				[1173] = "Dark Soul",
 				[486] = "Gushing Wound",
-				[701] = "Beacon of Light",
+				[198] = "Divinity",
 				[716] = "Stealth",
 				[1175] = "Life Pact",
-				[1124] = "Maim",
+				[178] = "Skull Bash",
 				[1176] = "Metamorphosis",
 				[359] = "Freezing Trap",
 				[1177] = "Shadowflame",
@@ -803,147 +803,147 @@ DataStore_TalentsDB = {
 				[1186] = "Rallying Cry",
 				[181] = "Entangling Roots",
 				[1187] = "Shattering Throw",
-				[933] = "Fae Silence",
+				[1125] = "Shapemender",
 				[1188] = "Flawless Defense",
 				[362] = "Explosive Trap",
 				[851] = "Thunder Strike",
 				[490] = "Bloody Healing",
 				[191] = "Focused Shield",
 				[192] = "Burden of Guilt",
-				[189] = "Consecration",
-				[1083] = "Pillar of Light",
-				[1009] = "Mass Exorcism",
+				[754] = "Totemic Vigor",
+				[1052] = "Shadowy Friends",
+				[505] = "Sweeping Strikes",
 				[363] = "Animal Bond",
 				[273] = "Conflagrate",
 				[491] = "Enraged Speed",
 				[559] = "Denounce",
-				[275] = "Verdant Spheres",
+				[929] = "Blind",
 				[214] = "Spirit Walk",
-				[292] = "Falling Meteor",
-				[466] = "Pick Pocket",
+				[1093] = "Flaming Serpent",
+				[397] = "Evasion",
 				[364] = "No Escape",
 				[289] = "Soulstone",
 				[492] = "Hindering Strikes",
-				[551] = "Dash",
+				[396] = "Recuperate",
 				[709] = "Leap of Faith",
-				[1203] = "Merciful Wrath",
-				[494] = "Bloodthirst",
-				[495] = "Rude Interruption",
+				[215] = "Capacitor Totem",
+				[987] = "Falling Avenger",
+				[431] = "Aquatic Form",
 				[365] = "Pathfinding",
 				[1201] = "Frostbrand Weapon",
-				[252] = "Purify",
+				[1006] = "Vampiric Embrace",
 				[1202] = "Mind Harvest",
 				[183] = "Double Jeopardy",
-				[215] = "Capacitor Totem",
+				[1203] = "Merciful Wrath",
 				[986] = "Focused Wrath",
-				[184] = "Devotion Aura",
+				[734] = "Cloak of Shadows",
 				[366] = "Tame Beast",
 				[1205] = "Savagery",
-				[987] = "Falling Avenger",
+				[494] = "Bloodthirst",
 				[1206] = "The Solstice",
-				[1213] = "Flapping Owl",
+				[432] = "The Chameleon",
 				[1207] = "Purify Spirit",
 				[988] = "Righteous Retreat",
 				[1208] = "Cleanse",
 				[733] = "Disguise",
 				[1209] = "Detoxing",
-				[989] = "Bladed Judgment",
+				[495] = "Rude Interruption",
 				[1210] = "Nature's Cure",
-				[734] = "Cloak of Shadows",
+				[184] = "Devotion Aura",
 				[1211] = "Purification",
 				[990] = "Crow Feast",
 				[1212] = "Flying Fists",
 				[735] = "Thunder",
-				[432] = "The Chameleon",
+				[1213] = "Flapping Owl",
 				[496] = "Gag Order",
-				[286] = "Shadow Bolt",
+				[194] = "Final Wrath",
 				[736] = "Feral Spirit",
 				[1215] = "Ascendance",
 				[1013] = "Renewing Mist",
-				[737] = "Riptide",
 				[369] = "Mend Pet",
+				[737] = "Riptide",
 				[433] = "Charm Woodland Creature",
 				[497] = "Blitz",
-				[1017] = "Flying Serpent Kick",
+				[213] = "Chain Lightning",
 				[185] = "Holy Wrath",
 				[217] = "Fire Elemental Totem",
-				[261] = "Holy Fire",
-				[552] = "Ghost Wolf",
-				[991] = "Burning Anger",
+				[711] = "Focused Mending",
+				[276] = "Nightmares",
+				[272] = "Hand of Gul'dan",
 				[434] = "Blooming",
-				[1101] = "Weaponmaster",
+				[481] = "Enslave Demon",
 				[612] = "Thunderstorm",
-				[211] = "Water Shield",
-				[502] = "Shield Slam",
+				[291] = "Unstable Affliction",
+				[1003] = "Mind Flay",
 				[996] = "Battle Healer",
 				[613] = "Stars",
 				[371] = "Solace",
 				[435] = "Grace",
 				[499] = "Die by the Sword",
-				[713] = "Binding Heal",
+				[216] = "Purge",
 				[186] = "Divine Protection",
 				[218] = "Fire Nova",
 				[998] = "Guard",
-				[401] = "Garrote",
-				[997] = "Rapid Rolling",
+				[277] = "Fear",
+				[400] = "Feint",
 				[1032] = "Nimble Brew",
 				[999] = "Zen Meditation",
 				[1044] = "Water Roll",
 				[1028] = "Rising Tiger Kick",
-				[1014] = "Touch of Death",
-				[274] = "Siphon Life",
-				[403] = "Gouge",
-				[731] = "Deadly Momentum",
-				[715] = "Killing Spree",
-				[1001] = "Surging Mist",
 				[263] = "Power Word: Shield",
+				[274] = "Siphon Life",
+				[715] = "Killing Spree",
+				[731] = "Deadly Momentum",
+				[403] = "Gouge",
+				[1001] = "Surging Mist",
+				[1014] = "Touch of Death",
 				[187] = "Templar's Verdict",
 				[219] = "Flame Shock",
 				[251] = "Circle of Healing",
-				[400] = "Feint",
-				[277] = "Fear",
-				[216] = "Purge",
-				[1003] = "Mind Flay",
-				[291] = "Unstable Affliction",
-				[481] = "Enslave Demon",
-				[272] = "Hand of Gul'dan",
-				[276] = "Nightmares",
-				[711] = "Focused Mending",
-				[213] = "Chain Lightning",
+				[997] = "Rapid Rolling",
+				[401] = "Garrote",
+				[713] = "Binding Heal",
+				[502] = "Shield Slam",
+				[211] = "Water Shield",
+				[1101] = "Weaponmaster",
+				[991] = "Burning Anger",
+				[552] = "Ghost Wolf",
+				[261] = "Holy Fire",
+				[1017] = "Flying Serpent Kick",
 				[439] = "Revive Pet",
 				[1005] = "Shadow Word: Death",
-				[194] = "Final Wrath",
+				[286] = "Shadow Bolt",
 				[188] = "Avenging Wrath",
 				[220] = "Wind Shear",
-				[1006] = "Vampiric Embrace",
-				[431] = "Aquatic Form",
+				[252] = "Purify",
+				[989] = "Bladed Judgment",
 				[751] = "Deluge",
 				[440] = "Lesser Proportion",
 				[1007] = "Heavens",
-				[396] = "Recuperate",
+				[551] = "Dash",
 				[752] = "Shamanistic Rage",
-				[397] = "Evasion",
-				[1093] = "Flaming Serpent",
-				[929] = "Blind",
+				[466] = "Pick Pocket",
+				[292] = "Falling Meteor",
+				[275] = "Verdant Spheres",
 				[753] = "Hex",
 				[441] = "Fireworks",
-				[505] = "Sweeping Strikes",
-				[1052] = "Shadowy Friends",
-				[754] = "Totemic Vigor",
+				[1009] = "Mass Exorcism",
+				[1083] = "Pillar of Light",
+				[189] = "Consecration",
 				[221] = "Frost Shock",
 				[253] = "Fade",
-				[1125] = "Shapemender",
+				[933] = "Fae Silence",
 				[755] = "Drain Life",
 				[442] = "Stampede",
 				[1011] = "Transcendence",
-				[178] = "Skull Bash",
-				[198] = "Divinity",
-				[392] = "Ambush",
-				[937] = "The Treant",
-				[508] = "Victory Rush",
+				[1124] = "Maim",
+				[701] = "Beacon of Light",
+				[703] = "Divine Storm",
+				[190] = "Luminous Charger",
+				[561] = "Immediate Truth",
 				[757] = "Ember Tap",
 				[443] = "Aspect of the Pack",
-				[1068] = "Hand of Sacrifice",
+				[456] = "Seal of Blood",
 			},
 		},
 	},
@@ -982,7 +982,7 @@ DataStore_TalentsRefDB = {
 			["Locale"] = "enUS",
 			["Version"] = 21463,
 		},
-		["PALADIN"] = {
+		["ROGUE"] = {
 			["Locale"] = "enUS",
 			["Version"] = 21742,
 		},
@@ -994,7 +994,7 @@ DataStore_TalentsRefDB = {
 			["Locale"] = "enUS",
 			["Version"] = 21742,
 		},
-		["ROGUE"] = {
+		["PALADIN"] = {
 			["Locale"] = "enUS",
 			["Version"] = 21742,
 		},

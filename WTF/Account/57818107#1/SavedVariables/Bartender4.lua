@@ -54,7 +54,7 @@ Bartender4DB = {
 				["Ahka - Thrall"] = {
 					["version"] = 4,
 				},
-				["Kitha - Thrall"] = {
+				["Liulu - Thrall"] = {
 					["version"] = 4,
 				},
 				["Nalyria - Thrall"] = {
@@ -63,7 +63,7 @@ Bartender4DB = {
 				["Raijah - Thrall"] = {
 					["version"] = 4,
 				},
-				["Liulu - Thrall"] = {
+				["Kitha - Thrall"] = {
 					["version"] = 4,
 				},
 				["Alinastra - Thrall"] = {
@@ -94,8 +94,8 @@ Bartender4DB = {
 							},
 						}, -- [2]
 						{
-							["padding"] = 5,
 							["rows"] = 12,
+							["padding"] = 5,
 							["version"] = 3,
 							["position"] = {
 								["y"] = 610,
@@ -104,8 +104,8 @@ Bartender4DB = {
 							},
 						}, -- [3]
 						{
-							["padding"] = 5,
 							["rows"] = 12,
+							["padding"] = 5,
 							["version"] = 3,
 							["position"] = {
 								["y"] = 610,
@@ -152,6 +152,7 @@ Bartender4DB = {
 							},
 						}, -- [1]
 						{
+							["version"] = 3,
 							["visibility"] = {
 								["stance"] = {
 									false, -- [1]
@@ -159,7 +160,6 @@ Bartender4DB = {
 									[0] = false,
 								},
 							},
-							["version"] = 3,
 							["position"] = {
 								["y"] = -227.500030517578,
 								["x"] = -231.500183105469,
@@ -167,31 +167,31 @@ Bartender4DB = {
 							},
 						}, -- [2]
 						{
+							["version"] = 3,
+							["fadeoutdelay"] = 0,
 							["fadeoutalpha"] = 0,
 							["buttons"] = 8,
-							["fadeout"] = true,
+							["rows"] = 2,
+							["padding"] = 0,
 							["position"] = {
 								["y"] = -521,
 								["x"] = -650,
 								["point"] = "CENTER",
 							},
-							["padding"] = 0,
-							["rows"] = 2,
-							["fadeoutdelay"] = 0,
-							["version"] = 3,
+							["fadeout"] = true,
 						}, -- [3]
 						{
+							["version"] = 3,
 							["fadeoutdelay"] = 0,
-							["fadeout"] = true,
 							["position"] = {
 								["y"] = -412,
 								["x"] = -650,
 								["point"] = "CENTER",
 							},
+							["fadeoutalpha"] = 0,
 							["rows"] = 3,
 							["padding"] = 0,
-							["fadeoutalpha"] = 0,
-							["version"] = 3,
+							["fadeout"] = true,
 						}, -- [4]
 						{
 							["padding"] = 6,
@@ -241,8 +241,8 @@ Bartender4DB = {
 							},
 						}, -- [2]
 						{
-							["rows"] = 12,
 							["padding"] = 5,
+							["rows"] = 12,
 							["version"] = 3,
 							["position"] = {
 								["y"] = 610,
@@ -251,8 +251,8 @@ Bartender4DB = {
 							},
 						}, -- [3]
 						{
-							["rows"] = 12,
 							["padding"] = 5,
+							["rows"] = 12,
 							["version"] = 3,
 							["position"] = {
 								["y"] = 610,
@@ -308,8 +308,8 @@ Bartender4DB = {
 							},
 						}, -- [2]
 						{
-							["rows"] = 12,
 							["padding"] = 5,
+							["rows"] = 12,
 							["version"] = 3,
 							["position"] = {
 								["y"] = 610,
@@ -318,8 +318,8 @@ Bartender4DB = {
 							},
 						}, -- [3]
 						{
-							["rows"] = 12,
 							["padding"] = 5,
+							["rows"] = 12,
 							["version"] = 3,
 							["position"] = {
 								["y"] = 610,
@@ -375,8 +375,8 @@ Bartender4DB = {
 							},
 						}, -- [2]
 						{
-							["padding"] = 5,
 							["rows"] = 12,
+							["padding"] = 5,
 							["version"] = 3,
 							["position"] = {
 								["y"] = 610,
@@ -385,8 +385,8 @@ Bartender4DB = {
 							},
 						}, -- [3]
 						{
-							["padding"] = 5,
 							["rows"] = 12,
+							["padding"] = 5,
 							["version"] = 3,
 							["position"] = {
 								["y"] = 610,
@@ -441,8 +441,8 @@ Bartender4DB = {
 							},
 						}, -- [2]
 						{
-							["padding"] = 5,
 							["rows"] = 12,
+							["padding"] = 5,
 							["version"] = 3,
 							["position"] = {
 								["y"] = 610,
@@ -451,8 +451,8 @@ Bartender4DB = {
 							},
 						}, -- [3]
 						{
-							["padding"] = 5,
 							["rows"] = 12,
+							["padding"] = 5,
 							["version"] = 3,
 							["position"] = {
 								["y"] = 610,
@@ -508,8 +508,8 @@ Bartender4DB = {
 							},
 						}, -- [2]
 						{
-							["padding"] = 5,
 							["rows"] = 12,
+							["padding"] = 5,
 							["version"] = 3,
 							["position"] = {
 								["y"] = 610,
@@ -518,8 +518,8 @@ Bartender4DB = {
 							},
 						}, -- [3]
 						{
-							["padding"] = 5,
 							["rows"] = 12,
+							["padding"] = 5,
 							["version"] = 3,
 							["position"] = {
 								["y"] = 610,
@@ -575,8 +575,8 @@ Bartender4DB = {
 							},
 						}, -- [2]
 						{
-							["padding"] = 5,
 							["rows"] = 12,
+							["padding"] = 5,
 							["version"] = 3,
 							["position"] = {
 								["y"] = 610,
@@ -585,8 +585,8 @@ Bartender4DB = {
 							},
 						}, -- [3]
 						{
-							["padding"] = 5,
 							["rows"] = 12,
+							["padding"] = 5,
 							["version"] = 3,
 							["position"] = {
 								["y"] = 610,
@@ -641,8 +641,8 @@ Bartender4DB = {
 							},
 						}, -- [2]
 						{
-							["padding"] = 5,
 							["rows"] = 12,
+							["padding"] = 5,
 							["version"] = 3,
 							["position"] = {
 								["y"] = 610,
@@ -651,8 +651,8 @@ Bartender4DB = {
 							},
 						}, -- [3]
 						{
-							["padding"] = 5,
 							["rows"] = 12,
+							["padding"] = 5,
 							["version"] = 3,
 							["position"] = {
 								["y"] = 610,
@@ -708,8 +708,8 @@ Bartender4DB = {
 							},
 						}, -- [2]
 						{
-							["rows"] = 12,
 							["padding"] = 5,
+							["rows"] = 12,
 							["version"] = 3,
 							["position"] = {
 								["y"] = 610,
@@ -718,8 +718,8 @@ Bartender4DB = {
 							},
 						}, -- [3]
 						{
-							["rows"] = 12,
 							["padding"] = 5,
+							["rows"] = 12,
 							["version"] = 3,
 							["position"] = {
 								["y"] = 610,
@@ -775,8 +775,8 @@ Bartender4DB = {
 							},
 						}, -- [2]
 						{
-							["rows"] = 12,
 							["padding"] = 5,
+							["rows"] = 12,
 							["version"] = 3,
 							["position"] = {
 								["y"] = 610,
@@ -785,8 +785,8 @@ Bartender4DB = {
 							},
 						}, -- [3]
 						{
-							["rows"] = 12,
 							["padding"] = 5,
+							["rows"] = 12,
 							["version"] = 3,
 							["position"] = {
 								["y"] = 610,
@@ -888,22 +888,19 @@ Bartender4DB = {
 				["Brewmaster"] = {
 					["actionbars"] = {
 						{
+							["buttons"] = 10,
+							["rows"] = 2,
+							["version"] = 3,
 							["position"] = {
 								["y"] = -255,
 								["x"] = -108.613321519908,
 								["point"] = "CENTER",
 								["scale"] = 1.11,
 							},
-							["rows"] = 2,
-							["version"] = 3,
-							["buttons"] = 10,
 						}, -- [1]
 						{
-							["position"] = {
-								["y"] = 42.0000038146973,
-								["x"] = 370.952270507813,
-								["point"] = "BOTTOMLEFT",
-							},
+							["buttons"] = 4,
+							["version"] = 3,
 							["visibility"] = {
 								["stance"] = {
 									false, -- [1]
@@ -911,40 +908,43 @@ Bartender4DB = {
 									[0] = false,
 								},
 							},
-							["version"] = 3,
-							["buttons"] = 4,
+							["position"] = {
+								["y"] = 42.0000038146973,
+								["x"] = 370.952270507813,
+								["point"] = "BOTTOMLEFT",
+							},
 						}, -- [2]
 						{
-							["buttons"] = 10,
+							["fadeoutdelay"] = 0,
 							["version"] = 3,
+							["buttons"] = 10,
+							["fadeout"] = true,
+							["rows"] = 2,
+							["fadeoutalpha"] = 0,
 							["position"] = {
 								["y"] = 80.0000152587891,
 								["x"] = -435.174468994141,
 								["point"] = "BOTTOM",
 							},
-							["fadeoutalpha"] = 0,
-							["rows"] = 2,
-							["fadeout"] = true,
-							["fadeoutdelay"] = 0,
 						}, -- [3]
 						{
-							["buttons"] = 10,
+							["fadeoutdelay"] = 0,
 							["version"] = 3,
+							["buttons"] = 10,
+							["fadeout"] = true,
+							["rows"] = 2,
+							["fadeoutalpha"] = 0,
 							["position"] = {
 								["y"] = 80.0000152587891,
 								["x"] = 239.239685058594,
 								["point"] = "BOTTOM",
 							},
-							["fadeoutalpha"] = 0,
-							["rows"] = 2,
-							["fadeout"] = true,
-							["fadeoutdelay"] = 0,
 						}, -- [4]
 						{
+							["version"] = 3,
 							["visibility"] = {
 								["nocombat"] = false,
 							},
-							["version"] = 3,
 							["position"] = {
 								["y"] = -2.99999785423279,
 								["x"] = -231.5,
@@ -961,9 +961,9 @@ Bartender4DB = {
 							},
 						}, -- [6]
 						{
-							["version"] = 3,
-							["padding"] = -10,
 							["fadeout"] = true,
+							["padding"] = -10,
+							["version"] = 3,
 							["position"] = {
 								["y"] = 192.435361288681,
 								["x"] = -215.149878645563,
@@ -972,14 +972,14 @@ Bartender4DB = {
 							},
 						}, -- [7]
 						{
+							["buttons"] = 11,
+							["version"] = 3,
 							["position"] = {
 								["y"] = 159.199569702148,
 								["x"] = -202.499877929688,
 								["point"] = "BOTTOM",
 								["growVertical"] = "UP",
 							},
-							["version"] = 3,
-							["buttons"] = 11,
 						}, -- [8]
 						nil, -- [9]
 						{
@@ -1013,8 +1013,8 @@ Bartender4DB = {
 							},
 						}, -- [2]
 						{
-							["padding"] = 5,
 							["rows"] = 12,
+							["padding"] = 5,
 							["version"] = 3,
 							["position"] = {
 								["y"] = 610,
@@ -1023,8 +1023,8 @@ Bartender4DB = {
 							},
 						}, -- [3]
 						{
-							["padding"] = 5,
 							["rows"] = 12,
+							["padding"] = 5,
 							["version"] = 3,
 							["position"] = {
 								["y"] = 610,
@@ -1079,8 +1079,8 @@ Bartender4DB = {
 							},
 						}, -- [2]
 						{
-							["padding"] = 5,
 							["rows"] = 12,
+							["padding"] = 5,
 							["version"] = 3,
 							["position"] = {
 								["y"] = 610,
@@ -1089,8 +1089,8 @@ Bartender4DB = {
 							},
 						}, -- [3]
 						{
-							["padding"] = 5,
 							["rows"] = 12,
+							["padding"] = 5,
 							["version"] = 3,
 							["position"] = {
 								["y"] = 610,
@@ -1146,8 +1146,8 @@ Bartender4DB = {
 							},
 						}, -- [2]
 						{
-							["padding"] = 5,
 							["rows"] = 12,
+							["padding"] = 5,
 							["version"] = 3,
 							["position"] = {
 								["y"] = 610,
@@ -1156,8 +1156,8 @@ Bartender4DB = {
 							},
 						}, -- [3]
 						{
-							["padding"] = 5,
 							["rows"] = 12,
+							["padding"] = 5,
 							["version"] = 3,
 							["position"] = {
 								["y"] = 610,
@@ -1213,8 +1213,8 @@ Bartender4DB = {
 							},
 						}, -- [2]
 						{
-							["rows"] = 12,
 							["padding"] = 5,
+							["rows"] = 12,
 							["version"] = 3,
 							["position"] = {
 								["y"] = 610,
@@ -1223,8 +1223,8 @@ Bartender4DB = {
 							},
 						}, -- [3]
 						{
-							["rows"] = 12,
 							["padding"] = 5,
+							["rows"] = 12,
 							["version"] = 3,
 							["position"] = {
 								["y"] = 610,
@@ -1265,8 +1265,8 @@ Bartender4DB = {
 			["char"] = {
 				["Leisho - Thrall"] = {
 					["profile"] = "Brewmaster",
-					["specGroup"] = 1,
 					["enabled"] = true,
+					["specGroup"] = 1,
 				},
 			},
 		},
@@ -1733,7 +1733,7 @@ Bartender4DB = {
 						["point"] = "BOTTOM",
 					},
 				},
-				["Liulu - Thrall"] = {
+				["Kitha - Thrall"] = {
 					["enabled"] = true,
 					["version"] = 3,
 					["position"] = {
@@ -1742,7 +1742,7 @@ Bartender4DB = {
 						["point"] = "BOTTOM",
 					},
 				},
-				["Kitha - Thrall"] = {
+				["Liulu - Thrall"] = {
 					["enabled"] = true,
 					["version"] = 3,
 					["position"] = {
@@ -1905,149 +1905,6 @@ Bartender4DB = {
 				},
 			},
 		},
-		["Vehicle"] = {
-			["profiles"] = {
-				["Alyserys - Thrall"] = {
-					["version"] = 3,
-					["position"] = {
-						["y"] = 47.5000305175781,
-						["x"] = 99.5001220703125,
-						["point"] = "CENTER",
-					},
-				},
-				["Leisho - Thrall"] = {
-					["enabled"] = false,
-					["version"] = 3,
-					["position"] = {
-						["y"] = 47.5000305175781,
-						["x"] = 99.5001220703125,
-						["point"] = "CENTER",
-					},
-				},
-				["Raijah - Thrall"] = {
-					["version"] = 3,
-					["position"] = {
-						["y"] = 47.5000305175781,
-						["x"] = 99.5001220703125,
-						["point"] = "CENTER",
-					},
-				},
-				["Thilaira - Thrall"] = {
-					["version"] = 3,
-					["position"] = {
-						["y"] = 47.5000305175781,
-						["x"] = 99.5001220703125,
-						["point"] = "CENTER",
-					},
-				},
-				["Thrall"] = {
-					["version"] = 3,
-					["position"] = {
-						["y"] = 47.5000305175781,
-						["x"] = 99.5001220703125,
-						["point"] = "CENTER",
-					},
-				},
-				["Ahka - Thrall"] = {
-					["version"] = 3,
-					["position"] = {
-						["y"] = 47.5000305175781,
-						["x"] = 99.5001220703125,
-						["point"] = "CENTER",
-					},
-				},
-				["Nalyria - Thrall"] = {
-					["version"] = 3,
-					["position"] = {
-						["y"] = 47.5000305175781,
-						["x"] = 99.5001220703125,
-						["point"] = "CENTER",
-					},
-				},
-				["MONK"] = {
-					["version"] = 3,
-					["position"] = {
-						["y"] = 47.5000305175781,
-						["x"] = 99.5001220703125,
-						["point"] = "CENTER",
-					},
-				},
-				["Therru - Thrall"] = {
-					["version"] = 3,
-					["position"] = {
-						["y"] = 47.5000305175781,
-						["x"] = 99.5001220703125,
-						["point"] = "CENTER",
-					},
-				},
-				["Kargen - Thrall"] = {
-					["version"] = 3,
-					["position"] = {
-						["y"] = 47.5000305175781,
-						["x"] = 99.5001220703125,
-						["point"] = "CENTER",
-					},
-				},
-				["Leisho - Durotan"] = {
-					["version"] = 3,
-					["position"] = {
-						["y"] = 47.5000305175781,
-						["x"] = 99.5001220703125,
-						["point"] = "CENTER",
-					},
-				},
-				["Mistweaver"] = {
-					["enabled"] = false,
-					["version"] = 3,
-					["position"] = {
-						["y"] = 47.5000305175781,
-						["x"] = 99.5001220703125,
-						["point"] = "CENTER",
-					},
-				},
-				["Brewmaster"] = {
-					["enabled"] = false,
-					["version"] = 3,
-					["position"] = {
-						["y"] = 47.5000305175781,
-						["x"] = 99.5001220703125,
-						["point"] = "CENTER",
-					},
-				},
-				["Default"] = {
-					["version"] = 3,
-					["position"] = {
-						["y"] = 47.5000305175781,
-						["x"] = 99.5001220703125,
-						["point"] = "CENTER",
-					},
-				},
-				["Liulu - Thrall"] = {
-					["version"] = 3,
-					["position"] = {
-						["y"] = 47.5000305175781,
-						["x"] = 99.5001220703125,
-						["point"] = "CENTER",
-					},
-				},
-				["Kitha - Thrall"] = {
-					["version"] = 3,
-					["position"] = {
-						["y"] = 47.5000305175781,
-						["x"] = 99.5001220703125,
-						["point"] = "CENTER",
-					},
-				},
-				["Alinastra - Thrall"] = {
-					["version"] = 3,
-					["position"] = {
-						["y"] = 47.5000305175781,
-						["x"] = 99.5001220703125,
-						["point"] = "CENTER",
-					},
-				},
-			},
-		},
 		["StanceBar"] = {
 			["profiles"] = {
 				["Alyserys - Thrall"] = {
@@ -2199,6 +2056,149 @@ Bartender4DB = {
 						["x"] = -460,
 						["point"] = "BOTTOM",
 						["scale"] = 1,
+					},
+				},
+			},
+		},
+		["Vehicle"] = {
+			["profiles"] = {
+				["Alyserys - Thrall"] = {
+					["version"] = 3,
+					["position"] = {
+						["y"] = 47.5000305175781,
+						["x"] = 99.5001220703125,
+						["point"] = "CENTER",
+					},
+				},
+				["Leisho - Thrall"] = {
+					["enabled"] = false,
+					["version"] = 3,
+					["position"] = {
+						["y"] = 47.5000305175781,
+						["x"] = 99.5001220703125,
+						["point"] = "CENTER",
+					},
+				},
+				["Raijah - Thrall"] = {
+					["version"] = 3,
+					["position"] = {
+						["y"] = 47.5000305175781,
+						["x"] = 99.5001220703125,
+						["point"] = "CENTER",
+					},
+				},
+				["Thilaira - Thrall"] = {
+					["version"] = 3,
+					["position"] = {
+						["y"] = 47.5000305175781,
+						["x"] = 99.5001220703125,
+						["point"] = "CENTER",
+					},
+				},
+				["Thrall"] = {
+					["version"] = 3,
+					["position"] = {
+						["y"] = 47.5000305175781,
+						["x"] = 99.5001220703125,
+						["point"] = "CENTER",
+					},
+				},
+				["Ahka - Thrall"] = {
+					["version"] = 3,
+					["position"] = {
+						["y"] = 47.5000305175781,
+						["x"] = 99.5001220703125,
+						["point"] = "CENTER",
+					},
+				},
+				["Nalyria - Thrall"] = {
+					["version"] = 3,
+					["position"] = {
+						["y"] = 47.5000305175781,
+						["x"] = 99.5001220703125,
+						["point"] = "CENTER",
+					},
+				},
+				["MONK"] = {
+					["version"] = 3,
+					["position"] = {
+						["y"] = 47.5000305175781,
+						["x"] = 99.5001220703125,
+						["point"] = "CENTER",
+					},
+				},
+				["Therru - Thrall"] = {
+					["version"] = 3,
+					["position"] = {
+						["y"] = 47.5000305175781,
+						["x"] = 99.5001220703125,
+						["point"] = "CENTER",
+					},
+				},
+				["Kargen - Thrall"] = {
+					["version"] = 3,
+					["position"] = {
+						["y"] = 47.5000305175781,
+						["x"] = 99.5001220703125,
+						["point"] = "CENTER",
+					},
+				},
+				["Leisho - Durotan"] = {
+					["version"] = 3,
+					["position"] = {
+						["y"] = 47.5000305175781,
+						["x"] = 99.5001220703125,
+						["point"] = "CENTER",
+					},
+				},
+				["Mistweaver"] = {
+					["enabled"] = false,
+					["version"] = 3,
+					["position"] = {
+						["y"] = 47.5000305175781,
+						["x"] = 99.5001220703125,
+						["point"] = "CENTER",
+					},
+				},
+				["Brewmaster"] = {
+					["enabled"] = false,
+					["version"] = 3,
+					["position"] = {
+						["y"] = 47.5000305175781,
+						["x"] = 99.5001220703125,
+						["point"] = "CENTER",
+					},
+				},
+				["Default"] = {
+					["version"] = 3,
+					["position"] = {
+						["y"] = 47.5000305175781,
+						["x"] = 99.5001220703125,
+						["point"] = "CENTER",
+					},
+				},
+				["Liulu - Thrall"] = {
+					["version"] = 3,
+					["position"] = {
+						["y"] = 47.5000305175781,
+						["x"] = 99.5001220703125,
+						["point"] = "CENTER",
+					},
+				},
+				["Kitha - Thrall"] = {
+					["version"] = 3,
+					["position"] = {
+						["y"] = 47.5000305175781,
+						["x"] = 99.5001220703125,
+						["point"] = "CENTER",
+					},
+				},
+				["Alinastra - Thrall"] = {
+					["version"] = 3,
+					["position"] = {
+						["y"] = 47.5000305175781,
+						["x"] = 99.5001220703125,
+						["point"] = "CENTER",
 					},
 				},
 			},
@@ -2384,10 +2384,10 @@ Bartender4DB = {
 		["Thilaira - Thrall"] = "Thilaira - Thrall",
 		["Raijah - Thrall"] = "Raijah - Thrall",
 		["Ahka - Thrall"] = "Ahka - Thrall",
-		["Liulu - Thrall"] = "Liulu - Thrall",
+		["Kitha - Thrall"] = "Kitha - Thrall",
 		["Nalyria - Thrall"] = "Nalyria - Thrall",
 		["Therru - Thrall"] = "Therru - Thrall",
-		["Kitha - Thrall"] = "Kitha - Thrall",
+		["Liulu - Thrall"] = "Liulu - Thrall",
 		["Alinastra - Thrall"] = "Alinastra - Thrall",
 	},
 	["profiles"] = {

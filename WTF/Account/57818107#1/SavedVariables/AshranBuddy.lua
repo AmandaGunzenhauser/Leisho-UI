@@ -16,20 +16,11 @@ AshranBuddyDB = {
 			["firstRun"] = false,
 		},
 		["Leisho - Thrall"] = {
-			["BattleFlow"] = {
-				["k"] = true,
-				["locked"] = true,
-			},
+			["firstRun"] = false,
 			["General"] = {
 				["k"] = true,
 			},
 			["NemesisFinder"] = {
-				["k"] = true,
-			},
-			["Configuration"] = {
-				["k"] = true,
-			},
-			["Api"] = {
 				["k"] = true,
 			},
 			["EventTimer"] = {
@@ -40,16 +31,25 @@ AshranBuddyDB = {
 				["relativePoint"] = "LEFT",
 				["locked"] = true,
 			},
-			["firstRun"] = false,
+			["Api"] = {
+				["k"] = true,
+			},
+			["Configuration"] = {
+				["k"] = true,
+			},
+			["BattleFlow"] = {
+				["k"] = true,
+				["locked"] = true,
+			},
 		},
 		["Raijah - Thrall"] = {
-			["BattleFlow"] = {
-				["enabled"] = false,
-			},
+			["firstRun"] = false,
 			["EventTimer"] = {
 				["enabled"] = false,
 			},
-			["firstRun"] = false,
+			["BattleFlow"] = {
+				["enabled"] = false,
+			},
 		},
 		["Leisho - Durotan"] = {
 			["firstRun"] = false,

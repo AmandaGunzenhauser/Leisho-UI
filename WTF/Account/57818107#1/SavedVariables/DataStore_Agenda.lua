@@ -30,16 +30,16 @@ DataStore_AgendaDB = {
 			},
 			["Default.Thrall.Leisho"] = {
 				["DungeonIDs"] = {
-					["Hellfire Citadel Heroic|232963717"] = "242503|1468701506|0|1",
+					["Hellfire Citadel Heroic|232963717"] = "241483|1468702525|0|1",
 				},
-				["lastUpdate"] = 1468701825,
+				["lastUpdate"] = 1468702571,
 			},
 			["Default.Thrall.Raijah"] = {
 				["Contacts"] = {
-					["Valdria"] = {
+					["Sarendor"] = {
 						["note"] = "",
 					},
-					["Sarendor"] = {
+					["Valdria"] = {
 						["note"] = "",
 					},
 				},
@@ -48,17 +48,17 @@ DataStore_AgendaDB = {
 			["Default.Thrall.Alyserys"] = {
 				["lastUpdate"] = 1467761905,
 			},
+			["Default.Durotan.Leisho"] = {
+				["lastUpdate"] = 1463324535,
+			},
 			["Default.Thrall.Alinastra"] = {
 				["lastUpdate"] = 1467479038,
-			},
-			["Default.Thrall.Nalyria"] = {
-				["lastUpdate"] = 1467478971,
 			},
 			["Default.Thrall.Thilaira"] = {
 				["lastUpdate"] = 1462676616,
 			},
-			["Default.Durotan.Leisho"] = {
-				["lastUpdate"] = 1463324535,
+			["Default.Thrall.Nalyria"] = {
+				["lastUpdate"] = 1467478971,
 			},
 		},
 	},

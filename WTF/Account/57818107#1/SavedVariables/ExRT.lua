@@ -2,9 +2,9 @@
 VExRT = {
 	["BattleRes"] = {
 		["enabled"] = true,
-		["Top"] = 1690.14086914063,
-		["Left"] = 1422.84777832031,
 		["Scale"] = 71,
+		["Left"] = 1422.84777832031,
+		["Top"] = 1690.14086914063,
 	},
 	["ProfileKeys"] = {
 		["Liulu-Thrall"] = "default",
@@ -16,13 +16,91 @@ VExRT = {
 		["Leisho-Durotan"] = "default",
 		["Leisho-Thrall"] = "default",
 		["Therru-Thrall"] = "default",
-		["Alyserys-Thrall"] = "default",
 		["Alinastra-Thrall"] = "default",
+		["Alyserys-Thrall"] = "default",
 		["Raijah-Thrall"] = "default",
 	},
 	["Arrow"] = {
 	},
 	["Encounter"] = {
+		["names"] = {
+			[1777] = "Fel Lord Zakuun",
+			[1095] = "Blood Council",
+			[1143] = "Yogg-Saron",
+			[1794] = "Socrethar the Eternal",
+			[1096] = "Deathbringer Saurfang",
+			[1795] = "Mannoroth",
+			[608] = "The Illidari Council",
+			[1097] = "Festergut",
+			[1463] = "Garalon",
+			[1098] = "Valithria Dreamwalker",
+			[1622] = "Galakras",
+			[1130] = "Algalon the Observer",
+			[1035] = "Conclave of Wind",
+			[1623] = "Garrosh Hellscream",
+			[1131] = "Auriaya",
+			[1798] = "Hellfire High Council",
+			[1084] = "Onyxia",
+			[1100] = "Lady Deathwhisper",
+			[1624] = "Norushen",
+			[1132] = "Flame Leviathan",
+			[1783] = "Gorefiend",
+			[1799] = "Archimonde",
+			[1434] = "Gara'jal the Spiritbinder",
+			[1593] = "Paragons of the Klaxxi",
+			[1101] = "Lord Marrowgar",
+			[1498] = "Wind Lord Mel'jarak",
+			[1784] = "Tyrant Velhari",
+			[1800] = "Xhul'horac",
+			[1197] = "Beth'tilac",
+			[1594] = "Spoils of Pandaria",
+			[1102] = "Professor Putricide",
+			[1499] = "Amber-Shaper Un'sok",
+			[1134] = "General Vezax",
+			[1785] = "Iron Reaver",
+			[1436] = "The Spirit Kings",
+			[1595] = "Malkorok",
+			[1103] = "Queen Lana'thel",
+			[1500] = "Elegon",
+			[1135] = "Hodir",
+			[1786] = "Kilrogg Deadeye",
+			[1294] = "Warlord Zon'ozz",
+			[1691] = "Gruul",
+			[1104] = "Rotface",
+			[1501] = "Grand Empress Shek'zeer",
+			[1390] = "Feng the Accursed",
+			[1787] = "Kormrok",
+			[1295] = "Yor'sahj the Unsleeping",
+			[1105] = "Sindragosa",
+			[1137] = "Kologarn",
+			[1788] = "Shadow-Lord Iskar",
+			[1296] = "Hagara",
+			[1090] = "Sartharion",
+			[1106] = "The Lich King",
+			[1138] = "Mimiron",
+			[1297] = "Ultraxion",
+			[1599] = "Thok the Bloodthirsty",
+			[1504] = "Blade Lord Ta'yak",
+			[1139] = "Razorscale",
+			[1298] = "Warmaster Blackhorn",
+			[1600] = "Iron Juggernaut",
+			[1136] = "Ignis the Furnace Master",
+			[652] = "Attumen the Huntsman",
+			[1292] = "Morchok",
+			[1094] = "Malygos",
+			[1601] = "Siegecrafter Blackfuse",
+			[1604] = "Sha of Pride",
+			[1603] = "General Nazgrim",
+			[1395] = "The Stone Guard",
+			[1291] = "Spine of Deathwing",
+			[1606] = "Kor'kron Dark Shaman",
+			[1598] = "Fallen Protectors",
+			[1205] = "Shannox",
+			[1602] = "Immerseus",
+			[1778] = "Hellfire Assault",
+			[1507] = "Imperial Vizier Zor'lok",
+			[1142] = "XT-002 Deconstructor",
+		},
 		["list"] = {
 			["Thilaira"] = {
 			},
@@ -713,84 +791,6 @@ VExRT = {
 			},
 			["Alyserys"] = {
 			},
-		},
-		["names"] = {
-			[1777] = "Fel Lord Zakuun",
-			[1095] = "Blood Council",
-			[1143] = "Yogg-Saron",
-			[1794] = "Socrethar the Eternal",
-			[1096] = "Deathbringer Saurfang",
-			[1795] = "Mannoroth",
-			[608] = "The Illidari Council",
-			[1097] = "Festergut",
-			[1463] = "Garalon",
-			[1098] = "Valithria Dreamwalker",
-			[1622] = "Galakras",
-			[1130] = "Algalon the Observer",
-			[1035] = "Conclave of Wind",
-			[1623] = "Garrosh Hellscream",
-			[1131] = "Auriaya",
-			[1798] = "Hellfire High Council",
-			[1084] = "Onyxia",
-			[1100] = "Lady Deathwhisper",
-			[1624] = "Norushen",
-			[1132] = "Flame Leviathan",
-			[1783] = "Gorefiend",
-			[1799] = "Archimonde",
-			[1434] = "Gara'jal the Spiritbinder",
-			[1593] = "Paragons of the Klaxxi",
-			[1101] = "Lord Marrowgar",
-			[1498] = "Wind Lord Mel'jarak",
-			[1784] = "Tyrant Velhari",
-			[1800] = "Xhul'horac",
-			[1197] = "Beth'tilac",
-			[1594] = "Spoils of Pandaria",
-			[1102] = "Professor Putricide",
-			[1499] = "Amber-Shaper Un'sok",
-			[1134] = "General Vezax",
-			[1785] = "Iron Reaver",
-			[1436] = "The Spirit Kings",
-			[1595] = "Malkorok",
-			[1103] = "Queen Lana'thel",
-			[1500] = "Elegon",
-			[1135] = "Hodir",
-			[1786] = "Kilrogg Deadeye",
-			[1294] = "Warlord Zon'ozz",
-			[1691] = "Gruul",
-			[1104] = "Rotface",
-			[1501] = "Grand Empress Shek'zeer",
-			[1390] = "Feng the Accursed",
-			[1787] = "Kormrok",
-			[1295] = "Yor'sahj the Unsleeping",
-			[1105] = "Sindragosa",
-			[1137] = "Kologarn",
-			[1788] = "Shadow-Lord Iskar",
-			[1296] = "Hagara",
-			[1090] = "Sartharion",
-			[1106] = "The Lich King",
-			[1138] = "Mimiron",
-			[1297] = "Ultraxion",
-			[1599] = "Thok the Bloodthirsty",
-			[1504] = "Blade Lord Ta'yak",
-			[1139] = "Razorscale",
-			[1298] = "Warmaster Blackhorn",
-			[1600] = "Iron Juggernaut",
-			[1142] = "XT-002 Deconstructor",
-			[652] = "Attumen the Huntsman",
-			[1778] = "Hellfire Assault",
-			[1602] = "Immerseus",
-			[1601] = "Siegecrafter Blackfuse",
-			[1604] = "Sha of Pride",
-			[1598] = "Fallen Protectors",
-			[1395] = "The Stone Guard",
-			[1606] = "Kor'kron Dark Shaman",
-			[1291] = "Spine of Deathwing",
-			[1603] = "General Nazgrim",
-			[1205] = "Shannox",
-			[1094] = "Malygos",
-			[1292] = "Morchok",
-			[1507] = "Imperial Vizier Zor'lok",
-			[1136] = "Ignis the Furnace Master",
 		},
 	},
 	["Marks"] = {
@@ -2017,29 +2017,29 @@ VExRT = {
 			["Ziggi"] = 254,
 			["Leisho"] = 270,
 			["Fudgecookie"] = 66,
-			["Eatmyarrow-Ragnaros"] = 253,
-			["Pogeymon-Frostwolf"] = 253,
+			["Medellia-Nemesis"] = 265,
+			["Denogosu-Mok'Nathal"] = 64,
 			["Licthus-Darkspear"] = 254,
 			["Iwillkillyew-BleedingHollow"] = 72,
 			["Snorunt"] = 268,
 			["Jescherelle-Farstriders"] = 105,
 			["Gunarrow-Hyjal"] = 253,
 			["Mothor-Tanaris"] = 72,
-			["Jêrome"] = 105,
-			["Cronkrusher-Zul'jin"] = 73,
+			["Datspirit-Mal'Ganis"] = 258,
+			["Dasvidaniya"] = 250,
 			["Anhyo-Blackrock"] = 262,
 			["Hootnewb-Arthas"] = 102,
-			["Dasvidaniya"] = 250,
+			["Cronkrusher-Zul'jin"] = 73,
 			["Durni-BlackwaterRaiders"] = 71,
-			["Zeleros"] = 259,
+			["Høwåîtø-Zuluhed"] = 103,
 			["Deylithil-Hyjal"] = 257,
 			["Soleryn-Runetotem"] = 103,
 			["Amanduuh"] = 256,
-			["Høwåîtø-Zuluhed"] = 103,
+			["Zeleros"] = 259,
 			["Valrion"] = 252,
-			["Datspirit-Mal'Ganis"] = 258,
-			["Denogosu-Mok'Nathal"] = 64,
-			["Medellia-Nemesis"] = 265,
+			["Jêrome"] = 105,
+			["Pogeymon-Frostwolf"] = 253,
+			["Eatmyarrow-Ragnaros"] = 253,
 		},
 		["NoRaid"] = true,
 		["CDECol"] = {
@@ -2047,7 +2047,7 @@ VExRT = {
 		["default_userCD"] = {
 		},
 		["Top"] = 950.12939453125,
-		["userDB"] = {
+		["Save"] = {
 		},
 		["Left"] = 64.1559219360352,
 		["lock"] = true,
@@ -2059,14 +2059,14 @@ VExRT = {
 				["textGeneral"] = true,
 				["methodsGeneral"] = true,
 				["blacklistGeneral"] = true,
-				["fontShadow"] = false,
-				["textureAnimation"] = true,
+				["fontGeneral"] = true,
+				["frameWidth"] = 130,
 				["iconGeneral"] = true,
 				["fontOutline"] = true,
 				["textureGeneral"] = true,
 				["frameScale"] = 100,
-				["frameWidth"] = 130,
-				["fontGeneral"] = true,
+				["textureAnimation"] = true,
+				["fontShadow"] = false,
 			}, -- [1]
 			{
 				["enabled"] = true,
@@ -2077,10 +2077,10 @@ VExRT = {
 				["blacklistGeneral"] = true,
 				["iconGeneral"] = true,
 				["fontOutline"] = true,
-				["fontShadow"] = false,
+				["textureGeneral"] = true,
 				["fontGeneral"] = true,
 				["textureAnimation"] = true,
-				["textureGeneral"] = true,
+				["fontShadow"] = false,
 			}, -- [2]
 			{
 				["enabled"] = true,
@@ -2091,10 +2091,10 @@ VExRT = {
 				["blacklistGeneral"] = true,
 				["iconGeneral"] = true,
 				["fontOutline"] = true,
-				["fontShadow"] = false,
+				["textureGeneral"] = true,
 				["fontGeneral"] = true,
 				["textureAnimation"] = true,
-				["textureGeneral"] = true,
+				["fontShadow"] = false,
 			}, -- [3]
 			{
 				["frameGeneral"] = true,
@@ -2104,10 +2104,10 @@ VExRT = {
 				["blacklistGeneral"] = true,
 				["iconGeneral"] = true,
 				["fontOutline"] = true,
-				["fontShadow"] = false,
+				["textureGeneral"] = true,
 				["fontGeneral"] = true,
 				["textureAnimation"] = true,
-				["textureGeneral"] = true,
+				["fontShadow"] = false,
 			}, -- [4]
 			{
 				["frameGeneral"] = true,
@@ -2117,10 +2117,10 @@ VExRT = {
 				["blacklistGeneral"] = true,
 				["iconGeneral"] = true,
 				["fontOutline"] = true,
-				["fontShadow"] = false,
+				["textureGeneral"] = true,
 				["fontGeneral"] = true,
 				["textureAnimation"] = true,
-				["textureGeneral"] = true,
+				["fontShadow"] = false,
 			}, -- [5]
 			{
 				["frameGeneral"] = true,
@@ -2130,10 +2130,10 @@ VExRT = {
 				["blacklistGeneral"] = true,
 				["iconGeneral"] = true,
 				["fontOutline"] = true,
-				["fontShadow"] = false,
+				["textureGeneral"] = true,
 				["fontGeneral"] = true,
 				["textureAnimation"] = true,
-				["textureGeneral"] = true,
+				["fontShadow"] = false,
 			}, -- [6]
 			{
 				["frameGeneral"] = true,
@@ -2143,10 +2143,10 @@ VExRT = {
 				["blacklistGeneral"] = true,
 				["iconGeneral"] = true,
 				["fontOutline"] = true,
-				["fontShadow"] = false,
+				["textureGeneral"] = true,
 				["fontGeneral"] = true,
 				["textureAnimation"] = true,
-				["textureGeneral"] = true,
+				["fontShadow"] = false,
 			}, -- [7]
 			{
 				["frameGeneral"] = true,
@@ -2156,10 +2156,10 @@ VExRT = {
 				["blacklistGeneral"] = true,
 				["iconGeneral"] = true,
 				["fontOutline"] = true,
-				["fontShadow"] = false,
+				["textureGeneral"] = true,
 				["fontGeneral"] = true,
 				["textureAnimation"] = true,
-				["textureGeneral"] = true,
+				["fontShadow"] = false,
 			}, -- [8]
 			{
 				["frameGeneral"] = true,
@@ -2169,10 +2169,10 @@ VExRT = {
 				["blacklistGeneral"] = true,
 				["iconGeneral"] = true,
 				["fontOutline"] = true,
-				["fontShadow"] = false,
+				["textureGeneral"] = true,
 				["fontGeneral"] = true,
 				["textureAnimation"] = true,
-				["textureGeneral"] = true,
+				["fontShadow"] = false,
 			}, -- [9]
 			{
 				["frameGeneral"] = true,
@@ -2182,74 +2182,74 @@ VExRT = {
 				["blacklistGeneral"] = true,
 				["iconGeneral"] = true,
 				["fontOutline"] = true,
-				["fontShadow"] = false,
+				["textureGeneral"] = true,
 				["fontGeneral"] = true,
 				["textureAnimation"] = true,
-				["textureGeneral"] = true,
+				["fontShadow"] = false,
 			}, -- [10]
 			{
 				["textureColorTextDefaultR"] = 1,
 				["textureColorTextCastR"] = 1,
-				["textureAlphaCooldown"] = 1,
+				["textureColorTextDefaultG"] = 1,
 				["textureColorBackgroundActiveR"] = 1,
-				["iconPosition"] = 1,
-				["textureColorBackgroundDefaultB"] = 1,
 				["textureColorTextDefaultB"] = 1,
+				["textureColorBackgroundDefaultB"] = 1,
+				["iconPosition"] = 1,
 				["frameBetweenLines"] = 3,
+				["textureColorBackgroundCooldownG"] = 1,
 				["textureClassBackground"] = false,
-				["textureColorTextCooldownR"] = 1,
 				["methodsStyleAnimation"] = 1,
 				["textureColorTextCastB"] = 1,
 				["textureColorBackgroundDefaultG"] = 1,
-				["textureColorBackgroundCooldownR"] = 1,
+				["textureColorBackgroundActiveB"] = 1,
 				["frameLines"] = 15,
 				["textureFile"] = "Interface\\AddOns\\ExRT\\media\\bar26.tga",
-				["textureColorTextActiveR"] = 1,
+				["textTemplateRight"] = "%time%",
 				["textureColorBackgroundCastR"] = 1,
 				["textureColorTextActiveB"] = 1,
+				["textureColorTextCooldownB"] = 1,
 				["textureColorTimeLineDefaultR"] = 1,
-				["fontName"] = "Interface\\AddOns\\ExRT\\media\\skurri.ttf",
 				["blacklistGeneral"] = true,
-				["textureAlphaBackground"] = 0.15,
+				["fontOutline"] = false,
 				["textureColorTimeLineActiveB"] = 1,
-				["textureAnimation"] = true,
+				["textureColorTimeLineDefaultG"] = 1,
 				["textureColorBackgroundActiveG"] = 1,
 				["textureColorTimeLineDefaultB"] = 1,
-				["frameScale"] = 114,
-				["textureColorTimeLineDefaultG"] = 1,
+				["textureAlphaBackground"] = 0.15,
+				["textureAnimation"] = true,
 				["textureClassTimeLine"] = true,
 				["textureColorTextCastG"] = 1,
 				["textTemplateCenter"] = "%name%: %spell%",
-				["textureColorTimeLineActiveG"] = 1,
+				["textureColorBackgroundCastB"] = 1,
 				["iconGray"] = false,
 				["textureColorTimeLineCooldownG"] = 1,
 				["textureColorTextCooldownG"] = 1,
-				["fontSize"] = 12,
+				["textureClassText"] = false,
 				["textureColorTimeLineCastB"] = 1,
-				["textureColorTimeLineCooldownB"] = 1,
+				["textTemplateLeft"] = "",
 				["textureColorTimeLineCooldownR"] = 1,
-				["textureColorBackgroundCooldownB"] = 1,
+				["textureColorBackgroundCastG"] = 1,
 				["textureColorBackgroundDefaultR"] = 1,
 				["iconSize"] = 14,
-				["textureAlphaTimeLine"] = 0.8,
+				["textureColorTimeLineActiveR"] = 1,
 				["textureColorTimeLineCastR"] = 1,
-				["fontShadow"] = true,
+				["textureAlphaTimeLine"] = 0.8,
 				["frameWidth"] = 130,
 				["methodsTimeLineAnimation"] = 2,
-				["textureColorTimeLineActiveR"] = 1,
-				["textureColorBackgroundCastG"] = 1,
-				["textTemplateLeft"] = "",
-				["textureClassText"] = false,
+				["fontShadow"] = true,
+				["textureColorBackgroundCooldownB"] = 1,
+				["textureColorTimeLineCooldownB"] = 1,
+				["fontSize"] = 12,
 				["textureColorTimeLineCastG"] = 1,
-				["textureColorBackgroundCastB"] = 1,
+				["textureColorTimeLineActiveG"] = 1,
 				["textureColorTextActiveG"] = 1,
-				["fontOutline"] = false,
-				["textureColorTextCooldownB"] = 1,
-				["textTemplateRight"] = "%time%",
-				["textureColorBackgroundActiveB"] = 1,
-				["textureColorBackgroundCooldownG"] = 1,
+				["frameScale"] = 114,
+				["fontName"] = "Interface\\AddOns\\ExRT\\media\\skurri.ttf",
+				["textureColorTextActiveR"] = 1,
+				["textureColorBackgroundCooldownR"] = 1,
+				["textureColorTextCooldownR"] = 1,
 				["iconHideBlizzardEdges"] = true,
-				["textureColorTextDefaultG"] = 1,
+				["textureAlphaCooldown"] = 1,
 			}, -- [11]
 		},
 		["Priority"] = {
@@ -2260,17 +2260,16 @@ VExRT = {
 			[115310] = true,
 			[98008] = true,
 		},
-		["Save"] = {
+		["userDB"] = {
 		},
 	},
 	["Bossmods"] = {
 		["ArchimondeLeft"] = 207.222381591797,
 		["MannorothAutoload"] = true,
-		["ModuleViewed3580"] = true,
-		["IskarLock"] = true,
 		["ArchimondeTop"] = 623.333374023438,
-		["Kormrok"] = {
+		["Kromog"] = {
 		},
+		["ModuleViewed3580"] = true,
 		["Mannoroth"] = {
 			["Section"] = {
 				{
@@ -2281,8 +2280,9 @@ VExRT = {
 				}, -- [3]
 			},
 		},
-		["Kromog"] = {
+		["Kormrok"] = {
 		},
+		["IskarLock"] = true,
 	},
 	["LegendaryRing"] = {
 		["enabled"] = true,
@@ -2292,18 +2292,133 @@ VExRT = {
 		["HideNotInRaid"] = true,
 		["ColorizeNoEnch"] = true,
 		["ColorizeNoGems"] = true,
-		["ColorizeLowIlvl"] = true,
-		["ColorizeLowIlvl685"] = true,
 		["ColorizeNoTopEnchGems"] = false,
+		["ColorizeLowIlvl685"] = true,
+		["ColorizeLowIlvl"] = true,
 		["ColorizeNoValorUpgrade"] = false,
 	},
 	["Addon"] = {
 		["Version"] = 3660,
-		["IconMiniMapHide"] = true,
-		["PreVersion"] = 3660,
-		["Timer"] = 0.1,
-		["IconMiniMapLeft"] = 80,
 		["IconMiniMapTop"] = -31.650648209959,
+		["IconMiniMapHide"] = true,
+		["IconMiniMapLeft"] = 80,
+		["Timer"] = 0.1,
+		["PreVersion"] = 3660,
+	},
+	["Note"] = {
+		["BlackNames"] = {
+		},
+		["FontSize"] = 12,
+		["Black"] = {
+			"", -- [1]
+			"", -- [2]
+			"", -- [3]
+		},
+		["Height"] = 100,
+		["AutoLoad"] = {
+		},
+		["Strata"] = "HIGH",
+		["Width"] = 200,
+	},
+	["Profiles"] = {
+		["Leisho - MW"] = {
+		},
+	},
+	["BossWatcher"] = {
+		["enabled"] = true,
+		["trackingDamageSpells"] = {
+		},
+		["autoSegments"] = {
+		},
+		["optionsDamageGraph"] = true,
+		["optionsPositionsDist"] = true,
+		["optionsHealingGraph"] = true,
+		["fightsNum"] = 6,
+	},
+	["Profile"] = "default",
+	["LootLink"] = {
+		["ilvl"] = true,
+	},
+	["InviteTool"] = {
+		["AutoInvAccept"] = true,
+		["Words"] = "инв inv byd штм 123 invite",
+		["AutoPromote"] = true,
+		["InvByChat"] = true,
+		["RaidDiff"] = 15,
+		["PromoteRank"] = 3,
+		["LootThreshold"] = 4,
+		["AutoRaidDiff"] = true,
+		["MasterLooters"] = "Leisho",
+		["LootMethod"] = "master",
+		["PromoteNames"] = "",
+		["OnlyGuild"] = true,
+		["Rank"] = 1,
+	},
+	["RaidCheck"] = {
+		["FlaskExp"] = 1,
+		["ReadyCheckFrameTimerFade"] = 4,
+		["ReadyCheck"] = true,
+		["disableLFR"] = true,
+		["OnAttack"] = true,
+	},
+	["Logging"] = {
+	},
+	["MarksBar"] = {
+		["Show"] = {
+			true, -- [1]
+			true, -- [2]
+			true, -- [3]
+			true, -- [4]
+		},
+		["Strata"] = "HIGH",
+		["DisableOutsideRaid"] = true,
+		["Fix"] = true,
+		["pulltimer"] = 10,
+		["Top"] = 294.778045654297,
+		["Left"] = 1812.33337402344,
+		["enabled"] = true,
+	},
+	["Timers"] = {
+		["specTimes"] = {
+			[62] = 10,
+			[63] = 10,
+			[250] = 10,
+			[251] = 10,
+			[64] = 10,
+			[253] = 10,
+			[65] = 10,
+			[255] = 10,
+			[66] = 10,
+			[257] = 10,
+			[258] = 10,
+			[259] = 10,
+			[260] = 10,
+			[261] = 25,
+			[262] = 16,
+			[263] = 10,
+			[264] = 10,
+			[265] = 22,
+			[266] = 10,
+			[267] = 10,
+			[268] = 10,
+			[269] = 10,
+			[270] = 10,
+			[70] = 10,
+			[102] = 10,
+			[71] = 10,
+			[103] = 10,
+			[72] = 10,
+			[104] = 10,
+			[73] = 10,
+			[252] = 10,
+			[105] = 10,
+			[254] = 10,
+			[256] = 10,
+			[577] = 10,
+			[581] = 10,
+		},
+		["Strata"] = "HIGH",
+		["useDPT"] = true,
 	},
 	["Attendance"] = {
 		["enabled"] = 3,
@@ -2321,13 +2436,13 @@ VExRT = {
 				"FValrion", -- [9]
 				"KJêrome-Ragnaros", -- [10]
 				"DEristra", -- [11]
-				["c"] = "Leisho-Thrall",
-				["k"] = true,
-				["d"] = 14,
-				["eN"] = "Mannoroth",
-				["t"] = 1458001412,
-				["g"] = 11,
 				["eI"] = 1795,
+				["c"] = "Leisho-Thrall",
+				["t"] = 1458001412,
+				["eN"] = "Mannoroth",
+				["d"] = 14,
+				["g"] = 11,
+				["k"] = true,
 			}, -- [1]
 			{
 				"JWarbuggy", -- [1]
@@ -2342,11 +2457,11 @@ VExRT = {
 				"DEristra", -- [10]
 				"GKrummtar", -- [11]
 				["c"] = "Leisho-Thrall",
-				["t"] = 1458005947,
-				["eI"] = 1795,
-				["d"] = 15,
-				["g"] = 11,
 				["eN"] = "Mannoroth",
+				["eI"] = 1795,
+				["t"] = 1458005947,
+				["g"] = 11,
+				["d"] = 15,
 			}, -- [2]
 			{
 				"JWarbuggy", -- [1]
@@ -2361,11 +2476,11 @@ VExRT = {
 				"DEristra", -- [10]
 				"GKrummtar", -- [11]
 				["c"] = "Leisho-Thrall",
-				["t"] = 1458006598,
-				["eI"] = 1795,
-				["d"] = 15,
-				["g"] = 11,
 				["eN"] = "Mannoroth",
+				["eI"] = 1795,
+				["t"] = 1458006598,
+				["g"] = 11,
+				["d"] = 15,
 			}, -- [3]
 			{
 				"JWarbuggy", -- [1]
@@ -2380,11 +2495,11 @@ VExRT = {
 				"KBakronn", -- [10]
 				"GKrummtar", -- [11]
 				["c"] = "Leisho-Thrall",
-				["t"] = 1458007553,
-				["eI"] = 1795,
-				["d"] = 15,
-				["g"] = 11,
 				["eN"] = "Mannoroth",
+				["eI"] = 1795,
+				["t"] = 1458007553,
+				["g"] = 11,
+				["d"] = 15,
 			}, -- [4]
 			{
 				"JWarbuggy", -- [1]
@@ -2399,11 +2514,11 @@ VExRT = {
 				"DZeleros", -- [10]
 				"HSoularien", -- [11]
 				["c"] = "Leisho-Thrall",
-				["d"] = 15,
-				["eN"] = "Archimonde",
-				["t"] = 1458087888,
-				["g"] = 11,
 				["eI"] = 1799,
+				["eN"] = "Archimonde",
+				["d"] = 15,
+				["g"] = 11,
+				["t"] = 1458087888,
 			}, -- [5]
 			{
 				"JWarbuggy", -- [1]
@@ -2418,11 +2533,11 @@ VExRT = {
 				"DZeleros", -- [10]
 				"HSoularien", -- [11]
 				["c"] = "Leisho-Thrall",
-				["d"] = 15,
-				["eN"] = "Archimonde",
-				["t"] = 1458088531,
-				["g"] = 11,
 				["eI"] = 1799,
+				["eN"] = "Archimonde",
+				["d"] = 15,
+				["g"] = 11,
+				["t"] = 1458088531,
 			}, -- [6]
 			{
 				"JWarbuggy", -- [1]
@@ -2437,11 +2552,11 @@ VExRT = {
 				"DZeleros", -- [10]
 				"HSoularien", -- [11]
 				["c"] = "Leisho-Thrall",
-				["d"] = 15,
-				["eN"] = "Archimonde",
-				["t"] = 1458088906,
-				["g"] = 11,
 				["eI"] = 1799,
+				["eN"] = "Archimonde",
+				["d"] = 15,
+				["g"] = 11,
+				["t"] = 1458088906,
 			}, -- [7]
 			{
 				"JWarbuggy", -- [1]
@@ -2456,11 +2571,11 @@ VExRT = {
 				"DZeleros", -- [10]
 				"DTurker-Area52", -- [11]
 				["c"] = "Leisho-Thrall",
-				["d"] = 15,
-				["eN"] = "Archimonde",
-				["t"] = 1458089465,
-				["g"] = 11,
 				["eI"] = 1799,
+				["eN"] = "Archimonde",
+				["d"] = 15,
+				["g"] = 11,
+				["t"] = 1458089465,
 			}, -- [8]
 			{
 				"JWarbuggy", -- [1]
@@ -2475,11 +2590,11 @@ VExRT = {
 				"DZeleros", -- [10]
 				"DTurker-Area52", -- [11]
 				["c"] = "Leisho-Thrall",
-				["d"] = 15,
-				["eN"] = "Archimonde",
-				["t"] = 1458090023,
-				["g"] = 11,
 				["eI"] = 1799,
+				["eN"] = "Archimonde",
+				["d"] = 15,
+				["g"] = 11,
+				["t"] = 1458090023,
 			}, -- [9]
 			{
 				"JWarbuggy", -- [1]
@@ -2495,11 +2610,11 @@ VExRT = {
 				"DTurker-Area52", -- [11]
 				"DEristra", -- [12]
 				["c"] = "Leisho-Thrall",
-				["d"] = 15,
-				["eN"] = "Archimonde",
-				["t"] = 1458090754,
-				["g"] = 12,
 				["eI"] = 1799,
+				["eN"] = "Archimonde",
+				["d"] = 15,
+				["g"] = 12,
+				["t"] = 1458090754,
 			}, -- [10]
 			{
 				"JWarbuggy", -- [1]
@@ -2515,11 +2630,11 @@ VExRT = {
 				"DTurker-Area52", -- [11]
 				"DEristra", -- [12]
 				["c"] = "Leisho-Thrall",
-				["d"] = 15,
-				["eN"] = "Archimonde",
-				["t"] = 1458091468,
-				["g"] = 12,
 				["eI"] = 1799,
+				["eN"] = "Archimonde",
+				["d"] = 15,
+				["g"] = 12,
+				["t"] = 1458091468,
 			}, -- [11]
 			{
 				"JWarbuggy", -- [1]
@@ -2535,11 +2650,11 @@ VExRT = {
 				"DTurker-Area52", -- [11]
 				"DEristra", -- [12]
 				["c"] = "Leisho-Thrall",
-				["d"] = 15,
-				["eN"] = "Archimonde",
-				["t"] = 1458091915,
-				["g"] = 12,
 				["eI"] = 1799,
+				["eN"] = "Archimonde",
+				["d"] = 15,
+				["g"] = 12,
+				["t"] = 1458091915,
 			}, -- [12]
 			{
 				"JWarbuggy", -- [1]
@@ -2556,11 +2671,11 @@ VExRT = {
 				"DEristra", -- [12]
 				"GOrong-BlackDragonflight", -- [13]
 				["c"] = "Leisho-Thrall",
-				["d"] = 15,
-				["eN"] = "Archimonde",
-				["t"] = 1458092805,
-				["g"] = 13,
 				["eI"] = 1799,
+				["eN"] = "Archimonde",
+				["d"] = 15,
+				["g"] = 13,
+				["t"] = 1458092805,
 			}, -- [13]
 			{
 				"JWarbuggy", -- [1]
@@ -2577,11 +2692,11 @@ VExRT = {
 				"DEristra", -- [12]
 				"GOrong-BlackDragonflight", -- [13]
 				["c"] = "Leisho-Thrall",
-				["d"] = 15,
-				["eN"] = "Archimonde",
-				["t"] = 1458093447,
-				["g"] = 13,
 				["eI"] = 1799,
+				["eN"] = "Archimonde",
+				["d"] = 15,
+				["g"] = 13,
+				["t"] = 1458093447,
 			}, -- [14]
 			{
 				"JWarbuggy", -- [1]
@@ -2598,11 +2713,11 @@ VExRT = {
 				"DEristra", -- [12]
 				"KCalìentes-Kael'thas", -- [13]
 				["c"] = "Leisho-Thrall",
-				["d"] = 15,
-				["eN"] = "Archimonde",
-				["t"] = 1458094467,
-				["g"] = 13,
 				["eI"] = 1799,
+				["eN"] = "Archimonde",
+				["d"] = 15,
+				["g"] = 13,
+				["t"] = 1458094467,
 			}, -- [15]
 			{
 				"JWarbuggy", -- [1]
@@ -2620,11 +2735,11 @@ VExRT = {
 				"KCalìentes-Kael'thas", -- [13]
 				"APlummies", -- [14]
 				["c"] = "Leisho-Thrall",
-				["d"] = 15,
-				["eN"] = "Archimonde",
-				["t"] = 1458095310,
-				["g"] = 14,
 				["eI"] = 1799,
+				["eN"] = "Archimonde",
+				["d"] = 15,
+				["g"] = 14,
+				["t"] = 1458095310,
 			}, -- [16]
 			{
 				"JWarbuggy", -- [1]
@@ -2641,11 +2756,11 @@ VExRT = {
 				"DEristra", -- [12]
 				"APlummies", -- [13]
 				["c"] = "Leisho-Thrall",
-				["d"] = 15,
-				["eN"] = "Archimonde",
-				["t"] = 1458095962,
-				["g"] = 13,
 				["eI"] = 1799,
+				["eN"] = "Archimonde",
+				["d"] = 15,
+				["g"] = 13,
+				["t"] = 1458095962,
 			}, -- [17]
 			{
 				"JWarbuggy", -- [1]
@@ -2662,11 +2777,11 @@ VExRT = {
 				"DEristra", -- [12]
 				"APlummies", -- [13]
 				["c"] = "Leisho-Thrall",
-				["d"] = 15,
-				["eN"] = "Archimonde",
-				["t"] = 1458096323,
-				["g"] = 13,
 				["eI"] = 1799,
+				["eN"] = "Archimonde",
+				["d"] = 15,
+				["g"] = 13,
+				["t"] = 1458096323,
 			}, -- [18]
 			{
 				"FSauron-Azralon", -- [1]
@@ -2679,11 +2794,11 @@ VExRT = {
 				"CBokrom-Illidan", -- [8]
 				"AHybrax-BleedingHollow", -- [9]
 				["c"] = "Leisho-Thrall",
+				["d"] = 16,
 				["eI"] = 1593,
-				["eN"] = "Paragons of the Klaxxi",
 				["t"] = 1458255009,
 				["g"] = 20,
-				["d"] = 16,
+				["eN"] = "Paragons of the Klaxxi",
 			}, -- [19]
 			{
 				"FSauron-Azralon", -- [1]
@@ -2699,11 +2814,11 @@ VExRT = {
 				"JKinlao-Hakkar", -- [11]
 				"KShyftzy", -- [12]
 				["c"] = "Leisho-Thrall",
+				["d"] = 16,
 				["eN"] = "Garrosh Hellscream",
-				["eI"] = 1623,
 				["t"] = 1458255914,
 				["g"] = 20,
-				["d"] = 16,
+				["eI"] = 1623,
 			}, -- [20]
 			{
 				"FSauron-Azralon", -- [1]
@@ -2719,11 +2834,11 @@ VExRT = {
 				"JKinlao-Hakkar", -- [11]
 				"KShyftzy", -- [12]
 				["c"] = "Leisho-Thrall",
+				["d"] = 16,
 				["eN"] = "Garrosh Hellscream",
-				["eI"] = 1623,
 				["t"] = 1458256318,
 				["g"] = 20,
-				["d"] = 16,
+				["eI"] = 1623,
 			}, -- [21]
 			{
 				"FSauron-Azralon", -- [1]
@@ -2739,11 +2854,11 @@ VExRT = {
 				"JKinlao-Hakkar", -- [11]
 				"KShyftzy", -- [12]
 				["c"] = "Leisho-Thrall",
+				["d"] = 16,
 				["eN"] = "Garrosh Hellscream",
-				["eI"] = 1623,
 				["t"] = 1458256943,
 				["g"] = 20,
-				["d"] = 16,
+				["eI"] = 1623,
 			}, -- [22]
 			{
 				"FSauron-Azralon", -- [1]
@@ -2759,11 +2874,11 @@ VExRT = {
 				"JKinlao-Hakkar", -- [11]
 				"KShyftzy", -- [12]
 				["c"] = "Leisho-Thrall",
+				["d"] = 16,
 				["eN"] = "Garrosh Hellscream",
-				["eI"] = 1623,
 				["t"] = 1458257115,
 				["g"] = 20,
-				["d"] = 16,
+				["eI"] = 1623,
 			}, -- [23]
 			{
 				"FSauron-Azralon", -- [1]
@@ -2779,11 +2894,11 @@ VExRT = {
 				"JKinlao-Hakkar", -- [11]
 				"KShyftzy", -- [12]
 				["c"] = "Leisho-Thrall",
+				["d"] = 16,
 				["eN"] = "Garrosh Hellscream",
-				["eI"] = 1623,
 				["t"] = 1458257580,
 				["g"] = 20,
-				["d"] = 16,
+				["eI"] = 1623,
 			}, -- [24]
 			{
 				"JWarbuggy", -- [1]
@@ -2798,11 +2913,11 @@ VExRT = {
 				"IBurningrush-Ravencrest", -- [10]
 				"EAmanduuh", -- [11]
 				["c"] = "Leisho-Thrall",
+				["t"] = 1458605961,
 				["eI"] = 1795,
-				["eN"] = "Mannoroth",
 				["d"] = 14,
 				["g"] = 11,
-				["t"] = 1458605961,
+				["eN"] = "Mannoroth",
 			}, -- [25]
 			{
 				"JWarbuggy", -- [1]
@@ -2817,11 +2932,11 @@ VExRT = {
 				"IBurningrush-Ravencrest", -- [10]
 				"EAmanduuh", -- [11]
 				["c"] = "Leisho-Thrall",
+				["t"] = 1458606768,
 				["eI"] = 1799,
-				["eN"] = "Archimonde",
 				["d"] = 14,
 				["g"] = 11,
-				["t"] = 1458606768,
+				["eN"] = "Archimonde",
 			}, -- [26]
 			{
 				"JWarbuggy", -- [1]
@@ -2836,11 +2951,11 @@ VExRT = {
 				"IBurningrush-Ravencrest", -- [10]
 				"EAmanduuh", -- [11]
 				["c"] = "Leisho-Thrall",
+				["t"] = 1458607293,
 				["eI"] = 1799,
-				["eN"] = "Archimonde",
 				["d"] = 14,
 				["g"] = 11,
-				["t"] = 1458607293,
+				["eN"] = "Archimonde",
 			}, -- [27]
 			{
 				"JWarbuggy", -- [1]
@@ -2857,11 +2972,11 @@ VExRT = {
 				"DTurker-Area52", -- [12]
 				"DZeleros", -- [13]
 				["c"] = "Leisho-Thrall",
-				["d"] = 15,
-				["eN"] = "Archimonde",
-				["t"] = 1458866368,
-				["g"] = 13,
 				["eI"] = 1799,
+				["eN"] = "Archimonde",
+				["d"] = 15,
+				["g"] = 13,
+				["t"] = 1458866368,
 			}, -- [28]
 			{
 				"JWarbuggy", -- [1]
@@ -2878,11 +2993,11 @@ VExRT = {
 				"DTurker-Area52", -- [12]
 				"DZeleros", -- [13]
 				["c"] = "Leisho-Thrall",
-				["d"] = 15,
-				["eN"] = "Archimonde",
-				["t"] = 1458866809,
-				["g"] = 13,
 				["eI"] = 1799,
+				["eN"] = "Archimonde",
+				["d"] = 15,
+				["g"] = 13,
+				["t"] = 1458866809,
 			}, -- [29]
 			{
 				"JWarbuggy", -- [1]
@@ -2899,11 +3014,11 @@ VExRT = {
 				"DTurker-Area52", -- [12]
 				"DZeleros", -- [13]
 				["c"] = "Leisho-Thrall",
-				["d"] = 15,
-				["eN"] = "Archimonde",
-				["t"] = 1458867352,
-				["g"] = 13,
 				["eI"] = 1799,
+				["eN"] = "Archimonde",
+				["d"] = 15,
+				["g"] = 13,
+				["t"] = 1458867352,
 			}, -- [30]
 			{
 				"JWarbuggy", -- [1]
@@ -2920,11 +3035,11 @@ VExRT = {
 				"DTurker-Area52", -- [12]
 				"DZeleros", -- [13]
 				["c"] = "Leisho-Thrall",
-				["d"] = 15,
-				["eN"] = "Archimonde",
-				["t"] = 1458867563,
-				["g"] = 13,
 				["eI"] = 1799,
+				["eN"] = "Archimonde",
+				["d"] = 15,
+				["g"] = 13,
+				["t"] = 1458867563,
 			}, -- [31]
 			{
 				"JWarbuggy", -- [1]
@@ -2941,11 +3056,11 @@ VExRT = {
 				"DTurker-Area52", -- [12]
 				"DZeleros", -- [13]
 				["c"] = "Leisho-Thrall",
-				["d"] = 15,
-				["eN"] = "Archimonde",
-				["t"] = 1458868111,
-				["g"] = 13,
 				["eI"] = 1799,
+				["eN"] = "Archimonde",
+				["d"] = 15,
+				["g"] = 13,
+				["t"] = 1458868111,
 			}, -- [32]
 			{
 				"JWarbuggy", -- [1]
@@ -2962,11 +3077,11 @@ VExRT = {
 				"DTurker-Area52", -- [12]
 				"DZeleros", -- [13]
 				["c"] = "Leisho-Thrall",
-				["d"] = 15,
-				["eN"] = "Archimonde",
-				["t"] = 1458868576,
-				["g"] = 13,
 				["eI"] = 1799,
+				["eN"] = "Archimonde",
+				["d"] = 15,
+				["g"] = 13,
+				["t"] = 1458868576,
 			}, -- [33]
 			{
 				"JWarbuggy", -- [1]
@@ -2983,11 +3098,11 @@ VExRT = {
 				"DTurker-Area52", -- [12]
 				"DZeleros", -- [13]
 				["c"] = "Leisho-Thrall",
-				["d"] = 15,
-				["eN"] = "Archimonde",
-				["t"] = 1458869110,
-				["g"] = 13,
 				["eI"] = 1799,
+				["eN"] = "Archimonde",
+				["d"] = 15,
+				["g"] = 13,
+				["t"] = 1458869110,
 			}, -- [34]
 			{
 				"JWarbuggy", -- [1]
@@ -3004,11 +3119,11 @@ VExRT = {
 				"DTurker-Area52", -- [12]
 				"DZeleros", -- [13]
 				["c"] = "Leisho-Thrall",
-				["d"] = 15,
-				["eN"] = "Archimonde",
-				["t"] = 1458869749,
-				["g"] = 13,
 				["eI"] = 1799,
+				["eN"] = "Archimonde",
+				["d"] = 15,
+				["g"] = 13,
+				["t"] = 1458869749,
 			}, -- [35]
 			{
 				"KSnorunt", -- [1]
@@ -3025,11 +3140,11 @@ VExRT = {
 				"DZeleros", -- [12]
 				"HKuttie", -- [13]
 				["c"] = "Leisho-Thrall",
-				["d"] = 15,
-				["eN"] = "Socrethar the Eternal",
-				["t"] = 1458871312,
-				["g"] = 13,
 				["eI"] = 1794,
+				["eN"] = "Socrethar the Eternal",
+				["d"] = 15,
+				["g"] = 13,
+				["t"] = 1458871312,
 			}, -- [36]
 			{
 				"KSnorunt", -- [1]
@@ -3046,11 +3161,11 @@ VExRT = {
 				"DZeleros", -- [12]
 				"HKuttie", -- [13]
 				["c"] = "Leisho-Thrall",
-				["d"] = 15,
-				["eN"] = "Socrethar the Eternal",
-				["t"] = 1458872023,
-				["g"] = 13,
 				["eI"] = 1794,
+				["eN"] = "Socrethar the Eternal",
+				["d"] = 15,
+				["g"] = 13,
+				["t"] = 1458872023,
 			}, -- [37]
 			{
 				"FLorakun-Zul'jin", -- [1]
@@ -3066,11 +3181,11 @@ VExRT = {
 				"CThess-Korialstrasz", -- [11]
 				"GYoungsnowfox-Zul'jin", -- [12]
 				["c"] = "Leisho-Thrall",
+				["t"] = 1459126007,
 				["eI"] = 1601,
-				["eN"] = "Siegecrafter Blackfuse",
 				["d"] = 16,
 				["g"] = 20,
-				["t"] = 1459126007,
+				["eN"] = "Siegecrafter Blackfuse",
 			}, -- [38]
 			{
 				"FLorakun-Zul'jin", -- [1]
@@ -3086,11 +3201,11 @@ VExRT = {
 				"CThess-Korialstrasz", -- [11]
 				"GYoungsnowfox-Zul'jin", -- [12]
 				["c"] = "Leisho-Thrall",
+				["t"] = 1459126475,
 				["eI"] = 1594,
-				["eN"] = "Spoils of Pandaria",
 				["d"] = 16,
 				["g"] = 20,
-				["t"] = 1459126475,
+				["eN"] = "Spoils of Pandaria",
 			}, -- [39]
 			{
 				"FLorakun-Zul'jin", -- [1]
@@ -3106,11 +3221,11 @@ VExRT = {
 				"CThess-Korialstrasz", -- [11]
 				"GYoungsnowfox-Zul'jin", -- [12]
 				["c"] = "Leisho-Thrall",
+				["t"] = 1459126597,
 				["eI"] = 1594,
-				["eN"] = "Spoils of Pandaria",
 				["d"] = 16,
 				["g"] = 20,
-				["t"] = 1459126597,
+				["eN"] = "Spoils of Pandaria",
 			}, -- [40]
 			{
 				"FLorakun-Zul'jin", -- [1]
@@ -3127,11 +3242,11 @@ VExRT = {
 				"CThess-Korialstrasz", -- [12]
 				"GYoungsnowfox-Zul'jin", -- [13]
 				["c"] = "Leisho-Thrall",
+				["t"] = 1459127694,
 				["eI"] = 1599,
-				["eN"] = "Thok the Bloodthirsty",
 				["d"] = 16,
 				["g"] = 20,
-				["t"] = 1459127694,
+				["eN"] = "Thok the Bloodthirsty",
 			}, -- [41]
 			{
 				"FLorakun-Zul'jin", -- [1]
@@ -3148,11 +3263,11 @@ VExRT = {
 				"CThess-Korialstrasz", -- [12]
 				"GYoungsnowfox-Zul'jin", -- [13]
 				["c"] = "Leisho-Thrall",
+				["t"] = 1459128073,
 				["eI"] = 1593,
-				["eN"] = "Paragons of the Klaxxi",
 				["d"] = 16,
 				["g"] = 20,
-				["t"] = 1459128073,
+				["eN"] = "Paragons of the Klaxxi",
 			}, -- [42]
 			{
 				"FLorakun-Zul'jin", -- [1]
@@ -3169,11 +3284,11 @@ VExRT = {
 				"CThess-Korialstrasz", -- [12]
 				"GYoungsnowfox-Zul'jin", -- [13]
 				["c"] = "Leisho-Thrall",
+				["t"] = 1459128205,
 				["eI"] = 1593,
-				["eN"] = "Paragons of the Klaxxi",
 				["d"] = 16,
 				["g"] = 20,
-				["t"] = 1459128205,
+				["eN"] = "Paragons of the Klaxxi",
 			}, -- [43]
 			{
 				"FLorakun-Zul'jin", -- [1]
@@ -3190,11 +3305,11 @@ VExRT = {
 				"CThess-Korialstrasz", -- [12]
 				"GYoungsnowfox-Zul'jin", -- [13]
 				["c"] = "Leisho-Thrall",
+				["t"] = 1459128389,
 				["eI"] = 1593,
-				["eN"] = "Paragons of the Klaxxi",
 				["d"] = 16,
 				["g"] = 20,
-				["t"] = 1459128389,
+				["eN"] = "Paragons of the Klaxxi",
 			}, -- [44]
 			{
 				"FLorakun-Zul'jin", -- [1]
@@ -3211,11 +3326,11 @@ VExRT = {
 				"CThess-Korialstrasz", -- [12]
 				"GYoungsnowfox-Zul'jin", -- [13]
 				["c"] = "Leisho-Thrall",
+				["t"] = 1459128954,
 				["eI"] = 1623,
-				["eN"] = "Garrosh Hellscream",
 				["d"] = 16,
 				["g"] = 20,
-				["t"] = 1459128954,
+				["eN"] = "Garrosh Hellscream",
 			}, -- [45]
 			{
 				"FLorakun-Zul'jin", -- [1]
@@ -3232,11 +3347,11 @@ VExRT = {
 				"CThess-Korialstrasz", -- [12]
 				"GYoungsnowfox-Zul'jin", -- [13]
 				["c"] = "Leisho-Thrall",
+				["t"] = 1459129412,
 				["eI"] = 1623,
-				["eN"] = "Garrosh Hellscream",
 				["d"] = 16,
 				["g"] = 20,
-				["t"] = 1459129412,
+				["eN"] = "Garrosh Hellscream",
 			}, -- [46]
 			{
 				"JWarbuggy", -- [1]
@@ -3251,11 +3366,11 @@ VExRT = {
 				"FValrion", -- [10]
 				"EAmanduuh", -- [11]
 				["c"] = "Leisho-Thrall",
-				["d"] = 14,
-				["eN"] = "Mannoroth",
-				["t"] = 1459210648,
-				["g"] = 11,
 				["eI"] = 1795,
+				["eN"] = "Mannoroth",
+				["d"] = 14,
+				["g"] = 11,
+				["t"] = 1459210648,
 			}, -- [47]
 			{
 				"JWarbuggy", -- [1]
@@ -3270,11 +3385,11 @@ VExRT = {
 				"FValrion", -- [10]
 				"EAmanduuh", -- [11]
 				["c"] = "Leisho-Thrall",
-				["d"] = 14,
-				["eN"] = "Archimonde",
-				["t"] = 1459211461,
-				["g"] = 11,
 				["eI"] = 1799,
+				["eN"] = "Archimonde",
+				["d"] = 14,
+				["g"] = 11,
+				["t"] = 1459211461,
 			}, -- [48]
 			{
 				"JWarbuggy", -- [1]
@@ -3289,11 +3404,11 @@ VExRT = {
 				"FValrion", -- [10]
 				"EAmanduuh", -- [11]
 				["c"] = "Leisho-Thrall",
-				["d"] = 14,
-				["eN"] = "Archimonde",
-				["t"] = 1459212267,
-				["g"] = 11,
 				["eI"] = 1799,
+				["eN"] = "Archimonde",
+				["d"] = 14,
+				["g"] = 11,
+				["t"] = 1459212267,
 			}, -- [49]
 			{
 				"JWarbuggy", -- [1]
@@ -3308,11 +3423,11 @@ VExRT = {
 				"FValrion", -- [10]
 				"EAmanduuh", -- [11]
 				["c"] = "Leisho-Thrall",
-				["d"] = 14,
-				["eN"] = "Archimonde",
-				["t"] = 1459212791,
-				["g"] = 11,
 				["eI"] = 1799,
+				["eN"] = "Archimonde",
+				["d"] = 14,
+				["g"] = 11,
+				["t"] = 1459212791,
 			}, -- [50]
 			{
 				"JWarbuggy", -- [1]
@@ -3327,11 +3442,11 @@ VExRT = {
 				"FValrion", -- [10]
 				"EAmanduuh", -- [11]
 				["c"] = "Leisho-Thrall",
-				["d"] = 15,
-				["eN"] = "Hellfire Assault",
-				["t"] = 1459214085,
-				["g"] = 11,
 				["eI"] = 1778,
+				["eN"] = "Hellfire Assault",
+				["d"] = 15,
+				["g"] = 11,
+				["t"] = 1459214085,
 			}, -- [51]
 			{
 				"JWarbuggy", -- [1]
@@ -3346,11 +3461,11 @@ VExRT = {
 				"FValrion", -- [10]
 				"EAmanduuh", -- [11]
 				["c"] = "Leisho-Thrall",
-				["d"] = 15,
-				["eN"] = "Iron Reaver",
-				["t"] = 1459214666,
-				["g"] = 11,
 				["eI"] = 1785,
+				["eN"] = "Iron Reaver",
+				["d"] = 15,
+				["g"] = 11,
+				["t"] = 1459214666,
 			}, -- [52]
 			{
 				"JWarbuggy", -- [1]
@@ -3365,11 +3480,11 @@ VExRT = {
 				"FValrion", -- [10]
 				"EAmanduuh", -- [11]
 				["c"] = "Leisho-Thrall",
-				["d"] = 15,
-				["eN"] = "Iron Reaver",
-				["t"] = 1459215112,
-				["g"] = 10,
 				["eI"] = 1785,
+				["eN"] = "Iron Reaver",
+				["d"] = 15,
+				["g"] = 10,
+				["t"] = 1459215112,
 			}, -- [53]
 			{
 				"JWarbuggy", -- [1]
@@ -3383,11 +3498,11 @@ VExRT = {
 				"CMaukie", -- [9]
 				"FValrion", -- [10]
 				["c"] = "Leisho-Thrall",
-				["d"] = 15,
-				["eI"] = 1787,
-				["t"] = 1459216260,
-				["g"] = 10,
 				["eN"] = "Kormrok",
+				["eI"] = 1787,
+				["d"] = 15,
+				["g"] = 10,
+				["t"] = 1459216260,
 			}, -- [54]
 			{
 				"JWarbuggy", -- [1]
@@ -3401,11 +3516,11 @@ VExRT = {
 				"CMaukie", -- [9]
 				"FValrion", -- [10]
 				["c"] = "Leisho-Thrall",
-				["d"] = 15,
-				["eI"] = 1798,
-				["t"] = 1459216959,
-				["g"] = 10,
 				["eN"] = "Hellfire High Council",
+				["eI"] = 1798,
+				["d"] = 15,
+				["g"] = 10,
+				["t"] = 1459216959,
 			}, -- [55]
 			{
 				"JWarbuggy", -- [1]
@@ -3419,11 +3534,11 @@ VExRT = {
 				"CMaukie", -- [9]
 				"FValrion", -- [10]
 				["c"] = "Leisho-Thrall",
-				["d"] = 15,
-				["eI"] = 1786,
-				["t"] = 1459217721,
-				["g"] = 10,
 				["eN"] = "Kilrogg Deadeye",
+				["eI"] = 1786,
+				["d"] = 15,
+				["g"] = 10,
+				["t"] = 1459217721,
 			}, -- [56]
 			{
 				"JWarbuggy", -- [1]
@@ -3437,11 +3552,11 @@ VExRT = {
 				"CMaukie", -- [9]
 				"FValrion", -- [10]
 				["c"] = "Leisho-Thrall",
-				["d"] = 15,
-				["eI"] = 1786,
-				["t"] = 1459218117,
-				["g"] = 10,
 				["eN"] = "Kilrogg Deadeye",
+				["eI"] = 1786,
+				["d"] = 15,
+				["g"] = 10,
+				["t"] = 1459218117,
 			}, -- [57]
 			{
 				"JWarbuggy", -- [1]
@@ -3455,11 +3570,11 @@ VExRT = {
 				"CMaukie", -- [9]
 				"FValrion", -- [10]
 				["c"] = "Leisho-Thrall",
-				["d"] = 15,
-				["eI"] = 1783,
-				["t"] = 1459218720,
-				["g"] = 10,
 				["eN"] = "Gorefiend",
+				["eI"] = 1783,
+				["d"] = 15,
+				["g"] = 10,
+				["t"] = 1459218720,
 			}, -- [58]
 			{
 				"BRileelynn", -- [1]
@@ -3473,11 +3588,11 @@ VExRT = {
 				"DEristra", -- [9]
 				"KJêrome-Ragnaros", -- [10]
 				["c"] = "Leisho-Thrall",
-				["t"] = 1459297626,
-				["eN"] = "Hellfire Assault",
-				["d"] = 15,
-				["g"] = 10,
 				["eI"] = 1778,
+				["eN"] = "Hellfire Assault",
+				["t"] = 1459297626,
+				["g"] = 10,
+				["d"] = 15,
 			}, -- [59]
 			{
 				"BRileelynn", -- [1]
@@ -3491,11 +3606,11 @@ VExRT = {
 				"DEristra", -- [9]
 				"KJêrome-Ragnaros", -- [10]
 				["c"] = "Leisho-Thrall",
-				["t"] = 1459298219,
-				["eN"] = "Iron Reaver",
-				["d"] = 15,
-				["g"] = 10,
 				["eI"] = 1785,
+				["eN"] = "Iron Reaver",
+				["t"] = 1459298219,
+				["g"] = 10,
+				["d"] = 15,
 			}, -- [60]
 			{
 				"BRileelynn", -- [1]
@@ -3509,11 +3624,11 @@ VExRT = {
 				"DEristra", -- [9]
 				"KJêrome-Ragnaros", -- [10]
 				["c"] = "Leisho-Thrall",
-				["t"] = 1459298449,
-				["eN"] = "Iron Reaver",
-				["d"] = 15,
-				["g"] = 10,
 				["eI"] = 1785,
+				["eN"] = "Iron Reaver",
+				["t"] = 1459298449,
+				["g"] = 10,
+				["d"] = 15,
 			}, -- [61]
 			{
 				"BRileelynn", -- [1]
@@ -3527,11 +3642,11 @@ VExRT = {
 				"DEristra", -- [9]
 				"KJêrome-Ragnaros", -- [10]
 				["c"] = "Leisho-Thrall",
-				["t"] = 1459299671,
-				["eN"] = "Kormrok",
-				["d"] = 15,
-				["g"] = 10,
 				["eI"] = 1787,
+				["eN"] = "Kormrok",
+				["t"] = 1459299671,
+				["g"] = 10,
+				["d"] = 15,
 			}, -- [62]
 			{
 				"BRileelynn", -- [1]
@@ -3546,11 +3661,11 @@ VExRT = {
 				"CWidowwmaker-Ragnaros", -- [10]
 				"FZign", -- [11]
 				["c"] = "Leisho-Thrall",
-				["t"] = 1459300703,
-				["eI"] = 1798,
-				["d"] = 15,
-				["g"] = 11,
 				["eN"] = "Hellfire High Council",
+				["eI"] = 1798,
+				["t"] = 1459300703,
+				["g"] = 11,
+				["d"] = 15,
 			}, -- [63]
 			{
 				"BRileelynn", -- [1]
@@ -3565,11 +3680,11 @@ VExRT = {
 				"CWidowwmaker-Ragnaros", -- [10]
 				"FZign", -- [11]
 				["c"] = "Leisho-Thrall",
-				["t"] = 1459301381,
-				["eI"] = 1786,
-				["d"] = 15,
-				["g"] = 11,
 				["eN"] = "Kilrogg Deadeye",
+				["eI"] = 1786,
+				["t"] = 1459301381,
+				["g"] = 11,
+				["d"] = 15,
 			}, -- [64]
 			{
 				"BRileelynn", -- [1]
@@ -3584,11 +3699,11 @@ VExRT = {
 				"CWidowwmaker-Ragnaros", -- [10]
 				"FZign", -- [11]
 				["c"] = "Leisho-Thrall",
-				["t"] = 1459301719,
-				["eI"] = 1786,
-				["d"] = 15,
-				["g"] = 11,
 				["eN"] = "Kilrogg Deadeye",
+				["eI"] = 1786,
+				["t"] = 1459301719,
+				["g"] = 11,
+				["d"] = 15,
 			}, -- [65]
 			{
 				"BRileelynn", -- [1]
@@ -3606,11 +3721,11 @@ VExRT = {
 				"KBakronn", -- [13]
 				"HPlumyummy", -- [14]
 				["c"] = "Leisho-Thrall",
-				["t"] = 1459303217,
-				["eI"] = 1786,
-				["d"] = 15,
-				["g"] = 14,
 				["eN"] = "Kilrogg Deadeye",
+				["eI"] = 1786,
+				["t"] = 1459303217,
+				["g"] = 14,
+				["d"] = 15,
 			}, -- [66]
 			{
 				"BRileelynn", -- [1]
@@ -3628,11 +3743,11 @@ VExRT = {
 				"KBakronn", -- [13]
 				"HPlumyummy", -- [14]
 				["c"] = "Leisho-Thrall",
-				["t"] = 1459304056,
-				["eI"] = 1783,
-				["d"] = 15,
-				["g"] = 14,
 				["eN"] = "Gorefiend",
+				["eI"] = 1783,
+				["t"] = 1459304056,
+				["g"] = 14,
+				["d"] = 15,
 			}, -- [67]
 			{
 				"JWarbuggy", -- [1]
@@ -3646,11 +3761,11 @@ VExRT = {
 				"DEristra", -- [9]
 				"BRileelynn", -- [10]
 				["c"] = "Leisho-Thrall",
+				["d"] = 15,
 				["eI"] = 1799,
-				["eN"] = "Archimonde",
 				["t"] = 1459903338,
 				["g"] = 10,
-				["d"] = 15,
+				["eN"] = "Archimonde",
 			}, -- [68]
 			{
 				"JWarbuggy", -- [1]
@@ -3664,11 +3779,11 @@ VExRT = {
 				"DEristra", -- [9]
 				"BRileelynn", -- [10]
 				["c"] = "Leisho-Thrall",
+				["d"] = 15,
 				["eI"] = 1799,
-				["eN"] = "Archimonde",
 				["t"] = 1459903669,
 				["g"] = 10,
-				["d"] = 15,
+				["eN"] = "Archimonde",
 			}, -- [69]
 			{
 				"JWarbuggy", -- [1]
@@ -3682,11 +3797,11 @@ VExRT = {
 				"DEristra", -- [9]
 				"BRileelynn", -- [10]
 				["c"] = "Leisho-Thrall",
+				["d"] = 15,
 				["eI"] = 1799,
-				["eN"] = "Archimonde",
 				["t"] = 1459904045,
 				["g"] = 10,
-				["d"] = 15,
+				["eN"] = "Archimonde",
 			}, -- [70]
 			{
 				"JWarbuggy", -- [1]
@@ -3700,11 +3815,11 @@ VExRT = {
 				"DEristra", -- [9]
 				"BRileelynn", -- [10]
 				["c"] = "Leisho-Thrall",
-				["t"] = 1459904726,
-				["eN"] = "Archimonde",
-				["d"] = 15,
-				["g"] = 10,
 				["eI"] = 1799,
+				["eN"] = "Archimonde",
+				["t"] = 1459904726,
+				["g"] = 10,
+				["d"] = 15,
 			}, -- [71]
 			{
 				"JWarbuggy", -- [1]
@@ -3718,11 +3833,11 @@ VExRT = {
 				"DEristra", -- [9]
 				"BRileelynn", -- [10]
 				["c"] = "Leisho-Thrall",
-				["t"] = 1459905086,
-				["eN"] = "Archimonde",
-				["d"] = 15,
-				["g"] = 10,
 				["eI"] = 1799,
+				["eN"] = "Archimonde",
+				["t"] = 1459905086,
+				["g"] = 10,
+				["d"] = 15,
 			}, -- [72]
 			{
 				"JWarbuggy", -- [1]
@@ -3737,11 +3852,11 @@ VExRT = {
 				"BRileelynn", -- [10]
 				"FEwrekshin-Magtheridon", -- [11]
 				["c"] = "Leisho-Thrall",
-				["t"] = 1459905799,
-				["eI"] = 1799,
-				["d"] = 15,
-				["g"] = 11,
 				["eN"] = "Archimonde",
+				["eI"] = 1799,
+				["t"] = 1459905799,
+				["g"] = 11,
+				["d"] = 15,
 			}, -- [73]
 			{
 				"JWarbuggy", -- [1]
@@ -3756,11 +3871,11 @@ VExRT = {
 				"BRileelynn", -- [10]
 				"FEwrekshin-Magtheridon", -- [11]
 				["c"] = "Leisho-Thrall",
-				["t"] = 1459906393,
-				["eI"] = 1799,
-				["d"] = 15,
-				["g"] = 11,
 				["eN"] = "Archimonde",
+				["eI"] = 1799,
+				["t"] = 1459906393,
+				["g"] = 11,
+				["d"] = 15,
 			}, -- [74]
 			{
 				"JWarbuggy", -- [1]
@@ -3776,11 +3891,11 @@ VExRT = {
 				"KMoovi-Turalyon", -- [11]
 				"KWrane-Icecrown", -- [12]
 				["c"] = "Leisho-Thrall",
-				["t"] = 1459907173,
-				["eI"] = 1799,
-				["d"] = 15,
-				["g"] = 12,
 				["eN"] = "Archimonde",
+				["eI"] = 1799,
+				["t"] = 1459907173,
+				["g"] = 12,
+				["d"] = 15,
 			}, -- [75]
 			{
 				"JWarbuggy", -- [1]
@@ -3795,11 +3910,11 @@ VExRT = {
 				"BRileelynn", -- [10]
 				"KMoovi-Turalyon", -- [11]
 				["c"] = "Leisho-Thrall",
-				["t"] = 1459907830,
-				["eI"] = 1799,
-				["d"] = 15,
-				["g"] = 11,
 				["eN"] = "Archimonde",
+				["eI"] = 1799,
+				["t"] = 1459907830,
+				["g"] = 11,
+				["d"] = 15,
 			}, -- [76]
 			{
 				"JWarbuggy", -- [1]
@@ -3813,11 +3928,11 @@ VExRT = {
 				"CBababank-Bloodhoof", -- [9]
 				"HKuttie", -- [10]
 				["c"] = "Leisho-Thrall",
+				["t"] = 1460508921,
 				["eN"] = "Mannoroth",
-				["eI"] = 1795,
 				["d"] = 14,
 				["g"] = 10,
-				["t"] = 1460508921,
+				["eI"] = 1795,
 			}, -- [77]
 			{
 				"JWarbuggy", -- [1]
@@ -3831,11 +3946,11 @@ VExRT = {
 				"CBababank-Bloodhoof", -- [9]
 				"HKuttie", -- [10]
 				["c"] = "Leisho-Thrall",
+				["t"] = 1460509801,
 				["eN"] = "Archimonde",
-				["eI"] = 1799,
 				["d"] = 14,
 				["g"] = 10,
-				["t"] = 1460509801,
+				["eI"] = 1799,
 			}, -- [78]
 			{
 				"JWarbuggy", -- [1]
@@ -3851,11 +3966,11 @@ VExRT = {
 				"AMekkadread-Area52", -- [11]
 				"EDosquipique-Zul'jin", -- [12]
 				["c"] = "Leisho-Thrall",
+				["d"] = 15,
 				["eN"] = "Archimonde",
-				["eI"] = 1799,
 				["t"] = 1460681450,
 				["g"] = 12,
-				["d"] = 15,
+				["eI"] = 1799,
 			}, -- [79]
 			{
 				"JWarbuggy", -- [1]
@@ -3874,11 +3989,11 @@ VExRT = {
 				"HPanthia-Area52", -- [14]
 				"KWokkafloka-Ner'zhul", -- [15]
 				["c"] = "Leisho-Thrall",
-				["t"] = 1460682375,
-				["eI"] = 1799,
-				["d"] = 15,
-				["g"] = 15,
 				["eN"] = "Archimonde",
+				["eI"] = 1799,
+				["t"] = 1460682375,
+				["g"] = 15,
+				["d"] = 15,
 			}, -- [80]
 			{
 				"JWarbuggy", -- [1]
@@ -3897,11 +4012,11 @@ VExRT = {
 				"HPanthia-Area52", -- [14]
 				"IRothriane-Zul'jin", -- [15]
 				["c"] = "Leisho-Thrall",
-				["t"] = 1460683726,
-				["eI"] = 1799,
-				["d"] = 15,
-				["g"] = 15,
 				["eN"] = "Archimonde",
+				["eI"] = 1799,
+				["t"] = 1460683726,
+				["g"] = 15,
+				["d"] = 15,
 			}, -- [81]
 			{
 				"JWarbuggy", -- [1]
@@ -3919,11 +4034,11 @@ VExRT = {
 				"EIsdrid-Mal'Ganis", -- [13]
 				"ESharrazz-Garona", -- [14]
 				["c"] = "Leisho-Thrall",
-				["t"] = 1460684769,
-				["eI"] = 1799,
-				["d"] = 15,
-				["g"] = 14,
 				["eN"] = "Archimonde",
+				["eI"] = 1799,
+				["t"] = 1460684769,
+				["g"] = 14,
+				["d"] = 15,
 			}, -- [82]
 			{
 				"JWarbuggy", -- [1]
@@ -3941,11 +4056,11 @@ VExRT = {
 				"EIsdrid-Mal'Ganis", -- [13]
 				"ESharrazz-Garona", -- [14]
 				["c"] = "Leisho-Thrall",
-				["t"] = 1460685389,
-				["eI"] = 1799,
-				["d"] = 15,
-				["g"] = 13,
 				["eN"] = "Archimonde",
+				["eI"] = 1799,
+				["t"] = 1460685389,
+				["g"] = 13,
+				["d"] = 15,
 			}, -- [83]
 			{
 				"JWarbuggy", -- [1]
@@ -3960,11 +4075,11 @@ VExRT = {
 				"CMaukie", -- [10]
 				"DZeleros", -- [11]
 				["c"] = "Leisho-Thrall",
+				["t"] = 1461284150,
 				["eI"] = 1795,
-				["eN"] = "Mannoroth",
 				["d"] = 14,
 				["g"] = 11,
-				["t"] = 1461284150,
+				["eN"] = "Mannoroth",
 			}, -- [84]
 			{
 				"JWarbuggy", -- [1]
@@ -3979,11 +4094,11 @@ VExRT = {
 				"CMaukie", -- [10]
 				"DZeleros", -- [11]
 				["c"] = "Leisho-Thrall",
+				["t"] = 1461284777,
 				["eI"] = 1799,
-				["eN"] = "Archimonde",
 				["d"] = 14,
 				["g"] = 11,
-				["t"] = 1461284777,
+				["eN"] = "Archimonde",
 			}, -- [85]
 			{
 				"JWarbuggy", -- [1]
@@ -3998,11 +4113,11 @@ VExRT = {
 				"KShyftzy", -- [10]
 				"APlummies", -- [11]
 				["c"] = "Leisho-Thrall",
-				["d"] = 15,
-				["eN"] = "Archimonde",
-				["t"] = 1461286574,
-				["g"] = 11,
 				["eI"] = 1799,
+				["eN"] = "Archimonde",
+				["d"] = 15,
+				["g"] = 11,
+				["t"] = 1461286574,
 			}, -- [86]
 			{
 				"JWarbuggy", -- [1]
@@ -4017,11 +4132,11 @@ VExRT = {
 				"KShyftzy", -- [10]
 				"APlummies", -- [11]
 				["c"] = "Leisho-Thrall",
-				["d"] = 15,
-				["eN"] = "Archimonde",
-				["t"] = 1461287091,
-				["g"] = 11,
 				["eI"] = 1799,
+				["eN"] = "Archimonde",
+				["d"] = 15,
+				["g"] = 11,
+				["t"] = 1461287091,
 			}, -- [87]
 			{
 				"JWarbuggy", -- [1]
@@ -4040,11 +4155,11 @@ VExRT = {
 				"BFunkybyte-Illidan", -- [14]
 				"INoralia-Terenas", -- [15]
 				["c"] = "Leisho-Thrall",
-				["d"] = 15,
-				["eN"] = "Archimonde",
-				["t"] = 1461288072,
-				["g"] = 15,
 				["eI"] = 1799,
+				["eN"] = "Archimonde",
+				["d"] = 15,
+				["g"] = 15,
+				["t"] = 1461288072,
 			}, -- [88]
 			{
 				"JWarbuggy", -- [1]
@@ -4063,11 +4178,11 @@ VExRT = {
 				"BFunkybyte-Illidan", -- [14]
 				"INoralia-Terenas", -- [15]
 				["c"] = "Leisho-Thrall",
-				["d"] = 15,
-				["eN"] = "Archimonde",
-				["t"] = 1461288683,
-				["g"] = 15,
 				["eI"] = 1799,
+				["eN"] = "Archimonde",
+				["d"] = 15,
+				["g"] = 15,
+				["t"] = 1461288683,
 			}, -- [89]
 			{
 				"JWarbuggy", -- [1]
@@ -4086,11 +4201,11 @@ VExRT = {
 				"HBabygotback-Malfurion", -- [14]
 				"INoralia-Terenas", -- [15]
 				["c"] = "Leisho-Thrall",
-				["d"] = 15,
-				["eN"] = "Archimonde",
-				["t"] = 1461289584,
-				["g"] = 15,
 				["eI"] = 1799,
+				["eN"] = "Archimonde",
+				["d"] = 15,
+				["g"] = 15,
+				["t"] = 1461289584,
 			}, -- [90]
 			{
 				"JWarbuggy", -- [1]
@@ -4110,11 +4225,11 @@ VExRT = {
 				"INoralia-Terenas", -- [15]
 				"BThynar-Zul'jin", -- [16]
 				["c"] = "Leisho-Thrall",
-				["d"] = 15,
-				["eN"] = "Archimonde",
-				["t"] = 1461290719,
-				["g"] = 16,
 				["eI"] = 1799,
+				["eN"] = "Archimonde",
+				["d"] = 15,
+				["g"] = 16,
+				["t"] = 1461290719,
 			}, -- [91]
 			{
 				"JWarbuggy", -- [1]
@@ -4133,11 +4248,11 @@ VExRT = {
 				"HBabygotback-Malfurion", -- [14]
 				"GGerakzul", -- [15]
 				["c"] = "Leisho-Thrall",
-				["d"] = 15,
-				["eN"] = "Archimonde",
-				["t"] = 1461291631,
-				["g"] = 15,
 				["eI"] = 1799,
+				["eN"] = "Archimonde",
+				["d"] = 15,
+				["g"] = 15,
+				["t"] = 1461291631,
 			}, -- [92]
 			{
 				"JWarbuggy", -- [1]
@@ -4156,11 +4271,11 @@ VExRT = {
 				"HBabygotback-Malfurion", -- [14]
 				"GGerakzul", -- [15]
 				["c"] = "Leisho-Thrall",
-				["d"] = 15,
-				["eN"] = "Archimonde",
-				["t"] = 1461292853,
-				["g"] = 15,
 				["eI"] = 1799,
+				["eN"] = "Archimonde",
+				["d"] = 15,
+				["g"] = 15,
+				["t"] = 1461292853,
 			}, -- [93]
 			{
 				"JWarbuggy", -- [1]
@@ -4176,11 +4291,11 @@ VExRT = {
 				"APlummies", -- [11]
 				"GGerakzul", -- [12]
 				["c"] = "Leisho-Thrall",
-				["d"] = 15,
-				["eN"] = "Archimonde",
-				["t"] = 1461293585,
-				["g"] = 13,
 				["eI"] = 1799,
+				["eN"] = "Archimonde",
+				["d"] = 15,
+				["g"] = 13,
+				["t"] = 1461293585,
 			}, -- [94]
 			{
 				"GGroundation-BleedingHollow", -- [1]
@@ -4195,11 +4310,11 @@ VExRT = {
 				"JLeisho", -- [10]
 				"KCloneboned-BleedingHollow", -- [11]
 				["c"] = "Leisho-Thrall",
+				["d"] = 16,
 				["eN"] = "Thok the Bloodthirsty",
-				["eI"] = 1599,
 				["t"] = 1461361131,
 				["g"] = 20,
-				["d"] = 16,
+				["eI"] = 1599,
 			}, -- [95]
 			{
 				"GGroundation-BleedingHollow", -- [1]
@@ -4214,11 +4329,11 @@ VExRT = {
 				"JLeisho", -- [10]
 				"KCloneboned-BleedingHollow", -- [11]
 				["c"] = "Leisho-Thrall",
+				["d"] = 16,
 				["eN"] = "Paragons of the Klaxxi",
-				["eI"] = 1593,
 				["t"] = 1461361419,
 				["g"] = 20,
-				["d"] = 16,
+				["eI"] = 1593,
 			}, -- [96]
 			{
 				"GGroundation-BleedingHollow", -- [1]
@@ -4233,11 +4348,11 @@ VExRT = {
 				"JLeisho", -- [10]
 				"KCloneboned-BleedingHollow", -- [11]
 				["c"] = "Leisho-Thrall",
+				["d"] = 16,
 				["eN"] = "Garrosh Hellscream",
-				["eI"] = 1623,
 				["t"] = 1461361791,
 				["g"] = 20,
-				["d"] = 16,
+				["eI"] = 1623,
 			}, -- [97]
 			{
 				"JWarbuggy", -- [1]
@@ -4253,11 +4368,11 @@ VExRT = {
 				"DKartaz-EmeraldDream", -- [11]
 				"KAndimorph-Shadowsong", -- [12]
 				["c"] = "Leisho-Thrall",
+				["t"] = 1461716199,
 				["eI"] = 1795,
-				["eN"] = "Mannoroth",
 				["d"] = 14,
 				["g"] = 12,
-				["t"] = 1461716199,
+				["eN"] = "Mannoroth",
 			}, -- [98]
 			{
 				"JWarbuggy", -- [1]
@@ -4274,11 +4389,11 @@ VExRT = {
 				"KAndimorph-Shadowsong", -- [12]
 				"BZiglet", -- [13]
 				["c"] = "Leisho-Thrall",
+				["t"] = 1461716875,
 				["eI"] = 1799,
-				["eN"] = "Archimonde",
 				["d"] = 14,
 				["g"] = 13,
-				["t"] = 1461716875,
+				["eN"] = "Archimonde",
 			}, -- [99]
 			{
 				"JWarbuggy", -- [1]
@@ -4294,11 +4409,11 @@ VExRT = {
 				"CArctúrus-Area52", -- [11]
 				"GToastychance-Deathwing", -- [12]
 				["c"] = "Leisho-Thrall",
+				["t"] = 1461718180,
 				["eI"] = 1799,
-				["eN"] = "Archimonde",
 				["d"] = 15,
 				["g"] = 12,
-				["t"] = 1461718180,
+				["eN"] = "Archimonde",
 			}, -- [100]
 			{
 				"JWarbuggy", -- [1]
@@ -4314,11 +4429,11 @@ VExRT = {
 				"CArctúrus-Area52", -- [11]
 				"GToastychance-Deathwing", -- [12]
 				["c"] = "Leisho-Thrall",
+				["t"] = 1461718407,
 				["eI"] = 1799,
-				["eN"] = "Archimonde",
 				["d"] = 15,
 				["g"] = 12,
-				["t"] = 1461718407,
+				["eN"] = "Archimonde",
 			}, -- [101]
 			{
 				"ELyricel-WyrmrestAccord", -- [1]
@@ -4335,14 +4450,14 @@ VExRT = {
 				"JLeisho", -- [12]
 				"CCaçadorcaste-Azralon", -- [13]
 				"FKridoril-Trollbane", -- [14]
-				["t"] = 1461884699,
+				["eN"] = "Malkorok",
 				[17] = "CLegendshot-Area52",
 				["c"] = "Leisho-Thrall",
-				["g"] = 20,
-				["eI"] = 1595,
-				["d"] = 16,
 				[16] = "FPerished-ArgentDawn",
-				["eN"] = "Malkorok",
+				["eI"] = 1595,
+				["t"] = 1461884699,
+				["g"] = 20,
+				["d"] = 16,
 			}, -- [102]
 			{
 				"ELyricel-WyrmrestAccord", -- [1]
@@ -4364,11 +4479,11 @@ VExRT = {
 				"CBeler-Zul'jin", -- [17]
 				"ASageghost-Misha", -- [18]
 				["c"] = "Leisho-Thrall",
-				["t"] = 1461885158,
-				["eI"] = 1601,
-				["d"] = 16,
-				["g"] = 20,
 				["eN"] = "Siegecrafter Blackfuse",
+				["eI"] = 1601,
+				["t"] = 1461885158,
+				["g"] = 20,
+				["d"] = 16,
 			}, -- [103]
 			{
 				"ELyricel-WyrmrestAccord", -- [1]
@@ -4390,11 +4505,11 @@ VExRT = {
 				"CBeler-Zul'jin", -- [17]
 				"ASageghost-Misha", -- [18]
 				["c"] = "Leisho-Thrall",
-				["t"] = 1461885311,
-				["eI"] = 1594,
-				["d"] = 16,
-				["g"] = 20,
 				["eN"] = "Spoils of Pandaria",
+				["eI"] = 1594,
+				["t"] = 1461885311,
+				["g"] = 20,
+				["d"] = 16,
 			}, -- [104]
 			{
 				"ELyricel-WyrmrestAccord", -- [1]
@@ -4416,11 +4531,11 @@ VExRT = {
 				"CBeler-Zul'jin", -- [17]
 				"ASageghost-Misha", -- [18]
 				["c"] = "Leisho-Thrall",
-				["t"] = 1461885662,
-				["eI"] = 1599,
-				["d"] = 16,
-				["g"] = 20,
 				["eN"] = "Thok the Bloodthirsty",
+				["eI"] = 1599,
+				["t"] = 1461885662,
+				["g"] = 20,
+				["d"] = 16,
 			}, -- [105]
 			{
 				"ELyricel-WyrmrestAccord", -- [1]
@@ -4443,11 +4558,11 @@ VExRT = {
 				"CBeler-Zul'jin", -- [18]
 				"ASageghost-Misha", -- [19]
 				["c"] = "Leisho-Thrall",
-				["t"] = 1461885940,
-				["eN"] = "Paragons of the Klaxxi",
-				["d"] = 16,
-				["g"] = 20,
 				["eI"] = 1593,
+				["eN"] = "Paragons of the Klaxxi",
+				["t"] = 1461885940,
+				["g"] = 20,
+				["d"] = 16,
 			}, -- [106]
 			{
 				"ELyricel-WyrmrestAccord", -- [1]
@@ -4470,11 +4585,11 @@ VExRT = {
 				"CBeler-Zul'jin", -- [18]
 				"ASageghost-Misha", -- [19]
 				["c"] = "Leisho-Thrall",
-				["t"] = 1461886294,
-				["eN"] = "Garrosh Hellscream",
-				["d"] = 16,
-				["g"] = 20,
 				["eI"] = 1623,
+				["eN"] = "Garrosh Hellscream",
+				["t"] = 1461886294,
+				["g"] = 20,
+				["d"] = 16,
 			}, -- [107]
 			{
 				"AHëllsfüry-DemonSoul", -- [1]
@@ -4494,11 +4609,11 @@ VExRT = {
 				"FAzulão-Azralon", -- [15]
 				"AHiminameis-LaughingSkull", -- [16]
 				["c"] = "Leisho-Thrall",
+				["d"] = 16,
 				["eN"] = "Gruul",
-				["eI"] = 1691,
 				["t"] = 1461890344,
 				["g"] = 20,
-				["d"] = 16,
+				["eI"] = 1691,
 			}, -- [108]
 			{
 				"AHëllsfüry-DemonSoul", -- [1]
@@ -4520,11 +4635,11 @@ VExRT = {
 				[17] = "DYesty-Ragnaros",
 				[18] = "JLeisho",
 				[19] = "JCerocool-Mal'Ganis",
+				["t"] = 1461890990,
 				["eI"] = 1691,
-				[11] = "GArandrua-Hyjal",
 				["d"] = 16,
 				[12] = "EScerenitie-LaughingSkull",
-				["t"] = 1461890990,
+				[11] = "GArandrua-Hyjal",
 			}, -- [109]
 			{
 				"BRetbullqt-EmeraldDream", -- [1]
@@ -4539,11 +4654,11 @@ VExRT = {
 				nil, -- [10]
 				"AJymmon-Boulderfist", -- [11]
 				["c"] = "Leisho-Thrall",
+				["d"] = 15,
 				["eI"] = 1623,
-				["eN"] = "Garrosh Hellscream",
 				["t"] = 1462754517,
 				["g"] = 10,
-				["d"] = 15,
+				["eN"] = "Garrosh Hellscream",
 			}, -- [110]
 			{
 				"AKrawnc-EmeraldDream", -- [1]
@@ -4567,11 +4682,11 @@ VExRT = {
 				"AAvengethor-EarthenRing", -- [19]
 				"GLavaspec", -- [20]
 				["c"] = "Leisho-Thrall",
+				["t"] = 1462839300,
 				["eN"] = "Iron Juggernaut",
-				["eI"] = 1600,
 				["d"] = 16,
 				["g"] = 20,
-				["t"] = 1462839300,
+				["eI"] = 1600,
 			}, -- [111]
 			{
 				"AKrawnc-EmeraldDream", -- [1]
@@ -4595,11 +4710,11 @@ VExRT = {
 				"AAvengethor-EarthenRing", -- [19]
 				"GLavaspec", -- [20]
 				["c"] = "Leisho-Thrall",
+				["t"] = 1462839500,
 				["eN"] = "Kor'kron Dark Shaman",
-				["eI"] = 1606,
 				["d"] = 16,
 				["g"] = 20,
-				["t"] = 1462839500,
+				["eI"] = 1606,
 			}, -- [112]
 			{
 				"AKrawnc-EmeraldDream", -- [1]
@@ -4796,11 +4911,11 @@ VExRT = {
 				"KMooshan-Gallywix", -- [17]
 				"AAvengethor-EarthenRing", -- [18]
 				["c"] = "Leisho-Thrall",
+				["t"] = 1462841743,
 				["eI"] = 1623,
-				["eN"] = "Garrosh Hellscream",
 				["d"] = 16,
 				["g"] = 20,
-				["t"] = 1462841743,
+				["eN"] = "Garrosh Hellscream",
 			}, -- [120]
 			{
 				"KRakumorph-Skywall", -- [1]
@@ -4817,14 +4932,14 @@ VExRT = {
 				"AHulkurg-Perenolde", -- [12]
 				"CHaise-Nemesis", -- [13]
 				"JLeisho", -- [14]
-				["eI"] = 1623,
+				["t"] = 1462843490,
 				[17] = "AAvengethor-EarthenRing",
 				["c"] = "Leisho-Thrall",
+				["g"] = 20,
+				["eI"] = 1623,
+				["d"] = 16,
 				[16] = "GSlapshots-Zul'jin",
 				["eN"] = "Garrosh Hellscream",
-				["d"] = 16,
-				["g"] = 20,
-				["t"] = 1462843490,
 			}, -- [121]
 			{
 				"APlayed", -- [1]
@@ -4844,11 +4959,11 @@ VExRT = {
 				"ALegendury-Arthas", -- [15]
 				"BAmoodin-Blade'sEdge", -- [16]
 				["c"] = "Leisho-Thrall",
-				["d"] = 16,
-				["eN"] = "Paragons of the Klaxxi",
-				["t"] = 1462925691,
-				["g"] = 20,
 				["eI"] = 1593,
+				["eN"] = "Paragons of the Klaxxi",
+				["d"] = 16,
+				["g"] = 20,
+				["t"] = 1462925691,
 			}, -- [122]
 			{
 				"APlayed", -- [1]
@@ -4871,11 +4986,11 @@ VExRT = {
 				"FOrwel-Arthas", -- [18]
 				"CBulseye-Staghelm", -- [19]
 				["c"] = "Leisho-Thrall",
-				["d"] = 16,
-				["eI"] = 1623,
-				["t"] = 1462926039,
-				["g"] = 20,
 				["eN"] = "Garrosh Hellscream",
+				["eI"] = 1623,
+				["d"] = 16,
+				["g"] = 20,
+				["t"] = 1462926039,
 			}, -- [123]
 			{
 				"KSnorunt", -- [1]
@@ -4890,11 +5005,11 @@ VExRT = {
 				"IBiggiessmall", -- [10]
 				"BRileelynn", -- [11]
 				["c"] = "Leisho-Thrall",
-				["d"] = 15,
-				["eN"] = "Hellfire Assault",
-				["t"] = 1463531351,
-				["g"] = 11,
 				["eI"] = 1778,
+				["eN"] = "Hellfire Assault",
+				["d"] = 15,
+				["g"] = 11,
+				["t"] = 1463531351,
 			}, -- [124]
 			{
 				"KSnorunt", -- [1]
@@ -4910,11 +5025,11 @@ VExRT = {
 				"BRileelynn", -- [11]
 				"BZiglet", -- [12]
 				["c"] = "Leisho-Thrall",
-				["d"] = 15,
-				["eN"] = "Iron Reaver",
-				["t"] = 1463531945,
-				["g"] = 12,
 				["eI"] = 1785,
+				["eN"] = "Iron Reaver",
+				["d"] = 15,
+				["g"] = 12,
+				["t"] = 1463531945,
 			}, -- [125]
 			{
 				"KSnorunt", -- [1]
@@ -4930,11 +5045,11 @@ VExRT = {
 				"BRileelynn", -- [11]
 				"BZiglet", -- [12]
 				["c"] = "Leisho-Thrall",
-				["d"] = 15,
-				["eN"] = "Kormrok",
-				["t"] = 1463533007,
-				["g"] = 12,
 				["eI"] = 1787,
+				["eN"] = "Kormrok",
+				["d"] = 15,
+				["g"] = 12,
+				["t"] = 1463533007,
 			}, -- [126]
 			{
 				"KSnorunt", -- [1]
@@ -4950,11 +5065,11 @@ VExRT = {
 				"BRileelynn", -- [11]
 				"BZiglet", -- [12]
 				["c"] = "Leisho-Thrall",
-				["d"] = 15,
-				["eN"] = "Hellfire High Council",
-				["t"] = 1463533649,
-				["g"] = 12,
 				["eI"] = 1798,
+				["eN"] = "Hellfire High Council",
+				["d"] = 15,
+				["g"] = 12,
+				["t"] = 1463533649,
 			}, -- [127]
 			{
 				"KSnorunt", -- [1]
@@ -4970,11 +5085,11 @@ VExRT = {
 				"BRileelynn", -- [11]
 				"BZiglet", -- [12]
 				["c"] = "Leisho-Thrall",
+				["d"] = 15,
 				["eN"] = "Kilrogg Deadeye",
-				["eI"] = 1786,
 				["t"] = 1463534335,
 				["g"] = 12,
-				["d"] = 15,
+				["eI"] = 1786,
 			}, -- [128]
 			{
 				"KSnorunt", -- [1]
@@ -4990,11 +5105,11 @@ VExRT = {
 				"BRileelynn", -- [11]
 				"BZiglet", -- [12]
 				["c"] = "Leisho-Thrall",
+				["d"] = 15,
 				["eN"] = "Gorefiend",
-				["eI"] = 1783,
 				["t"] = 1463535193,
 				["g"] = 12,
-				["d"] = 15,
+				["eI"] = 1783,
 			}, -- [129]
 			{
 				"GMaukio", -- [1]
@@ -5009,11 +5124,11 @@ VExRT = {
 				"BRileelynn", -- [10]
 				"DZeleros", -- [11]
 				["c"] = "Leisho-Thrall",
+				["d"] = 15,
 				["eN"] = "Shadow-Lord Iskar",
-				["eI"] = 1788,
 				["t"] = 1463537360,
 				["g"] = 11,
-				["d"] = 15,
+				["eI"] = 1788,
 			}, -- [130]
 			{
 				"FDasvidaniya", -- [1]
@@ -5029,11 +5144,11 @@ VExRT = {
 				"DZeleros", -- [11]
 				"CWidowwmaker-Ragnaros", -- [12]
 				["c"] = "Leisho-Thrall",
+				["d"] = 14,
 				["eN"] = "Hellfire Assault",
-				["eI"] = 1778,
 				["t"] = 1463704058,
 				["g"] = 12,
-				["d"] = 14,
+				["eI"] = 1778,
 			}, -- [131]
 			{
 				"FDasvidaniya", -- [1]
@@ -5049,11 +5164,11 @@ VExRT = {
 				"DZeleros", -- [11]
 				"CWidowwmaker-Ragnaros", -- [12]
 				["c"] = "Leisho-Thrall",
+				["d"] = 14,
 				["eN"] = "Iron Reaver",
-				["eI"] = 1785,
 				["t"] = 1463704651,
 				["g"] = 12,
-				["d"] = 14,
+				["eI"] = 1785,
 			}, -- [132]
 			{
 				"FDasvidaniya", -- [1]
@@ -5069,11 +5184,11 @@ VExRT = {
 				"DZeleros", -- [11]
 				"CWidowwmaker-Ragnaros", -- [12]
 				["c"] = "Leisho-Thrall",
+				["d"] = 14,
 				["eN"] = "Iron Reaver",
-				["eI"] = 1785,
 				["t"] = 1463705242,
 				["g"] = 12,
-				["d"] = 14,
+				["eI"] = 1785,
 			}, -- [133]
 			{
 				"FDasvidaniya", -- [1]
@@ -5089,11 +5204,11 @@ VExRT = {
 				"DZeleros", -- [11]
 				"CWidowwmaker-Ragnaros", -- [12]
 				["c"] = "Leisho-Thrall",
+				["d"] = 14,
 				["eN"] = "Kormrok",
-				["eI"] = 1787,
 				["t"] = 1463706137,
 				["g"] = 12,
-				["d"] = 14,
+				["eI"] = 1787,
 			}, -- [134]
 			{
 				"FDasvidaniya", -- [1]
@@ -5109,11 +5224,11 @@ VExRT = {
 				"DZeleros", -- [11]
 				"CWidowwmaker-Ragnaros", -- [12]
 				["c"] = "Leisho-Thrall",
+				["d"] = 14,
 				["eN"] = "Hellfire High Council",
-				["eI"] = 1798,
 				["t"] = 1463706664,
 				["g"] = 12,
-				["d"] = 14,
+				["eI"] = 1798,
 			}, -- [135]
 			{
 				"FDasvidaniya", -- [1]
@@ -5129,11 +5244,11 @@ VExRT = {
 				"DZeleros", -- [11]
 				"CWidowwmaker-Ragnaros", -- [12]
 				["c"] = "Leisho-Thrall",
+				["d"] = 14,
 				["eN"] = "Kilrogg Deadeye",
-				["eI"] = 1786,
 				["t"] = 1463707381,
 				["g"] = 12,
-				["d"] = 14,
+				["eI"] = 1786,
 			}, -- [136]
 			{
 				"FDasvidaniya", -- [1]
@@ -5149,11 +5264,11 @@ VExRT = {
 				"DZeleros", -- [11]
 				"CWidowwmaker-Ragnaros", -- [12]
 				["c"] = "Leisho-Thrall",
+				["d"] = 14,
 				["eN"] = "Gorefiend",
-				["eI"] = 1783,
 				["t"] = 1463707934,
 				["g"] = 12,
-				["d"] = 14,
+				["eI"] = 1783,
 			}, -- [137]
 			{
 				"FDasvidaniya", -- [1]
@@ -5169,11 +5284,11 @@ VExRT = {
 				"DZeleros", -- [11]
 				"CWidowwmaker-Ragnaros", -- [12]
 				["c"] = "Leisho-Thrall",
+				["d"] = 14,
 				["eN"] = "Fel Lord Zakuun",
-				["eI"] = 1777,
 				["t"] = 1463708934,
 				["g"] = 12,
-				["d"] = 14,
+				["eI"] = 1777,
 			}, -- [138]
 			{
 				"FDasvidaniya", -- [1]
@@ -5189,11 +5304,11 @@ VExRT = {
 				"DZeleros", -- [11]
 				"CWidowwmaker-Ragnaros", -- [12]
 				["c"] = "Leisho-Thrall",
+				["d"] = 14,
 				["eN"] = "Xhul'horac",
-				["eI"] = 1800,
 				["t"] = 1463709600,
 				["g"] = 12,
-				["d"] = 14,
+				["eI"] = 1800,
 			}, -- [139]
 			{
 				"FDasvidaniya", -- [1]
@@ -5209,11 +5324,11 @@ VExRT = {
 				"DZeleros", -- [11]
 				"CWidowwmaker-Ragnaros", -- [12]
 				["c"] = "Leisho-Thrall",
+				["d"] = 14,
 				["eN"] = "Xhul'horac",
-				["eI"] = 1800,
 				["t"] = 1463710049,
 				["g"] = 12,
-				["d"] = 14,
+				["eI"] = 1800,
 			}, -- [140]
 			{
 				"FDasvidaniya", -- [1]
@@ -5229,11 +5344,11 @@ VExRT = {
 				"DZeleros", -- [11]
 				"CWidowwmaker-Ragnaros", -- [12]
 				["c"] = "Leisho-Thrall",
+				["d"] = 14,
 				["eN"] = "Socrethar the Eternal",
-				["eI"] = 1794,
 				["t"] = 1463710827,
 				["g"] = 12,
-				["d"] = 14,
+				["eI"] = 1794,
 			}, -- [141]
 			{
 				"BTarberus", -- [1]
@@ -5248,11 +5363,11 @@ VExRT = {
 				"KJêrome-Ragnaros", -- [10]
 				"BZiglet", -- [11]
 				["c"] = "Leisho-Thrall",
-				["d"] = 14,
-				["eN"] = "Mannoroth",
-				["t"] = 1464308570,
-				["g"] = 11,
 				["eI"] = 1795,
+				["eN"] = "Mannoroth",
+				["d"] = 14,
+				["g"] = 11,
+				["t"] = 1464308570,
 			}, -- [142]
 			{
 				"BTarberus", -- [1]
@@ -5267,11 +5382,11 @@ VExRT = {
 				"KJêrome-Ragnaros", -- [10]
 				"BZiglet", -- [11]
 				["c"] = "Leisho-Thrall",
-				["d"] = 14,
-				["eN"] = "Archimonde",
-				["t"] = 1464309384,
-				["g"] = 11,
 				["eI"] = 1799,
+				["eN"] = "Archimonde",
+				["d"] = 14,
+				["g"] = 11,
+				["t"] = 1464309384,
 			}, -- [143]
 			{
 				"BTarberus", -- [1]
@@ -5286,11 +5401,11 @@ VExRT = {
 				"KJêrome-Ragnaros", -- [10]
 				"EAmanduuh", -- [11]
 				["c"] = "Leisho-Thrall",
-				["d"] = 14,
-				["eN"] = "Hellfire Assault",
-				["t"] = 1464310460,
-				["g"] = 11,
 				["eI"] = 1778,
+				["eN"] = "Hellfire Assault",
+				["d"] = 14,
+				["g"] = 11,
+				["t"] = 1464310460,
 			}, -- [144]
 			{
 				"BTarberus", -- [1]
@@ -5305,11 +5420,11 @@ VExRT = {
 				"KJêrome-Ragnaros", -- [10]
 				"EAmanduuh", -- [11]
 				["c"] = "Leisho-Thrall",
-				["d"] = 14,
-				["eN"] = "Iron Reaver",
-				["t"] = 1464311080,
-				["g"] = 11,
 				["eI"] = 1785,
+				["eN"] = "Iron Reaver",
+				["d"] = 14,
+				["g"] = 11,
+				["t"] = 1464311080,
 			}, -- [145]
 			{
 				"BTarberus", -- [1]
@@ -5324,11 +5439,11 @@ VExRT = {
 				"KJêrome-Ragnaros", -- [10]
 				"EAmanduuh", -- [11]
 				["c"] = "Leisho-Thrall",
-				["d"] = 14,
-				["eN"] = "Iron Reaver",
-				["t"] = 1464311780,
-				["g"] = 11,
 				["eI"] = 1785,
+				["eN"] = "Iron Reaver",
+				["d"] = 14,
+				["g"] = 11,
+				["t"] = 1464311780,
 			}, -- [146]
 			{
 				"BTarberus", -- [1]
@@ -5343,11 +5458,11 @@ VExRT = {
 				"KJêrome-Ragnaros", -- [10]
 				"EAmanduuh", -- [11]
 				["c"] = "Leisho-Thrall",
-				["d"] = 14,
-				["eN"] = "Kormrok",
-				["t"] = 1464313119,
-				["g"] = 10,
 				["eI"] = 1787,
+				["eN"] = "Kormrok",
+				["d"] = 14,
+				["g"] = 10,
+				["t"] = 1464313119,
 			}, -- [147]
 			{
 				"BTarberus", -- [1]
@@ -5362,11 +5477,11 @@ VExRT = {
 				"KJêrome-Ragnaros", -- [10]
 				"EAmanduuh", -- [11]
 				["c"] = "Leisho-Thrall",
-				["d"] = 14,
-				["eN"] = "Hellfire High Council",
-				["t"] = 1464313774,
-				["g"] = 11,
 				["eI"] = 1798,
+				["eN"] = "Hellfire High Council",
+				["d"] = 14,
+				["g"] = 11,
+				["t"] = 1464313774,
 			}, -- [148]
 			{
 				"BTarberus", -- [1]
@@ -5380,11 +5495,11 @@ VExRT = {
 				"EProtheuus", -- [9]
 				"KJêrome-Ragnaros", -- [10]
 				["c"] = "Leisho-Thrall",
-				["d"] = 14,
-				["eI"] = 1786,
-				["t"] = 1464314405,
-				["g"] = 10,
 				["eN"] = "Kilrogg Deadeye",
+				["eI"] = 1786,
+				["d"] = 14,
+				["g"] = 10,
+				["t"] = 1464314405,
 			}, -- [149]
 			{
 				"BTarberus", -- [1]
@@ -5398,11 +5513,11 @@ VExRT = {
 				"EProtheuus", -- [9]
 				"KJêrome-Ragnaros", -- [10]
 				["c"] = "Leisho-Thrall",
-				["d"] = 14,
-				["eI"] = 1783,
-				["t"] = 1464315502,
-				["g"] = 10,
 				["eN"] = "Gorefiend",
+				["eI"] = 1783,
+				["d"] = 14,
+				["g"] = 10,
+				["t"] = 1464315502,
 			}, -- [150]
 			{
 				"BTarberus", -- [1]
@@ -5419,9 +5534,9 @@ VExRT = {
 				["d"] = 14,
 				["g"] = 10,
 				[11] = "EAmanduuh",
-				["t"] = 1464316444,
-				[12] = "DZeleros",
 				["eI"] = 1788,
+				[12] = "DZeleros",
+				["t"] = 1464316444,
 			}, -- [151]
 			{
 				"KSnorunt", -- [1]
@@ -5434,11 +5549,11 @@ VExRT = {
 				"APlummies", -- [8]
 				"EProtheuus", -- [9]
 				["c"] = "Leisho-Thrall",
-				["t"] = 1464740186,
-				["eN"] = "Mannoroth",
-				["d"] = 14,
-				["g"] = 10,
 				["eI"] = 1795,
+				["eN"] = "Mannoroth",
+				["t"] = 1464740186,
+				["g"] = 10,
+				["d"] = 14,
 			}, -- [152]
 			{
 				"KSnorunt", -- [1]
@@ -5452,11 +5567,11 @@ VExRT = {
 				"EProtheuus", -- [9]
 				"KMisfoortion", -- [10]
 				["c"] = "Leisho-Thrall",
-				["t"] = 1464741712,
-				["eN"] = "Archimonde",
-				["d"] = 14,
-				["g"] = 10,
 				["eI"] = 1799,
+				["eN"] = "Archimonde",
+				["t"] = 1464741712,
+				["g"] = 10,
+				["d"] = 14,
 			}, -- [153]
 			{
 				"KSnorunt", -- [1]
@@ -5470,11 +5585,11 @@ VExRT = {
 				"EProtheuus", -- [9]
 				"BXeslän-Ragnaros", -- [10]
 				["c"] = "Leisho-Thrall",
-				["t"] = 1464742677,
-				["eN"] = "Archimonde",
-				["d"] = 14,
-				["g"] = 10,
 				["eI"] = 1799,
+				["eN"] = "Archimonde",
+				["t"] = 1464742677,
+				["g"] = 10,
+				["d"] = 14,
 			}, -- [154]
 			{
 				"KSnorunt", -- [1]
@@ -5492,11 +5607,11 @@ VExRT = {
 				"EGreymattér-Anetheron", -- [13]
 				"ABigsaxxy-Skullcrusher", -- [14]
 				["c"] = "Leisho-Thrall",
-				["t"] = 1464743289,
-				["eI"] = 1799,
-				["d"] = 14,
-				["g"] = 14,
 				["eN"] = "Archimonde",
+				["eI"] = 1799,
+				["t"] = 1464743289,
+				["g"] = 14,
+				["d"] = 14,
 			}, -- [155]
 			{
 				"JWarbuggy", -- [1]
@@ -5511,11 +5626,11 @@ VExRT = {
 				"ANotanorc-Jubei'Thos", -- [10]
 				"GTupacshocker-Vashj", -- [11]
 				["c"] = "Leisho-Thrall",
+				["t"] = 1464744960,
 				["eI"] = 1778,
-				["eN"] = "Hellfire Assault",
 				["d"] = 15,
 				["g"] = 11,
-				["t"] = 1464744960,
+				["eN"] = "Hellfire Assault",
 			}, -- [156]
 			{
 				"JWarbuggy", -- [1]
@@ -5528,11 +5643,11 @@ VExRT = {
 				"APlummies", -- [8]
 				"EProtheuus", -- [9]
 				["c"] = "Leisho-Thrall",
+				["t"] = 1464745581,
 				["eN"] = "Hellfire Assault",
-				["eI"] = 1778,
 				["d"] = 15,
 				["g"] = 10,
-				["t"] = 1464745581,
+				["eI"] = 1778,
 			}, -- [157]
 			{
 				"JLeisho", -- [1]
@@ -5547,11 +5662,11 @@ VExRT = {
 				"BRileelynn", -- [10]
 				"AKleist", -- [11]
 				["c"] = "Leisho-Thrall",
+				["t"] = 1464913689,
 				["eI"] = 1785,
-				["eN"] = "Iron Reaver",
 				["d"] = 15,
 				["g"] = 11,
-				["t"] = 1464913689,
+				["eN"] = "Iron Reaver",
 			}, -- [158]
 			{
 				"JLeisho", -- [1]
@@ -5568,11 +5683,11 @@ VExRT = {
 				"HUndeadflames-Kargath", -- [12]
 				"EJarynn-Barthilas", -- [13]
 				["c"] = "Leisho-Thrall",
+				["t"] = 1464914795,
 				["eI"] = 1787,
-				["eN"] = "Kormrok",
 				["d"] = 15,
 				["g"] = 13,
-				["t"] = 1464914795,
+				["eN"] = "Kormrok",
 			}, -- [159]
 			{
 				"JLeisho", -- [1]
@@ -5590,11 +5705,11 @@ VExRT = {
 				"KSnorunt", -- [13]
 				"CCrím-Illidan", -- [14]
 				["c"] = "Leisho-Thrall",
+				["t"] = 1464915724,
 				["eI"] = 1798,
-				["eN"] = "Hellfire High Council",
 				["d"] = 15,
 				["g"] = 14,
-				["t"] = 1464915724,
+				["eN"] = "Hellfire High Council",
 			}, -- [160]
 			{
 				"JLeisho", -- [1]
@@ -5610,11 +5725,11 @@ VExRT = {
 				"ECurationum-Jubei'Thos", -- [11]
 				"KSnorunt", -- [12]
 				["c"] = "Leisho-Thrall",
+				["t"] = 1464916630,
 				["eI"] = 1786,
-				["eN"] = "Kilrogg Deadeye",
 				["d"] = 15,
 				["g"] = 12,
-				["t"] = 1464916630,
+				["eN"] = "Kilrogg Deadeye",
 			}, -- [161]
 			{
 				"JLeisho", -- [1]
@@ -5630,11 +5745,11 @@ VExRT = {
 				"ECurationum-Jubei'Thos", -- [11]
 				"KSnorunt", -- [12]
 				["c"] = "Leisho-Thrall",
+				["t"] = 1464917065,
 				["eI"] = 1786,
-				["eN"] = "Kilrogg Deadeye",
 				["d"] = 15,
 				["g"] = 12,
-				["t"] = 1464917065,
+				["eN"] = "Kilrogg Deadeye",
 			}, -- [162]
 			{
 				"JLeisho", -- [1]
@@ -5650,11 +5765,11 @@ VExRT = {
 				"ECurationum-Jubei'Thos", -- [11]
 				"KSnorunt", -- [12]
 				["c"] = "Leisho-Thrall",
+				["t"] = 1464918294,
 				["eI"] = 1783,
-				["eN"] = "Gorefiend",
 				["d"] = 15,
 				["g"] = 12,
-				["t"] = 1464918294,
+				["eN"] = "Gorefiend",
 			}, -- [163]
 			{
 				"JLeisho", -- [1]
@@ -5670,11 +5785,11 @@ VExRT = {
 				"ECurationum-Jubei'Thos", -- [11]
 				"KSnorunt", -- [12]
 				["c"] = "Leisho-Thrall",
+				["t"] = 1464919690,
 				["eI"] = 1800,
-				["eN"] = "Xhul'horac",
 				["d"] = 15,
 				["g"] = 12,
-				["t"] = 1464919690,
+				["eN"] = "Xhul'horac",
 			}, -- [164]
 			{
 				"JLeisho", -- [1]
@@ -5691,11 +5806,11 @@ VExRT = {
 				"ECurationum-Jubei'Thos", -- [12]
 				"KSnorunt", -- [13]
 				["c"] = "Leisho-Thrall",
+				["t"] = 1464920319,
 				["eI"] = 1800,
-				["eN"] = "Xhul'horac",
 				["d"] = 15,
 				["g"] = 13,
-				["t"] = 1464920319,
+				["eN"] = "Xhul'horac",
 			}, -- [165]
 			{
 				"JLeisho", -- [1]
@@ -5712,11 +5827,11 @@ VExRT = {
 				"ECurationum-Jubei'Thos", -- [12]
 				"KSnorunt", -- [13]
 				["c"] = "Leisho-Thrall",
+				["t"] = 1464921311,
 				["eI"] = 1777,
-				["eN"] = "Fel Lord Zakuun",
 				["d"] = 15,
 				["g"] = 13,
-				["t"] = 1464921311,
+				["eN"] = "Fel Lord Zakuun",
 			}, -- [166]
 			{
 				"JLeisho", -- [1]
@@ -5733,11 +5848,11 @@ VExRT = {
 				"ECurationum-Jubei'Thos", -- [12]
 				"KSnorunt", -- [13]
 				["c"] = "Leisho-Thrall",
+				["t"] = 1464921654,
 				["eI"] = 1777,
-				["eN"] = "Fel Lord Zakuun",
 				["d"] = 15,
 				["g"] = 13,
-				["t"] = 1464921654,
+				["eN"] = "Fel Lord Zakuun",
 			}, -- [167]
 			{
 				"JLeisho", -- [1]
@@ -5753,11 +5868,11 @@ VExRT = {
 				"ECurationum-Jubei'Thos", -- [11]
 				"KSnorunt", -- [12]
 				["c"] = "Leisho-Thrall",
+				["t"] = 1464922305,
 				["eI"] = 1777,
-				["eN"] = "Fel Lord Zakuun",
 				["d"] = 15,
 				["g"] = 12,
-				["t"] = 1464922305,
+				["eN"] = "Fel Lord Zakuun",
 			}, -- [168]
 			{
 				"JLeisho", -- [1]
@@ -5772,11 +5887,11 @@ VExRT = {
 				"EIdx-Kil'jaeden", -- [10]
 				"ACrediblehulk", -- [11]
 				["c"] = "Leisho-Thrall",
+				["t"] = 1465518225,
 				["eI"] = 1795,
-				["eN"] = "Mannoroth",
 				["d"] = 14,
 				["g"] = 11,
-				["t"] = 1465518225,
+				["eN"] = "Mannoroth",
 			}, -- [169]
 			{
 				"JLeisho", -- [1]
@@ -5792,11 +5907,11 @@ VExRT = {
 				"ACrediblehulk", -- [11]
 				"BZiglet", -- [12]
 				["c"] = "Leisho-Thrall",
+				["t"] = 1465519385,
 				["eI"] = 1799,
-				["eN"] = "Archimonde",
 				["d"] = 14,
 				["g"] = 12,
-				["t"] = 1465519385,
+				["eN"] = "Archimonde",
 			}, -- [170]
 			{
 				"JLeisho", -- [1]
@@ -5812,11 +5927,11 @@ VExRT = {
 				"ACrediblehulk", -- [11]
 				"BZiglet", -- [12]
 				["c"] = "Leisho-Thrall",
+				["t"] = 1465520151,
 				["eI"] = 1799,
-				["eN"] = "Archimonde",
 				["d"] = 14,
 				["g"] = 11,
-				["t"] = 1465520151,
+				["eN"] = "Archimonde",
 			}, -- [171]
 			{
 				"JLeisho", -- [1]
@@ -5832,11 +5947,11 @@ VExRT = {
 				"ACrediblehulk", -- [11]
 				"BZiglet", -- [12]
 				["c"] = "Leisho-Thrall",
+				["t"] = 1465520882,
 				["eI"] = 1799,
-				["eN"] = "Archimonde",
 				["d"] = 14,
 				["g"] = 11,
-				["t"] = 1465520882,
+				["eN"] = "Archimonde",
 			}, -- [172]
 			{
 				"JLeisho", -- [1]
@@ -5852,11 +5967,11 @@ VExRT = {
 				"ACrediblehulk", -- [11]
 				"BZiglet", -- [12]
 				["c"] = "Leisho-Thrall",
+				["t"] = 1465522027,
 				["eI"] = 1778,
-				["eN"] = "Hellfire Assault",
 				["d"] = 15,
 				["g"] = 10,
-				["t"] = 1465522027,
+				["eN"] = "Hellfire Assault",
 			}, -- [173]
 			{
 				"JLeisho", -- [1]
@@ -5872,11 +5987,11 @@ VExRT = {
 				"ACrediblehulk", -- [11]
 				"BZiglet", -- [12]
 				["c"] = "Leisho-Thrall",
+				["t"] = 1465522753,
 				["eI"] = 1785,
-				["eN"] = "Iron Reaver",
 				["d"] = 15,
 				["g"] = 11,
-				["t"] = 1465522753,
+				["eN"] = "Iron Reaver",
 			}, -- [174]
 			{
 				"JLeisho", -- [1]
@@ -5892,11 +6007,11 @@ VExRT = {
 				"ACrediblehulk", -- [11]
 				"BZiglet", -- [12]
 				["c"] = "Leisho-Thrall",
+				["t"] = 1465523890,
 				["eI"] = 1787,
-				["eN"] = "Kormrok",
 				["d"] = 15,
 				["g"] = 11,
-				["t"] = 1465523890,
+				["eN"] = "Kormrok",
 			}, -- [175]
 			{
 				"JLeisho", -- [1]
@@ -5912,11 +6027,11 @@ VExRT = {
 				"ACrediblehulk", -- [11]
 				"BZiglet", -- [12]
 				["c"] = "Leisho-Thrall",
+				["t"] = 1465524694,
 				["eI"] = 1798,
-				["eN"] = "Hellfire High Council",
 				["d"] = 15,
 				["g"] = 11,
-				["t"] = 1465524694,
+				["eN"] = "Hellfire High Council",
 			}, -- [176]
 			{
 				"JLeisho", -- [1]
@@ -5932,11 +6047,11 @@ VExRT = {
 				"ACrediblehulk", -- [11]
 				"BZiglet", -- [12]
 				["c"] = "Leisho-Thrall",
+				["t"] = 1465525492,
 				["eI"] = 1786,
-				["eN"] = "Kilrogg Deadeye",
 				["d"] = 15,
 				["g"] = 11,
-				["t"] = 1465525492,
+				["eN"] = "Kilrogg Deadeye",
 			}, -- [177]
 			{
 				"JLeisho", -- [1]
@@ -5953,11 +6068,11 @@ VExRT = {
 				"IDarwiniano-Ragnaros", -- [12]
 				"CHyperopia-Coilfang", -- [13]
 				["c"] = "Leisho-Thrall",
+				["t"] = 1465526582,
 				["eI"] = 1786,
-				["eN"] = "Kilrogg Deadeye",
 				["d"] = 15,
 				["g"] = 13,
-				["t"] = 1465526582,
+				["eN"] = "Kilrogg Deadeye",
 			}, -- [178]
 			{
 				"JLeisho", -- [1]
@@ -5974,11 +6089,11 @@ VExRT = {
 				"IDarwiniano-Ragnaros", -- [12]
 				"CHyperopia-Coilfang", -- [13]
 				["c"] = "Leisho-Thrall",
+				["t"] = 1465527355,
 				["eI"] = 1783,
-				["eN"] = "Gorefiend",
 				["d"] = 15,
 				["g"] = 13,
-				["t"] = 1465527355,
+				["eN"] = "Gorefiend",
 			}, -- [179]
 			{
 				"JSnorunt", -- [1]
@@ -5993,11 +6108,11 @@ VExRT = {
 				"CGheendruna-Farstriders", -- [10]
 				"FMadbuly-Suramar", -- [11]
 				["c"] = "Leisho-Thrall",
-				["d"] = 14,
-				["eN"] = "Mannoroth",
-				["t"] = 1465950887,
-				["g"] = 11,
 				["eI"] = 1795,
+				["eN"] = "Mannoroth",
+				["d"] = 14,
+				["g"] = 11,
+				["t"] = 1465950887,
 			}, -- [180]
 			{
 				"JSnorunt", -- [1]
@@ -6013,11 +6128,11 @@ VExRT = {
 				"FMadbuly-Suramar", -- [11]
 				"BZiglet", -- [12]
 				["c"] = "Leisho-Thrall",
-				["d"] = 14,
-				["eN"] = "Archimonde",
-				["t"] = 1465951643,
-				["g"] = 11,
 				["eI"] = 1799,
+				["eN"] = "Archimonde",
+				["d"] = 14,
+				["g"] = 11,
+				["t"] = 1465951643,
 			}, -- [181]
 			{
 				"JLeisho", -- [1]
@@ -6032,11 +6147,11 @@ VExRT = {
 				"CDiuneilomo-Arthas", -- [10]
 				"HGidel-Rivendare", -- [11]
 				["c"] = "Leisho-Thrall",
+				["d"] = 14,
 				["eN"] = "Mannoroth",
-				["eI"] = 1795,
 				["t"] = 1466554795,
 				["g"] = 11,
-				["d"] = 14,
+				["eI"] = 1795,
 			}, -- [182]
 			{
 				"JLeisho", -- [1]
@@ -6051,11 +6166,11 @@ VExRT = {
 				"CDiuneilomo-Arthas", -- [10]
 				"HGidel-Rivendare", -- [11]
 				["c"] = "Leisho-Thrall",
+				["d"] = 14,
 				["eN"] = "Archimonde",
-				["eI"] = 1799,
 				["t"] = 1466555613,
 				["g"] = 11,
-				["d"] = 14,
+				["eI"] = 1799,
 			}, -- [183]
 			{
 				"JLeisho", -- [1]
@@ -6070,11 +6185,11 @@ VExRT = {
 				"HCeridwent-Quel'Thalas", -- [10]
 				"HBlowback-Area52", -- [11]
 				["c"] = "Leisho-Thrall",
+				["d"] = 15,
 				["eN"] = "Hellfire Assault",
-				["eI"] = 1778,
 				["t"] = 1466556763,
 				["g"] = 11,
-				["d"] = 15,
+				["eI"] = 1778,
 			}, -- [184]
 			{
 				"JLeisho", -- [1]
@@ -6089,11 +6204,11 @@ VExRT = {
 				nil, -- [10]
 				"HBlowback-Area52", -- [11]
 				["c"] = "Leisho-Thrall",
+				["d"] = 15,
 				["eI"] = 1785,
-				["eN"] = "Iron Reaver",
 				["t"] = 1466557395,
 				["g"] = 10,
-				["d"] = 15,
+				["eN"] = "Iron Reaver",
 			}, -- [185]
 			{
 				"JLeisho", -- [1]
@@ -6107,11 +6222,11 @@ VExRT = {
 				"JSnorunt", -- [9]
 				"HBlowback-Area52", -- [10]
 				["c"] = "Leisho-Thrall",
+				["d"] = 15,
 				["eI"] = 1787,
-				["eN"] = "Kormrok",
 				["t"] = 1466558652,
 				["g"] = 10,
-				["d"] = 15,
+				["eN"] = "Kormrok",
 			}, -- [186]
 			{
 				"JLeisho", -- [1]
@@ -6125,11 +6240,11 @@ VExRT = {
 				"JSnorunt", -- [9]
 				"HBlowback-Area52", -- [10]
 				["c"] = "Leisho-Thrall",
+				["d"] = 15,
 				["eI"] = 1798,
-				["eN"] = "Hellfire High Council",
 				["t"] = 1466559350,
 				["g"] = 10,
-				["d"] = 15,
+				["eN"] = "Hellfire High Council",
 			}, -- [187]
 			{
 				"JLeisho", -- [1]
@@ -6143,11 +6258,11 @@ VExRT = {
 				"JSnorunt", -- [9]
 				"HBlowback-Area52", -- [10]
 				["c"] = "Leisho-Thrall",
+				["d"] = 15,
 				["eI"] = 1786,
-				["eN"] = "Kilrogg Deadeye",
 				["t"] = 1466560190,
 				["g"] = 10,
-				["d"] = 15,
+				["eN"] = "Kilrogg Deadeye",
 			}, -- [188]
 			{
 				"JLeisho", -- [1]
@@ -6162,11 +6277,11 @@ VExRT = {
 				"HBlowback-Area52", -- [10]
 				"GHazlo-Ysondre", -- [11]
 				["c"] = "Leisho-Thrall",
+				["d"] = 15,
 				["eN"] = "Gorefiend",
-				["eI"] = 1783,
 				["t"] = 1466561121,
 				["g"] = 11,
-				["d"] = 15,
+				["eI"] = 1783,
 			}, -- [189]
 			{
 				"JLeisho", -- [1]
@@ -6181,11 +6296,11 @@ VExRT = {
 				"AEndlessbiu-Illidan", -- [10]
 				"KCongxin-Illidan", -- [11]
 				["c"] = "Leisho-Thrall",
-				["t"] = 1467332136,
-				["eI"] = 1795,
-				["d"] = 14,
-				["g"] = 11,
 				["eN"] = "Mannoroth",
+				["eI"] = 1795,
+				["t"] = 1467332136,
+				["g"] = 11,
+				["d"] = 14,
 			}, -- [190]
 			{
 				"JLeisho", -- [1]
@@ -6200,11 +6315,11 @@ VExRT = {
 				"CSmarthobo-Illidan", -- [10]
 				"FAshfounder-Alleria", -- [11]
 				["c"] = "Leisho-Thrall",
-				["t"] = 1467333165,
-				["eI"] = 1799,
-				["d"] = 14,
-				["g"] = 11,
 				["eN"] = "Archimonde",
+				["eI"] = 1799,
+				["t"] = 1467333165,
+				["g"] = 11,
+				["d"] = 14,
 			}, -- [191]
 			{
 				"JLeisho", -- [1]
@@ -6218,11 +6333,11 @@ VExRT = {
 				"EAmanduuh", -- [9]
 				"BZiglet", -- [10]
 				["c"] = "Leisho-Thrall",
-				["t"] = 1467334956,
-				["eN"] = "Fel Lord Zakuun",
-				["d"] = 15,
-				["g"] = 10,
 				["eI"] = 1777,
+				["eN"] = "Fel Lord Zakuun",
+				["t"] = 1467334956,
+				["g"] = 10,
+				["d"] = 15,
 			}, -- [192]
 			{
 				"JLeisho", -- [1]
@@ -6236,11 +6351,11 @@ VExRT = {
 				"EAmanduuh", -- [9]
 				"BZiglet", -- [10]
 				["c"] = "Leisho-Thrall",
-				["t"] = 1467335597,
-				["eN"] = "Fel Lord Zakuun",
-				["d"] = 15,
-				["g"] = 10,
 				["eI"] = 1777,
+				["eN"] = "Fel Lord Zakuun",
+				["t"] = 1467335597,
+				["g"] = 10,
+				["d"] = 15,
 			}, -- [193]
 			{
 				"JLeisho", -- [1]
@@ -6254,11 +6369,11 @@ VExRT = {
 				"EAmanduuh", -- [9]
 				"BZiglet", -- [10]
 				["c"] = "Leisho-Thrall",
-				["t"] = 1467336504,
-				["eN"] = "Xhul'horac",
-				["d"] = 15,
-				["g"] = 10,
 				["eI"] = 1800,
+				["eN"] = "Xhul'horac",
+				["t"] = 1467336504,
+				["g"] = 10,
+				["d"] = 15,
 			}, -- [194]
 			{
 				"JLeisho", -- [1]
@@ -6273,11 +6388,11 @@ VExRT = {
 				"BZiglet", -- [10]
 				"BRileelynn", -- [11]
 				["c"] = "Leisho-Thrall",
-				["t"] = 1467337814,
-				["eI"] = 1800,
-				["d"] = 15,
-				["g"] = 11,
 				["eN"] = "Xhul'horac",
+				["eI"] = 1800,
+				["t"] = 1467337814,
+				["g"] = 11,
+				["d"] = 15,
 			}, -- [195]
 			{
 				"JLeisho", -- [1]
@@ -6292,11 +6407,11 @@ VExRT = {
 				"BZiglet", -- [10]
 				"BRileelynn", -- [11]
 				["c"] = "Leisho-Thrall",
-				["t"] = 1467338262,
-				["eI"] = 1800,
-				["d"] = 15,
-				["g"] = 11,
 				["eN"] = "Xhul'horac",
+				["eI"] = 1800,
+				["t"] = 1467338262,
+				["g"] = 11,
+				["d"] = 15,
 			}, -- [196]
 			{
 				"JLeisho", -- [1]
@@ -6311,11 +6426,11 @@ VExRT = {
 				"BZiglet", -- [10]
 				"BRileelynn", -- [11]
 				["c"] = "Leisho-Thrall",
-				["t"] = 1467338809,
-				["eI"] = 1800,
-				["d"] = 15,
-				["g"] = 11,
 				["eN"] = "Xhul'horac",
+				["eI"] = 1800,
+				["t"] = 1467338809,
+				["g"] = 11,
+				["d"] = 15,
 			}, -- [197]
 			{
 				"JLeisho", -- [1]
@@ -6330,11 +6445,11 @@ VExRT = {
 				"BZiglet", -- [10]
 				"BRileelynn", -- [11]
 				["c"] = "Leisho-Thrall",
-				["t"] = 1467339429,
-				["eI"] = 1800,
-				["d"] = 15,
-				["g"] = 11,
 				["eN"] = "Xhul'horac",
+				["eI"] = 1800,
+				["t"] = 1467339429,
+				["g"] = 11,
+				["d"] = 15,
 			}, -- [198]
 			{
 				"JLeisho", -- [1]
@@ -6349,11 +6464,11 @@ VExRT = {
 				"BZiglet", -- [10]
 				"BRileelynn", -- [11]
 				["c"] = "Leisho-Thrall",
-				["t"] = 1467340108,
-				["eI"] = 1800,
-				["d"] = 15,
-				["g"] = 11,
 				["eN"] = "Xhul'horac",
+				["eI"] = 1800,
+				["t"] = 1467340108,
+				["g"] = 11,
+				["d"] = 15,
 			}, -- [199]
 			{
 				"JLeisho", -- [1]
@@ -6367,11 +6482,11 @@ VExRT = {
 				"EAmanduuh", -- [9]
 				"BZiglet", -- [10]
 				["c"] = "Leisho-Thrall",
-				["t"] = 1467340777,
-				["eN"] = "Xhul'horac",
-				["d"] = 15,
-				["g"] = 10,
 				["eI"] = 1800,
+				["eN"] = "Xhul'horac",
+				["t"] = 1467340777,
+				["g"] = 10,
+				["d"] = 15,
 			}, -- [200]
 			{
 				"JLeisho", -- [1]
@@ -6385,11 +6500,11 @@ VExRT = {
 				"DZeleros", -- [9]
 				"CLolaechoes-Tichondrius", -- [10]
 				["c"] = "Leisho-Thrall",
+				["t"] = 1467764269,
 				["eN"] = "Mannoroth",
-				["eI"] = 1795,
 				["d"] = 14,
 				["g"] = 10,
-				["t"] = 1467764269,
+				["eI"] = 1795,
 			}, -- [201]
 			{
 				"JLeisho", -- [1]
@@ -6404,11 +6519,11 @@ VExRT = {
 				"APlummies", -- [10]
 				"ISàmhaín-Kil'jaeden", -- [11]
 				["c"] = "Leisho-Thrall",
+				["t"] = 1467765748,
 				["eI"] = 1799,
-				["eN"] = "Archimonde",
 				["d"] = 14,
 				["g"] = 11,
-				["t"] = 1467765748,
+				["eN"] = "Archimonde",
 			}, -- [202]
 			{
 				"JSnorunt", -- [1]
@@ -6424,11 +6539,11 @@ VExRT = {
 				"BSpanklicious-Garrosh", -- [11]
 				"ETelori-Frostmourne", -- [12]
 				["c"] = "Leisho-Thrall",
+				["t"] = 1467768387,
 				["eI"] = 1794,
-				["eN"] = "Socrethar the Eternal",
 				["d"] = 15,
 				["g"] = 12,
-				["t"] = 1467768387,
+				["eN"] = "Socrethar the Eternal",
 			}, -- [203]
 			{
 				"JSnorunt", -- [1]
@@ -6444,11 +6559,11 @@ VExRT = {
 				"BSpanklicious-Garrosh", -- [11]
 				"ETelori-Frostmourne", -- [12]
 				["c"] = "Leisho-Thrall",
+				["t"] = 1467768809,
 				["eI"] = 1794,
-				["eN"] = "Socrethar the Eternal",
 				["d"] = 15,
 				["g"] = 12,
-				["t"] = 1467768809,
+				["eN"] = "Socrethar the Eternal",
 			}, -- [204]
 			{
 				"JSnorunt", -- [1]
@@ -6467,11 +6582,11 @@ VExRT = {
 				"ESashalinn-Ragnaros", -- [14]
 				"BRileelynn", -- [15]
 				["c"] = "Leisho-Thrall",
+				["t"] = 1467769739,
 				["eI"] = 1794,
-				["eN"] = "Socrethar the Eternal",
 				["d"] = 15,
 				["g"] = 15,
-				["t"] = 1467769739,
+				["eN"] = "Socrethar the Eternal",
 			}, -- [205]
 			{
 				"JSnorunt", -- [1]
@@ -6490,11 +6605,11 @@ VExRT = {
 				"ESashalinn-Ragnaros", -- [14]
 				"BRileelynn", -- [15]
 				["c"] = "Leisho-Thrall",
+				["t"] = 1467770245,
 				["eI"] = 1794,
-				["eN"] = "Socrethar the Eternal",
 				["d"] = 15,
 				["g"] = 15,
-				["t"] = 1467770245,
+				["eN"] = "Socrethar the Eternal",
 			}, -- [206]
 			{
 				"JSnorunt", -- [1]
@@ -6512,11 +6627,11 @@ VExRT = {
 				"GCeteris-Ravencrest", -- [13]
 				"BRileelynn", -- [14]
 				["c"] = "Leisho-Thrall",
+				["t"] = 1467771524,
 				["eI"] = 1794,
-				["eN"] = "Socrethar the Eternal",
 				["d"] = 15,
 				["g"] = 14,
-				["t"] = 1467771524,
+				["eN"] = "Socrethar the Eternal",
 			}, -- [207]
 			{
 				"JSnorunt", -- [1]
@@ -6533,11 +6648,11 @@ VExRT = {
 				"GCeteris-Ravencrest", -- [12]
 				"BRileelynn", -- [13]
 				["c"] = "Leisho-Thrall",
+				["t"] = 1467772038,
 				["eI"] = 1794,
-				["eN"] = "Socrethar the Eternal",
 				["d"] = 15,
 				["g"] = 13,
-				["t"] = 1467772038,
+				["eN"] = "Socrethar the Eternal",
 			}, -- [208]
 			{
 				"JLeisho", -- [1]
@@ -6553,11 +6668,11 @@ VExRT = {
 				"HEladrianth-Azralon", -- [11]
 				"HWazzdakka-AeriePeak", -- [12]
 				["c"] = "Leisho-Thrall",
+				["t"] = 1468369956,
 				["eI"] = 1795,
-				["eN"] = "Mannoroth",
 				["d"] = 15,
 				["g"] = 12,
-				["t"] = 1468369956,
+				["eN"] = "Mannoroth",
 			}, -- [209]
 			{
 				"JLeisho", -- [1]
@@ -6572,11 +6687,11 @@ VExRT = {
 				"DZeleros", -- [10]
 				"GAnhyo-Blackrock", -- [11]
 				["c"] = "Leisho-Thrall",
-				["d"] = 15,
-				["eN"] = "Mannoroth",
-				["t"] = 1468370586,
-				["g"] = 11,
 				["eI"] = 1795,
+				["eN"] = "Mannoroth",
+				["d"] = 15,
+				["g"] = 11,
+				["t"] = 1468370586,
 			}, -- [210]
 			{
 				"JLeisho", -- [1]
@@ -6593,14 +6708,14 @@ VExRT = {
 				"AMothor-Tanaris", -- [12]
 				"HDenogosu-Mok'Nathal", -- [13]
 				"KHootnewb-Arthas", -- [14]
-				["d"] = 15,
+				["eI"] = 1799,
 				[17] = "EDeylithil-Hyjal",
 				["c"] = "Leisho-Thrall",
-				["g"] = 16,
-				["eN"] = "Archimonde",
-				["t"] = 1468372150,
 				[16] = "CPogeymon-Frostwolf",
-				["eI"] = 1799,
+				["eN"] = "Archimonde",
+				["d"] = 15,
+				["g"] = 16,
+				["t"] = 1468372150,
 			}, -- [211]
 			{
 				"JLeisho", -- [1]
@@ -6617,14 +6732,14 @@ VExRT = {
 				"AMothor-Tanaris", -- [12]
 				"HDenogosu-Mok'Nathal", -- [13]
 				"KHootnewb-Arthas", -- [14]
-				["d"] = 15,
+				["eI"] = 1799,
 				[17] = "EDeylithil-Hyjal",
 				["c"] = "Leisho-Thrall",
-				["g"] = 16,
-				["eN"] = "Archimonde",
-				["t"] = 1468372840,
 				[16] = "CPogeymon-Frostwolf",
-				["eI"] = 1799,
+				["eN"] = "Archimonde",
+				["d"] = 15,
+				["g"] = 16,
+				["t"] = 1468372840,
 			}, -- [212]
 		},
 		["alts"] = {
@@ -6645,120 +6760,5 @@ VExRT = {
 				"Bakronn", -- [2]
 			}, -- [4]
 		},
-	},
-	["Timers"] = {
-		["specTimes"] = {
-			[62] = 10,
-			[63] = 10,
-			[250] = 10,
-			[251] = 10,
-			[64] = 10,
-			[253] = 10,
-			[65] = 10,
-			[255] = 10,
-			[66] = 10,
-			[257] = 10,
-			[258] = 10,
-			[259] = 10,
-			[260] = 10,
-			[261] = 25,
-			[262] = 16,
-			[263] = 10,
-			[264] = 10,
-			[265] = 22,
-			[266] = 10,
-			[267] = 10,
-			[268] = 10,
-			[269] = 10,
-			[270] = 10,
-			[70] = 10,
-			[102] = 10,
-			[71] = 10,
-			[103] = 10,
-			[72] = 10,
-			[104] = 10,
-			[73] = 10,
-			[581] = 10,
-			[105] = 10,
-			[577] = 10,
-			[256] = 10,
-			[254] = 10,
-			[252] = 10,
-		},
-		["Strata"] = "HIGH",
-		["useDPT"] = true,
-	},
-	["BossWatcher"] = {
-		["enabled"] = true,
-		["trackingDamageSpells"] = {
-		},
-		["autoSegments"] = {
-		},
-		["fightsNum"] = 6,
-		["optionsPositionsDist"] = true,
-		["optionsHealingGraph"] = true,
-		["optionsDamageGraph"] = true,
-	},
-	["Profile"] = "default",
-	["LootLink"] = {
-		["ilvl"] = true,
-	},
-	["InviteTool"] = {
-		["AutoInvAccept"] = true,
-		["Words"] = "инв inv byd штм 123 invite",
-		["AutoPromote"] = true,
-		["InvByChat"] = true,
-		["RaidDiff"] = 15,
-		["PromoteRank"] = 3,
-		["LootThreshold"] = 4,
-		["AutoRaidDiff"] = true,
-		["MasterLooters"] = "Leisho",
-		["LootMethod"] = "master",
-		["PromoteNames"] = "",
-		["OnlyGuild"] = true,
-		["Rank"] = 1,
-	},
-	["RaidCheck"] = {
-		["FlaskExp"] = 1,
-		["ReadyCheckFrameTimerFade"] = 4,
-		["ReadyCheck"] = true,
-		["disableLFR"] = true,
-		["OnAttack"] = true,
-	},
-	["Logging"] = {
-	},
-	["MarksBar"] = {
-		["Show"] = {
-			true, -- [1]
-			true, -- [2]
-			true, -- [3]
-			true, -- [4]
-		},
-		["Strata"] = "HIGH",
-		["enabled"] = true,
-		["Fix"] = true,
-		["pulltimer"] = 10,
-		["Top"] = 294.778045654297,
-		["Left"] = 1812.33337402344,
-		["DisableOutsideRaid"] = true,
-	},
-	["Profiles"] = {
-		["Leisho - MW"] = {
-		},
-	},
-	["Note"] = {
-		["BlackNames"] = {
-		},
-		["FontSize"] = 12,
-		["Black"] = {
-			"", -- [1]
-			"", -- [2]
-			"", -- [3]
-		},
-		["Height"] = 100,
-		["AutoLoad"] = {
-		},
-		["Strata"] = "HIGH",
-		["Width"] = 200,
 	},
 }

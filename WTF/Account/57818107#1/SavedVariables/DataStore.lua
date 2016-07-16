@@ -27,43 +27,43 @@ DataStoreDB = {
 		["Version"] = 1,
 		["Characters"] = {
 			["Default.Thrall.Kitha"] = {
-				["faction"] = "Horde",
 				["guildName"] = "Vicious Cuddling",
+				["faction"] = "Horde",
 			},
 			["Default.Thrall.Ahka"] = {
-				["faction"] = "Horde",
 				["guildName"] = "Vicious Cuddling",
+				["faction"] = "Horde",
 			},
 			["Default.Thrall.Kargen"] = {
-				["faction"] = "Alliance",
 				["guildName"] = "Seed of Aldrassil",
+				["faction"] = "Alliance",
 			},
 			["Default.Thrall.Leisho"] = {
-				["guildName"] = "Vicious Cuddling",
 				["faction"] = "Horde",
+				["guildName"] = "Vicious Cuddling",
 			},
 			["Default.Thrall.Raijah"] = {
-				["guildName"] = "Vicious Cuddling",
 				["faction"] = "Horde",
+				["guildName"] = "Vicious Cuddling",
 			},
 			["Default.Thrall.Alyserys"] = {
-				["guildName"] = "muddskunks",
 				["faction"] = "Horde",
+				["guildName"] = "muddskunks",
+			},
+			["Default.Durotan.Leisho"] = {
+				["faction"] = "Neutral",
 			},
 			["Default.Thrall.Alinastra"] = {
-				["guildName"] = "Vicious Cuddling",
-				["faction"] = "Horde",
-			},
-			["Default.Thrall.Nalyria"] = {
 				["faction"] = "Horde",
 				["guildName"] = "Vicious Cuddling",
 			},
 			["Default.Thrall.Thilaira"] = {
+				["faction"] = "Horde",
+				["guildName"] = "Vicious Cuddling",
+			},
+			["Default.Thrall.Nalyria"] = {
 				["guildName"] = "Vicious Cuddling",
 				["faction"] = "Horde",
-			},
-			["Default.Durotan.Leisho"] = {
-				["faction"] = "Neutral",
 			},
 		},
 	},

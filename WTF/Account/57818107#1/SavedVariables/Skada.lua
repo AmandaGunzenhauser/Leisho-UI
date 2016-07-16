@@ -18,15 +18,15 @@ SkadaDB = {
 		["Default"] = {
 			["windows"] = {
 				{
-					["background"] = {
-						["height"] = 101.66658782959,
-					},
 					["hidden"] = true,
 					["y"] = -22.4993286132813,
 					["x"] = -70.595458984375,
 					["point"] = "RIGHT",
 					["mode"] = "Healing",
 					["barwidth"] = 253.332458496094,
+					["background"] = {
+						["height"] = 101.66658782959,
+					},
 				}, -- [1]
 			},
 			["icon"] = {

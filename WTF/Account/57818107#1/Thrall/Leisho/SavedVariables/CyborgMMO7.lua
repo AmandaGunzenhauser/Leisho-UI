@@ -4,9 +4,9 @@ CyborgMMO7SaveData = {
 		["MiniMapButton"] = false,
 		["MiniMapButtonAngle"] = 1.37186805839804,
 		["CyborgButton"] = true,
-		["Cyborg"] = 0.75,
-		["Plugin"] = 0.75,
 		["PerSpecBindings"] = false,
+		["Plugin"] = 0.75,
+		["Cyborg"] = 0.75,
 	},
 	["Rat"] = {
 		{

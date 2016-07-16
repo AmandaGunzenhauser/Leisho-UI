@@ -8,7 +8,7 @@ GuildRosterDeluxeDB = {
 	["ROSTER"] = "TOONNAME",
 	["tooltip_viewport_scroll"] = 15,
 	["DEBUG"] = false,
-	["tooltip_click_to_show"] = false,
-	["ONLINE"] = "TOONNAME",
 	["MAINS"] = "TOONNAME",
+	["ONLINE"] = "TOONNAME",
+	["tooltip_click_to_show"] = false,
 }

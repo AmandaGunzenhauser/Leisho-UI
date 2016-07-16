@@ -5,9 +5,9 @@ TomTomDB = {
 		["Ahka - Thrall"] = "Default",
 		["Leisho - Durotan"] = "Default",
 		["Nalyria - Thrall"] = "Default",
+		["Raijah - Thrall"] = "Default",
 		["Liulu - Thrall"] = "Default",
 		["Kitha - Thrall"] = "Default",
-		["Raijah - Thrall"] = "Default",
 	},
 	["profiles"] = {
 		["Default"] = {
@@ -24,9 +24,9 @@ TomTomWaypointsMF = {
 		["Ahka - Thrall"] = "Ahka - Thrall",
 		["Leisho - Durotan"] = "Leisho - Durotan",
 		["Nalyria - Thrall"] = "Nalyria - Thrall",
+		["Raijah - Thrall"] = "Raijah - Thrall",
 		["Liulu - Thrall"] = "Liulu - Thrall",
 		["Kitha - Thrall"] = "Kitha - Thrall",
-		["Raijah - Thrall"] = "Raijah - Thrall",
 	},
 	["profiles"] = {
 		["Leisho - Thrall"] = {
@@ -175,11 +175,11 @@ TomTomWaypointsMF = {
 				},
 			},
 			[809] = {
-				["809:0:350000000:560000000:nil"] = {
+				["809:0:680000000:850000000:nil"] = {
 					809, -- [1]
 					0, -- [2]
-					0.35, -- [3]
-					0.56, -- [4]
+					0.68, -- [3]
+					0.85, -- [4]
 					["silent"] = true,
 					["cleardistance"] = 0,
 					["minimap"] = true,
@@ -259,11 +259,11 @@ TomTomWaypointsMF = {
 					["persistent"] = true,
 					["world"] = true,
 				},
-				["809:0:680000000:850000000:nil"] = {
+				["809:0:350000000:560000000:nil"] = {
 					809, -- [1]
 					0, -- [2]
-					0.68, -- [3]
-					0.85, -- [4]
+					0.35, -- [3]
+					0.56, -- [4]
 					["silent"] = true,
 					["cleardistance"] = 0,
 					["minimap"] = true,
@@ -347,11 +347,11 @@ TomTomWaypointsMF = {
 				},
 			},
 			[858] = {
-				["858:0:260000000:500000000:nil"] = {
+				["858:0:610000000:880000000:nil"] = {
 					858, -- [1]
 					0, -- [2]
-					0.26, -- [3]
-					0.5, -- [4]
+					0.61, -- [3]
+					0.88, -- [4]
 					["silent"] = true,
 					["cleardistance"] = 0,
 					["minimap"] = true,
@@ -403,11 +403,11 @@ TomTomWaypointsMF = {
 					["persistent"] = true,
 					["world"] = true,
 				},
-				["858:0:610000000:880000000:nil"] = {
+				["858:0:260000000:500000000:nil"] = {
 					858, -- [1]
 					0, -- [2]
-					0.61, -- [3]
-					0.88, -- [4]
+					0.26, -- [3]
+					0.5, -- [4]
 					["silent"] = true,
 					["cleardistance"] = 0,
 					["minimap"] = true,
@@ -553,11 +553,11 @@ TomTomWaypointsMF = {
 					["persistent"] = true,
 					["world"] = true,
 				},
-				["806:0:484000000:710000000:nil"] = {
+				["806:0:290000000:360000000:nil"] = {
 					806, -- [1]
 					0, -- [2]
-					0.484, -- [3]
-					0.71, -- [4]
+					0.29, -- [3]
+					0.36, -- [4]
 					["silent"] = true,
 					["cleardistance"] = 0,
 					["minimap"] = true,
@@ -609,11 +609,11 @@ TomTomWaypointsMF = {
 					["persistent"] = true,
 					["world"] = true,
 				},
-				["806:0:290000000:360000000:nil"] = {
+				["806:0:484000000:710000000:nil"] = {
 					806, -- [1]
 					0, -- [2]
-					0.29, -- [3]
-					0.36, -- [4]
+					0.484, -- [3]
+					0.71, -- [4]
 					["silent"] = true,
 					["cleardistance"] = 0,
 					["minimap"] = true,
@@ -763,6 +763,8 @@ TomTomWaypointsMF = {
 		},
 		["Nalyria - Thrall"] = {
 		},
+		["Raijah - Thrall"] = {
+		},
 		["Liulu - Thrall"] = {
 		},
 		["Kitha - Thrall"] = {
@@ -774,23 +776,21 @@ TomTomWaypointsMF = {
 					0.556112081315995, -- [4]
 					["silent"] = true,
 					["cleardistance"] = 0,
-					["minimap"] = true,
+					["world"] = true,
 					["arrivaldistance"] = 15,
 					["callbacks"] = {
 						["distance"] = {
 						},
-						["world"] = {
-						},
 						["minimap"] = {
+						},
+						["world"] = {
 						},
 					},
 					["crazy"] = true,
 					["persistent"] = true,
-					["world"] = true,
+					["minimap"] = true,
 				},
 			},
-		},
-		["Raijah - Thrall"] = {
 		},
 	},
 }

@@ -60,46 +60,38 @@ MADB = {
 						46.0800018310547, -- [5]
 					},
 				},
-				["ExtraActionBarFrameMover"] = {
+				["MinimapNorthTag"] = {
 					["orgPos"] = {
-						"BOTTOM", -- [1]
-						"MainMenuBar", -- [2]
-						0, -- [3]
-						160, -- [4]
+						"CENTER", -- [1]
+						"Minimap", -- [2]
+						"CENTER", -- [3]
+						0, -- [4]
+						67, -- [5]
 					},
-					["name"] = "ExtraActionBarFrameMover",
+					["name"] = "MinimapNorthTag",
 					["pos"] = {
-						"BOTTOM", -- [1]
-						"MainMenuBar", -- [2]
-						"BOTTOM", -- [3]
-						6.1113762855536, -- [4]
-						724.999938964844, -- [5]
+						"CENTER", -- [1]
+						"Minimap", -- [2]
+						"CENTER", -- [3]
+						-6.1035156250e-005, -- [4]
+						67.0000038146973, -- [5]
 					},
 				},
-				["OverrideActionButtonsMover"] = {
+				["ObjectiveTrackerFrameScaleMover"] = {
 					["orgPos"] = {
-						{
-							"BOTTOMLEFT", -- [1]
-							"UIParent", -- [2]
-							"BOTTOMLEFT", -- [3]
-							763.666748046875, -- [4]
-							17, -- [5]
-						}, -- [1]
-						{
-							"BOTTOM", -- [1]
-							"OverrideActionBar", -- [2]
-							"BOTTOM", -- [3]
-							-133, -- [4]
-							17, -- [5]
-						}, -- [2]
+						"TOPRIGHT", -- [1]
+						"MinimapCluster", -- [2]
+						"BOTTOMRIGHT", -- [3]
+						-10, -- [4]
+						0, -- [5]
 					},
-					["name"] = "OverrideActionButtonsMover",
+					["name"] = "ObjectiveTrackerFrameScaleMover",
 					["pos"] = {
-						"BOTTOMLEFT", -- [1]
-						"UIParent", -- [2]
-						"BOTTOMLEFT", -- [3]
-						763.666809082031, -- [4]
-						17, -- [5]
+						"TOPRIGHT", -- [1]
+						"MinimapCluster", -- [2]
+						"BOTTOMRIGHT", -- [3]
+						-9.9998779296875, -- [4]
+						0, -- [5]
 					},
 				},
 				["MinimapBorderTop"] = {
@@ -154,45 +146,37 @@ MADB = {
 						-1.99999618530273, -- [5]
 					},
 				},
-				["ActionBarDownButton"] = {
+				["MiniMapInstanceDifficulty"] = {
 					["orgPos"] = {
-						"TOPRIGHT", -- [1]
-						"ActionButton12", -- [2]
-						"BOTTOMRIGHT", -- [3]
-						8, -- [4]
-						4, -- [5]
+						"TOPLEFT", -- [1]
+						"MinimapCluster", -- [2]
+						"TOPLEFT", -- [3]
+						22.0000019073486, -- [4]
+						-17, -- [5]
 					},
-					["name"] = "ActionBarDownButton",
+					["name"] = "MiniMapInstanceDifficulty",
 					["pos"] = {
-						"TOPRIGHT", -- [1]
-						"ActionButton12", -- [2]
-						"BOTTOMRIGHT", -- [3]
-						13.7599792480469, -- [4]
-						9.75999450683594, -- [5]
+						"TOPLEFT", -- [1]
+						"MinimapCluster", -- [2]
+						"TOPLEFT", -- [3]
+						166.443603515625, -- [4]
+						-84.2224578857422, -- [5]
 					},
 				},
-				["ChatConfigFrame"] = {
-					["UIPanelWindows"] = {
-						["whileDead"] = 1,
-						["xoffset"] = -16,
-						["yoffset"] = 12,
-						["pushable"] = 0,
-						["area"] = "center",
-					},
+				["ExtraActionBarFrameMover"] = {
 					["orgPos"] = {
-						"CENTER", -- [1]
-						"UIParent", -- [2]
-						"CENTER", -- [3]
-						0, -- [4]
-						0, -- [5]
+						"BOTTOM", -- [1]
+						"MainMenuBar", -- [2]
+						0, -- [3]
+						160, -- [4]
 					},
-					["name"] = "ChatConfigFrame",
+					["name"] = "ExtraActionBarFrameMover",
 					["pos"] = {
-						"BOTTOMLEFT", -- [1]
-						"UIParent", -- [2]
-						"BOTTOMLEFT", -- [3]
-						726.666748046875, -- [4]
-						301.944488525391, -- [5]
+						"BOTTOM", -- [1]
+						"MainMenuBar", -- [2]
+						"BOTTOM", -- [3]
+						6.1113762855536, -- [4]
+						724.999938964844, -- [5]
 					},
 				},
 				["FriendsFrame"] = {
@@ -217,38 +201,47 @@ MADB = {
 						402.222198486328, -- [5]
 					},
 				},
-				["ObjectiveTrackerFrameScaleMover"] = {
+				["OverrideActionButtonsMover"] = {
 					["orgPos"] = {
-						"TOPRIGHT", -- [1]
-						"MinimapCluster", -- [2]
-						"BOTTOMRIGHT", -- [3]
-						-10, -- [4]
-						0, -- [5]
+						{
+							"BOTTOMLEFT", -- [1]
+							"UIParent", -- [2]
+							"BOTTOMLEFT", -- [3]
+							1044.91662597656, -- [4]
+							45.1250038146973, -- [5]
+						}, -- [1]
+						{
+							"BOTTOM", -- [1]
+							"OverrideActionBar", -- [2]
+							"BOTTOM", -- [3]
+							-133, -- [4]
+							17, -- [5]
+						}, -- [2]
 					},
-					["name"] = "ObjectiveTrackerFrameScaleMover",
+					["name"] = "OverrideActionButtonsMover",
 					["pos"] = {
-						"TOPRIGHT", -- [1]
-						"MinimapCluster", -- [2]
-						"BOTTOMRIGHT", -- [3]
-						-9.9998779296875, -- [4]
-						0, -- [5]
+						"BOTTOMLEFT", -- [1]
+						"UIParent", -- [2]
+						"BOTTOMLEFT", -- [3]
+						763.666809082031, -- [4]
+						17, -- [5]
 					},
 				},
-				["MinimapCluster"] = {
+				["PetActionButtonsVerticalMover"] = {
 					["orgPos"] = {
-						"TOPRIGHT", -- [1]
-						"UIParent", -- [2]
-						"TOPRIGHT", -- [3]
-						0, -- [4]
-						0, -- [5]
+						"BOTTOMLEFT", -- [1]
+						"PetActionBarFrame", -- [2]
+						"BOTTOMLEFT", -- [3]
+						36, -- [4]
+						1, -- [5]
 					},
-					["name"] = "MinimapCluster",
+					["name"] = "PetActionButtonsVerticalMover",
 					["pos"] = {
-						"TOPRIGHT", -- [1]
-						"UIParent", -- [2]
-						"TOPRIGHT", -- [3]
-						-583.888061523438, -- [4]
-						-978.333801269531, -- [5]
+						"BOTTOMLEFT", -- [1]
+						"PetActionBarFrame", -- [2]
+						"BOTTOMLEFT", -- [3]
+						-615.111014571042, -- [4]
+						178.77770755114, -- [5]
 					},
 				},
 				["MinimapZoomIn"] = {
@@ -286,21 +279,21 @@ MADB = {
 						-110.888514995575, -- [5]
 					},
 				},
-				["MultiCastActionBarFrame"] = {
+				["ActionBarDownButton"] = {
 					["orgPos"] = {
-						"BOTTOMLEFT", -- [1]
-						"MainMenuBar", -- [2]
-						"TOPLEFT", -- [3]
-						30, -- [4]
-						0, -- [5]
+						"TOPRIGHT", -- [1]
+						"ActionButton12", -- [2]
+						"BOTTOMRIGHT", -- [3]
+						8, -- [4]
+						4, -- [5]
 					},
-					["name"] = "MultiCastActionBarFrame",
+					["name"] = "ActionBarDownButton",
 					["pos"] = {
-						"BOTTOMLEFT", -- [1]
-						"UIParent", -- [2]
-						"BOTTOMLEFT", -- [3]
-						584.666687011719, -- [4]
-						53, -- [5]
+						"TOPRIGHT", -- [1]
+						"ActionButton12", -- [2]
+						"BOTTOMRIGHT", -- [3]
+						13.7599792480469, -- [4]
+						9.75999450683594, -- [5]
 					},
 				},
 				["OverrideActionBar"] = {
@@ -320,21 +313,21 @@ MADB = {
 						18, -- [5]
 					},
 				},
-				["PetActionButtonsVerticalMover"] = {
+				["MinimapCluster"] = {
 					["orgPos"] = {
-						"BOTTOMLEFT", -- [1]
-						"PetActionBarFrame", -- [2]
-						"BOTTOMLEFT", -- [3]
-						36, -- [4]
-						1, -- [5]
+						"TOPRIGHT", -- [1]
+						"UIParent", -- [2]
+						"TOPRIGHT", -- [3]
+						0, -- [4]
+						0, -- [5]
 					},
-					["name"] = "PetActionButtonsVerticalMover",
+					["name"] = "MinimapCluster",
 					["pos"] = {
-						"BOTTOMLEFT", -- [1]
-						"PetActionBarFrame", -- [2]
-						"BOTTOMLEFT", -- [3]
-						-615.111014571042, -- [4]
-						178.77770755114, -- [5]
+						"TOPRIGHT", -- [1]
+						"UIParent", -- [2]
+						"TOPRIGHT", -- [3]
+						-583.888061523438, -- [4]
+						-978.333801269531, -- [5]
 					},
 				},
 				["GameTimeFrame"] = {
@@ -354,21 +347,21 @@ MADB = {
 						-120.333854675293, -- [5]
 					},
 				},
-				["ObjectiveTrackerFrameMover"] = {
+				["MultiBarLeftHorizontalMover"] = {
 					["orgPos"] = {
-						"TOPRIGHT", -- [1]
-						"MinimapCluster", -- [2]
-						"BOTTOMRIGHT", -- [3]
-						-10, -- [4]
-						0, -- [5]
+						"BOTTOM", -- [1]
+						"UIParent", -- [2]
+						"BOTTOM", -- [3]
+						0, -- [4]
+						285, -- [5]
 					},
-					["name"] = "ObjectiveTrackerFrameMover",
+					["name"] = "MultiBarLeftHorizontalMover",
 					["pos"] = {
-						"TOPRIGHT", -- [1]
-						"MinimapCluster", -- [2]
-						"BOTTOMRIGHT", -- [3]
-						-365.278564453125, -- [4]
-						920.333797454834, -- [5]
+						"BOTTOM", -- [1]
+						"UIParent", -- [2]
+						"BOTTOM", -- [3]
+						-6.1035156250e-005, -- [4]
+						285, -- [5]
 					},
 				},
 				["MiniMapWorldMapButton"] = {
@@ -407,23 +400,6 @@ MADB = {
 						-20.7774014472961, -- [5]
 					},
 				},
-				["TimeManagerClockButton"] = {
-					["orgPos"] = {
-						"CENTER", -- [1]
-						"Minimap", -- [2]
-						"CENTER", -- [3]
-						0, -- [4]
-						-75, -- [5]
-					},
-					["name"] = "TimeManagerClockButton",
-					["pos"] = {
-						"BOTTOMLEFT", -- [1]
-						"UIParent", -- [2]
-						"BOTTOMLEFT", -- [3]
-						1432.44543457031, -- [4]
-						40.6661949157715, -- [5]
-					},
-				},
 				["OverrideActionBarHealthBar"] = {
 					["orgPos"] = {
 						"BOTTOMRIGHT", -- [1]
@@ -441,21 +417,38 @@ MADB = {
 						23.0399978160858, -- [5]
 					},
 				},
-				["MultiBarLeftHorizontalMover"] = {
+				["TimeManagerClockButton"] = {
 					["orgPos"] = {
-						"BOTTOM", -- [1]
-						"UIParent", -- [2]
-						"BOTTOM", -- [3]
+						"CENTER", -- [1]
+						"Minimap", -- [2]
+						"CENTER", -- [3]
 						0, -- [4]
-						285, -- [5]
+						-75, -- [5]
 					},
-					["name"] = "MultiBarLeftHorizontalMover",
+					["name"] = "TimeManagerClockButton",
 					["pos"] = {
-						"BOTTOM", -- [1]
+						"BOTTOMLEFT", -- [1]
 						"UIParent", -- [2]
-						"BOTTOM", -- [3]
-						-6.1035156250e-005, -- [4]
-						285, -- [5]
+						"BOTTOMLEFT", -- [3]
+						1432.44543457031, -- [4]
+						40.6661949157715, -- [5]
+					},
+				},
+				["ObjectiveTrackerFrameMover"] = {
+					["orgPos"] = {
+						"TOPRIGHT", -- [1]
+						"MinimapCluster", -- [2]
+						"BOTTOMRIGHT", -- [3]
+						-10, -- [4]
+						0, -- [5]
+					},
+					["name"] = "ObjectiveTrackerFrameMover",
+					["pos"] = {
+						"TOPRIGHT", -- [1]
+						"MinimapCluster", -- [2]
+						"BOTTOMRIGHT", -- [3]
+						-365.278564453125, -- [4]
+						920.333797454834, -- [5]
 					},
 				},
 				["MiniMapTracking"] = {
@@ -475,21 +468,21 @@ MADB = {
 						-97.2219848632813, -- [5]
 					},
 				},
-				["MiniMapInstanceDifficulty"] = {
+				["MultiCastActionBarFrame"] = {
 					["orgPos"] = {
-						"TOPLEFT", -- [1]
-						"MinimapCluster", -- [2]
+						"BOTTOMLEFT", -- [1]
+						"MainMenuBar", -- [2]
 						"TOPLEFT", -- [3]
-						22.0000019073486, -- [4]
-						-17, -- [5]
+						30, -- [4]
+						0, -- [5]
 					},
-					["name"] = "MiniMapInstanceDifficulty",
+					["name"] = "MultiCastActionBarFrame",
 					["pos"] = {
-						"TOPLEFT", -- [1]
-						"MinimapCluster", -- [2]
-						"TOPLEFT", -- [3]
-						166.443603515625, -- [4]
-						-84.2224578857422, -- [5]
+						"BOTTOMLEFT", -- [1]
+						"UIParent", -- [2]
+						"BOTTOMLEFT", -- [3]
+						584.666687011719, -- [4]
+						53, -- [5]
 					},
 				},
 				["GuildInstanceDifficulty"] = {
@@ -509,28 +502,35 @@ MADB = {
 						-77.5555877685547, -- [5]
 					},
 				},
-				["MinimapNorthTag"] = {
+				["ChatConfigFrame"] = {
+					["UIPanelWindows"] = {
+						["whileDead"] = 1,
+						["xoffset"] = -16,
+						["yoffset"] = 12,
+						["pushable"] = 0,
+						["area"] = "center",
+					},
 					["orgPos"] = {
 						"CENTER", -- [1]
-						"Minimap", -- [2]
+						"UIParent", -- [2]
 						"CENTER", -- [3]
 						0, -- [4]
-						67, -- [5]
+						0, -- [5]
 					},
-					["name"] = "MinimapNorthTag",
+					["name"] = "ChatConfigFrame",
 					["pos"] = {
-						"CENTER", -- [1]
-						"Minimap", -- [2]
-						"CENTER", -- [3]
-						-6.1035156250e-005, -- [4]
-						67.0000038146973, -- [5]
+						"BOTTOMLEFT", -- [1]
+						"UIParent", -- [2]
+						"BOTTOMLEFT", -- [3]
+						726.666748046875, -- [4]
+						301.944488525391, -- [5]
 					},
 				},
 			},
 		},
 	},
-	["closeGUIOnEscape"] = false,
-	["noMMMW"] = false,
-	["playSound"] = false,
 	["tooltips"] = true,
+	["playSound"] = false,
+	["noMMMW"] = false,
+	["closeGUIOnEscape"] = false,
 }

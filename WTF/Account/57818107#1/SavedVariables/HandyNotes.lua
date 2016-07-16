@@ -5,9 +5,9 @@ HandyNotesDB = {
 		["Ahka - Thrall"] = "Ahka - Thrall",
 		["Leisho - Durotan"] = "Leisho - Durotan",
 		["Nalyria - Thrall"] = "Nalyria - Thrall",
-		["Raijah - Thrall"] = "Raijah - Thrall",
-		["Kitha - Thrall"] = "Kitha - Thrall",
 		["Liulu - Thrall"] = "Liulu - Thrall",
+		["Kitha - Thrall"] = "Kitha - Thrall",
+		["Raijah - Thrall"] = "Raijah - Thrall",
 	},
 	["profiles"] = {
 		["Leisho - Thrall"] = {
@@ -19,12 +19,12 @@ HandyNotesDB = {
 		["Nalyria - Thrall"] = {
 			["enabled"] = false,
 		},
-		["Raijah - Thrall"] = {
+		["Liulu - Thrall"] = {
 		},
 		["Kitha - Thrall"] = {
 			["enabled"] = false,
 		},
-		["Liulu - Thrall"] = {
+		["Raijah - Thrall"] = {
 		},
 	},
 }
@@ -34,9 +34,9 @@ HandyNotes_HandyNotesDB = {
 		["Ahka - Thrall"] = "Ahka - Thrall",
 		["Leisho - Durotan"] = "Leisho - Durotan",
 		["Nalyria - Thrall"] = "Nalyria - Thrall",
-		["Raijah - Thrall"] = "Raijah - Thrall",
-		["Kitha - Thrall"] = "Kitha - Thrall",
 		["Liulu - Thrall"] = "Liulu - Thrall",
+		["Kitha - Thrall"] = "Kitha - Thrall",
+		["Raijah - Thrall"] = "Raijah - Thrall",
 	},
 	["profiles"] = {
 		["Leisho - Thrall"] = {
@@ -47,11 +47,11 @@ HandyNotes_HandyNotesDB = {
 		},
 		["Nalyria - Thrall"] = {
 		},
-		["Raijah - Thrall"] = {
+		["Liulu - Thrall"] = {
 		},
 		["Kitha - Thrall"] = {
 		},
-		["Liulu - Thrall"] = {
+		["Raijah - Thrall"] = {
 		},
 	},
 }
