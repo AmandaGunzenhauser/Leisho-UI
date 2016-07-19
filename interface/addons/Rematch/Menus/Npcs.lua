@@ -195,63 +195,66 @@ rematch.notableNPCs = {
 	{ 94646, 12, 1682 }, -- Vile Blood of Draenor
 
 	-- Azsuna
-	{ 105898, 18, 1883 }, -- Size Doesn't Matter (Blottis)
-	{ 97294, 18, 1729 }, -- Azsuna Specimens (Olivetail Hare)
-	{ 97283, 18, 1728 }, -- Azsuna Specimens (Juvenile Scuttleback)
-	{ 97323, 18, 1731 }, -- Azsuna Specimens (Felspider)
-	{ 106476, 18, 1893, 1894, 1892 }, -- Dazed and Confused and Adorable (Beguiling Orb)
-	{ 106552, 18, 1897, 1898, 1899 }, -- Training with the Nightwatchers (Nightwatcher Merayl)
-	{ 106417, 18, 1891 }, -- The Wine's Gone Bad (Vinu)
-	{ 106542, 18, 1895, 1896 }, -- Help a Whelp (Wounded Azurewing Whelpling)
+	{ 105898, 18, 1883 }, -- Size Doesn't Matter (Blottis) quest 42063
+	{ 97294, 18, 1729 }, -- Azsuna Specimens (Olivetail Hare) quest 42165
+	{ 97283, 18, 1728 }, -- Azsuna Specimens (Juvenile Scuttleback) quest 42165
+	{ 97323, 18, 1731 }, -- Azsuna Specimens (Felspider) quest 42165
+	{ 106476, 18, 1893, 1894, 1892 }, -- Dazed and Confused and Adorable (Beguiling Orb) quest 42146
+	{ 106552, 18, 1897, 1898, 1899 }, -- Training with the Nightwatchers (Nightwatcher Merayl) quest 42159
+	{ 106417, 18, 1891 }, -- The Wine's Gone Bad (Vinu) quest 42148
+	{ 106542, 18, 1895, 1896 }, -- Help a Whelp (Wounded Azurewing Whelpling) quest 42154
 
 	-- Dalaran
-	{ 107489, 17, 1904, 1905, 1906 }, -- Fight Night: Amalia
-	{ 99210, 17, 1800, 1801, 1799 }, -- Fight Night: Bodhi Sunwayver
-	{ 99742, 17, 1815 }, -- Fight Night: Heliosus
-	{ 99182, 17, 1795, 1797, 1796 }, -- Fight Night: Sir Galveston
-	{ 105241, 17, 1855 }, -- Fight Night: Rats! (Splint Jr.)
-	{ 105840, 17, 1880 }, -- Fight Night: Stitches Jr. Jr.
-	{ 97804, 17, 1748, 1746, 1745 }, -- Fight Night: Tiffany Nelson
+	{ 107489, 17, 1904, 1905, 1906 }, -- Fight Night: Amalia quest 42442
+	{ 99210, 17, 1800, 1801, 1799 }, -- Fight Night: Bodhi Sunwayver quest 40299
+	{ 99742, 17, 1815 }, -- Fight Night: Heliosus quest 41881
+	{ 99182, 17, 1795, 1797, 1796 }, -- Fight Night: Sir Galveston quest 40298
+	{ 105241, 17, 1855 }, -- Fight Night: Rats! (Splint Jr.) quest 41886
+	{ 105840, 17, 1880 }, -- Fight Night: Stitches Jr. Jr. quest 42062
+	{ 97804, 17, 1748, 1746, 1745 }, -- Fight Night: Tiffany Nelson quest 40277
 
 	-- Highmountain (16)
-	{ 99077, 16, 1790, 1791, 1792 }, -- Training with Bredda (Bredda Tenderhide)
-	{ 99150, 16, 1798, 1793, 1794 }, -- Tiny Poacher, Tiny Animals (Grixis Tinypop)
-	{ 104782, 16, 1843 }, -- Wildlife Protection Force (Hungry Icefang)
-	-- MISSING: "It's Illid... Wait"
-	{ 104553, 16, 1842, 1841, 1840 }, -- Snail Fight (Odrogg)
-	{ 98572, 16, 1811 }, -- Rocko Needs a Shave (Rocko)
+	{ 99077, 16, 1790, 1791, 1792 }, -- Training with Bredda (Bredda Tenderhide) quest 40280
+	{ 99150, 16, 1798, 1793, 1794 }, -- Tiny Poacher, Tiny Animals (Grixis Tinypop) quest 40282
+	{ 104782, 16, 1843 }, -- Wildlife Protection Force (Hungry Icefang) quest 41766
+	{ 105841, 16, 1881 }, -- It's Illid... Wait (Lil'idan) quest 42064
+	{ 104553, 16, 1842, 1841, 1840 }, -- Snail Fight (Odrogg) quest 41687
+	{ 98572, 16, 1811 }, -- Rocko Needs a Shave (Rocko) quest 41624
 
 	-- Stormheim (15)
-	{ 105842, 15, 1882 }, -- All Howl, No Bite (Chromadon)
---	{ 105455, 15, }, -- Jarrun's Ladder (Trapper Jarrun) MISSING: opponent pets
-	{ 99878, 15, 1816, 1817, 1818 }, -- Oh, Ominitron (need npcID for Mini Magmatron)
-	{ 98270, 15, 1770, 1772, 1771 }, -- My Beast's Bidding (Robert Craig)
-	{ 105512, 15, 1871, 1872 }, -- All Pets Go to Heaven (Envoy of the Hunt)
-	{ 105387, 15, 1867 }, -- Beasts of Burden (Andurs)
-	{ 105386, 15, 1866 }, -- Beasts of Burden (Rydyr)
+	{ 105842, 15, 1882 }, -- All Howl, No Bite (Chromadon) quest 42067
+	{ 105455, 15, 1868, 1869, 1870 }, -- Jarrun's Ladder (Trapper Jarrun) quest 41944
+	{ 99878, 15, 1816, 1817, 1818 }, -- Oh, Ominitron (need npcID for Mini Magmatron) quest 41958
+	{ 98270, 15, 1770, 1772, 1771 }, -- My Beast's Bidding (Robert Craig) quest 40278
+	{ 105512, 15, 1871, 1872 }, -- All Pets Go to Heaven (Envoy of the Hunt) quest 41948
+	{ 105387, 15, 1867 }, -- Beasts of Burden (Andurs) quest 41935
+	{ 105386, 15, 1866 }, -- Beasts of Burden (Rydyr) quest 41935
 
 	-- Suramar (14)
-	-- MISSING: "The Master of Pets"
-	{ 105323, 14, 1860, 1861, 1862 }, -- Clear the Catacombs (Ancient Catacomb Eggs)
---	{ 105674, 14, }, -- Chopped (Varenne) MISSING: opponent pets
-	{ 97709, 14, 1742 }, -- Flummoxed (Master Tamer Flummox) MISSING: speciesID for Master Tamer Flummox
-	{ 105779, 14, 1877, 1878, 1879 }, -- Threads of Fate (Felsoul Seer)
-	{ 105352, 14, 1863, 1864, 1865 }, -- Mana Tap (Surging Mana Crystal)
+	{ 105250, 14, 1857, 1858, 1859 }, -- The Master of Pets (Aulier) quest 41895
+	{ 105323, 14, 1860, 1861, 1862 }, -- Clear the Catacombs (Ancient Catacomb Eggs) quest 41914
+	{ 105674, 14, 1873, 1874, 1875 }, -- Chopped (Varenne) quest 41990
+	{ 97709, 14, 1742 }, -- Flummoxed (Master Tamer Flummox) quest 40337
+	{ 105779, 14, 1877, 1878, 1879 }, -- Threads of Fate (Felsoul Seer) quest 42015
+	{ 105352, 14, 1863, 1864, 1865 }, -- Mana Tap (Surging Mana Crystal) quest 41931
 
 	-- Val'sharah (13)
-	{ 99035, 13, 1789, 1787, 1788 }, -- Training with Durian (Durian Strongfruit)
-	{ 105093, 13, 1851, 1852, 1853 }, -- Only Pets can Prevent Forest Fires (Fragment of Fire) Cackling Flame, Devouring Blaze, Living Coals
-	{ 104992, 13, 1849 }, -- Meet The Maw (The Maw)
-	{ 105009, 13, 1850 }, -- Stand Up to Bullies (Thistleleaf Bully)
-	{ 97511, 13, 1734 }, -- Wildlife Conservationist (Shimmering Aquafly)
-	{ 97547, 13, 1737 }, -- Wildlife Conservationist (Vale Flitter)
-	{ 97559, 13, 1739 }, -- Wildlife Conservationist (Spring Strider)
-	{ 104970, 13, 1847, 1846, 1848 }, -- Dealing with Satyrs (Xorvasc) Trixy, Globs, Nightmare Sprout
+	{ 99035, 13, 1789, 1787, 1788 }, -- Training with Durian (Durian Strongfruit) quest 40279
+	{ 105093, 13, 1851, 1852, 1853 }, -- Only Pets can Prevent Forest Fires (Fragment of Fire) quest 41862
+	{ 104992, 13, 1849 }, -- Meet The Maw (The Maw) quest 41861
+	{ 105009, 13, 1850 }, -- Stand Up to Bullies (Thistleleaf Bully) quest 41855
+	{ 97511, 13, 1734 }, -- Wildlife Conservationist (Shimmering Aquafly) quest 42190
+	{ 97547, 13, 1737 }, -- Wildlife Conservationist (Vale Flitter) quest 42190
+	{ 97559, 13, 1739 }, -- Wildlife Conservationist (Spring Strider) quest 42190
+	{ 104970, 13, 1847, 1846, 1848 }, -- Dealing with Satyrs (Xorvasc) quest 41860
+
 }
 
 -- table of npcID's and the npcID they should actually refer to
 -- GetUnitNameandID swaps these npcIDs for their redirected npcIDs, unless a team is already saved
 rematch.notableRedirects = {
+
+	[99880] = 99878, -- Mini Magmatron golem -> Mini Magmatron console
 
 	[105353] = 105352, -- Font of Mana -> Surging Mana Crystal
 	[105356] = 105352, -- Seed of Mana -> Surging Mana Crystal

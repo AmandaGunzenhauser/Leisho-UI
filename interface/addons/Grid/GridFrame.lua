@@ -385,7 +385,11 @@ function GridFrameClass.prototype:SetIconSize(size, borderSize)
 	local r, g, b, a = f.IconBG:GetBackdropBorderColor()
 
 	f.IconBG:SetBackdrop(backdrop)
-	f.IconBG:SetBackdropBorderColor(r, g, b, a)
+	if borderSize == 0 then
+	   f.IconBG:SetBackdropBorderColor(0, 0, 0, 0)
+	else
+	   f.IconBG:SetBackdropBorderColor(r, g, b, a)
+	end
 
 	f.IconBG:SetWidth(size + borderSize * 2)
 	f.IconBG:SetHeight(size + borderSize * 2)
@@ -611,7 +615,7 @@ function GridFrameClass.prototype:SetIndicator(indicator, color, text, value, ma
 			end
 
 			if type(color) == "table" and not color.ignore then
-				if self.db.profile.iconBorderSize > 0 then
+				if GridFrame.db.profile.iconBorderSize > 0 then
 					self.frame.IconBG:SetBackdropBorderColor(color.r, color.g, color.b, color.a)
 				end
 				self.frame.Icon:SetAlpha(color.a)

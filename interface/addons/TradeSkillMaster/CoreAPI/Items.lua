@@ -12,9 +12,44 @@ local TSM = select(2, ...)
 local Items = TSM:NewModule("Items", "AceEvent-3.0")
 local private = {itemInfoCache=setmetatable({}, {__mode="kv"}), bonusIdCache=setmetatable({}, {__mode="kv"}), bonusIdTemp={}, scanTooltip=nil, pendingItems={}}
 local PET_CAGE_ITEM_INFO = {isDefault=true, 0, "Battle Pets", "", 1, "", "", 0}
-local WEAPON, ARMOR = GetAuctionItemClasses()
-local BATTLE_PET_SUBCLASSES = {GetAuctionItemSubClasses(11)}
-
+local STATIC_DATA = {classLookup={}, classIdLookup={}, inventorySlotIdLookup={}}
+if select(4, GetBuildInfo()) >= 70000 then
+	STATIC_DATA.weaponClassName = GetItemClassInfo(LE_ITEM_CLASS_WEAPON)
+	STATIC_DATA.armorClassName = GetItemClassInfo(LE_ITEM_CLASS_ARMOR)
+	-- blizzard typo'd "_CLASSES" as "_CLASSS" - guard against them fixing it and breaking this
+	for i = 0, NUM_LE_ITEM_CLASSS or NUM_LE_ITEM_CLASSES do
+		local class = GetItemClassInfo(i)
+		if class then
+			STATIC_DATA.classIdLookup[strlower(class)] = i
+			STATIC_DATA.classLookup[class] = {}
+			STATIC_DATA.classLookup[class]._index = i
+			for _, j in pairs({GetAuctionItemSubClasses(i)}) do
+				STATIC_DATA.classLookup[class][GetItemSubClassInfo(i, j)] = j
+			end
+		end
+	end
+	for i = 0, NUM_LE_INVENTORY_TYPES do
+		local invType = GetItemInventorySlotInfo(i)
+		if invType then
+			STATIC_DATA.inventorySlotIdLookup[strlower(invType)] = i
+		end
+	end
+else
+	STATIC_DATA.weaponClassName, STATIC_DATA.armorClassName = GetAuctionItemClasses()
+	for i, class in ipairs({GetAuctionItemClasses()}) do
+		STATIC_DATA.classIdLookup[strlower(class)] = i
+		STATIC_DATA.classLookup[class] = {}
+		STATIC_DATA.classLookup[class]._index = i
+		for j, subClass in pairs({GetAuctionItemSubClasses(i)}) do
+			STATIC_DATA.classLookup[class][subClass] = j
+		end
+	end
+	local auctionInvTypes = {GetAuctionInvTypes(2,1)}
+	for i=1, #auctionInvTypes, 2 do
+		TSMAPI:Assert(type(auctionInvTypes[i]) == "string")
+		STATIC_DATA.inventorySlotIdLookup[strlower(_G[auctionInvTypes[i]])] = (i + 1) / 2
+	end
+end
 
 
 -- ============================================================================
@@ -41,7 +76,6 @@ function TSMAPI.Item:ToItemString(item)
 		end
 		return item
 	elseif strmatch(item, "^i:([0-9%-:]+)$") then
-		item = gsub(gsub(item, ":0$", ""), ":0$", "") -- remove extra zeroes
 		return private:FixItemString(item)
 	end
 
@@ -54,7 +88,6 @@ function TSMAPI.Item:ToItemString(item)
 	-- test if it's an old style item string
 	result = strjoin(":", strmatch(item, "^(i)tem:([0-9%-]+):[0-9%-]+:[0-9%-]+:[0-9%-]+:[0-9%-]+:[0-9%-]+:([0-9%-]+)$"))
 	if result then
-		result = gsub(gsub(result, ":0$", ""), ":0$", "") -- remove extra zeroes
 		return private:FixItemString(result)
 	end
 
@@ -73,16 +106,14 @@ function TSMAPI.Item:ToItemString(item)
 	end
 
 	-- test if it's a long item string
-	result = strjoin(":", strmatch(item, "(i)tem:([0-9%-]+):[0-9%-]+:[0-9%-]+:[0-9%-]+:[0-9%-]+:[0-9%-]+:([0-9%-]+):[0-9%-]+:[0-9%-]+:[0-9%-]+:[0-9%-]+:[0-9%-]+:([0-9%-:]+)"))
+	result = strjoin(":", strmatch(item, "(i)tem:([0-9%-]+):[0-9%-]*:[0-9%-]*:[0-9%-]*:[0-9%-]*:[0-9%-]*:([0-9%-]*):[0-9%-]*:[0-9%-]*:[0-9%-]*:[0-9%-]*:[0-9%-]*:([0-9%-:]+)"))
 	if result and result ~= "" then
-		result = gsub(gsub(result, ":0$", ""), ":0$", "") -- remove extra zeroes
 		return private:FixItemString(result)
 	end
 
 	-- test if it's a shorter item string (without bonuses)
-	result = strjoin(":", strmatch(item, "(i)tem:([0-9%-]+):[0-9%-]+:[0-9%-]+:[0-9%-]+:[0-9%-]+:[0-9%-]+:([0-9%-]+)"))
+	result = strjoin(":", strmatch(item, "(i)tem:([0-9%-]+):[0-9%-]*:[0-9%-]*:[0-9%-]*:[0-9%-]*:[0-9%-]*:([0-9%-]*)"))
 	if result and result ~= "" then
-		result = gsub(gsub(result, ":0$", ""), ":0$", "") -- remove extra zeroes
 		return result
 	end
 end
@@ -176,7 +207,12 @@ function TSMAPI.Item:GetInfo(item)
 			level, quality, health, power, speed, petID = level or 0, quality or 0, health or 0, power or 0, speed or 0, petID or "0"
 
 			local name, texture, petType = C_PetJournal.GetPetInfoBySpeciesID(tonumber(speciesID))
-			local iSubType = petType and BATTLE_PET_SUBCLASSES[petType] or ""
+			local iSubType = nil
+			if select(4, GetBuildInfo()) >= 70000 then
+				iSubType = petType and GetItemSubClassInfo(LE_ITEM_CLASS_BATTLEPET, petType - 1) or ""
+			else
+				iSubType = petType and select(petType, GetAuctionItemSubClasses(11)) or ""
+			end
 			if not name or name == "" or tonumber(name) or not texture then return end
 			level, quality = tonumber(level), tonumber(quality)
 			petID = strsub(petID, 1, (strfind(petID, "|") or #petID) - 1)
@@ -275,9 +311,15 @@ function TSMAPI.Item:IsCraftingReagent(itemLink)
 		return false
 	end
 
-	--workaround for recipes having the item info and crafting reagent in the tooltip
-	if select(6, TSMAPI.Item:GetInfo(itemLink)) == select(7, GetAuctionItemClasses()) then
-		return false
+	-- workaround for recipes having the item info and crafting reagent in the tooltip
+	if select(4, GetBuildInfo()) >= 70000 then
+		if select(12, TSMAPI.Item:GetInfo(itemLink)) == LE_ITEM_CLASS_RECIPE then
+			return false
+		end
+	else
+		if select(6, TSMAPI.Item:GetInfo(itemLink)) == select(7, GetAuctionItemClasses()) then
+			return false
+		end
 	end
 
 	if not TSMScanTooltip then
@@ -311,7 +353,57 @@ end
 function TSMAPI.Item:IsDisenchantable(itemString)
 	if not itemString or TSM.STATIC_DATA.notDisenchantable[itemString] then return end
 	local quality, iType = TSMAPI.Util:Select({3, 6}, TSMAPI.Item:GetInfo(itemString))
-	return quality and quality >= 2 and (iType == ARMOR or iType == WEAPON)
+	return quality and quality >= 2 and (iType == STATIC_DATA.armorClassName or iType == STATIC_DATA.weaponClassName)
+end
+
+function TSMAPI.Item:GetItemClasses()
+	local result = {}
+	for class in pairs(STATIC_DATA.classLookup) do
+		tinsert(result, class)
+	end
+	sort(result, function(a, b) return TSMAPI.Item:GetClassIdFromClassString(a) < TSMAPI.Item:GetClassIdFromClassString(b) end)
+	return result
+end
+
+function TSMAPI.Item:GetItemSubClasses(classId)
+	local class = nil
+	if select(4, GetBuildInfo()) >= 70000 then
+		class = GetItemClassInfo(classId)
+	else
+		class = select(classId, GetAuctionItemClasses())
+	end
+	local result = {}
+	for subClass in pairs(STATIC_DATA.classLookup[class]) do
+		if subClass ~= "_index" then
+			tinsert(result, subClass)
+		end
+	end
+	sort(result, function(a, b) return STATIC_DATA.classLookup[class][a] < STATIC_DATA.classLookup[class][b] end)
+	return result
+end
+
+function TSMAPI.Item:GetClassIdFromClassString(class)
+	return STATIC_DATA.classIdLookup[strlower(class)]
+end
+
+function TSMAPI.Item:GetSubClassIdFromSubClassString(subClass, classId)
+	if not classId then return end
+	local class = nil
+	if select(4, GetBuildInfo()) >= 70000 then
+		class = GetItemClassInfo(classId)
+	else
+		class = select(classId, GetAuctionItemClasses())
+	end
+	if not STATIC_DATA.classLookup[class] then return end
+	for str, index in pairs(STATIC_DATA.classLookup[class]) do
+		if strlower(str) == strlower(subClass) then
+			return index
+		end
+	end
+end
+
+function TSMAPI.Item:GetInventorySlotIdFromInventorySlotString(slot)
+	return STATIC_DATA.inventorySlotIdLookup[strlower(slot)]
 end
 
 
@@ -402,7 +494,7 @@ function private:ToWoWItemString(itemString)
 		-- just the itemId is specified, so simply extract that
 		return "item:"..itemId
 	else
-		-- there is a random enchant or bonusId, so extract those (with a max of 10 bonuses
+		-- there is a random enchant or bonusId, so extract those (with a max of 10 bonuses)
 		local _, itemId, rand, numBonus = (":"):split(itemString)
 		if numBonus then
 			return strjoin(":", "item", itemId, 0, 0, 0, 0, 0, rand, 0, 0, 0, 0, 0, select(4, (":"):split(itemString)))
@@ -415,16 +507,19 @@ function private:ToWoWItemString(itemString)
 end
 
 function private:FixItemString(itemString)
+	itemString = gsub(gsub(itemString, ":0?$", ""), ":0?$", "") -- remove extra zeroes
 	-- make sure we have the correct number of bonusIds and remove the uniqueId from the end if necessary
 	-- get the number of bonusIds (plus one for the count)
 	local numParts = select("#", (":"):split(itemString)) - 3
 	if numParts > 0 then
 		-- get the number of extra parts we have
-		local numExtraParts = numParts - 1 - select(4, (":"):split(itemString))
+		local count = select(4, (":"):split(itemString))
+		count = count == "" and 0 or count
+		local numExtraParts = numParts - 1 - count
 		for i=1, numExtraParts do
-			itemString = gsub(itemString, ":[0-9]+$", "")
+			itemString = gsub(itemString, ":[0-9]*$", "")
 		end
-		itemString = gsub(gsub(itemString, ":0$", ""), ":0$", "") -- remove extra zeroes
+		itemString = gsub(gsub(itemString, ":0?$", ""), ":0?$", "") -- remove extra zeroes
 		-- filter out bonusIds we don't care about
 		return private:FilterImportantBonsuIds(itemString)
 	end

@@ -62,12 +62,12 @@ local function RedrawGroupTree(st)
 	local width = st:GetWidth() - 14
 	local height = st:GetHeight()
 	st.NUM_ROWS = floor((st:GetParent():GetHeight() - (st.isGroupBox and 0 or 20)) / ROW_HEIGHT)
-	
+
 	-- add more rows if necessary
 	while #st.rows < st.NUM_ROWS do
 		st:AddRow()
 	end
-	
+
 	st:RefreshRows()
 end
 
@@ -167,7 +167,11 @@ local methods = {
 		end
 		local highlight = row:CreateTexture()
 		highlight:SetAllPoints()
-		highlight:SetTexture(1, .9, 0, .2)
+		if select(4, GetBuildInfo()) >= 70000 then
+			highlight:SetColorTexture(1, .9, 0, .2)
+		else
+			highlight:SetTexture(1, .9, 0, .2)
+		end
 		highlight:Hide()
 		row.highlight = highlight
 		local text = row:CreateFontString()

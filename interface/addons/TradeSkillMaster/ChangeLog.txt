@@ -1,3 +1,13 @@
+v3.4.2
+*Fixed another bug with the mail inbox.
+
+v3.4.1
+*Fixed some bugs with the mail inbox.
+
+v3.4
+*Updated for patch 7.0.3.
+*Fixed bug with moving non-group items.
+
 v3.3.19
 *Fixed error when storing operations globally.
 

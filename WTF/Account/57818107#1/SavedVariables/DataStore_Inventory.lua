@@ -86,27 +86,26 @@ DataStore_InventoryDB = {
 			},
 			["Default.Thrall.Leisho"] = {
 				["Inventory"] = {
-					"|cffffffff|Hitem:124262:0:0:0:0:0:0:0:100:270:4:5:1:566:531|h[]|h|r", -- [1]
-					"|cffffffff|Hitem:109958:5320:0:0:0:0:0:0:100:270:4:23:2:642:759:531|h[]|h|r", -- [2]
-					"|cffffffff|Hitem:124273:0:0:0:0:0:0:0:100:270:4:5:1:566:531|h[]|h|r", -- [3]
+					"|cffffffff|Hitem:124262::::::::100:268:4:5:1:566:531:::|h[]|h|r", -- [1]
+					"|cffffffff|Hitem:124208:5319:::::::100:268:4:3::531:::|h[]|h|r", -- [2]
+					"|cffffffff|Hitem:124273::::::::100:268:4:5:1:566:531:::|h[]|h|r", -- [3]
 					nil, -- [4]
-					"|cffffffff|Hitem:116180:0:0:0:0:0:0:0:100:270:4:13:3:75:536:618:531|h[]|h|r", -- [5]
-					"|cffffffff|Hitem:124277:0:0:0:0:0:0:0:100:270:4:5:1:566:531|h[]|h|r", -- [6]
-					"|cffffffff|Hitem:124268:0:0:0:0:0:0:0:100:270:4:5:1:566:531|h[]|h|r", -- [7]
-					"|cffffffff|Hitem:116182:0:0:0:0:0:0:0:100:270:4:13:3:79:535:618:531|h[]|h|r", -- [8]
-					"|cffffffff|Hitem:124279:0:0:0:0:0:0:0:100:270:4:5:1:566:531|h[]|h|r", -- [9]
-					"|cffffffff|Hitem:124256:0:0:0:0:0:0:0:100:270:4:5:1:566:531|h[]|h|r", -- [10]
-					"|cffffffff|Hitem:124194:5327:0:0:0:0:0:0:100:270:4:5:1:566:531|h[]|h|r", -- [11]
-					"|cffffffff|Hitem:124638:5327:0:0:0:0:0:0:100:270:0:14:2:649:641|h[]|h|r", -- [12]
-					"|cffffffff|Hitem:124234:0:0:0:0:0:0:0:100:270:4:5:1:566:531|h[]|h|r", -- [13]
-					"|cffffffff|Hitem:124233:0:0:0:0:0:0:0:100:270:4:5:2:561:566:531|h[]|h|r", -- [14]
-					"|cffffffff|Hitem:124140:5313:0:0:0:0:0:0:100:270:4:5:1:566:531|h[]|h|r", -- [15]
-					"|cffffffff|Hitem:124384:5335:0:0:0:0:0:0:100:270:4:5:2:561:566:531|h[]|h|r", -- [16]
-					"|cffffffff|Hitem:124205:0:0:0:0:0:0:0:100:270:4:5:1:566:531|h[]|h|r", -- [17]
+					"|cffffffff|Hitem:116180::::::::100:268:4:13:3:75:536:618:531:::|h[]|h|r", -- [5]
+					"|cffffffff|Hitem:124275::::::::100:268:4:5:1:566:531:::|h[]|h|r", -- [6]
+					"|cffffffff|Hitem:124268::::::::100:268:4:5:1:566:531:::|h[]|h|r", -- [7]
+					"|cffffffff|Hitem:124250::127762::::::100:268:4:5:2:564:566:531:::|h[]|h|r", -- [8]
+					"|cffffffff|Hitem:124279::::::::100:268:4:5:1:566:531:::|h[]|h|r", -- [9]
+					"|cffffffff|Hitem:124256::::::::100:268:4:5:1:566:531:::|h[]|h|r", -- [10]
+					"|cffffffff|Hitem:109777:5326:::::::100:268:4:23:2:642:644:531:::|h[]|h|r", -- [11]
+					"|cffffffff|Hitem:124637:5326:::::::100:268::11:2:649:641:::|h[]|h|r", -- [12]
+					"|cffffffff|Hitem:124241::::::::100:268:4:3::531:::|h[]|h|r", -- [13]
+					"|cffffffff|Hitem:124240::127762::::::100:268:4:5:2:564:566:531:::|h[]|h|r", -- [14]
+					"|cffffffff|Hitem:124146:5312:::::::100:268:4:5:2:40:566:531:::|h[]|h|r", -- [15]
+					"|cffffffff|Hitem:140694::::::::100:268::5:1:3439:::|h[]|h|r", -- [16]
 				},
-				["averageItemLvl"] = 727,
-				["overallAIL"] = 733.066650390625,
-				["lastUpdate"] = 1468702523,
+				["averageItemLvl"] = 720.9375,
+				["overallAIL"] = 732.5625,
+				["lastUpdate"] = 1468965328,
 			},
 			["Default.Thrall.Raijah"] = {
 				["Inventory"] = {
@@ -157,21 +156,6 @@ DataStore_InventoryDB = {
 				["overallAIL"] = 502.6875,
 				["lastUpdate"] = 1467761888,
 			},
-			["Default.Durotan.Leisho"] = {
-				["Inventory"] = {
-					[6] = 74569,
-					[7] = 73228,
-					[15] = 73223,
-					[10] = 74572,
-					[8] = 73231,
-					[16] = 73239,
-					[5] = 74575,
-					[9] = 73215,
-				},
-				["averageItemLvl"] = 2.13333344459534,
-				["overallAIL"] = 2.13333344459534,
-				["lastUpdate"] = 1463324518,
-			},
 			["Default.Thrall.Alinastra"] = {
 				["Inventory"] = {
 					"|cffe6cc80|Hitem:122250:0:0:0:0:0:0:0:95:258:0:0:1:583|h[Tattered Dreadmist Mask]|h|r", -- [1]
@@ -194,6 +178,29 @@ DataStore_InventoryDB = {
 				["averageItemLvl"] = 556.466674804688,
 				["overallAIL"] = 556.466674804688,
 				["lastUpdate"] = 1467479027,
+			},
+			["Default.Thrall.Nalyria"] = {
+				["Inventory"] = {
+					"|cffa335ee|Hitem:124581:0:0:0:0:0:0:0:100:254:4:4:3:145:651:653:529|h[Axeclaw Helm of the Deft]|h|r", -- [1]
+					"|cffa335ee|Hitem:124607:0:0:0:0:0:0:0:100:254:4:4:3:90:764:653:529|h[Vexed Necklace of the Quickblade]|h|r", -- [2]
+					"|cffa335ee|Hitem:124589:0:0:0:0:0:0:0:100:254:4:4:3:54:764:653:529|h[Axeclaw Spaulders of the Peerless]|h|r", -- [3]
+					nil, -- [4]
+					"|cffa335ee|Hitem:124568:0:0:0:0:0:0:0:100:254:4:4:3:24:652:648:529|h[Axeclaw Chestguard of the Fireflash]|h|r", -- [5]
+					"|cffa335ee|Hitem:124593:0:0:0:0:0:0:0:100:254:4:4:3:170:652:648:529|h[Axeclaw Belt of the Aurora]|h|r", -- [6]
+					"|cffa335ee|Hitem:124585:0:0:0:0:0:0:0:100:254:4:4:3:31:651:653:529|h[Axeclaw Legguards of the Fireflash]|h|r", -- [7]
+					"|cffa335ee|Hitem:124573:0:0:0:0:0:0:0:100:254:4:4:3:208:651:652:529|h[Axeclaw Boots of the Harmonious]|h|r", -- [8]
+					"|cff0070dd|Hitem:124565:0:0:0:0:0:0:0:100:254:4:4:3:77:647:653:529|h[Axeclaw Bracers of the Savage]|h|r", -- [9]
+					"|cffa335ee|Hitem:124577:0:0:0:0:0:0:0:100:254:4:4:3:221:648:652:529|h[Axeclaw Gauntlets of the Strategist]|h|r", -- [10]
+					"|cffa335ee|Hitem:124601:0:0:0:0:0:0:0:100:254:4:4:3:487:764:653:529|h[Arduous Ring of the Impatient]|h|r", -- [11]
+					"|cffa335ee|Hitem:124595:0:0:0:0:0:0:0:100:254:4:4:3:222:652:648:529|h[Arduous Signet of the Strategist]|h|r", -- [12]
+					"|cffa335ee|Hitem:124545:0:0:0:0:0:0:0:100:254:4:3:0:529|h[Chipped Soul Prism]|h|r", -- [13]
+					"|cffe6cc80|Hitem:133597:0:0:0:0:0:0:0:100:254:0:0:0|h[Infallible Tracking Charm]|h|r", -- [14]
+					"|cffa335ee|Hitem:124613:0:0:0:0:0:0:0:100:254:4:4:3:103:652:648:529|h[Marshwater Cape of the Quickblade]|h|r", -- [15]
+					"|cff0070dd|Hitem:118796:0:0:0:0:0:0:0:100:254:0:4:0|h[Gorestrung Longbow of Kel'tann]|h|r", -- [16]
+				},
+				["averageItemLvl"] = 682.066650390625,
+				["overallAIL"] = 682.066650390625,
+				["lastUpdate"] = 1467478939,
 			},
 			["Default.Thrall.Thilaira"] = {
 				["Inventory"] = {
@@ -219,28 +226,20 @@ DataStore_InventoryDB = {
 				["overallAIL"] = 652.666687011719,
 				["lastUpdate"] = 1462676615,
 			},
-			["Default.Thrall.Nalyria"] = {
+			["Default.Durotan.Leisho"] = {
 				["Inventory"] = {
-					"|cffa335ee|Hitem:124581:0:0:0:0:0:0:0:100:254:4:4:3:145:651:653:529|h[Axeclaw Helm of the Deft]|h|r", -- [1]
-					"|cffa335ee|Hitem:124607:0:0:0:0:0:0:0:100:254:4:4:3:90:764:653:529|h[Vexed Necklace of the Quickblade]|h|r", -- [2]
-					"|cffa335ee|Hitem:124589:0:0:0:0:0:0:0:100:254:4:4:3:54:764:653:529|h[Axeclaw Spaulders of the Peerless]|h|r", -- [3]
-					nil, -- [4]
-					"|cffa335ee|Hitem:124568:0:0:0:0:0:0:0:100:254:4:4:3:24:652:648:529|h[Axeclaw Chestguard of the Fireflash]|h|r", -- [5]
-					"|cffa335ee|Hitem:124593:0:0:0:0:0:0:0:100:254:4:4:3:170:652:648:529|h[Axeclaw Belt of the Aurora]|h|r", -- [6]
-					"|cffa335ee|Hitem:124585:0:0:0:0:0:0:0:100:254:4:4:3:31:651:653:529|h[Axeclaw Legguards of the Fireflash]|h|r", -- [7]
-					"|cffa335ee|Hitem:124573:0:0:0:0:0:0:0:100:254:4:4:3:208:651:652:529|h[Axeclaw Boots of the Harmonious]|h|r", -- [8]
-					"|cff0070dd|Hitem:124565:0:0:0:0:0:0:0:100:254:4:4:3:77:647:653:529|h[Axeclaw Bracers of the Savage]|h|r", -- [9]
-					"|cffa335ee|Hitem:124577:0:0:0:0:0:0:0:100:254:4:4:3:221:648:652:529|h[Axeclaw Gauntlets of the Strategist]|h|r", -- [10]
-					"|cffa335ee|Hitem:124601:0:0:0:0:0:0:0:100:254:4:4:3:487:764:653:529|h[Arduous Ring of the Impatient]|h|r", -- [11]
-					"|cffa335ee|Hitem:124595:0:0:0:0:0:0:0:100:254:4:4:3:222:652:648:529|h[Arduous Signet of the Strategist]|h|r", -- [12]
-					"|cffa335ee|Hitem:124545:0:0:0:0:0:0:0:100:254:4:3:0:529|h[Chipped Soul Prism]|h|r", -- [13]
-					"|cffe6cc80|Hitem:133597:0:0:0:0:0:0:0:100:254:0:0:0|h[Infallible Tracking Charm]|h|r", -- [14]
-					"|cffa335ee|Hitem:124613:0:0:0:0:0:0:0:100:254:4:4:3:103:652:648:529|h[Marshwater Cape of the Quickblade]|h|r", -- [15]
-					"|cff0070dd|Hitem:118796:0:0:0:0:0:0:0:100:254:0:4:0|h[Gorestrung Longbow of Kel'tann]|h|r", -- [16]
+					[6] = 74569,
+					[7] = 73228,
+					[15] = 73223,
+					[10] = 74572,
+					[5] = 74575,
+					[9] = 73215,
+					[16] = 73239,
+					[8] = 73231,
 				},
-				["averageItemLvl"] = 682.066650390625,
-				["overallAIL"] = 682.066650390625,
-				["lastUpdate"] = 1467478939,
+				["averageItemLvl"] = 2.13333344459534,
+				["overallAIL"] = 2.13333344459534,
+				["lastUpdate"] = 1463324518,
 			},
 		},
 		["Guilds"] = {
@@ -269,7 +268,7 @@ DataStore_InventoryDB = {
 						["averageItemLvl"] = 682,
 					},
 					["Leisho"] = {
-						["averageItemLvl"] = 727,
+						["averageItemLvl"] = 720,
 					},
 					["Raijah"] = {
 						["averageItemLvl"] = 697,

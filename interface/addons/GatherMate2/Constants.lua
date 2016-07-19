@@ -99,6 +99,13 @@ local node_ids = {
 		--[NL["Lagoon Pool"]]						= 179,
 		--[NL["Sparkling Pool"]]					= 180,
 		[NL["Felmouth Frenzy School"]]			= 181,
+		-- Legion Pools
+		[NL["Black Barracuda School"]]			= 182,
+		[NL["Cursed Queenfish School"]]			= 183,
+		[NL["Runescale Koi School"]]			= 184,
+		[NL["Fever of Stormrays"]]				= 185,
+		[NL["Highmountain Salmon School"]]		= 186,
+		[NL["Mossgill Perch School"]]			= 187,
 	},
 	["Mining"] = {
 		[NL["Copper Vein"]] 					= 201,
@@ -156,6 +163,13 @@ local node_ids = {
 		[NL["Rich True Iron Deposit"]]			= 250,
 		[NL["Blackrock Deposit"]]				= 251,
 		[NL["Rich Blackrock Deposit"]]			= 252,
+-- legion nodes
+		[NL["Leystone Deposit"]]				= 253,
+		[NL["Rich Leystone Deposit"]]			= 254,
+		[NL["Leystone Seam"]]					= 255,
+		[NL["Felslate Deposit"]]				= 256,
+		[NL["Rich Felslate Deposit"]]			= 257,
+		[NL["Felslate Seam"]]					= 258,
 	},
 	["Extract Gas"] = {
 		[NL["Windy Cloud"]] 					= 301,
@@ -245,6 +259,13 @@ local node_ids = {
 		[NL["Fireweed"]]						= 473,
 		[NL["Frostweed"]]						= 474,
 		[NL["Withered Herb"]]					= 475,
+-- legion nodes
+		[NL["Aethril"]]							= 476,
+		[NL["Dreamleaf"]]						= 477,
+		[NL["Felwort"]]							= 478,
+		[NL["Fjarnskaggl"]]						= 479,
+		[NL["Foxflower"]]						= 480,
+		[NL["Starlight Rose"]]					= 481,
 	},
 	["Treasure"] = {
 		[NL["Giant Clam"]] 						= 501,
@@ -363,6 +384,9 @@ local rare_spawns = {
 	[242] = {[241]=true}, -- rich ghost iron
 	[247] = {[242]=true,[241]=true}, -- trillium
 	[248] = {[242]=true,[241]=true}, -- rich trillium
+	[478] = {[476]=true,[477]=true,[479]=true,[480]=true,[481]=true}, -- felwort
+	[254] = {[253]=true}, -- rich leystone deposit
+	[257] = {[256]=true}, -- rich feslate deposit
 }
 Collector.rareNodes = rare_spawns
 -- Format zone = { "Database", "new node id"}
@@ -477,6 +501,12 @@ local node_textures = {
 		[179] = icon_path.."Fish\\fish_hook.tga",
 		[180] = icon_path.."Fish\\fish_hook.tga",
 		[181] = icon_path.."Fish\\suckerfish.tga",
+		[182] = icon_path.."Fish\\fish_hook.tga",
+		[183] = icon_path.."Fish\\fish_hook.tga",
+		[184] = icon_path.."Fish\\fish_hook.tga",
+		[185] = icon_path.."Fish\\fish_hook.tga",
+		[186] = icon_path.."Fish\\fish_hook.tga",
+		[187] = icon_path.."Fish\\fish_hook.tga",
 	},
 	["Mining"] = {
 		[201] = icon_path.."Mine\\copper.tga",
@@ -531,6 +561,12 @@ local node_textures = {
 		[250] = icon_path.."Mine\\trueiron.tga",
 		[251] = icon_path.."Mine\\blackrock.tga",
 		[252] = icon_path.."Mine\\blackrock.tga",
+		[253] = icon_path.."Mine\\leystone.tga",
+		[254] = icon_path.."Mine\\leystone.tga",
+		[255] = icon_path.."Mine\\leystone.tga",
+		[256] = icon_path.."Mine\\felslate.tga",
+		[257] = icon_path.."Mine\\felslate.tga",
+		[258] = icon_path.."Mine\\felslate.tga",
 	},
 	["Extract Gas"] = {
 		[301] = icon_path.."Gas\\windy_cloud.tga",
@@ -617,6 +653,12 @@ local node_textures = {
 		[473] = icon_path.."Herb\\fireweed.tga",
 		[474] = icon_path.."Herb\\frostweed.tga",
 		[475] = icon_path.."Herb\\shaherb.tga",
+		[476] = icon_path.."Herb\\aethril.tga",
+		[477] = icon_path.."Herb\\dreamleaf.tga",
+		[478] = icon_path.."Herb\\felwort.tga",
+		[479] = icon_path.."Herb\\fjarnskaggl.tga",
+		[480] = icon_path.."Herb\\foxflower.tga",
+		[481] = icon_path.."Herb\\starlightrose.tga",
 	},
 	["Treasure"] = {
 		[501] = icon_path.."Treasure\\clam.tga",
@@ -703,6 +745,7 @@ local WRATH   = 3
 local CATA    = 4
 local MOP     = 5
 local WOD     = 6
+local LEGION  = 7
 local node_expansion = {
 	["Mining"] = {
 		[201] = CLASSIC,
@@ -757,6 +800,12 @@ local node_expansion = {
 		[250] = WOD,
 		[251] = WOD,
 		[252] = WOD,
+		[253] = LEGION,
+		[254] = LEGION,
+		[255] = LEGION,
+		[256] = LEGION,
+		[257] = LEGION,
+		[258] = LEGION,
 	},
 	["Herb Gathering"] = {
 		[401] = CLASSIC,
@@ -834,6 +883,12 @@ local node_expansion = {
 		[473] = WOD,
 		[474] = WOD,
 		[475] = WOD,
+		[476] = LEGION,
+		[477] = LEGION,
+		[478] = LEGION,
+		[479] = LEGION,
+		[480] = LEGION,
+		[481] = LEGION,
 	},
 }
 GatherMate.nodeExpansion = node_expansion

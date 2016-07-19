@@ -78,32 +78,28 @@ function MistWeaver_FocusFrameOnMouseUp(frame, button)
 end
 
 function MistWeaver_FocusFrameFocusChanged()
+    local alpha = 1.0
+    
     if (MistWeaver_IsActive() and UnitExists("focus")) then
         MwFocusFrame:SetAlpha(1.0);
-        MwFocusUnitFrameHealth:SetAlpha(1.0);
-        MwFocusUnitFrameHealthPrediction:SetAlpha(1.0);
-        MwFocusUnitFrameAggro:SetAlpha(1.0);
-        MwFocusUnitFrameSoothingMist:SetAlpha(1.0);
-        MwFocusUnitFrameRenewingMist:SetAlpha(1.0);
-        MwFocusUnitFrameEnvelopingMist:SetAlpha(1.0);
-        MwFocusUnitFrame.art:SetAlpha(1.0);
-
-        if (MwFocusUnitFrameRaidClassIcon) then
-            MwFocusUnitFrameRaidClassIcon:SetAlpha(1.0);
-        end
+        
+        alpha = 1.0;
     else
         MwFocusFrame:SetAlpha(0.7);
-        MwFocusUnitFrameHealth:SetAlpha(0.0);
-        MwFocusUnitFrameHealthPrediction:SetAlpha(0.0);
-        MwFocusUnitFrameAggro:SetAlpha(0.0);
-        MwFocusUnitFrameSoothingMist:SetAlpha(0.0);
-        MwFocusUnitFrameRenewingMist:SetAlpha(0.0);
-        MwFocusUnitFrameEnvelopingMist:SetAlpha(0.0);
-        MwFocusUnitFrame.art:SetAlpha(0.0);
+        
+        alpha = 0.0;
+    end
+    
+    MwFocusUnitFrameHealth:SetAlpha(alpha);
+    MwFocusUnitFrameHealthPrediction:SetAlpha(alpha);
+    MwFocusUnitFrameAggro:SetAlpha(alpha);
+    MwFocusUnitFrameEssenceFont:SetAlpha(alpha);
+    MwFocusUnitFrameRenewingMist:SetAlpha(alpha);
+    MwFocusUnitFrameEnvelopingMist:SetAlpha(alpha);
+    MwFocusUnitFrame.art:SetAlpha(alpha);
 
-        if (MwFocusUnitFrameRaidClassIcon) then
-            MwFocusUnitFrameRaidClassIcon:SetAlpha(0.0);
-        end
+    if (MwFocusUnitFrameRaidClassIcon) then
+        MwFocusUnitFrameRaidClassIcon:SetAlpha(alpha);
     end
 
     MwFocusUnitFrameRaidDetoxFrame:SetAlpha(0.0);
@@ -113,19 +109,4 @@ function MistWeaver_DoFocusUpdate()
     if (UnitExists("focus") and MwFocusFrame:IsVisible()) then
         MistWeaver_UpdateUnit(MwFocusUnitFrame, "focus");
     end
-end
-
-function MistWeaver_ReloadFocusStatusBarTexture()
-    if (not MwFocusUnitFrameHealth) then
-        MistWeaver_StartDelay(3, MistWeaver_ReloadFocusStatusBarTexture);
-        return;
-    end
-
-    local texture = MistWeaver_GetStatusBarTexture();
-
-    MwFocusUnitFrameHealth:SetStatusBarTexture(texture);
-    MwFocusUnitFrameHealthPrediction:SetStatusBarTexture(texture);
-    MwFocusUnitFrameRenewingMist:SetStatusBarTexture(texture);
-    MwFocusUnitFrameSoothingMist:SetStatusBarTexture(texture);
-    MwFocusUnitFrameEnvelopingMist:SetStatusBarTexture(texture);
 end

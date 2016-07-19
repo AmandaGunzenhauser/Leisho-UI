@@ -80,7 +80,7 @@ function TSM:UpdateDesign()
 	for _, args in pairs(oldTbl) do
 		private:SetFrameColor(unpack(args))
 	end
-	
+
 	oldTbl = private.coloredTexts
 	private.coloredTexts = {}
 	for _, args in pairs(oldTbl) do
@@ -111,7 +111,11 @@ function private:SetFrameColor(obj, colorKey)
 		obj:SetBackdropColor(private:ExpandColor(color.backdrop))
 		obj:SetBackdropBorderColor(private:ExpandColor(color.border))
 	else
-		obj:SetTexture(private:ExpandColor(color.backdrop))
+		if select(4, GetBuildInfo()) >= 70000 then
+			obj:SetColorTexture(private:ExpandColor(color.backdrop))
+		else
+			obj:SetTexture(private:ExpandColor(color.backdrop))
+		end
 	end
 end
 
@@ -120,7 +124,11 @@ function private:SetTextColor(obj, colorKey, isDisabled)
 	if not obj then return private:ExpandColor(color.enabled) end
 	private.coloredTexts[obj] = {obj, colorKey, isDisabled}
 	if obj:IsObjectType("Texture") then
-		obj:SetTexture(private:ExpandColor(color.enabled))
+		if select(4, GetBuildInfo()) >= 70000 then
+			obj:SetColorTexture(private:ExpandColor(color.enabled))
+		else
+			obj:SetTexture(private:ExpandColor(color.enabled))
+		end
 	else
 		if isDisabled then
 			obj:SetTextColor(private:ExpandColor(color.disabled))

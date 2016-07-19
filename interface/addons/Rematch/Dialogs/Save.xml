@@ -16,7 +16,8 @@
 				</Anchors>
 				<Layers>
 					<Layer level="ARTWORK">
-						<FontString parentKey="Label" inherits="GameFontNormal" text="Name:">
+						<!-- "Name:" -->
+						<FontString parentKey="Label" inherits="GameFontNormal">
 							<Anchors>
 								<Anchor point="RIGHT" relativePoint="LEFT" x="-2" y="0"/>
 							</Anchors>
@@ -44,7 +45,8 @@
 				</Anchors>
 				<Layers>
 					<Layer level="ARTWORK">
-						<FontString parentKey="Label" inherits="GameFontNormal" text="Target:">
+						<!-- "Target:" -->
+						<FontString parentKey="Label" inherits="GameFontNormal">
 							<Anchors>
 								<Anchor point="RIGHT" relativePoint="LEFT" x="-2" y="0"/>
 							</Anchors>

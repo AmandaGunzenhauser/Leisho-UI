@@ -112,7 +112,7 @@ function MistWeaver_ShowArrow(unitframe)
 end
 
 function MistWeaver_HideArrow(unitframe)
-    if (UnitIsUnit("player", unitframe.unit)) then
+    if (not unitframe.unit or UnitIsUnit("player", unitframe.unit)) then
         return;
     end
     

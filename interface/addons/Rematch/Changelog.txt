@@ -1,3 +1,7 @@
+07/19/2016 version 4.4.8
+- Legion clients: Added remaining world quest targets to the target menus.
+- Added Simplified Chinese (zhCN) localization by Yonshuo from curse.com.
+
 07/03/2016 version 4.4.7
 - Pet search results are now sorted by relevance: pets with the search term in their name are listed first, followed by terms in notes, then abilities and then source text last.
 - Added option "Don't Sort By Relevance" under Pet Filter Options in the Options tab to disable the above.

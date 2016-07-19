@@ -78,32 +78,28 @@ function MistWeaver_TargetFrameOnMouseUp(frame, button)
 end
 
 function MistWeaver_TargetFrameTargetChanged()
+    local alpha = 1.0
+    
     if (MistWeaver_IsActive() and UnitExists("target")) then
         MwTargetFrame:SetAlpha(1.0);
-        MwTargetUnitFrameHealth:SetAlpha(1.0);
-        MwTargetUnitFrameHealthPrediction:SetAlpha(1.0);
-        MwTargetUnitFrameAggro:SetAlpha(1.0);
-        MwTargetUnitFrameSoothingMist:SetAlpha(1.0);
-        MwTargetUnitFrameRenewingMist:SetAlpha(1.0);
-        MwTargetUnitFrameEnvelopingMist:SetAlpha(1.0);
-        MwTargetUnitFrame.art:SetAlpha(1.0);
-
-        if (MwTargetUnitFrameRaidClassIcon) then
-            MwTargetUnitFrameRaidClassIcon:SetAlpha(1.0);
-        end
+        
+        alpha = 1.0;
     else
         MwTargetFrame:SetAlpha(0.7);
-        MwTargetUnitFrameHealth:SetAlpha(0.0);
-        MwTargetUnitFrameHealthPrediction:SetAlpha(0.0);
-        MwTargetUnitFrameAggro:SetAlpha(0.0);
-        MwTargetUnitFrameSoothingMist:SetAlpha(0.0);
-        MwTargetUnitFrameRenewingMist:SetAlpha(0.0);
-        MwTargetUnitFrameEnvelopingMist:SetAlpha(0.0);
-        MwTargetUnitFrame.art:SetAlpha(0.0);
+        
+        alpha = 0.0;
+    end
+        
+    MwTargetUnitFrameHealth:SetAlpha(alpha);
+    MwTargetUnitFrameHealthPrediction:SetAlpha(alpha);
+    MwTargetUnitFrameAggro:SetAlpha(alpha);
+    MwTargetUnitFrameEssenceFont:SetAlpha(alpha);
+    MwTargetUnitFrameRenewingMist:SetAlpha(alpha);
+    MwTargetUnitFrameEnvelopingMist:SetAlpha(alpha);
+    MwTargetUnitFrame.art:SetAlpha(alpha);
 
-        if (MwTargetUnitFrameRaidClassIcon) then
-            MwTargetUnitFrameRaidClassIcon:SetAlpha(0.0);
-        end
+    if (MwTargetUnitFrameRaidClassIcon) then
+        MwTargetUnitFrameRaidClassIcon:SetAlpha(0.0);
     end
 
     MwTargetUnitFrameRaidDetoxFrame:SetAlpha(0.0);
@@ -113,19 +109,4 @@ function MistWeaver_DoTargetUpdate()
     if (UnitExists("target") and MwTargetFrame:IsVisible()) then
         MistWeaver_UpdateUnit(MwTargetUnitFrame, "target");
     end
-end
-
-function MistWeaver_ReloadTargetStatusBarTexture()
-    if (not MwTargetUnitFrameHealth) then
-        MistWeaver_StartDelay(3, MistWeaver_ReloadTargetStatusBarTexture);
-        return;
-    end
-
-    local texture = MistWeaver_GetStatusBarTexture();
-
-    MwTargetUnitFrameHealth:SetStatusBarTexture(texture);
-    MwTargetUnitFrameHealthPrediction:SetStatusBarTexture(texture);
-    MwTargetUnitFrameRenewingMist:SetStatusBarTexture(texture);
-    MwTargetUnitFrameSoothingMist:SetStatusBarTexture(texture);
-    MwTargetUnitFrameEnvelopingMist:SetStatusBarTexture(texture);
 end

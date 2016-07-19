@@ -1,0 +1,329 @@
+tag 2.2.0.0
+61e6ae5b598d0644dc250e06513c6e7622aabe0d
+Benjamin Staneck <staneck@gmail.com>
+2016-07-19 17:02:40 +0200
+
+
+
+--------------------
+
+Benjamin Staneck:
+	- silence a global
+Infus:
+	- Make gigantic dynamic groups editable in the options
+	Add a PauseAllDynamicGroups() and ResumeAllDynamicGroups() which
+	temporarily delays all ControlChildren calls.
+	
+	The dynamic groups are paused before mass editing, such as importing,
+	clicking the view icon, deleting the group. This makes it significantly
+	faster to edit those auars.
+	
+	Ticket-Nr: 581
+Benjamin Staneck:
+	- OCD formatting
+	- fix a typo
+Infus:
+	- Fix Equiment Set Trigger toggle -> "toggle"
+	- Fix Action useable interaction with gcd change
+	A duration of 0 means that the spell is not on cooldown. All other places
+	already check for duration > 0.
+	
+	Ticket-Nr: 580
+	- Linked a "deleted" WeakAura shows a error
+	Steps to reproduce:
+	1. Link a aura
+	2. Delete it
+	3. Click on link
+	
+	Apply fix suggested by MaXiMiUS.
+	- Fix icons for spells that only other specs have
+	A recent change made Cooldown Progress use the spellName instead of
+	the spellId to fetch information. This works better because, for
+	some classes the "same" spell has different spellIds depending on
+	spec.
+	
+	But if a spec doesn't have that spell, using the spellName returns
+	no information. So fall back to the spell id in that case.
+	- Fix another animation problem with states
+	Ticket-Nr: 572
+Benjamin Staneck:
+	- Add Templates to the locale miner and run it
+Infus:
+	- Add Shaman Totem triggers, change Rune of Power to use Totem trigger
+	- Adjust to Survival Hunter talent reshuffling
+	- Adjust to review comments part 1
+	- Add Templates to WeakAuras
+	This adds a new button "From Template" to the New display, which can be
+	used to create auras from a list of display templates and trigger
+	templates.
+	- Use a check against the actual gcd instead of > 1.51
+	Also don't check for startTime as that might contain a value even
+	if the spell isn't really on cd. Instead check for duration.
+	- Fix aura_env.state being empty on first run of custom code
+	Also set it if we are creating the aura_env.
+	
+	Ticket-Nr: 577
+	- Fix Ascendance + Lava Burst Cooldown trigger
+	If Lava Burst is on cooldown and Ascendance is triggered, which
+	resets the cooldown of LavaBurst the following information is returned
+	by GetSpellCharges:
+	StartTime: the old expiration time
+	Charges: 0, MaxCharges: 2
+	Duration: 0
+	
+	So apparently a duration 0 spell has to be treated as if it's not
+	on cooldown.
+	
+	Override charges to return 1 in that case. As the Spell Cooldown
+	trigger has a condition on Charges and I think it's saner if
+	checking for charges >= 1 shows the aura even if charges is
+	apparently 0 in that case.
+	
+	Ticket-Nr: 571
+	- Fix Error with state for custom animation
+	Again, while the options are open region's don't have a valid state.
+	
+	Ticket-Nr: 572
+	- Be consistent what a nil sound_channel means
+	Ticket-Nr: 567
+	- Fix GenericTrigger.GetNameAndIcon for custom triggers
+	Make it check that the type is "event" or "status" similar to
+	every other function.
+	- Fix GenericTrigger.GetNameAndIcon for custom triggers
+	Make it check that the type is "event" or "status" similar to
+	every other function.
+	- Rewrite Totem trigger for Legion
+	Previously each totem slot could have a totem of a specific type.
+	Now totems have no types anymore and simply take the lowest free slot.
+	And e.g. Elemental Shamans can put multiple earthquake totems at
+	the same time.
+	
+	The new totem trigger now can:
+	- Display the totem in a specific slot
+	- Or check all slots for a specifc totem name
+	  - And display all matching totems
+	- Or display all totems
+	
+	There's a hardcoded limit of 5 totems in the Blizzard api and no
+	way to even get that constant. So put a limit of 5 into the code.
+	- Fix combat log trigger not showing the right duration
+	The state for generic triggers is updated in two steps. 1) By the trigger
+	function and 2) by ActivateEvent which adds all the other dynamic
+	information. If a trigger function is a "all" trigger function,
+	that is it supports cloning it needs to indicate on which states
+	ActivateEvent must be called on. Do that by setting changed to true
+	in those cases.
+	
+	Ticket-Nr: 564
+Benjamin Staneck:
+	- prettify the tooltip, sort it the same way as the EJ does and display instance name headers
+	Thanks for the help with the EJ API, neb <3
+	- remove the need to translate boss names
+Infus:
+	- Aurabar: Switch progress of no duration triggers
+	Makes the aurabar more useful for triggers with "Always Show".
+	
+	Ticket-Nr: 523
+	- Make Cooldown Progress work better with spells that have multiple spellIds
+	For example Ascendance has 3 different spell ids depending on the spec:
+	114050 Elemental
+	114051 Enhancement
+	114052 Restoration
+	
+	Using any of those ids will now correctly show the progress information
+	from any of them.
+	
+	Ticket-Nr: 148
+Benjamin Staneck:
+	- remove old comments
+	- fix a leaked global and remove some old comments
+Infus:
+	- Fix Modernize for Combo Points
+	- Fix icon cooldowns having the wrong frame level
+	If multiple icons are in a group, their frame level are adjusted so
+	that they each get a unique frame level.
+	
+	For icons we need to also adjust the frame levels of the cooldown
+	and stacks frame.
+	
+	See https://youtu.be/51l5gqQIi7k for what it looks like before and
+	after.
+	
+	This seems to be new in Legion.
+	- Fix rotation of texts on aurabar and circular progress
+	Animations with 0 duration no longer work, and something is
+	very strange with Scrollframes. Moving them around seems to not
+	properly clip.
+	- Make the linter happier at least in a few files
+	- Fix Custom actions ending in a -- comment not working
+	Since that comments out a "end". Fix that by adding a newline.
+	- Add a stacks function to DK rune triggers
+	All the other power triggers have a stack function. For DKs make
+	it return the avaible runes.
+	- Fix nil error in pendingTracks
+	I can't recall what exactly I did, but it must have been something like.
+	a) Use a multi buff trigger to add a guid to the pending tracks,
+	   that is don't target it.
+	b) Delete it
+	c) Target the unit, which calls uidTrack, calling updateSpell
+	- Fix name display of Multi buff trigger
+	- Fix specific unit text field not appearing
+	The bug shows up on changing a aura trigger to "specific unit" and then
+	changing and then switching to Status/Health. The unit combobox shows
+	specific unit, but the specific unit text field is missing.
+	
+	The cause for that is, that the specific unit text field for the
+	Status/Health trigger is created in WeakAurasOptions.lua around line 900
+	and checks for trigger.use_specific_unit. The set function of the
+	Status/Health/Unit combobox sets trigger.use_specific_unit.
+	
+	The specific unit combo box for the Aura trigger is created around line
+	4570, and this one just sets trigger.unit but does not set
+	trigger.use_specific_unit.
+	
+	Fix that by making the aura trigger also set trigger.use_specific_unit.
+	
+	Ticket-Nr: 559
+	- Fix DK rune count trigger
+	Ticket-Nr: 560
+	- Fix typo in GenericTrigger.lua
+	- BuffTrigger: SpellId triggers should match all auras with the same name
+	That is for non fullscan auras and given a spellId, the buff trigger
+	should only match the name of the spellId.
+	
+	This makes some use cases easier, e.g. a cross-language trigger for
+	a boss ability that has multiple different spell ids.
+	
+	On the other hand matching on the spellId in addition adds no benefit.
+	
+	Ticket-Nr: 554
+	- Fix text position if the text is empty on loading
+	Ticket-Nr: 556
+	- Remove various power type triggers in favour of the Power trigger
+	Also add Stagger to the Power trigger
+	- Multi Buff trigger: Use NAME_PLATE_UNIT_ADDED/REMOVED
+	Track the guids of nameplates, making the multi trigger being able
+	to determine progress information for units with nameplates.
+	
+	Also add handling for focus.
+Benjamin Staneck:
+	- used GUID for source in the combat log triggers, too
+Infus:
+	- Make spec selector return the class specs even if on a diffrent class
+	Also fix that the load condions behaved strangely on multi selection
+	- Fix mismerge
+	- Fix SPELL_AURA_APPLIED_DOSE resetting the icon and progress information.
+	This readds code, that I accidentaly removed in the trigger state
+	commit.
+	- Combat Log Trigger: Add sourceGUID to aura_env.state
+	Probably useful for someone and trivial to do. destGUID is alredy there
+	- Fix combat log trigger condition for sourceUnit
+	Need to rename source to sourceName also in the sourceUnit's test.
+	- Fix typo preventing group auras from hiding
+	- Fix bug with trigger states
+	- Also change the tooltips from #word# to %word
+Benjamin Staneck:
+	- add alternate mana as a trigger for classes that use it (druid, shaman, priest)
+Infus:
+	- In modernize for combat log trigger, check that trigger is not nil
+	- Change #word# to %word
+	Rename a few combat log variables.
+Benjamin Staneck:
+	- forgot a slash
+	- forgot a slash
+Infus:
+	- Add a new custom trigger function that directly modifies trigger states
+	This allows for custom triggers to create clones. Documentation is
+	at http://www.wowace.com/addons/weakauras-2/pages/custom-triggers/
+	- BigWigs: Add clone support to both messages and timers
+	Also BigWigs messages now have a proper icon and store the message
+	- DBM: Add cloning support to both timer and announce
+	Also add the right icon for the announce trigger and make %n return
+	the message.
+	- Add clone support to the chat message trigger
+	- GenericTrigger: Improve combat log trigger
+	By adding additional text replacements for pretty much every parameter.
+	Also add clone support to it.
+	
+	Also add "level" and "class" text replacements to the unit characteristics
+	trigger.
+	- Add additional text replacements for BuffTriggers
+	Add #spellId# and #unitCaster# that show the caster.
+	- Add Trigger States to store information
+	Those store all information of the triggers, e.g. duration, icons.
+	This allows for e.g. showing the information of the second trigger if the
+	first trigger is not active.
+	
+	This is the basis of more to come.
+	
+	Also first evaluate all triggers before applying change, fixing:
+	Ticket-Nr: 501
+Benjamin Staneck:
+	- Use our new logo in game, too.
+	- Use our new logo in game, too.
+Infus:
+	- Add Timewalking dungeon difficulty
+	- Correct load condition for Undead
+Benjamin Staneck:
+	- Happiness => Combo Points
+maximumpanda:
+	- Add Insantity to Power_Types.
+Infus:
+	- Make pasting huge import strings lightning fast
+	Use code provided by Semlar to make pasting a lot faster.
+	The edit box no longer shows the full contents of the pasted text,
+	but that's not a huge loss.
+	- Fix editing multiple auras with multiple triggers
+	Testcase that shows the problems:
+	Import http://pastebin.com/rS4S5ePq, that is a group with two auras.
+	Both auras contain 3 identical triggers.
+	
+	Bug 1:
+	Select the group, switch to the trigger tab. Notice that only
+	two triggers are listed in the choose trigger combo box.
+	
+	Bug 2:
+	Choose both auras (not the group), switch to the trigger tab,
+	in the choose trigger combo select the second or third trigger
+	- Tweak spell scanning so that it finds more spells
+	Reported by nevcairiel on irc
+	- Fix another two image functions
+	- Ups didn't rename callers
+Benjamin Staneck:
+	- Local a Blizz API
+Infus:
+	- AceConfig image functions should return a string
+	So make them return a string instead of a fileId
+	- Rework icon cache for Legion
+	The icon "paths" are now fileIds in legion. Also while working in that
+	area, make the iconCache key the name and spellId, thus fixing that
+	duplicated spell name would overwrite the icon for each other.
+	
+	Ticket-Nr: 526
+	Ticket-Nr: 228
+	- Replace SetTexture(r, g, b, a) with SetColorTexture
+	- Update ModelPaths list for current 7.0 state
+	List provided on reddit by Bladeleaf
+	- Update talents load conditions for Legion
+	Add PvP Talents
+	And make talent_cache spec specific, there's little overlap between specs
+	nowadays.
+	
+	Also fallback to the current class/spec if no class/spec load condition
+	is set. Feels a bit nicer.
+	- Fix Rune trigger for Legion
+Benjamin Staneck:
+	- add translation scraper by nebula
+	- move from UNIT_POWER to UNIT_POWER_FREQUENT to track ressources
+	- remove the timer region type; it has been replaced by texts ages ago.
+	- remove the fontSize > 35 hack, the new font engine in 7.0 can render text at any size perfectly fine
+	- remove UNIT_COMBO_POINTS, it is gone
+	- bump the TOC to 70000
+	- add Fury and Pain power types
+	- add Arcane Charges power type
+	- add Maelstrom power type
+	- add Astral Power; no idea why the global is called Lunar Power, but it is.
+	- remove demonic fury and burning embers
+	- Shadow Orbs => Insanity
+	- remove eclipse support
+	- remove glyph support

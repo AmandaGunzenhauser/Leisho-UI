@@ -11,7 +11,13 @@
 local TSM = select(2, ...)
 TSM.STATIC_DATA = {}
 local L = LibStub("AceLocale-3.0"):GetLocale("TradeSkillMaster")
-local WEAPON, ARMOR = GetAuctionItemClasses()
+local WEAPON, ARMOR = nil, nil
+if select(4, GetBuildInfo()) >= 70000 then
+	WEAPON = GetItemClassInfo(LE_ITEM_CLASS_WEAPON)
+	ARMOR = GetItemClassInfo(LE_ITEM_CLASS_ARMOR)
+else
+	WEAPON, ARMOR = GetAuctionItemClasses()
+end
 
 
 

@@ -1,0 +1,4 @@
+Copyright (c) 2015-2016 Tim @ WoWInterface <addons@ciraxe.com>. All Rights Reserved
+
+You are free to use all the textures in any project you wish as long as you 
+supply credit where credit is due.

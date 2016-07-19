@@ -2327,8 +2327,8 @@ RoutesDB = {
 						}, -- [145]
 					},
 					["selection"] = {
-						["Ghost Iron Deposit"] = "Ghost Iron Deposit",
 						["Rich Trillium Vein"] = "Rich Trillium Vein",
+						["Ghost Iron Deposit"] = "Ghost Iron Deposit",
 						["Rich Ghost Iron Deposit"] = "Rich Ghost Iron Deposit",
 						["Trillium Vein"] = "Trillium Vein",
 					},

@@ -8,6 +8,7 @@ rematch:InitModule(function()
 	saved = RematchSaved
 
 	card.Title:SetText(L["Win Record"])
+	card.Content.AltFlipHelp:SetText(L["Hold [Alt] to view totals for all teams."])
 
 	for k,v in pairs({{L["Wins:"],0,1,0},{L["Losses:"],1,0.1,0.1},{L["Draws:"],1,0.82,0}}) do
 		local stat = card.Content.Stats[k]

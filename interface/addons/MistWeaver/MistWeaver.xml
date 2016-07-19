@@ -307,7 +307,7 @@
 		<Frames>
             <Frame name="MwPowerFrame">
                 <Size>
-                    <AbsDimension x="125" y="56"/>
+                    <AbsDimension x="125" y="45"/>
                 </Size>
                 <Anchors>
                     <Anchor point="BOTTOMLEFT" relativeTo="MistWeaverFrame" relativePoint="TOPLEFT"/>

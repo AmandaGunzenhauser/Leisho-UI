@@ -1,5 +1,8 @@
 
 MogItDB = {
+	["global"] = {
+		["version"] = "3.5.11",
+	},
 	["profileKeys"] = {
 		["Leisho - Thrall"] = "Default",
 		["Raijah - Thrall"] = "Default",
@@ -7,12 +10,9 @@ MogItDB = {
 		["Thilaira - Thrall"] = "Default",
 		["Ahka - Thrall"] = "Default",
 		["Nalyria - Thrall"] = "Default",
-		["Kitha - Thrall"] = "Default",
 		["Liulu - Thrall"] = "Default",
+		["Kitha - Thrall"] = "Default",
 		["Alinastra - Thrall"] = "Default",
-	},
-	["global"] = {
-		["version"] = "3.5.11",
 	},
 	["profiles"] = {
 		["Default"] = {
@@ -20,15 +20,15 @@ MogItDB = {
 			["previewProps"] = {
 				{
 					["y"] = 70.555534362793,
-					["h"] = 815.000122070313,
-					["w"] = 618.333801269531,
 					["x"] = 335.554626464844,
+					["w"] = 618.333801269531,
+					["h"] = 815.000122070313,
 				}, -- [1]
 				{
 					["y"] = -116.666732788086,
-					["x"] = 171.388916015625,
-					["w"] = 677.777893066406,
 					["h"] = 618.333374023438,
+					["w"] = 677.777893066406,
+					["x"] = 171.388916015625,
 				}, -- [2]
 			},
 			["gridHeight"] = 870.555358886719,
@@ -45,9 +45,6 @@ MogItDB = {
 	},
 }
 MogItWishlist = {
-	["global"] = {
-		["version"] = 60200,
-	},
 	["profileKeys"] = {
 		["Leisho - Thrall"] = "Leisho - Thrall",
 		["Raijah - Thrall"] = "Raijah - Thrall",
@@ -55,9 +52,12 @@ MogItWishlist = {
 		["Thilaira - Thrall"] = "Thilaira - Thrall",
 		["Ahka - Thrall"] = "Ahka - Thrall",
 		["Nalyria - Thrall"] = "Nalyria - Thrall",
-		["Kitha - Thrall"] = "Kitha - Thrall",
 		["Liulu - Thrall"] = "Liulu - Thrall",
+		["Kitha - Thrall"] = "Kitha - Thrall",
 		["Alinastra - Thrall"] = "Alinastra - Thrall",
+	},
+	["global"] = {
+		["version"] = 70000,
 	},
 	["profiles"] = {
 		["Leisho - Thrall"] = {
@@ -65,12 +65,12 @@ MogItWishlist = {
 				{
 					["items"] = {
 						["ChestSlot"] = "item:128125:0",
-						["BackSlot"] = "item:119349:0",
-						["HandsSlot"] = "item:120384:0",
-						["ShoulderSlot"] = "item:102823:0",
 						["WaistSlot"] = "item:124275:0:0:0:0:0:0:0:0:0:0:0:1:566",
-						["MainHandSlot"] = "item:127335:0",
 						["LegsSlot"] = "item:127306:0",
+						["ShoulderSlot"] = "item:102823:0",
+						["HandsSlot"] = "item:120384:0",
+						["MainHandSlot"] = "item:127335:0",
+						["BackSlot"] = "item:119349:0",
 					},
 					["name"] = "Savage Red",
 					["alternateItems"] = {
@@ -92,11 +92,11 @@ MogItWishlist = {
 					["items"] = {
 						["ChestSlot"] = "item:102960:0",
 						["WristSlot"] = "item:59384:0",
-						["HandsSlot"] = "item:59426:0",
+						["FeetSlot"] = "item:59381:0",
 						["ShoulderSlot"] = "item:102974:0",
 						["LegsSlot"] = "item:67190:0",
 						["WaistSlot"] = "item:98613:0",
-						["FeetSlot"] = "item:59381:0",
+						["HandsSlot"] = "item:59426:0",
 					},
 					["name"] = "Red & Bronze\\",
 					["alternateItems"] = {
@@ -110,11 +110,11 @@ MogItWishlist = {
 						["MainHandSlot"] = "item:116372:0",
 						["ShirtSlot"] = "item:6096:0",
 						["FeetSlot"] = "item:128168:0",
-						["BackSlot"] = "item:123983:0:0:0:0:0:0:0:0:0:0:0:1:615",
-						["HeadSlot"] = "item:125273:0",
-						["WaistSlot"] = "item:106670:0",
-						["LegsSlot"] = "item:127306:0",
 						["HandsSlot"] = "item:120384:0",
+						["LegsSlot"] = "item:127306:0",
+						["WaistSlot"] = "item:106670:0",
+						["HeadSlot"] = "item:125273:0",
+						["BackSlot"] = "item:123983:0:0:0:0:0:0:0:0:0:0:0:1:615",
 					},
 					["name"] = "Grey & Gold",
 					["alternateItems"] = {
@@ -128,10 +128,10 @@ MogItWishlist = {
 						["MainHandSlot"] = "item:113934:0",
 						["SecondaryHandSlot"] = "item:77245:0",
 						["FeetSlot"] = "item:128168:0",
-						["WaistSlot"] = "item:112941:0",
+						["ShoulderSlot"] = "item:112942:0",
 						["LegsSlot"] = "item:127306:0",
 						["HandsSlot"] = "item:99388:0",
-						["ShoulderSlot"] = "item:112942:0",
+						["WaistSlot"] = "item:112941:0",
 					},
 					["name"] = "Mostly MoP Mythic",
 					["alternateItems"] = {
@@ -144,10 +144,10 @@ MogItWishlist = {
 						["HeadSlot"] = "item:99389:0",
 						["MainHandSlot"] = "item:112723:0",
 						["FeetSlot"] = "item:128168:0",
-						["WaistSlot"] = "item:103386:0",
+						["ShoulderSlot"] = "item:83993:0",
 						["LegsSlot"] = "item:127306:0",
 						["HandsSlot"] = "item:83213:0",
-						["ShoulderSlot"] = "item:83993:0",
+						["WaistSlot"] = "item:103386:0",
 					},
 					["name"] = "Niuzao",
 					["alternateItems"] = {
@@ -157,11 +157,11 @@ MogItWishlist = {
 					["items"] = {
 						["ChestSlot"] = "item:94779:0",
 						["SecondaryHandSlot"] = "item:81677:0",
-						["WaistSlot"] = "item:95971:0",
-						["ShoulderSlot"] = "item:95062:0",
-						["LegsSlot"] = "item:102853:0",
-						["MainHandSlot"] = "item:9718:0",
 						["HandsSlot"] = "item:113832:0:0:0:0:0:0:0:0:0:0:0:1:567",
+						["ShoulderSlot"] = "item:95062:0",
+						["WaistSlot"] = "item:95971:0",
+						["MainHandSlot"] = "item:9718:0",
+						["LegsSlot"] = "item:102853:0",
 					},
 					["name"] = "Light Green",
 					["alternateItems"] = {
@@ -175,10 +175,10 @@ MogItWishlist = {
 						["MainHandSlot"] = "item:45266:0",
 						["SecondaryHandSlot"] = "item:29274:0",
 						["FeetSlot"] = "item:128168:0",
-						["WaistSlot"] = "item:112941:0",
+						["ShoulderSlot"] = "item:112740:0",
 						["LegsSlot"] = "item:127306:0",
 						["HandsSlot"] = "item:112707:0",
-						["ShoulderSlot"] = "item:112740:0",
+						["WaistSlot"] = "item:112941:0",
 					},
 					["name"] = "Golden Lotus",
 					["alternateItems"] = {
@@ -187,13 +187,13 @@ MogItWishlist = {
 				{
 					["items"] = {
 						["ChestSlot"] = "item:116165:0",
-						["WristSlot"] = "item:124279:0",
-						["FeetSlot"] = "item:116182:0",
-						["HandsSlot"] = "item:27468:0",
-						["ShoulderSlot"] = "item:57503:0",
 						["LegsSlot"] = "item:124268:0",
-						["MainHandSlot"] = "item:25147:0",
+						["FeetSlot"] = "item:116182:0",
 						["WaistSlot"] = "item:98830:0",
+						["ShoulderSlot"] = "item:57503:0",
+						["HandsSlot"] = "item:27468:0",
+						["MainHandSlot"] = "item:25147:0",
+						["WristSlot"] = "item:124279:0",
 					},
 					["name"] = "Green & Yellow",
 					["alternateItems"] = {
@@ -211,9 +211,9 @@ MogItWishlist = {
 		},
 		["Nalyria - Thrall"] = {
 		},
-		["Kitha - Thrall"] = {
-		},
 		["Liulu - Thrall"] = {
+		},
+		["Kitha - Thrall"] = {
 		},
 		["Alinastra - Thrall"] = {
 		},

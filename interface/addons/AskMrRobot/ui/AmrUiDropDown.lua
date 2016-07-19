@@ -137,7 +137,7 @@ local methods = {
 		
 		-- not perfect, but more or less achieves the effect of lightening the bg color slightly on hover
 		local texHigh = item:CreateTexture(nil, "BORDER")
-		texHigh:SetTexture(1, 1, 1, 0.1)
+		texHigh:SetColorTexture(1, 1, 1, 0.1)
 		texHigh:SetAllPoints(true)
 		item:SetHighlightTexture(texHigh)
 		

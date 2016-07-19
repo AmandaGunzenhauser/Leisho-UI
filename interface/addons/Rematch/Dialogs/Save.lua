@@ -15,6 +15,8 @@ rematch:InitModule(function()
 	})
 	dialog.SaveAs.Target.tooltipTitle=L["Target For This Team"]
 	dialog.SaveAs.Target.tooltipBody=L["A target stored in a team is used to decide which team to load when you return to that target.\n\nYou can save an unlimited number of teams to fight a target, but a target can only be saved in one team."]
+	dialog.SaveAs.Name.Label:SetText(L["Name:"])
+	dialog.SaveAs.Target.Label:SetText(L["Target:"])
 end)
 
 function rematch:ShowSaveAsDialog(header)

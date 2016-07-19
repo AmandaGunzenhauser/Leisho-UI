@@ -359,7 +359,6 @@ function private.generateMovesThread(self)
 		end
 		self:Yield()
 	end
-
 	if next(bagMoves) ~= nil then
 		-- generate moves from bags to bank
 		private.setSrcBagFunctions("bags")
@@ -368,7 +367,7 @@ function private.generateMovesThread(self)
 			for i, bag in ipairs(private.getContainerTableThread(self, "bags")) do
 				for slot = 1, private.getContainerNumSlotsSrc(bag) do
 					local itemLink = private.getContainerItemLinkSrc(bag, slot)
-					local itemString = TSMAPI.Item:ToBaseItemString(itemLink, true)
+					local itemString = TSMAPI.Item:ToBaseItemString(itemLink)
 					if itemString and itemString == item then
 						if (private.bankType == "GuildVault" and not TSMAPI.Item:IsSoulbound(bag, slot)) or private.includeSoulbound or not TSMAPI.Item:IsSoulbound(bag, slot) then
 							local have = private.getContainerItemQty(bag, slot)
@@ -411,7 +410,7 @@ function private.generateMovesThread(self)
 			for i, bag in ipairs(private.getContainerTableThread(self, private.bankType)) do
 				for slot = 1, private.getContainerNumSlotsSrc(bag) do
 					local itemLink = private.getContainerItemLinkSrc(bag, slot)
-					local itemString = TSMAPI.Item:ToBaseItemString(itemLink, true)
+					local itemString = TSMAPI.Item:ToBaseItemString(itemLink)
 					if private.bankType == "GuildVault" and itemString == "i:82800" then
 						local speciesID = GameTooltip:SetGuildBankItem(bag, slot)
 						itemString = speciesID and ("p:" .. speciesID)
@@ -491,7 +490,6 @@ end
 
 function private.moveItemThread(self, move)
 	local src, bag, slot, need, split = unpack(move)
-
 	-- Setup Source / Destination functions
 	local source, destination
 	if src == "bags" then
@@ -622,7 +620,6 @@ function private.startMovingThread(self, args)
 	self:SetThreadName("MOVER_MAIN")
 	local requestedItems, includeSoulbound = unpack(args)
 	wipe(private.bagState)
-
 	if includeSoulbound then
 		private.includeSoulbound = true
 	else

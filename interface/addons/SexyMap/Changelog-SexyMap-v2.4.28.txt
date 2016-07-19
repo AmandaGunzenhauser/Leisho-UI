@@ -1,0 +1,12 @@
+tag v2.4.28
+ab8f8fa200361d2d4d1a24a4e9b071a679e4be82
+funkydude <funkydude@users.noreply.github.com>
+2016-07-19 18:49:30 +0100
+
+Tagging as v2.4.28
+
+
+--------------------
+
+funkydude:
+	- Temporarily disable HudMap until I can figure out why Blizzard doesn't want us creating multiple minimaps anymore.

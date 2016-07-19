@@ -23,7 +23,7 @@ function TSMAPI.Auction:GenerateQueries(itemList, callback)
 	if private.threadId and private.callback then
 		private.callback("INTERRUPTED")
 	end
-	
+
 	-- start the new thread
 	private.callback = callback
 	private.threadId = TSMAPI.Threading:Start(private.GenerateQueriesThread, 0.5, private.ThreadDone, itemList)
@@ -33,7 +33,7 @@ function TSMAPI.Auction:GetItemQueryInfo(itemString)
 	local name, quality, level, classStr, subClassStr = TSMAPI.Util:Select({1, 3, 5, 6, 7}, TSMAPI.Item:GetInfo(itemString))
 	if not name then return end
 	local class, subClass = private:LookupClassSubClass(classStr, subClassStr)
-	return {name=name, minLevel=level, maxLevel=level, invType=0, class=class, subClass=subClass, quality=quality}
+	return {name=name, minLevel=level, maxLevel=level, invType=nil, class=class, subClass=subClass, quality=quality}
 end
 
 
@@ -41,15 +41,6 @@ end
 -- ============================================================================
 -- Helper Tables
 -- ============================================================================
-
-local ITEM_CLASS_LOOKUP = {}
-for i, class in ipairs({GetAuctionItemClasses()}) do
-	ITEM_CLASS_LOOKUP[class] = {}
-	ITEM_CLASS_LOOKUP[class].index = i
-	for j, subClass in pairs({GetAuctionItemSubClasses(i)}) do
-		ITEM_CLASS_LOOKUP[class][subClass] = j
-	end
-end
 
 local AuctionCountDatabase = setmetatable({}, {
 	__call = function(self)
@@ -63,11 +54,11 @@ local AuctionCountDatabase = setmetatable({}, {
 		end
 		return new
 	end,
-	
+
 	__index = {
 		objType = "AuctionCountDatabase",
 		INDEX_LOOKUP = {itemString=1, numAuctions=2, name=3, quality=4, level=5, class=6, subClass=7},
-		
+
 		PopulateData = function(self, threadObj)
 			if self.isComplete or not self.lastScanData then return end
 			if self.lastPopulateAttempt == time() then return end
@@ -79,9 +70,9 @@ local AuctionCountDatabase = setmetatable({}, {
 					TSMAPI:Assert(data.numAuctions)
 					local name, _, quality, _, level, class, subClass = TSMAPI.Item:GetInfo(itemString)
 					if name then
-						local classIndex = ITEM_CLASS_LOOKUP[class] and ITEM_CLASS_LOOKUP[class].index or 0
-						local subClassIndex = ITEM_CLASS_LOOKUP[class] and ITEM_CLASS_LOOKUP[class][subClass] or 0
-						tinsert(self.data, {itemString, data.numAuctions, strlower(name), quality, level, classIndex, subClassIndex})
+						local classId = TSMAPI.Item:GetClassIdFromClassString(class)
+						local subClassId = TSMAPI.Item:GetSubClassIdFromSubClassString(subClass, classId)
+						tinsert(self.data, {itemString, data.numAuctions, strlower(name), quality, level, classId, subClassId})
 					else
 						self.isComplete = nil
 					end
@@ -92,7 +83,7 @@ local AuctionCountDatabase = setmetatable({}, {
 			local function SortHelper(a, b)
 				for _, key in ipairs(sortKeys) do
 					if a[self.INDEX_LOOKUP[key]] ~= b[self.INDEX_LOOKUP[key]] then
-						return a[self.INDEX_LOOKUP[key]] < b[self.INDEX_LOOKUP[key]]
+						return (a[self.INDEX_LOOKUP[key]] or -1) < (b[self.INDEX_LOOKUP[key]] or -1)
 					end
 				end
 				return tostring(a) < tostring(b)
@@ -100,7 +91,7 @@ local AuctionCountDatabase = setmetatable({}, {
 			threadObj:Yield()
 			sort(self.data, SortHelper)
 		end,
-		
+
 		GetNumAuctions = function(self, query)
 			TSMAPI:Assert(query.class)
 			query.minLevel = query.minLevel or 0
@@ -118,13 +109,13 @@ local AuctionCountDatabase = setmetatable({}, {
 					if not query.subClass or row[self.INDEX_LOOKUP.subClass] == query.subClass then
 						return 0
 					else
-						return row[self.INDEX_LOOKUP.subClass] - query.subClass
+						return (row[self.INDEX_LOOKUP.subClass] or -1) - query.subClass
 					end
 				else
-					return row[self.INDEX_LOOKUP.class] - query.class
+					return (row[self.INDEX_LOOKUP.class] or -1) - query.class
 				end
 			end
-			
+
 			-- binary search for starting index
 			local low, mid, high = 1, 0, #self.data
 			while low <= high do
@@ -147,7 +138,7 @@ local AuctionCountDatabase = setmetatable({}, {
 					high = mid - 1
 				end
 			end
-			
+
 			for i=startIndex, #self.data do
 				local row = self.data[i]
 				if CompareFunc(row) ~= 0 then
@@ -159,7 +150,7 @@ local AuctionCountDatabase = setmetatable({}, {
 			end
 			return count
 		end,
-		
+
 		GetNumAuctionsByItem = function(self, itemList)
 			local counts = {}
 			for _, itemString in ipairs(itemList) do
@@ -187,11 +178,11 @@ function private.GenerateQueriesThread(self, itemList)
 	private.db = private.db or AuctionCountDatabase()
 	private.db:PopulateData(self)
 	local queries = {}
-	
+
 	-- get all the item info into the game's cache
 	self:Yield()
 	local hasItemInfo = self:WaitForItemInfo(itemList, 30)
-	
+
 	-- convert to new itemStrings
 	local itemStrings = {}
 	for i=1, #itemList do
@@ -200,11 +191,11 @@ function private.GenerateQueriesThread(self, itemList)
 			tinsert(itemStrings, itemString)
 		end
 	end
-	
+
 	if #itemStrings < #itemList then
 		TSM:LOG_ERR("Only got item info for %d out of %d items", #itemStrings, #itemList)
 	end
-	
+
 	-- if the DB is not fully populated, or we don't have all the item info, just do individual scans
 	if not private.db.isComplete then
 		TSM:LOG_ERR("Auction count database not complete")
@@ -217,11 +208,11 @@ function private.GenerateQueriesThread(self, itemList)
 		return
 	end
 	self:Yield()
-	
+
 	-- get the number of auctions for all the individual items
 	local itemNumAuctions = private.db:GetNumAuctionsByItem(itemStrings)
 	self:Yield()
-	
+
 	-- organize by class
 	local badItems = {}
 	local itemListByClass = {}
@@ -251,7 +242,7 @@ function private.GenerateQueriesThread(self, itemList)
 			query.items = {itemString}
 			tinsert(tempQueries.raw, query)
 			-- group by subClass
-			local subClassIndex = select(2, private:LookupClassSubClass(select(6, TSMAPI.Item:GetInfo(itemString)))) or 0
+			local subClassIndex = select(2, private:LookupClassSubClass(select(6, TSMAPI.Item:GetInfo(itemString)))) or -1
 			itemListBySubClass[subClassIndex] = itemListBySubClass[subClassIndex] or {}
 			tinsert(itemListBySubClass[subClassIndex], itemString)
 			self:Yield()
@@ -260,13 +251,13 @@ function private.GenerateQueriesThread(self, itemList)
 			-- get the number of pages if we group by class
 			local minQuality, minLevel, maxLevel = private:GetCommonInfo(items)
 			totalPages.class = private:NumAuctionsToNumPages(private.db:GetNumAuctions({class=classIndex, quality=minQuality, minLevel=minLevel, maxLevel=maxLevel}))
-			tinsert(tempQueries.class, {items=items, name="", class=classIndex, subClass=0, invType=0, quality=minQuality, minLevel=minLevel, maxLevel=maxLevel})
+			tinsert(tempQueries.class, {items=items, name="", class=classIndex, subClass=nil, invType=nil, quality=minQuality, minLevel=minLevel, maxLevel=maxLevel})
 			self:Yield()
 		end
 		if totalPages.class > 0 then
 			-- get the number of pages if we group by class+subClass
 			for subClassIndex, items2 in pairs(itemListBySubClass) do
-				if subClassIndex == 0 then
+				if subClassIndex == -1 then
 					for _, itemString in ipairs(items2) do
 						local query = TSMAPI.Auction:GetItemQueryInfo(itemString)
 						query.items = {itemString}
@@ -277,7 +268,7 @@ function private.GenerateQueriesThread(self, itemList)
 					local minQuality, minLevel, maxLevel = private:GetCommonInfo(items2)
 					local score = private:NumAuctionsToNumPages(private.db:GetNumAuctions({class=classIndex, subClass=subClassIndex, quality=minQuality, minLevel=minLevel, maxLevel=maxLevel}))
 					totalPages.subClass = totalPages.subClass + score
-					tinsert(tempQueries.subClass, {items=items2, name="", class=classIndex, subClass=subClassIndex, invType=0, quality=minQuality, minLevel=minLevel, maxLevel=maxLevel})
+					tinsert(tempQueries.subClass, {items=items2, name="", class=classIndex, subClass=subClassIndex, invType=nil, quality=minQuality, minLevel=minLevel, maxLevel=maxLevel})
 					self:Yield()
 				end
 			end
@@ -331,7 +322,7 @@ function private.GenerateQueriesThread(self, itemList)
 		end
 		self:Yield()
 	end
-	
+
 	-- do a final sanity check to make sure we didn't miss any items
 	local haveItems = {}
 	for _, itemString in ipairs(itemStrings) do
@@ -366,8 +357,10 @@ end
 -- ============================================================================
 
 function private:LookupClassSubClass(classStr, subClassStr)
-	if not classStr or not ITEM_CLASS_LOOKUP[classStr] then return end
-	return ITEM_CLASS_LOOKUP[classStr].index, ITEM_CLASS_LOOKUP[classStr][subClassStr]
+	if not classStr then return end
+	local classId = TSMAPI.Item:GetClassIdFromClassString(classStr)
+	if not classId or not subClassStr then return end
+	return classId, TSMAPI.Item:GetSubClassIdFromSubClassString(subClassStr, classId)
 end
 
 function private:NumAuctionsToNumPages(score)
@@ -396,7 +389,7 @@ function private:GetCommonName(items)
 	end
 	if #private.nameTemp ~= #items or #private.nameTemp <= 2 then return end
 	sort(private.nameTemp)
-	
+
 	-- find common substring with first and last name, and if it's
 	-- at least one word long, try and apply it to the rest
 	local str1 = private.nameTemp[1]
@@ -414,7 +407,7 @@ function private:GetCommonName(items)
 	end
 	-- make sure the common substring has at least one space and is at least 3 characters log
 	if not hasSpace or endIndex < 3 then return end
-	
+
 	local commonStr = strsub(str1, 1, endIndex)
 	for _, name in ipairs(private.nameTemp) do
 		if strsub(name, 1, endIndex) ~= commonStr then

@@ -43,7 +43,7 @@ function frame:Toggle()
 		end
 		frame:SetShown(not frame:IsShown())
 	else
-		rematch:print("You are in combat. Try again when out of combat.")
+		rematch:print(L["You are in combat. Try again when out of combat."])
 	end
 end
 

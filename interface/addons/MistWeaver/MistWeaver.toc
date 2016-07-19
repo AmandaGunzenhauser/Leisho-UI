@@ -1,11 +1,10 @@
-## Interface: 60200
+## Interface: 70000
 ## Title: MistWeaver
 ## Author: Nirriti
-## Version: 6.12
+## Version: 7.1
 ## Notes: a very special healer addon for a monk
 ## DefaultState: Enabled
 ## LoadOnDemand: 0
-## OptionalDeps: CleanUI
 ## SavedVariables: 
 ## SavedVariablesPerCharacter: MistWeaverData, MistWeaverIgnoreDebuffs, MistWeaverProfiles
 

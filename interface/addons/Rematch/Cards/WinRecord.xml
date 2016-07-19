@@ -282,8 +282,8 @@
 								<Anchor point="TOP" x="0" y="-48"/>
 							</Anchors>
 						</FontString>
-						<!-- Hold [Alt] etc help text at bottom of middle -->
-						<FontString parentKey="AltFlipHelp" inherits="GameFontNormalSmall" text="Hold [Alt] to view totals for all teams.">
+						<!-- "Hold [Alt] to view totals for all teams." help text at bottom of middle -->
+						<FontString parentKey="AltFlipHelp" inherits="GameFontNormalSmall">
 							<Anchors>
 								<Anchor point="BOTTOM" x="0" y="10"/>
 							</Anchors>

@@ -22,17 +22,21 @@ function Debug:ShowGUIHelper()
 	local numPoints = widget:GetNumPoints()
 	if numPoints == 0 then return print("This widget has no points!") end
 	if numPoints > 4 then return print("This widget has too many points!") end
-	
+
 	private:CreateHelperFrame()
 	private.frame:Show()
 	private.widget = widget
 	local state = private:UpdateFromWidget()
 	private.defaultState[private.widget] = private.defaultState[private.widget] or state
-	
+
 	if not private.highlightFrame then
 		private.highlightFrame = CreateFrame("Frame")
 		local tex = private.highlightFrame:CreateTexture()
-		tex:SetTexture(0, 1, 1, 0.2)
+		if select(4, GetBuildInfo()) >= 70000 then
+			tex:SetColorTexture(0, 1, 1, 0.2)
+		else
+			tex:SetTexture(0, 1, 1, 0.2)
+		end
 		tex:SetAllPoints(private.highlightFrame)
 		tex:SetBlendMode("BLEND")
 	end
@@ -50,7 +54,7 @@ end
 
 function private:CreateHelperFrame()
 	if private.frame then return end
-	
+
 	local anchors = {
 		TOPLEFT="TOPLEFT",
 		TOPRIGHT="TOPRIGHT",
@@ -62,7 +66,7 @@ function private:CreateHelperFrame()
 		RIGHT="RIGHT",
 		CENTER="CENTER",
 	}
-	
+
 	local BFC = TSMAPI.GUI:GetBuildFrameConstants()
 	local frameInfo = {
 		type = "Frame",

@@ -1,3 +1,21 @@
+07/16/2016 version 2.0.1
+- Fix for paws erroneously showing up in dungeon levels that happen to overlap outdoor areas with a tamer.
+
+07/13/2016 version 2.0.0
+- This version is for the Legion client only.
+- Special thanks to Flohsakk from warcraftpets.com for gathering coordinates for Legion world quests!
+- Rewritten to work better with Legion and its world quests.
+- NPC names are now localized to the language of the player's client.
+- World quest names will be localized for dailies in the Broken Isles.
+- When multiple paws overlap, the tooltip will list all tamers under the mouse.
+- The paws no longer intercept clicks. Left/right-click of a paw will go through to the underlying map.
+- Paws will less aggressively try to be the top-most icon when other icons share the same space.
+- The "Completed Dailies" option was renamed to "Inactive Dailies" and shows greyed-out paws for quests that are either completed and unavailable.
+- Inactive Dailies do not show on the Azeroth world map. (Otherwise the Broken Isle is a near-solid cluster of grey paws.)
+- Turning on/off the Pet Battles world map tracking option will now use the default's cvar instead of an independant savedvariable.
+- The "Pet Reward Dailies" option is renamed to "Reward Dailies" but otherwise behaves the same.
+- If PetTracker is enabled (which replaces the default map tracking menu and kicks out all addon involvement in that menu), a separate tracking button will appear beneath the main tracking button to change this addon's settings.
+
 05/29/2016 version 1.6.0
 - This version supports both WoD(live) and Legion(beta) clients.
 - toc update for 7.0 patch.

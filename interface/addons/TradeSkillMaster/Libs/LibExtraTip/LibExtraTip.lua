@@ -1063,11 +1063,11 @@ function lib:GenerateTooltipMethodTable() -- Sets up hooks to give the quantity 
 			reg.additional.locked = locked
 		end,
 
-		SetInboxItem = function(self,index)
+		SetInboxItem = function(self,index,attachIndex)
 			OnTooltipCleared(self)
 			local reg = tooltipRegistry[self]
 			reg.ignoreOnCleared = true
-			local _,_,q,_,cu = GetInboxItem(index)
+			local _,_,_,q,_,cu = GetInboxItem(index, attachIndex)
 			reg.quantity = q
 			reg.additional.event = "SetInboxItem"
 			reg.additional.eventIndex = index

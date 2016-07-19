@@ -1,0 +1,8 @@
+## Interface: 60200
+## Title: Masque: Legion
+## Version: 1.0
+## Author: Tim @ WoW Interface
+## Notes: LegionUI skin for Masque.
+## Dependencies: Masque
+
+Legion.lua

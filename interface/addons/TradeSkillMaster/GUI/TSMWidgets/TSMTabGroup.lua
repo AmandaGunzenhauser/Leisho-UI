@@ -20,7 +20,7 @@ Support functions
 
 local function TabResize(tab, padding, width)
 	local tabName = tab:GetName()
-	
+
 	local sideWidths = 8
 	tab:SetWidth(width + padding + sideWidths)
 end
@@ -37,7 +37,7 @@ local function UpdateTabLook(frame)
 		TSMAPI.Design:SetFrameColor(frame.image)
 		frame.bottom:Show()
 		frame:SetHeight(29)
-		
+
 		if GameTooltip:IsOwned(frame) then
 			GameTooltip:Hide()
 		end
@@ -133,7 +133,11 @@ local methods = {
 		tab.bottom = bottom
 		local highlight = tab:CreateTexture(nil, "HIGHLIGHT")
 		highlight:SetAllPoints()
-		highlight:SetTexture(1, 1, 1, .2)
+		if select(4, GetBuildInfo()) >= 70000 then
+			highlight:SetColorTexture(1, 1, 1, .2)
+		else
+			highlight:SetTexture(1, 1, 1, .2)
+		end
 		highlight:SetBlendMode("BLEND")
 		tab.highlight = highlight
 
@@ -183,7 +187,7 @@ local methods = {
 		self.tablist = tabs
 		self:BuildTabs()
 	end,
-	
+
 	["Reload"] = function(self)
 		local status = self.status or self.localstatus
 		if status and status.selected then
@@ -195,12 +199,12 @@ local methods = {
 		local status = self.status or self.localstatus
 		local tablist = self.tablist
 		local tabs = self.tabs
-		
+
 		if not tablist then return end
-		
+
 		local numTabs = #tablist
 		local width = self.frame.width or self.frame:GetWidth() or 0
-		
+
 		-- Show tabs and set text.
 		for i, v in ipairs(tablist) do
 			local tab = tabs[i]
@@ -208,13 +212,13 @@ local methods = {
 				tab = self:CreateTab(i)
 				tabs[i] = tab
 			end
-			
+
 			tab:Show()
 			tab:SetText(v.text)
 			tab:SetDisabled(v.disabled)
 			tab.value = v.value
 		end
-		
+
 		-- hide tabs which aren't in use
 		for i=numTabs+1, #tabs do
 			tabs[i]:Hide()
@@ -230,7 +234,7 @@ local methods = {
 				tab:SetPoint("BOTTOMLEFT", tabs[i-1], "BOTTOMRIGHT", 4, 0)
 			end
 		end
-		
+
 		for i=1, numTabs do
 			TabResize(tabs[i], 4, tabs[i]:GetFontString():GetStringWidth())
 		end
@@ -257,7 +261,7 @@ local methods = {
 		content:SetHeight(contentheight)
 		content.height = contentheight
 	end,
-	
+
 	["LayoutFinished"] = function(self, width, height)
 		if self.noAutoHeight then return end
 		self:SetHeight((height or 0) + 30)
@@ -304,7 +308,7 @@ local function Constructor()
 	for method, func in pairs(methods) do
 		widget[method] = func
 	end
-	
+
 	widget.Add = TSM.AddGUIElement
 	return AceGUI:RegisterAsContainer(widget)
 end

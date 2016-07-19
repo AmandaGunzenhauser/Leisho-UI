@@ -40,11 +40,11 @@ function TSMAPI.Auction:ScanQuery(module, query, callbackHandler, resolveSellers
 		private.optimize = true
 	end
 	TSM:SetAuctionTabFlashing(private.currentModule, true)
-	
+
 	-- set up the query
 	query.resolveSellers = resolveSellers
 	query.page = 0
-	
+
 	-- sort by bid and then buyout
 	SortAuctionItems("list", "bid")
 	if IsAuctionSortReversed("list", "bid") then
@@ -54,7 +54,7 @@ function TSMAPI.Auction:ScanQuery(module, query, callbackHandler, resolveSellers
 	if IsAuctionSortReversed("list", "buyout") then
 		SortAuctionItems("list", "buyout")
 	end
-	
+
 	private.scanThreadId = TSMAPI.Threading:Start(private.ScanAllPagesThread, SCAN_THREAD_PRIORITY, private.ScanThreadDone, query)
 end
 
@@ -72,10 +72,10 @@ function TSMAPI.Auction:ScanLastPage(module, callbackHandler, database)
 	private.database = database
 	private.currentModule = module
 	TSM:SetAuctionTabFlashing(private.currentModule, true)
-	
+
 	-- clear the auction sort
 	SortAuctionClearSort("list")
-	
+
 	private.scanThreadId = TSMAPI.Threading:Start(private.ScanLastPageThread, SCAN_THREAD_PRIORITY, private.ScanThreadDone)
 end
 
@@ -92,7 +92,7 @@ function TSMAPI.Auction:GetAllScan(module, callbackHandler)
 	private.callbackHandler = callbackHandler
 	private.currentModule = module
 	TSM:SetAuctionTabFlashing(private.currentModule, true)
-	
+
 	private.scanThreadId = TSMAPI.Threading:Start(private.GetAllScanThread, SCAN_THREAD_PRIORITY, private.ScanThreadDone)
 end
 
@@ -111,7 +111,7 @@ function TSMAPI.Auction:FindAuction(module, targetInfo, callbackHandler, databas
 	private.database = database
 	private.currentModule = module
 	TSM:SetAuctionTabFlashing(private.currentModule, true)
-	
+
 	-- sort by bid and then buyout
 	SortAuctionItems("list", "bid")
 	if IsAuctionSortReversed("list", "bid") then
@@ -121,14 +121,14 @@ function TSMAPI.Auction:FindAuction(module, targetInfo, callbackHandler, databas
 	if IsAuctionSortReversed("list", "buyout") then
 		SortAuctionItems("list", "buyout")
 	end
-	
+
 	private.scanThreadId = TSMAPI.Threading:Start(private.FindAuctionThread, SCAN_THREAD_PRIORITY, private.ScanThreadDone, targetInfo)
 end
 
 function TSMAPI.Auction:FindAuctionNoScan(targetInfo)
 	TSMAPI:Assert(type(targetInfo) == "table", "Invalid targetInfo type: "..type(targetInfo))
 	TSMAPI:Assert(AuctionFrame:IsVisible())
-	
+
 	local keys = {"itemString", "stackSize", "displayBid", "buyout", "seller"}
 	for i=#keys, 1, -1 do
 		if not targetInfo[keys[i]] then
@@ -147,7 +147,7 @@ function TSMAPI.Auction:StopScan(module)
 		private:DoCallback("INTERRUPTED")
 		TSMAPI.Threading:Kill(private.scanThreadId)
 	end
-	
+
 	TSM:SetAuctionTabFlashing(private.currentModule, false) -- stop flashing the tab of the current module
 	private.currentModule = nil
 	private.optimize = nil
@@ -243,7 +243,7 @@ function private:IsAuctionPageValid(resolveSellers)
 		return false, true
 	end
 	if numAuctions == 0 then return true end
-	
+
 	local numLinks, prevLink = 0, nil
 	for i=1, numAuctions do
 		-- checks to make sure all the data has been sent to the client
@@ -285,12 +285,12 @@ function private:StorePageResults(duplicateRecord)
 		numAuctions = GetNumAuctionItems("list")
 		private.pageTemp = {}
 		if numAuctions == 0 then return end
-		
+
 		for i=1, numAuctions do
 			private.pageTemp[i] = private:GetAuctionRecord(i)
 		end
 	end
-	
+
 	for i=1, numAuctions do
 		private.database:InsertAuctionRecord(private.pageTemp[i])
 	end
@@ -330,7 +330,14 @@ function private.ScanThreadDoQuery(self, query)
 	-- wait for the AH to be ready
 	while not CanSendAuctionQuery() do self:Yield(true) end
 	-- send the query
-	QueryAuctionItems(query.name, query.minLevel, query.maxLevel, query.invType, query.class, query.subClass, query.page, query.usable, query.quality, nil, query.exact)
+	if select(4, GetBuildInfo()) >= 70000 then
+		if not query.filterInfoCache and (query.invType or query.subClass or query.invType) then
+			query.filterInfoCache = {{classID=query.class, subClassID=query.subClass, inventoryType=query.invType}}
+		end
+		QueryAuctionItems(query.name, query.minLevel, query.maxLevel, query.page, query.usable, query.quality, nil, query.exact, query.filterInfoCache)
+	else
+		QueryAuctionItems(query.name, query.minLevel, query.maxLevel, query.invType, query.class, query.subClass, query.page, query.usable, query.quality, nil, query.exact)
+	end
 	-- wait for the update event
 	self:WaitForEvent("AUCTION_ITEM_LIST_UPDATE")
 end
@@ -395,7 +402,7 @@ function private.ScanAllPagesThread(self, query)
 	-- wait for the AH to be ready
 	self:Sleep(0.1)
 	while not CanSendAuctionQuery() do self:Yield(true) end
-	
+
 	local tempData = {skipInfo={}, pagesScanned=0}
 
 	-- loop until we're through all the pages, at which point we'll break out
@@ -432,7 +439,7 @@ function private.ScanAllPagesThread(self, query)
 					query.page = query.page - numToSkip
 				end
 			end
-			
+
 			if not didSkip then
 				-- just regularly scan the last page we tried to skip
 				private:ScanCurrentPageThread(self, query, tempData)
@@ -445,7 +452,7 @@ function private.ScanAllPagesThread(self, query)
 		end
 		numPages = private:GetNumPages()
 	end
-	
+
 	private:DoCallback("SCAN_COMPLETE")
 end
 
@@ -454,8 +461,8 @@ function private.ScanLastPageThread(self)
 	-- wait for the AH to be ready
 	self:Sleep(0.1)
 	while not CanSendAuctionQuery() do self:Yield(true) end
-	
-	
+
+
 	-- get to the last page of the AH
 	local lastPage = private:GetLastPage()
 	local query = {name="", page=lastPage}
@@ -467,7 +474,7 @@ function private.ScanLastPageThread(self)
 		onLastPage = (query.page == lastPage)
 		query.page = lastPage
 	end
-	
+
 	-- scan the page and store the results then do the callback
 	private:StorePageResults()
 	private:DoCallback("SCAN_COMPLETE")
@@ -476,6 +483,8 @@ end
 function private.FindAuctionThread(self, targetInfo)
 	if self then self:SetThreadName("AUCTION_SCANNING_FIND_AUCTION") end
 	local name, _, rarity, _, minLevel, class, subClass = TSMAPI.Item:GetInfo(targetInfo.itemString)
+	local class = TSMAPI.Item:GetClassIdFromClassString(class)
+	local subClass = TSMAPI.Item:GetClassIdFromClassString(subClass, class)
 	local query = {name=name, minLevel=minLevel, maxLevel=minLevel, class=class, subClass=subClass, rarity=rarity, page=0, exact=true}
 	local keys = {"itemString", "stackSize", "displayBid", "buyout", "seller"}
 	local indexList = nil
@@ -495,7 +504,7 @@ function private.FindAuctionThread(self, targetInfo)
 		private:DoCallback("FOUND_AUCTION", indexList)
 		return
 	end
-	
+
 	local searchDirection = nil
 	local estimatedPage = nil
 	local totalPages = math.huge
@@ -539,7 +548,7 @@ function private.FindAuctionThread(self, targetInfo)
 		query.page = 0
 		searchDirection = 1
 	end
-	
+
 
 	while true do
 		private.ScanThreadDoQueryAndValidate(self, query)
@@ -579,7 +588,7 @@ end
 
 function private.GetAllScanThread(self)
 	self:SetThreadName("GETALL_SCAN")
-	
+
 	-- wait until we can send the GetAll query
 	while true do
 		local canScan, canGetAll = CanSendAuctionQuery()
@@ -592,18 +601,22 @@ function private.GetAllScanThread(self)
 		end
 		self:Yield(true)
 	end
-	
+
 	private:DoCallback("GETALL_QUERY_START")
-	QueryAuctionItems("", nil, nil, 0, 0, 0, 0, 0, 0, true)
+	if select(4, GetBuildInfo()) >= 70000 then
+		QueryAuctionItems("", 0, 0, 0, false, 0, true, false, nil)
+	else
+		QueryAuctionItems("", nil, nil, 0, 0, 0, 0, 0, 0, true)
+	end
 	self:WaitForEvent("AUCTION_ITEM_LIST_UPDATE")
 	self:WaitForFunction(CanSendAuctionQuery)
-	
+
 	local numAuctions, totalNum = GetNumAuctionItems("list")
 	if numAuctions ~= totalNum then
 		return private:DoCallback("GETALL_BAD_DATA")
 	end
 	private:DoCallback("GETALL_PROGRESS", 1, numAuctions)
-	
+
 	-- scan the results (slowly as to not cause disconnects)
 	local scanData = {}
 	for i=1, numAuctions do
@@ -612,7 +625,7 @@ function private.GetAllScanThread(self)
 		if not itemString or not stackSize or not buyout then
 			return private:DoCallback("GETALL_BAD_DATA")
 		end
-		
+
 		local itemBuyout = TSMAPI.Util:Round(buyout / stackSize)
 		if not scanData[itemString] then
 			scanData[itemString] = {buyouts={}, minBuyout=0, numAuctions=0}
@@ -626,7 +639,7 @@ function private.GetAllScanThread(self)
 			end
 		end
 		scanData[itemString].numAuctions = scanData[itemString].numAuctions + 1
-		
+
 		if i % 500 == 0 then
 			private:DoCallback("GETALL_PROGRESS", i, numAuctions)
 			self:Sleep(0.1)
@@ -637,7 +650,7 @@ function private.GetAllScanThread(self)
 	if numAuctions ~= GetNumAuctionItems("list") then
 		return private:DoCallback("GETALL_BAD_DATA")
 	end
-	
+
 	private:DoCallback("SCAN_COMPLETE", scanData)
 end
 

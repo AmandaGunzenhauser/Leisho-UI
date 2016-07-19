@@ -12,8 +12,1222 @@ EPGP_DB = {
 		},
 		["warnings"] = {
 		},
+		["whisper"] = {
+		},
+		["gptooltip"] = {
+		},
+		["announce"] = {
+			["profiles"] = {
+				["Vicious Cuddling"] = {
+					["events"] = {
+						["MassEPAward"] = false,
+						["LootEpics"] = false,
+						["Decay"] = false,
+						["CoinLootBad"] = false,
+						["EPAward"] = false,
+						["StopRecurringAward"] = false,
+						["GPAward"] = false,
+						["StartRecurringAward"] = false,
+						["ResumeRecurringAward"] = false,
+						["GPReset"] = false,
+						["GPRescale"] = false,
+						["EPGPReset"] = false,
+						["BankedItem"] = false,
+					},
+				},
+			},
+		},
 		["log"] = {
 			["profiles"] = {
+				["Vicious Cuddling"] = {
+					["snapshot"] = {
+						["guild_info"] = "@BASE_GP:100\n@DECAY_P:7\n@MIN_EP:2500\n@EXTRAS_P:50",
+						["roster_info"] = {
+							{
+								"Cptamooica-Thrall", -- [1]
+								"PALADIN", -- [2]
+								"0,0", -- [3]
+							}, -- [1]
+							{
+								"Sitaba-Thrall", -- [1]
+								"DRUID", -- [2]
+								"0,0", -- [3]
+							}, -- [2]
+							{
+								"Pingofdeath-Thrall", -- [1]
+								"SHAMAN", -- [2]
+								"200,0", -- [3]
+							}, -- [3]
+							{
+								"Kuliu-Thrall", -- [1]
+								"WARRIOR", -- [2]
+								"0,0", -- [3]
+							}, -- [4]
+							{
+								"Tominn-Thrall", -- [1]
+								"SHAMAN", -- [2]
+								"0,0", -- [3]
+							}, -- [5]
+							{
+								"Junpeì-Thrall", -- [1]
+								"PALADIN", -- [2]
+								"", -- [3]
+							}, -- [6]
+							{
+								"Tomínn-Thrall", -- [1]
+								"PRIEST", -- [2]
+								"0,0", -- [3]
+							}, -- [7]
+							{
+								"Dunimous-Thrall", -- [1]
+								"HUNTER", -- [2]
+								"0,0", -- [3]
+							}, -- [8]
+							{
+								"Maukio-Thrall", -- [1]
+								"SHAMAN", -- [2]
+								"0,0", -- [3]
+							}, -- [9]
+							{
+								"Ziggi-Thrall", -- [1]
+								"HUNTER", -- [2]
+								"200,707", -- [3]
+							}, -- [10]
+							{
+								"Rileelynn-Thrall", -- [1]
+								"PALADIN", -- [2]
+								"17126,0", -- [3]
+							}, -- [11]
+							{
+								"Mamahuevo-Thrall", -- [1]
+								"WARRIOR", -- [2]
+								"Val's Buddy", -- [3]
+							}, -- [12]
+							{
+								"Avgcack-Thrall", -- [1]
+								"PALADIN", -- [2]
+								"0,0", -- [3]
+							}, -- [13]
+							{
+								"Pestilience-Thrall", -- [1]
+								"DEATHKNIGHT", -- [2]
+								"0,0", -- [3]
+							}, -- [14]
+							{
+								"Spike-Thrall", -- [1]
+								"DEATHKNIGHT", -- [2]
+								"0,0", -- [3]
+							}, -- [15]
+							{
+								"Wuxiann-Thrall", -- [1]
+								"HUNTER", -- [2]
+								"0,0", -- [3]
+							}, -- [16]
+							{
+								"Mothasucka-Thrall", -- [1]
+								"PALADIN", -- [2]
+								"0,0", -- [3]
+							}, -- [17]
+							{
+								"Ghoulvo-Thrall", -- [1]
+								"DEATHKNIGHT", -- [2]
+								"0,0", -- [3]
+							}, -- [18]
+							{
+								"Minnesotå-Thrall", -- [1]
+								"MAGE", -- [2]
+								"0,0", -- [3]
+							}, -- [19]
+							{
+								"Thilaira-Thrall", -- [1]
+								"WARLOCK", -- [2]
+								"0,0", -- [3]
+							}, -- [20]
+							{
+								"Prötheus-Thrall", -- [1]
+								"PALADIN", -- [2]
+								"0,0", -- [3]
+							}, -- [21]
+							{
+								"Kitha-Thrall", -- [1]
+								"WARRIOR", -- [2]
+								"0,0", -- [3]
+							}, -- [22]
+							{
+								"Vulpïx-Thrall", -- [1]
+								"MAGE", -- [2]
+								"0,0", -- [3]
+							}, -- [23]
+							{
+								"Zweilous-Thrall", -- [1]
+								"WARLOCK", -- [2]
+								"0,0", -- [3]
+							}, -- [24]
+							{
+								"Crusåder-Thrall", -- [1]
+								"PALADIN", -- [2]
+								"0,0", -- [3]
+							}, -- [25]
+							{
+								"Moodona-Thrall", -- [1]
+								"HUNTER", -- [2]
+								"Val's brother", -- [3]
+							}, -- [26]
+							{
+								"Plumyum-Thrall", -- [1]
+								"MONK", -- [2]
+								"0,0", -- [3]
+							}, -- [27]
+							{
+								"Curationum-Thrall", -- [1]
+								"PRIEST", -- [2]
+								"0,0", -- [3]
+							}, -- [28]
+							{
+								"Pyromastic-Thrall", -- [1]
+								"SHAMAN", -- [2]
+								"16926,0", -- [3]
+							}, -- [29]
+							{
+								"Gryven-Thrall", -- [1]
+								"ROGUE", -- [2]
+								"0,0", -- [3]
+							}, -- [30]
+							{
+								"Maurah-Thrall", -- [1]
+								"PALADIN", -- [2]
+								"Who is this?", -- [3]
+							}, -- [31]
+							{
+								"Shyftzy-Thrall", -- [1]
+								"DRUID", -- [2]
+								"92,0", -- [3]
+							}, -- [32]
+							{
+								"Hablaba-Thrall", -- [1]
+								"DRUID", -- [2]
+								"New Recruit... durp durp", -- [3]
+							}, -- [33]
+							{
+								"Zelesiose-Thrall", -- [1]
+								"MONK", -- [2]
+								"0,0", -- [3]
+							}, -- [34]
+							{
+								"Casterknight-Thrall", -- [1]
+								"MAGE", -- [2]
+								"0,0", -- [3]
+							}, -- [35]
+							{
+								"Ziglet-Thrall", -- [1]
+								"PALADIN", -- [2]
+								"12/15", -- [3]
+							}, -- [36]
+							{
+								"Muzzleloader-Thrall", -- [1]
+								"HUNTER", -- [2]
+								"0,0", -- [3]
+							}, -- [37]
+							{
+								"Zign-Thrall", -- [1]
+								"DEATHKNIGHT", -- [2]
+								"Ziggy", -- [3]
+							}, -- [38]
+							{
+								"Nemoexpress-Thrall", -- [1]
+								"DEATHKNIGHT", -- [2]
+								"0,0", -- [3]
+							}, -- [39]
+							{
+								"Protheros-Thrall", -- [1]
+								"WARLOCK", -- [2]
+								"0,0", -- [3]
+							}, -- [40]
+							{
+								"Protheos-Thrall", -- [1]
+								"DEATHKNIGHT", -- [2]
+								"0,0", -- [3]
+							}, -- [41]
+							{
+								"Isty-Thrall", -- [1]
+								"WARLOCK", -- [2]
+								"0,0", -- [3]
+							}, -- [42]
+							{
+								"Shamshôck-Thrall", -- [1]
+								"SHAMAN", -- [2]
+								"0,0", -- [3]
+							}, -- [43]
+							{
+								"Drágneel-Thrall", -- [1]
+								"PRIEST", -- [2]
+								"0,0", -- [3]
+							}, -- [44]
+							{
+								"Icevengeance-Thrall", -- [1]
+								"MAGE", -- [2]
+								"Val's problem", -- [3]
+							}, -- [45]
+							{
+								"Kalgath-Thrall", -- [1]
+								"HUNTER", -- [2]
+								"0,0", -- [3]
+							}, -- [46]
+							{
+								"Alinastra-Thrall", -- [1]
+								"PRIEST", -- [2]
+								"0,0", -- [3]
+							}, -- [47]
+							{
+								"Sealah-Thrall", -- [1]
+								"ROGUE", -- [2]
+								"0,0", -- [3]
+							}, -- [48]
+							{
+								"Swazzle-Thrall", -- [1]
+								"DRUID", -- [2]
+								"0,0", -- [3]
+							}, -- [49]
+							{
+								"Warforge-Thrall", -- [1]
+								"WARRIOR", -- [2]
+								"0,0", -- [3]
+							}, -- [50]
+							{
+								"Dräggoon-Thrall", -- [1]
+								"WARRIOR", -- [2]
+								"0,0", -- [3]
+							}, -- [51]
+							{
+								"Dasvidaniya-Thrall", -- [1]
+								"DEATHKNIGHT", -- [2]
+								"16926,0", -- [3]
+							}, -- [52]
+							{
+								"Dreamfyre-Thrall", -- [1]
+								"DRUID", -- [2]
+								"0,0", -- [3]
+							}, -- [53]
+							{
+								"Oxyco-Thrall", -- [1]
+								"WARLOCK", -- [2]
+								"0,0", -- [3]
+							}, -- [54]
+							{
+								"Fierycow-Thrall", -- [1]
+								"SHAMAN", -- [2]
+								"0,0", -- [3]
+							}, -- [55]
+							{
+								"Edgewild-Thrall", -- [1]
+								"HUNTER", -- [2]
+								"0,0", -- [3]
+							}, -- [56]
+							{
+								"Hulkstér-Thrall", -- [1]
+								"SHAMAN", -- [2]
+								"0,0", -- [3]
+							}, -- [57]
+							{
+								"Steelmon-Thrall", -- [1]
+								"WARRIOR", -- [2]
+								"0,0", -- [3]
+							}, -- [58]
+							{
+								"Kronebone-Thrall", -- [1]
+								"MAGE", -- [2]
+								"0,0", -- [3]
+							}, -- [59]
+							{
+								"Rishum-Thrall", -- [1]
+								"MONK", -- [2]
+								"0,0", -- [3]
+							}, -- [60]
+							{
+								"Pinguo-Thrall", -- [1]
+								"HUNTER", -- [2]
+								"0,0", -- [3]
+							}, -- [61]
+							{
+								"Uprisen-Thrall", -- [1]
+								"PALADIN", -- [2]
+								"0,0", -- [3]
+							}, -- [62]
+							{
+								"Plumyummy-Thrall", -- [1]
+								"MAGE", -- [2]
+								"16926,0", -- [3]
+							}, -- [63]
+							{
+								"Loktama-Thrall", -- [1]
+								"SHAMAN", -- [2]
+								"0,0", -- [3]
+							}, -- [64]
+							{
+								"Barrelrole-Thrall", -- [1]
+								"MONK", -- [2]
+								"0,0", -- [3]
+							}, -- [65]
+							{
+								"Aitone-Thrall", -- [1]
+								"DEATHKNIGHT", -- [2]
+								"0,0", -- [3]
+							}, -- [66]
+							{
+								"Mcshields-Thrall", -- [1]
+								"PALADIN", -- [2]
+								"0,0", -- [3]
+							}, -- [67]
+							{
+								"Zmorva-Thrall", -- [1]
+								"DRUID", -- [2]
+								"0,0", -- [3]
+							}, -- [68]
+							{
+								"Crumbs-Thrall", -- [1]
+								"DEATHKNIGHT", -- [2]
+								"0,0", -- [3]
+							}, -- [69]
+							{
+								"Shogi-Thrall", -- [1]
+								"MONK", -- [2]
+								"0,0", -- [3]
+							}, -- [70]
+							{
+								"Riloth-Thrall", -- [1]
+								"WARLOCK", -- [2]
+								"0,0", -- [3]
+							}, -- [71]
+							{
+								"Strangedruid-Thrall", -- [1]
+								"DRUID", -- [2]
+								"0,0", -- [3]
+							}, -- [72]
+							{
+								"Maunaloa-Thrall", -- [1]
+								"SHAMAN", -- [2]
+								"0,0", -- [3]
+							}, -- [73]
+							{
+								"Mauki-Thrall", -- [1]
+								"WARLOCK", -- [2]
+								"0,0", -- [3]
+							}, -- [74]
+							{
+								"Avgvag-Thrall", -- [1]
+								"PRIEST", -- [2]
+								"Cred", -- [3]
+							}, -- [75]
+							{
+								"Bawse-Thrall", -- [1]
+								"DEATHKNIGHT", -- [2]
+								"0,0", -- [3]
+							}, -- [76]
+							{
+								"Prôtheus-Thrall", -- [1]
+								"WARRIOR", -- [2]
+								"0,0", -- [3]
+							}, -- [77]
+							{
+								"Uglydork-Thrall", -- [1]
+								"WARRIOR", -- [2]
+								"0,0", -- [3]
+							}, -- [78]
+							{
+								"Jerivah-Thrall", -- [1]
+								"ROGUE", -- [2]
+								"0,0", -- [3]
+							}, -- [79]
+							{
+								"Tarberus-Thrall", -- [1]
+								"PALADIN", -- [2]
+								"92,0", -- [3]
+							}, -- [80]
+							{
+								"Jêrome-Thrall", -- [1]
+								"DRUID", -- [2]
+								"200,1587", -- [3]
+							}, -- [81]
+							{
+								"Bakronn-Thrall", -- [1]
+								"DRUID", -- [2]
+								"0,0", -- [3]
+							}, -- [82]
+							{
+								"Pasteruized-Thrall", -- [1]
+								"PALADIN", -- [2]
+								"0,0", -- [3]
+							}, -- [83]
+							{
+								"Ahka-Thrall", -- [1]
+								"SHAMAN", -- [2]
+								"0,0", -- [3]
+							}, -- [84]
+							{
+								"Gunkstah-Thrall", -- [1]
+								"SHAMAN", -- [2]
+								"0,0", -- [3]
+							}, -- [85]
+							{
+								"Zeleros-Thrall", -- [1]
+								"ROGUE", -- [2]
+								"20543,707", -- [3]
+							}, -- [86]
+							{
+								"Tevarath-Thrall", -- [1]
+								"WARLOCK", -- [2]
+								"0,0", -- [3]
+							}, -- [87]
+							{
+								"Wecutusobad-Thrall", -- [1]
+								"ROGUE", -- [2]
+								"0,0", -- [3]
+							}, -- [88]
+							{
+								"Braixen-Thrall", -- [1]
+								"MONK", -- [2]
+								"Josh - Alt", -- [3]
+							}, -- [89]
+							{
+								"Ishia-Thrall", -- [1]
+								"DRUID", -- [2]
+								"Who is this?", -- [3]
+							}, -- [90]
+							{
+								"Nalyria-Thrall", -- [1]
+								"HUNTER", -- [2]
+								"0,0", -- [3]
+							}, -- [91]
+							{
+								"Shuppet-Thrall", -- [1]
+								"PRIEST", -- [2]
+								"0,0", -- [3]
+							}, -- [92]
+							{
+								"Snorunt-Thrall", -- [1]
+								"MONK", -- [2]
+								"2500,0", -- [3]
+							}, -- [93]
+							{
+								"Voltorb-Thrall", -- [1]
+								"SHAMAN", -- [2]
+								"0,0", -- [3]
+							}, -- [94]
+							{
+								"Snoclaw-Thrall", -- [1]
+								"DRUID", -- [2]
+								"930,0", -- [3]
+							}, -- [95]
+							{
+								"Footprints-Thrall", -- [1]
+								"WARLOCK", -- [2]
+								"0,0", -- [3]
+							}, -- [96]
+							{
+								"Idotforsecs-Thrall", -- [1]
+								"PRIEST", -- [2]
+								"0,0", -- [3]
+							}, -- [97]
+							{
+								"Skorupi-Thrall", -- [1]
+								"ROGUE", -- [2]
+								"0,0", -- [3]
+							}, -- [98]
+							{
+								"Moldiwan-Thrall", -- [1]
+								"MONK", -- [2]
+								"0,0", -- [3]
+							}, -- [99]
+							{
+								"Raijah-Thrall", -- [1]
+								"PALADIN", -- [2]
+								"0,0", -- [3]
+							}, -- [100]
+							{
+								"Cadafyr-Thrall", -- [1]
+								"PRIEST", -- [2]
+								"0,0", -- [3]
+							}, -- [101]
+							{
+								"Aimbam-Thrall", -- [1]
+								"HUNTER", -- [2]
+								"0,0", -- [3]
+							}, -- [102]
+							{
+								"Leisho-Thrall", -- [1]
+								"MONK", -- [2]
+								"20543,1122", -- [3]
+							}, -- [103]
+							{
+								"Kleist-Thrall", -- [1]
+								"WARRIOR", -- [2]
+								"0,0", -- [3]
+							}, -- [104]
+							{
+								"Glalie-Thrall", -- [1]
+								"HUNTER", -- [2]
+								"0,0", -- [3]
+							}, -- [105]
+							{
+								"Ñiñja-Thrall", -- [1]
+								"ROGUE", -- [2]
+								"0,0", -- [3]
+							}, -- [106]
+							{
+								"Vulpix-Thrall", -- [1]
+								"HUNTER", -- [2]
+								"", -- [3]
+							}, -- [107]
+							{
+								"Tantalizer-Thrall", -- [1]
+								"DEATHKNIGHT", -- [2]
+								"0,0", -- [3]
+							}, -- [108]
+							{
+								"Valrion-Thrall", -- [1]
+								"DEATHKNIGHT", -- [2]
+								"The Val", -- [3]
+							}, -- [109]
+							{
+								"Heelzonwheel-Thrall", -- [1]
+								"PRIEST", -- [2]
+								"0,0", -- [3]
+							}, -- [110]
+							{
+								"Tyoi-Thrall", -- [1]
+								"WARRIOR", -- [2]
+								"0,0", -- [3]
+							}, -- [111]
+							{
+								"Abituary-Thrall", -- [1]
+								"PRIEST", -- [2]
+								"0,0", -- [3]
+							}, -- [112]
+							{
+								"Shytsweak-Thrall", -- [1]
+								"WARLOCK", -- [2]
+								"0,0", -- [3]
+							}, -- [113]
+							{
+								"Prothius-Thrall", -- [1]
+								"MAGE", -- [2]
+								"0,0", -- [3]
+							}, -- [114]
+							{
+								"Lectrix-Thrall", -- [1]
+								"SHAMAN", -- [2]
+								"Tanner", -- [3]
+							}, -- [115]
+							{
+								"Tõminn-Thrall", -- [1]
+								"HUNTER", -- [2]
+								"0,0", -- [3]
+							}, -- [116]
+							{
+								"Brewforge-Thrall", -- [1]
+								"MONK", -- [2]
+								"0,0", -- [3]
+							}, -- [117]
+							{
+								"Demonhide-Thrall", -- [1]
+								"WARLOCK", -- [2]
+								"0,0", -- [3]
+							}, -- [118]
+							{
+								"Odishu-Thrall", -- [1]
+								"PALADIN", -- [2]
+								"0,0", -- [3]
+							}, -- [119]
+							{
+								"Lightsaber-Thrall", -- [1]
+								"PRIEST", -- [2]
+								"0,0", -- [3]
+							}, -- [120]
+							{
+								"Soularien-Thrall", -- [1]
+								"MAGE", -- [2]
+								"Joined 2-16", -- [3]
+							}, -- [121]
+							{
+								"Eroean-Thrall", -- [1]
+								"PRIEST", -- [2]
+								"0,0", -- [3]
+							}, -- [122]
+							{
+								"Asbury-Thrall", -- [1]
+								"HUNTER", -- [2]
+								"16926,0", -- [3]
+							}, -- [123]
+							{
+								"Eled-Thrall", -- [1]
+								"SHAMAN", -- [2]
+								"Boosted Resto Sham. Joined 2/4", -- [3]
+							}, -- [124]
+							{
+								"Orcchi-Thrall", -- [1]
+								"MONK", -- [2]
+								"0,0", -- [3]
+							}, -- [125]
+							{
+								"Äbsol-Thrall", -- [1]
+								"PALADIN", -- [2]
+								"0,0", -- [3]
+							}, -- [126]
+							{
+								"Kuttie-Thrall", -- [1]
+								"MAGE", -- [2]
+								"3323,0", -- [3]
+							}, -- [127]
+							{
+								"Polani-Thrall", -- [1]
+								"HUNTER", -- [2]
+								"0,0", -- [3]
+							}, -- [128]
+							{
+								"Eristra-Thrall", -- [1]
+								"ROGUE", -- [2]
+								"0,0", -- [3]
+							}, -- [129]
+							{
+								"Jiraiyasama-Thrall", -- [1]
+								"SHAMAN", -- [2]
+								"0,0", -- [3]
+							}, -- [130]
+							{
+								"Hakuna-Thrall", -- [1]
+								"HUNTER", -- [2]
+								"Tanner", -- [3]
+							}, -- [131]
+							{
+								"Krummtar-Thrall", -- [1]
+								"SHAMAN", -- [2]
+								"0,0", -- [3]
+							}, -- [132]
+							{
+								"Demæn-Thrall", -- [1]
+								"WARLOCK", -- [2]
+								"Maukie's Lock Friend", -- [3]
+							}, -- [133]
+							{
+								"Protheøs-Thrall", -- [1]
+								"ROGUE", -- [2]
+								"0,0", -- [3]
+							}, -- [134]
+							{
+								"Proxeus-Thrall", -- [1]
+								"HUNTER", -- [2]
+								"0,0", -- [3]
+							}, -- [135]
+							{
+								"Krony-Thrall", -- [1]
+								"SHAMAN", -- [2]
+								"0,0", -- [3]
+							}, -- [136]
+							{
+								"Kludgery-Thrall", -- [1]
+								"WARRIOR", -- [2]
+								"0,0", -- [3]
+							}, -- [137]
+							{
+								"Plummies-Thrall", -- [1]
+								"WARRIOR", -- [2]
+								"3323,0", -- [3]
+							}, -- [138]
+							{
+								"Lubo-Thrall", -- [1]
+								"HUNTER", -- [2]
+								"0,0", -- [3]
+							}, -- [139]
+							{
+								"Ues-Thrall", -- [1]
+								"PRIEST", -- [2]
+								"Sno's friend Tone", -- [3]
+							}, -- [140]
+							{
+								"Protheuus-Thrall", -- [1]
+								"PRIEST", -- [2]
+								"3323,1592", -- [3]
+							}, -- [141]
+							{
+								"Maukie-Thrall", -- [1]
+								"HUNTER", -- [2]
+								"16926,0", -- [3]
+							}, -- [142]
+							{
+								"Protheus-Thrall", -- [1]
+								"DRUID", -- [2]
+								"0,0", -- [3]
+							}, -- [143]
+							{
+								"Tigarum-Thrall", -- [1]
+								"DRUID", -- [2]
+								"0,0", -- [3]
+							}, -- [144]
+							{
+								"Crediblehulk-Thrall", -- [1]
+								"WARRIOR", -- [2]
+								" (303)981-9105", -- [3]
+							}, -- [145]
+							{
+								"Amanduuh-Thrall", -- [1]
+								"PRIEST", -- [2]
+								"2500,2864", -- [3]
+							}, -- [146]
+							{
+								"Mauks-Thrall", -- [1]
+								"DEATHKNIGHT", -- [2]
+								"0,0", -- [3]
+							}, -- [147]
+							{
+								"Protheeus-Thrall", -- [1]
+								"SHAMAN", -- [2]
+								"0,0", -- [3]
+							}, -- [148]
+							{
+								"Luminå-Thrall", -- [1]
+								"PALADIN", -- [2]
+								"0,0", -- [3]
+							}, -- [149]
+						},
+						["time"] = 1468965840,
+					},
+					["log"] = {
+						{
+							1467329580, -- [1]
+							"EP", -- [2]
+							"Rileelynn-Thrall", -- [3]
+							"Decay 7%", -- [4]
+							-1275, -- [5]
+						}, -- [1]
+						{
+							1467329580, -- [1]
+							"EP", -- [2]
+							"Pyromastic-Thrall", -- [3]
+							"Decay 7%", -- [4]
+							-1275, -- [5]
+						}, -- [2]
+						{
+							1467329580, -- [1]
+							"EP", -- [2]
+							"Dasvidaniya-Thrall", -- [3]
+							"Decay 7%", -- [4]
+							-1275, -- [5]
+						}, -- [3]
+						{
+							1467329580, -- [1]
+							"GP", -- [2]
+							"Dasvidaniya-Thrall", -- [3]
+							"Decay 7%", -- [4]
+							-45, -- [5]
+						}, -- [4]
+						{
+							1467329580, -- [1]
+							"EP", -- [2]
+							"Plumyummy-Thrall", -- [3]
+							"Decay 7%", -- [4]
+							-1275, -- [5]
+						}, -- [5]
+						{
+							1467329580, -- [1]
+							"GP", -- [2]
+							"Plumyummy-Thrall", -- [3]
+							"Decay 7%", -- [4]
+							-64, -- [5]
+						}, -- [6]
+						{
+							1467329580, -- [1]
+							"EP", -- [2]
+							"Kuttie-Thrall", -- [3]
+							"Decay 7%", -- [4]
+							-78, -- [5]
+						}, -- [7]
+						{
+							1467329580, -- [1]
+							"EP", -- [2]
+							"Tarberus-Thrall", -- [3]
+							"Decay 7%", -- [4]
+							-8, -- [5]
+						}, -- [8]
+						{
+							1467329580, -- [1]
+							"EP", -- [2]
+							"Plummies-Thrall", -- [3]
+							"Decay 7%", -- [4]
+							-78, -- [5]
+						}, -- [9]
+						{
+							1467329580, -- [1]
+							"EP", -- [2]
+							"Leisho-Thrall", -- [3]
+							"Decay 7%", -- [4]
+							-1359, -- [5]
+						}, -- [10]
+						{
+							1467329580, -- [1]
+							"GP", -- [2]
+							"Leisho-Thrall", -- [3]
+							"Decay 7%", -- [4]
+							-4, -- [5]
+						}, -- [11]
+						{
+							1467329580, -- [1]
+							"GP", -- [2]
+							"Amanduuh-Thrall", -- [3]
+							"Decay 7%", -- [4]
+							-85, -- [5]
+						}, -- [12]
+						{
+							1467329580, -- [1]
+							"EP", -- [2]
+							"Asbury-Thrall", -- [3]
+							"Decay 7%", -- [4]
+							-1275, -- [5]
+						}, -- [13]
+						{
+							1467329580, -- [1]
+							"EP", -- [2]
+							"Shyftzy-Thrall", -- [3]
+							"Decay 7%", -- [4]
+							-8, -- [5]
+						}, -- [14]
+						{
+							1467329580, -- [1]
+							"EP", -- [2]
+							"Snoclaw-Thrall", -- [3]
+							"Decay 7%", -- [4]
+							-71, -- [5]
+						}, -- [15]
+						{
+							1467329580, -- [1]
+							"EP", -- [2]
+							"Maukie-Thrall", -- [3]
+							"Decay 7%", -- [4]
+							-1275, -- [5]
+						}, -- [16]
+						{
+							1467329580, -- [1]
+							"EP", -- [2]
+							"Protheuus-Thrall", -- [3]
+							"Decay 7%", -- [4]
+							-78, -- [5]
+						}, -- [17]
+						{
+							1467329580, -- [1]
+							"GP", -- [2]
+							"Protheuus-Thrall", -- [3]
+							"Decay 7%", -- [4]
+							-63, -- [5]
+						}, -- [18]
+						{
+							1467329580, -- [1]
+							"EP", -- [2]
+							"Zeleros-Thrall", -- [3]
+							"Decay 7%", -- [4]
+							-1359, -- [5]
+						}, -- [19]
+						{
+							1467329580, -- [1]
+							"GP", -- [2]
+							"Zeleros-Thrall", -- [3]
+							"Decay 7%", -- [4]
+							-1, -- [5]
+						}, -- [20]
+						{
+							1467329700, -- [1]
+							"GP", -- [2]
+							"Dasvidaniya-Thrall", -- [3]
+							"GP Reset", -- [4]
+							-485, -- [5]
+						}, -- [21]
+						{
+							1467329700, -- [1]
+							"GP", -- [2]
+							"Plumyummy-Thrall", -- [3]
+							"GP Reset", -- [4]
+							-748, -- [5]
+						}, -- [22]
+						{
+							1467329700, -- [1]
+							"GP", -- [2]
+							"Protheuus-Thrall", -- [3]
+							"GP Reset", -- [4]
+							-736, -- [5]
+						}, -- [23]
+						{
+							1467329700, -- [1]
+							"GP", -- [2]
+							"Amanduuh-Thrall", -- [3]
+							"GP Reset", -- [4]
+							-1028, -- [5]
+						}, -- [24]
+						{
+							1467332460, -- [1]
+							"EP", -- [2]
+							"Leisho-Thrall", -- [3]
+							"Mannoroth", -- [4]
+							300, -- [5]
+						}, -- [25]
+						{
+							1467332460, -- [1]
+							"EP", -- [2]
+							"Zeleros-Thrall", -- [3]
+							"Mannoroth", -- [4]
+							300, -- [5]
+						}, -- [26]
+						{
+							1467332460, -- [1]
+							"EP", -- [2]
+							"Kuttie-Thrall", -- [3]
+							"Mannoroth", -- [4]
+							300, -- [5]
+						}, -- [27]
+						{
+							1467332460, -- [1]
+							"EP", -- [2]
+							"Protheuus-Thrall", -- [3]
+							"Mannoroth", -- [4]
+							300, -- [5]
+						}, -- [28]
+						{
+							1467332460, -- [1]
+							"EP", -- [2]
+							"Plummies-Thrall", -- [3]
+							"Mannoroth", -- [4]
+							300, -- [5]
+						}, -- [29]
+						{
+							1467332460, -- [1]
+							"EP", -- [2]
+							"Amanduuh-Thrall", -- [3]
+							"Mannoroth", -- [4]
+							300, -- [5]
+						}, -- [30]
+						{
+							1467332460, -- [1]
+							"EP", -- [2]
+							"Snorunt-Thrall", -- [3]
+							"Mannoroth", -- [4]
+							300, -- [5]
+						}, -- [31]
+						{
+							1467333600, -- [1]
+							"GP", -- [2]
+							"Amanduuh-Thrall", -- [3]
+							"|cffa335ee|Hitem:127969:0:0:0:0:0:0:0:100:270:0:3:0|h[Badge of Hellfire's Conqueror]|h|r", -- [4]
+							1114, -- [5]
+						}, -- [32]
+						{
+							1467335760, -- [1]
+							"EP", -- [2]
+							"Leisho-Thrall", -- [3]
+							"Fel Lord Zakuun", -- [4]
+							1000, -- [5]
+						}, -- [33]
+						{
+							1467335760, -- [1]
+							"EP", -- [2]
+							"Zeleros-Thrall", -- [3]
+							"Fel Lord Zakuun", -- [4]
+							1000, -- [5]
+						}, -- [34]
+						{
+							1467335760, -- [1]
+							"EP", -- [2]
+							"Kuttie-Thrall", -- [3]
+							"Fel Lord Zakuun", -- [4]
+							1000, -- [5]
+						}, -- [35]
+						{
+							1467335760, -- [1]
+							"EP", -- [2]
+							"Protheuus-Thrall", -- [3]
+							"Fel Lord Zakuun", -- [4]
+							1000, -- [5]
+						}, -- [36]
+						{
+							1467335760, -- [1]
+							"EP", -- [2]
+							"Plummies-Thrall", -- [3]
+							"Fel Lord Zakuun", -- [4]
+							1000, -- [5]
+						}, -- [37]
+						{
+							1467335760, -- [1]
+							"EP", -- [2]
+							"Snorunt-Thrall", -- [3]
+							"Fel Lord Zakuun", -- [4]
+							1000, -- [5]
+						}, -- [38]
+						{
+							1467335760, -- [1]
+							"EP", -- [2]
+							"Amanduuh-Thrall", -- [3]
+							"Fel Lord Zakuun", -- [4]
+							1000, -- [5]
+						}, -- [39]
+						{
+							1467335880, -- [1]
+							"GP", -- [2]
+							"Protheuus-Thrall", -- [3]
+							"|cffa335ee|Hitem:124149:0:0:0:0:0:0:0:100:270:4:5:1:566:529|h[Bloody Dagger-Heeled Pumps]|h|r", -- [4]
+							842, -- [5]
+						}, -- [40]
+						{
+							1467341040, -- [1]
+							"EP", -- [2]
+							"Leisho-Thrall", -- [3]
+							"Xhul'horac", -- [4]
+							1000, -- [5]
+						}, -- [41]
+						{
+							1467341040, -- [1]
+							"EP", -- [2]
+							"Zeleros-Thrall", -- [3]
+							"Xhul'horac", -- [4]
+							1000, -- [5]
+						}, -- [42]
+						{
+							1467341040, -- [1]
+							"EP", -- [2]
+							"Kuttie-Thrall", -- [3]
+							"Xhul'horac", -- [4]
+							1000, -- [5]
+						}, -- [43]
+						{
+							1467341040, -- [1]
+							"EP", -- [2]
+							"Plummies-Thrall", -- [3]
+							"Xhul'horac", -- [4]
+							1000, -- [5]
+						}, -- [44]
+						{
+							1467341040, -- [1]
+							"EP", -- [2]
+							"Snorunt-Thrall", -- [3]
+							"Xhul'horac", -- [4]
+							1000, -- [5]
+						}, -- [45]
+						{
+							1467341040, -- [1]
+							"EP", -- [2]
+							"Protheuus-Thrall", -- [3]
+							"Xhul'horac", -- [4]
+							1000, -- [5]
+						}, -- [46]
+						{
+							1467341040, -- [1]
+							"EP", -- [2]
+							"Amanduuh-Thrall", -- [3]
+							"Xhul'horac", -- [4]
+							1000, -- [5]
+						}, -- [47]
+						{
+							1467341160, -- [1]
+							"GP", -- [2]
+							"Protheuus-Thrall", -- [3]
+							"|cffa335ee|Hitem:127957:0:0:0:0:0:0:0:100:270:0:5:1:570|h[Shoulders of Hellfire's Conqueror]|h|r", -- [4]
+							750, -- [5]
+						}, -- [48]
+						{
+							1467341160, -- [1]
+							"GP", -- [2]
+							"Amanduuh-Thrall", -- [3]
+							"|cffa335ee|Hitem:127957:0:0:0:0:0:0:0:100:270:0:5:1:570|h[Shoulders of Hellfire's Conqueror]|h|r", -- [4]
+							750, -- [5]
+						}, -- [49]
+						{
+							1467764640, -- [1]
+							"EP", -- [2]
+							"Leisho-Thrall", -- [3]
+							"Mannoroth", -- [4]
+							200, -- [5]
+						}, -- [50]
+						{
+							1467764640, -- [1]
+							"EP", -- [2]
+							"Zeleros-Thrall", -- [3]
+							"Mannoroth", -- [4]
+							200, -- [5]
+						}, -- [51]
+						{
+							1467764640, -- [1]
+							"EP", -- [2]
+							"Rileelynn-Thrall", -- [3]
+							"Mannoroth", -- [4]
+							200, -- [5]
+						}, -- [52]
+						{
+							1467764640, -- [1]
+							"EP", -- [2]
+							"Snorunt-Thrall", -- [3]
+							"Mannoroth", -- [4]
+							200, -- [5]
+						}, -- [53]
+						{
+							1467764640, -- [1]
+							"EP", -- [2]
+							"Amanduuh-Thrall", -- [3]
+							"Mannoroth", -- [4]
+							200, -- [5]
+						}, -- [54]
+						{
+							1467764640, -- [1]
+							"EP", -- [2]
+							"Pingofdeath-Thrall", -- [3]
+							"Mannoroth", -- [4]
+							200, -- [5]
+						}, -- [55]
+						{
+							1467764640, -- [1]
+							"EP", -- [2]
+							"Ziggi-Thrall", -- [3]
+							"Mannoroth", -- [4]
+							200, -- [5]
+						}, -- [56]
+						{
+							1467764640, -- [1]
+							"EP", -- [2]
+							"Jêrome-Thrall", -- [3]
+							"Mannoroth", -- [4]
+							200, -- [5]
+						}, -- [57]
+						{
+							1467764760, -- [1]
+							"GP", -- [2]
+							"Jêrome-Thrall", -- [3]
+							"|cffa335ee|Hitem:124378:0:0:0:0:0:0:0:100:268:4:3:0:529|h[Xu'tenash, Glaive of Ruin]|h|r", -- [4]
+							1587, -- [5]
+						}, -- [58]
+						{
+							1467764760, -- [1]
+							"GP", -- [2]
+							"Zeleros-Thrall", -- [3]
+							"|cffa335ee|Hitem:127962:0:0:0:0:0:0:0:100:268:0:3:0|h[Chest of Hellfire's Vanquisher]|h|r", -- [4]
+							707, -- [5]
+						}, -- [59]
+						{
+							1467764820, -- [1]
+							"GP", -- [2]
+							"Ziggi-Thrall", -- [3]
+							"|cffa335ee|Hitem:127963:0:0:0:0:0:0:0:100:268:0:3:0|h[Chest of Hellfire's Protector]|h|r", -- [4]
+							707, -- [5]
+						}, -- [60]
+						{
+							1468371120, -- [1]
+							"GP", -- [2]
+							"Amanduuh-Thrall", -- [3]
+							"|cffa335ee|Hitem:127953:0:0:0:0:0:0:0:100:270:0:5:1:570|h[Chest of Hellfire's Conqueror]|h|r", -- [4]
+							1000, -- [5]
+						}, -- [61]
+						{
+							1468371180, -- [1]
+							"GP", -- [2]
+							"Leisho-Thrall", -- [3]
+							"|cffa335ee|Hitem:124266:0:0:0:0:0:0:0:100:270:4:5:1:566:529|h[Empowered Demonskin Kilt]|h|r", -- [4]
+							1122, -- [5]
+						}, -- [62]
+					},
+				},
 				["Seed of Aldrassil"] = {
 					["snapshot"] = {
 						["time"] = 1467479220,
@@ -4611,1190 +5825,6 @@ EPGP_DB = {
 						},
 					},
 				},
-				["Vicious Cuddling"] = {
-					["snapshot"] = {
-						["guild_info"] = "@BASE_GP:100\n@DECAY_P:7\n@MIN_EP:2500\n@EXTRAS_P:50",
-						["roster_info"] = {
-							{
-								"Cptamooica-Thrall", -- [1]
-								"PALADIN", -- [2]
-								"0,0", -- [3]
-							}, -- [1]
-							{
-								"Sitaba-Thrall", -- [1]
-								"DRUID", -- [2]
-								"0,0", -- [3]
-							}, -- [2]
-							{
-								"Pingofdeath-Thrall", -- [1]
-								"SHAMAN", -- [2]
-								"200,0", -- [3]
-							}, -- [3]
-							{
-								"Kuliu-Thrall", -- [1]
-								"WARRIOR", -- [2]
-								"0,0", -- [3]
-							}, -- [4]
-							{
-								"Tominn-Thrall", -- [1]
-								"SHAMAN", -- [2]
-								"0,0", -- [3]
-							}, -- [5]
-							{
-								"Tomínn-Thrall", -- [1]
-								"PRIEST", -- [2]
-								"0,0", -- [3]
-							}, -- [6]
-							{
-								"Dunimous-Thrall", -- [1]
-								"HUNTER", -- [2]
-								"0,0", -- [3]
-							}, -- [7]
-							{
-								"Maukio-Thrall", -- [1]
-								"SHAMAN", -- [2]
-								"0,0", -- [3]
-							}, -- [8]
-							{
-								"Ziggi-Thrall", -- [1]
-								"HUNTER", -- [2]
-								"200,707", -- [3]
-							}, -- [9]
-							{
-								"Rileelynn-Thrall", -- [1]
-								"PALADIN", -- [2]
-								"17126,0", -- [3]
-							}, -- [10]
-							{
-								"Mamahuevo-Thrall", -- [1]
-								"WARRIOR", -- [2]
-								"Val's Buddy", -- [3]
-							}, -- [11]
-							{
-								"Avgcack-Thrall", -- [1]
-								"PALADIN", -- [2]
-								"0,0", -- [3]
-							}, -- [12]
-							{
-								"Pestilience-Thrall", -- [1]
-								"DEATHKNIGHT", -- [2]
-								"0,0", -- [3]
-							}, -- [13]
-							{
-								"Spike-Thrall", -- [1]
-								"DEATHKNIGHT", -- [2]
-								"0,0", -- [3]
-							}, -- [14]
-							{
-								"Wuxiann-Thrall", -- [1]
-								"HUNTER", -- [2]
-								"0,0", -- [3]
-							}, -- [15]
-							{
-								"Mothasucka-Thrall", -- [1]
-								"PALADIN", -- [2]
-								"0,0", -- [3]
-							}, -- [16]
-							{
-								"Ghoulvo-Thrall", -- [1]
-								"DEATHKNIGHT", -- [2]
-								"0,0", -- [3]
-							}, -- [17]
-							{
-								"Minnesotå-Thrall", -- [1]
-								"MAGE", -- [2]
-								"0,0", -- [3]
-							}, -- [18]
-							{
-								"Thilaira-Thrall", -- [1]
-								"WARLOCK", -- [2]
-								"0,0", -- [3]
-							}, -- [19]
-							{
-								"Prötheus-Thrall", -- [1]
-								"PALADIN", -- [2]
-								"0,0", -- [3]
-							}, -- [20]
-							{
-								"Kitha-Thrall", -- [1]
-								"WARRIOR", -- [2]
-								"0,0", -- [3]
-							}, -- [21]
-							{
-								"Vulpïx-Thrall", -- [1]
-								"MAGE", -- [2]
-								"0,0", -- [3]
-							}, -- [22]
-							{
-								"Zweilous-Thrall", -- [1]
-								"WARLOCK", -- [2]
-								"0,0", -- [3]
-							}, -- [23]
-							{
-								"Crusåder-Thrall", -- [1]
-								"PALADIN", -- [2]
-								"0,0", -- [3]
-							}, -- [24]
-							{
-								"Moodona-Thrall", -- [1]
-								"HUNTER", -- [2]
-								"Val's brother", -- [3]
-							}, -- [25]
-							{
-								"Plumyum-Thrall", -- [1]
-								"MONK", -- [2]
-								"0,0", -- [3]
-							}, -- [26]
-							{
-								"Curationum-Thrall", -- [1]
-								"PRIEST", -- [2]
-								"0,0", -- [3]
-							}, -- [27]
-							{
-								"Pyromastic-Thrall", -- [1]
-								"SHAMAN", -- [2]
-								"16926,0", -- [3]
-							}, -- [28]
-							{
-								"Gryven-Thrall", -- [1]
-								"ROGUE", -- [2]
-								"0,0", -- [3]
-							}, -- [29]
-							{
-								"Maurah-Thrall", -- [1]
-								"PALADIN", -- [2]
-								"Who is this?", -- [3]
-							}, -- [30]
-							{
-								"Shyftzy-Thrall", -- [1]
-								"DRUID", -- [2]
-								"92,0", -- [3]
-							}, -- [31]
-							{
-								"Hablaba-Thrall", -- [1]
-								"DRUID", -- [2]
-								"New Recruit... durp durp", -- [3]
-							}, -- [32]
-							{
-								"Zelesiose-Thrall", -- [1]
-								"MONK", -- [2]
-								"0,0", -- [3]
-							}, -- [33]
-							{
-								"Casterknight-Thrall", -- [1]
-								"MAGE", -- [2]
-								"0,0", -- [3]
-							}, -- [34]
-							{
-								"Ziglet-Thrall", -- [1]
-								"PALADIN", -- [2]
-								"12/15", -- [3]
-							}, -- [35]
-							{
-								"Muzzleloader-Thrall", -- [1]
-								"HUNTER", -- [2]
-								"0,0", -- [3]
-							}, -- [36]
-							{
-								"Zign-Thrall", -- [1]
-								"DEATHKNIGHT", -- [2]
-								"Ziggy", -- [3]
-							}, -- [37]
-							{
-								"Nemoexpress-Thrall", -- [1]
-								"DEATHKNIGHT", -- [2]
-								"0,0", -- [3]
-							}, -- [38]
-							{
-								"Protheros-Thrall", -- [1]
-								"WARLOCK", -- [2]
-								"0,0", -- [3]
-							}, -- [39]
-							{
-								"Protheos-Thrall", -- [1]
-								"DEATHKNIGHT", -- [2]
-								"0,0", -- [3]
-							}, -- [40]
-							{
-								"Isty-Thrall", -- [1]
-								"WARLOCK", -- [2]
-								"0,0", -- [3]
-							}, -- [41]
-							{
-								"Shamshôck-Thrall", -- [1]
-								"SHAMAN", -- [2]
-								"0,0", -- [3]
-							}, -- [42]
-							{
-								"Drágneel-Thrall", -- [1]
-								"PRIEST", -- [2]
-								"0,0", -- [3]
-							}, -- [43]
-							{
-								"Icevengeance-Thrall", -- [1]
-								"MAGE", -- [2]
-								"Val's problem", -- [3]
-							}, -- [44]
-							{
-								"Kalgath-Thrall", -- [1]
-								"HUNTER", -- [2]
-								"0,0", -- [3]
-							}, -- [45]
-							{
-								"Alinastra-Thrall", -- [1]
-								"PRIEST", -- [2]
-								"0,0", -- [3]
-							}, -- [46]
-							{
-								"Sealah-Thrall", -- [1]
-								"ROGUE", -- [2]
-								"0,0", -- [3]
-							}, -- [47]
-							{
-								"Swazzle-Thrall", -- [1]
-								"DRUID", -- [2]
-								"0,0", -- [3]
-							}, -- [48]
-							{
-								"Warforge-Thrall", -- [1]
-								"WARRIOR", -- [2]
-								"0,0", -- [3]
-							}, -- [49]
-							{
-								"Dräggoon-Thrall", -- [1]
-								"WARRIOR", -- [2]
-								"0,0", -- [3]
-							}, -- [50]
-							{
-								"Dasvidaniya-Thrall", -- [1]
-								"DEATHKNIGHT", -- [2]
-								"16926,0", -- [3]
-							}, -- [51]
-							{
-								"Dreamfyre-Thrall", -- [1]
-								"DRUID", -- [2]
-								"0,0", -- [3]
-							}, -- [52]
-							{
-								"Oxyco-Thrall", -- [1]
-								"WARLOCK", -- [2]
-								"0,0", -- [3]
-							}, -- [53]
-							{
-								"Fierycow-Thrall", -- [1]
-								"SHAMAN", -- [2]
-								"0,0", -- [3]
-							}, -- [54]
-							{
-								"Edgewild-Thrall", -- [1]
-								"HUNTER", -- [2]
-								"0,0", -- [3]
-							}, -- [55]
-							{
-								"Hulkstér-Thrall", -- [1]
-								"SHAMAN", -- [2]
-								"0,0", -- [3]
-							}, -- [56]
-							{
-								"Steelmon-Thrall", -- [1]
-								"WARRIOR", -- [2]
-								"0,0", -- [3]
-							}, -- [57]
-							{
-								"Kronebone-Thrall", -- [1]
-								"MAGE", -- [2]
-								"0,0", -- [3]
-							}, -- [58]
-							{
-								"Rishum-Thrall", -- [1]
-								"MONK", -- [2]
-								"0,0", -- [3]
-							}, -- [59]
-							{
-								"Pinguo-Thrall", -- [1]
-								"HUNTER", -- [2]
-								"0,0", -- [3]
-							}, -- [60]
-							{
-								"Uprisen-Thrall", -- [1]
-								"PALADIN", -- [2]
-								"0,0", -- [3]
-							}, -- [61]
-							{
-								"Plumyummy-Thrall", -- [1]
-								"MAGE", -- [2]
-								"16926,0", -- [3]
-							}, -- [62]
-							{
-								"Loktama-Thrall", -- [1]
-								"SHAMAN", -- [2]
-								"0,0", -- [3]
-							}, -- [63]
-							{
-								"Barrelrole-Thrall", -- [1]
-								"MONK", -- [2]
-								"0,0", -- [3]
-							}, -- [64]
-							{
-								"Aitone-Thrall", -- [1]
-								"DEATHKNIGHT", -- [2]
-								"0,0", -- [3]
-							}, -- [65]
-							{
-								"Mcshields-Thrall", -- [1]
-								"PALADIN", -- [2]
-								"0,0", -- [3]
-							}, -- [66]
-							{
-								"Zmorva-Thrall", -- [1]
-								"DRUID", -- [2]
-								"0,0", -- [3]
-							}, -- [67]
-							{
-								"Crumbs-Thrall", -- [1]
-								"DEATHKNIGHT", -- [2]
-								"0,0", -- [3]
-							}, -- [68]
-							{
-								"Shogi-Thrall", -- [1]
-								"MONK", -- [2]
-								"0,0", -- [3]
-							}, -- [69]
-							{
-								"Riloth-Thrall", -- [1]
-								"WARLOCK", -- [2]
-								"0,0", -- [3]
-							}, -- [70]
-							{
-								"Strangedruid-Thrall", -- [1]
-								"DRUID", -- [2]
-								"0,0", -- [3]
-							}, -- [71]
-							{
-								"Maunaloa-Thrall", -- [1]
-								"SHAMAN", -- [2]
-								"0,0", -- [3]
-							}, -- [72]
-							{
-								"Mauki-Thrall", -- [1]
-								"WARLOCK", -- [2]
-								"0,0", -- [3]
-							}, -- [73]
-							{
-								"Avgvag-Thrall", -- [1]
-								"PRIEST", -- [2]
-								"Cred", -- [3]
-							}, -- [74]
-							{
-								"Bawse-Thrall", -- [1]
-								"DEATHKNIGHT", -- [2]
-								"0,0", -- [3]
-							}, -- [75]
-							{
-								"Prôtheus-Thrall", -- [1]
-								"WARRIOR", -- [2]
-								"0,0", -- [3]
-							}, -- [76]
-							{
-								"Uglydork-Thrall", -- [1]
-								"WARRIOR", -- [2]
-								"0,0", -- [3]
-							}, -- [77]
-							{
-								"Jerivah-Thrall", -- [1]
-								"ROGUE", -- [2]
-								"0,0", -- [3]
-							}, -- [78]
-							{
-								"Tarberus-Thrall", -- [1]
-								"PALADIN", -- [2]
-								"92,0", -- [3]
-							}, -- [79]
-							{
-								"Jêrome-Thrall", -- [1]
-								"DRUID", -- [2]
-								"200,1587", -- [3]
-							}, -- [80]
-							{
-								"Bakronn-Thrall", -- [1]
-								"DRUID", -- [2]
-								"0,0", -- [3]
-							}, -- [81]
-							{
-								"Pasteruized-Thrall", -- [1]
-								"PALADIN", -- [2]
-								"0,0", -- [3]
-							}, -- [82]
-							{
-								"Ahka-Thrall", -- [1]
-								"SHAMAN", -- [2]
-								"0,0", -- [3]
-							}, -- [83]
-							{
-								"Gunkstah-Thrall", -- [1]
-								"SHAMAN", -- [2]
-								"0,0", -- [3]
-							}, -- [84]
-							{
-								"Zeleros-Thrall", -- [1]
-								"ROGUE", -- [2]
-								"20543,707", -- [3]
-							}, -- [85]
-							{
-								"Tevarath-Thrall", -- [1]
-								"WARLOCK", -- [2]
-								"0,0", -- [3]
-							}, -- [86]
-							{
-								"Wecutusobad-Thrall", -- [1]
-								"ROGUE", -- [2]
-								"0,0", -- [3]
-							}, -- [87]
-							{
-								"Braixen-Thrall", -- [1]
-								"MONK", -- [2]
-								"Josh - Alt", -- [3]
-							}, -- [88]
-							{
-								"Ishia-Thrall", -- [1]
-								"DRUID", -- [2]
-								"Who is this?", -- [3]
-							}, -- [89]
-							{
-								"Nalyria-Thrall", -- [1]
-								"HUNTER", -- [2]
-								"0,0", -- [3]
-							}, -- [90]
-							{
-								"Shuppet-Thrall", -- [1]
-								"PRIEST", -- [2]
-								"0,0", -- [3]
-							}, -- [91]
-							{
-								"Snorunt-Thrall", -- [1]
-								"MONK", -- [2]
-								"2500,0", -- [3]
-							}, -- [92]
-							{
-								"Voltorb-Thrall", -- [1]
-								"SHAMAN", -- [2]
-								"0,0", -- [3]
-							}, -- [93]
-							{
-								"Snoclaw-Thrall", -- [1]
-								"DRUID", -- [2]
-								"930,0", -- [3]
-							}, -- [94]
-							{
-								"Footprints-Thrall", -- [1]
-								"WARLOCK", -- [2]
-								"0,0", -- [3]
-							}, -- [95]
-							{
-								"Idotforsecs-Thrall", -- [1]
-								"PRIEST", -- [2]
-								"0,0", -- [3]
-							}, -- [96]
-							{
-								"Skorupi-Thrall", -- [1]
-								"ROGUE", -- [2]
-								"0,0", -- [3]
-							}, -- [97]
-							{
-								"Lectrix-Thrall", -- [1]
-								"SHAMAN", -- [2]
-								"Tanner", -- [3]
-							}, -- [98]
-							{
-								"Raijah-Thrall", -- [1]
-								"PALADIN", -- [2]
-								"0,0", -- [3]
-							}, -- [99]
-							{
-								"Cadafyr-Thrall", -- [1]
-								"PRIEST", -- [2]
-								"0,0", -- [3]
-							}, -- [100]
-							{
-								"Aimbam-Thrall", -- [1]
-								"HUNTER", -- [2]
-								"0,0", -- [3]
-							}, -- [101]
-							{
-								"Leisho-Thrall", -- [1]
-								"MONK", -- [2]
-								"20543,1122", -- [3]
-							}, -- [102]
-							{
-								"Kleist-Thrall", -- [1]
-								"WARRIOR", -- [2]
-								"0,0", -- [3]
-							}, -- [103]
-							{
-								"Glalie-Thrall", -- [1]
-								"HUNTER", -- [2]
-								"0,0", -- [3]
-							}, -- [104]
-							{
-								"Ñiñja-Thrall", -- [1]
-								"ROGUE", -- [2]
-								"0,0", -- [3]
-							}, -- [105]
-							{
-								"Vulpix-Thrall", -- [1]
-								"HUNTER", -- [2]
-								"", -- [3]
-							}, -- [106]
-							{
-								"Tantalizer-Thrall", -- [1]
-								"DEATHKNIGHT", -- [2]
-								"0,0", -- [3]
-							}, -- [107]
-							{
-								"Valrion-Thrall", -- [1]
-								"DEATHKNIGHT", -- [2]
-								"The Val", -- [3]
-							}, -- [108]
-							{
-								"Tyoi-Thrall", -- [1]
-								"WARRIOR", -- [2]
-								"0,0", -- [3]
-							}, -- [109]
-							{
-								"Shytsweak-Thrall", -- [1]
-								"WARLOCK", -- [2]
-								"0,0", -- [3]
-							}, -- [110]
-							{
-								"Abituary-Thrall", -- [1]
-								"PRIEST", -- [2]
-								"0,0", -- [3]
-							}, -- [111]
-							{
-								"Heelzonwheel-Thrall", -- [1]
-								"PRIEST", -- [2]
-								"0,0", -- [3]
-							}, -- [112]
-							{
-								"Prothius-Thrall", -- [1]
-								"MAGE", -- [2]
-								"0,0", -- [3]
-							}, -- [113]
-							{
-								"Tõminn-Thrall", -- [1]
-								"HUNTER", -- [2]
-								"0,0", -- [3]
-							}, -- [114]
-							{
-								"Brewforge-Thrall", -- [1]
-								"MONK", -- [2]
-								"0,0", -- [3]
-							}, -- [115]
-							{
-								"Tigarum-Thrall", -- [1]
-								"DRUID", -- [2]
-								"0,0", -- [3]
-							}, -- [116]
-							{
-								"Demonhide-Thrall", -- [1]
-								"WARLOCK", -- [2]
-								"0,0", -- [3]
-							}, -- [117]
-							{
-								"Odishu-Thrall", -- [1]
-								"PALADIN", -- [2]
-								"0,0", -- [3]
-							}, -- [118]
-							{
-								"Lightsaber-Thrall", -- [1]
-								"PRIEST", -- [2]
-								"0,0", -- [3]
-							}, -- [119]
-							{
-								"Soularien-Thrall", -- [1]
-								"MAGE", -- [2]
-								"Joined 2-16", -- [3]
-							}, -- [120]
-							{
-								"Eroean-Thrall", -- [1]
-								"PRIEST", -- [2]
-								"0,0", -- [3]
-							}, -- [121]
-							{
-								"Asbury-Thrall", -- [1]
-								"HUNTER", -- [2]
-								"16926,0", -- [3]
-							}, -- [122]
-							{
-								"Eled-Thrall", -- [1]
-								"SHAMAN", -- [2]
-								"Boosted Resto Sham. Joined 2/4", -- [3]
-							}, -- [123]
-							{
-								"Orcchi-Thrall", -- [1]
-								"MONK", -- [2]
-								"0,0", -- [3]
-							}, -- [124]
-							{
-								"Äbsol-Thrall", -- [1]
-								"PALADIN", -- [2]
-								"0,0", -- [3]
-							}, -- [125]
-							{
-								"Kuttie-Thrall", -- [1]
-								"MAGE", -- [2]
-								"3323,0", -- [3]
-							}, -- [126]
-							{
-								"Polani-Thrall", -- [1]
-								"HUNTER", -- [2]
-								"0,0", -- [3]
-							}, -- [127]
-							{
-								"Eristra-Thrall", -- [1]
-								"ROGUE", -- [2]
-								"0,0", -- [3]
-							}, -- [128]
-							{
-								"Jiraiyasama-Thrall", -- [1]
-								"SHAMAN", -- [2]
-								"0,0", -- [3]
-							}, -- [129]
-							{
-								"Hakuna-Thrall", -- [1]
-								"HUNTER", -- [2]
-								"Tanner", -- [3]
-							}, -- [130]
-							{
-								"Krummtar-Thrall", -- [1]
-								"SHAMAN", -- [2]
-								"0,0", -- [3]
-							}, -- [131]
-							{
-								"Demæn-Thrall", -- [1]
-								"WARLOCK", -- [2]
-								"Maukie's Lock Friend", -- [3]
-							}, -- [132]
-							{
-								"Protheøs-Thrall", -- [1]
-								"ROGUE", -- [2]
-								"0,0", -- [3]
-							}, -- [133]
-							{
-								"Proxeus-Thrall", -- [1]
-								"HUNTER", -- [2]
-								"0,0", -- [3]
-							}, -- [134]
-							{
-								"Krony-Thrall", -- [1]
-								"SHAMAN", -- [2]
-								"0,0", -- [3]
-							}, -- [135]
-							{
-								"Kludgery-Thrall", -- [1]
-								"WARRIOR", -- [2]
-								"0,0", -- [3]
-							}, -- [136]
-							{
-								"Plummies-Thrall", -- [1]
-								"WARRIOR", -- [2]
-								"3323,0", -- [3]
-							}, -- [137]
-							{
-								"Lubo-Thrall", -- [1]
-								"HUNTER", -- [2]
-								"0,0", -- [3]
-							}, -- [138]
-							{
-								"Ues-Thrall", -- [1]
-								"PRIEST", -- [2]
-								"Sno's friend Tone", -- [3]
-							}, -- [139]
-							{
-								"Protheuus-Thrall", -- [1]
-								"PRIEST", -- [2]
-								"3323,1592", -- [3]
-							}, -- [140]
-							{
-								"Maukie-Thrall", -- [1]
-								"HUNTER", -- [2]
-								"16926,0", -- [3]
-							}, -- [141]
-							{
-								"Protheus-Thrall", -- [1]
-								"DRUID", -- [2]
-								"0,0", -- [3]
-							}, -- [142]
-							{
-								"Crediblehulk-Thrall", -- [1]
-								"WARRIOR", -- [2]
-								" (303)981-9105", -- [3]
-							}, -- [143]
-							{
-								"Moldiwan-Thrall", -- [1]
-								"MONK", -- [2]
-								"0,0", -- [3]
-							}, -- [144]
-							{
-								"Amanduuh-Thrall", -- [1]
-								"PRIEST", -- [2]
-								"2500,2864", -- [3]
-							}, -- [145]
-							{
-								"Mauks-Thrall", -- [1]
-								"DEATHKNIGHT", -- [2]
-								"0,0", -- [3]
-							}, -- [146]
-							{
-								"Protheeus-Thrall", -- [1]
-								"SHAMAN", -- [2]
-								"0,0", -- [3]
-							}, -- [147]
-							{
-								"Luminå-Thrall", -- [1]
-								"PALADIN", -- [2]
-								"0,0", -- [3]
-							}, -- [148]
-						},
-						["time"] = 1468702500,
-					},
-					["log"] = {
-						{
-							1467329580, -- [1]
-							"EP", -- [2]
-							"Rileelynn-Thrall", -- [3]
-							"Decay 7%", -- [4]
-							-1275, -- [5]
-						}, -- [1]
-						{
-							1467329580, -- [1]
-							"EP", -- [2]
-							"Pyromastic-Thrall", -- [3]
-							"Decay 7%", -- [4]
-							-1275, -- [5]
-						}, -- [2]
-						{
-							1467329580, -- [1]
-							"EP", -- [2]
-							"Dasvidaniya-Thrall", -- [3]
-							"Decay 7%", -- [4]
-							-1275, -- [5]
-						}, -- [3]
-						{
-							1467329580, -- [1]
-							"GP", -- [2]
-							"Dasvidaniya-Thrall", -- [3]
-							"Decay 7%", -- [4]
-							-45, -- [5]
-						}, -- [4]
-						{
-							1467329580, -- [1]
-							"EP", -- [2]
-							"Plumyummy-Thrall", -- [3]
-							"Decay 7%", -- [4]
-							-1275, -- [5]
-						}, -- [5]
-						{
-							1467329580, -- [1]
-							"GP", -- [2]
-							"Plumyummy-Thrall", -- [3]
-							"Decay 7%", -- [4]
-							-64, -- [5]
-						}, -- [6]
-						{
-							1467329580, -- [1]
-							"EP", -- [2]
-							"Kuttie-Thrall", -- [3]
-							"Decay 7%", -- [4]
-							-78, -- [5]
-						}, -- [7]
-						{
-							1467329580, -- [1]
-							"EP", -- [2]
-							"Tarberus-Thrall", -- [3]
-							"Decay 7%", -- [4]
-							-8, -- [5]
-						}, -- [8]
-						{
-							1467329580, -- [1]
-							"EP", -- [2]
-							"Plummies-Thrall", -- [3]
-							"Decay 7%", -- [4]
-							-78, -- [5]
-						}, -- [9]
-						{
-							1467329580, -- [1]
-							"EP", -- [2]
-							"Leisho-Thrall", -- [3]
-							"Decay 7%", -- [4]
-							-1359, -- [5]
-						}, -- [10]
-						{
-							1467329580, -- [1]
-							"GP", -- [2]
-							"Leisho-Thrall", -- [3]
-							"Decay 7%", -- [4]
-							-4, -- [5]
-						}, -- [11]
-						{
-							1467329580, -- [1]
-							"GP", -- [2]
-							"Amanduuh-Thrall", -- [3]
-							"Decay 7%", -- [4]
-							-85, -- [5]
-						}, -- [12]
-						{
-							1467329580, -- [1]
-							"EP", -- [2]
-							"Asbury-Thrall", -- [3]
-							"Decay 7%", -- [4]
-							-1275, -- [5]
-						}, -- [13]
-						{
-							1467329580, -- [1]
-							"EP", -- [2]
-							"Shyftzy-Thrall", -- [3]
-							"Decay 7%", -- [4]
-							-8, -- [5]
-						}, -- [14]
-						{
-							1467329580, -- [1]
-							"EP", -- [2]
-							"Snoclaw-Thrall", -- [3]
-							"Decay 7%", -- [4]
-							-71, -- [5]
-						}, -- [15]
-						{
-							1467329580, -- [1]
-							"EP", -- [2]
-							"Maukie-Thrall", -- [3]
-							"Decay 7%", -- [4]
-							-1275, -- [5]
-						}, -- [16]
-						{
-							1467329580, -- [1]
-							"EP", -- [2]
-							"Protheuus-Thrall", -- [3]
-							"Decay 7%", -- [4]
-							-78, -- [5]
-						}, -- [17]
-						{
-							1467329580, -- [1]
-							"GP", -- [2]
-							"Protheuus-Thrall", -- [3]
-							"Decay 7%", -- [4]
-							-63, -- [5]
-						}, -- [18]
-						{
-							1467329580, -- [1]
-							"EP", -- [2]
-							"Zeleros-Thrall", -- [3]
-							"Decay 7%", -- [4]
-							-1359, -- [5]
-						}, -- [19]
-						{
-							1467329580, -- [1]
-							"GP", -- [2]
-							"Zeleros-Thrall", -- [3]
-							"Decay 7%", -- [4]
-							-1, -- [5]
-						}, -- [20]
-						{
-							1467329700, -- [1]
-							"GP", -- [2]
-							"Dasvidaniya-Thrall", -- [3]
-							"GP Reset", -- [4]
-							-485, -- [5]
-						}, -- [21]
-						{
-							1467329700, -- [1]
-							"GP", -- [2]
-							"Plumyummy-Thrall", -- [3]
-							"GP Reset", -- [4]
-							-748, -- [5]
-						}, -- [22]
-						{
-							1467329700, -- [1]
-							"GP", -- [2]
-							"Protheuus-Thrall", -- [3]
-							"GP Reset", -- [4]
-							-736, -- [5]
-						}, -- [23]
-						{
-							1467329700, -- [1]
-							"GP", -- [2]
-							"Amanduuh-Thrall", -- [3]
-							"GP Reset", -- [4]
-							-1028, -- [5]
-						}, -- [24]
-						{
-							1467332460, -- [1]
-							"EP", -- [2]
-							"Leisho-Thrall", -- [3]
-							"Mannoroth", -- [4]
-							300, -- [5]
-						}, -- [25]
-						{
-							1467332460, -- [1]
-							"EP", -- [2]
-							"Zeleros-Thrall", -- [3]
-							"Mannoroth", -- [4]
-							300, -- [5]
-						}, -- [26]
-						{
-							1467332460, -- [1]
-							"EP", -- [2]
-							"Kuttie-Thrall", -- [3]
-							"Mannoroth", -- [4]
-							300, -- [5]
-						}, -- [27]
-						{
-							1467332460, -- [1]
-							"EP", -- [2]
-							"Protheuus-Thrall", -- [3]
-							"Mannoroth", -- [4]
-							300, -- [5]
-						}, -- [28]
-						{
-							1467332460, -- [1]
-							"EP", -- [2]
-							"Plummies-Thrall", -- [3]
-							"Mannoroth", -- [4]
-							300, -- [5]
-						}, -- [29]
-						{
-							1467332460, -- [1]
-							"EP", -- [2]
-							"Amanduuh-Thrall", -- [3]
-							"Mannoroth", -- [4]
-							300, -- [5]
-						}, -- [30]
-						{
-							1467332460, -- [1]
-							"EP", -- [2]
-							"Snorunt-Thrall", -- [3]
-							"Mannoroth", -- [4]
-							300, -- [5]
-						}, -- [31]
-						{
-							1467333600, -- [1]
-							"GP", -- [2]
-							"Amanduuh-Thrall", -- [3]
-							"|cffa335ee|Hitem:127969:0:0:0:0:0:0:0:100:270:0:3:0|h[Badge of Hellfire's Conqueror]|h|r", -- [4]
-							1114, -- [5]
-						}, -- [32]
-						{
-							1467335760, -- [1]
-							"EP", -- [2]
-							"Leisho-Thrall", -- [3]
-							"Fel Lord Zakuun", -- [4]
-							1000, -- [5]
-						}, -- [33]
-						{
-							1467335760, -- [1]
-							"EP", -- [2]
-							"Zeleros-Thrall", -- [3]
-							"Fel Lord Zakuun", -- [4]
-							1000, -- [5]
-						}, -- [34]
-						{
-							1467335760, -- [1]
-							"EP", -- [2]
-							"Kuttie-Thrall", -- [3]
-							"Fel Lord Zakuun", -- [4]
-							1000, -- [5]
-						}, -- [35]
-						{
-							1467335760, -- [1]
-							"EP", -- [2]
-							"Protheuus-Thrall", -- [3]
-							"Fel Lord Zakuun", -- [4]
-							1000, -- [5]
-						}, -- [36]
-						{
-							1467335760, -- [1]
-							"EP", -- [2]
-							"Plummies-Thrall", -- [3]
-							"Fel Lord Zakuun", -- [4]
-							1000, -- [5]
-						}, -- [37]
-						{
-							1467335760, -- [1]
-							"EP", -- [2]
-							"Snorunt-Thrall", -- [3]
-							"Fel Lord Zakuun", -- [4]
-							1000, -- [5]
-						}, -- [38]
-						{
-							1467335760, -- [1]
-							"EP", -- [2]
-							"Amanduuh-Thrall", -- [3]
-							"Fel Lord Zakuun", -- [4]
-							1000, -- [5]
-						}, -- [39]
-						{
-							1467335880, -- [1]
-							"GP", -- [2]
-							"Protheuus-Thrall", -- [3]
-							"|cffa335ee|Hitem:124149:0:0:0:0:0:0:0:100:270:4:5:1:566:529|h[Bloody Dagger-Heeled Pumps]|h|r", -- [4]
-							842, -- [5]
-						}, -- [40]
-						{
-							1467341040, -- [1]
-							"EP", -- [2]
-							"Leisho-Thrall", -- [3]
-							"Xhul'horac", -- [4]
-							1000, -- [5]
-						}, -- [41]
-						{
-							1467341040, -- [1]
-							"EP", -- [2]
-							"Zeleros-Thrall", -- [3]
-							"Xhul'horac", -- [4]
-							1000, -- [5]
-						}, -- [42]
-						{
-							1467341040, -- [1]
-							"EP", -- [2]
-							"Kuttie-Thrall", -- [3]
-							"Xhul'horac", -- [4]
-							1000, -- [5]
-						}, -- [43]
-						{
-							1467341040, -- [1]
-							"EP", -- [2]
-							"Plummies-Thrall", -- [3]
-							"Xhul'horac", -- [4]
-							1000, -- [5]
-						}, -- [44]
-						{
-							1467341040, -- [1]
-							"EP", -- [2]
-							"Snorunt-Thrall", -- [3]
-							"Xhul'horac", -- [4]
-							1000, -- [5]
-						}, -- [45]
-						{
-							1467341040, -- [1]
-							"EP", -- [2]
-							"Protheuus-Thrall", -- [3]
-							"Xhul'horac", -- [4]
-							1000, -- [5]
-						}, -- [46]
-						{
-							1467341040, -- [1]
-							"EP", -- [2]
-							"Amanduuh-Thrall", -- [3]
-							"Xhul'horac", -- [4]
-							1000, -- [5]
-						}, -- [47]
-						{
-							1467341160, -- [1]
-							"GP", -- [2]
-							"Protheuus-Thrall", -- [3]
-							"|cffa335ee|Hitem:127957:0:0:0:0:0:0:0:100:270:0:5:1:570|h[Shoulders of Hellfire's Conqueror]|h|r", -- [4]
-							750, -- [5]
-						}, -- [48]
-						{
-							1467341160, -- [1]
-							"GP", -- [2]
-							"Amanduuh-Thrall", -- [3]
-							"|cffa335ee|Hitem:127957:0:0:0:0:0:0:0:100:270:0:5:1:570|h[Shoulders of Hellfire's Conqueror]|h|r", -- [4]
-							750, -- [5]
-						}, -- [49]
-						{
-							1467764640, -- [1]
-							"EP", -- [2]
-							"Leisho-Thrall", -- [3]
-							"Mannoroth", -- [4]
-							200, -- [5]
-						}, -- [50]
-						{
-							1467764640, -- [1]
-							"EP", -- [2]
-							"Zeleros-Thrall", -- [3]
-							"Mannoroth", -- [4]
-							200, -- [5]
-						}, -- [51]
-						{
-							1467764640, -- [1]
-							"EP", -- [2]
-							"Rileelynn-Thrall", -- [3]
-							"Mannoroth", -- [4]
-							200, -- [5]
-						}, -- [52]
-						{
-							1467764640, -- [1]
-							"EP", -- [2]
-							"Snorunt-Thrall", -- [3]
-							"Mannoroth", -- [4]
-							200, -- [5]
-						}, -- [53]
-						{
-							1467764640, -- [1]
-							"EP", -- [2]
-							"Amanduuh-Thrall", -- [3]
-							"Mannoroth", -- [4]
-							200, -- [5]
-						}, -- [54]
-						{
-							1467764640, -- [1]
-							"EP", -- [2]
-							"Pingofdeath-Thrall", -- [3]
-							"Mannoroth", -- [4]
-							200, -- [5]
-						}, -- [55]
-						{
-							1467764640, -- [1]
-							"EP", -- [2]
-							"Ziggi-Thrall", -- [3]
-							"Mannoroth", -- [4]
-							200, -- [5]
-						}, -- [56]
-						{
-							1467764640, -- [1]
-							"EP", -- [2]
-							"Jêrome-Thrall", -- [3]
-							"Mannoroth", -- [4]
-							200, -- [5]
-						}, -- [57]
-						{
-							1467764760, -- [1]
-							"GP", -- [2]
-							"Jêrome-Thrall", -- [3]
-							"|cffa335ee|Hitem:124378:0:0:0:0:0:0:0:100:268:4:3:0:529|h[Xu'tenash, Glaive of Ruin]|h|r", -- [4]
-							1587, -- [5]
-						}, -- [58]
-						{
-							1467764760, -- [1]
-							"GP", -- [2]
-							"Zeleros-Thrall", -- [3]
-							"|cffa335ee|Hitem:127962:0:0:0:0:0:0:0:100:268:0:3:0|h[Chest of Hellfire's Vanquisher]|h|r", -- [4]
-							707, -- [5]
-						}, -- [59]
-						{
-							1467764820, -- [1]
-							"GP", -- [2]
-							"Ziggi-Thrall", -- [3]
-							"|cffa335ee|Hitem:127963:0:0:0:0:0:0:0:100:268:0:3:0|h[Chest of Hellfire's Protector]|h|r", -- [4]
-							707, -- [5]
-						}, -- [60]
-						{
-							1468371120, -- [1]
-							"GP", -- [2]
-							"Amanduuh-Thrall", -- [3]
-							"|cffa335ee|Hitem:127953:0:0:0:0:0:0:0:100:270:0:5:1:570|h[Chest of Hellfire's Conqueror]|h|r", -- [4]
-							1000, -- [5]
-						}, -- [61]
-						{
-							1468371180, -- [1]
-							"GP", -- [2]
-							"Leisho-Thrall", -- [3]
-							"|cffa335ee|Hitem:124266:0:0:0:0:0:0:0:100:270:4:5:1:566:529|h[Empowered Demonskin Kilt]|h|r", -- [4]
-							1122, -- [5]
-						}, -- [62]
-					},
-				},
 				["muddskunks"] = {
 					["snapshot"] = {
 						["roster_info"] = {
@@ -5819,35 +5849,6 @@ EPGP_DB = {
 				},
 			},
 		},
-		["announce"] = {
-			["profiles"] = {
-				["Vicious Cuddling"] = {
-					["events"] = {
-						["MassEPAward"] = false,
-						["LootEpics"] = false,
-						["Decay"] = false,
-						["CoinLootBad"] = false,
-						["BankedItem"] = false,
-						["EPGPReset"] = false,
-						["GPAward"] = false,
-						["GPRescale"] = false,
-						["EPAward"] = false,
-						["GPReset"] = false,
-						["StartRecurringAward"] = false,
-						["StopRecurringAward"] = false,
-						["ResumeRecurringAward"] = false,
-					},
-				},
-			},
-		},
-		["gptooltip"] = {
-		},
-		["whisper"] = {
-		},
-	},
-	["global"] = {
-		["last_version"] = "v5.11.11",
-		["last_tier"] = 602,
 	},
 	["profileKeys"] = {
 		["Alyserys - Thrall"] = "muddskunks",
@@ -5859,6 +5860,10 @@ EPGP_DB = {
 		["Kargen - Thrall"] = "Seed of Aldrassil",
 		["Kitha - Thrall"] = "Vicious Cuddling",
 		["Alinastra - Thrall"] = "Vicious Cuddling",
+	},
+	["global"] = {
+		["last_version"] = "v5.11.11",
+		["last_tier"] = 700,
 	},
 	["profiles"] = {
 		["Alyserys - Thrall"] = {
@@ -5874,32 +5879,35 @@ EPGP_DB = {
 			["decay_p"] = 7,
 			["min_ep"] = 2500,
 			["extras_p"] = 50,
-			["base_gp"] = 100,
-			["outsiders"] = 0,
-		},
-		["Alinastra - Thrall"] = {
-			["decay_p"] = 7,
-			["min_ep"] = 2500,
-			["extras_p"] = 50,
 			["outsiders"] = 0,
 			["base_gp"] = 100,
 		},
-		["Seed of Aldrassil"] = {
+		["muddskunks"] = {
+			["outsiders"] = 0,
+		},
+		["Kitha - Thrall"] = {
+			["outsiders"] = 0,
 		},
 		["Ahka - Thrall"] = {
+			["outsiders"] = 0,
+		},
+		["Kargen - Thrall"] = {
+			["outsiders"] = 0,
+		},
+		["Nalyria - Thrall"] = {
 			["outsiders"] = 0,
 		},
 		["Vicious Cuddling"] = {
 			["bonus_loot_log"] = {
 				{
-					["timestamp"] = "2016-05-19 20:34:00",
 					["player"] = "Asbury",
+					["timestamp"] = "2016-05-19 20:34:00",
 					["coinsLeft"] = "9",
 					["currencyID"] = "1129",
 				}, -- [1]
 				{
-					["timestamp"] = "2016-05-19 20:53:00",
 					["player"] = "Asbury",
+					["timestamp"] = "2016-05-19 20:53:00",
 					["coinsLeft"] = "8",
 					["currencyID"] = "1129",
 				}, -- [2]
@@ -5907,36 +5915,36 @@ EPGP_DB = {
 					["player"] = "Plumyummy",
 					["coinsLeft"] = "5",
 					["timestamp"] = "2016-05-19 20:53:00",
-					["reward"] = "|cffa335ee|Hitem:124227:0:0:0:0:0:0:0:100:64:4:3:0:529|h[Iron Reaver Piston]|h|r",
 					["currencyID"] = "1129",
+					["reward"] = "|cffa335ee|Hitem:124227:0:0:0:0:0:0:0:100:64:4:3:0:529|h[Iron Reaver Piston]|h|r",
 				}, -- [3]
 				{
-					["timestamp"] = "2016-05-19 21:05:00",
 					["player"] = "Plumyummy",
+					["timestamp"] = "2016-05-19 21:05:00",
 					["coinsLeft"] = "4",
 					["currencyID"] = "1129",
 				}, -- [4]
 				{
-					["timestamp"] = "2016-05-19 21:16:00",
 					["player"] = "Plumyummy",
+					["timestamp"] = "2016-05-19 21:16:00",
 					["coinsLeft"] = "3",
 					["currencyID"] = "1129",
 				}, -- [5]
 				{
-					["timestamp"] = "2016-05-19 21:26:00",
 					["player"] = "Pyromastic",
+					["timestamp"] = "2016-05-19 21:26:00",
 					["coinsLeft"] = "0",
 					["currencyID"] = "1129",
 				}, -- [6]
 				{
-					["timestamp"] = "2016-05-19 21:27:00",
 					["player"] = "Dasvidaniya",
+					["timestamp"] = "2016-05-19 21:27:00",
 					["coinsLeft"] = "7",
 					["currencyID"] = "1129",
 				}, -- [7]
 				{
-					["timestamp"] = "2016-05-19 21:38:00",
 					["player"] = "Plumyummy",
+					["timestamp"] = "2016-05-19 21:38:00",
 					["coinsLeft"] = "2",
 					["currencyID"] = "1129",
 				}, -- [8]
@@ -5944,19 +5952,19 @@ EPGP_DB = {
 					["player"] = "Dasvidaniya",
 					["coinsLeft"] = "6",
 					["timestamp"] = "2016-05-19 21:38:00",
-					["reward"] = "|cffa335ee|Hitem:124348:0:0:0:0:0:0:0:100:250:4:3:0:529|h[Ravenous Girdle]|h|r",
 					["currencyID"] = "1129",
+					["reward"] = "|cffa335ee|Hitem:124348:0:0:0:0:0:0:0:100:250:4:3:0:529|h[Ravenous Girdle]|h|r",
 				}, -- [9]
 				{
 					["player"] = "Plumyummy",
 					["coinsLeft"] = "1",
 					["timestamp"] = "2016-05-19 21:51:00",
-					["reward"] = "|cffa335ee|Hitem:124181:0:0:0:0:0:0:0:100:63:4:3:2:560:563:529|h[Sash of Unending Anguish]|h|r",
 					["currencyID"] = "1129",
+					["reward"] = "|cffa335ee|Hitem:124181:0:0:0:0:0:0:0:100:63:4:3:2:560:563:529|h[Sash of Unending Anguish]|h|r",
 				}, -- [10]
 				{
-					["timestamp"] = "2016-05-26 20:29:00",
 					["player"] = "Plummies",
+					["timestamp"] = "2016-05-26 20:29:00",
 					["coinsLeft"] = "9",
 					["currencyID"] = "1129",
 				}, -- [11]
@@ -5964,36 +5972,36 @@ EPGP_DB = {
 					["player"] = "Tarberus",
 					["coinsLeft"] = "3",
 					["timestamp"] = "2016-05-26 20:29:00",
-					["reward"] = "|cffa335ee|Hitem:124318:0:0:0:0:0:0:0:100:66:4:3:2:560:42:529|h[Cuirass of the Ceaseless Vigil]|h|r",
 					["currencyID"] = "1129",
+					["reward"] = "|cffa335ee|Hitem:124318:0:0:0:0:0:0:0:100:66:4:3:2:560:42:529|h[Cuirass of the Ceaseless Vigil]|h|r",
 				}, -- [12]
 				{
-					["timestamp"] = "2016-05-26 20:29:00",
 					["player"] = "Smalaxe",
+					["timestamp"] = "2016-05-26 20:29:00",
 					["coinsLeft"] = "8",
 					["currencyID"] = "1129",
 				}, -- [13]
 				{
-					["timestamp"] = "2016-05-26 20:44:00",
 					["player"] = "Tarberus",
+					["timestamp"] = "2016-05-26 20:44:00",
 					["coinsLeft"] = "2",
 					["currencyID"] = "1129",
 				}, -- [14]
 				{
-					["timestamp"] = "2016-05-26 20:44:00",
 					["player"] = "Plummies",
+					["timestamp"] = "2016-05-26 20:44:00",
 					["coinsLeft"] = "8",
 					["currencyID"] = "1129",
 				}, -- [15]
 				{
-					["timestamp"] = "2016-05-26 21:23:00",
 					["player"] = "Plummies",
+					["timestamp"] = "2016-05-26 21:23:00",
 					["coinsLeft"] = "7",
 					["currencyID"] = "1129",
 				}, -- [16]
 				{
-					["timestamp"] = "2016-05-26 21:40:00",
 					["player"] = "Tarberus",
+					["timestamp"] = "2016-05-26 21:40:00",
 					["coinsLeft"] = "1",
 					["currencyID"] = "1129",
 				}, -- [17]
@@ -6001,12 +6009,12 @@ EPGP_DB = {
 					["player"] = "Plummies",
 					["coinsLeft"] = "6",
 					["timestamp"] = "2016-05-26 21:40:00",
-					["reward"] = "|cffa335ee|Hitem:124217:0:0:0:0:0:0:0:100:71:4:3:0:529|h[Shadowgorged Iron Choker]|h|r",
 					["currencyID"] = "1129",
+					["reward"] = "|cffa335ee|Hitem:124217:0:0:0:0:0:0:0:100:71:4:3:0:529|h[Shadowgorged Iron Choker]|h|r",
 				}, -- [18]
 				{
-					["timestamp"] = "2016-05-26 21:52:00",
 					["player"] = "Plummies",
+					["timestamp"] = "2016-05-26 21:52:00",
 					["coinsLeft"] = "5",
 					["currencyID"] = "1129",
 				}, -- [19]
@@ -6014,18 +6022,18 @@ EPGP_DB = {
 					["player"] = "Plummies",
 					["coinsLeft"] = "4",
 					["timestamp"] = "2016-05-26 22:03:00",
-					["reward"] = "|cffa335ee|Hitem:124197:0:0:0:0:0:0:0:100:71:4:3:0:529|h[Congealed Globule Loop]|h|r",
 					["currencyID"] = "1129",
+					["reward"] = "|cffa335ee|Hitem:124197:0:0:0:0:0:0:0:100:71:4:3:0:529|h[Congealed Globule Loop]|h|r",
 				}, -- [20]
 				{
-					["timestamp"] = "2016-05-26 22:23:00",
 					["player"] = "Plummies",
+					["timestamp"] = "2016-05-26 22:23:00",
 					["coinsLeft"] = "3",
 					["currencyID"] = "1129",
 				}, -- [21]
 				{
-					["timestamp"] = "2016-05-26 22:40:00",
 					["player"] = "Plummies",
+					["timestamp"] = "2016-05-26 22:40:00",
 					["coinsLeft"] = "2",
 					["currencyID"] = "1129",
 				}, -- [22]
@@ -6033,18 +6041,18 @@ EPGP_DB = {
 					["player"] = "Zeleros",
 					["coinsLeft"] = "4",
 					["timestamp"] = "2016-05-26 22:40:00",
-					["reward"] = "|cffa335ee|Hitem:124134:0:0:0:0:0:0:0:100:259:4:3:2:560:563:529|h[Cloak of Desperate Temerity]|h|r",
 					["currencyID"] = "1129",
+					["reward"] = "|cffa335ee|Hitem:124134:0:0:0:0:0:0:0:100:259:4:3:2:560:563:529|h[Cloak of Desperate Temerity]|h|r",
 				}, -- [23]
 				{
-					["timestamp"] = "2016-05-26 22:42:00",
 					["player"] = "Tarberus",
+					["timestamp"] = "2016-05-26 22:42:00",
 					["coinsLeft"] = "0",
 					["currencyID"] = "1129",
 				}, -- [24]
 				{
-					["player"] = "Plummies",
 					["timestamp"] = "2016-05-31 20:24:00",
+					["player"] = "Plummies",
 					["coinsLeft"] = "1",
 					["currencyID"] = "1129",
 				}, -- [25]
@@ -6052,24 +6060,24 @@ EPGP_DB = {
 					["player"] = "Plummies",
 					["coinsLeft"] = "0",
 					["timestamp"] = "2016-05-31 21:15:00",
-					["currencyID"] = "1129",
 					["reward"] = "|cffa335ee|Hitem:124343:0:0:0:0:0:0:0:100:71:4:3:0:529|h[Doomcrier's Shoulderplates]|h|r",
+					["currencyID"] = "1129",
 				}, -- [26]
 				{
-					["player"] = "Snorunt",
 					["timestamp"] = "2016-05-31 21:15:00",
+					["player"] = "Snorunt",
 					["coinsLeft"] = "9",
 					["currencyID"] = "1129",
 				}, -- [27]
 				{
-					["timestamp"] = "2016-06-02 20:32:00",
 					["player"] = "Kleist",
+					["timestamp"] = "2016-06-02 20:32:00",
 					["coinsLeft"] = "5",
 					["currencyID"] = "1129",
 				}, -- [28]
 				{
-					["timestamp"] = "2016-06-02 20:50:00",
 					["player"] = "Kleist",
+					["timestamp"] = "2016-06-02 20:50:00",
 					["coinsLeft"] = "4",
 					["currencyID"] = "1129",
 				}, -- [29]
@@ -6077,18 +6085,18 @@ EPGP_DB = {
 					["player"] = "Plummies",
 					["coinsLeft"] = "2",
 					["timestamp"] = "2016-06-02 20:53:00",
-					["reward"] = "|cffa335ee|Hitem:124334:0:0:0:0:0:0:0:100:71:4:5:2:561:566:529|h[Faceguard of Iron Wrath]|h|r",
 					["currencyID"] = "1129",
+					["reward"] = "|cffa335ee|Hitem:124334:0:0:0:0:0:0:0:100:71:4:5:2:561:566:529|h[Faceguard of Iron Wrath]|h|r",
 				}, -- [30]
 				{
-					["timestamp"] = "2016-06-02 21:53:00",
 					["player"] = "Valrion",
+					["timestamp"] = "2016-06-02 21:53:00",
 					["coinsLeft"] = "9",
 					["currencyID"] = "1129",
 				}, -- [31]
 				{
-					["timestamp"] = "2016-06-02 21:53:00",
 					["player"] = "Plummies",
+					["timestamp"] = "2016-06-02 21:53:00",
 					["coinsLeft"] = "1",
 					["currencyID"] = "1129",
 				}, -- [32]
@@ -6096,43 +6104,43 @@ EPGP_DB = {
 					["player"] = "Valrion",
 					["coinsLeft"] = "8",
 					["timestamp"] = "2016-06-02 22:24:00",
-					["reward"] = "|cffa335ee|Hitem:124374:0:0:0:0:0:0:0:100:252:4:5:1:566:529|h[Fiendsbreath Warmace]|h|r",
 					["currencyID"] = "1129",
+					["reward"] = "|cffa335ee|Hitem:124374:0:0:0:0:0:0:0:100:252:4:5:1:566:529|h[Fiendsbreath Warmace]|h|r",
 				}, -- [33]
 				{
 					["player"] = "Zeleros",
 					["coinsLeft"] = "5",
 					["timestamp"] = "2016-06-02 22:24:00",
-					["reward"] = "|cffa335ee|Hitem:124274:0:0:0:0:0:0:0:100:260:4:5:1:566:529|h[Felblade Spaulders]|h|r",
 					["currencyID"] = "1129",
+					["reward"] = "|cffa335ee|Hitem:124274:0:0:0:0:0:0:0:100:260:4:5:1:566:529|h[Felblade Spaulders]|h|r",
 				}, -- [34]
 				{
-					["timestamp"] = "2016-06-02 22:24:00",
 					["player"] = "Plummies",
+					["timestamp"] = "2016-06-02 22:24:00",
 					["coinsLeft"] = "0",
 					["currencyID"] = "1129",
 				}, -- [35]
 				{
-					["timestamp"] = "2016-06-02 22:24:00",
 					["player"] = "Kuttie",
+					["timestamp"] = "2016-06-02 22:24:00",
 					["coinsLeft"] = "7",
 					["currencyID"] = "1129",
 				}, -- [36]
 				{
-					["timestamp"] = "2016-06-02 22:24:00",
 					["player"] = "Snorunt",
+					["timestamp"] = "2016-06-02 22:24:00",
 					["coinsLeft"] = "8",
 					["currencyID"] = "1129",
 				}, -- [37]
 				{
-					["timestamp"] = "2016-06-02 22:25:00",
 					["player"] = "Rileelynn",
+					["timestamp"] = "2016-06-02 22:25:00",
 					["coinsLeft"] = "9",
 					["currencyID"] = "1129",
 				}, -- [38]
 				{
-					["timestamp"] = "2016-06-09 21:15:00",
 					["player"] = "Snorunt",
+					["timestamp"] = "2016-06-09 21:15:00",
 					["coinsLeft"] = "9",
 					["currencyID"] = "1129",
 				}, -- [39]
@@ -6140,18 +6148,18 @@ EPGP_DB = {
 					["player"] = "Plummies",
 					["coinsLeft"] = "2",
 					["timestamp"] = "2016-06-09 21:15:00",
-					["reward"] = "|cffa335ee|Hitem:124523:0:0:0:0:0:0:0:100:71:4:3:2:560:563:529|h[Worldbreaker's Resolve]|h|r",
 					["currencyID"] = "1129",
+					["reward"] = "|cffa335ee|Hitem:124523:0:0:0:0:0:0:0:100:71:4:3:2:560:563:529|h[Worldbreaker's Resolve]|h|r",
 				}, -- [40]
 				{
-					["timestamp"] = "2016-06-09 21:36:00",
 					["player"] = "Plummies",
+					["timestamp"] = "2016-06-09 21:36:00",
 					["coinsLeft"] = "1",
 					["currencyID"] = "1129",
 				}, -- [41]
 				{
-					["timestamp"] = "2016-06-09 21:45:00",
 					["player"] = "Plummies",
+					["timestamp"] = "2016-06-09 21:45:00",
 					["coinsLeft"] = "0",
 					["currencyID"] = "1129",
 				}, -- [42]
@@ -6159,12 +6167,12 @@ EPGP_DB = {
 					["player"] = "Ziglet",
 					["coinsLeft"] = "9",
 					["timestamp"] = "2016-06-09 22:03:00",
-					["reward"] = "|cffa335ee|Hitem:124341:0:0:0:0:0:0:0:100:70:4:5:1:566:529|h[Fel-Inscribed Shoulderplates]|h|r",
 					["currencyID"] = "1129",
+					["reward"] = "|cffa335ee|Hitem:124341:0:0:0:0:0:0:0:100:70:4:5:1:566:529|h[Fel-Inscribed Shoulderplates]|h|r",
 				}, -- [43]
 				{
-					["timestamp"] = "2016-06-09 22:48:00",
 					["player"] = "Snorunt",
+					["timestamp"] = "2016-06-09 22:48:00",
 					["coinsLeft"] = "8",
 					["currencyID"] = "1129",
 				}, -- [44]
@@ -6172,24 +6180,24 @@ EPGP_DB = {
 					["player"] = "Snorunt",
 					["coinsLeft"] = "7",
 					["timestamp"] = "2016-06-09 23:02:00",
-					["reward"] = "|cffa335ee|Hitem:124146:0:0:0:0:0:0:0:100:104:4:5:1:566:529|h[Drape of Gluttony]|h|r",
 					["currencyID"] = "1129",
+					["reward"] = "|cffa335ee|Hitem:124146:0:0:0:0:0:0:0:100:104:4:5:1:566:529|h[Drape of Gluttony]|h|r",
 				}, -- [45]
 				{
-					["timestamp"] = "2016-06-09 23:02:00",
 					["player"] = "Valrion",
+					["timestamp"] = "2016-06-09 23:02:00",
 					["coinsLeft"] = "9",
 					["currencyID"] = "1129",
 				}, -- [46]
 				{
-					["timestamp"] = "2016-06-09 23:02:00",
 					["player"] = "Kuttie",
+					["timestamp"] = "2016-06-09 23:02:00",
 					["coinsLeft"] = "6",
 					["currencyID"] = "1129",
 				}, -- [47]
 				{
-					["player"] = "Ziggi",
 					["timestamp"] = "2016-06-14 20:41:00",
+					["player"] = "Ziggi",
 					["coinsLeft"] = "8",
 					["currencyID"] = "1129",
 				}, -- [48]
@@ -6197,12 +6205,12 @@ EPGP_DB = {
 					["player"] = "Snorunt",
 					["coinsLeft"] = "9",
 					["timestamp"] = "2016-06-14 20:41:00",
-					["currencyID"] = "1129",
 					["reward"] = "|cffa335ee|Hitem:124247:0:0:0:0:0:0:0:100:268:4:3:1:41:529|h[Robe of the Hurricane's Eye]|h|r",
+					["currencyID"] = "1129",
 				}, -- [49]
 				{
-					["player"] = "Zeleros",
 					["timestamp"] = "2016-06-14 20:41:00",
+					["player"] = "Zeleros",
 					["coinsLeft"] = "4",
 					["currencyID"] = "1129",
 				}, -- [50]
@@ -6210,24 +6218,24 @@ EPGP_DB = {
 					["player"] = "Plummies",
 					["coinsLeft"] = "2",
 					["timestamp"] = "2016-06-14 20:53:00",
-					["currencyID"] = "1129",
 					["reward"] = "|cffa335ee|Hitem:124322:0:0:0:0:0:0:0:100:71:4:3:1:563:529|h[Treads of the Defiler]|h|r",
+					["currencyID"] = "1129",
 				}, -- [51]
 				{
-					["timestamp"] = "2016-06-21 20:26:00",
 					["player"] = "Ziggi",
+					["timestamp"] = "2016-06-21 20:26:00",
 					["coinsLeft"] = "6",
 					["currencyID"] = "1129",
 				}, -- [52]
 				{
-					["timestamp"] = "2016-06-21 20:26:00",
 					["player"] = "Zeleros",
+					["timestamp"] = "2016-06-21 20:26:00",
 					["coinsLeft"] = "3",
 					["currencyID"] = "1129",
 				}, -- [53]
 				{
-					["timestamp"] = "2016-06-21 21:28:00",
 					["player"] = "Ziggi",
+					["timestamp"] = "2016-06-21 21:28:00",
 					["coinsLeft"] = "5",
 					["currencyID"] = "1129",
 				}, -- [54]
@@ -6235,18 +6243,18 @@ EPGP_DB = {
 					["player"] = "Ziggi",
 					["coinsLeft"] = "4",
 					["timestamp"] = "2016-06-21 21:55:00",
-					["reward"] = "|cffa335ee|Hitem:124208:0:0:0:0:0:0:0:100:254:4:5:1:566:529|h[Heartseeking Skull Pendant]|h|r",
 					["currencyID"] = "1129",
+					["reward"] = "|cffa335ee|Hitem:124208:0:0:0:0:0:0:0:100:254:4:5:1:566:529|h[Heartseeking Skull Pendant]|h|r",
 				}, -- [55]
 				{
-					["timestamp"] = "2016-06-21 21:56:00",
 					["player"] = "Snorunt",
+					["timestamp"] = "2016-06-21 21:56:00",
 					["coinsLeft"] = "9",
 					["currencyID"] = "1129",
 				}, -- [56]
 				{
-					["timestamp"] = "2016-06-21 22:12:00",
 					["player"] = "Valrion",
+					["timestamp"] = "2016-06-21 22:12:00",
 					["coinsLeft"] = "9",
 					["currencyID"] = "1129",
 				}, -- [57]
@@ -6254,72 +6262,72 @@ EPGP_DB = {
 					["player"] = "Snorunt",
 					["coinsLeft"] = "8",
 					["timestamp"] = "2016-06-21 22:12:00",
-					["reward"] = "|cffa335ee|Hitem:124244:0:0:0:0:0:0:0:100:268:4:5:2:561:566:529|h[Chestguard of Gnawing Desire]|h|r",
 					["currencyID"] = "1129",
+					["reward"] = "|cffa335ee|Hitem:124244:0:0:0:0:0:0:0:100:268:4:5:2:561:566:529|h[Chestguard of Gnawing Desire]|h|r",
 				}, -- [58]
 				{
-					["timestamp"] = "2016-06-21 22:12:00",
 					["player"] = "Ziggi",
+					["timestamp"] = "2016-06-21 22:12:00",
 					["coinsLeft"] = "3",
 					["currencyID"] = "1129",
 				}, -- [59]
 				{
-					["timestamp"] = "2016-06-21 22:14:00",
 					["player"] = "Rileelynn",
+					["timestamp"] = "2016-06-21 22:14:00",
 					["coinsLeft"] = "9",
 					["currencyID"] = "1129",
 				}, -- [60]
 				{
-					["player"] = "Plummies",
 					["timestamp"] = "2016-06-30 22:44:00",
+					["player"] = "Plummies",
 					["coinsLeft"] = "1",
 					["currencyID"] = "1129",
 				}, -- [61]
 				{
-					["player"] = "Snorunt",
 					["timestamp"] = "2016-06-30 22:44:00",
+					["player"] = "Snorunt",
 					["coinsLeft"] = "9",
 					["currencyID"] = "1129",
 				}, -- [62]
 				{
-					["player"] = "Valrion",
 					["timestamp"] = "2016-06-30 22:44:00",
+					["player"] = "Valrion",
 					["coinsLeft"] = "9",
 					["currencyID"] = "1129",
 				}, -- [63]
 				{
-					["player"] = "Crediblehulk",
 					["timestamp"] = "2016-06-30 22:44:00",
+					["player"] = "Crediblehulk",
 					["coinsLeft"] = "6",
 					["currencyID"] = "1129",
 				}, -- [64]
 				{
-					["player"] = "Leisho",
 					["timestamp"] = "2016-06-30 22:44:00",
+					["player"] = "Leisho",
 					["coinsLeft"] = "9",
 					["currencyID"] = "1129",
 				}, -- [65]
 				{
-					["timestamp"] = "2016-07-12 20:50:00",
 					["player"] = "Plummies",
+					["timestamp"] = "2016-07-12 20:50:00",
 					["coinsLeft"] = "3",
 					["currencyID"] = "1129",
 				}, -- [66]
 				{
-					["timestamp"] = "2016-07-12 20:50:00",
 					["player"] = "Valrion",
+					["timestamp"] = "2016-07-12 20:50:00",
 					["coinsLeft"] = "9",
 					["currencyID"] = "1129",
 				}, -- [67]
 				{
-					["timestamp"] = "2016-07-12 20:50:00",
 					["player"] = "Crediblehulk",
+					["timestamp"] = "2016-07-12 20:50:00",
 					["coinsLeft"] = "9",
 					["currencyID"] = "1129",
 				}, -- [68]
 				{
-					["timestamp"] = "2016-07-12 20:51:00",
 					["player"] = "Snorunt",
+					["timestamp"] = "2016-07-12 20:51:00",
 					["coinsLeft"] = "9",
 					["currencyID"] = "1129",
 				}, -- [69]
@@ -6327,25 +6335,25 @@ EPGP_DB = {
 					["player"] = "Crediblehulk",
 					["coinsLeft"] = "8",
 					["timestamp"] = "2016-07-12 21:26:00",
-					["reward"] = "|cffa335ee|Hitem:124343:0:0:0:0:0:0:0:100:73:4:5:1:566:529|h[Doomcrier's Shoulderplates]|h|r",
 					["currencyID"] = "1129",
+					["reward"] = "|cffa335ee|Hitem:124343:0:0:0:0:0:0:0:100:73:4:5:1:566:529|h[Doomcrier's Shoulderplates]|h|r",
 				}, -- [70]
 				{
 					["player"] = "Leisho",
 					["coinsLeft"] = "8",
 					["timestamp"] = "2016-07-12 21:27:00",
-					["reward"] = "|cffa335ee|Hitem:124517:0:0:0:0:0:0:0:100:270:4:5:1:566:529|h[Sacred Draenic Incense]|h|r",
 					["currencyID"] = "1129",
+					["reward"] = "|cffa335ee|Hitem:124517:0:0:0:0:0:0:0:100:270:4:5:1:566:529|h[Sacred Draenic Incense]|h|r",
 				}, -- [71]
 				{
-					["timestamp"] = "2016-07-12 21:27:00",
 					["player"] = "Snorunt",
+					["timestamp"] = "2016-07-12 21:27:00",
 					["coinsLeft"] = "8",
 					["currencyID"] = "1129",
 				}, -- [72]
 				{
-					["timestamp"] = "2016-07-12 21:27:00",
 					["player"] = "Plummies",
+					["timestamp"] = "2016-07-12 21:27:00",
 					["coinsLeft"] = "2",
 					["currencyID"] = "1129",
 				}, -- [73]
@@ -6357,23 +6365,20 @@ EPGP_DB = {
 			["decay_p"] = 7,
 			["base_gp"] = 100,
 			["last_awards"] = {
-				["Xhul'horac"] = 1000,
 				["Mannoroth"] = 200,
+				["Xhul'horac"] = 1000,
 				["Fel Lord Zakuun"] = 1000,
 				["Hellfire Citadel"] = 100,
 			},
 			["blizzard_show_offline"] = false,
 		},
-		["Nalyria - Thrall"] = {
-			["outsiders"] = 0,
+		["Seed of Aldrassil"] = {
 		},
-		["Kargen - Thrall"] = {
-			["outsiders"] = 0,
-		},
-		["Kitha - Thrall"] = {
-			["outsiders"] = 0,
-		},
-		["muddskunks"] = {
+		["Alinastra - Thrall"] = {
+			["decay_p"] = 7,
+			["min_ep"] = 2500,
+			["extras_p"] = 50,
+			["base_gp"] = 100,
 			["outsiders"] = 0,
 		},
 	},

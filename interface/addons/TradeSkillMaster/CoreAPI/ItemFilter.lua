@@ -9,7 +9,7 @@
 -- This file contains APIs for advanced item filtering
 
 local TSM = select(2, ...)
-local private = {classLookup={}, subClassLookup={}, inventoryTypeLookup={}}
+local private = {}
 
 
 
@@ -44,12 +44,12 @@ function TSMAPI.ItemFilter:Parse(str)
 			else
 				filterInfo.minILevel = tonumber(strmatch(part, "^i(%d+)"))
 			end
-		elseif private:ItemClassToIndex(part) then
-			filterInfo.class = private:ItemClassToIndex(part)
-		elseif private:ItemSubClassToIndex(part, filterInfo.class) then
-			filterInfo.subClass = private:ItemSubClassToIndex(part, filterInfo.class)
-		elseif private:ItemInventoryTypeToIndex(part) then
-			filterInfo.invType = private:ItemInventoryTypeToIndex(part)
+		elseif TSMAPI.Item:GetClassIdFromClassString(part) then
+			filterInfo.class = TSMAPI.Item:GetClassIdFromClassString(part)
+		elseif TSMAPI.Item:GetSubClassIdFromSubClassString(part, filterInfo.class) then
+			filterInfo.subClass = TSMAPI.Item:GetSubClassIdFromSubClassString(part, filterInfo.class)
+		elseif TSMAPI.Item:GetInventorySlotIdFromInventorySlotString(part) then
+			filterInfo.invType = TSMAPI.Item:GetInventorySlotIdFromInventorySlotString(part)
 		elseif private:ItemRarityToIndex(part) then
 			filterInfo.rarity = private:ItemRarityToIndex(part)
 		elseif TSMAPI:MoneyFromString(part) then
@@ -111,19 +111,19 @@ function TSMAPI.ItemFilter:MatchesFilter(filterInfo, item, price)
 	end
 
 	-- check the item class
-	class = private:ItemClassToIndex(class) or 0
+	class = TSMAPI.Item:GetClassIdFromClassString(class) or 0
 	if filterInfo.class and class ~= filterInfo.class then
 		return
 	end
 
 	-- check the item subclass
-	subClass = private:ItemSubClassToIndex(subClass, class) or 0
+	subClass = TSMAPI.Item:GetSubClassIdFromSubClassString(subClass, class) or 0
 	if filterInfo.subClass and subClass ~= filterInfo.subClass then
 		return
 	end
 
 	-- check the equip slot
-	local invType = private:ItemInventoryTypeToIndex(_G[equipSlot])
+	local invType = _G[equipSlot] and TSMAPI.Item:GetInventorySlotIdFromInventorySlotString(_G[equipSlot])
 	if filterInfo.invType and invType ~= filterInfo.invType then
 		return
 	end
@@ -141,55 +141,11 @@ end
 
 
 -- ============================================================================
--- Init Code
--- ============================================================================
-
-do
-	private.classLookup = {GetAuctionItemClasses()}
-	private.subClassLookup = {}
-	for i in pairs(private.classLookup) do
-		private.subClassLookup[i] = {GetAuctionItemSubClasses(i)}
-	end
-
-	local auctionInvTypes = {GetAuctionInvTypes(2,1)}
-	for i=1, #auctionInvTypes, 2 do
-		TSMAPI:Assert(type(auctionInvTypes[i]) == "string")
-		private.inventoryTypeLookup[strlower(_G[auctionInvTypes[i]])] = (i + 1) / 2
-	end
-end
-
-
-
--- ============================================================================
 -- Helper Functions
 -- ============================================================================
 
-function private:ItemInventoryTypeToIndex(str)
-	if not str then return end
-	str = strlower(str)
-	return private.inventoryTypeLookup[str]
-end
-
-function private:ItemClassToIndex(str)
-	for i, class in pairs(private.classLookup) do
-		if strlower(str) == strlower(class) then
-			return i
-		end
-	end
-end
-
-function private:ItemSubClassToIndex(str, class)
-	if not class or not private.subClassLookup[class] then return end
-
-	for i, subClass in pairs(private.subClassLookup[class]) do
-		if strlower(str) == strlower(subClass) then
-			return i
-		end
-	end
-end
-
 function private:ItemRarityToIndex(str)
-	for i=0, 4 do
+	for i = 0, 4 do
 		local text =  _G["ITEM_QUALITY"..i.."_DESC"]
 		if strlower(str) == strlower(text) then
 			return i

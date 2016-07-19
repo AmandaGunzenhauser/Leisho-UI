@@ -5,8 +5,8 @@ MasqueDB = {
 			["char"] = {
 				["Leisho - Thrall"] = {
 					["profile"] = "MONK",
-					["specGroup"] = 1,
 					["enabled"] = true,
+					["specGroup"] = 1,
 				},
 			},
 		},
@@ -18,10 +18,10 @@ MasqueDB = {
 		["Leisho - Durotan"] = "Default",
 		["Kargen - Thrall"] = "Default",
 		["Ahka - Thrall"] = "Default",
-		["Kitha - Thrall"] = "Default",
+		["Liulu - Thrall"] = "Default",
 		["Nalyria - Thrall"] = "Default",
 		["Therru - Thrall"] = "Default",
-		["Liulu - Thrall"] = "Default",
+		["Kitha - Thrall"] = "Default",
 		["Alinastra - Thrall"] = "Default",
 	},
 	["profiles"] = {
@@ -101,6 +101,7 @@ MasqueDB = {
 				["WeakAuras_transcendence_down"] = {
 					["Disabled"] = true,
 					["SkinID"] = "Leisho: Hexagon",
+					["Inherit"] = false,
 					["Colors"] = {
 						["Normal"] = {
 							0, -- [1]
@@ -121,7 +122,6 @@ MasqueDB = {
 							1, -- [4]
 						},
 					},
-					["Inherit"] = false,
 				},
 				["WeakAuras_tiger_power_missing_2"] = {
 					["Colors"] = {
@@ -964,6 +964,7 @@ MasqueDB = {
 				["WeakAuras_transcendence_up"] = {
 					["Disabled"] = true,
 					["SkinID"] = "Leisho: Hexagon",
+					["Inherit"] = false,
 					["Colors"] = {
 						["Normal"] = {
 							0, -- [1]
@@ -984,7 +985,6 @@ MasqueDB = {
 							1, -- [4]
 						},
 					},
-					["Inherit"] = false,
 				},
 				["ElvUI_Pet Bar"] = {
 					["Colors"] = {
@@ -1321,6 +1321,7 @@ MasqueDB = {
 				["WeakAuras_transfer_down"] = {
 					["Disabled"] = true,
 					["SkinID"] = "Leisho: Hexagon",
+					["Inherit"] = false,
 					["Colors"] = {
 						["Normal"] = {
 							0, -- [1]
@@ -1341,7 +1342,6 @@ MasqueDB = {
 							1, -- [4]
 						},
 					},
-					["Inherit"] = false,
 				},
 				["WeakAuras_ms_icon"] = {
 					["Colors"] = {
@@ -2042,12 +2042,6 @@ MasqueDB = {
 							0, -- [3]
 							0.980000000447035, -- [4]
 						},
-						["Gloss"] = {
-							0, -- [1]
-							1, -- [2]
-							0.588235294117647, -- [3]
-							1, -- [4]
-						},
 						["Highlight"] = {
 							0.0941176470588235, -- [1]
 							1, -- [2]
@@ -2059,6 +2053,12 @@ MasqueDB = {
 							0.858823529411765, -- [2]
 							1, -- [3]
 							0.570000022649765, -- [4]
+						},
+						["Gloss"] = {
+							0, -- [1]
+							1, -- [2]
+							0.588235294117647, -- [3]
+							1, -- [4]
 						},
 					},
 					["SkinID"] = "Leisho: Round",
@@ -2160,7 +2160,7 @@ MasqueDB = {
 					["Inherit"] = false,
 					["SkinID"] = "Leisho: Round",
 				},
-				["WeakAuras_nimble_brew_up"] = {
+				["WeakAuras_etheralus_cd_off"] = {
 					["Colors"] = {
 						["Normal"] = {
 							0, -- [1]
@@ -2303,7 +2303,7 @@ MasqueDB = {
 					["SkinID"] = "Leisho: Round",
 					["Inherit"] = false,
 				},
-				["WeakAuras_charging_ox_up"] = {
+				["WeakAuras_crane's_zeal_active"] = {
 					["Colors"] = {
 						["Normal"] = {
 							0, -- [1]
@@ -2398,7 +2398,7 @@ MasqueDB = {
 					["SkinID"] = "Leisho: Hexagon",
 					["Inherit"] = false,
 				},
-				["Bartender4_7"] = {
+				["WeakAuras_chi_brew_on"] = {
 					["Colors"] = {
 						["Normal"] = {
 							0, -- [1]
@@ -2494,30 +2494,6 @@ MasqueDB = {
 					["Inherit"] = false,
 					["SkinID"] = "Leisho: Hexagon",
 				},
-				["WeakAuras_power_strikes_off"] = {
-					["Colors"] = {
-						["Normal"] = {
-							0, -- [1]
-							0, -- [2]
-							0, -- [3]
-							0.980000000447035, -- [4]
-						},
-						["Highlight"] = {
-							0.0941176470588235, -- [1]
-							1, -- [2]
-							0.701960784313726, -- [3]
-							1, -- [4]
-						},
-						["Gloss"] = {
-							0, -- [1]
-							1, -- [2]
-							0.588235294117647, -- [3]
-							1, -- [4]
-						},
-					},
-					["SkinID"] = "Leisho: Hexagon",
-					["Inherit"] = false,
-				},
 				["WeakAuras_detox_pg_up"] = {
 					["Colors"] = {
 						["Normal"] = {
@@ -2542,7 +2518,7 @@ MasqueDB = {
 					["SkinID"] = "Leisho: Hexagon",
 					["Inherit"] = false,
 				},
-				["WeakAuras_rsk_active"] = {
+				["WeakAuras_power_strikes_off"] = {
 					["Colors"] = {
 						["Normal"] = {
 							0, -- [1]
@@ -2565,6 +2541,29 @@ MasqueDB = {
 					},
 					["SkinID"] = "Leisho: Hexagon",
 					["Inherit"] = false,
+				},
+				["WeakAuras"] = {
+					["Colors"] = {
+						["Normal"] = {
+							0, -- [1]
+							0, -- [2]
+							0, -- [3]
+							0.980000000447035, -- [4]
+						},
+						["Highlight"] = {
+							0.0941176470588235, -- [1]
+							1, -- [2]
+							0.701960784313726, -- [3]
+							1, -- [4]
+						},
+						["Gloss"] = {
+							0, -- [1]
+							1, -- [2]
+							0.588235294117647, -- [3]
+							1, -- [4]
+						},
+					},
+					["SkinID"] = "Leisho: Hexagon",
 				},
 				["Bartender4_MicroMenu"] = {
 					["Colors"] = {
@@ -2589,7 +2588,7 @@ MasqueDB = {
 					},
 					["SkinID"] = "Leisho: Hexagon",
 				},
-				["WeakAuras_vital_mists_active"] = {
+				["WeakAuras_spear_hand_strike_deactive"] = {
 					["Colors"] = {
 						["Normal"] = {
 							0, -- [1]
@@ -2613,7 +2612,7 @@ MasqueDB = {
 					["SkinID"] = "Leisho: Hexagon",
 					["Inherit"] = false,
 				},
-				["WeakAuras_tiger_strikes_missing"] = {
+				["WeakAuras_ox_wave_pg_up"] = {
 					["Colors"] = {
 						["Normal"] = {
 							0, -- [1]
@@ -2661,7 +2660,7 @@ MasqueDB = {
 					["SkinID"] = "Leisho: Hexagon",
 					["Inherit"] = false,
 				},
-				["WeakAuras_diffuse_magic_missing"] = {
+				["WeakAuras_tiger_power_active"] = {
 					["Colors"] = {
 						["Normal"] = {
 							0, -- [1]
@@ -2733,7 +2732,7 @@ MasqueDB = {
 					["SkinID"] = "Leisho: Hexagon",
 					["Inherit"] = false,
 				},
-				["WeakAuras_chi_burst_down"] = {
+				["ElvUI_Debuffs"] = {
 					["Colors"] = {
 						["Normal"] = {
 							0, -- [1]
@@ -2755,9 +2754,8 @@ MasqueDB = {
 						},
 					},
 					["SkinID"] = "Leisho: Hexagon",
-					["Inherit"] = false,
 				},
-				["WeakAuras_xuen_tiger_up"] = {
+				["Bartender4_6"] = {
 					["Colors"] = {
 						["Normal"] = {
 							0, -- [1]
@@ -2778,8 +2776,8 @@ MasqueDB = {
 							1, -- [4]
 						},
 					},
-					["SkinID"] = "Leisho: Hexagon",
 					["Inherit"] = false,
+					["SkinID"] = "Leisho: Hexagon",
 				},
 				["WeakAuras_xuen_tiger_down"] = {
 					["Colors"] = {
@@ -2876,7 +2874,7 @@ MasqueDB = {
 					},
 					["SkinID"] = "Leisho: Hexagon",
 				},
-				["WeakAuras_rjw_up"] = {
+				["WeakAuras_chi_brew_on_2"] = {
 					["Colors"] = {
 						["Normal"] = {
 							0, -- [1]
@@ -2897,10 +2895,10 @@ MasqueDB = {
 							1, -- [4]
 						},
 					},
-					["SkinID"] = "Leisho: Serpent",
 					["Inherit"] = false,
+					["SkinID"] = "Leisho: Hexagon",
 				},
-				["WeakAuras_chi_brew_on_2"] = {
+				["WeakAuras_renewing_mist_set"] = {
 					["Colors"] = {
 						["Normal"] = {
 							0, -- [1]
@@ -2972,7 +2970,7 @@ MasqueDB = {
 					["SkinID"] = "Leisho: Hexagon",
 					["Inherit"] = false,
 				},
-				["WeakAuras_renewing_mist_set"] = {
+				["WeakAuras_rjw_up"] = {
 					["Colors"] = {
 						["Normal"] = {
 							0, -- [1]
@@ -2993,8 +2991,8 @@ MasqueDB = {
 							1, -- [4]
 						},
 					},
+					["SkinID"] = "Leisho: Serpent",
 					["Inherit"] = false,
-					["SkinID"] = "Leisho: Hexagon",
 				},
 				["WeakAuras_bots_up"] = {
 					["Colors"] = {
@@ -3044,7 +3042,7 @@ MasqueDB = {
 					["Inherit"] = false,
 					["SkinID"] = "Leisho: Hexagon",
 				},
-				["Bartender4_6"] = {
+				["WeakAuras_xuen_tiger_up"] = {
 					["Colors"] = {
 						["Normal"] = {
 							0, -- [1]
@@ -3065,10 +3063,10 @@ MasqueDB = {
 							1, -- [4]
 						},
 					},
+					["SkinID"] = "Leisho: Hexagon",
 					["Inherit"] = false,
-					["SkinID"] = "Leisho: Hexagon",
 				},
-				["ElvUI_Debuffs"] = {
+				["WeakAuras_chi_burst_down"] = {
 					["Colors"] = {
 						["Normal"] = {
 							0, -- [1]
@@ -3090,6 +3088,7 @@ MasqueDB = {
 						},
 					},
 					["SkinID"] = "Leisho: Hexagon",
+					["Inherit"] = false,
 				},
 				["Bartender4_BagBar"] = {
 					["Colors"] = {
@@ -3118,6 +3117,7 @@ MasqueDB = {
 				["WeakAuras_transfer_up"] = {
 					["Disabled"] = true,
 					["SkinID"] = "Leisho: Hexagon",
+					["Inherit"] = false,
 					["Colors"] = {
 						["Normal"] = {
 							0, -- [1]
@@ -3138,9 +3138,8 @@ MasqueDB = {
 							1, -- [4]
 						},
 					},
-					["Inherit"] = false,
 				},
-				["WeakAuras_tiger_power_active"] = {
+				["WeakAuras_diffuse_magic_missing"] = {
 					["Colors"] = {
 						["Normal"] = {
 							0, -- [1]
@@ -3164,7 +3163,7 @@ MasqueDB = {
 					["SkinID"] = "Leisho: Hexagon",
 					["Inherit"] = false,
 				},
-				["WeakAuras_ox_wave_pg_up"] = {
+				["WeakAuras_tiger_strikes_missing"] = {
 					["Colors"] = {
 						["Normal"] = {
 							0, -- [1]
@@ -3188,7 +3187,7 @@ MasqueDB = {
 					["SkinID"] = "Leisho: Hexagon",
 					["Inherit"] = false,
 				},
-				["WeakAuras_spear_hand_strike_deactive"] = {
+				["WeakAuras_vital_mists_active"] = {
 					["Colors"] = {
 						["Normal"] = {
 							0, -- [1]
@@ -3212,7 +3211,7 @@ MasqueDB = {
 					["SkinID"] = "Leisho: Hexagon",
 					["Inherit"] = false,
 				},
-				["WeakAuras"] = {
+				["WeakAuras_rsk_active"] = {
 					["Colors"] = {
 						["Normal"] = {
 							0, -- [1]
@@ -3234,6 +3233,7 @@ MasqueDB = {
 						},
 					},
 					["SkinID"] = "Leisho: Hexagon",
+					["Inherit"] = false,
 				},
 				["WeakAuras_chi_brew_off"] = {
 					["Colors"] = {
@@ -3283,7 +3283,7 @@ MasqueDB = {
 					["SkinID"] = "Leisho: Serpent",
 					["Inherit"] = false,
 				},
-				["WeakAuras_chi_brew_on"] = {
+				["Bartender4_7"] = {
 					["Colors"] = {
 						["Normal"] = {
 							0, -- [1]
@@ -3331,7 +3331,7 @@ MasqueDB = {
 					["SkinID"] = "Leisho: Hexagon",
 					["Inherit"] = false,
 				},
-				["WeakAuras_crane's_zeal_active"] = {
+				["WeakAuras_charging_ox_up"] = {
 					["Colors"] = {
 						["Normal"] = {
 							0, -- [1]
@@ -3403,7 +3403,7 @@ MasqueDB = {
 					["SkinID"] = "Leisho: Hexagon",
 					["Inherit"] = false,
 				},
-				["WeakAuras_etheralus_cd_off"] = {
+				["WeakAuras_nimble_brew_up"] = {
 					["Colors"] = {
 						["Normal"] = {
 							0, -- [1]
@@ -3504,42 +3504,40 @@ MasqueDB = {
 		["Brewmaster"] = {
 			["Groups"] = {
 				["WeakAuras_revival_up"] = {
-					["Inherit"] = false,
 					["SkinID"] = "Zoomed",
+					["Inherit"] = false,
 				},
 				["WeakAuras_fortifying_brew_up"] = {
-					["Inherit"] = false,
 					["SkinID"] = "Zoomed",
+					["Inherit"] = false,
 				},
 				["WeakAuras_transfer_down"] = {
-					["Inherit"] = false,
 					["SkinID"] = "Zoomed",
-				},
-				["WeakAuras_healing_elixir_off"] = {
 					["Inherit"] = false,
-					["SkinID"] = "Zoomed",
-				},
-				["WeakAuras_ms_icon"] = {
-					["Inherit"] = false,
-					["SkinID"] = "Zoomed",
 				},
 				["Bartender4_7"] = {
+					["SkinID"] = "Zoomed",
 					["Inherit"] = false,
+				},
+				["WeakAuras_ms_icon"] = {
+					["SkinID"] = "Zoomed",
+					["Inherit"] = false,
+				},
+				["WeakAuras_healing_elixir_on"] = {
+					["SkinID"] = "Zoomed",
+					["Inherit"] = false,
+				},
+				["WeakAuras_rsk_missing"] = {
 					["SkinID"] = "Zoomed",
 				},
-				["WeakAuras_touch_of_death_down"] = {
-					["Inherit"] = false,
-					["SkinID"] = "Zoomed",
-				},
-				["WeakAuras_jade_statue_up"] = {
-					["Inherit"] = false,
+				["WeakAuras_ox_wave_pg_up"] = {
 					["SkinID"] = "Zoomed",
 				},
 				["WeakAuras_diffuse_magic_active"] = {
-					["Inherit"] = false,
 					["SkinID"] = "Zoomed",
+					["Inherit"] = false,
 				},
-				["ElvUI_Stance Bar"] = {
+				["WeakAuras_detox_pg_down"] = {
 					["SkinID"] = "Zoomed",
 				},
 				["WeakAuras_tiger_power_missing_2"] = {
@@ -3549,20 +3547,20 @@ MasqueDB = {
 					["SkinID"] = "Zoomed",
 				},
 				["WeakAuras_charging_ox_down"] = {
-					["Inherit"] = false,
 					["SkinID"] = "Zoomed",
+					["Inherit"] = false,
 				},
 				["WeakAuras_dampen_harm_off"] = {
-					["Inherit"] = false,
 					["SkinID"] = "Zoomed",
+					["Inherit"] = false,
 				},
-				["WeakAuras_fortifying_brew_down"] = {
-					["Inherit"] = false,
+				["WeakAuras_hfc_special_debuffs"] = {
 					["SkinID"] = "Zoomed",
+					["Inherit"] = false,
 				},
 				["WeakAuras_spear_hand_strike_active"] = {
-					["Inherit"] = false,
 					["SkinID"] = "Zoomed",
+					["Inherit"] = false,
 				},
 				["WeakAuras_vital_mists_missing"] = {
 					["SkinID"] = "Zoomed",
@@ -3570,40 +3568,40 @@ MasqueDB = {
 				["WeakAuras_tiger_power_active"] = {
 					["SkinID"] = "Zoomed",
 				},
-				["WeakAuras_tiger_power"] = {
+				["WeakAuras_touch_of_death_up"] = {
 					["SkinID"] = "Zoomed",
+					["Inherit"] = false,
 				},
 				["WeakAuras_serenity_usable"] = {
 					["SkinID"] = "Zoomed",
 				},
 				["WeakAuras_xuen_tiger_down"] = {
-					["Inherit"] = false,
 					["SkinID"] = "Zoomed",
+					["Inherit"] = false,
 				},
 				["WeakAuras_shs_pg_down"] = {
 					["SkinID"] = "Zoomed",
 				},
-				["WeakAuras_tiger's_lust_up"] = {
-					["Inherit"] = false,
+				["WeakAuras_transcendence_down"] = {
 					["SkinID"] = "Zoomed",
+					["Inherit"] = false,
 				},
 				["Bartender4_PetBar"] = {
 					["SkinID"] = "Zoomed",
 				},
-				["WeakAuras_roll_on"] = {
-					["Inherit"] = false,
+				["Bartender4"] = {
 					["SkinID"] = "Zoomed",
 				},
 				["WeakAuras_guard_expected_value"] = {
 					["SkinID"] = "Zoomed",
 				},
 				["WeakAuras_tiger's_lust_down"] = {
-					["Inherit"] = false,
 					["SkinID"] = "Zoomed",
+					["Inherit"] = false,
 				},
 				["WeakAuras_etheralus_buff_duration"] = {
-					["Inherit"] = false,
 					["SkinID"] = "Zoomed",
+					["Inherit"] = false,
 				},
 				["WeakAuras_shs_pg_up"] = {
 					["SkinID"] = "Zoomed",
@@ -3611,30 +3609,31 @@ MasqueDB = {
 				["Bartender4_6"] = {
 					["SkinID"] = "Zoomed",
 				},
-				["WeakAuras_xuen_pg_down"] = {
+				["WeakAuras_spear_hand_strike_deactive"] = {
 					["SkinID"] = "Zoomed",
-				},
-				["WeakAuras_eh_off_cd"] = {
 					["Inherit"] = false,
-					["SkinID"] = "Zoomed",
-				},
-				["WeakAuras_nimble_brew_down"] = {
-					["Inherit"] = false,
-					["SkinID"] = "Zoomed",
-				},
-				["WeakAuras_power_strikes_on"] = {
-					["Inherit"] = false,
-					["SkinID"] = "Zoomed",
 				},
 				["WeakAuras_chi_ex_crane_4"] = {
 					["SkinID"] = "Zoomed",
+				},
+				["WeakAuras_etheralus_cd_off"] = {
+					["SkinID"] = "Zoomed",
+					["Inherit"] = false,
+				},
+				["WeakAuras_power_strikes_on"] = {
+					["SkinID"] = "Zoomed",
+					["Inherit"] = false,
+				},
+				["WeakAuras_chi_torpedo_off"] = {
+					["SkinID"] = "Zoomed",
+					["Inherit"] = false,
 				},
 				["Bartender4_Vehicle"] = {
 					["SkinID"] = "Zoomed",
 				},
 				["WeakAuras_leg_sweep_up"] = {
-					["Inherit"] = false,
 					["SkinID"] = "Zoomed",
+					["Inherit"] = false,
 				},
 				["WeakAuras_zs_down"] = {
 					["SkinID"] = "Zoomed",
@@ -3645,128 +3644,127 @@ MasqueDB = {
 				["ElvUI_Buffs"] = {
 					["SkinID"] = "Zoomed",
 				},
-				["Masque"] = {
-					["SkinID"] = "Zoomed",
-				},
-				["WeakAuras_detox_up"] = {
-					["Inherit"] = false,
-					["SkinID"] = "Zoomed",
-				},
-				["WeakAuras_jade_statue_down"] = {
-					["Inherit"] = false,
-					["SkinID"] = "Zoomed",
-				},
-				["WeakAuras_chi_wave_up"] = {
-					["Inherit"] = false,
-					["SkinID"] = "Zoomed",
-				},
-				["WeakAuras_charging_ox_up"] = {
-					["Inherit"] = false,
-					["SkinID"] = "Zoomed",
-				},
-				["WeakAuras_dampen_harm_on"] = {
-					["Inherit"] = false,
-					["SkinID"] = "Zoomed",
-				},
-				["WeakAuras_etheralus_cd"] = {
-					["Inherit"] = false,
-					["SkinID"] = "Zoomed",
-				},
 				["WeakAuras_hfc_mark_of_the_necromancer"] = {
-					["Inherit"] = false,
 					["SkinID"] = "Zoomed",
+					["Inherit"] = false,
 				},
 				["WeakAuras_bots_up"] = {
+					["SkinID"] = "Zoomed",
 					["Inherit"] = false,
-					["SkinID"] = "Zoomed",
 				},
-				["WeakAuras_etheralus_cd_off"] = {
+				["WeakAuras_ring_of_peace_down"] = {
+					["SkinID"] = "Zoomed",
 					["Inherit"] = false,
-					["SkinID"] = "Zoomed",
 				},
-				["WeakAuras_life_cocoon_down"] = {
+				["WeakAuras_chi_wave_up"] = {
+					["SkinID"] = "Zoomed",
 					["Inherit"] = false,
-					["SkinID"] = "Zoomed",
-				},
-				["WeakAuras_tiger_strikes_missing"] = {
-					["SkinID"] = "Zoomed",
 				},
 				["Bartender4_8"] = {
 					["Disabled"] = true,
 					["SkinID"] = "Zoomed",
 				},
 				["WeakAuras_el_down"] = {
-					["Inherit"] = false,
 					["SkinID"] = "Zoomed",
+					["Inherit"] = false,
+				},
+				["WeakAuras_xuen_pg_down"] = {
+					["SkinID"] = "Zoomed",
+				},
+				["WeakAuras_tiger_strikes_off_2"] = {
+					["SkinID"] = "Zoomed",
+				},
+				["WeakAuras_xuen_tiger_up"] = {
+					["SkinID"] = "Zoomed",
+					["Inherit"] = false,
+				},
+				["WeakAuras_jade_statue_down"] = {
+					["SkinID"] = "Zoomed",
+					["Inherit"] = false,
+				},
+				["WeakAuras_life_cocoon_down"] = {
+					["SkinID"] = "Zoomed",
+					["Inherit"] = false,
+				},
+				["WeakAuras_paralysis_cd_"] = {
+					["SkinID"] = "Zoomed",
+					["Inherit"] = false,
+				},
+				["ElvUI_Debuffs"] = {
+					["SkinID"] = "Zoomed",
+				},
+				["WeakAuras_eh_on_cd"] = {
+					["SkinID"] = "Zoomed",
+					["Inherit"] = false,
 				},
 				["ElvUI"] = {
 					["SkinID"] = "Zoomed",
 				},
-				["WeakAuras_vital_mists_active"] = {
+				["Bartender4_1"] = {
 					["SkinID"] = "Zoomed",
 				},
-				["WeakAuras_rare_teleporter"] = {
+				["WeakAuras_revival_down"] = {
 					["SkinID"] = "Zoomed",
-				},
-				["WeakAuras_chi_burst_up"] = {
 					["Inherit"] = false,
+				},
+				["Bartender4_4"] = {
 					["SkinID"] = "Zoomed",
 				},
-				["WeakAuras_crane's_zeal_active"] = {
+				["ElvUI_Consolidated Buffs"] = {
 					["SkinID"] = "Zoomed",
 				},
 				["WeakAuras_tiger_strikes_on_2"] = {
 					["SkinID"] = "Zoomed",
 				},
 				["WeakAuras_tft_up"] = {
-					["Inherit"] = false,
 					["SkinID"] = "Zoomed",
+					["Inherit"] = false,
 				},
-				["WeakAuras_tiger_strikes_off_2"] = {
+				["Masque"] = {
 					["SkinID"] = "Zoomed",
 				},
 				["WeakAuras_leg_sweep_down"] = {
-					["Inherit"] = false,
 					["SkinID"] = "Zoomed",
+					["Inherit"] = false,
 				},
 				["WeakAuras_tiger_strikes_active"] = {
 					["SkinID"] = "Zoomed",
 				},
 				["WeakAuras_chi_torpedo_on"] = {
-					["Inherit"] = false,
 					["SkinID"] = "Zoomed",
+					["Inherit"] = false,
 				},
 				["Bartender4_StanceBar"] = {
 					["SkinID"] = "Zoomed",
 				},
-				["WeakAuras_tiger_power_missing"] = {
+				["WeakAuras_tiger_strikes_missing"] = {
 					["SkinID"] = "Zoomed",
 				},
 				["WeakAuras_paralysis_ready"] = {
-					["Inherit"] = false,
 					["SkinID"] = "Zoomed",
+					["Inherit"] = false,
 				},
 				["WeakAuras_life_cocoon_up"] = {
-					["Inherit"] = false,
 					["SkinID"] = "Zoomed",
+					["Inherit"] = false,
 				},
-				["Bartender4_1"] = {
+				["WeakAuras_vital_mists_active"] = {
 					["SkinID"] = "Zoomed",
 				},
 				["WeakAuras_roll_off"] = {
-					["Inherit"] = false,
 					["SkinID"] = "Zoomed",
+					["Inherit"] = false,
 				},
 				["WeakAuras_nimble_brew_up"] = {
-					["Inherit"] = false,
 					["SkinID"] = "Zoomed",
+					["Inherit"] = false,
 				},
 				["Bartender4_3"] = {
 					["SkinID"] = "Zoomed",
 				},
-				["WeakAuras_revival_down"] = {
-					["Inherit"] = false,
+				["WeakAuras_rjw_up"] = {
 					["SkinID"] = "Zoomed",
+					["Inherit"] = false,
 				},
 				["WeakAuras_crane's_zeal_missing"] = {
 					["SkinID"] = "Zoomed",
@@ -3780,12 +3778,13 @@ MasqueDB = {
 				["WeakAuras_xuen_pg_up"] = {
 					["SkinID"] = "Zoomed",
 				},
-				["Bartender4_4"] = {
+				["WeakAuras_chi_burst_up"] = {
 					["SkinID"] = "Zoomed",
-				},
-				["WeakAuras_bots_down"] = {
 					["Inherit"] = false,
+				},
+				["WeakAuras_detox_off"] = {
 					["SkinID"] = "Zoomed",
+					["Inherit"] = false,
 				},
 				["WeakAuras_ox_wave_pg_down"] = {
 					["SkinID"] = "Zoomed",
@@ -3793,23 +3792,24 @@ MasqueDB = {
 				["ElvUI_ActionBars"] = {
 					["SkinID"] = "Zoomed",
 				},
-				["WeakAuras_power_strikes_off"] = {
-					["Inherit"] = false,
-					["SkinID"] = "Zoomed",
-				},
 				["Bartender4_5"] = {
 					["SkinID"] = "Zoomed",
 				},
-				["WeakAuras_detox_pg_up"] = {
+				["WeakAuras_chi_burst_down"] = {
 					["SkinID"] = "Zoomed",
-				},
-				["WeakAuras_rjw_down"] = {
 					["Inherit"] = false,
+				},
+				["WeakAuras_chi_wave_down"] = {
 					["SkinID"] = "Zoomed",
+					["Inherit"] = false,
+				},
+				["WeakAuras_power_strikes_off"] = {
+					["SkinID"] = "Zoomed",
+					["Inherit"] = false,
 				},
 				["WeakAuras_etheralus_shield"] = {
-					["Inherit"] = false,
 					["SkinID"] = "Zoomed",
+					["Inherit"] = false,
 				},
 				["Bartender4_MicroMenu"] = {
 					["SkinID"] = "Zoomed",
@@ -3818,140 +3818,140 @@ MasqueDB = {
 					["SkinID"] = "Zoomed",
 				},
 				["WeakAuras_transcendence_up"] = {
-					["Inherit"] = false,
 					["SkinID"] = "Zoomed",
+					["Inherit"] = false,
 				},
 				["WeakAuras_zs_up"] = {
 					["SkinID"] = "Zoomed",
 				},
-				["WeakAuras_zen_sphere_up"] = {
-					["Inherit"] = false,
+				["WeakAuras_el_up"] = {
 					["SkinID"] = "Zoomed",
+					["Inherit"] = false,
 				},
 				["ElvUI_Pet Bar"] = {
 					["SkinID"] = "Zoomed",
 				},
-				["WeakAuras_diffuse_magic_missing"] = {
-					["Inherit"] = false,
-					["SkinID"] = "Zoomed",
-				},
 				["WeakAuras_chi_brew_on"] = {
+					["SkinID"] = "Zoomed",
 					["Inherit"] = false,
+				},
+				["WeakAuras_diffuse_magic_missing"] = {
+					["SkinID"] = "Zoomed",
+					["Inherit"] = false,
+				},
+				["WeakAuras_zen_sphere_up"] = {
+					["SkinID"] = "Zoomed",
+					["Inherit"] = false,
+				},
+				["WeakAuras_rjw_down"] = {
+					["SkinID"] = "Zoomed",
+					["Inherit"] = false,
+				},
+				["WeakAuras_detox_pg_up"] = {
 					["SkinID"] = "Zoomed",
 				},
-				["WeakAuras_el_up"] = {
+				["WeakAuras_bots_down"] = {
+					["SkinID"] = "Zoomed",
 					["Inherit"] = false,
+				},
+				["WeakAuras_rare_teleporter"] = {
 					["SkinID"] = "Zoomed",
 				},
-				["WeakAuras_chi_wave_down"] = {
-					["Inherit"] = false,
-					["SkinID"] = "Zoomed",
-				},
-				["WeakAuras_chi_burst_down"] = {
-					["Inherit"] = false,
-					["SkinID"] = "Zoomed",
-				},
-				["WeakAuras_detox_off"] = {
-					["Inherit"] = false,
-					["SkinID"] = "Zoomed",
-				},
-				["WeakAuras_rjw_up"] = {
-					["Inherit"] = false,
-					["SkinID"] = "Zoomed",
-				},
-				["ElvUI_Consolidated Buffs"] = {
+				["WeakAuras_crane's_zeal_active"] = {
 					["SkinID"] = "Zoomed",
 				},
 				["WeakAuras_renewing_mist_set"] = {
-					["Inherit"] = false,
 					["SkinID"] = "Zoomed",
+					["Inherit"] = false,
 				},
 				["WeakAuras_renewing_mist"] = {
 					["SkinID"] = "Zoomed",
 				},
 				["WeakAuras_zen_sphere_down"] = {
+					["SkinID"] = "Zoomed",
 					["Inherit"] = false,
+				},
+				["WeakAuras_tiger_power_missing"] = {
 					["SkinID"] = "Zoomed",
 				},
-				["WeakAuras_paralysis_cd_"] = {
-					["Inherit"] = false,
+				["WeakAuras_detox_up"] = {
 					["SkinID"] = "Zoomed",
-				},
-				["WeakAuras_xuen_tiger_up"] = {
 					["Inherit"] = false,
-					["SkinID"] = "Zoomed",
 				},
 				["Bartender4_2"] = {
 					["SkinID"] = "Zoomed",
 				},
-				["WeakAuras_eh_on_cd"] = {
+				["WeakAuras_dampen_harm_on"] = {
+					["SkinID"] = "Zoomed",
 					["Inherit"] = false,
-					["SkinID"] = "Zoomed",
 				},
-				["ElvUI_Debuffs"] = {
+				["WeakAuras_charging_ox_up"] = {
 					["SkinID"] = "Zoomed",
+					["Inherit"] = false,
 				},
 				["Bartender4_BagBar"] = {
 					["SkinID"] = "Zoomed",
 				},
 				["WeakAuras_transfer_up"] = {
-					["Inherit"] = false,
 					["SkinID"] = "Zoomed",
+					["Inherit"] = false,
 				},
 				["WeakAuras_ring_of_peace_up"] = {
-					["Inherit"] = false,
 					["SkinID"] = "Zoomed",
+					["Inherit"] = false,
 				},
-				["WeakAuras_ring_of_peace_down"] = {
-					["Inherit"] = false,
+				["WeakAuras_etheralus_cd"] = {
 					["SkinID"] = "Zoomed",
+					["Inherit"] = false,
 				},
-				["WeakAuras_chi_torpedo_off"] = {
-					["Inherit"] = false,
+				["WeakAuras_eh_off_cd"] = {
 					["SkinID"] = "Zoomed",
+					["Inherit"] = false,
 				},
-				["WeakAuras_spear_hand_strike_deactive"] = {
-					["Inherit"] = false,
+				["WeakAuras_nimble_brew_down"] = {
 					["SkinID"] = "Zoomed",
+					["Inherit"] = false,
 				},
 				["WeakAuras_chi_brew_off"] = {
+					["SkinID"] = "Zoomed",
 					["Inherit"] = false,
-					["SkinID"] = "Zoomed",
 				},
-				["Bartender4"] = {
+				["WeakAuras_roll_on"] = {
 					["SkinID"] = "Zoomed",
-				},
-				["WeakAuras_transcendence_down"] = {
 					["Inherit"] = false,
+				},
+				["WeakAuras_tiger's_lust_up"] = {
 					["SkinID"] = "Zoomed",
+					["Inherit"] = false,
 				},
 				["WeakAuras_tft_up_down"] = {
-					["Inherit"] = false,
 					["SkinID"] = "Zoomed",
-				},
-				["WeakAuras_touch_of_death_up"] = {
 					["Inherit"] = false,
+				},
+				["WeakAuras_tiger_power"] = {
 					["SkinID"] = "Zoomed",
 				},
 				["WeakAuras_chi_ex_crane_3_less"] = {
 					["SkinID"] = "Zoomed",
 				},
-				["WeakAuras_hfc_special_debuffs"] = {
+				["WeakAuras_fortifying_brew_down"] = {
+					["SkinID"] = "Zoomed",
 					["Inherit"] = false,
+				},
+				["ElvUI_Stance Bar"] = {
 					["SkinID"] = "Zoomed",
 				},
-				["WeakAuras_detox_pg_down"] = {
+				["WeakAuras_jade_statue_up"] = {
 					["SkinID"] = "Zoomed",
-				},
-				["WeakAuras_ox_wave_pg_up"] = {
-					["SkinID"] = "Zoomed",
-				},
-				["WeakAuras_rsk_missing"] = {
-					["SkinID"] = "Zoomed",
-				},
-				["WeakAuras_healing_elixir_on"] = {
 					["Inherit"] = false,
+				},
+				["WeakAuras_touch_of_death_down"] = {
 					["SkinID"] = "Zoomed",
+					["Inherit"] = false,
+				},
+				["WeakAuras_healing_elixir_off"] = {
+					["SkinID"] = "Zoomed",
+					["Inherit"] = false,
 				},
 			},
 		},
@@ -3962,11 +3962,11 @@ MasqueDB = {
 				},
 			},
 		},
-		["Thrall"] = {
+		["Leisho - Thrall"] = {
 		},
 		["MONK"] = {
 		},
-		["Leisho - Thrall"] = {
+		["Thrall"] = {
 		},
 	},
 }

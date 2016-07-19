@@ -1,0 +1,12 @@
+tag 1.30000.2008102601
+aeed5ff60951fd1a09608ac1a3f237dffe5afb54
+Phanx <addons@phanx.net>
+2008-10-21 03:40:58 +0000
+
+Tagging as 1.30000.2008102601
+
+
+--------------------
+
+Pettigrow:
+	- frFR range fix.

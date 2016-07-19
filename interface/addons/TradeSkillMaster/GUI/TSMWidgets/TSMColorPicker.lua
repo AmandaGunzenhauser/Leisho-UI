@@ -100,7 +100,7 @@ local methods = {
 		self:SetDisabled(nil)
 		self:SetLabel(nil)
 	end,
-	
+
 	["SetLabel"] = function(self, text)
 		self.text:SetText(text)
 	end,
@@ -149,7 +149,11 @@ local function Constructor()
 	local texture = frame:CreateTexture(nil, "BACKGROUND")
 	texture:SetWidth(16)
 	texture:SetHeight(16)
-	texture:SetTexture(1, 1, 1)
+	if select(4, GetBuildInfo()) >= 70000 then
+		texture:SetColorTexture(1, 1, 1)
+	else
+		texture:SetTexture(1, 1, 1)
+	end
 	texture:SetPoint("CENTER", colorSwatch)
 	texture:Show()
 

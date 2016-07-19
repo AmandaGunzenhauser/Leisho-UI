@@ -16,15 +16,15 @@ NglPtDB = {
 		["BattlePet-0-000003384903"] = "254|25|1400|289|289|4",
 		["BattlePet-0-000005AACD94"] = "868|25|1546|260|289|4",
 		["BattlePet-0-0000033849EB"] = "1165|25|1465|305|257|4",
-		["BattlePet-0-000003384A2E"] = "1167|25|1400|341|244|4",
 		["BattlePet-0-000003384909"] = "277|25|1546|257|289|4",
-		["BattlePet-0-000004506961"] = "1426|15|1338|132|91|2",
-		["BattlePet-0-000003D6F0B1"] = "1416|25|1546|289|260|4",
+		["BattlePet-0-000003384A0E"] = "557|25|1319|276|325|4",
+		["BattlePet-0-000003384A38"] = "1238|25|1806|276|227|4",
+		["BattlePet-0-000003384973"] = "419|25|1562|260|276|4",
 		["BattlePet-0-000003384A41"] = "1068|25|1400|289|289|4",
 		["BattlePet-0-0000033849A1"] = "1152|25|1644|276|260|4",
-		["BattlePet-0-000003384973"] = "419|25|1562|260|276|4",
-		["BattlePet-0-000003384A38"] = "1238|25|1806|276|227|4",
-		["BattlePet-0-000003384A0E"] = "557|25|1319|276|325|4",
+		["BattlePet-0-000003D6F0B1"] = "1416|25|1546|289|260|4",
+		["BattlePet-0-000004506961"] = "1426|15|1338|132|91|2",
+		["BattlePet-0-000003384A2E"] = "1167|25|1400|341|244|4",
 		["BattlePet-0-0000033849D1"] = "678|25|1546|260|289|4",
 		["BattlePet-0-000003384A73"] = "132|25|1887|260|227|4",
 	},
@@ -39,19 +39,19 @@ NglPtDB = {
 		["generalPetBreeds"] = true,
 	},
 	["layout"] = {
-		["preview"] = {
-			["y"] = 130.556137084961,
-			["x"] = 105.555572509766,
-			["point"] = "BL",
-			["height"] = 336.111053466797,
-			["width"] = 519.999877929688,
-		},
 		["battle"] = {
 			["y"] = 141.389221191406,
 			["x"] = 129.999664306641,
 			["point"] = "CL",
 			["height"] = 450.5556640625,
 			["width"] = 299.999938964844,
+		},
+		["preview"] = {
+			["y"] = 130.556137084961,
+			["x"] = 105.555572509766,
+			["point"] = "BL",
+			["height"] = 336.111053466797,
+			["width"] = 519.999877929688,
 		},
 		["strategyEdit"] = {
 			["y"] = 13.8889770507813,
@@ -76,30 +76,30 @@ NglPtDB = {
 			["opponentId"] = 87124,
 			["name"] = "Ashlei",
 			["category"] = 0,
+			["editTime"] = 1464543046,
+			["iconPathId"] = 87124,
 			["pets"] = {
 				{
+					["guid"] = "BattlePet-0-000005AACD92",
 					["abilityId"] = {
 						115, -- [1]
 						647, -- [2]
 						334, -- [3]
 					},
-					["guid"] = "BattlePet-0-000005AACD92",
 				}, -- [1]
 				{
+					["guid"] = "BattlePet-0-0000033849A1",
 					["abilityId"] = {
 						299, -- [1]
 						611, -- [2]
 						593, -- [3]
 					},
-					["guid"] = "BattlePet-0-0000033849A1",
 				}, -- [2]
 				{
 					["abilityId"] = {
 					},
 				}, -- [3]
 			},
-			["iconPathId"] = 87124,
-			["editTime"] = 1464543046,
 		}, -- [1]
 		{
 			["isHtml"] = false,
@@ -108,34 +108,34 @@ NglPtDB = {
 			["opponentId"] = 94645,
 			["name"] = "Bleakclaw",
 			["category"] = 0,
-			["editTime"] = 1463348059,
-			["iconPathId"] = 94645,
 			["pets"] = {
 				{
-					["guid"] = "BattlePet-0-0000033849A1",
 					["abilityId"] = {
 						299, -- [1]
 						362, -- [2]
 						593, -- [3]
 					},
+					["guid"] = "BattlePet-0-0000033849A1",
 				}, -- [1]
 				{
-					["guid"] = "BattlePet-0-0000033849EB",
 					["abilityId"] = {
 						782, -- [1]
 						489, -- [2]
 						589, -- [3]
 					},
+					["guid"] = "BattlePet-0-0000033849EB",
 				}, -- [2]
 				{
-					["guid"] = "BattlePet-0-000003A006CF",
 					["abilityId"] = {
 						406, -- [1]
 						453, -- [2]
 						490, -- [3]
 					},
+					["guid"] = "BattlePet-0-000003A006CF",
 				}, -- [3]
 			},
+			["iconPathId"] = 94645,
+			["editTime"] = 1463348059,
 		}, -- [2]
 		{
 			["isHtml"] = false,
@@ -144,34 +144,34 @@ NglPtDB = {
 			["opponentId"] = 85561,
 			["name"] = "Brutus & Rukus",
 			["category"] = 0,
+			["editTime"] = 1464539922,
+			["iconPathId"] = 1412,
 			["pets"] = {
 				{
+					["guid"] = "BattlePet-0-0000033849F1",
 					["abilityId"] = {
 						901, -- [1]
 						392, -- [2]
 						204, -- [3]
 					},
-					["guid"] = "BattlePet-0-0000033849F1",
 				}, -- [1]
 				{
+					["guid"] = "BattlePet-0-000003384909",
 					["abilityId"] = {
 						384, -- [1]
 						278, -- [2]
 						710, -- [3]
 					},
-					["guid"] = "BattlePet-0-000003384909",
 				}, -- [2]
 				{
+					["guid"] = "BattlePet-0-000003384903",
 					["abilityId"] = {
 						777, -- [1]
 						640, -- [2]
 						636, -- [3]
 					},
-					["guid"] = "BattlePet-0-000003384903",
 				}, -- [3]
 			},
-			["iconPathId"] = 1412,
-			["editTime"] = 1464539922,
 		}, -- [3]
 		{
 			["isHtml"] = false,
@@ -180,34 +180,34 @@ NglPtDB = {
 			["opponentId"] = 71927,
 			["name"] = "Chen Stormstout",
 			["category"] = 0,
-			["editTime"] = 1463245947,
-			["iconPathId"] = 71927,
 			["pets"] = {
 				{
-					["guid"] = "BattlePet-0-000003384909",
 					["abilityId"] = {
 						384, -- [1]
 						278, -- [2]
 						710, -- [3]
 					},
+					["guid"] = "BattlePet-0-000003384909",
 				}, -- [1]
 				{
-					["guid"] = "BattlePet-0-000003384A73",
 					["abilityId"] = {
 						509, -- [1]
 						511, -- [2]
 						273, -- [3]
 					},
+					["guid"] = "BattlePet-0-000003384A73",
 				}, -- [2]
 				{
-					["guid"] = "BattlePet-0-000003384A41",
 					["abilityId"] = {
 						504, -- [1]
 						256, -- [2]
 						517, -- [3]
 					},
+					["guid"] = "BattlePet-0-000003384A41",
 				}, -- [3]
 			},
+			["iconPathId"] = 71927,
+			["editTime"] = 1463245947,
 		}, -- [4]
 		{
 			["isHtml"] = false,
@@ -216,34 +216,34 @@ NglPtDB = {
 			["opponentId"] = 71927,
 			["name"] = "Chen Stormstout - 2 pet",
 			["category"] = 0,
+			["editTime"] = 1463242907,
+			["iconPathId"] = 71927,
 			["pets"] = {
 				{
+					["guid"] = "BattlePet-0-000003384909",
 					["abilityId"] = {
 						384, -- [1]
 						278, -- [2]
 						710, -- [3]
 					},
-					["guid"] = "BattlePet-0-000003384909",
 				}, -- [1]
 				{
+					["guid"] = "BattlePet-0-000003384A73",
 					["abilityId"] = {
 						509, -- [1]
 						511, -- [2]
 						273, -- [3]
 					},
-					["guid"] = "BattlePet-0-000003384A73",
 				}, -- [2]
 				{
+					["guid"] = "BattlePet-0-000004506961",
 					["abilityId"] = {
 						1335, -- [1]
 						1345, -- [2]
 						1334, -- [3]
 					},
-					["guid"] = "BattlePet-0-000004506961",
 				}, -- [3]
 			},
-			["iconPathId"] = 71927,
-			["editTime"] = 1463242907,
 		}, -- [5]
 		{
 			["isHtml"] = false,
@@ -252,30 +252,30 @@ NglPtDB = {
 			["opponentId"] = 83837,
 			["name"] = "Cymre Brightblade",
 			["category"] = 0,
+			["editTime"] = 1463250570,
+			["iconPathId"] = 83837,
 			["pets"] = {
 				{
+					["guid"] = "BattlePet-0-000003A006CF",
 					["abilityId"] = {
 						406, -- [1]
 						453, -- [2]
 						490, -- [3]
 					},
-					["guid"] = "BattlePet-0-000003A006CF",
 				}, -- [1]
 				{
+					["guid"] = "BattlePet-0-000005AACD92",
 					["abilityId"] = {
 						115, -- [1]
 						779, -- [2]
 						334, -- [3]
 					},
-					["guid"] = "BattlePet-0-000005AACD92",
 				}, -- [2]
 				{
 					["abilityId"] = {
 					},
 				}, -- [3]
 			},
-			["iconPathId"] = 83837,
-			["editTime"] = 1463250570,
 		}, -- [6]
 		{
 			["isHtml"] = false,
@@ -284,30 +284,30 @@ NglPtDB = {
 			["opponentId"] = 68564,
 			["name"] = "Dos-Ryga",
 			["category"] = 0,
+			["editTime"] = 1464567326,
+			["iconPathId"] = 1193,
 			["pets"] = {
 				{
 					["abilityId"] = {
 					},
 				}, -- [1]
 				{
+					["guid"] = "BattlePet-0-0000033849A1",
 					["abilityId"] = {
 						299, -- [1]
 						362, -- [2]
 						593, -- [3]
 					},
-					["guid"] = "BattlePet-0-0000033849A1",
 				}, -- [2]
 				{
+					["guid"] = "BattlePet-0-000005AACD94",
 					["abilityId"] = {
 						118, -- [1]
-						513, -- [2]
+						123, -- [2]
 						418, -- [3]
 					},
-					["guid"] = "BattlePet-0-000005AACD94",
 				}, -- [3]
 			},
-			["iconPathId"] = 1193,
-			["editTime"] = 1464567326,
 		}, -- [7]
 		{
 			["isHtml"] = false,
@@ -316,30 +316,30 @@ NglPtDB = {
 			["opponentId"] = 87122,
 			["name"] = "Gargara",
 			["category"] = 0,
+			["editTime"] = 1464541660,
+			["iconPathId"] = 87122,
 			["pets"] = {
 				{
+					["guid"] = "BattlePet-0-000003384903",
 					["abilityId"] = {
 						777, -- [1]
 						640, -- [2]
 						636, -- [3]
 					},
-					["guid"] = "BattlePet-0-000003384903",
 				}, -- [1]
 				{
+					["guid"] = "BattlePet-0-000003384A42",
 					["abilityId"] = {
 						777, -- [1]
 						646, -- [2]
 						209, -- [3]
 					},
-					["guid"] = "BattlePet-0-000003384A42",
 				}, -- [2]
 				{
 					["abilityId"] = {
 					},
 				}, -- [3]
 			},
-			["iconPathId"] = 87122,
-			["editTime"] = 1464541660,
 		}, -- [8]
 		{
 			["isHtml"] = false,
@@ -348,30 +348,30 @@ NglPtDB = {
 			["opponentId"] = 90675,
 			["name"] = "Kura: Spores, Dusty, Salad",
 			["category"] = 0,
-			["editTime"] = 1464540653,
-			["iconPathId"] = 91026,
 			["pets"] = {
 				{
 					["abilityId"] = {
 					},
 				}, -- [1]
 				{
-					["guid"] = "BattlePet-0-000003384A2E",
 					["abilityId"] = {
 						525, -- [1]
 						611, -- [2]
 						598, -- [3]
 					},
+					["guid"] = "BattlePet-0-000003384A2E",
 				}, -- [2]
 				{
-					["guid"] = "BattlePet-0-000003384973",
 					["abilityId"] = {
 						118, -- [1]
 						123, -- [2]
 						233, -- [3]
 					},
+					["guid"] = "BattlePet-0-000003384973",
 				}, -- [3]
 			},
+			["iconPathId"] = 91026,
+			["editTime"] = 1464540653,
 		}, -- [9]
 		{
 			["isHtml"] = false,
@@ -380,30 +380,30 @@ NglPtDB = {
 			["opponentId"] = 85656,
 			["name"] = "Mr. Terrible, Carroteye & Sloppu",
 			["category"] = 0,
+			["editTime"] = 1463342468,
+			["iconPathId"] = 650,
 			["pets"] = {
 				{
 					["abilityId"] = {
 					},
 				}, -- [1]
 				{
+					["guid"] = "BattlePet-0-0000033849F6",
 					["abilityId"] = {
 						118, -- [1]
 						230, -- [2]
 						297, -- [3]
 					},
-					["guid"] = "BattlePet-0-0000033849F6",
 				}, -- [2]
 				{
+					["guid"] = "BattlePet-0-000003A006CF",
 					["abilityId"] = {
 						406, -- [1]
 						453, -- [2]
 						490, -- [3]
 					},
-					["guid"] = "BattlePet-0-000003A006CF",
 				}, -- [3]
 			},
-			["iconPathId"] = 650,
-			["editTime"] = 1463342468,
 		}, -- [10]
 		{
 			["isHtml"] = false,
@@ -412,34 +412,34 @@ NglPtDB = {
 			["opponentId"] = 79179,
 			["name"] = "Squirt - Deebs, Puzzle, Tyri",
 			["category"] = 0,
+			["editTime"] = 1463181691,
+			["iconPathId"] = 79179,
 			["pets"] = {
 				{
+					["guid"] = "BattlePet-0-000005AACD92",
 					["abilityId"] = {
 						115, -- [1]
 						779, -- [2]
 						334, -- [3]
 					},
-					["guid"] = "BattlePet-0-000005AACD92",
 				}, -- [1]
 				{
+					["guid"] = "BattlePet-0-000003A006CF",
 					["abilityId"] = {
 						406, -- [1]
 						453, -- [2]
 						814, -- [3]
 					},
-					["guid"] = "BattlePet-0-000003A006CF",
 				}, -- [2]
 				{
+					["guid"] = "BattlePet-0-000003384A20",
 					["abilityId"] = {
 						122, -- [1]
 						214, -- [2]
 						657, -- [3]
 					},
-					["guid"] = "BattlePet-0-000003384A20",
 				}, -- [3]
 			},
-			["iconPathId"] = 79179,
-			["editTime"] = 1463181691,
 		}, -- [11]
 		{
 			["isHtml"] = false,
@@ -448,30 +448,30 @@ NglPtDB = {
 			["opponentId"] = 87125,
 			["name"] = "Taraluna",
 			["category"] = 0,
+			["editTime"] = 1463343676,
+			["iconPathId"] = 87125,
 			["pets"] = {
 				{
+					["guid"] = "BattlePet-0-0000033849A1",
 					["abilityId"] = {
 						299, -- [1]
 						611, -- [2]
 						593, -- [3]
 					},
-					["guid"] = "BattlePet-0-0000033849A1",
 				}, -- [1]
 				{
+					["guid"] = "BattlePet-0-000003384A0E",
 					["abilityId"] = {
 						421, -- [1]
 						277, -- [2]
 						595, -- [3]
 					},
-					["guid"] = "BattlePet-0-000003384A0E",
 				}, -- [2]
 				{
 					["abilityId"] = {
 					},
 				}, -- [3]
 			},
-			["iconPathId"] = 87125,
-			["editTime"] = 1463343676,
 		}, -- [12]
 		{
 			["isHtml"] = false,
@@ -480,34 +480,34 @@ NglPtDB = {
 			["opponentId"] = 71931,
 			["name"] = "Taran Zhu",
 			["category"] = 0,
+			["editTime"] = 1463241517,
+			["iconPathId"] = 71931,
 			["pets"] = {
 				{
+					["guid"] = "BattlePet-0-000003D6F0B1",
 					["abilityId"] = {
 						504, -- [1]
 						312, -- [2]
 						574, -- [3]
 					},
-					["guid"] = "BattlePet-0-000003D6F0B1",
 				}, -- [1]
 				{
+					["guid"] = "BattlePet-0-000003384A41",
 					["abilityId"] = {
 						504, -- [1]
 						256, -- [2]
 						517, -- [3]
 					},
-					["guid"] = "BattlePet-0-000003384A41",
 				}, -- [2]
 				{
+					["guid"] = "BattlePet-0-000004506961",
 					["abilityId"] = {
 						1335, -- [1]
 						1345, -- [2]
 						1334, -- [3]
 					},
-					["guid"] = "BattlePet-0-000004506961",
 				}, -- [3]
 			},
-			["iconPathId"] = 71931,
-			["editTime"] = 1463241517,
 		}, -- [13]
 		{
 			["isHtml"] = false,
@@ -516,34 +516,34 @@ NglPtDB = {
 			["opponentId"] = 71931,
 			["name"] = "Taran Zhu - 2 pet",
 			["category"] = 0,
-			["editTime"] = 1463245842,
-			["iconPathId"] = 71931,
 			["pets"] = {
 				{
-					["guid"] = "BattlePet-0-0000033849D1",
 					["abilityId"] = {
 						160, -- [1]
 						371, -- [2]
 						364, -- [3]
 					},
+					["guid"] = "BattlePet-0-0000033849D1",
 				}, -- [1]
 				{
-					["guid"] = "BattlePet-0-000003384A71",
 					["abilityId"] = {
 						504, -- [1]
 						254, -- [2]
 						998, -- [3]
 					},
+					["guid"] = "BattlePet-0-000003384A71",
 				}, -- [2]
 				{
-					["guid"] = "BattlePet-0-000004506961",
 					["abilityId"] = {
 						1335, -- [1]
 						1345, -- [2]
 						1334, -- [3]
 					},
+					["guid"] = "BattlePet-0-000004506961",
 				}, -- [3]
 			},
+			["iconPathId"] = 71931,
+			["editTime"] = 1463245842,
 		}, -- [14]
 		{
 			["isHtml"] = false,
@@ -552,30 +552,30 @@ NglPtDB = {
 			["opponentId"] = 87110,
 			["name"] = "Tarr the Terrible",
 			["category"] = 0,
+			["editTime"] = 1463253592,
+			["iconPathId"] = 87110,
 			["pets"] = {
 				{
+					["guid"] = "BattlePet-0-000003384A38",
 					["abilityId"] = {
 						422, -- [1]
 						218, -- [2]
 						321, -- [3]
 					},
-					["guid"] = "BattlePet-0-000003384A38",
 				}, -- [1]
 				{
+					["guid"] = "BattlePet-0-0000033849E2",
 					["abilityId"] = {
 						449, -- [1]
 						369, -- [2]
 						564, -- [3]
 					},
-					["guid"] = "BattlePet-0-0000033849E2",
 				}, -- [2]
 				{
 					["abilityId"] = {
 					},
 				}, -- [3]
 			},
-			["iconPathId"] = 87110,
-			["editTime"] = 1463253592,
 		}, -- [15]
 		{
 			["isHtml"] = false,
@@ -584,30 +584,30 @@ NglPtDB = {
 			["opponentId"] = 87110,
 			["name"] = "Tarr the Terrible 2",
 			["category"] = 0,
+			["editTime"] = 1464544275,
+			["iconPathId"] = 87110,
 			["pets"] = {
 				{
 					["abilityId"] = {
 					},
 				}, -- [1]
 				{
+					["guid"] = "BattlePet-0-0000033849E2",
 					["abilityId"] = {
 						449, -- [1]
 						310, -- [2]
 						564, -- [3]
 					},
-					["guid"] = "BattlePet-0-0000033849E2",
 				}, -- [2]
 				{
+					["guid"] = "BattlePet-0-0000033849D1",
 					["abilityId"] = {
 						160, -- [1]
 						371, -- [2]
 						364, -- [3]
 					},
-					["guid"] = "BattlePet-0-0000033849D1",
 				}, -- [3]
 			},
-			["iconPathId"] = 87110,
-			["editTime"] = 1464544275,
 		}, -- [16]
 		{
 			["isHtml"] = false,
@@ -616,30 +616,30 @@ NglPtDB = {
 			["opponentId"] = 68465,
 			["name"] = "Thundering Pandaren Spirit",
 			["category"] = 0,
+			["editTime"] = 1464566837,
+			["iconPathId"] = 1126,
 			["pets"] = {
 				{
 					["abilityId"] = {
 					},
 				}, -- [1]
 				{
+					["guid"] = "BattlePet-0-000005AACD92",
 					["abilityId"] = {
 						115, -- [1]
 						779, -- [2]
 						334, -- [3]
 					},
-					["guid"] = "BattlePet-0-000005AACD92",
 				}, -- [2]
 				{
+					["guid"] = "BattlePet-0-000003384A23",
 					["abilityId"] = {
 						445, -- [1]
 						369, -- [2]
 						564, -- [3]
 					},
-					["guid"] = "BattlePet-0-000003384A23",
 				}, -- [3]
 			},
-			["iconPathId"] = 1126,
-			["editTime"] = 1464566837,
 		}, -- [17]
 		{
 			["isHtml"] = false,
@@ -648,30 +648,30 @@ NglPtDB = {
 			["opponentId"] = 87123,
 			["name"] = "Vesharr",
 			["category"] = 0,
+			["editTime"] = 1463252458,
+			["iconPathId"] = 87123,
 			["pets"] = {
 				{
 					["abilityId"] = {
 					},
 				}, -- [1]
 				{
+					["guid"] = "BattlePet-0-0000033849A1",
 					["abilityId"] = {
 						299, -- [1]
 						611, -- [2]
 						593, -- [3]
 					},
-					["guid"] = "BattlePet-0-0000033849A1",
 				}, -- [2]
 				{
+					["guid"] = "BattlePet-0-000005AACD92",
 					["abilityId"] = {
 						115, -- [1]
 						779, -- [2]
 						334, -- [3]
 					},
-					["guid"] = "BattlePet-0-000005AACD92",
 				}, -- [3]
 			},
-			["iconPathId"] = 87123,
-			["editTime"] = 1463252458,
 		}, -- [18]
 		{
 			["isHtml"] = false,
@@ -680,30 +680,30 @@ NglPtDB = {
 			["opponentId"] = 68464,
 			["name"] = "Whispering Pandaren Spirit",
 			["category"] = 0,
+			["editTime"] = 1464567709,
+			["iconPathId"] = 1125,
 			["pets"] = {
 				{
+					["guid"] = "BattlePet-0-000003384A2E",
 					["abilityId"] = {
 						525, -- [1]
 						597, -- [2]
 						598, -- [3]
 					},
-					["guid"] = "BattlePet-0-000003384A2E",
 				}, -- [1]
 				{
 					["abilityId"] = {
 					},
 				}, -- [2]
 				{
+					["guid"] = "BattlePet-0-000003384988",
 					["abilityId"] = {
 						860, -- [1]
 						611, -- [2]
 						595, -- [3]
 					},
-					["guid"] = "BattlePet-0-000003384988",
 				}, -- [3]
 			},
-			["iconPathId"] = 1125,
-			["editTime"] = 1464567709,
 		}, -- [19]
 		{
 			["isHtml"] = false,
@@ -712,34 +712,34 @@ NglPtDB = {
 			["opponentId"] = 71924,
 			["name"] = "Wrathion",
 			["category"] = 0,
+			["editTime"] = 1463245722,
+			["iconPathId"] = 71924,
 			["pets"] = {
 				{
+					["guid"] = "BattlePet-0-000003A006CF",
 					["abilityId"] = {
 						406, -- [1]
 						453, -- [2]
 						490, -- [3]
 					},
-					["guid"] = "BattlePet-0-000003A006CF",
 				}, -- [1]
 				{
+					["guid"] = "BattlePet-0-0000033849BA",
 					["abilityId"] = {
 						219, -- [1]
 						1054, -- [2]
 						1052, -- [3]
 					},
-					["guid"] = "BattlePet-0-0000033849BA",
 				}, -- [2]
 				{
+					["guid"] = "BattlePet-0-000003384A3B",
 					["abilityId"] = {
 						713, -- [1]
 						490, -- [2]
 						307, -- [3]
 					},
-					["guid"] = "BattlePet-0-000003384A3B",
 				}, -- [3]
 			},
-			["iconPathId"] = 71924,
-			["editTime"] = 1463245722,
 		}, -- [20]
 		{
 			["isHtml"] = false,
@@ -748,34 +748,34 @@ NglPtDB = {
 			["opponentId"] = 71924,
 			["name"] = "Wrathion - 2 pet",
 			["category"] = 0,
+			["editTime"] = 1463245822,
+			["iconPathId"] = 71924,
 			["pets"] = {
 				{
+					["guid"] = "BattlePet-0-000003A006CF",
 					["abilityId"] = {
 						406, -- [1]
 						453, -- [2]
 						490, -- [3]
 					},
-					["guid"] = "BattlePet-0-000003A006CF",
 				}, -- [1]
 				{
+					["guid"] = "BattlePet-0-0000033849BA",
 					["abilityId"] = {
 						219, -- [1]
 						1054, -- [2]
 						1052, -- [3]
 					},
-					["guid"] = "BattlePet-0-0000033849BA",
 				}, -- [2]
 				{
+					["guid"] = "BattlePet-0-000004506961",
 					["abilityId"] = {
 						1335, -- [1]
 						1345, -- [2]
 						1334, -- [3]
 					},
-					["guid"] = "BattlePet-0-000004506961",
 				}, -- [3]
 			},
-			["iconPathId"] = 71924,
-			["editTime"] = 1463245822,
 		}, -- [21]
 	},
 	["filters"] = {
@@ -786,7 +786,7 @@ NglPtDB = {
 		},
 		["opponents"] = 65535,
 		["continents"] = 65535,
-		["text"] = "Stitches Jr.",
 		["completeness"] = 65535,
+		["text"] = "Stitches Jr.",
 	},
 }

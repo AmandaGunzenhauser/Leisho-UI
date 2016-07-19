@@ -80,7 +80,7 @@ MW_SHOW_TARGET_FRAME_HEADER = "Show header"
 
 MW_SHOW_TOOLTIP = "Show Tooltip"
 
-MW_SOOTHING_MIST_COLOR = "Color of the Soothing Mist Bar"
+MW_ESSENCE_FONT_COLOR = "Color of the Essence Font Bar"
 
 MW_SORT_TYPE_GROUP = "Sort by Group"
 
@@ -199,7 +199,7 @@ if (GetLocale() == "deDE") then
 
     MW_SHOW_TOOLTIP = "Tooltip anzeigen"
 
-    MW_SOOTHING_MIST_COLOR = "Hier klicken, um die Farbe des 'Beruhigender Nebel'-Balkens zu \195\164ndern"
+    MW_ESSENCE_FONT_COLOR = "Hier klicken, um die Farbe des 'Essenzborn'-Balkens zu \195\164ndern"
 
     MW_SORT_TYPE_GROUP = "nach Gruppe"
 
@@ -470,7 +470,7 @@ if (GetLocale() == "ptBR") then
     MW_SHOW_TOOLTIP = "Mostrar Dica"
 
     -- Needs review
-    MW_SOOTHING_MIST_COLOR = "Cor da barra da Bruma Calmante"
+    MW_ESSENCE_FONT_COLOR = "Color of the Essence Font Bar"
 
     -- Needs review
     MW_SORT_TYPE_GROUP = "Organizar por Grupo"
@@ -609,7 +609,7 @@ if (GetLocale() == "esMX") then
     
     MW_SHOW_TOOLTIP = "Mostrar descripci\195\179n"
     
-    MW_SOOTHING_MIST_COLOR = "Color de barra de Niebla reconfortante"
+    MW_ESSENCE_FONT_COLOR = "Color of the Essence Font Bar"
     
     MW_SORT_TYPE_GROUP = "Ordenar por grupo"
     
@@ -710,7 +710,7 @@ if (GetLocale() == "esES") then
 
     MW_SHOW_TOOLTIP = "Mostrar descripci\195\179n"
 
-    MW_SOOTHING_MIST_COLOR = "Color de barra de Niebla reconfortante"
+    MW_ESSENCE_FONT_COLOR = "Color of the Essence Font Bar"
 
     MW_SORT_TYPE_GROUP = "Ordenar por grupo"
 
@@ -1124,7 +1124,7 @@ if (GetLocale() == "koKR") then
     MW_SHOW_TOOLTIP = "\237\136\180\237\140\129 \237\145\156\236\139\156"
 
     -- Needs review
-    MW_SOOTHING_MIST_COLOR = "\236\156\132\236\149\136\236\157\152 \236\149\136\234\176\156 \235\176\148 \236\131\137\236\131\129"
+    MW_ESSENCE_FONT_COLOR = "Color of the Essence Font Bar"
 
     -- Needs review
     MW_SORT_TYPE_GROUP = "\234\183\184\235\163\185\235\179\132 \236\160\149\235\160\172"
@@ -1245,7 +1245,7 @@ if (GetLocale() == "zhCN") then
 
     MW_SHOW_TOOLTIP = "\230\152\190\231\164\186\230\143\144\231\164\186\230\161\134"
 
-    MW_SOOTHING_MIST_COLOR = "\230\138\154\230\133\176\228\185\139\233\155\190\230\161\134\228\189\147\233\162\156\232\137\178"
+    MW_ESSENCE_FONT_COLOR = "Color of the Essence Font Bar"
 
     MW_SORT_TYPE_GROUP = "\228\187\165\229\136\134\231\187\132\230\142\146\229\186\143"
 
@@ -1349,7 +1349,7 @@ if (GetLocale() == "zhTW") then
 
     MW_SHOW_TOOLTIP = "\233\161\175\231\164\186\230\143\144\231\164\186\230\161\134"
 
-    MW_SOOTHING_MIST_COLOR = "\232\136\146\229\146\140\228\185\139\233\156\167\230\161\134\233\171\148\233\161\143\232\137\178"
+    MW_ESSENCE_FONT_COLOR = "Color of the Essence Font Bar"
 
     MW_SORT_TYPE_GROUP = "\228\187\165\229\136\134\231\181\132\230\142\146\229\186\143"
 

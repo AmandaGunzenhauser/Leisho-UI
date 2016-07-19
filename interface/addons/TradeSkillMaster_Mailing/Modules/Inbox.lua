@@ -326,7 +326,11 @@ function private:InboxUpdate()
 			for j = 1, hasItem do
 				local link = GetInboxItemLink(i, j)
 				itemLink = itemLink or link
-				quantity = quantity + select(3, GetInboxItem(i, j))
+				if select(4, GetBuildInfo()) >= 70000 then
+					quantity = quantity + (select(4, GetInboxItem(i, j)) or 0)
+				else
+					quantity = quantity + select(3, GetInboxItem(i, j))
+				end
 				if TSMAPI.Item:ToItemString(itemLink) ~= TSMAPI.Item:ToItemString(link) then
 					itemLink = L["Multiple Items"]
 					quantity = -1
@@ -396,7 +400,12 @@ function private:CanLootMailIndex(index, force)
 		for j = 1, ATTACHMENTS_MAX_RECEIVE do
 			local link = GetInboxItemLink(index, j)
 			local itemString = TSMAPI.Item:ToItemString(link)
-			local quantity = select(3, GetInboxItem(index, j))
+			local quantity = nil
+			if select(4, GetBuildInfo()) >= 70000 then
+				quantity = select(4, GetInboxItem(index, j)) or 0
+			else
+				quantity = select(3, GetInboxItem(index, j))
+			end
 			local space = 0
 			if itemString then
 				for bag = 0, NUM_BAG_SLOTS do
@@ -428,7 +437,12 @@ function private:CanLootMailIndex(index, force)
 		for j = 1, ATTACHMENTS_MAX_RECEIVE do
 			local link = GetInboxItemLink(index, j)
 			local itemString = TSMAPI.Item:ToItemString(link)
-			local quantity = select(3, GetInboxItem(index, j))
+			local qantity = nil
+			if select(4, GetBuildInfo()) >= 70000 then
+				quantity = select(4, GetInboxItem(index, j)) or 0
+			else
+				quantity = select(3, GetInboxItem(index, j))
+			end
 			local isDone = false
 			if itemString then
 				for bag = 0, NUM_BAG_SLOTS do
@@ -554,7 +568,12 @@ function private:ShouldOpenMail(index)
 		if not isInvoice and numItems == 1 then
 			local itemName = TSMAPI.Item:GetInfo(private:GetFirstInboxItemLink(index))
 			if itemName then
-				local quantity = select(3, GetInboxItem(index, 1))
+				local qantity = nil
+				if select(4, GetBuildInfo()) >= 70000 then
+					quantity = select(4, GetInboxItem(index, 1))
+				else
+					quantity = select(3, GetInboxItem(index, 1))
+				end
 				if quantity and quantity > 0 and (subject == format(AUCTION_REMOVED_MAIL_SUBJECT.." (%d)", itemName, quantity) or subject == format(AUCTION_REMOVED_MAIL_SUBJECT, itemName)) then
 					return true
 				end
@@ -592,7 +611,11 @@ function private:PrintOpenMailMessage(index)
 		for i = 1, hasItem do
 			local link = GetInboxItemLink(index, i)
 			itemLink = itemLink or link
-			quantity = quantity + select(3, GetInboxItem(index, i))
+			if select(4, GetBuildInfo()) >= 70000 then
+				quantity = quantity + (select(4, GetInboxItem(index, i)) or 0)
+			else
+				quantity = quantity + select(3, GetInboxItem(index, i))
+			end
 			if TSMAPI.Item:ToItemString(itemLink) ~= TSMAPI.Item:ToItemString(link) then
 				itemLink = L["Multiple Items"]
 				quantity = -1

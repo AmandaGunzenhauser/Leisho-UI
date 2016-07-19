@@ -16,11 +16,11 @@ rematch:InitModule(function()
 	-- if no script filters defined, then create some default scripts
 	if #settings.ScriptFilters==0 then
 		settings.ScriptFilters = {
-			{ L["Unnamed Pets"], "-- Collected pets that still have their original name.\n\nreturn owned and not customName" },
-			{ L["Partially Leveled"], "-- Pets that have earned some xp in battle.\n\nreturn xp and xp>0" },
-			{ L["Unique Abilities"], "-- Pets with abilities not shared by other pets.\n\nif not count then\n  -- create count of each ability per species\n  count = {}\n  for speciesID in AllSpeciesIDs() do\n    for abilityID in AllAbilities(speciesID) do\n      if not count[abilityID] then\n        count[abilityID] = 0\n      end\n      count[abilityID] = count[abilityID] + 1\n    end\n  end\nend\n\nfor _,abilityID in ipairs(abilityList) do\n  if count[abilityID]==1 then\n    return true\n  end\nend" },
-			{ L["Pets Without Rares"], "-- Collected battle pets that have no rare version.\n\nif not rares then\n  rares = {}\n  for petID in AllPetIDs() do\n    if select(5,C_PetJournal.GetPetStats(petID))==4 then\n      rares[C_PetJournal.GetPetInfoByPetID(petID)]=true\n    end\n  end\nend\n\nif canBattle and owned and not rares[speciesID] then\n  return true\nend" },
-			{ L["Hybrid Counters"], "-- Pets with three or more attack types different than their pet type.\n\nlocal count = 0\nfor _,abilityID in ipairs(abilityList) do\n  local abilityType,noHints = select(7, C_PetBattles.GetAbilityInfoByID(abilityID) )\n  if not noHints and abilityType~=petType then\n    count = count + 1\n  end\nend\n\nreturn count>=3\n" },
+			{ L["Unnamed Pets"], L["-- Collected pets that still have their original name.\n\nreturn owned and not customName"] },
+			{ L["Partially Leveled"], L["-- Pets that have earned some xp in battle.\n\nreturn xp and xp>0"] },
+			{ L["Unique Abilities"], L["-- Pets with abilities not shared by other pets.\n\nif not count then\n  -- create count of each ability per species\n  count = {}\n  for speciesID in AllSpeciesIDs() do\n    for abilityID in AllAbilities(speciesID) do\n      if not count[abilityID] then\n        count[abilityID] = 0\n      end\n      count[abilityID] = count[abilityID] + 1\n    end\n  end\nend\n\nfor _,abilityID in ipairs(abilityList) do\n  if count[abilityID]==1 then\n    return true\n  end\nend"] },
+			{ L["Pets Without Rares"], L["-- Collected battle pets that have no rare version.\n\nif not rares then\n  rares = {}\n  for petID in AllPetIDs() do\n    if select(5,C_PetJournal.GetPetStats(petID))==4 then\n      rares[C_PetJournal.GetPetInfoByPetID(petID)]=true\n    end\n  end\nend\n\nif canBattle and owned and not rares[speciesID] then\n  return true\nend"] },
+			{ L["Hybrid Counters"], L["-- Pets with three or more attack types different than their pet type.\n\nlocal count = 0\nfor _,abilityID in ipairs(abilityList) do\n  local abilityType,noHints = select(7, C_PetBattles.GetAbilityInfoByID(abilityID) )\n  if not noHints and abilityType~=petType then\n    count = count + 1\n  end\nend\n\nreturn count>=3\n"] },
 		}
 	end
 
@@ -159,7 +159,7 @@ rematch:InitModule(function()
 				return C_PetJournal.PetIsSlotted(petID) and L["Slotted pets cannot be caged."] or L["Injured pets cannot be caged."]
 			end,
 			func=function(entry,petID)
-				local dialog = rematch:ShowDialog("Cage",300,140,BATTLE_PET_PUT_IN_CAGE,"Cage this pet?",YES,function() C_PetJournal.CagePetByID(petID) end,NO)
+				local dialog = rematch:ShowDialog("Cage",300,140,BATTLE_PET_PUT_IN_CAGE,L["Cage this pet?"],YES,function() C_PetJournal.CagePetByID(petID) end,NO)
 				dialog.Pet:SetPoint("TOPRIGHT",-12,-28)
 				rematch:FillPetListButton(dialog.Pet,petID)
 				dialog.Pet:Show()

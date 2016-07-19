@@ -6,20 +6,48 @@ local BIG_BUTTON_SIZE = 45;
 local SMALL_BUTTON_SIZE = 38;
 
 local MAX_UNITFRAMES = 40;
-local CLEANUI_HOOKED = nil;
+
 local init = false;
 local active = true;
-local actStatusBarTexture = nil;
+
 local actionButtonFrames = {};
 local buttons = {};
 
 local inCombat = nil;
 
+local upliftTranceShown = false;
+    
+local ESSENCEFONT_BAR_HEIGHT = 4;
+local ENVELOPINGMIST_BAR_HEIGHT = 4;
+local AGGRO_BAR_HEIGHT = 4;
+local POWER_BAR_HEIGHT = 1;
+
 -- spells
-local SURGING_MIST, CHI_DETONATION, ENVELOPING_MIST, SOOTHING_MIST, RENEWING_MIST, UPLIFT, REVIVAL, LIFE_COCOON, EXPEL_HARM, MANATEA, MANATEA_BUFF, THUNDERFOCUSTEA, CHIBREW, DETOX, TIGERS_LUST, VITAL_MISTS_BUFF, RESUSCITATE;
-local SURGING_MIST_ID, CHI_DETONATION_ID, ENVELOPING_MIST_ID, SOOTHING_MIST_ID, RENEWING_MIST_ID, UPLIFT_ID, REVIVAL_ID, LIFE_COCOON_ID, EXPEL_HARM_ID, MANATEA_ID, MANATEA_BUFF_ID, THUNDERFOCUSTEA_ID, CHIBREW_ID, DETOX_ID, TIGERS_LUST_ID, VITAL_MISTS_BUFF_ID, RESUSCITATE_ID;
-local LEVEL_30, LEVEL_60, LEVEL_100;
-local LEVEL_30_ID, LEVEL_60_ID, LEVEL_100_ID;
+local SOOTHING_MIST, SOOTHING_MIST_ID;
+
+local REVIVAL, REVIVAL_ID;
+local ESSENCE_FONT, ESSENCE_FONT_ID;
+
+local EFFUSE, EFFUSE_ID;
+local ENVELOPING_MIST, ENVELOPING_MIST_ID;
+
+local LEVEL_15, LEVEL_15_ID;
+local DETOX, DETOX_ID;
+
+local LEVEL_60, LEVEL_60_ID;
+local LIFE_COCOON, LIFE_COCOON_ID;
+
+local RENEWING_MIST, RENEWING_MIST_ID;
+local VIVIFY, VIVIFY_ID;
+
+local THUNDERFOCUSTEA, THUNDERFOCUSTEA_ID;
+local MANATEA, MANATEA_ID;
+
+local RESUSCITATE, RESUSCITATE_ID;
+
+local UPLIFTING_TRANCE_ID = 197206;
+local LIFECYCLES_VIVIFY_ID = 197916;
+local LIFECYCLES_ENVELOPING_MIST_ID = 197919;
 
 -- unit names
 local PARTY_UNITS = {"player", "party1", "party2", "party3", "party4"};
@@ -35,12 +63,12 @@ local texCoords = {
 
 -- die Farben sind etwas heller, damit sie besser erkennbar sind. Es wird ja nur das Icon eingefärbt.
 local MWDebuffTypeColor = { };
-MWDebuffTypeColor["none"]	= { r = 0.80, g = 0, b = 0 };
-MWDebuffTypeColor["Magic"]	= { r = 0.40, g = 0.70, b = 1.00 };
-MWDebuffTypeColor["Curse"]	= { r = 0.60, g = 0.00, b = 1.00 };
-MWDebuffTypeColor["Disease"]	= { r = 1.00, g = 0.60, b = 0.00 };
-MWDebuffTypeColor["Poison"]	= { r = 0.40, g = 1.00, b = 0.40 };
-MWDebuffTypeColor[""]	= MWDebuffTypeColor["none"];
+MWDebuffTypeColor["none"] = { r = 0.80, g = 0, b = 0 };
+MWDebuffTypeColor["Magic"] = { r = 0.40, g = 0.70, b = 1.00 };
+MWDebuffTypeColor["Curse"] = { r = 0.60, g = 0.00, b = 1.00 };
+MWDebuffTypeColor["Disease"] = { r = 1.00, g = 0.60, b = 0.00 };
+MWDebuffTypeColor["Poison"] = { r = 0.40, g = 1.00, b = 0.40 };
+MWDebuffTypeColor[""] = MWDebuffTypeColor["none"];
 
 -- Stern, Kreis, ...
 local raidicons = {};
@@ -80,6 +108,8 @@ function MistWeaver_OnLoad(self)
     self:RegisterEvent("UNIT_HEALTH");
     self:RegisterEvent("UNIT_MAXHEALTH");
     self:RegisterEvent("UNIT_HEAL_PREDICTION");
+    
+    self:RegisterEvent("UNIT_AURA");
 
     self:RegisterEvent("CVAR_UPDATE");
 
@@ -99,7 +129,6 @@ function MistWeaver_OnEvent(self, event, ...)
     end
 
     if (event == "PLAYER_ENTERING_WORLD") then
-        MistWeaver_HookCleanUI();
     end
 
     if (event == "CVAR_UPDATE") then
@@ -134,6 +163,76 @@ function MistWeaver_OnEvent(self, event, ...)
     if (event == "UNIT_HEALTH" or event == "UNIT_MAXHEALTH" or event == "UNIT_HEAL_PREDICTION") then
         MistWeaver_UpdateHealPrediction(self);
     end
+    if (event == "UNIT_AURA") then
+        MistWeaver_UpdatePlayerBuffs();
+    end
+end
+
+function MistWeaver_SlashCommandHandler(msg)
+    if (msg == "reload") then
+        ReloadUI();
+    elseif (string.find(msg, "help") == 1) then
+        MistWeaver_Help();
+    elseif (string.find(msg, "on") == 1) then
+        MistWeaverData.ACTIVE = true;
+        MistWeaver_UpdateActiveState();
+    elseif (string.find(msg, "off") == 1) then
+        MistWeaverData.ACTIVE = false;
+        MistWeaver_UpdateActiveState();
+    elseif (string.find(msg, "width") == 1) then
+        local str_width = string.sub(msg, 7);
+        local width = tonumber(str_width);
+
+        if (width and width >= 50 and width <= 200) then
+            MistWeaverData.UNITWIDTH = width;
+            MistWeaver_UpdateUnitFrameSize();
+        else
+            mw_info("|c333399ffwidth|r: 50 - 200");
+        end
+    elseif (string.find(msg, "height") == 1) then
+        local str_height = string.sub(msg, 8);
+        local height = tonumber(str_height);
+
+        if (height and height >= 40 and height <= 100) then
+            MistWeaverData.UNITHEIGHT = height;
+            MistWeaver_UpdateUnitFrameSize();
+        else
+            mw_info("|c333399ffheight|r: 40 - 100");
+        end
+    elseif (string.find(msg, "colortype") == 1) then
+        local colortype = string.sub(msg, 11);
+
+        if (colortype == "health") then
+            MistWeaverData.COLORTYPE = 1;
+        elseif (colortype == "class") then
+            MistWeaverData.COLORTYPE = 2;
+        else
+            mw_info("|c333399ffcolortype|r health "..MW_OR_INSET.." class");
+        end
+    elseif (string.find(msg, "sorttype") == 1) then
+        local sorttype = string.sub(msg, 10);
+
+        if (sorttype == "id") then
+            MistWeaverData.SORTTYPE = 1;
+        elseif (sorttype == "group") then
+            MistWeaverData.SORTTYPE = 2;
+        elseif (sorttype == "name") then
+            MistWeaverData.SORTTYPE = 3;
+        elseif (sorttype == "role") then
+            MistWeaverData.SORTTYPE = 4;
+        else
+            mw_info("|c333399ffsorttype|r id, group "..MW_OR_INSET.." name");
+        end
+
+        MistWeaver_RebindUnitFrames();
+    elseif (string.find(msg, "spellid") == 1) then
+        local name = string.sub(msg, 9);
+        local link = GetSpellLink(name);
+        printable = gsub(link, "\124", "\124\124");
+        ChatFrame1:AddMessage("Here's what it really looks like: \"" .. printable .. "\"");
+    end
+
+    MwConfig_RefreshUI();
 end
 
 function MistWeaver_CvarUpdate(name, value)
@@ -175,16 +274,6 @@ function MistWeaver_StartDelay(delay, func, ...)
     return true;
 end
 
-function MistWeaver_HookCleanUI()
-    if (CLEANUI_HOOKED or not IsAddOnLoaded("CleanUI")) then
-        return;
-    end
-
-    hooksecurefunc("CleanUI_HookChangeStatusBar", MistWeaver_ChangeStatusBar);
-
-    CLEANUI_HOOKED = 1;
-end
-
 function MistWeaver_Init()
     mw_debug("MistWeaver_Init");
     MistWeaver_UpdateActiveState();
@@ -199,32 +288,10 @@ function MistWeaver_Init()
     MistWeaver_SetBackdrop(powerFrame);
     powerFrame:SetFrameStrata("LOW");
 
-    -- chi bar
-    local chiBar = MistWeaver_CreateFrame("StatusBar", "MwPowerFrameChi", powerFrame, "MwTextStatusBarTemplate");
-    chiBar:SetSize(10, 10);
-    chiBar:ClearAllPoints();
-    chiBar:SetPoint("TOPLEFT", powerFrame, "TOPLEFT", 3, -3);
-    chiBar:SetPoint("BOTTOMRIGHT", powerFrame, "TOPRIGHT", -3, -28);
-    chiBar:SetStatusBarColor(0.85, 0.85, 0.85);
-    chiBar:SetFrameStrata("LOW");
-
-    local chiBrewBarButton = MistWeaver_CreateFrame("Button", "MwChiBrewBarButton", chiBar, "SecureActionButtonTemplate");
-    chiBrewBarButton:SetFrameStrata("MEDIUM");
-    chiBrewBarButton:ClearAllPoints();
-    chiBrewBarButton:SetPoint("TOPLEFT", chiBar, "TOPLEFT", 0, 0);
-    chiBrewBarButton:SetPoint("BOTTOMRIGHT", chiBar, "BOTTOMRIGHT", 0, 0);
-    MistWeaver_RegisterButton(chiBrewBarButton);
-    chiBrewBarButton:SetAttribute("type", "spell");
-    chiBrewBarButton:SetAttribute("spell", CHIBREW);
-    chiBrewBarButton:SetAttribute("spellId", CHIBREW_ID);
-    chiBrewBarButton:SetAttribute("type2", "spell");
-    chiBrewBarButton:SetAttribute("spell2", CHI_DETONATION);
-    chiBrewBarButton:SetAttribute("spellId2", CHI_DETONATION_ID);
-
     -- mana bar
     local manaBar = MistWeaver_CreateFrame("StatusBar", "MwPowerFrameMana", powerFrame, "MwTextStatusBarTemplate");
     manaBar:ClearAllPoints();
-    manaBar:SetPoint("TOPLEFT", chiBar, "BOTTOMLEFT", 0, 0);
+    manaBar:SetPoint("TOPLEFT", powerFrame, "TOPLEFT", 3, -3);
     manaBar:SetPoint("BOTTOMRIGHT", powerFrame, "BOTTOMRIGHT", -3, 3);
     local manacolor = PowerBarColor["MANA"];
     manaBar:SetStatusBarColor(manacolor.r, manacolor.g, manacolor.b);
@@ -240,67 +307,44 @@ function MistWeaver_Init()
     manaTeaBarButton:SetAttribute("spell", MANATEA);
     manaTeaBarButton:SetAttribute("spellId", MANATEA_ID);
 
+    manaTeaBarButton:HookScript("OnEnter", MistWeaver_OnButtonEnter);
+    manaTeaBarButton:HookScript("OnLeave", MistWeaver_OnButtonLeave);
 
-    -- AE
-    local detonateChi = MistWeaver_CreateActionButton("MwDetonateChiCastFrame", BIG_BUTTON_SIZE);
-    detonateChi:SetPoint("TOPRIGHT", powerFrame, "TOPLEFT", 0, 0);
-
+    -- AE 
+    local essenceFont = MistWeaver_CreateActionButton("MwEssenceFontFrame", BIG_BUTTON_SIZE);
+    essenceFont:SetPoint("TOPRIGHT", powerFrame, "TOPLEFT", 0, 0);  
     local revivalCast = MistWeaver_CreateActionButton("MwRevivalCastFrame", BIG_BUTTON_SIZE);
-    revivalCast:SetPoint("RIGHT", detonateChi, "LEFT", 2, 0);
+    revivalCast:SetPoint("RIGHT", essenceFont, "LEFT", 2, 0);
     
-
+    
     -- health bar
 
     -- left/right
-    local envelopingMistCast = MistWeaver_CreateActionButton("MwEnvelopingMistCastFrame", SMALL_BUTTON_SIZE, KEY_BUTTON1);
-    envelopingMistCast:SetPoint("TOPRIGHT", revivalCast, "BOTTOMRIGHT", 0, -2);
+    local effuseCast = MistWeaver_CreateActionButton("MwEffuseCastFrame", SMALL_BUTTON_SIZE, KEY_BUTTON1);
+    effuseCast:SetPoint("TOPRIGHT", revivalCast, "BOTTOMRIGHT", 0, -2);    
+    local envelopingMistCast = MistWeaver_CreateActionButton("MwEnvelopingMistCastFrame", SMALL_BUTTON_SIZE, KEY_BUTTON2);
+    envelopingMistCast:SetPoint("TOPLEFT", essenceFont, "BOTTOMLEFT", 0, -2);
 
-    local soothingMistCast = MistWeaver_CreateActionButton("MwSoothingMistCastFrame", SMALL_BUTTON_SIZE, KEY_BUTTON2);
-    soothingMistCast:SetPoint("TOPLEFT", detonateChi, "BOTTOMLEFT", 0, -2);
+    -- shift + left/right
+    local level15Cast = MistWeaver_CreateActionButton("MwLevel15CastFrame", SMALL_BUTTON_SIZE, "["..SHIFT_KEY.."] + "..KEY_BUTTON1);
+    level15Cast:SetPoint("TOPRIGHT", effuseCast, "BOTTOMRIGHT", 0, -2);    
+    local detoxCast = MistWeaver_CreateActionButton("MwDetoxCastFrame", SMALL_BUTTON_SIZE, "["..SHIFT_KEY.."] + "..KEY_BUTTON2);
+    detoxCast:SetPoint("TOPLEFT", envelopingMistCast, "BOTTOMLEFT", 0, -2);
 
-    -- shift left/right
-    local surgingMistCast = MistWeaver_CreateActionButton("MwSurgingMistCastFrame", SMALL_BUTTON_SIZE, "["..SHIFT_KEY.."] + "..KEY_BUTTON1);
-    surgingMistCast:SetPoint("TOP", envelopingMistCast, "BOTTOM", 0, 2);
-
-    local level30Cast = MistWeaver_CreateActionButton("MwLevel30CastFrame", SMALL_BUTTON_SIZE, "["..SHIFT_KEY.."] + "..KEY_BUTTON2);
-    level30Cast:SetPoint("TOP", soothingMistCast, "BOTTOM", 0, 2);
-
-    -- alt left/right
-    local expelHarmCast = MistWeaver_CreateActionButton("MwExpelHarmCastFrame", SMALL_BUTTON_SIZE, "["..ALT_KEY.."] + "..KEY_BUTTON1);
-    expelHarmCast:SetPoint("TOP", surgingMistCast, "BOTTOM", 0, 2);
-
-    local level100Cast = MistWeaver_CreateActionButton("MwLevel100CastFrame", SMALL_BUTTON_SIZE, "["..ALT_KEY.."] + "..KEY_BUTTON2);
-    level100Cast:SetPoint("TOP", level30Cast, "BOTTOM", 0, 2);
-
-    -- middle
+    -- middle button    
     local lifeCocoonCast = MistWeaver_CreateActionButton("MwLifeCocoonCastFrame", BIG_BUTTON_SIZE, KEY_BUTTON3);
-    lifeCocoonCast:SetPoint("TOPRIGHT", expelHarmCast, "BOTTOMRIGHT", 0, -2);
-
+    lifeCocoonCast:SetPoint("TOPRIGHT", level15Cast, "BOTTOMRIGHT", 0, -2);
     local level60Cast = MistWeaver_CreateActionButton("MwLevel60CastFrame", BIG_BUTTON_SIZE, "["..SHIFT_KEY.."] + "..KEY_BUTTON3);
-    level60Cast:SetPoint("TOPLEFT", level100Cast, "BOTTOMLEFT", 0, -2);
+    level60Cast:SetPoint("TOPLEFT", detoxCast, "BOTTOMLEFT", 0, -2);
 
 
     -- enveloping mist bar
 
     -- left/right
-    local upliftCast = MistWeaver_CreateActionButton("MwUpliftCastFrame", SMALL_BUTTON_SIZE, KEY_BUTTON1);
-    upliftCast:SetPoint("TOPRIGHT", lifeCocoonCast, "BOTTOMRIGHT", 0, -2);
-
+    local vivifyCast = MistWeaver_CreateActionButton("MwVivifyCastFrame", SMALL_BUTTON_SIZE, KEY_BUTTON1);
+    vivifyCast:SetPoint("TOPRIGHT", lifeCocoonCast, "BOTTOMRIGHT", 0, -2);
     local renewingMistCast = MistWeaver_CreateActionButton("MwRenewingMistCastFrame", SMALL_BUTTON_SIZE, KEY_BUTTON2);
     renewingMistCast:SetPoint("TOPLEFT", level60Cast, "BOTTOMLEFT", 0, -2);
-
-
-
-    -- chi brew button
-    local chiBrew = MistWeaver_CreateActionButton("MwChiBrewFrame", 27);
-    chiBrew:SetPoint("LEFT", chiBar, "LEFT", -1, 0); 
-    chiBrew:SetFrameStrata("MEDIUM");
-    chiBrew:SetAlpha(0.85);
-    MistWeaver_RemoveTextures(chiBrew);
-
-    chiBrew:HookScript("OnUpdate", MistWeaver_ChiBrewOnUpdate);
-    chiBrew:HookScript("OnEnter", MistWeaver_OnButtonEnter);
-    chiBrew:HookScript("OnLeave", MistWeaver_OnButtonLeave);
 
     -- mana tea button
     local manaTea = MistWeaver_CreateActionButton("MwManaTeaFrame", 27);
@@ -309,20 +353,18 @@ function MistWeaver_Init()
     manaTea:SetAlpha(0.85);
     MistWeaver_RemoveTextures(manaTea);
 
-    manaTea:HookScript("OnUpdate", MistWeaver_ManaTeaOnUpdate);
     manaTea:HookScript("OnEnter", MistWeaver_OnButtonEnter);
     manaTea:HookScript("OnLeave", MistWeaver_OnButtonLeave);
 
 
     -- thunder focus tea
-    local thunderFocusTea = MistWeaver_CreateActionButton("MwThunderFocusTeaFrame", 56);
+    local thunderFocusTea = MistWeaver_CreateActionButton("MwThunderFocusTeaFrame", 45);
     thunderFocusTea:SetPoint("LEFT", powerFrame, "RIGHT", 2, 0);
 
     local label = MistWeaver_CreateFontString(thunderFocusTea, "MwThunderFocusTeaFrameLabel", "ARTWORK");
     label:SetFontObject(GameFontWhiteSmall);
     label:ClearAllPoints();
     label:SetPoint("BOTTOM", thunderFocusTea, "TOP", 0, 0);
-
 
     -- info button
     local infoButton = MistWeaver_CreateFrame("Button", "MwInfoButton", MistWeaverFrame);
@@ -406,6 +448,17 @@ function MistWeaver_CreateActionButton(name, size, tooltip)
     frame.button:GetHighlightTexture():SetPoint("CENTER", frame, "CENTER", 0, 0);
     frame.button:GetHighlightTexture():SetSize(size * 1.1, size * 1.1);
 
+    frame.button.manaborder = frame.button:CreateTexture(name.."ManaBorder", "OVERLAY");
+    frame.button.manaborder:SetTexture("Interface\\Addons\\MistWeaver\\images\\highlight");
+    frame.button.manaborder:SetSize(10, 10);
+    frame.button.manaborder:ClearAllPoints();
+    frame.button.manaborder:SetPoint("TOPLEFT", frame, "TOPLEFT", 0, 0);
+    frame.button.manaborder:SetPoint("BOTTOMRIGHT", frame, "BOTTOMRIGHT", 0, 0);
+    frame.button.manaborder:SetDrawLayer("OVERLAY");
+    local manacolor = PowerBarColor["MANA"];
+    frame.button.manaborder:SetVertexColor(manacolor.r, manacolor.g, manacolor.b);
+    frame.button.manaborder:Hide();
+
     tinsert(actionButtonFrames, name);
 
     return frame;
@@ -431,112 +484,6 @@ function MistWeaver_HideMainFrame()
     else
         MistWeaverFrame:SetAlpha(MistWeaverData.OOC_ALPHA);
     end
-end
-
-function MistWeaver_ChangeStatusBar(texture)
-    actStatusBarTexture = texture;
-    MistWeaver_ReloadStatusBarTexture();
-end
-
-function MistWeaver_GetStatusBarTexture()
-    return actStatusBarTexture;
-end
-
-function MistWeaver_ReloadStatusBarTexture()
-
-    local healthBar;
-
-    for i=1, MAX_UNITFRAMES, 1 do
-        healthBar = _G["MwUnitFrame"..i.."Health"];
-        if (not healthBar) then
-            MistWeaver_StartDelay(3, MistWeaver_ReloadStatusBarTexture);
-            return;
-        end
-    end
-
-    local texture = actStatusBarTexture;
-
-    for i=1, MAX_UNITFRAMES, 1 do
-        _G["MwUnitFrame"..i.."Health"]:SetStatusBarTexture(texture);
-        _G["MwUnitFrame"..i.."HealthPrediction"]:SetStatusBarTexture(texture);
-        _G["MwUnitFrame"..i.."Aggro"]:SetStatusBarTexture(texture);
-        _G["MwUnitFrame"..i.."RenewingMist"]:SetStatusBarTexture(texture);
-        _G["MwUnitFrame"..i.."SoothingMist"]:SetStatusBarTexture(texture);
-        _G["MwUnitFrame"..i.."EnvelopingMist"]:SetStatusBarTexture(texture);
-    end
-
-    MwPowerFrameChi:SetStatusBarTexture(texture);
-    MwPowerFrameMana:SetStatusBarTexture(texture);
-
-    MistWeaver_ReloadTargetStatusBarTexture();
-    MistWeaver_ReloadFocusStatusBarTexture();
-end
-
-function MistWeaver_SlashCommandHandler(msg)
-    if (msg == "reload") then
-        ReloadUI();
-    elseif (string.find(msg, "help") == 1) then
-        MistWeaver_Help();
-    elseif (string.find(msg, "on") == 1) then
-        MistWeaverData.ACTIVE = true;
-        MistWeaver_UpdateActiveState();
-    elseif (string.find(msg, "off") == 1) then
-        MistWeaverData.ACTIVE = false;
-        MistWeaver_UpdateActiveState();
-    elseif (string.find(msg, "width") == 1) then
-        local str_width = string.sub(msg, 7);
-        local width = tonumber(str_width);
-
-        if (width and width >= 50 and width <= 200) then
-            MistWeaverData.UNITWIDTH = width;
-            MistWeaver_UpdateUnitFrameSize();
-        else
-            mw_info("|c333399ffwidth|r: 50 - 200");
-        end
-    elseif (string.find(msg, "height") == 1) then
-        local str_height = string.sub(msg, 8);
-        local height = tonumber(str_height);
-
-        if (height and height >= 40 and height <= 100) then
-            MistWeaverData.UNITHEIGHT = height;
-            MistWeaver_UpdateUnitFrameSize();
-        else
-            mw_info("|c333399ffheight|r: 40 - 100");
-        end
-    elseif (string.find(msg, "colortype") == 1) then
-        local colortype = string.sub(msg, 11);
-
-        if (colortype == "health") then
-            MistWeaverData.COLORTYPE = 1;
-        elseif (colortype == "class") then
-            MistWeaverData.COLORTYPE = 2;
-        else
-            mw_info("|c333399ffcolortype|r health "..MW_OR_INSET.." class");
-        end
-    elseif (string.find(msg, "sorttype") == 1) then
-        local sorttype = string.sub(msg, 10);
-
-        if (sorttype == "id") then
-            MistWeaverData.SORTTYPE = 1;
-        elseif (sorttype == "group") then
-            MistWeaverData.SORTTYPE = 2;
-        elseif (sorttype == "name") then
-            MistWeaverData.SORTTYPE = 3;
-        elseif (sorttype == "role") then
-            MistWeaverData.SORTTYPE = 4;
-        else
-            mw_info("|c333399ffsorttype|r id, group "..MW_OR_INSET.." name");
-        end
-
-        MistWeaver_RebindUnitFrames();
-    elseif (string.find(msg, "spellid") == 1) then
-        local name = string.sub(msg, 9);
-        local link = GetSpellLink(name);
-        printable = gsub(link, "\124", "\124\124");
-        ChatFrame1:AddMessage("Here's what it really looks like: \"" .. printable .. "\"");
-    end
-
-    MwConfig_RefreshUI();
 end
 
 function MistWeaver_Help()
@@ -704,26 +651,11 @@ function MistWeaver_UpdateActiveState()
     -- monk only
     local _, unitClass = UnitClass("player");
 
-    -- tiger:103985, serpent:115070
-    local serpentName = GetSpellInfo(115070);
-
-    -- all or serpent stance only
-    local _, name1 = GetShapeshiftFormInfo(1);
-    local _, name2 = GetShapeshiftFormInfo(2);
-
-    local serpentStance = -1;
-    if (serpentName == name1) then
-        serpentStance = 1;
-    elseif (serpentName == name2) then
-        serpentStance = 2;
-    end
-
-    local shapeshiftOk = MistWeaverData.SHOW_IN_ALL_STANCES or GetShapeshiftForm() == serpentStance;
     local specialization = GetSpecialization(false, false, GetActiveSpecGroup());
     local specializationOk = (specialization == 2);
     local groupOk = MistWeaverData.SHOW_SOLO or GetNumGroupMembers() > 0;
 
-    if (unitClass == "MONK" and shapeshiftOk and specializationOk and groupOk and MistWeaverData.ACTIVE) then
+    if (unitClass == "MONK" and specializationOk and groupOk and MistWeaverData.ACTIVE) then
         MistWeaverFrame:Show();
         active = true;
         mw_debug("on");
@@ -751,33 +683,46 @@ function MistWeaver_MwPowerFrameOnMouseUp(frame, button)
 end
 
 function MistWeaver_LoadSpells()
+    
+    SOOTHING_MIST_ID = 193884;
+    SOOTHING_MIST = GetSpellInfo(SOOTHING_MIST_ID);
+    
+    -- big buttons    
+    REVIVAL_ID = 115310;
+    REVIVAL = GetSpellInfo(REVIVAL_ID);    
+    ESSENCE_FONT_ID = 191837;
+    ESSENCE_FONT = GetSpellInfo(ESSENCE_FONT_ID);
+    
+    -- first row
+    EFFUSE_ID = 116694;
+    EFFUSE = GetSpellInfo(EFFUSE_ID);    
+    ENVELOPING_MIST_ID = 124682;
+    ENVELOPING_MIST = GetSpellInfo(ENVELOPING_MIST_ID);
 
-    SURGING_MIST_ID = 116694;
-    SURGING_MIST = GetSpellInfo(SURGING_MIST_ID);
-
-    --157675
-
-    -- lvl 30 talent
-    local chiWave = GetSpellInfo(115098);
-    local zenSphere = GetSpellInfo(124081);
+    -- second row
     local chiBurst = GetSpellInfo(123986);
+    local zenPulse = GetSpellInfo(124081);
+    local mistWalk = GetSpellInfo(197945);
 
-    LEVEL_30_ID = nil;
-    LEVEL_30 = nil;
-    if (GetSpellInfo(chiWave)) then
-        LEVEL_30_ID = 115098;
-        LEVEL_30 = chiWave;
-    elseif (GetSpellInfo(zenSphere)) then
-        LEVEL_30_ID = 124081;
-        LEVEL_30 = zenSphere;
-    elseif (GetSpellInfo(chiBurst)) then
-        LEVEL_30_ID = 123986;
-        LEVEL_30 = chiBurst;
+    LEVEL_15_ID = nil;
+    LEVEL_15 = nil;
+    if (GetSpellInfo(chiBurst)) then
+        LEVEL_15_ID = 123986;
+        LEVEL_15 = chiBurst;
+    elseif (GetSpellInfo(zenPulse)) then
+        LEVEL_15_ID = 124081;
+        LEVEL_15 = zenPulse;
+    elseif (GetSpellInfo(mistWalk)) then
+        LEVEL_15_ID = 197945;
+        LEVEL_15 = mistWalk;
     end
+    
+    DETOX_ID = 115450;
+    DETOX = GetSpellInfo(DETOX_ID);
 
-    -- lvl 60 talent
+    -- big buttons
     local ringOfPeace = GetSpellInfo(116844);
-    local chargingOxWave = GetSpellInfo(119392);
+    local songOfChiJi = GetSpellInfo(198898);
     local legSweep = GetSpellInfo(119381);
 
     LEVEL_60_ID = nil;
@@ -785,76 +730,27 @@ function MistWeaver_LoadSpells()
     if (GetSpellInfo(ringOfPeace)) then
         LEVEL_60_ID = 116844;
         LEVEL_60 = ringOfPeace;
-    elseif (GetSpellInfo(chargingOxWave)) then
+    elseif (GetSpellInfo(songOfChiJi)) then
         LEVEL_60_ID = 119392;
-        LEVEL_60 = chargingOxWave;
+        LEVEL_60 = songOfChiJi;
     elseif (GetSpellInfo(legSweep)) then
         LEVEL_60_ID = 119381;
         LEVEL_60 = legSweep;
     end
 
-    -- lvl 100 talent
-    local breathOfTheSerpent = GetSpellInfo(157535);
-    local chiExplosion = GetSpellInfo(157675);
-    local poolOfMists = GetSpellInfo(101546);
-
-    -- pool of mists = 173841, passiv, deswegen Wirbelnder Krasnichtritt 101546
-
-    LEVEL_100_ID = nil;
-    LEVEL_100 = nil;
-    if (GetSpellInfo(breathOfTheSerpent)) then
-        LEVEL_100_ID = 157535;
-        LEVEL_100 = breathOfTheSerpent;
-    elseif (GetSpellInfo(chiExplosion)) then
-        LEVEL_100_ID = 157675;
-        LEVEL_100 = chiExplosion;
-    elseif (GetSpellInfo(poolOfMists)) then
-        LEVEL_100_ID = 101546;
-        LEVEL_100 = poolOfMists;
-    end
-
-    ENVELOPING_MIST_ID = 124682;
-    ENVELOPING_MIST = GetSpellInfo(ENVELOPING_MIST_ID);
-    SOOTHING_MIST_ID = 115175;
-    SOOTHING_MIST = GetSpellInfo(SOOTHING_MIST_ID);
-    RENEWING_MIST_ID = 115151;
-    RENEWING_MIST = GetSpellInfo(RENEWING_MIST_ID);
-
-    UPLIFT_ID = 116670;
-    UPLIFT = GetSpellInfo(UPLIFT_ID);
-
-    REVIVAL_ID = 115310;
-    REVIVAL = GetSpellInfo(REVIVAL_ID);
-
-    CHI_DETONATION_ID = 115460;
-    CHI_DETONATION = GetSpellInfo(CHI_DETONATION_ID);
-
     LIFE_COCOON_ID = 116849;
     LIFE_COCOON = GetSpellInfo(LIFE_COCOON_ID);
 
-    EXPEL_HARM_ID = 115072;
-    EXPEL_HARM = GetSpellInfo(EXPEL_HARM_ID);
+    RENEWING_MIST_ID = 115151;
+    RENEWING_MIST = GetSpellInfo(RENEWING_MIST_ID);
+    VIVIFY_ID = 116670;
+    VIVIFY = GetSpellInfo(VIVIFY_ID);
 
-    MANATEA_ID = 115294;
-    MANATEA = GetSpellInfo(MANATEA_ID);
+    -- others
     THUNDERFOCUSTEA_ID = 116680;
     THUNDERFOCUSTEA = GetSpellInfo(THUNDERFOCUSTEA_ID);
-    CHIBREW_ID = 115399;
-    CHIBREW = GetSpellInfo(CHIBREW_ID);
-
-    DETOX_ID = 115450;
-    DETOX = GetSpellInfo(DETOX_ID);
-
-    TIGERS_LUST_ID = 116841;
-    if (GetSpellInfo(TIGERS_LUST_ID)) then
-        TIGERS_LUST = GetSpellInfo(TIGERS_LUST_ID);
-    end
-
-    MANATEA_BUFF_ID = 115867;
-    MANATEA_BUFF = GetSpellInfo(MANATEA_BUFF_ID);
-
-    VITAL_MISTS_BUFF_ID = 118674;
-    VITAL_MISTS_BUFF = GetSpellInfo(VITAL_MISTS_BUFF_ID);
+    MANATEA_ID = 197908;
+    MANATEA = GetSpellInfo(MANATEA_ID);
 
     RESUSCITATE_ID = 50662;
     RESUSCITATE = GetSpellInfo(RESUSCITATE_ID);
@@ -869,7 +765,7 @@ function MistWeaver_OnButtonEvent(self, event, ...)
             local start, duration, enable = GetSpellCooldown(spell);
             local currentCharges, maxCharges, cooldownStart, cooldownDuration = GetSpellCharges(spell);
 
-            CooldownFrame_SetTimer(self.cooldown, start, duration, enable, currentCharges, maxCharges);
+            CooldownFrame_Set(self.cooldown, start, duration, enable, currentCharges, maxCharges);
         end
     end
 end
@@ -960,53 +856,6 @@ function MistWeaver_OnUnitFrameEnter(self)
     end
 end
 
-function MistWeaver_ChiBrewOnUpdate(self, elapsed)
-    if (not active) then
-        return;
-    end
-    
-    local hasCharges = false;
-
-    local currentCharges, maxCharges = GetSpellCharges(CHIBREW);
-
-    if (currentCharges and currentCharges > 0 and maxCharges and maxCharges > 1) then
-        MwChiBrewFrame.button.count:SetText(currentCharges);
-        hasCharges = true;
-    else
-        MwChiBrewFrame.button.count:SetText("");
-    end
-    
-    if (hasCharges or MwChiBrewFrame.button.cooldown:IsShown()) then
-        MwChiBrewFrame:SetAlpha(1.0);
-    else
-        MwChiBrewFrame:SetAlpha(0.3);
-    end
-end
-
-function MistWeaver_ManaTeaOnUpdate(self, elapsed)
-    if (not active) then
-        return;
-    end
-    
-    local hasCharges = false;
-
-    local name, rank, icon, count = UnitBuff("player", MANATEA_BUFF);
-    count = count or 0;
-
-    if (count > 0) then
-        MwManaTeaFrame.button.count:SetText(count);
-        hasCharges = true;
-    else
-        MwManaTeaFrame.button.count:SetText("");
-    end
-    
-    if (hasCharges or MwManaTeaFrame.button.cooldown:IsShown()) then
-        MwManaTeaFrame:SetAlpha(1.0);
-    else
-        MwManaTeaFrame:SetAlpha(0.3);
-    end
-end
-
 function MistWeaver_OnUnitFrameLeave(self)
     local unitFrame = self.unitFrame;
 
@@ -1042,20 +891,17 @@ end
 
 function MistWeaver_RebindButtonSpells()
     MistWeaver_RebindButtonSpell("MwRevivalCastFrame", REVIVAL, REVIVAL_ID);
-    MistWeaver_RebindButtonSpell("MwDetonateChiCastFrame", CHI_DETONATION, CHI_DETONATION_ID);
+    MistWeaver_RebindButtonSpell("MwEssenceFontFrame", ESSENCE_FONT, ESSENCE_FONT_ID);
+    MistWeaver_RebindButtonSpell("MwEffuseCastFrame", EFFUSE, EFFUSE_ID);
     MistWeaver_RebindButtonSpell("MwEnvelopingMistCastFrame", ENVELOPING_MIST, ENVELOPING_MIST_ID);
-    MistWeaver_RebindButtonSpell("MwSoothingMistCastFrame", SOOTHING_MIST, SOOTHING_MIST_ID);
-    MistWeaver_RebindButtonSpell("MwSurgingMistCastFrame", SURGING_MIST, SURGING_MIST_ID);
-    MistWeaver_RebindButtonSpell("MwLevel30CastFrame", LEVEL_30, LEVEL_30_ID);
+    MistWeaver_RebindButtonSpell("MwDetoxCastFrame", DETOX, DETOX_ID);
+    MistWeaver_RebindButtonSpell("MwLevel15CastFrame", LEVEL_15, LEVEL_15_ID);
     MistWeaver_RebindButtonSpell("MwLifeCocoonCastFrame", LIFE_COCOON, LIFE_COCOON_ID);
     MistWeaver_RebindButtonSpell("MwLevel60CastFrame", LEVEL_60, LEVEL_60_ID);
-    MistWeaver_RebindButtonSpell("MwUpliftCastFrame", UPLIFT, UPLIFT_ID);
+    MistWeaver_RebindButtonSpell("MwVivifyCastFrame", VIVIFY, VIVIFY_ID);
     MistWeaver_RebindButtonSpell("MwRenewingMistCastFrame", RENEWING_MIST, RENEWING_MIST_ID);
-    MistWeaver_RebindButtonSpell("MwChiBrewFrame", CHIBREW, CHIBREW_ID);
     MistWeaver_RebindButtonSpell("MwManaTeaFrame", MANATEA, MANATEA_ID);
     MistWeaver_RebindButtonSpell("MwThunderFocusTeaFrame", THUNDERFOCUSTEA, THUNDERFOCUSTEA_ID);
-    MistWeaver_RebindButtonSpell("MwExpelHarmCastFrame", EXPEL_HARM, EXPEL_HARM_ID);
-    MistWeaver_RebindButtonSpell("MwLevel100CastFrame", LEVEL_100, LEVEL_100_ID);
 end
 
 function MistWeaver_RebindButtonSpell(name, spell, spellId)
@@ -1216,7 +1062,7 @@ function MistWeaver_InitUnitFrame(unitFrame)
     local healthBar = MistWeaver_CreateFrame("StatusBar", framename.."Health", statsFrame, "MwTextStatusBarTemplate");
     healthBar:ClearAllPoints();
     healthBar:SetPoint("TOPLEFT", statsFrame, "TOPLEFT", 3, -3);
-    healthBar:SetPoint("BOTTOMRIGHT", renewingMistBar, "TOPRIGHT", 0, 6);
+    healthBar:SetPoint("BOTTOMRIGHT", renewingMistBar, "TOPRIGHT", 0, ESSENCEFONT_BAR_HEIGHT + ENVELOPINGMIST_BAR_HEIGHT);
     healthBar:SetStatusBarColor(0.0, 1.0, 0.0);
     healthBar:SetFrameStrata("LOW");
     --healthBar.text:SetFontObject("GameFontHighlight");
@@ -1244,20 +1090,27 @@ function MistWeaver_InitUnitFrame(unitFrame)
     local aggroBar = MistWeaver_CreateFrame("StatusBar", framename.."Aggro", statsFrame, "MwTextStatusBarTemplate");
     aggroBar:ClearAllPoints();
     aggroBar:SetPoint("TOPLEFT", healthBar, "TOPLEFT", 0, 0);
-    aggroBar:SetPoint("BOTTOMRIGHT", healthBar, "TOPRIGHT", 0, -3);
+    aggroBar:SetPoint("BOTTOMRIGHT", healthBar, "TOPRIGHT", 0, -AGGRO_BAR_HEIGHT);
     aggroBar:SetStatusBarColor(1.0, 0.0, 0.0);
     aggroBar:SetFrameStrata("HIGH");
 
-    local soothingMistBar = MistWeaver_CreateFrame("StatusBar", framename.."SoothingMist", statsFrame, "MwTextStatusBarTemplate");
-    soothingMistBar:ClearAllPoints();
-    soothingMistBar:SetPoint("TOPLEFT", renewingMistBar, "TOPLEFT", 0, 6);
-    soothingMistBar:SetPoint("BOTTOMRIGHT", renewingMistBar, "TOPRIGHT", 0, 2);
-    soothingMistBar:SetStatusBarColor(MistWeaverData.SOOTHING_MIST_COLOR.r, MistWeaverData.SOOTHING_MIST_COLOR.g, MistWeaverData.SOOTHING_MIST_COLOR.b);
-    soothingMistBar:SetFrameStrata("BACKGROUND");
+    local powerBar = MistWeaver_CreateFrame("StatusBar", framename.."Power", healthBar, "MwTextStatusBarTemplate");
+    powerBar:ClearAllPoints();
+    powerBar:SetPoint("TOPLEFT", healthBar, "BOTTOMLEFT", 0, POWER_BAR_HEIGHT);
+    powerBar:SetPoint("BOTTOMRIGHT", healthBar, "BOTTOMRIGHT", 0, 0);
+    powerBar:SetStatusBarColor(1.0, 0.0, 0.0);
+    powerBar:SetFrameStrata("LOW");
+
+    local essenceFontBar = MistWeaver_CreateFrame("StatusBar", framename.."EssenceFont", statsFrame, "MwTextStatusBarTemplate");
+    essenceFontBar:ClearAllPoints();
+    essenceFontBar:SetPoint("TOPLEFT", renewingMistBar, "TOPLEFT", 0, ESSENCEFONT_BAR_HEIGHT + ENVELOPINGMIST_BAR_HEIGHT);
+    essenceFontBar:SetPoint("BOTTOMRIGHT", renewingMistBar, "TOPRIGHT", 0, ENVELOPINGMIST_BAR_HEIGHT);
+    essenceFontBar:SetStatusBarColor(MistWeaverData.ESSENCE_FONT_COLOR.r, MistWeaverData.ESSENCE_FONT_COLOR.g, MistWeaverData.ESSENCE_FONT_COLOR.b);
+    essenceFontBar:SetFrameStrata("BACKGROUND");
 
     local envelopingMistBar = MistWeaver_CreateFrame("StatusBar", framename.."EnvelopingMist", statsFrame, "MwTextStatusBarTemplate");
     envelopingMistBar:ClearAllPoints();
-    envelopingMistBar:SetPoint("TOPLEFT", renewingMistBar, "TOPLEFT", 0, 2);
+    envelopingMistBar:SetPoint("TOPLEFT", renewingMistBar, "TOPLEFT", 0, ESSENCEFONT_BAR_HEIGHT + ENVELOPINGMIST_BAR_HEIGHT); -- ganzer Bereich, von essenceFontBar überlagert
     envelopingMistBar:SetPoint("BOTTOMRIGHT", renewingMistBar, "TOPRIGHT", 0, 0);
     envelopingMistBar:SetStatusBarColor(MistWeaverData.ENVELOPING_MIST_COLOR.r, MistWeaverData.ENVELOPING_MIST_COLOR.g, MistWeaverData.ENVELOPING_MIST_COLOR.b);
     envelopingMistBar:SetFrameStrata("BACKGROUND");
@@ -1270,6 +1123,7 @@ function MistWeaver_InitUnitFrame(unitFrame)
     art.aggro:SetTexCoord(unpack(texCoords["Raid-AggroFrame"]));
     art.info:SetTextColor(1.0, 0.0, 0.0);
     art.highlight:SetVertexColor(MistWeaverData.HIGHLIGHT_COLOR.r, MistWeaverData.HIGHLIGHT_COLOR.g, MistWeaverData.HIGHLIGHT_COLOR.b);
+    art:SetFrameStrata("HIGH");
     unitFrame.art = art;
 
     -- action buttons
@@ -1277,7 +1131,7 @@ function MistWeaver_InitUnitFrame(unitFrame)
     button1:SetFrameStrata(BUTTON_FRAMESTRATA);
     button1:ClearAllPoints();
     button1:SetPoint("TOPLEFT", healthBar, "TOPLEFT", 0, 0);
-    button1:SetPoint("BOTTOMRIGHT", soothingMistBar, "BOTTOMRIGHT", 0, 0);
+    button1:SetPoint("BOTTOMRIGHT", envelopingMistBar, "BOTTOMRIGHT", 0, 0);
     MistWeaver_RegisterButton(button1);
     button1:HookScript("OnEnter", MistWeaver_OnUnitFrameEnter);
     button1:HookScript("OnLeave", MistWeaver_OnUnitFrameLeave);
@@ -1792,28 +1646,28 @@ function MistWeaver_RebindSpells(frame)
 
     -- set spells for button 1
     button1:SetAttribute("type1", "spell");
-    button1:SetAttribute("spell1", ENVELOPING_MIST);
+    button1:SetAttribute("spell1", EFFUSE);
 
     button1:SetAttribute("type2", "spell");
-    button1:SetAttribute("spell2", SOOTHING_MIST);
+    button1:SetAttribute("spell2", ENVELOPING_MIST);
 
     button1:SetAttribute("type3", "spell");
     button1:SetAttribute("spell3", LIFE_COCOON);
 
     button1:SetAttribute("shift-type1", "spell");
-    button1:SetAttribute("shift-spell1", SURGING_MIST);
+    button1:SetAttribute("shift-spell1", LEVEL_15);
 
     button1:SetAttribute("shift-type2", "spell");
-    button1:SetAttribute("shift-spell2", LEVEL_30);
+    button1:SetAttribute("shift-spell2", DETOX);
 
     button1:SetAttribute("shift-type3", "spell");
     button1:SetAttribute("shift-spell3", LEVEL_60);
 
-    button1:SetAttribute("alt-type1", "spell");
-    button1:SetAttribute("alt-spell1", EXPEL_HARM);
+    --button1:SetAttribute("alt-type1", "spell");
+    --button1:SetAttribute("alt-spell1", EXPEL_HARM);
 
-    button1:SetAttribute("alt-type2", "spell");
-    button1:SetAttribute("alt-spell2", LEVEL_100);
+    --button1:SetAttribute("alt-type2", "spell");
+    --button1:SetAttribute("alt-spell2", LEVEL_100);
 
     button1:SetAttribute("ctrl-shift-type1", "spell");
     button1:SetAttribute("ctrl-shift-spell1", RESUSCITATE);
@@ -1822,9 +1676,9 @@ function MistWeaver_RebindSpells(frame)
 
     -- set spells for button 2
     button2:SetAttribute("type1", "spell");
-    button2:SetAttribute("spell1", UPLIFT);
+    button2:SetAttribute("spell1", VIVIFY);
     button2:SetAttribute("shift-type1", "spell");
-    button2:SetAttribute("shift-spell1", UPLIFT);
+    button2:SetAttribute("shift-spell1", VIVIFY);
 
     button2:SetAttribute("type2", "spell");
     button2:SetAttribute("spell2", RENEWING_MIST);
@@ -1952,8 +1806,7 @@ function MistWeaver_DoUpdate(self)
 
     MistWeaver_UpdateRaidIcons();
     MistWeaver_UpdatePower();
-    MistWeaver_UpdatePlayerBuffs();
-    MistWeaver_UpdateThunderFocusTea();
+    --MistWeaver_UpdatePlayerBuffs();
 end
 
 function MistWeaver_CheckInCombat()
@@ -2012,17 +1865,8 @@ function MistWeaver_UpdateRaidIcon(frame)
 end
 
 function MistWeaver_UpdatePower()
-    local chiBar = _G["MwPowerFrameChi"];
     local manaBar = _G["MwPowerFrameMana"];
 
-    local chi = UnitPower("player", SPELL_POWER_CHI);
-    local chiMax = UnitPowerMax("player", SPELL_POWER_CHI);
-
-    chiBar:SetMinMaxValues(0, chiMax);
-    chiBar:SetValue(chi);
-    chiBar.text:SetText(chi.."/"..chiMax);
-
-    -- mana
     local mana = UnitPower("player", SPELL_POWER_MANA);
     local manaMax = UnitPowerMax("player", SPELL_POWER_MANA);
 
@@ -2032,42 +1876,51 @@ function MistWeaver_UpdatePower()
 end
 
 function MistWeaver_UpdatePlayerBuffs()
-    local index = 1;
-
-    -- vital mists buff
-    local name, rank, icon, count = UnitBuff("player", VITAL_MISTS_BUFF);
-    if (count and count > 0) then
-        if (count == 5) then
-            MwSurgingMistCastFrame.button.count:SetText(SPELL_CAST_TIME_INSTANT_NO_MANA);
-        else
-            local percent = count * 20;
-            MwSurgingMistCastFrame.button.count:SetText(format("%d", percent).." %");
-        end
+    
+    -- vivify glow
+    local upliftingTranceName = GetSpellInfo(UPLIFTING_TRANCE_ID);
+        
+    if (UnitBuff("player", upliftingTranceName)) then
+        MistWeaver_ShowVivifyCastOverlayGlow()
     else
-        MwSurgingMistCastFrame.button.count:SetText("");
+        MistWeaver_HideVivifyCastOverlayGlow()
+    end
+    
+    local lifecyclesVivifyName = GetSpellInfo(LIFECYCLES_VIVIFY_ID);
+        
+    if (UnitBuff("player", lifecyclesVivifyName)) then
+        _G["MwVivifyCastFrame"].button.manaborder:Show();
+    else
+        _G["MwVivifyCastFrame"].button.manaborder:Hide();
+    end
+    
+    local lifecyclesEnvelopingMistName = GetSpellInfo(LIFECYCLES_ENVELOPING_MIST_ID);
+        
+    if (UnitBuff("player", lifecyclesEnvelopingMistName)) then
+        _G["MwEnvelopingMistCastFrame"].button.manaborder:Show();
+    else
+        _G["MwEnvelopingMistCastFrame"].button.manaborder:Hide();
     end
 end
 
-function MistWeaver_UpdateThunderFocusTea()
-    local name, rank, icon, count, debuffType, duration, expirationTime, caster = UnitBuff("player", THUNDERFOCUSTEA);
-
-    if (expirationTime) then
-        local countdown = expirationTime - GetTime();
-        MwThunderFocusTeaFrameLabel:SetFormattedText(SecondsToTimeAbbrev(countdown));
-    else
-        MwThunderFocusTeaFrameLabel:SetText("");
+function MistWeaver_ShowVivifyCastOverlayGlow()
+    if (upliftTranceShown) then
+        return;
     end
 
-    if (name) then
-        MistWeaver_ShowThunderFocusTeaOverlayGlow();
-    else
-        MistWeaver_HideThunderFocusTeaOverlayGlow();
-    end
+    MistWeaver_ShowOverlayGlow(_G["MwVivifyCastFrame"]);
+    
+    upliftTranceShown = true
 end
 
-function MistWeaver_ShowThunderFocusTeaOverlayGlow()
-    MistWeaver_ShowOverlayGlow(_G["MwSurgingMistCastFrame"]);
-    MistWeaver_ShowOverlayGlow(_G["MwRenewingMistCastFrame"]);
+function MistWeaver_HideVivifyCastOverlayGlow()
+    if (not upliftTranceShown) then
+        return;
+    end
+    
+    MistWeaver_HideOverlayGlow(_G["MwVivifyCastFrame"]);
+    
+    upliftTranceShown = false
 end
 
 function MistWeaver_ShowOverlayGlow(parent)
@@ -2079,17 +1932,15 @@ function MistWeaver_ShowOverlayGlow(parent)
         end
     else
         parent.overlay = ActionButton_GetOverlayGlow();
+        local frameWidth, frameHeight = parent:GetSize();
         parent.overlay:SetParent(parent);
         parent.overlay:ClearAllPoints();
-        parent.overlay:SetPoint("TOPLEFT", parent, "TOPLEFT", -6, 6);
-        parent.overlay:SetPoint("BOTTOMRIGHT", parent, "BOTTOMRIGHT", 6, -6);
+        --Make the height/width available before the next frame:
+        parent.overlay:SetSize(frameWidth, frameHeight);
+        parent.overlay:SetPoint("TOPLEFT", parent, "TOPLEFT", -frameWidth * 0.2, frameHeight * 0.2);
+        parent.overlay:SetPoint("BOTTOMRIGHT", parent, "BOTTOMRIGHT", frameWidth * 0.2, -frameHeight * 0.2);
         parent.overlay.animIn:Play();
     end
-end
-
-function MistWeaver_HideThunderFocusTeaOverlayGlow()
-    MistWeaver_HideOverlayGlow(_G["MwSurgingMistCastFrame"]);
-    MistWeaver_HideOverlayGlow(_G["MwRenewingMistCastFrame"]);
 end
 
 function MistWeaver_HideOverlayGlow(parent)
@@ -2159,8 +2010,9 @@ end
 function MistWeaver_UpdateUnit(frame, unit)
     MistWeaver_UpdateUnitHighlight(frame);
     MistWeaver_UpdateUnitHealth(frame, unit);
+    MistWeaver_UpdateUnitPower(frame, unit);
     MistWeaver_UpdateRenewingMist(frame, unit);
-    MistWeaver_UpdateSoothingMist(frame, unit);
+    MistWeaver_UpdateEssenceFont(frame, unit);
     MistWeaver_UpdateEnvelopingMist(frame, unit);
     MistWeaver_UpdateUnitThreatSituation(frame, unit);
     MistWeaver_UpdateUnitState(frame, unit);
@@ -2179,6 +2031,22 @@ function MistWeaver_UpdateUnitHighlight(frame)
     else
         art.highlight:Hide();
     end
+end
+
+function MistWeaver_UpdateUnitPower(frame, unit)
+    local powerBar = _G[frame:GetName().."Power"];
+    
+    local powerType, powerTypeString = UnitPowerType(unit);
+    
+    local power = UnitPower(unit, powerType);
+    local maxpower = UnitPowerMax(unit , powerType);
+    
+    local color = PowerBarColor[powerType];
+
+    powerBar:SetStatusBarColor(color.r, color.g, color.b);
+
+    powerBar:SetMinMaxValues(0, maxpower);
+    powerBar:SetValue(power);
 end
 
 function MistWeaver_UpdateUnitHealth(frame, unit)
@@ -2306,22 +2174,30 @@ function MistWeaver_UpdateRenewingMist(frame, unit)
     else
         MwRenewingMistCastFrame.button.count:SetText("");
     end
+
+    currentCharges, maxCharges = GetSpellCharges(LEVEL_15);
+
+    if (currentCharges and currentCharges > 0 and maxCharges and maxCharges > 1) then
+        MwLevel15CastFrame.button.count:SetText(currentCharges);
+    else
+        MwLevel15CastFrame.button.count:SetText("");
+    end
 end
 
-function MistWeaver_UpdateSoothingMist(frame, unit)
-    local soothingMistBar = _G[frame:GetName().."SoothingMist"];
+function MistWeaver_UpdateEssenceFont(frame, unit)
+    local essenceFontBar = _G[frame:GetName().."EssenceFont"];
 
-    local name, rank, icon, count, debuffType, duration, expirationTime, caster = UnitBuff(unit, SOOTHING_MIST);
+    local name, rank, icon, count, debuffType, duration, expirationTime, caster = UnitBuff(unit, ESSENCE_FONT);
 
-    soothingMistBar.caster = caster;
+    essenceFontBar.caster = caster;
 
-    if (name and name == SOOTHING_MIST) then
+    if (name and name == ESSENCE_FONT) then
         local startTime = expirationTime - duration;
-        soothingMistBar:SetMinMaxValues(0, expirationTime-startTime);
-        soothingMistBar:SetValue(expirationTime-GetTime());
-        soothingMistBar:SetStatusBarColor(MistWeaverData.SOOTHING_MIST_COLOR.r, MistWeaverData.SOOTHING_MIST_COLOR.g, MistWeaverData.SOOTHING_MIST_COLOR.b);
+        essenceFontBar:SetMinMaxValues(0, expirationTime-startTime);
+        essenceFontBar:SetValue(expirationTime-GetTime());
+        essenceFontBar:SetStatusBarColor(MistWeaverData.ESSENCE_FONT_COLOR.r, MistWeaverData.ESSENCE_FONT_COLOR.g, MistWeaverData.ESSENCE_FONT_COLOR.b);
     else
-        soothingMistBar:SetValue(0);
+        essenceFontBar:SetValue(0);
     end
 end
 
@@ -2514,7 +2390,7 @@ function MistWeaver_UpdateRaidDebuffColor(frame, unit, debuffColor, expirationTi
             detoxExpirationTime:SetText("");
         end
 
-        CooldownFrame_SetTimer(_G[frame:GetName().."DetoxCooldown"], start, duration, enabled, currentCharges, maxCharges);
+        CooldownFrame_Set(_G[frame:GetName().."DetoxCooldown"], start, duration, enabled, currentCharges, maxCharges);
     else
         detoxFrame:SetAlpha(0);
         detoxExpirationTime:SetText("");
@@ -2616,13 +2492,13 @@ function MistWeaver_UpdateRaidClassIcon(frame, unit)
     if (icon) then
         local _, classToken = UnitClass(unit);
 
-        if (classToken) then
-            local coords = CLASS_BUTTONS[classToken];
-            icon:SetTexture("Interface\\WorldStateFrame\\Icons-Classes");
-            icon:SetTexCoord(coords[1], coords[2], coords[3], coords[4]);
-        else
+        -- if (classToken) then
+            -- local coords = CLASS_BUTTONS[classToken];
+            -- icon:SetTexture("Interface\\WorldStateFrame\\Icons-Classes");
+            -- icon:SetTexCoord(coords[1], coords[2], coords[3], coords[4]);
+        -- else
             icon:SetTexture(nil);
-        end
+        -- end
     end
 end
 
@@ -2643,13 +2519,13 @@ function MistWeaver_SetUnitFrameAlpha(frame, alpha, alpha2)
         renewingMistBar:SetAlpha(MistWeaverData.SPELL_ALPHA);
     end
 
-    -- soothing mist transparency
-    local soothingMistBar = _G[frame:GetName().."SoothingMist"];
+    -- essence font transparency
+    local essenceFontBar = _G[frame:GetName().."EssenceFont"];
 
-    if (soothingMistBar.caster and soothingMistBar.caster == "player") then
-        soothingMistBar:SetAlpha(alpha);
+    if (essenceFontBar.caster and essenceFontBar.caster == "player") then
+        essenceFontBar:SetAlpha(alpha);
     else
-        soothingMistBar:SetAlpha(MistWeaverData.SPELL_ALPHA);
+        essenceFontBar:SetAlpha(MistWeaverData.SPELL_ALPHA);
     end
 
     -- enveloping mist transparency

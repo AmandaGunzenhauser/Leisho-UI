@@ -19,8 +19,8 @@ DataStore_AuctionsDB = {
 				["lastVisitDate"] = "2016/07/02 13:12",
 			},
 			["Default.Thrall.Leisho"] = {
-				["lastUpdate"] = 1468365118,
-				["lastVisitDate"] = "2016/07/12 19:11",
+				["lastUpdate"] = 1468893254,
+				["lastVisitDate"] = "2016/07/18 21:53",
 			},
 			["Default.Thrall.Alinastra"] = {
 				["lastUpdate"] = 1456694422,

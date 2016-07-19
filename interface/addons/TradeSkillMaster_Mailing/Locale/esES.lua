@@ -20,16 +20,16 @@ If you loot all mail with this enabled, it will wait and recheck then keep auto 
 
 Si despojas todos los correos con esta opción activada, se esperará y comprobará guardando los despojos automáticamente.]=] -- Needs review
 L["Auto Recheck Mail"] = "Comprobar automáticamente los correos" -- Needs review
--- L["BE SURE TO SPELL THE NAME CORRECTLY!"] = ""
+L["BE SURE TO SPELL THE NAME CORRECTLY!"] = "¡ASEGURATE DE DELETREAR EL NOMBRE CORRECTAMENTE!"
 -- L["Bought %sx%d for %s from %s"] = ""
 -- L["Buys"] = ""
--- L["Buy: %s (%d) | %s | %s"] = ""
+L["Buy: %s (%d) | %s | %s"] = "Comprar: %s (%d) | %s | %s"
 -- L["Cancelled auction of %sx%d"] = ""
 -- L["Cancels"] = ""
--- L["Cannot finish auto looting, inventory is full or too many unique items."] = ""
+L["Cannot finish auto looting, inventory is full or too many unique items."] = "No se puede terminar con el auto despojo, el inventario está lleno o posee demasiados objetos únicos."
 --[==[ L[ [=[|cff99ffffShift-Click|r to automatically re-send after the amount of time specified in the TSM_Mailing options.
 |cff99ffffCtrl-Click|r to perform a dry-run where Mailing doesn't send anything, but prints out what it would send (useful for testing your operations).]=] ] = "" ]==]
--- L["Clear"] = ""
+L["Clear"] = "Limpiar"
 -- L["Clicking this button clears the item box."] = ""
 -- L["Click this button to automatically mail items in the groups which you have selected."] = ""
 -- L["Click this button to mail the item to the specified character."] = ""
@@ -120,8 +120,8 @@ L["Auto Recheck Mail"] = "Comprobar automáticamente los correos" -- Needs revie
 -- L["Send Excess Gold to %s"] = ""
 -- L["Sending..."] = ""
 -- L["Sending Settings"] = ""
--- L["Send Items Individually"] = ""
--- L["Sends each unique item in a seperate mail."] = ""
+L["Send Items Individually"] = "Enviando objetos individualmente"
+L["Sends each unique item in a seperate mail."] = "Enviar cada objeto único en mail por separado"
 -- L["Send %sx%d to %s - No COD"] = ""
 -- L["Send %sx%d to %s - %s per Item COD"] = ""
 -- L["Sent all disenchantable items to %s."] = ""
@@ -146,7 +146,7 @@ L["Auto Recheck Mail"] = "Comprobar automáticamente los correos" -- Needs revie
 -- L["%s sent you %s"] = ""
 -- L["%s sent you %s and %s"] = ""
 -- L["%sShift-Click|r to continue opening after an inbox refresh if you have more than 50 items in your inbox."] = ""
--- L["%s to collect."] = ""
+L["%s to collect."] = "%s para recolectar."
 -- L["Stopped opening mail to keep %d slots free."] = ""
 -- L["Target:"] = ""
 -- L["Target is Current Player"] = ""

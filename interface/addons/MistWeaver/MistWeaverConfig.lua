@@ -4,7 +4,7 @@ MistWeaverData = {};
 
 MistWeaverData.ACTIVE = true;
 MistWeaverData.UNITWIDTH = 100;
-MistWeaverData.UNITHEIGHT = 50;
+MistWeaverData.UNITHEIGHT = 65;
 MistWeaverData.OOC_ALPHA = 0.5;
 MistWeaverData.UNITALPHA_DC = 0.5;
 MistWeaverData.SPELL_ALPHA = 0.5;
@@ -18,11 +18,10 @@ MistWeaverData.OUT_OF_RANGE = "You are out of range!";
 
 MistWeaverData.HIGHLIGHT_COLOR = {r=0, g=1, b=0};
 MistWeaverData.RENEWING_MIST_COLOR = {r=0, g=0.7, b=0.7};
-MistWeaverData.SOOTHING_MIST_COLOR = {r=0.7, g=1, b=0.4};
+MistWeaverData.ESSENCE_FONT_COLOR = {r=0.7, g=1, b=0.4};
 MistWeaverData.ENVELOPING_MIST_COLOR = {r=1, g=0.7, b=0.4};
 
-MistWeaverData.SHOW_IN_ALL_STANCES = false;
-MistWeaverData.SHOW_SOLO = false;
+MistWeaverData.SHOW_SOLO = true;
 
 MistWeaverData.SHOW_DEBUFFS = true;
 MistWeaverData.SHOW_RAID_ICON = true;
@@ -106,9 +105,8 @@ function MwConfig_LoadDefaults()
     MistWeaverData.OUT_OF_RANGE = MwConfig_GetDefault(MistWeaverData.OUT_OF_RANGE, "You are out of range!");
     MistWeaverData.HIGHLIGHT_COLOR = MwConfig_GetDefault(MistWeaverData.HIGHLIGHT_COLOR, {r=0, g=1, b=0});
     MistWeaverData.RENEWING_MIST_COLOR = MwConfig_GetDefault(MistWeaverData.RENEWING_MIST_COLOR, {r=0, g=0.7, b=0.7});
-    MistWeaverData.SOOTHING_MIST_COLOR = MwConfig_GetDefault(MistWeaverData.SOOTHING_MIST_COLOR, {r=0.7, g=1, b=0.4});
+    MistWeaverData.ESSENCE_FONT_COLOR = MwConfig_GetDefault(MistWeaverData.ESSENCE_FONT_COLOR, {r=0.7, g=1, b=0.4});
     MistWeaverData.ENVELOPING_MIST_COLOR = MwConfig_GetDefault(MistWeaverData.ENVELOPING_MIST_COLOR, {r=1, g=0.7, b=0.4});
-    MistWeaverData.SHOW_IN_ALL_STANCES = MwConfig_GetDefault(MistWeaverData.SHOW_IN_ALL_STANCES, false);
     MistWeaverData.SHOW_SOLO = MwConfig_GetDefault(MistWeaverData.SHOW_SOLO, false);
     MistWeaverData.SHOW_DEBUFFS = MwConfig_GetDefault(MistWeaverData.SHOW_DEBUFFS, true);
     MistWeaverData.SHOW_RAID_ICON = MwConfig_GetDefault(MistWeaverData.SHOW_RAID_ICON, true);
@@ -175,7 +173,6 @@ function MwConfig_RefreshUI()
     MwConfig_WhisperText:SetText(MistWeaverData.OUT_OF_RANGE);
     MwConfig_WhisperText:SetCursorPosition(0);
 
-    MwConfig_ToggleShowInAllStancesCheckButton:SetChecked(MistWeaverData.SHOW_IN_ALL_STANCES);
     MwConfig_ToggleShowSoloCheckButton:SetChecked(MistWeaverData.SHOW_SOLO);
     MwConfig_ToggleShowDebuffsCheckButton:SetChecked(MistWeaverData.SHOW_DEBUFFS);
     MwConfig_ToggleShowRaidIconCheckButton:SetChecked(MistWeaverData.SHOW_RAID_ICON);
@@ -193,7 +190,7 @@ function MwConfig_RefreshUI()
 
     MwConfigHighlightColor:SetBackdropColor(MistWeaverData.HIGHLIGHT_COLOR.r, MistWeaverData.HIGHLIGHT_COLOR.g, MistWeaverData.HIGHLIGHT_COLOR.b);
     MwConfigRenewingMistColor:SetBackdropColor(MistWeaverData.RENEWING_MIST_COLOR.r, MistWeaverData.RENEWING_MIST_COLOR.g, MistWeaverData.RENEWING_MIST_COLOR.b);
-    MwConfigSoothingMistColor:SetBackdropColor(MistWeaverData.SOOTHING_MIST_COLOR.r, MistWeaverData.SOOTHING_MIST_COLOR.g, MistWeaverData.SOOTHING_MIST_COLOR.b);
+    MwConfigEssenceFontColor:SetBackdropColor(MistWeaverData.ESSENCE_FONT_COLOR.r, MistWeaverData.ESSENCE_FONT_COLOR.g, MistWeaverData.ESSENCE_FONT_COLOR.b);
     MwConfigEnvelopingMistColor:SetBackdropColor(MistWeaverData.ENVELOPING_MIST_COLOR.r, MistWeaverData.ENVELOPING_MIST_COLOR.g, MistWeaverData.ENVELOPING_MIST_COLOR.b);
 
     -- update main frame
@@ -242,9 +239,6 @@ function MwConfig_CreateUI(self)
 
     MwConfig_AddCheckButton(self, "MwConfig_ToggleActiveCheckButton",
         MW_ON, MwConfig_ToggleActive);
-
-    MwConfig_AddCheckButton(self, "MwConfig_ToggleShowInAllStancesCheckButton",
-        MW_SHOW_IN_ALL_STANCES, MwConfig_ToggleShowInAllStances);
 
     MwConfig_AddCheckButton(self, "MwConfig_ToggleShowSoloCheckButton",
         MW_SHOW_SOLO, MwConfig_ToggleShowSolo);
@@ -356,8 +350,8 @@ function MwConfig_CreateUI(self)
     MwConfig_AddColorChooser(colors, "MwConfigRenewingMistColor",
         MW_RENEWING_MIST_COLOR, MwConfig_SelectRenewingMistColor);
 
-    MwConfig_AddColorChooser(colors, "MwConfigSoothingMistColor",
-        MW_SOOTHING_MIST_COLOR, MwConfig_SelectSoothingMistColor);
+    MwConfig_AddColorChooser(colors, "MwConfigEssenceFontColor",
+        MW_ESSENCE_FONT_COLOR, MwConfig_SelectEssenceFontColor);
 
     MwConfig_AddColorChooser(colors, "MwConfigEnvelopingMistColor",
         MW_ENVELOPING_MIST_COLOR, MwConfig_SelectEnvelopingMistColor);
@@ -661,12 +655,6 @@ function MwConfig_ToggleActive()
     MwConfig_RefreshUI();
 end
 
-function MwConfig_ToggleShowInAllStances()
-    MistWeaverData.SHOW_IN_ALL_STANCES = not MistWeaverData.SHOW_IN_ALL_STANCES;
-
-    MwConfig_RefreshUI();
-end
-
 function MwConfig_ToggleShowSolo()
     MistWeaverData.SHOW_SOLO = not MistWeaverData.SHOW_SOLO;
 
@@ -906,27 +894,27 @@ function MwConfig_CancelRenewingMistColor(prevValues)
     MwConfig_RefreshUI();
 end
 
-function MwConfig_SelectSoothingMistColor()
-    ColorPickerFrame.previousValues = {r = MistWeaverData.SOOTHING_MIST_COLOR.r, g = MistWeaverData.SOOTHING_MIST_COLOR.g, b = MistWeaverData.SOOTHING_MIST_COLOR.b};
-    ColorPickerFrame.func = MwConfig_SetSoothingMistColor;
-    ColorPickerFrame.cancelFunc = MwConfig_CancelSoothingMistColor;
-    ColorPickerFrame:SetColorRGB(MistWeaverData.SOOTHING_MIST_COLOR.r, MistWeaverData.SOOTHING_MIST_COLOR.g, MistWeaverData.SOOTHING_MIST_COLOR.b);
+function MwConfig_SelectEssenceFontColor()
+    ColorPickerFrame.previousValues = {r = MistWeaverData.ESSENCE_FONT_COLOR.r, g = MistWeaverData.ESSENCE_FONT_COLOR.g, b = MistWeaverData.ESSENCE_FONT_COLOR.b};
+    ColorPickerFrame.func = MwConfig_SetEssenceFontColor;
+    ColorPickerFrame.cancelFunc = MwConfig_CancelEssenceFontColor;
+    ColorPickerFrame:SetColorRGB(MistWeaverData.ESSENCE_FONT_COLOR.r, MistWeaverData.ESSENCE_FONT_COLOR.g, MistWeaverData.ESSENCE_FONT_COLOR.b);
     ShowUIPanel(ColorPickerFrame);
 end
 
-function MwConfig_SetSoothingMistColor()
+function MwConfig_SetEssenceFontColor()
     local r,g,b = ColorPickerFrame:GetColorRGB();
-    MistWeaverData.SOOTHING_MIST_COLOR.r = r;
-    MistWeaverData.SOOTHING_MIST_COLOR.g = g;
-    MistWeaverData.SOOTHING_MIST_COLOR.b = b;
+    MistWeaverData.ESSENCE_FONT_COLOR.r = r;
+    MistWeaverData.ESSENCE_FONT_COLOR.g = g;
+    MistWeaverData.ESSENCE_FONT_COLOR.b = b;
 
     MwConfig_RefreshUI();
 end
 
-function MwConfig_CancelSoothingMistColor(prevValues)
-    MistWeaverData.SOOTHING_MIST_COLOR.r = prevValues.r;
-    MistWeaverData.SOOTHING_MIST_COLOR.g = prevValues.g;
-    MistWeaverData.SOOTHING_MIST_COLOR.b = prevValues.b;
+function MwConfig_CancelEssenceFontColor(prevValues)
+    MistWeaverData.ESSENCE_FONT_COLOR.r = prevValues.r;
+    MistWeaverData.ESSENCE_FONT_COLOR.g = prevValues.g;
+    MistWeaverData.ESSENCE_FONT_COLOR.b = prevValues.b;
 
     MwConfig_RefreshUI();
 end

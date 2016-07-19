@@ -23,7 +23,11 @@ function GUI:CreateButton(parent, textHeight, name, isSecure)
 	TSMAPI.Design:SetContentColor(btn)
 	local highlight = btn:CreateTexture(nil, "HIGHLIGHT")
 	highlight:SetAllPoints()
-	highlight:SetTexture(1, 1, 1, .2)
+	if select(4, GetBuildInfo()) >= 70000 then
+		highlight:SetColorTexture(1, 1, 1, .2)
+	else
+		highlight:SetTexture(1, 1, 1, .2)
+	end
 	highlight:SetBlendMode("BLEND")
 	btn.highlight = highlight
 	btn:SetScript("OnEnter", private.ShowTooltip)
@@ -134,7 +138,7 @@ function GUI:CreateStatusBar(parent, baseName)
 			end
 		end
 	end
-	
+
 	local function SetStatusText(self, text)
 		self.text:SetText(text)
 	end
@@ -147,7 +151,7 @@ function GUI:CreateStatusBar(parent, baseName)
 	frame:SetFrameLevel(level+1)
 	frame.UpdateStatus = UpdateStatus
 	frame.SetStatusText = SetStatusText
-	
+
 	-- minor status bar (gray one)
 	local statusBar = CreateFrame("STATUSBAR", baseName.."-Minor", frame, "TextStatusBar")
 	statusBar:SetOrientation("HORIZONTAL")
@@ -159,11 +163,16 @@ function GUI:CreateStatusBar(parent, baseName)
 	local ag = statusBar:CreateAnimationGroup()
 	local alpha = ag:CreateAnimation("Alpha")
 	alpha:SetDuration(1)
-	alpha:SetChange(-.5)
+	if select(4, GetBuildInfo()) >= 70000 then
+		alpha:SetFromAlpha(0.7)
+		alpha:SetToAlpha(0.2)
+	else
+		alpha:SetChange(-0.5)
+	end
 	ag:SetLooping("Bounce")
 	statusBar.ag = ag
 	frame.minorStatusBar = statusBar
-	
+
 	-- major status bar (main blue one)
 	local statusBar = CreateFrame("STATUSBAR", baseName.."-Major", frame, "TextStatusBar")
 	statusBar:SetOrientation("HORIZONTAL")
@@ -175,11 +184,16 @@ function GUI:CreateStatusBar(parent, baseName)
 	local ag = statusBar:CreateAnimationGroup()
 	local alpha = ag:CreateAnimation("Alpha")
 	alpha:SetDuration(1)
-	alpha:SetChange(-.5)
+	if select(4, GetBuildInfo()) >= 70000 then
+		alpha:SetFromAlpha(0.9)
+		alpha:SetToAlpha(0.4)
+	else
+		alpha:SetChange(-0.5)
+	end
 	ag:SetLooping("Bounce")
 	statusBar.ag = ag
 	frame.majorStatusBar = statusBar
-	
+
 	local textFrame = CreateFrame("Frame", nil, frame)
 	textFrame:SetFrameLevel(level+4)
 	textFrame:SetAllPoints(frame)
@@ -188,7 +202,7 @@ function GUI:CreateStatusBar(parent, baseName)
 	TSMAPI.Design:SetWidgetTextColor(text)
 	text:SetPoint("CENTER")
 	frame.text = text
-	
+
 	return frame
 end
 
@@ -244,7 +258,7 @@ function GUI:CreateMovableFrame(name, defaults, parent)
 	options.defaults = defaults
 	TSM.db.global.frameStatus[name] = options
 	options.hasLoaded = nil
-	
+
 	local frame = CreateFrame("Frame", name, parent)
 	frame:Hide()
 	frame:SetHeight(options.height)
@@ -289,7 +303,7 @@ function GUI:CreateMovableFrame(name, defaults, parent)
 	frame:SetScript("OnShow", frame.RefreshPosition)
 	frame.options = options
 	tinsert(private.movableFrames, frame)
-	
+
 	return frame
 end
 
@@ -304,7 +318,7 @@ function GUI:ResetFrames()
 			frame:RefreshPosition()
 		end
 	end
-	
+
 	-- explicitly reset bankui since it can't easily use TSM.GUI:CreateMovableFrame
 	TSM:ResetBankUIFramePosition()
 end

@@ -190,7 +190,9 @@ function private.OnTabClick(tabFrame)
 	ButtonFrameTemplate_HideButtonBar(MailFrame)
 	InboxFrame:Hide()
 	OpenMailFrame:Hide()
-	StationeryPopupFrame:Hide()
+	if select(4, GetBuildInfo()) < 70000 then
+		StationeryPopupFrame:Hide()
+	end
 	SendMailFrame:Hide()
 	SetSendMailShowing(false)
 	

@@ -8,7 +8,7 @@ GoldSave = {
 	["Leisho_Thrall::Horde"] = {
 		["show"] = true,
 		["name"] = "Leisho",
-		["gold"] = 1674089511,
+		["gold"] = 487273099,
 	},
 	["Raijah_Thrall::Horde"] = {
 		["show"] = true,

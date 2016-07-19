@@ -77,7 +77,7 @@ Constructor
 
 local function Constructor()
 	local name = "TSMButton" .. AceGUI:GetNextWidgetNum(Type)
-	
+
 	local frame = CreateFrame("Frame", nil, UIParent)
 	local btn = CreateFrame("Button", name, frame)
 	btn:Hide()
@@ -87,14 +87,18 @@ local function Constructor()
 	TSMAPI.Design:SetContentColor(btn)
 	local highlight = btn:CreateTexture(nil, "HIGHLIGHT")
 	highlight:SetAllPoints()
-	highlight:SetTexture(1, 1, 1, .2)
+	if select(4, GetBuildInfo()) >= 70000 then
+		highlight:SetColorTexture(1, 1, 1, .2)
+	else
+		highlight:SetTexture(1, 1, 1, .2)
+	end
 	highlight:SetBlendMode("BLEND")
 	btn.highlight = highlight
 	btn:SetScript("OnClick", Button_OnClick)
 	btn:SetScript("OnEnter", Control_OnEnter)
 	btn:SetScript("OnLeave", Control_OnLeave)
 	btn:Show()
-	
+
 	local label = btn:CreateFontString()
 	label:SetPoint("CENTER")
 	label:SetHeight(15)

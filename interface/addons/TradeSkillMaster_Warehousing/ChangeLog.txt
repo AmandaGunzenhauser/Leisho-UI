@@ -1,3 +1,6 @@
+v3.0.2
+*Bumped TOC version for patch 7.0.3.
+
 v3.0.1
 *Add caching of pet species in Guild Vault.
 *Optimize scanning of Guild Vault inventory.

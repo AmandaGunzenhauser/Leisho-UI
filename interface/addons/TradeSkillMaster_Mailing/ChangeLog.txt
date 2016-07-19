@@ -1,3 +1,12 @@
+v3.0.6
+*Fixed bug with mail inbox.
+
+v3.0.5
+*Fixed 7.0.x bug causing errors and preventing opening of mail.
+
+v3.0.4
+*Bumped TOC version for patch 7.0.x.
+
 v3.0.3
 *Fixed bug with sending getting stuck if the recipient was invalid.
 

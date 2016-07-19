@@ -101,11 +101,6 @@ function MistWeaver_SetBackdrop(frame)
     local background = "Interface\\Addons\\MistWeaver\\images\\frame-background";
     local border = "Interface\\Addons\\MistWeaver\\images\\frame-border";
 
-    if (CleanUIData) then
-        background = CleanUI_GetFrameBackground() or "Interface\\Addons\\MistWeaver\\images\\frame-background";
-        border = CleanUI_GetFrameBorder() or "Interface\\Addons\\MistWeaver\\images\\frame-border";
-    end
-
     local insetValue = 2;
 
     frame:SetBackdrop( {

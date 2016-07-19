@@ -1,5 +1,9 @@
 ## Interface: 60000
-## Version: @project-version@
+## Version: 10
+## X-Curse-Packaged-Version: 10
+## X-Curse-Project-Name: LibRealmInfo
+## X-Curse-Project-ID: librealminfo
+## X-Curse-Repository-ID: wow/librealminfo/mainline
 
 ## Title: Lib: Realm Info
 ## Notes: Library to provide information about realms.

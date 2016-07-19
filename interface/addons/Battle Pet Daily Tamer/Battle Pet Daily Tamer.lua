@@ -1,14 +1,20 @@
-
 local _,tamer = ...
 local settings
 BattlePetDailyTamer = tamer -- global for outside access
 
 tamer.Paws = {} -- frame pool for paws
-tamer.IncompleteObjectives = {} -- table of quest objects that are not complete
-tamer.CompleteObjectives = {} -- table of quest objects that are complete
+tamer.QuestsByContinent = {} -- indexed by continent, lits of questIDs to expect on the current map's continent
+tamer.IncompleteObjectives = {} -- table of quest objectives in player quest log that are not complete
+tamer.InactiveQuests = {} -- lookup table while TrackCompleted is enabled of inactive(greyed out) quests
+tamer.LastMapID = nil -- mapID that was last updated
+tamer.PawsShown = nil -- becomes true if any paws are shown on the current map
+tamer.OpenedMapFrame = nil -- will be either WorldMapFrame or TaxiRouteMap (and eventually FlightMapFrame) 
+tamer.MapNeverShown = true -- will become nil when we've checked whether the Darkmoon Faire is in town
+
+-- quest IDs of dailies with objectives (Beasts of Fable and Legion World Quests)
+tamer.QuestsWithObjectives = {32604,32868,32869,41935,42165,42190}
 
 --[[	PawInfo describes the paws and the settings that control them.
-
 		[1] = name as it should appear on map options menu/interface options panel
 		[2] = name of savedvar key into BattlePetDailyTamerSettings
 		[3] = default value of this setting
@@ -18,164 +24,56 @@ tamer.CompleteObjectives = {} -- table of quest objects that are complete
 		[7] = blue icon color
 ]]
 tamer.PawInfo = {
-	{"Pet Reward Dailies","TrackSatchels",true,"Interface\\AddOns\\Battle Pet Daily Tamer\\paw",0.5,1.0,0.25},
+	{"Reward Dailies","TrackSatchels",true,"Interface\\AddOns\\Battle Pet Daily Tamer\\paw",0.5,1.0,0.25},
 	{"Normal Dailies","TrackNonSatchels",true,"Interface\\AddOns\\Battle Pet Daily Tamer\\paw",0.5,0.85,1.0},
 	{"Legendary","TrackFables",true,"Interface\\AddOns\\Battle Pet Daily Tamer\\paw",1.0,0.5,0},
-	{"Completed Dailies","TrackCompleted",false,"Interface\\AddOns\\Battle Pet Daily Tamer\\paw",0.75,0.75,0.75},
+	{"Inactive Dailies","TrackCompleted",false,"Interface\\AddOns\\Battle Pet Daily Tamer\\paw",0.75,0.75,0.75},
 	{"On Flight Maps Too","TaxiPaws",false,"Interface\\TaxiFrame\\UI-Taxi-Icon-White",1.0,1.0,1.0},
 	{"Stable Masters","StableMasters",false,"Interface\\Minimap\\Tracking\\Stablemaster",1.0,1.0,1.0},
 }
 
---[[	DailyInfo describes the dailies. It's indexed by the questID of each daily quest.
-
-	[questID] = {
-		[1] = name of the tamer
-		[2] = more detail about daily ("Darkmoon Faire", "Beasts of Fable Book II", etc)
-		[3] = mapID
-		[4] = mapX zone-level x map coordinate
-		[5] = mapY zone-level y map coordinate
-		[6] = daily type, 1=satchel, 2=non-satchel, 3=legendary; this is an index to tamer.PawInfo above
-		[7] = level of pets for this tamer
-		[8] = pet type of tamer's first pet (1-10)
-		[9] = pet type of tamer's second pet (1-10)
-		[10] = pet type of tamer's third pet (1-10)
+do -- some post-processing of tables in Battle Pet Daily Tamer Coordinates.lua
+	-- remove horde quests for alliance players and alliance quests for horde players
+	local wrongQuests = {
+		["Alliance"] = {[31818]=1,[31854]=1,[31872]=1,[31862]=1,[31819]=1,[31871]=1,[31904]=1,[31908]=1,[31905]=1,[31906]=1,[31907]=1,[32604]=1,[32868]=1,[32869]=1},
+		["Horde"] = {[31693]=1,[31780]=1,[31781]=1,[31850]=1,[31852]=1,[31851]=1,[31910]=1,[31911]=1,[31912]=1,[31913]=1,[31914]=1,[32604]=1,[32868]=1,[32869]=1}
 	}
-
-	When a questID is Number1:Number2, Number1 is the questID and Number2 is the objective number.
-]]
-tamer.DailyInfo = {
-	-- Satchel dailies (green paws)
-	[31916]={"Lydia Accoste",nil,32,0.401,0.765,1,19,4,7,4},
-	[31909]={"Stone Cold Trixxy",nil,281,0.656,0.645,1,19,3,8,2},
-	[31926]={"Bloodknight Antari",nil,473,0.305,0.418,1,24,6,7,2},
-	[31935]={"Major Payne",nil,492,0.774,0.196,1,25,8,10,7},
-	[31971]={"Obalis",nil,720,0.566,0.420,1,25,5,3,8},
-	[31955]={"Farmer Nishi",nil,807,0.461,0.437,1,25,8,7,7},
-	[31991]={"Seeker Zusshi",nil,810,0.363,0.522,1,25,7,5,9},
-	[31957]={"Wastewalker Shu",nil,858,0.551,0.376,1,25,9,8,7},
-	[31953]={"Hyuna of the Shrines",nil,806,0.480,0.541,1,25,9,8,3},
-	[31954]={"Mo'ruk",nil,857,0.622,0.459,1,25,3,9,8},
-	[31958]={"Aki the Chosen",nil,811,0.313,0.741,1,25,5,2,9},
-	[31956]={"Courageous Yon",nil,809,0.358,0.736,1,25,8,5,3},
-	[32434]={"Burning Pandaren Spirit","Pandarian Spirits",810,0.571,0.421,1,25,7,2,3},
-	[32441]={"Thundering Pandaren Spirit","Pandarian Spirits",811,0.673,0.144,1,25,7,6,8},
-	[32439]={"Flowing Pandaren Spirit","Pandarian Spirits",858,0.611,0.875,1,25,7,9,5},
-	[32440]={"Whispering Pandaren Spirit","Pandarian Spirits",806,0.289,0.360,1,25,7,2,3},
-	[33222]={"Little Tommy Newcomer","Lil' Oondasta",951,0.346,0.604,2,25,8},
-	[33137]={"Celestial Tournament",nil,951,0.347,0.596,1},
-	-- Non-satchel dailies (blue paws)
-	[31922]={"Nicki Tinytech",nil,465,0.643,0.493,2,20,10,10,10},
-	[31923]={"Ras'an",nil,467,0.172,0.505,2,21,3,6,1},
-	[31924]={"Narrok",nil,477,0.610,0.494,2,22,5,9,8},
-	[31925]={"Morulu The Elder",nil,481,0.587,0.700,2,23,9,9,9},
-	[31934]={"Gutretch",nil,496,0.132,0.668,2,25,8,8,5},
-	[31931]={"Beegle Blastfuse",nil,491,0.286,0.339,2,25,3,3,9},
-	[31932]={"Nearly Headless Jacob",nil,510,0.501,0.590,2,25,4,4,4},
-	[31933]={"Okrut Dragonwaste",nil,488,0.590,0.771,2,25,2,4,4},
-	[31972]={"Brok",nil,606,0.614,0.327,2,25,8,6,5},
-	[31974]={"Goz Banefury",nil,700,0.566,0.568,2,25,7,6,8},
-	[31973]={"Bordin Steadyfist",nil,640,0.499,0.570,2,25,7,5,7},
-	-- Beasts of Fable (orange paws)
-	["32604:1"]={"Ka'wi the Gorger","Beasts of Fable Book I",806,0.484,0.710,3,25,5},
-	["32604:2"]={"Kafi","Beasts of Fable Book I",809,0.352,0.562,3,25,8},
-	["32604:3"]={"Dos-Ryga","Beasts of Fable Book I",809,0.679,0.847,3,25,9},
-	["32604:4"]={"Nitun","Beasts of Fable Book I",806,0.570,0.291,3,25,5},
-	["32868:1"]={"Greyhoof","Beasts of Fable Book II",807,0.253,0.785,3,25,8},
-	["32868:2"]={"Lucky Yi","Beasts of Fable Book II",807,0.405,0.437,3,25,5},
-	["32868:3"]={"Skitterer Xi'a","Beasts of Fable Book II",857,0.362,0.373,3,25,9},
-	["32869:1"]={"Gorespine","Beasts of Fable Book III",858,0.262,0.503,3,25,8},
-	["32869:2"]={"No-No","Beasts of Fable Book III",811,0.110,0.709,3,25,9},
-	["32869:3"]={"Ti'un the Wanderer","Beasts of Fable Book III",810,0.723,0.798,3,25,9},
-	-- Draenor dailies (green paws)
-	[37201]={"Cymre Brightblade",nil,949,0.511,0.706,1,25,4,6,10},
-	[37205]={"Gargra",nil,941,0.686,0.648,1,25,8,8,8},
-	[37206]={"Tarr the Terrible",nil,950,0.562,0.098,1,25,1,1,1},
-	[37208]={"Taralune",nil,946,0.491,0.804,1,25,3,3,3},
-	[37207]={"Vesharr",nil,948,0.463,0.453,1,25,3,10,3},
-	[37203]={"Ashlei",nil,947,0.500,0.313,1,25,6,6,8},
-	-- Darkmoon Faire
-	[32175]={"Jeremy Feasel","Darkmoon Faire",823,0.479,0.625,1,25,6,8,10},
-	[36471]={"Christoph VonFeasel","Darkmoon Faire",823,0.474,0.622,1,25,6,8,8},
-	-- Tanaan Jungle
-	[39160]={"Corrupted Thundertail",nil,945,0.530,0.652,3,25,8},
-	[39170]={"Dreadwalker",nil,945,0.473,0.528,3,25,10},
-	[39169]={"Vile Blood of Draenor",nil,945,0.440,0.457,3,25,6},
-	[39171]={"Netherfist",nil,945,0.484,0.355,3,25,1},
-	[39172]={"Skrillix",nil,945,0.486,0.313,3,25,1},
-	[39165]={"Direflame",nil,945,0.577,0.374,3,25,7},
-	[39173]={"Defiled Earth",nil,945,0.755,0.374,3,25,7},
-	[39163]={"Felfly",nil,945,0.559,0.808,3,25,3},
-	[39164]={"Tainted Maulclaw",nil,945,0.434,0.845,3,25,9},
-	[39166]={"Mirecroak",nil,945,0.422,0.718,3,25,9},
-	[39161]={"Chaos Pup",nil,945,0.250,0.762,3,25,8},
-	[39162]={"Cursed Spirit",nil,945,0.314,0.381,3,25,4},
-	[39157]={"Felsworn Sentry",nil,945,0.261,0.316,3,25,10},
-	[39168]={"Bleakclaw",nil,945,0.160,0.447,3,25,3},
-	[39167]={"Dark Gazer",nil,945,0.541,0.298,3,25,6},
-}
--- faction-specific DailyInfo
-tamer.AllianceDailyInfo = {
-	[31693]={"Julia Stevens",nil,30,0.417,0.837,2,2,8,8},
-	[31780]={"Old MacDonald",nil,39,0.609,0.185,2,3,3,10,5},
-	[31781]={"Lindsay",nil,36,0.333,0.526,2,5,5,5,5},
-	[31850]={"Eric Davidson",nil,34,0.199,0.446,2,7,8,8,8},
-	[31852]={"Steven Lisbane",nil,37,0.460,0.404,2,9,8,8,6},
-	[31851]={"Bill Buckler",nil,673,0.515,0.734,2,11,1,3,3},
-	[31910]={"David Kosse",nil,26,0.630,0.546,2,13,8,5,6},
-	[31911]={"Deiza Plaguehorn",nil,23,0.670,0.524,2,14,8,8,4},
-	[31912]={"Kortas Darkhammer",nil,28,0.353,0.277,2,15,2,2,2},
-	[31913]={"Everessa",nil,38,0.768,0.415,2,16,9,3,8},
-	[31914]={"Durin Darkhammer",nil,29,0.255,0.475,2,17,3,5,7},
-	[32604]={"Sara Finkleswitch","Beasts of Fable Book I",811,0.866,0.600,1},
-	[32868]={"Sara Finkleswitch","Beasts of Fable Book II",811,0.866,0.600,1},
-	[32869]={"Sara Finkleswitch","Beasts of Fable Book III",811,0.866,0.600,1},
-}
-tamer.HordeDailyInfo = {
-	[31818]={"Zunta",nil,4,0.439,0.289,2,2,5,8},
-	[31854]={"Analynn",nil,43,0.202,0.295,2,5,3,9,5},
-	[31872]={"Merda Stronghoof",nil,101,0.571,0.457,2,9,7,9,5},
-	[31862]={"Zonya the Sadist",nil,81,0.597,0.716,2,7,8,8,5},
-	[31819]={"Dagra the Fierce",nil,11,0.586,0.531,2,3,8,8,5},
-	[31871]={"Traitor Gluk",nil,121,0.597,0.496,2,13,2,5,8},
-	[31904]={"Cassandra Kaboom",nil,607,0.396,0.791,2,11,10,10,10},
-	[31908]={"Elena Flutterfly",nil,241,0.461,0.603,2,17,6,3,2},
-	[31905]={"Grazzle the Great",nil,141,0.539,0.749,2,14,2,2,2},
-	[31906]={"Kela Grimtotem",nil,61,0.319,0.329,2,15,8,5,5},
-	[31907]={"Zoltan",nil,182,0.400,0.566,2,16,6,10,6},
-	[32604]={"Gentle San","Beasts of Fable Book I",811,0.607,0.238,1},
-	[32868]={"Gentle San","Beasts of Fable Book II",811,0.607,0.238,1},
-	[32869]={"Gentle San","Beasts of Fable Book III",811,0.607,0.238,1},
-}
-
--- these are quest IDs of dailies with objectives (so far just the Beasts of Fables)
-tamer.QuestsWithObjectives = {32604,32868,32869}
-
-
--- for each of the data tables MapCoordinates, WorldCoordinates and DailyInfo,
--- merge the faction-specific data into the main table and then delete both
--- AllianceTableName and HordeTableName
-do
-	-- merges table t2 into t1, for merging Alliance/Horde tables into primary ones
-	local function merge(t1,t2)
-		for k,v in pairs(t2) do
-			if type(v)=="table" and type(t1[k])=="table" then
-				merge(t1[k], t2[k])
-			else
-				t1[k] = v
+	local quests = wrongQuests[UnitFactionGroup("player")]
+	if quests then -- player could be neutral pandaren; in which case show everything
+		-- remove wrong-faction DailyInfo
+		for questID in pairs(quests) do
+			tamer.DailyInfo[questID] = nil
+		end
+		-- remove wrong-faction MapCoordinates[0] (azeroth world map)
+		for i=#tamer.MapCoordinates[0],1,-1 do
+			if quests[tamer.MapCoordinates[0][i][1]] then
+				tremove(tamer.MapCoordinates[0],i)
 			end
 		end
-		return t1
 	end
-
-	-- go through the tables and merge faction-specific data with live data
-	for _,data in pairs({"MapCoordinates","WorldCoordinates","DailyInfo"}) do
-		local key = format("%s%s",(UnitFactionGroup("player")),data)
-		if tamer[key] then
-			merge(tamer[data],tamer[key])
+	wrongQuests = nil -- don't need this table anymore
+	-- to prevent the need to go through 132+ table entries on every map update, group quests by continent
+	for questID,info in pairs(tamer.DailyInfo) do
+		local continent = info[3]
+		if not tamer.QuestsByContinent[continent] then
+			tamer.QuestsByContinent[continent] = {}
 		end
-		tamer[format("%s%s","Alliance",data)] = nil -- and delete faction-specific tables
-		tamer[format("%s%s","Horde",data)] = nil -- they're no longer needed
+		tinsert(tamer.QuestsByContinent[continent],questID)
 	end
+end
+
+-- this function is a mirror of default's GetWorldLocFromMapPos
+-- takes world coordinates and converts them to current map's coordinates
+function tamer:GetMapPosFromWorldLoc(y,x)
+  local _,left,top,right,bottom = GetCurrentMapZone()
+	-- the x-axis is flipped, left and right could be called maxX and minX respectively
+  if left and x and x<left and x>right and y>bottom and y<top then
+		local mapX = (x-left)/(right-left)
+		local mapY = 1-(y-bottom)/(top-bottom)
+		if mapX>0.05 and mapX<0.95 and mapY>0.05 and mapY<0.95 then -- only if they're more than 5% from edge
+			return mapX,mapY
+		end
+  end
 end
 
 --[[ Event Frame ]]
@@ -191,366 +89,49 @@ end)
 tamer.frame:RegisterEvent("PLAYER_LOGIN")
 
 function tamer:PLAYER_LOGIN()
-	BattlePetDailyTamerSettings = BattlePetDailyTamerSettings or {}
 	tamer:InitializeSettings()
-	tamer.frame:RegisterEvent("WORLD_MAP_UPDATE")
+	-- WorldMapFrame_UpdateMap runs when WORLD_MAP_UPDATE happens and the map is on screen
+	hooksecurefunc("WorldMapFrame_Update",tamer.WorldMapFrameUpdate)
+	-- WorldMapFrame_UpdateMap can trigger in spasms; we do an OnUpdate to only run after a frame of events
+	tamer.frame:SetScript("OnUpdate",tamer.UpdatePaws)
+	-- when the map closes, reset the LastMapID so an immediate update happens when map is opened
+	WorldMapFrame:HookScript("OnHide",tamer.WorldMapOnHide)
+	TaxiRouteMap:HookScript("OnHide",tamer.WorldMapOnHide)
+	-- hook the default "Show Pet Tamers" dropdown
+	tamer.OldWorldMapShowDropDown_Initialize = WorldMapTrackingOptionsDropDown_Initialize
+	WorldMapTrackingOptionsDropDown_Initialize = tamer.NewWorldMapShowDropDown_Initialize
+	UIDropDownMenu_Initialize(WorldMapFrameDropDown, WorldMapTrackingOptionsDropDown_Initialize, "MENU")
+	-- for custom tooltip, start monitoring paw mouseover when mouse enters map
+	WorldMapButton:HookScript("OnEnter",tamer.WorldMapOnEnter)
+	TaxiFrame:HookScript("OnEnter",tamer.WorldMapOnEnter)
+	-- tooltip used for getting localized npc/quest names
+	tamer.scanTooltip = CreateFrame("GameTooltip","BattlePetDailyTamerScanTooltip",nil,"GameTooltipTemplate")
 	tamer.frame:RegisterEvent("TAXIMAP_OPENED")
-
-	OpenCalendar()
---	C_Timer.After(1,tamer.CheckDMF)
 end
 
-function tamer:CheckDMF()
-  local _,_,day = CalendarGetDate()
-	local faireActive
-	for i=1,CalendarGetNumDayEvents(0,day) do
-	  local texture = select(7,CalendarGetDayEvent(0,day,i))
-	  if texture and texture:lower():match("darkmoonfaire") then
-			faireActive = true
-	  end
-	end
-	if not faireActive then -- faire not on calendar, remove its dailies
-		tamer.DailyInfo[32175] = nil
-		tamer.DailyInfo[36471] = nil
-	end
+-- this is called when both WorldMapFrame and TaxiRouteMap hide
+function tamer:WorldMapOnHide()
+	tamer.LastMapID = nil
+	tamer:HideTooltip()
 end
-
-function tamer:WORLD_MAP_UPDATE()
-	if WorldMapFrame:IsVisible() then
-		self:Show()
-	end
-end
--- WORLD_MAP_UPDATE can fire up to a 100 times when crossing zone boundries.
--- instead of reacting to every event, wait one frame after the events fire
-tamer.frame:SetScript("OnUpdate",function(self)
-	self:Hide()
-	if tamer.CheckDMF then -- if we've not checked for DMF being up
-		tamer.CheckDMF()
-		tamer.CheckDMF = nil
-	end
-	tamer:UpdatePaws()
-end)
-
-function tamer:TAXIMAP_OPENED()
-	tamer:UpdateTaxiPaws()
-end
-
---[[ Paws ]]
-
--- returns the first available paw from the frame pool, or creates one if needed
-function tamer:GetAvailablePaw(parent)
-	for _,paw in ipairs(tamer.Paws) do
-		if not paw:GetParent() then
-			paw:SetParent(parent)
-			return paw
-		end
-	end
-	local paw = CreateFrame("Button",nil,parent)
-	paw:SetSize(18,18)
-	paw.texture = paw:CreateTexture(nil,"OVERLAY")
-	paw.texture:SetAllPoints(true)
-	paw.texture:SetTexture("Interface\\AddOns\\Battle Pet Daily Tamer\\paw")
-	paw:SetScript("OnEnter",tamer.PawOnEnter)
-	paw:SetScript("OnLeave",tamer.PawOnLeave)
-	paw:SetScript("OnClick",tamer.PawOnClick)
-	paw:RegisterForClicks("AnyUp")
-	tinsert(tamer.Paws,paw)
-	return paw
-end
-
--- helper function to convert a variable number of pet type numbers (1=humanoid, 10=mechanical, etc) to a string of icons
-local function petsAsText(...)
-	local txt=""
-	for i=1,select("#",...) do
-		local petType = PET_TYPE_SUFFIX[select(i,...)]
-		txt=txt..(petType and format("\124TInterface\\PetBattles\\PetIcon-%s:20:20:0:0:128:256:102:63:129:168\124t",petType) or "")
-	end
-	return txt
-end
-
--- onenter of paws show a tooltip describing the daily
-function tamer:PawOnEnter()
-	local info = tamer.DailyInfo[self.questID]
-	if info then
-		if not tamer.tooltip then -- need our own tooltip since GameTooltip is parented to UIParent (which is not always up with map)
-			tamer.tooltip = CreateFrame("GameTooltip","BattlePetDailyTamerTooltip",nil,"GameTooltipTemplate")
-			tamer.tooltip:SetBackdrop({bgFile="Interface\\Tooltips\\UI-Tooltip-Background", insets={left=3,right=3,top=3,bottom=3}, tileSize=16, tile=true, edgeFile="Interface\\Tooltips\\UI-Tooltip-Border", edgeSize=16})
-			tamer.tooltip:SetBackdropColor(0,0,0,1)
-		end
-		local parent = self:GetParent()
-		parent = parent==WorldMapButton and WorldMapFrame or parent
-		tamer.tooltip:SetParent(parent)
-		tamer.tooltip:SetFrameStrata("TOOLTIP")
-		tamer.tooltip:SetOwner(self,"ANCHOR_RIGHT")
-		tamer.tooltip:AddLine(info[1]) -- add name to tooltip
-		if info[2] then
-			tamer.tooltip:AddLine(info[2],0.85,0.85,0.85) -- add extra info ("Darkmoon Faire", "Beasts of Fables Book II", etc)
-		end
-		if info[7] then
-			tamer.tooltip:AddLine(format("%s level %d",petsAsText(info[8],info[9],info[10]),info[7]),0.85,0.85,0.85) -- add pets and their level
-		end
-		-- add reward
-		tamer.tooltip:Show()
-	end
-end
-
-function tamer:PawOnLeave()
-	if tamer.tooltip then
-		tamer.tooltip:Hide()
-	end
-end
-
-function tamer:PawOnClick(button)
-	if button=="RightButton" then
-		if IsControlKeyDown() and IsAddOnLoaded("TomTom") then -- ctrl+right click sets TomTom waypoint if addon enabled
-			local info = tamer.DailyInfo[self.questID]
-			if info then
-				TomTom:AddMFWaypoint(info[3],nil,info[4],info[5],{title=info[1]})
-			end
-		elseif GetCurrentMapAreaID()==823 then -- if we're looking at the darkmoon faire
-			SetMapZoom(0,0) -- zoom out to azeroth map
-		else
-			WorldMapZoomOutButton_OnClick() -- zoom out on paw right-click
-		end
-	elseif self:GetParent()==WorldMapButton and self.questID then
-		local info = tamer.DailyInfo[self.questID]
-		if info then
-			SetMapByID(info[3])
-		end
-	end
-end
-
--- returns a paw repurposed for the questID; a nil questID means it's a stable
-function tamer:GetPaw(questID,forTaxi)
-	local paw = tamer:GetAvailablePaw(forTaxi and TaxiRouteMap or WorldMapButton)
-	local pawSize = forTaxi and 16 or (1-WorldMapButton:GetEffectiveScale())*10+18
-	paw:SetSize(pawSize,pawSize)
-	paw:SetFrameLevel(forTaxi and TaxiRouteMap:GetFrameLevel()+1 or WorldMapButton:GetFrameLevel()+8)
-
-	if questID then -- an actual paw for a questID
-		local dailyInfo = tamer.DailyInfo[questID]
-		if dailyInfo then
-			paw.texture:SetTexture("Interface\\AddOns\\Battle Pet Daily Tamer\\paw")
-			paw:SetHighlightTexture("Interface\\AddOns\\Battle Pet Daily Tamer\\paw")
-			paw:EnableMouse(true)
-			paw.questID = questID
-			local pawInfo = tamer.PawInfo[dailyInfo[6]]
-			if (type(questID)=="string" and tamer.CompleteObjectives[questID]) or (type(questID)=="number" and IsQuestFlaggedCompleted(questID)) then
-				paw.texture:SetVertexColor(0.75,0.75,0.75)
-			else
-				paw.texture:SetVertexColor(pawInfo[5],pawInfo[6],pawInfo[7])
-			end
-		else
-			return nil -- this is not a valid daily, return nothing/no paw
-		end
-	else -- no questID, this is a stable
-		paw.texture:SetTexture("Interface\\Minimap\\Tracking\\StableMaster")
-		paw.texture:SetVertexColor(1,1,1,1)
-		paw:SetHighlightTexture(nil)
-		paw:EnableMouse(false)
-		paw.questID = nil
-	end
-
-	return paw
-end
-
--- this function is a mirror of default's GetWorldLocFromMapPos
--- takes world coordinates and converts them to current map's coordinates
-function tamer:GetMapPosFromWorldLoc(y,x)
-  local _,left,top,right,bottom = GetCurrentMapZone()
-	-- the x-axis is flipped, left and right could be called maxX and minX respectively
-  if left and x<left and x>right and y>bottom and y<top then
-		local mapX = (x-left)/(right-left)
-		local mapY = 1-(y-bottom)/(top-bottom)
-		if mapX>0.05 and mapX<0.95 and mapY>0.05 and mapY<0.95 then -- only if they're more than 5% from edge
-			return mapX,mapY
-		end
-  end
-end
-
--- places a paw on the regular map, or the taxi if forTaxi is true, used in UpdatePaws
-function tamer:PlacePaw(questID,forTaxi,mapX,mapY,mapWidth,mapHeight)
-	local button = tamer:GetPaw(questID,forTaxi)
-	if not forTaxi then
-		button:SetPoint("CENTER",WorldMapButton,"TOPLEFT",mapX*mapWidth,mapY*mapHeight*-1)
-	else
-		local _,_,xoff,yoff = tamer:ConvertMapToTaxi(mapX,mapY)
-		button:SetPoint("CENTER",TaxiRouteMap,"TOPLEFT",xoff,yoff)
-	end
-	button:Show()
-end
-
--- the heart of the addon: place paws on the map
-function tamer:UpdatePaws(forTaxi)
-
-	-- hide any existing paws
-	for _,paw in ipairs(tamer.Paws) do
-		local taxiPaw = paw:GetParent()==TaxiRouteMap
-		if (forTaxi and taxiPaw) or (not forTaxi and not taxiPaw) then
-			paw:Hide()
-			paw:SetParent(nil)
-		end
-	end
-
-	local currentMapID = max(0,(GetCurrentMapAreaID()))
-
-	if settings.HideDailies or (GetCurrentMapContinent()==-1 and currentMapID~=823) or GetCurrentMapDungeonLevel()~=0 then
-		return -- leave if dailies are hidden or we're looking at cosmic map (and not DMF which is on cosmic continent)
-	end
-
-	-- populate tamer.IncompleteObjectives with quest:objectives that are not done
-	wipe(tamer.IncompleteObjectives)
-	wipe(tamer.CompleteObjectives)
-	if settings.TrackFables then
-		for _,questID in ipairs(tamer.QuestsWithObjectives) do
-			local quest = GetQuestLogIndexByID(questID)
-			for i=1,GetNumQuestLeaderBoards(quest) do
-				if not select(3,GetQuestLogLeaderBoard(i,quest)) then
-					tamer.IncompleteObjectives[questID..":"..i] = 1
-				else
-					tamer.CompleteObjectives[questID..":"..i] = 1
-				end
-			end
-		end
-	end
-
-	local mapWidth = WorldMapButton:GetWidth()
-	local mapHeight = WorldMapButton:GetHeight()
-	local continent = GetCurrentMapContinent()
-
-	if tamer.WorldCoordinates[continent] then
-		-- if WorldCoordinates known for this continent, go through the continent's dailies and
-		-- find dailies that would appear on the current map
-		for questID,coords in pairs(tamer.WorldCoordinates[continent]) do
-			if tamer.DailyInfo[questID] and tamer:PawNeedsShown(questID) then
-				local x,y = tamer:GetMapPosFromWorldLoc(coords[1],coords[2])
-				if x then
-					tamer:PlacePaw(questID,forTaxi,x,y,mapWidth,mapHeight)
-				end
-			end
-		end
-	elseif tamer.MapCoordinates[currentMapID] then
-		-- if no WorldCoordinates known, and this mapID has a MapCoordinates, use the old-style
-		-- map-specific coordinates
-		for questID,coords in pairs(tamer.MapCoordinates[currentMapID]) do
-			if tamer.DailyInfo[questID] and tamer:PawNeedsShown(questID) then
-				tamer:PlacePaw(questID,forTaxi,coords[1],coords[2],mapWidth,mapHeight)
-			end
-		end
-	end
-
-	-- and for stables too
-	if settings.StableMasters then
-		local stable = tamer.Stables[currentMapID]
-		if stable then
-			for i=1,#stable do
-				local button = tamer:GetPaw()
-				button:SetPoint("CENTER",WorldMapButton,"TOPLEFT",(stable[i][1]/1000)*mapWidth,(stable[i][2]/1000)*mapHeight*-1)
-				button:Show()
-			end
-		end
-	end
-
-end
-
--- returns true if the questID should be put on the map
-function tamer:PawNeedsShown(questID)
-	local dailyInfo = tamer.DailyInfo[questID]
-	if dailyInfo then
-		local pawInfo = tamer.PawInfo[dailyInfo[6]]
-		if pawInfo then
-			if type(questID)=="string" then -- this is a "1234:567" questID, a quest with objectives
-				if tamer.IncompleteObjectives[questID] or (settings.TrackCompleted and tamer.CompleteObjectives[questID]) then
-					return settings[pawInfo[2]]
-				end
-			elseif not IsQuestFlaggedCompleted(questID) or settings.TrackCompleted then -- this is a normal questID
-				return settings[pawInfo[2]]
-			end
-		end
-	end
-end
-
---[[ Taxi Support ]]
-
-tamer.taxiAdjustments = {
-  -- The taxi only displays a part of the world map for each continent.
-  -- These numbers (tweaked from Homing Digeon by Wobin) are used to
-  -- translate a point on the world map to each continent's taxi map
-  [1] = { xratio=1.5, yratio=1, xoff=0, yoff=-5 }, -- Kalimdor
-  [2] = { xratio=1.4, yratio=.95, xoff=5, yoff=5 }, -- Eastern Kingdom
-  [3] = { xratio=1.4, yratio=1, xoff=10, yoff=5 }, -- Outlands
-  [4] = { xratio=1.2, yratio=0.75, xoff=15, yoff=-25 }, -- Northrend
-  [5] = { xratio=1.0, yratio=1.0, xoff=0, yoff=0 }, -- Maelstrom
-  [6] = { xratio=1.3, yratio=0.875, xoff=-10, yoff=0 }, -- Pandaria
-  [7] = { xratio=1.35, yratio=0.9, xoff=36, yoff=0 }, -- Draenor
-}
-
--- takes world coordinates and returns taxi coordinates, taxi SetPoint offsets
--- world coordinates must be from current continent's zoom level
-function tamer:ConvertMapToTaxi(wx,wy)
-  local magic = tamer.taxiAdjustments[GetCurrentMapContinent()]
-  local tcx, tcy = TaxiRouteMap:GetSize()
-  local tx = tcx/2-tcx*magic.xratio*(.5-wx)+magic.xoff
-  local ty = -tcy/2+tcy*magic.yratio*(.5-wy)-magic.yoff
-  return tx/tcx,1+ty/tcy,tx,ty
-end
-
-function tamer:UpdateTaxiPaws()
-	if not TaxiRouteMap:IsVisible() then
-		return
-	elseif settings.TaxiPaws then
-		-- change map to continent view of the player's current map area
-		-- taxi maps look at the whole continent
-		tamer.frame:UnregisterEvent("WORLD_MAP_UPDATE")
-		local userMap = GetCurrentMapAreaID()
-		SetMapToCurrentZone()
-	  SetMapZoom(GetCurrentMapContinent())
-		tamer:UpdatePaws(true)
-		SetMapByID(userMap)
-		tamer.frame:RegisterEvent("WORLD_MAP_UPDATE")
-		-- bump taxi nodes higher so no paws overlap them (paws should always be beneath taxi nodes)
-		local nodeFrameLevel = TaxiRouteMap:GetFrameLevel()+2
-		for i=1,NumTaxiNodes() do
-			_G["TaxiButton"..i]:SetFrameLevel(nodeFrameLevel)
-		end
-	else -- no taxi paws, hide all paws
-		for i=1,#tamer.Paws do
-			if tamer.Paws[i]:GetParent()==TaxiRouteMap then
-				tamer.Paws[i]:Hide()
-				tamer.Paws[i]:SetParent(nil)
-			end
-		end
-	end
-end
-
---[[ Settings
-
-	Settings can be changed two ways:
-
-	1. Through the "Show Pet Tamer" menu in the default map options. This addon hooks
-		 the dropdown's menu to add its settings as a submenu.
-	2. From the Interface Options Panel, for cases when addons (like PetTracker) completely
-		 replace the default menu.
-]]
 
 function tamer:InitializeSettings()
+	if type(BattlePetDailyTamerSettings)~="table" then
+		BattlePetDailyTamerSettings = {}
+	end
 	settings = BattlePetDailyTamerSettings
-	-- hook the default "Show Pet Tamers" dropdown
-	tamer.old_WorldMapShowDropDown_Initialize = WorldMapTrackingOptionsDropDown_Initialize
-	WorldMapTrackingOptionsDropDown_Initialize = tamer.new_WorldMapShowDropDown_Initialize
-	UIDropDownMenu_Initialize(WorldMapFrameDropDown, WorldMapTrackingOptionsDropDown_Initialize, "MENU")
-	-- set default settings if none defined yet
+	-- if a setting is nil it's not been defined, give it a default value (true/false) from PawInfo
 	for _,detail in pairs(tamer.PawInfo) do
 		if settings[detail[2]]==nil then
-			settings[detail[2]] = detail[3] -- give it a default value
+			settings[detail[2]] = detail[3]
 		end
 	end
-	SetCVar("showTamers","0") -- turn off default paws
-	tamer:AddInterfaceOptionsPanel() -- add options panel as additional place to change settings
 end
 
+--[[ Settings Menus ]]
+
 -- this is a pre-hook of the original worldmap dropdown menu
-function tamer.new_WorldMapShowDropDown_Initialize(self,level,menuList)
+function tamer.NewWorldMapShowDropDown_Initialize(self,level,menuList)
 	if level==2 and UIDROPDOWNMENU_MENU_VALUE=="tamers" then -- this addon's submenu
     local info = UIDropDownMenu_CreateInfo()
     info.isNotRadio = true
@@ -565,7 +146,7 @@ function tamer.new_WorldMapShowDropDown_Initialize(self,level,menuList)
 			_G["DropDownList2Button"..i.."Icon"]:SetVertexColor(tamer.PawInfo[i][5],tamer.PawInfo[i][6],tamer.PawInfo[i][7])
 		end
 	else -- this is not our tamer submenu
-    tamer.old_WorldMapShowDropDown_Initialize(self,level,menuList) -- run old one
+    tamer.OldWorldMapShowDropDown_Initialize(self,level,menuList) -- run old one
 		if level==1 then -- if first level, look for the tamer menu item and make it expandable to our menu
 		  local index, button, buttonName = 1
 		  repeat
@@ -574,9 +155,9 @@ function tamer.new_WorldMapShowDropDown_Initialize(self,level,menuList)
 		    if button and button.value=="tamers" then
 					button.hasArrow = true -- make the Show Pet Tamers have a sub-menu
 		      button.func = tamer.MenuParentOnClick
-					button.checked = not settings.HideDailies
+					button.checked = GetCVarBool("showTamers")
 					_G[buttonName.."ExpandArrow"]:Show()
-					if settings.HideDailies then
+					if not button.checked then
 						_G[buttonName.."Check"]:Hide()
 						_G[buttonName.."UnCheck"]:Show()
 					else
@@ -592,103 +173,608 @@ function tamer.new_WorldMapShowDropDown_Initialize(self,level,menuList)
 end
 
 -- when "Show Pet Tamers" clicked to turn them all on/off
+-- the 1.x Battle Pet Daily Tamer settings "HideDailies" is no longer used; instead the showTamer cvar is used
 function tamer:MenuParentOnClick(_,_,checked)
-	settings.HideDailies = not checked
-	tamer:UpdatePaws()
-	tamer:UpdateTaxiPaws()
+	SetCVar("showTamers",checked and "1" or "0")
+	-- need to update paws (including re-hiding default paws if they were just turned on)
+	tamer.LastMapID = nil -- reset our hook will do an immediate update
+	WorldMapFrame_Update() -- call default update to handle world quest pet paws
 end
 
--- when one of the sub-menu buttons clicked
+-- when one of the sub-menu buttons clicked to change settings
 function tamer:MenuButtonOnClick(var,_,checked)
 	settings[var] = checked
 	tamer:UpdatePaws()
-	tamer:UpdateTaxiPaws()
 end
 
---[[ Interface Options Panel ]]
-
--- PetTracker (and maybe others) removes the default map menu for its own menu
--- so this addon's options via the default map aren't accessable when they run.
--- This function adds the options to the interface options panel for those cases.
-function tamer:AddInterfaceOptionsPanel()
-	tamer.opt = CreateFrame("Frame",nil,InterfaceOptionsFramePanelContainer)
-	tamer.opt:Hide()
-
-	local title = tamer.opt:CreateFontString(nil,"ARTWORK","GameFontNormalLarge")
-	title:SetPoint("TOPLEFT",16,-16)
-	title:SetText("Battle Pet Daily Tamer")
-	local version = tamer.opt:CreateFontString(nil,"ARTWORK","GameFontNormalSmall")
-	version:SetPoint("BOTTOMLEFT",title,"BOTTOMRIGHT",4,0)
-	version:SetText("version "..GetAddOnMetadata("Battle Pet Daily Tamer","Version"))
-	local desc = tamer.opt:CreateFontString(nil,"ARTWORK","GameFontHighlight")
-	desc:SetSize(600,40)
-	desc:SetPoint("TOPLEFT",title,"BOTTOMLEFT",0,-8)
-	desc:SetJustifyH("LEFT")
-	desc:SetJustifyV("TOP")
-	desc:SetText("This addon puts a paw on the world map to mark daily battle pet tamers you have not completed for the day.")
-
-	if IsAddOnLoaded("TomTom") then
-		local tomtom = tamer.opt:CreateFontString(nil,"ARTWORK","GameFontHighlight")
-		tomtom:SetSize(550,40)
-		tomtom:SetPoint("TOPLEFT",title,"BOTTOMLEFT",25,-240)
-		tomtom:SetJustifyH("LEFT")
-		tomtom:SetText("You have the addon TomTom enabled. <Ctrl>+Right-Click a paw on the world map to set a TomTom waypoint to that paw.")
-	end
-
-	local function createCheck(index,text,icon,r,g,b,anchorPoint,relativeTo,relativePoint,xoff,yoff)
-		local check = CreateFrame("CheckButton",nil,tamer.opt,"UICheckButtonTemplate")
-		check.text:SetText(text)
-		check.text:SetFontObject("GameFontNormal")
-		check:SetPoint(anchorPoint,relativeTo,relativePoint,xoff,yoff)
-		if r then -- if r,g,b (or direct icon path) defined, this setting wants an icon
-			check.icon = check:CreateTexture(nil,"ARTWORK")
-			check.icon:SetSize(20,20)
-			check.icon:SetPoint("LEFT",check.text,"RIGHT",4,0)
-			check.icon:SetTexture(icon)
-			check.icon:SetVertexColor(r,g,b)
-		end
-		check:SetScript("OnClick",tamer.InterfacePanelCheckOnClick)
-		check:SetID(index)
-		return check
-	end
-
-	tamer.opt.checks = {}
-	tamer.opt.checks[1] = createCheck(0,"Show Pet Tamers",nil,nil,nil,nil,"TOPLEFT",desc,"BOTTOMLEFT",16,-8)
-	for i=1,#tamer.PawInfo do
-		local detail = tamer.PawInfo[i]
-		tamer.opt.checks[i+1] = createCheck(i,detail[1],detail[4],detail[5],detail[6],detail[7],"TOPLEFT",tamer.opt.checks[1],"BOTTOMLEFT",20,(i-1)*-28+6)
-	end
-
-	tamer.opt.name = "Battle Pet Daily Tamer"
-	tamer.opt.refresh = tamer.InterfacePanelRefresh
-	InterfaceOptions_AddCategory(tamer.opt)
-end
-
--- onclick for the interface panel checkbuttons
-function tamer:InterfacePanelCheckOnClick()
-	if self:GetID()==0 then -- this is the main switch
-		settings.HideDailies = not self:GetChecked()
-	else
-		settings[tamer.PawInfo[self:GetID()][2]] = self:GetChecked() or false
-	end
-	tamer:InterfacePanelRefresh()
-end
-
--- refresh for the interface panel business
-function tamer:InterfacePanelRefresh()
-	for i=1,#tamer.opt.checks do
-		local check = tamer.opt.checks[i]
-		if check:GetID()==0 then -- this is the main switch
-			check:SetChecked(not settings.HideDailies)
-		else
-			check:SetChecked(settings[tamer.PawInfo[check:GetID()][2]])
-			if settings.HideDailies then
-				check:Disable()
-				check.text:SetTextColor(.5,.5,.5)
-			else
-				check:Enable()
-				check.text:SetTextColor(1,.82,0)
+-- This gets called just once, on the first showing of the map. 
+-- PetTracker replaces the default dropdown with its own! :( Instead of throwing our options into the interface
+-- options panel, we'll make our own button beneath the map's tracking button.
+function tamer:CheckPetTracker()
+	if IsAddOnLoaded("PetTracker") then
+		-- create the button and position it beneath the default tracking button
+		local parent = WorldMapFrame.UIElementsFrame.TrackingOptionsButton -- default tracking button
+		local button = CreateFrame("Button","BattlePetDailyTamerAlternateOptions",parent) -- our button
+		button:SetSize(32,32)
+		button:SetPoint("TOP",parent,"BOTTOM")
+		button.Back = button:CreateTexture(nil,"BACKGROUND")
+		button.Back:SetSize(25,25)
+		button.Back:SetPoint("TOPLEFT",2,-4)
+		button.Back:SetTexture("Interface\\Minimap\\UI-Minimap-Background")
+		button.Back:SetVertexColor(1,1,1,1)
+		button.Border = button:CreateTexture(nil,"OVERLAY")
+		button.Border:SetSize(54,54)
+		button.Border:SetPoint("TOPLEFT")
+		button.Border:SetTexture("Interface\\Minimap\\Minimap-TrackingBorder")
+		button:SetNormalTexture("Interface\\Icons\\Tracking_WildPet")
+		local normal = button:GetNormalTexture()
+		normal:SetSize(18,18)
+		normal:ClearAllPoints()
+		normal:SetPoint("TOPLEFT",7,-7)
+		normal:SetVertexColor(0.75,0.75,0.75)
+		button:SetPushedTexture("Interface\\Icons\\Tracking_WildPet")
+		local pushed = button:GetPushedTexture()
+		pushed:SetSize(18,18)
+		pushed:ClearAllPoints()
+		pushed:SetPoint("TOPLEFT",9,-9)
+		pushed:SetVertexColor(0.35,0.35,0.35)
+		button:SetHighlightTexture("Interface\\Minimap\\UI-Minimap-ZoomButton-Highlight")
+		button:GetHighlightTexture():SetBlendMode("ADD")
+		-- watch for showTamer cvar changing to show/hide this button
+		hooksecurefunc("SetCVar",function(cvar,value)
+			if cvar=="showTamers" then
+				button:SetShown(GetCVarBool("showTamers"))
 			end
+		end)
+		button:SetShown(GetCVarBool("showTamers")) -- and do an initial show/hide
+		-- create separate dropdown
+		function tamer:AlternateOptionsDropDown_Initialize()
+	    local info = UIDropDownMenu_CreateInfo()
+	    info.isNotRadio = true
+	    info.keepShownOnClick = 1
+			for i=1,#tamer.PawInfo do
+				info.text = tamer.PawInfo[i][1]
+				info.checked = settings[tamer.PawInfo[i][2]]
+				info.func = tamer.MenuButtonOnClick
+				info.arg1 = tamer.PawInfo[i][2]
+				info.icon = tamer.PawInfo[i][4]
+				UIDropDownMenu_AddButton(info)
+				_G["DropDownList1Button"..i.."Icon"]:SetVertexColor(tamer.PawInfo[i][5],tamer.PawInfo[i][6],tamer.PawInfo[i][7])
+			end
+		end
+		local dropdown = CreateFrame("Frame","BattlePetDailyTamerAlternatOptionsDropDown",button,"UIDropDownMenuTemplate")
+		dropdown:Hide()
+		UIDropDownMenu_Initialize(dropdown, tamer.AlternateOptionsDropDown_Initialize, "MENU")
+		button:SetScript("OnClick",function(self)
+			ToggleDropDownMenu(1, nil, dropdown, button, 0, -5)
+		end)
+	end
+end
+
+--[[ Paw frame pool ]]
+
+-- returns the first available paw from the frame pool, or creates one if needed
+function tamer:GetAvailablePaw()
+	for _,paw in ipairs(tamer.Paws) do
+		if not paw.used then
+			paw.used = true
+			return paw
+		end
+	end
+	-- if we reached here, no existing paw is free; create a new one
+	local paw = CreateFrame("Frame")
+	paw:SetSize(18,18)
+	paw.Icon = paw:CreateTexture(nil,"OVERLAY")
+	paw.Icon:SetAllPoints(true)
+	paw.used = true
+	tinsert(tamer.Paws,paw)
+	return paw
+end
+
+-- frees a paw for re-use in the frame pool
+function tamer:ReleasePaw(paw)
+	paw.used = nil
+	paw:ClearAllPoints()
+	paw:Hide()
+end
+
+-- gets a paw tailored to the questID (sized/parented/framelevelled for WorldMapButton or TaxiRouteMap if forTaxi true)
+function tamer:GetPaw(questID,inactive,forTaxi)
+	local paw = tamer:GetAvailablePaw()
+	local pawSize = forTaxi and 16 or (1-WorldMapButton:GetEffectiveScale())*10+18
+	paw:SetSize(pawSize,pawSize)
+	paw:SetParent(forTaxi and TaxiRouteMap or WorldMapButton)
+
+	if questID then
+		local pawInfo = tamer.PawInfo[tamer.DailyInfo[questID][9]]
+		paw.Icon:SetTexture(pawInfo[4])
+		paw.Icon:SetDesaturated(true)
+		if not inactive then
+			paw.Icon:SetVertexColor(pawInfo[5],pawInfo[6],pawInfo[7])
+		else -- inactive quests are greyed out
+			paw.Icon:SetVertexColor(0.75,0.75,0.75)
+		end
+	else
+		paw.Icon:SetTexture("Interface\\Minimap\\Tracking\\StableMaster")
+		paw.Icon:SetVertexColor(1,1,1,1)
+	end
+
+	paw.questID = questID
+	paw:Show()
+	return paw
+end
+
+--[[ WorldMap update ]]
+
+-- returns the currently viewed mapID; both the azeroth world view and cosmic map have a mapID of -1 (grr)
+-- so we're arbitrarily calling azeroth world map 0 and cosmic map -1, everything else is their real mapID
+function tamer:GetCurrentMapID()
+	local mapID = GetCurrentMapAreaID()
+	if mapID==-1 then
+		return GetCurrentMapContinent()==-1 and -1 or 0
+	else
+		return mapID
+	end
+end
+
+-- tamer:WorldMapFrameUpdate() is run immediately after default's WorldMapFrame_Update
+-- this can run in short spasms at times, like 8-100+ WORLD_MAP_UPDATEs spread across a few frames
+function tamer:WorldMapFrameUpdate()
+	if not WorldMapFrame:IsVisible() then
+		return -- don't do anything if world map isn't on screen
+	end
+	-- first remove any default pre-Legion paws shown in WorldMapFrame_UpdateMap
+	-- this needs to run every update otherwise default paws would show on screen until delayed UpdatePaws
+	for i=1,GetNumMapLandmarks() do
+		if GetMapLandmarkInfo(i)==1 then
+			_G["WorldMapFramePOI"..i]:Hide()
+		end
+	end
+	-- if map has not yet been shown this session, run a couple checks
+	if tamer.MapNeverShown then
+		tamer:CheckDMF() -- see if the darkmoon faire is in town (and add it to dailies if so)
+		tamer:CheckPetTracker() -- see if PetTracker is enabled (so we can add a button since PetTracker removes default dropdown)
+		tamer.MapNeverShown = nil
+	end
+	-- note which map we're updating paws to
+	tamer.OpenedMapFrame = WorldMapButton
+	-- if this is a different map than we last handled, do an immediate update
+	if tamer:GetCurrentMapID()~=tamer.LastMapID then
+		tamer:UpdatePaws()
+		if tamer.tooltip then
+			tamer.tooltip:Hide()
+		end
+	else -- otherwise wait before doing an update
+		tamer.frame.timer = 0
+		tamer.frame:Show()
+	end
+end
+
+-- this is an OnUpdate which runs in reaction to WorldMapFrameUpdate re-running on the same map
+function tamer:UpdatePaws(elapsed,forTaxi)
+	if elapsed then -- if this was called via OnUpdate, wait 0.5 seconds
+		tamer.frame.timer = self.timer + elapsed
+		if tamer.frame.timer<0.5 then
+			return
+		end
+	end
+	tamer.frame:Hide()
+	tamer.LastMapID = tamer:GetCurrentMapID()
+	local mapID = tamer.LastMapID
+	-- first release all existing paws to get them off the map and freed for re-use
+	for _,paw in ipairs(tamer.Paws) do
+		tamer:ReleasePaw(paw)
+	end
+	if not GetCVarBool("showTamers") then
+		return -- "Pet Battles" is not checked on the world map tracking button, leave here
+	end
+	if GetCurrentMapDungeonLevel()~=0 then
+		return -- if we're on a dungeon map that happens to overlay WorldLoc of a paw
+	end
+	-- populate tamer.IncompleteObjectives with quest:objectives that are not done
+	wipe(tamer.IncompleteObjectives)
+	if settings.TrackFables then
+		for _,questID in ipairs(tamer.QuestsWithObjectives) do
+			local quest = GetQuestLogIndexByID(questID)
+			for i=1,GetNumQuestLeaderBoards(quest) do
+				if not select(3,GetQuestLogLeaderBoard(i,quest)) then
+					tamer.IncompleteObjectives[questID..":"..i] = 1
+				end
+			end
+		end
+	end
+	-- whether we're tracking inactive quests or not, clear this before marking any if we're tracking them
+	wipe(tamer.InactiveQuests)
+	-- the WorldMapButton can change size; fetch its values before placing paws
+	local mapWidth = WorldMapButton:GetWidth()
+	local mapHeight = WorldMapButton:GetHeight()
+	tamer.PawsShown = nil -- assume no paws will be shown
+	local trackCompleted = settings.TrackCompleted
+
+	-- if there's a MapCoordinates entry (azeroth world map, maelstrom, etc) show paws from that table
+	if tamer.MapCoordinates[mapID] and (GetCurrentMapContinent()~=-1 or mapID==823) then
+		for i=1,#tamer.MapCoordinates[mapID] do
+			local info = tamer.MapCoordinates[mapID][i]
+			local questID,mapX,mapY = info[1],info[2],info[3]
+			if tamer:MaybePlacePaw(questID,forTaxi,mapX,mapY,mapWidth,mapHeight) then
+				tamer.PawsShown = true
+			end
+		end
+	else
+	-- for the majority of zones with no MapCoordinates entry, go through all quests on the current
+	-- continent and see if they should be on the current map
+		local quests = tamer.QuestsByContinent[GetCurrentMapContinent()]
+		if quests then
+			for _,questID in ipairs(quests) do
+				local info = tamer.DailyInfo[questID]
+				local worldX,worldY = info[4],info[5]
+				if worldX and worldY then
+					local mapX,mapY = tamer:GetMapPosFromWorldLoc(worldX,worldY)
+					if mapX then
+						if tamer:MaybePlacePaw(questID,forTaxi,mapX,mapY,mapWidth,mapHeight) then
+							tamer.PawsShown = true
+						end
+					end
+				end
+			end
+		end
+	end
+
+	-- and place stable masters if any are available for the current zone map
+	if settings.StableMasters then
+		local stable = tamer.Stables[mapID]
+		if stable then
+			for i=1,#stable do
+				local button = tamer:GetPaw()
+				button:SetPoint("CENTER",WorldMapButton,"TOPLEFT",(stable[i][1]/1000)*mapWidth,(stable[i][2]/1000)*mapHeight*-1)
+				button:Show()
+			end
+		end
+	end
+end
+
+-- if the given quest should be on the map, then place a paw at mapX and mapY and return true
+function tamer:MaybePlacePaw(questID,forTaxi,mapX,mapY,mapWidth,mapHeight)
+	local show,inactive = tamer:PawNeedsShown(questID)
+	if not show then -- if it's not active, then see if it should be shown due to TrackCompleted (now "Inactive Dailies")
+		inactive = inactive and settings.TrackCompleted
+		if inactive then -- PawNeedsShown agrees it should be shown if TrackCompleted enabled
+			tamer.InactiveQuests[questID] = true
+		end
+	end
+	if show or inactive then
+		local paw = tamer:GetPaw(questID,inactive,forTaxi)
+		if not forTaxi then
+			paw:SetPoint("CENTER",WorldMapButton,"TOPLEFT",mapX*mapWidth,mapY*mapHeight*-1)
+		else
+			local _,_,xoff,yoff = tamer:ConvertMapToTaxi(mapX,mapY)
+			paw:SetPoint("CENTER",TaxiRouteMap,"TOPLEFT",xoff,yoff)
+		end
+		local frameLevelOffset = show and 6 or 4 -- move active paws to a higher framelevel than inactive ones
+		paw:SetFrameLevel((forTaxi and TaxiRouteMap:GetFrameLevel()+1 or WorldMapButton:GetFrameLevel()+4)+frameLevelOffset)
+		return true
+	end
+end
+
+-- returns whether a paw should be shown on the map
+-- returns two values: whether quest should be shown, whether it should be shown as inactive
+function tamer:PawNeedsShown(questID)
+	local info = tamer.DailyInfo[questID]
+	-- if setting for this type of paw is disabled, paw doesn't need shown
+	if not info then
+		return -- should never happen but just in case
+	end
+	local pawInfo = tamer.PawInfo[info[9]]
+	if pawInfo and not settings[pawInfo[2]] then
+		return false,false
+	end
+	local mapID = tamer.LastMapID
+	-- if this is a broken isle quest
+	if info[3]==8 then
+		-- if it's not an active world quest, paw doesn't need shown
+		local timeLeft = C_TaskQuest.GetQuestTimeLeftMinutes(questID)
+		if not timeLeft or timeLeft==0 then
+			return false,mapID~=0 -- do not allow inactive if it's not azeroth world map
+		end
+		-- if the current mapID is the quest's native mapID then paw doesn't need shown (default shows its own with tooltip and stuff)
+		if info[6]==mapID then
+			return false,false
+		end
+	elseif type(questID)=="string" then
+		-- if this is a questID:objective and it's not in the IncompleteObjectives table, then it's either complete
+		-- or the quest is not picked up; paw doesn't need shown
+		if not tamer.IncompleteObjectives[questID] then
+			return false,mapID~=0
+		end
+	else -- this is a regular questID; if quest completed, paw doesn't need shown
+		if IsQuestFlaggedCompleted(questID) then
+			return false,mapID~=0
+		end
+	end
+	return true,false
+end
+
+-- only called once when the map is first shown; if Darkmoon Faire is in town then it will add its dailies
+function tamer:CheckDMF()
+	local _, month, day, year = CalendarGetDate()
+	CalendarSetAbsMonth(month,year)
+	-- it seems for holidays we don't need to OpenCalendar()
+	local oldDMFcvar = GetCVar("calendarShowDarkmoon")
+	SetCVar("calendarShowDarkmoon",true) -- to tell if DMF is on the calendar we need to set this cvar
+	for i=1,CalendarGetNumDayEvents(0,day) do
+		if CalendarGetHolidayInfo(0,day,i)==CALENDAR_FILTER_DARKMOON then
+			-- Darkmoon Faire is in town! Adds it to the dailies
+			tamer.DailyInfo[32175]={67370,CALENDAR_FILTER_DARKMOON,0,nil,nil,823,0.479,0.625,1,25,1067,1065,1066} -- Jeremy Feasel
+			tamer.DailyInfo[36471]={85519,CALENDAR_FILTER_DARKMOON,0,nil,nil,823,0.474,0.622,1,25,1475,1476,1477} -- Christoph VonFeasel
+			tamer.MapCoordinates[823] = {
+				{32175,0.47900,0.62500}, -- Jeremy Feasel
+				{36471,0.47400,0.62200}, -- Christoph VonFeasel
+			}
+		end
+	end
+	SetCVar("calendarShowDarkmoon",oldDMFcvar) -- restore the cvar we set above
+end
+
+--[[ Tooltip
+
+	There are two tooltips:
+		tamer.scantip (BattlePetDailyTamerScanTooltip) is a GameTooltip for lifting NPC names (and maybe quest names down the road)
+		tamer.tooltip (BattlePetDailyTamerTooltip) is a home-made tooltip to float by the cursor with the NPC and opponent pets
+]]
+
+function tamer:WorldMapOnEnter()
+	if not tamer.tooltipTicker then
+		-- tooltipTicker is a separate frame that runs an OnUpdate to monitor what the mouse is over
+		tamer.tooltipTicker = CreateFrame("Frame")
+		tamer.tooltipTicker:Hide()
+		tamer.tooltipTicker:SetScript("OnUpdate",tamer.TooltipTicker)
+		tamer.tooltipTicker.timer = 0
+		-- tooltip is a custom tooltip that will display tamers beneath the mouse
+		tamer.tooltip = CreateFrame("Frame",nil,tamer.tooltipTicker) -- child of above tooltipTicker which has no parent on purpose
+		tamer.tooltip.data = {} -- list of entries to show in the tooltip
+		tamer.tooltip.Lines = {} -- list of fontstrings to display in the tooltip
+		tamer.tooltip:SetBackdrop({bgFile="Interface\\ChatFrame\\ChatFrameBackground",edgeFile="Interface\\ChatFrame\\ChatFrameBackground",edgeSize=2})
+		tamer.tooltip:SetBackdropColor(0.1,0.1,0.1)
+		tamer.tooltip:SetBackdropBorderColor(0,0,0)
+		tamer.tooltip:SetFrameStrata("TOOLTIP")
+		tamer.tooltip:SetClampedToScreen(true)
+		tamer.tooltip:SetScale(GameTooltip:GetEffectiveScale()) -- make it same scale as regular tooltip
+		tamer.tooltip:SetScript("OnUpdate",tamer.PositionTooltip)
+	end
+	tamer.tooltipTicker:Show()
+end
+
+-- 0.2 seconds while the mouse is over the WorldMapButton
+function tamer:TooltipTicker(elapsed)
+	self.timer = self.timer + elapsed
+	if self.timer > 0.2 then
+		self.timer = 0
+		local found
+		if tamer.PawsShown then
+			for _,paw in pairs(tamer.Paws) do
+				if paw.used and paw.questID and paw:IsVisible() and MouseIsOver(paw) then
+					if not found then
+						tamer:StartTooltip()
+					end
+					tamer:AddQuestToTooltip(paw.questID)
+					found = true
+				end
+			end
+		end
+		if found then
+			tamer:ShowTooltip()
+		else
+			tamer:HideTooltip()
+		end
+	end
+	if not MouseIsOver(tamer.OpenedMapFrame) then
+		self:Hide()
+	end
+end
+
+-- this resets the counters for a new tooltip
+function tamer:StartTooltip()
+	tamer.tooltip.line = 0
+	tamer.tooltip.maxWidth = 0
+end
+
+-- adds details about questID to the tooltip, depending on its DailyInfo
+function tamer:AddQuestToTooltip(questID)
+	local info = tamer.DailyInfo[questID]
+	-- if this isn't first quest on the tooltip, add a blank line to space them out
+	if tamer.tooltip.line>0 then
+		tamer:AddToTooltip("")
+	end
+	-- add npc name
+	local name = info[1]
+	if type(name)=="number" then
+		name = tamer:GetNameFromNpcID(name)
+		if type(name)=="string" then
+			info[1] = name
+		else
+			name = "\124cffff2222"..RETRIEVING_DATA
+		end
+	end
+	local inactive = tamer.InactiveQuests[questID]
+	if name and inactive then
+		tamer:AddToTooltip(format("\124cffaaaaaa%s (Inactive)",name))
+	else
+		tamer:AddToTooltip(name)
+	end
+	local goldFont = inactive and "\124cffaaaaaa" or "\124cffffd200"
+
+	-- add detail like "Beasts of Fable Book II"
+	if info[2] then
+		tamer:AddToTooltip(((name or inactive) and goldFont or "")..info[2]) -- if no name then don't make detail grey (it will be the "npc name" and gold)
+	elseif info[3]==8 then -- if this quest has no detail and it's a Broken Isle quest then fill in quest name for detail
+		local quest = tamer:GetNameFromQuestID(questID)
+		if quest then
+			info[2] = quest
+			tamer:AddToTooltip(goldFont..quest)
+		end
+	end
+	-- if a Broken Isle quest, add time left
+	if info[3]==8 then
+		local timeLeft = C_TaskQuest.GetQuestTimeLeftMinutes(questID)
+		if timeLeft>0 then
+			local timeString
+			local color = "\124cffffd200"
+			if timeLeft <= WORLD_QUESTS_TIME_CRITICAL_MINUTES then
+				color = "\124cffff4444"
+				timeString = SecondsToTime(timeLeft*60)
+			elseif timeLeft <= 60 + WORLD_QUESTS_TIME_CRITICAL_MINUTES then
+				timeString = SecondsToTime((timeLeft - WORLD_QUESTS_TIME_CRITICAL_MINUTES) * 60)
+			elseif timeLeft < 24 * 60 + WORLD_QUESTS_TIME_CRITICAL_MINUTES then
+				timeString = D_HOURS:format(math.floor(timeLeft - WORLD_QUESTS_TIME_CRITICAL_MINUTES) / 60)
+			else
+				timeString = D_DAYS:format(math.floor(timeLeft - WORLD_QUESTS_TIME_CRITICAL_MINUTES) / 1440)
+			end
+			tamer:AddToTooltip(format("%s%s",color,BONUS_OBJECTIVE_TIME_LEFT:format(timeString)))
+		end
+	end
+	-- add pets
+	if not tamer.InactiveQuests[questID] then
+		local pets = tamer:GetPetsAsText(info[11],info[12],info[13])
+		if pets:len()>0 then
+			tamer:AddToTooltip(pets..(info[10] and format(" \124cffcfcfcfLevel %d",info[10]) or ""))
+		end
+	end
+end
+
+-- helper function to convert a variable number of speciesIDs to a string of icons
+function tamer:GetPetsAsText(...)
+	local txt=""
+	for i=1,select("#",...) do
+		local speciesID = select(i,...)
+		if speciesID then
+			local _,_,petType = C_PetJournal.GetPetInfoBySpeciesID(speciesID)
+			if petType then
+				local petType = format("\124TInterface\\Icons\\Pet_Type_%s:16\124t",PET_TYPE_SUFFIX[petType])
+				txt=txt..petType
+			end
+		end
+	end
+	return txt
+end
+
+-- adds a line of text to the tooltip
+function tamer:AddToTooltip(text)
+	if text then
+		local tooltip = tamer.tooltip
+		local line = tooltip.line + 1
+		tooltip.line = line
+		if not tooltip.Lines[line] then
+			tooltip.Lines[line] = tooltip:CreateFontString(nil,"ARTWORK","GameFontHighlight")
+			tooltip.Lines[line]:SetPoint("TOPLEFT",6,-6-(line-1)*16)
+		end
+		tooltip.Lines[line]:SetText(text)
+		tooltip.Lines[line]:Show()
+		tooltip.maxWidth = max(tooltip.Lines[line]:GetStringWidth(),tooltip.maxWidth)
+	end
+end
+
+-- when done adding stuff to the tooltip, this will size and show it
+function tamer:ShowTooltip()
+	local tooltip = tamer.tooltip
+	if tooltip.line>0 then
+		tamer.tooltip:SetScale(GameTooltip:GetEffectiveScale()) -- in case scale has changed since tooltip created
+		tamer.tooltip:SetSize(tooltip.maxWidth+12,tooltip.line*16+10)
+		tamer:PositionTooltip()
+	end
+	for i=tooltip.line+1,#tooltip.Lines do
+		tooltip.Lines[i]:Hide()
+	end
+	tamer.tooltip:Show()
+end
+
+function tamer:HideTooltip()
+	if tamer.tooltip then
+		tamer.tooltip:Hide()
+	end
+end
+
+-- the OnUpdate of the tooltip will continually reposition the tooltip at the cursor
+function tamer:PositionTooltip()
+	local x,y = GetCursorPosition()
+	local scale = UIParent:GetEffectiveScale()
+	tamer.tooltip:SetPoint("BOTTOMRIGHT",UIParent,"BOTTOMLEFT",x/scale-4,y/scale+4)
+end
+
+-- takes an npcID and returns the name of the npc
+function tamer:GetNameFromNpcID(npcID)
+	tamer.scanTooltip:SetOwner(WorldMapButton,"ANCHOR_NONE")
+	tamer.scanTooltip:SetHyperlink(format("unit:Creature-0-0-0-0-%d-0000000000",npcID))
+	if tamer.scanTooltip:NumLines()>0 then
+		local name = BattlePetDailyTamerScanTooltipTextLeft1:GetText()
+		tamer.scanTooltip:Hide()
+		return name
+	end
+end
+
+-- like the above for npc names, this will get the name of a quest from its questID
+-- except it's only used for broken isle so it will use C_TaskQuest.GetQuestInfoByQuestID
+function tamer:GetNameFromQuestID(questID)
+	if type(questID)=="string" then
+		questID = tonumber(questID:match("^(%d+)"))
+	end
+	if questID then
+		return (C_TaskQuest.GetQuestInfoByQuestID(questID))
+	end
+end
+
+--[[ Taxi Support
+
+	The new FlightMapFrame for Broken Isle flights is not supported yet;
+	its zoom-in feature mostly removes the need but should investigate looking into it more.
+]]
+
+tamer.taxiAdjustments = {
+  -- The taxi only displays a part of the world map for each continent.
+  -- These numbers (tweaked from Homing Digeon by Wobin) are used to
+  -- translate a point on the world map to each continent's taxi map
+  [1] = { xratio=1.5, yratio=1, xoff=0, yoff=-5 }, -- Kalimdor
+  [2] = { xratio=1.4, yratio=.95, xoff=5, yoff=5 }, -- Eastern Kingdom
+  [3] = { xratio=1.4, yratio=1, xoff=10, yoff=5 }, -- Outlands
+  [4] = { xratio=1.2, yratio=0.75, xoff=15, yoff=-25 }, -- Northrend
+  [5] = { xratio=1.0, yratio=1.0, xoff=0, yoff=0 }, -- Maelstrom
+  [6] = { xratio=1.3, yratio=0.875, xoff=-10, yoff=0 }, -- Pandaria
+  [7] = { xratio=1.35, yratio=0.9, xoff=36, yoff=0 }, -- Draenor
+	[8] = { xratio=1.0, yratio=1.0, xoff=0, yoff=0 }, -- Broken Isle (not used yet)
+}
+
+-- takes world coordinates and returns taxi coordinates, taxi SetPoint offsets
+-- world coordinates must be from current continent's zoom level
+function tamer:ConvertMapToTaxi(wx,wy)
+  local magic = tamer.taxiAdjustments[GetCurrentMapContinent()]
+  local tcx, tcy = TaxiRouteMap:GetSize()
+  local tx = tcx/2-tcx*magic.xratio*(.5-wx)+magic.xoff
+  local ty = -tcy/2+tcy*magic.yratio*(.5-wy)-magic.yoff
+  return tx/tcx,1+ty/tcy,tx,ty
+end
+
+-- event handler for TAXIMAP_OPENED (formerly UpdateTaxiPaws)
+function tamer:TAXIMAP_OPENED()
+	if not TaxiRouteMap:IsVisible() then
+		return
+	elseif settings.TaxiPaws then
+		tamer.OpenedMapFrame = TaxiRouteMap
+		-- change map to continent view of the player's current map area
+		-- taxi maps look at the whole continent
+		tamer.frame:UnregisterEvent("WORLD_MAP_UPDATE")
+		local userMap = GetCurrentMapAreaID()
+		SetMapToCurrentZone()
+	  SetMapZoom(GetCurrentMapContinent())
+		tamer:UpdatePaws(nil,true)
+		SetMapByID(userMap)
+		tamer.frame:RegisterEvent("WORLD_MAP_UPDATE")
+		-- bump taxi nodes higher so no paws overlap them (paws should always be beneath taxi nodes)
+		local nodeFrameLevel = TaxiRouteMap:GetFrameLevel()+8
+		for i=1,NumTaxiNodes() do
+			_G["TaxiButton"..i]:SetFrameLevel(nodeFrameLevel)
+		end
+	else -- no taxi paws, hide all paws
+		for _,paw in ipairs(tamer.Paws) do
+			tamer:ReleasePaw(paw)
 		end
 	end
 end
